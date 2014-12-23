@@ -1,0 +1,36 @@
+---
+title: "StockAssessment TOR template"
+author: Author
+  
+
+       
+date: "Tuesday, December 23, 2014"
+output:
+  pdf_document:
+    highlight: zenburn
+    toc: yes
+  word_document:
+    fig_caption: yes
+    fig_heigh: 4
+    fig_width: 4
+---
+
+
+
+\pagebreak
+
+safsafsafsafsaf
+
+\pagebreak
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
