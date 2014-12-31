@@ -215,6 +215,7 @@ Clear description of environmental or ecosystem data if included in the assessme
 
 
 ##Uncertainty and Sensitivity Analyses
+\label{sec:uncertainty}
 The best approach for describing uncertainty and the range of probable biomass estimates in groundfish  assessments may depend on the situation.  
 Important factors to consider include:
 
@@ -240,4 +241,52 @@ Subjective appraisal of the magnitude and sources of uncertainty.
 If a range of model runs is used to characterize uncertainty it is important to provide some qualitative or quantitative information about relative probability of each. If no statements about relative probability can be made, then it is important to state that all scenarios (or all scenarios between the bounds depicted by the runs) are equally likely
 
 ###Title
+\label{sec:uncertaintylast}
 If possible, ranges depicting uncertainty should include at least three runs: (a) one judged most probable; (b) at least one that depicts the range of uncertainty in the direction of lower current biomass levels; and (c) one that depicts the range of uncertainty in the direction of higher current biomass levels.  The entire range of uncertainty should be carried through stock projections and decision table analyses.
+
+#Harvest Control Rules (CPS Only)
+
+#Reference Points (Groundfish Only)
+1.  Unfished spawning stock biomass, summary age biomass, and recruitment, along with unfished spawning stock output.
+2. 	Reference points based on B\textsubscript{40\%} for rockfish and roundfish and on B\textsubscript{25\%} for flatfish (spawning biomass and/or output, SPR, exploitation rate, equilibrium yield).
+3.	Reference points based on default SPR proxy (spawning biomass and/or output, SPR, exploitation rate, equilibrium yield).
+4.	Reference points based on MSY (if estimated) (spawning biomass and/or output, SPR, exploitation rate, equilibrium yield).
+5.	Equilibrium yield curve showing various BMSY proxies. 
+
+#Harvest Projections and Decision Tables (Groundfish Only)
+*Not required in draft assessment undergoing review.
+
+1.  Harvest projections and decision tables (i.e., a matrix of alternative models (states of nature) versus management actions) should cover the plausible range of uncertainty about current stock biomass and a set of candidate fishing mortality targets used for the stock.  See section “\textit{Uncertainty and Decision Tables in Groundfish Stock Assessment}” (this document, pp. \pageref{sec:uncertainty}\-\pageref{sec:uncertaintylast}) on how to define alternative states of nature.  Management decisions in most cases represent the sequence of catches including estimate of OFL based on FMSY (or its proxy) and those obtained by applying the Council 40\-10 harvest policy to each state of nature; however other alternatives may be suggested by the GMT as being more relevant to Council decision making.  OFL calculations should be based on the assumption that future catches equal ABCs and not OFLs.
+
+2.  Information presented should include biomass, stock depletion, and yield projections of OFL, ABC and ACL for ten years into the future, beginning with the first year for which management action could be based upon the assessment.
+
+
+#Regional Management Considerations
+1. For stocks where current practice is to allocate harvests by management area, a recommended method of allocating harvests based on the distribution of biomass should be provided.  The MT advisor should be consulted on the appropriate management areas for each stock.
+
+2. Discuss whether a regional management approach makes sense for the species from a biological perspective.
+
+3. If there are insufficient data to analyze a regional management approach, what are the research and data needs to answer this question?
+
+#Research Needs
+
+#Acknowledgments
+Include STAR panel members and affiliations as well as names and affiliations of persons who contributed data, advice or information but were not part of the assessment team. \textbf{* Not required in draft assessment undergoing review.}
+
+#Literature Cited
+
+#Tables
+
+#Figures
+
+#Appendix A. SS data file
+
+##Appendix A.1 Sub-headings in Appendix
+
+#Appendix B. SS control file
+
+#Appendix C. SS starter file
+
+#Appendix D. SS forecast file
+
+
