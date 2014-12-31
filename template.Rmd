@@ -1,0 +1,243 @@
+---
+title: "StockAssessment TOR template"
+author: "Author"
+date: "Tuesday, December 23, 2014"
+numbersections: true
+
+output:
+  pdf_document:
+    highlight: zenburn
+    toc: true
+    toc_depth: 4
+
+  word_document:
+    fig_caption: yes
+    fig_heigh: 4
+    fig_width: 4
+---
+```{r, echo=FALSE}
+
+```
+#Executive summary{-}
+
+
+##Stock{-}
+
+
+##Catches{-}
+trends and current levels-include table for last ten years and graph with long term data
+
+##Data and assessment{-}
+date of last assessment, type of assessment model, data available, new information, and information lacking
+
+##Stock biomass{-}
+trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
+
+
+##Recruitment{-}
+trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates
+
+
+##Exploitation status{-}
+exploitation rates, i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate - include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).
+
+##Ecosystem considerations{-}
+
+##Reference points (groundfish)/harvest control rules (CPS){-}
+management targets and definition of overfishing, including the harvest rate that brings the stock to equilibrium at B40% (the BMSY proxy) and the equilibrium stock size that results from fishing at the default harvest rate (the FMSY proxy). Include a summary table that compares estimated reference points for SSB, SPR, Exploitation Rate and Yield based on SSBproxy for MSY, SPRproxy for MSY, and estimated MSY values (table i. on page 35 of attached Canary rockfish executive summary).
+
+##Management performance{-}
+catches in comparison to OFL, ABC and OY/ACL values for the most recent 10 years (when available), overfishing levels, actual catch and discard. Include OFL(encountered), OFL(retained) and OFL(dead) if different due to discard and discard mortality.
+
+
+##Unresolved problem and major uncertainties{-}
+any special issues that complicate scientific assessment, questions about the best model scenario, etc.
+
+##Decision table (groundfish only)\*{-}
+projected yields (OFL, ABC and ACL), spawning biomass, and stock depletion levels for each year.* (Not required in draft assessments undergoing review.)
+
+##Research and data needs{-}
+identify information gaps that seriously impede the stock assessment.
+
+##Rebuilding projections{-}
+reference to the principal results from rebuilding analysis if the stock is overfished.* This section should be included in the Final/SAFE version assessment document but is not required for draft assessments undergoing review. See Rebuilding Analysis terms of reference for detailed information on rebuilding analysis requirements.
+
+
+#Introduction
+
+##Basic Information
+Scientific name, distribution, the basis of the choice of stock structure, including regional differences in life history or other biological characteristics that should form the basis of management units.
+
+##Map
+A map showing the scope of the assessment and depicting boundaries for fisheries or data collection strata.
+
+##Life History
+Important features of life history that affect management (e.g., migration, sexual dimorphism, bathymetric demography).
+
+##Ecosysem Considerations
+Ecosystem considerations (e.g., ecosystem role and trophic relationships of the species, habitat requirements/preferences, relevant data on ecosystem processes that may affect stock or parameters used in the stock assessment, and/or cross-FMP interactions with other fisheries). This section should note if environmental correlations or food web interactions were incorporated into the assessment model. The length and depth of this section would depend on availability of data and reports from the IEA, expertise of the STAT, and whether ecosystem factors are informational to contribute quantitative information to the assessment.
+
+
+##Fishery Information
+Important features of current fishery and relevant history of fishery.
+
+##Summary of Management History
+Summary of management history (e.g., changes in mesh sizes, trip limits, or other management actions that may have significantly altered selection, catch rates, or discards).
+
+
+##Managament Performance
+Management performance, including a table or tables comparing Overfishing Limit (OFL), Annual Catch Limit (ACL), Harvest Guideline (HG) [CPS only], landings, and catch (i.e., landings plus discard) for each area and year
+
+
+##Fisheries off Canada, Alaska, and/or Mexico
+Description of fisheries for this species off Canada, Alaska and/or Mexico, including references to any recent assessments of those stocks.
+
+#Assessment
+
+##Data
+
+###Title
+Landings by year and fishery, historical catch estimates, discards (generally specified as a percentage of total catch in weight and in units of mt), catch-at-age, weight-at-age, abundance indices (typically survey and CPUE data), data used to estimate biological parameters (e.g., growth rates, maturity schedules, and natural mortality) with coefficients of variation (CVs) or variances if available.  Include complete tables and figures and date of extraction.
+
+
+
+###Title
+Sample size information for length and age composition data by area, year, gear, market category, etc., including both the number of trips and fish sampled.
+
+###Title
+All data sources that include the species being assessed, which are used in the assessment, and provide the rationale for data sources that are excluded.
+
+
+###Title
+Clear description of environmental or ecosystem data if included in the assessment.
+
+
+##History of Modeling Approaches Used for this Stock
+
+###Title
+Response to STAR panel recommendations from the most recent previous assessment.
+
+###Title
+Report of consultations with AP and MT representatives regarding the use of various data sources in the stock assessment.
+
+###Title
+If environmental or ecosystem data are incorporated, report of consultations with technical teams that evaluated ecosystem data or methodologies used in the assessment.
+
+##Model Description
+
+###Title
+Complete description of any new modeling approaches.
+
+###Title
+Definitions of fleets and areas.
+
+###Title
+Assessment program with last revision date (i.e., date executable program file was compiled).
+
+
+###Title
+List and description of all likelihood components in the model
+
+###Title
+Constraints on parameters, selectivity assumptions, natural mortality, treatment of age reading bias and/or imprecision, and other fixed parameters.
+
+###Title
+Description of stock-recruitment constraints or components.
+
+
+###Title
+Description of how the first year that is included in the model was selected and how the population state at the time is defined (e.g., B0, stable age structure, etc.).
+
+
+###Title
+Critical assumptions and consequences of assumption failures.
+
+##Model Selection and Evaluation
+
+###Title
+Evidence of search for balance between model realism and parsimony.
+
+###Title
+Comparison of key model assumptions, include comparisons based on nested models (e.g., asymptotic vs. domed selectivities, constant vs. time-varying selectivities).  
+
+###Title
+Summary of alternate model configurations that were tried but rejected.
+
+###Title
+Likelihood profile for the base-run (or proposed base-run model for a draft assessment undergoing review) configuration over one or more key parameters (e.g., M, h, Q) to show consistency among input data sources.
+
+###Title
+Residual analysis for the base-run configuration (or proposed base-run model in a draft assessment undergoing review) e.g., residual plots, time series plots of observed and predicted values, or other approaches.  Note that model diagnostics are required in draft assessments undergoing review.
+
+###Title
+Convergence status and convergence criteria for the base-run model (or proposed base run). 
+
+###Title
+Randomization run results or other evidence of search for global best estimates.
+
+###Title
+Evaluation of model parameters.  Do they make sense?  Are they credible?
+
+###Title
+Are model results consistent with assessments of the same species in Canada and Alaska?  Are parameter estimates (e.g., survey catchability) consistent with estimates for related stocks?
+
+##Response to STAR Panel Recommendations
+Point-by-point response to the STAR panel recommendations
+
+##Base-Model(s) Results
+
+###Title
+Table listing all explicit parameters in the stock assessment model used for base model, their purpose (e.g., recruitment parameter, selectivity parameter) and whether or not the parameter was actually estimated in the stock assessment model.
+
+###Title
+Population numbers at age × year × sex (if sex-specific M, growth, or selectivity) (May be provided as a text or spreadsheet file).\* Not required in draft assessment undergoing review.
+
+###Title
+Time-series of total, 1+ (if age 1s are in the model), summary, and spawning biomass (and/or spawning output), depletion relative to B0, recruitment and fishing mortality or exploitation rate estimates (table and figures).
+
+###Title
+Selectivity estimates (if not included elsewhere).
+
+###Title
+Stock-recruitment relationship.
+
+###Title
+OFL, ABC and ACL (and/or ABC and OY or HG) for recent years.
+
+###Title
+Clear description of units for all outputs.
+
+###Title
+Clear description of how discard is included in yield estimates.
+
+###Title
+Clear description of environmental or ecosystem data if included in the assessment.
+
+
+##Uncertainty and Sensitivity Analyses
+The best approach for describing uncertainty and the range of probable biomass estimates in groundfish  assessments may depend on the situation.  
+Important factors to consider include:
+
+###Title
+Parameter uncertainty (variance estimation conditioned on a given model, estimation framework, data set choice, and weighting scheme), including likelihood profiles for important assessment parameters (e.g., natural mortality).  This also includes expressing uncertainty in derived outputs of the model and estimating CVs using appropriate methods (e.g., bootstrap, asymptotic methods, Bayesian approaches, such as MCMC). Include the CV of spawning biomass in the first year for which an OFL has not been specified (typically end year +1 or +2).
+
+###Title
+Sensitivity to assumptions about model structure, i.e., model specification uncertainty
+
+###Title
+Sensitivity to data set choice and weighting schemes (e.g., emphasis factors), which may also include a consideration of recent patterns in recruitment.
+
+###Title
+Retrospective analysis, where the model is fitted to a series of shortened input data sets, with the most recent years of input data being dropped.
+
+###Title
+Historical analysis (plot of actual estimates from current and previous assessments).
+
+###Title
+Subjective appraisal of the magnitude and sources of uncertainty.
+
+###Title
+If a range of model runs is used to characterize uncertainty it is important to provide some qualitative or quantitative information about relative probability of each. If no statements about relative probability can be made, then it is important to state that all scenarios (or all scenarios between the bounds depicted by the runs) are equally likely
+
+###Title
+If possible, ranges depicting uncertainty should include at least three runs: (a) one judged most probable; (b) at least one that depicts the range of uncertainty in the direction of lower current biomass levels; and (c) one that depicts the range of uncertainty in the direction of higher current biomass levels.  The entire range of uncertainty should be carried through stock projections and decision table analyses.
