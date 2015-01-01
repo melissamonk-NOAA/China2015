@@ -1,11 +1,11 @@
 ---
-title: "StockAssessment TOR template"
+title: "Stock Assessment TOR template"
 author: "Author"
 date: "Tuesday, December 23, 2014"
 numbersections: true
 
 output:
-  pdf_document:
+  pdf_document:       
     highlight: zenburn
     toc: true
     toc_depth: 4
@@ -14,7 +14,11 @@ output:
     fig_caption: yes
     fig_heigh: 4
     fig_width: 4
+
+documentclass: report
 ---
+
+
 ```{r, echo=FALSE}
 
 ```
