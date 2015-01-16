@@ -2,19 +2,18 @@
 title: "Stock Assessment TOR template"
 author: "Author"
 date: "Tuesday, December 23, 2014"
-numbersections: true
-
 output:
-  pdf_document:       
+  html_document:
+    toc: yes
+  pdf_document:
     highlight: zenburn
-    toc: true
+    toc: yes
     toc_depth: 4
-
   word_document:
     fig_caption: yes
     fig_heigh: 4
     fig_width: 4
-
+numbersections: yes
 documentclass: report
 ---
 
@@ -29,7 +28,7 @@ documentclass: report
 
 
 ##Catches{-}
-trends and current levels-include table for last ten years and graph with long term data
+Trends and current levels-include table for last ten years and graph with long term data
 
 ##Data and assessment{-}
 date of last assessment, type of assessment model, data available, new information, and information lacking
