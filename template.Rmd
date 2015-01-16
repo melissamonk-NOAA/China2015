@@ -28,7 +28,7 @@ documentclass: report
 
 
 ##Catches{-}
-trends and current levels-include table for last ten years and graph with long term data
+Trends and current levels-include table for last ten years and graph with long term data
 
 ##Data and assessment{-}
 date of last assessment, type of assessment model, data available, new information, and information lacking
