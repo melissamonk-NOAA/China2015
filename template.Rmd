@@ -1,28 +1,33 @@
 ---
-title: "Stock Assessment TOR template"
-author: "Author"
-date: "Tuesday, December 23, 2014"
+title: "Stock Assessment of China Rockfish in 2015"
+author: 
+date: 
+fontsize: 12pt
+geometry: margin=1in
+documentclass: article
 output:
-  html_document:
-    toc: yes
   pdf_document:
-    highlight: zenburn
-    toc: yes
-    toc_depth: 4
-  word_document:
-    fig_caption: yes
-    fig_heigh: 4
-    fig_width: 4
-numbersections: yes
-documentclass: report
+     includes:
+        in_header: header.tex
+        before_body: Titlepage.tex
+     keep_tex: yes
+     number_sections: yes
+     toc: yes
+     toc_depth: 4
+
 ---
 
 
 ```{r, echo=FALSE}
 
 ```
-#Executive summary{-}
 
+\pagebreak
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+#Executive summary{-}
+adfadfaf
 
 ##Stock{-}
 
