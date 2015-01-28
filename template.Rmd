@@ -14,7 +14,7 @@ output:
      number_sections: yes
      toc: yes
      toc_depth: 4
-
+     fig_caption: true
 ---
 
 
@@ -35,15 +35,63 @@ adfadfaf
 ##Catches{-}
 Trends and current levels-include table for last ten years and graph with long term data
 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+  library(r4ss)
+  library(xtable)
+    options(xtable.comment = FALSE)  #turns off xtable comments
+
+#read in the SS output file
+ myreplist = SS_output(dir='C:/Aurora_rockfish_assessment', covar=TRUE, ncol=1000)
+
+
+  SpawningB = myreplist$derived_quants[grep("SPB",myreplist$derived_quants$LABEL),]
+  SpawningB = SpawningB[c(-1,-2),]
+
+  minYR=2004
+  maxYR=2013
+
+
+                   
+  SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",minYR,sep='') &  
+                           SpawningB$LABEL<=paste("SPB_",maxYR,sep=''),]     
+  SpawningByrs$YEAR = seq(minYR,maxYR)
+  SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+  SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+  SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
+  SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
+  colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
+  
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  SpawningB.table = xtable(SpawningBtab, caption=c("Recent trend in beginning of the year biomass and depletion"),
+               label='SpawningB',digits=0)  #digits=0 rounds the numbers
+  align(SpawningB.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  #xtable requires a placeholder for rownames, hence 4 values
+ 
+  print(SpawningB.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+       width="\\textwidth")
+```
+
+
 ##Data and assessment{-}
 date of last assessment, type of assessment model, data available, new information, and information lacking
 
 ##Stock biomass{-}
 trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
 
+![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for                          China rockfish. \label{spawningB}](spawningB)
+
+This is a test to see if I can reference Figure \ref{spawningB}. 
+
+
+![sdfafafasfaf](C:/Aurora_rockfish_assessment/plots/recdevs1_points.png)
+![testtest](C:/Aurora_rockfish_assessment/plots/ts7Spawningbiomass(mt).png)
+
+
 
 ##Recruitment{-}
 trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates
+
 
 
 ##Exploitation status{-}
