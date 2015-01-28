@@ -79,13 +79,13 @@ date of last assessment, type of assessment model, data available, new informati
 ##Stock biomass{-}
 trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
 
-![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for                          China rockfish. \label{spawningB}](spawningB)
+![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for                          China rockfish. \label{spawningB}](plots/spawningB.png)
 
 This is a test to see if I can reference Figure \ref{spawningB}. 
 
 
-![sdfafafasfaf](C:/Aurora_rockfish_assessment/plots/recdevs1_points.png)
-![testtest](C:/Aurora_rockfish_assessment/plots/ts7Spawningbiomass(mt).png)
+![sdfafafasfaf](plots/recdevs1_points.png)
+![testtest](plots/ts7Spawningbiomass(mt).png)
 
 
 
