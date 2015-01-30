@@ -766,4 +766,125 @@ Love, M., Yoklavich, M., and Thorsteinson, L. 2002. The rockfishes of
 the northeast Pacific. University of California Press, Berkeley, CA,
 USA.
 
+\section{Appendix E. Observed Angler
+Prediction}\label{appendix-e.-observed-angler-prediction}
+
+Beginning in 1992 Calrec Historic began tracking the number of observed
+anglers in its database, however the full data-set spans from 4/22/87
+until 12/31/98. The goal of this analysis is to impute the number of
+observed anglers in the initial period of the dataset, from 4/22/87
+until 7/9/92, when the observed number of active anglers was not yet
+being recorded.
+
+The number of observed anglers is necessarily a subset of the number of
+total anglers; a quantity which is consistently recorded throughout the
+entire dataset. This suggests that a simple binomial regression model
+could be used to predict the mean number of observed anglers from the
+number of total anglers, in the initial period of the data. Binomial
+regression models of this general form were considered in this analysis,
+as well as a sensitivity analysis among the other potential covariates
+available in the dataset. Among the potential predictor variables in
+this study, effects related to the interviewer, trip date, and the
+trip's identification number (trip ID) number were considered for
+inclusion in the final model by pairwise comparison of fitted model AIC
+values as well as analysis of parameter significance.
+
+Effects related to interviewer were found to be very significant,
+although due to the high turn-over rate of the interviewers in these
+data, interviewer specific effects are not useful for prediction here.
+However, the total number of present interviewers (one or two
+interviewers) was found to be strongly significant and was included in
+the final models as a categorical effect.
+
+For imputing the observed number of active anglers for the early period
+of the dataset it is important to motivate an assumption of stationarity
+in the number of observed anglers through time. Thus trip date was
+considered for inclusion in the model to check for any possibility
+significance through time. Firstly, date was considered for inclusion in
+the model as a discrete time variable; secondly, a separate model was
+tested using only year as categorical variable to consider any temporal
+patterns. Given the number of total anglers, neither of the models
+considering temporal effects were able demonstrate that the number of
+observed anglers varied significantly through time. All models which
+included temporal effects produced higher overall AIC values, thus
+supporting the assumption of stationarity in time.
+
+Trip ID was found to contribute a significant effect toward overall
+inference. Upon further investigation, trip ID was found to encode
+information about the number of consecutive outings for each interviewer
+followed by a decimal point and a unique numeric code for each
+interviewer. This suggests that by ignoring the numbers after the
+decimal point one could represent a measure of the generic interviewer
+experience. Inclusion of this variable was tested and is supported by
+the fitted AIC and parameter significance as a discrete experience
+variable. Although this variable was supported by the chosen model
+selection criteria, it was ultimately left out of the final models for
+further investigation of accuracy of the coding scheme.
+
+Log Model:
+
+\begin{equation}
+y_{ij} \sim N(\beta_{0j} + \beta_{1j} \log(x_{ij}),~ \sigma_j \mathbb{I})
+\end{equation}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{plots/obsAngLogModel.pdf}
+\caption{captions tell all the things \label{obsAngLogModel}}
+\end{figure}
+
+Binomial Log Model:
+
+\begin{equation}
+y_{ij} \sim B\Big( ~N_{ij}, ~\text{logit}\big(\beta_{0j} + \beta_{1j} \log(x_{ij})\big)~ \Big)
+\end{equation}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{plots/obsAngGlmLogModel.pdf}
+\caption{captions tell all the things \label{obsAngLogModel}}
+\end{figure}
+
+\begin{center}
+\begin{tabular}{c|c|c|c|}
+                & \verb|totAng| & \verb|totAng + intNum| & \verb|log(totAng) + intNum| \\ \hline
+Normal          & 67387.29 & 65317.02 & 64636.72 \\ \hline
+Binomial        & 66099.40 & 63753.06 & 62498.83 \\ \hline
+\end{tabular}
+\end{center}
+
+The log model considers a typical normal linear model for each
+interviewer level, except it uses the log of the number of total anglers
+as a predictor rather than the raw numbers of total anglers. The log
+model has several nice features for prediction in this case. Firstly by
+regressing on the log of the total anglers it improves the correlation
+and relative homoscedasticity of the joint data and improves the
+accuracy of sensitivity analysis by improving the standard error
+estimates for each parameter. Secondly the log transformation introduces
+the expected mean prediction shape, by emphasizing order of magnitude
+differences in the total number of anglers. The binomial log model
+considers the observed angler counts as independent draws from a
+binomial given the know number of total anglers. The log transformation
+in the binomial case is justified over the traditional binomial glm for
+similar reasons as the normal log model, as well as simple AIC support
+of the transformation. All models and model selection criterion were
+computed using the standard \verb|glm| function in the R software
+environment for statistical computing \cite{rBase}.
+
+The binomial log model was chosen for its low AIC value and reasonable
+mean predictions. Untransformed binomial models were considered, however
+they produce unreasonable observed angler predictions associated with
+the high numbers of total anglers. The log transformed Normal model
+provides mostly reasonable predictions, but is not supported by AIC when
+compared to the binomial models. Additionally transforms of Normal
+likelihood models have no distributional way of producing observed
+angler predictions which do not exceed the total number of anglers. If a
+Normal likelihood model were to gather AIC support, predictions may
+require truncation. These data contain considerable noise, likely due to
+the high interviewer turnover rate, which would most effectively be
+modeled by including appropriate additional predictors to control for
+these effects. At this point no additional predictors from this dataset
+were considered to be both sensitive and appropriate for use with
+prediction in this case.
+
 \end{document}
