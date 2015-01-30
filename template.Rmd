@@ -502,6 +502,9 @@ y_{ij} \sim B\Big( ~N_{ij}, ~\text{logit}\big(\beta_{0j} + \beta_{1j} \log(x_{ij
                 & \verb|totAng| & \verb|totAng + intNum| & \verb|log(totAng) + intNum| \\ \hline
 Normal          & 67387.29 & 65317.02 & 64636.72 \\ \hline
 Binomial        & 66099.40 & 63753.06 & 62498.83 \\ \hline
+\caption{
+
+}
 \end{tabular}
 \end{center}
 
