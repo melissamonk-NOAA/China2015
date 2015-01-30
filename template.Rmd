@@ -1,7 +1,7 @@
 ---
 title: "Stock Assessment of China Rockfish in 2015"
-author: 'null'
-date: 'null'
+author: ''
+date: ''
 output:
   pdf_document:
     fig_caption: yes
@@ -15,6 +15,8 @@ output:
 geometry: margin=1in
 fontsize: 12pt
 documentclass: article
+bibliography: chinarockfish2015.bib
+csl: CJAFS.csl
 ---
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
      ##read in necessary libraries
@@ -36,6 +38,7 @@ adfadfaf
 
 ##Stock{-}
 
+Blah blah Milton says China rockfish live to at least 79 years [@Love2002rockfishes].
 
 ##Catches{-}
 Trends and current levels-include table for last ten years and graph with long term data
@@ -328,7 +331,7 @@ If possible, ranges depicting uncertainty should include at least three runs: (a
 #Acknowledgments
 Include STAR panel members and affiliations as well as names and affiliations of persons who contributed data, advice or information but were not part of the assessment team. \textbf{* Not required in draft assessment undergoing review.}
 
-#Literature Cited
+
 
 #Tables
 
@@ -412,3 +415,9 @@ Just writing something in here in reference to a fig \ref{appendfig}
 \setcounter{page}{1}
 \setcounter{figure}{1}
 \setcounter{table}{1}
+
+
+\newpage
+
+\thispagestyle{empty}
+#References{-}

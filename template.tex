@@ -42,7 +42,7 @@
 \fi
 \hypersetup{breaklinks=true,
             bookmarks=true,
-            pdfauthor={null},
+            pdfauthor={},
             pdftitle={Stock Assessment of China Rockfish in 2015},
             colorlinks=true,
             citecolor=blue,
@@ -65,12 +65,10 @@
   \title{Stock Assessment of China Rockfish in 2015}
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-  \author{null}
-  \preauthor{\centering\large\emph}
-  \postauthor{\par}
-  \predate{\centering\large\emph}
-  \postdate{\par}
-  \date{null}
+  \author{}
+  \preauthor{}\postauthor{}
+  \date{}
+  \predate{}\postdate{}
 
 
 \usepackage{fullpage}
@@ -161,6 +159,9 @@ adfadfaf
 \subsection*{Stock}\label{stock}
 \addcontentsline{toc}{subsection}{Stock}
 
+Blah blah Milton says China rockfish live to at least 79 years (Love et
+al. 2002).
+
 \subsection*{Catches}\label{catches}
 \addcontentsline{toc}{subsection}{Catches}
 
@@ -211,9 +212,6 @@ rockfish. \label{spawningB}}
 \end{figure}
 
 This is a test to see if I can reference Figure \ref{spawningB}.
-
-\includegraphics{plots/recdevs1_points.png}
-\includegraphics{plots/ts7Spawningbiomass(mt).png}
 
 \subsection*{Recruitment}\label{recruitment}
 \addcontentsline{toc}{subsection}{Recruitment}
@@ -677,22 +675,95 @@ affiliations of persons who contributed data, advice or information but
 were not part of the assessment team.
 \textbf{* Not required in draft assessment undergoing review.}
 
-\section{Literature Cited}\label{literature-cited}
-
 \section{Tables}\label{tables}
 
 \section{Figures}\label{figures}
 
-\section{Appendix A. SS data file}\label{appendix-a.-ss-data-file}
+\newpage
 
-\subsection{Appendix A.1 Sub-headings in
-Appendix}\label{appendix-a.1-sub-headings-in-appendix}
+\section*{Appendix A. SS data file}\label{appendix-a.-ss-data-file}
+\addcontentsline{toc}{section}{Appendix A. SS data file}
 
-\section{Appendix B. SS control file}\label{appendix-b.-ss-control-file}
+\renewcommand{\thepage}{A-\arabic{page}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\thetable}{A\arabic{table}}
 
-\section{Appendix C. SS starter file}\label{appendix-c.-ss-starter-file}
+\setcounter{page}{1} \setcounter{figure}{1} \setcounter{table}{1}
 
-\section{Appendix D. SS forecast
+Just writing something in here in reference to a fig \ref{appendfig}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{plots/SPR4_phase}
+\caption{appendix figure test \label{appendfig}}
+\end{figure}
+
+\newpage 
+
+\subsection*{Appendix A1. Sub-headings in
+Appendix}\label{appendix-a1.-sub-headings-in-appendix}
+\addcontentsline{toc}{subsection}{Appendix A1. Sub-headings in Appendix}
+
+\renewcommand{\thepage}{A1-\arabic{page}}
+\renewcommand{\thefigure}{A1.\arabic{figure}}
+\renewcommand{\thetable}{A1.\arabic{table}}
+
+\setcounter{page}{1} \setcounter{figure}{1} \setcounter{table}{1}
+
+\newpage
+
+\section*{Appendix B. SS control
+file}\label{appendix-b.-ss-control-file}
+\addcontentsline{toc}{section}{Appendix B. SS control file}
+
+\renewcommand{\thepage}{B-\arabic{page}}
+\renewcommand{\thefigure}{B\arabic{figure}}
+\renewcommand{\thetable}{B\arabic{table}}
+
+\setcounter{page}{1} \setcounter{figure}{1} \setcounter{table}{1}
+
+\newpage
+
+\section*{Appendix C. SS starter
+file}\label{appendix-c.-ss-starter-file}
+\addcontentsline{toc}{section}{Appendix C. SS starter file}
+
+\renewcommand{\thepage}{C-\arabic{page}}
+\renewcommand{\thefigure}{C\arabic{figure}}
+\renewcommand{\thetable}{C\arabic{table}}
+
+\setcounter{page}{1} \setcounter{figure}{1} \setcounter{table}{1}
+
+\newpage
+
+\section*{Appendix D. SS forecast
 file}\label{appendix-d.-ss-forecast-file}
+\addcontentsline{toc}{section}{Appendix D. SS forecast file}
+
+\renewcommand{\thepage}{D-\arabic{page}}
+\renewcommand{\thefigure}{D\arabic{figure}}
+\renewcommand{\thetable}{D\arabic{table}}
+
+\setcounter{page}{1} \setcounter{figure}{1} \setcounter{table}{1}
+
+\newpage
+
+\section*{Appendix E. Observed Angler
+Prediction}\label{appendix-e.-observed-angler-prediction}
+\addcontentsline{toc}{section}{Appendix E. Observed Angler Prediction}
+
+\renewcommand{\thepage}{E-\arabic{page}}
+\renewcommand{\thefigure}{E\arabic{figure}}
+\renewcommand{\thetable}{E\arabic{table}}
+
+\setcounter{page}{1} \setcounter{figure}{1} \setcounter{table}{1}
+
+\newpage
+
+\thispagestyle{empty} \#References\{-\}
+
+Love, M., Yoklavich, M., and Thorsteinson, L. 2002. The rockfishes of
+the northeast Pacific. University of California Press, Berkeley, CA,
+USA.
 
 \end{document}
