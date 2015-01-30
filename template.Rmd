@@ -80,13 +80,11 @@ date of last assessment, type of assessment model, data available, new informati
 ##Stock biomass{-}
 trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
 
-![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for                          China rockfish. \label{spawningB}](plots/spawningB.png)
+![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for China rockfish. \label{spawningB}](plots/spawningB.png)
 
 This is a test to see if I can reference Figure \ref{spawningB}. 
 
 
-![sdfafafasfaf](plots/recdevs1_points.png)
-![testtest](plots/ts7Spawningbiomass(mt).png)
 
 
 
@@ -336,14 +334,81 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 #Figures
 
-#Appendix A. SS data file
+\newpage
 
-##Appendix A.1 Sub-headings in Appendix
+#Appendix A. SS data file {-}
+\renewcommand{\thepage}{A-\arabic{page}}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
 
-#Appendix B. SS control file
 
-#Appendix C. SS starter file
+Just writing something in here in reference to a fig \ref{appendfig}
 
-#Appendix D. SS forecast file
+![appendix figure test \label{appendfig}](plots\SPR4_phase)
 
-#Appendix E. Observed Angler Prediction
+
+\newpage 
+
+##Appendix A1. Sub-headings in Appendix{-}
+\renewcommand{\thepage}{A1-\arabic{page}}
+\renewcommand{\thefigure}{A1.\arabic{figure}}
+\renewcommand{\thetable}{A1.\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+
+
+
+\newpage
+
+#Appendix B. SS control file{-}
+\renewcommand{\thepage}{B-\arabic{page}}
+\renewcommand{\thefigure}{B\arabic{figure}}
+\renewcommand{\thetable}{B\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+
+
+
+\newpage
+
+#Appendix C. SS starter file{-}
+\renewcommand{\thepage}{C-\arabic{page}}
+\renewcommand{\thefigure}{C\arabic{figure}}
+\renewcommand{\thetable}{C\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+
+
+
+
+\newpage
+
+#Appendix D. SS forecast file{-}
+\renewcommand{\thepage}{D-\arabic{page}}
+\renewcommand{\thefigure}{D\arabic{figure}}
+\renewcommand{\thetable}{D\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+
+
+
+\newpage
+
+#Appendix E. Observed Angler Prediction{-}
+\renewcommand{\thepage}{E-\arabic{page}}
+\renewcommand{\thefigure}{E\arabic{figure}}
+\renewcommand{\thetable}{E\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
