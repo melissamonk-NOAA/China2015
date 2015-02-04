@@ -350,7 +350,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 Just writing something in here in reference to a fig \ref{appendfig}
 
-![appendix figure test \label{appendfig}](plots\SPR4_phase)
+![appendix figure test \label{appendfig}](plots/SPR4phase.png)
 
 
 \newpage 
@@ -541,4 +541,5 @@ both sensitive and appropriate for use with prediction in this case.
 \newpage
 
 \thispagestyle{empty}
+
 #References{-}
