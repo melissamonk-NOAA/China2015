@@ -26,6 +26,8 @@ csl: CJAFS.csl
 ##############################################################################################################
 #### loads workspace image of the BASE MODEL from SS_output in r4ss    
      load("Aurora2013.RData")
+    mod = myreplist
+     #check the structure of the data here to make sure it contains "mod," the SS_output variable
 ##############################################################################################################
 ```
 
@@ -46,18 +48,18 @@ Trends and current levels-include table for last ten years and graph with long t
 <!-- BEGIN: CREATE SPAWNING BIOMASS TABLE -->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
-      SpawningB = myreplist$derived_quants[grep("SPB",myreplist$derived_quants$LABEL),]
+      SpawningB = mod$derived_quants[grep("SPB",mod$derived_quants$LABEL),]
       SpawningB = SpawningB[c(-1,-2),]
 #########################################################################
 #CHANGE ME
-      minYR=2004  # minimum year for the Spawning biomass table
-      maxYR=2013  # maximum year for the Spawning biomass table
+      FirstYR=2004  # minimum year for the Spawning biomass table
+      LastYR=2013  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-     SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",minYR,sep='') &  
-                           SpawningB$LABEL<=paste("SPB_",maxYR,sep=''),]     
-     SpawningByrs$YEAR = seq(minYR,maxYR)
+     SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
+                           SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),]     
+     SpawningByrs$YEAR = seq(FirstYR,LastYR)
      SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
      SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
      SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
