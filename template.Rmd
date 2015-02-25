@@ -8,7 +8,6 @@ output:
     includes:
       before_body: Titlepage.tex
       in_header: header.tex
-    keep_tex: yes
     number_sections: yes
     toc: yes
     toc_depth: 4
@@ -156,8 +155,24 @@ Description of fisheries for this species off Canada, Alaska and/or Mexico, incl
 
 ##Data
 
-###Title
-Landings by year and fishery, historical catch estimates, discards (generally specified as a percentage of total catch in weight and in units of mt), catch-at-age, weight-at-age, abundance indices (typically survey and CPUE data), data used to estimate biological parameters (e.g., growth rates, maturity schedules, and natural mortality) with coefficients of variation (CVs) or variances if available.  Include complete tables and figures and date of extraction.
+###Fishery-Dependent Data: Landings
+
+**California Commercial Landings, 1969-2014**
+
+The [CALCOM](http://128.114.3.187/) database was queried (February 20, 2015) for commercial landing estimates of China rockfish in California. Landings were stratified by year, quarter, live/dead, market category, gear group, port complex, and source of species composition data (actual port samples, borrowed samples, or assumed nominal market category). Total landings from the initial query span the years 1969-2014.
+
+The majority of commercial China rockfish landings are made by vessels using hook-and-line gear (Fig. \ref{EJD_CALCOM_1}). However, landings estimates also include a large fraction of trawl-caught China rockfish from 1969-1988, which is unlikely given the species’ preference for rocky habitat. The reported trawl catch was mainly from the Monterey port complex and was landed in the “China rockfish” market category (258).
+
+An analysis of species composition data from port samples in market category 258, by gear type, revealed that the sampled trawl catch landed in the China rockfish market category contained mainly deeper-water species, including greenspotted rockfish (*Sebastes chlorostictus*), sometimes known as “chinafish.” Species landed by hook-and-line gears in the China rockfish market category, on the other hand, consisted of a mixture of nearshore species (e.g. china, quillback, gopher, black-and-yellow, and brown; Fig. \ref{EJD_CALCOM_2}). When port samples are not available to estimate species composition in a stratum, and no samples are available to ‘borrow’ from an adjacent stratum, landings in a market category are assigned to the ‘nominal’ species category, in this case China rockfish.
+
+Given the available species composition data from the trawl catch, and the fact that trawl gear is unlikely to be fished in China rockfish habitat, trawl-caught China rockfish were removed from the landings estimates in the current assessment. A similar analysis led to the removal of a small amount (about 5 mt) of landings by set-net and mid-water trawl gear groups.
+
+In years prior to 1978, landing receipts are available for California but there are no associated port sample data. Typically, a ratio estimator (based on the expanded landings estimates in the earliest sampled years) is used to allocate catch to species in these early years. In the case of China rockfish, this procedure propagated the estimates of trawl-caught China backward in time to 1969 (Fig. \ref{EJD_CALCOM_1}). These ratio estimates of trawl-caught China rockfish were also removed from the final time series of landed catch.
+
+The previous assessment of China rockfish (Cope et al. 2013) modeled two China rockfish populations, north and south of **fix this: 40-10** North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Fig. \ref{EJD_CALCOM_3}).
+
+
+*Landings by year and fishery, historical catch estimates, discards (generally specified as a percentage of total catch in weight and in units of mt), catch-at-age, weight-at-age, abundance indices (typically survey and CPUE data), data used to estimate biological parameters (e.g., growth rates, maturity schedules, and natural mortality) with coefficients of variation (CVs) or variances if available.  Include complete tables and figures and date of extraction.*
 
 
 
@@ -338,6 +353,12 @@ Include STAR panel members and affiliations as well as names and affiliations of
 #Tables
 
 #Figures
+
+![Estimated commercial landings of China rockfish (mt) by year and gear group (Source: CALCOM). \label{EJD_CALCOM_1}](plots/EJD_Unaltered_CALCOM_landings_by_year+gear.png)
+
+![Commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2013. Hook and line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
+
+![Revised California commercial landing estimates (mt) of China rockfish, north and south of Cape Mendocino, 1969-2013 (black bars). Estimates of California’s annual landed commercial catch used in the 2013 stock assessment are plotted for comparison (red line). \label{EJD_CALCOM_3}](plots/EJD_China_comm_lands_by_year-region-compare2013.png)
 
 \newpage
 
