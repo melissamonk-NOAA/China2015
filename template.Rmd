@@ -26,7 +26,7 @@ csl: CJAFS.csl
 ##############################################################################################################
 #### loads workspace image of the BASE MODEL from SS_output in r4ss    
      load("Aurora2013.RData")
-    mod = myreplist
+   # mod = myreplist
      #check the structure of the data here to make sure it contains "mod," the SS_output variable
 ##############################################################################################################
 ```
