@@ -169,7 +169,9 @@ Given the available species composition data from the trawl catch, and the fact 
 
 In years prior to 1978, landing receipts are available for California but there are no associated port sample data. Typically, a ratio estimator (based on the expanded landings estimates in the earliest sampled years) is used to allocate catch to species in these early years. In the case of China rockfish, this procedure propagated the estimates of trawl-caught China backward in time to 1969 (Fig. \ref{EJD_CALCOM_1}). These ratio estimates of trawl-caught China rockfish were also removed from the final time series of landed catch.
 
-The previous assessment of China rockfish (Cope et al. 2013) modeled two China rockfish populations, north and south of **fix this: 40-10** North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Fig. \ref{EJD_CALCOM_3}).
+The previous assessment of China rockfish [@Cope2015_Data-Moderate_Assessment] modeled two China rockfish populations, north and south of **fix this: 40-10** North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Fig. \ref{EJD_CALCOM_3}).
+
+California’s commercial live-fish fishery began targeting nearshore rockfish species in the early 1990s [@CDFG_CalCOFI_2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Fig. \ref{EJD_CALCOM_4}).
 
 
 *Landings by year and fishery, historical catch estimates, discards (generally specified as a percentage of total catch in weight and in units of mt), catch-at-age, weight-at-age, abundance indices (typically survey and CPUE data), data used to estimate biological parameters (e.g., growth rates, maturity schedules, and natural mortality) with coefficients of variation (CVs) or variances if available.  Include complete tables and figures and date of extraction.*
@@ -359,6 +361,8 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ![Commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2013. Hook and line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
 
 ![Revised California commercial landing estimates (mt) of China rockfish, north and south of Cape Mendocino, 1969-2013 (black bars). Estimates of California’s annual landed commercial catch used in the 2013 stock assessment are plotted for comparison (red line). \label{EJD_CALCOM_3}](plots/EJD_China_comm_lands_by_year-region-compare2013.png)
+
+![Revised commercial landing estimates (mt) of China rockfish landed live and dead, north and south of Cape Mendocino, 1969-2013. \label{EJD_CALCOM_4}](plots/EJD_China_comm_lands_by_year-region-live.png)
 
 \newpage
 
