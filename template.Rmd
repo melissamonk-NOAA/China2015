@@ -184,9 +184,12 @@ Sample size information for length and age composition data by area, year, gear,
 ###Title
 All data sources that include the species being assessed, which are used in the assessment, and provide the rationale for data sources that are excluded.
 
-
 ###Title
 Clear description of environmental or ecosystem data if included in the assessment.
+
+###Fishery-Independent Data: sources considered, but not used in assessment
+*Partnership for Interdisciplinary Studies of Coastal Oceans (PISCO)*
+A total of 59 China rockfish were observed in 17,657 SCUBA transects conducted in the southern and central survey regions. Transects were conducted in Northern California and Oregon for two years (2010-2011), with a higher occurence of China rockfish (156 out of 956 transects).
 
 
 ##History of Modeling Approaches Used for this Stock
