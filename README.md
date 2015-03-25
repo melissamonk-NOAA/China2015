@@ -18,7 +18,7 @@ Perhaps some text could be added here on the commands required to convert an R M
 
 ###Directions for creating the .bib file with Mendeley (free account required).
 
-1. Download Mendeley Desktop and also install the Web Importer (for use with Google Scholar).
+1. Download Mendeley Desktop from https://www.mendeley.com/download-mendeley-desktop/ and also install the Web Importer (for use with Google Scholar). 
 2. Join the China Rockfish Assessment 2015 group on Mendeley.
 3. Either input a reference manually or import it to Mendeley from Google Scholar.
 4. Add that reference to the China Rockfish Assessment 2015 folder in Mendeley Desktop.
