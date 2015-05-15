@@ -570,6 +570,16 @@ both sensitive and appropriate for use with prediction in this case.
 
 \newpage
 
+#Appendix F. Reef Delineation and Selection Methodologies{-}
+\renewcommand{\thepage}{F-\arabic{page}}
+\renewcommand{\thefigure}{F\arabic{figure}}
+\renewcommand{\thetable}{F\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+
+
 \thispagestyle{empty}
 
 #References{-}
