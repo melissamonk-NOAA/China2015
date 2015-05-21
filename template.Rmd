@@ -11,11 +11,12 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 4
-geometry: margin=1in
-fontsize: 12pt
+  word_document: default
 documentclass: article
-bibliography: chinarockfish2015.bib
+fontsize: 12pt
+geometry: margin=1in
 csl: CJAFS.csl
+bibliography: chinarockfish2015.bib
 ---
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
      ##read in necessary libraries
@@ -102,7 +103,7 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 
 ##Ecosystem considerations{-}
 
-##Reference points (groundfish)/harvest control rules (CPS){-}
+##Reference points{-}
 management targets and definition of overfishing, including the harvest rate that brings the stock to equilibrium at B40% (the BMSY proxy) and the equilibrium stock size that results from fishing at the default harvest rate (the FMSY proxy). Include a summary table that compares estimated reference points for SSB, SPR, Exploitation Rate and Yield based on SSBproxy for MSY, SPRproxy for MSY, and estimated MSY values (table i. on page 35 of attached Canary rockfish executive summary).
 
 ##Management performance{-}
@@ -112,7 +113,7 @@ catches in comparison to OFL, ABC and OY/ACL values for the most recent 10 years
 ##Unresolved problem and major uncertainties{-}
 any special issues that complicate scientific assessment, questions about the best model scenario, etc.
 
-##Decision table (groundfish only)\*{-}
+##Decision table{-}
 projected yields (OFL, ABC and ACL), spawning biomass, and stock depletion levels for each year.* (Not required in draft assessments undergoing review.)
 
 ##Research and data needs{-}
@@ -324,16 +325,15 @@ If a range of model runs is used to characterize uncertainty it is important to 
 \label{sec:uncertaintylast}
 If possible, ranges depicting uncertainty should include at least three runs: (a) one judged most probable; (b) at least one that depicts the range of uncertainty in the direction of lower current biomass levels; and (c) one that depicts the range of uncertainty in the direction of higher current biomass levels.  The entire range of uncertainty should be carried through stock projections and decision table analyses.
 
-#Harvest Control Rules (CPS Only)
 
-#Reference Points (Groundfish Only)
+#Reference Points
 1.  Unfished spawning stock biomass, summary age biomass, and recruitment, along with unfished spawning stock output.
 2. 	Reference points based on B\textsubscript{40\%} for rockfish and roundfish and on B\textsubscript{25\%} for flatfish (spawning biomass and/or output, SPR, exploitation rate, equilibrium yield).
 3.	Reference points based on default SPR proxy (spawning biomass and/or output, SPR, exploitation rate, equilibrium yield).
 4.	Reference points based on MSY (if estimated) (spawning biomass and/or output, SPR, exploitation rate, equilibrium yield).
 5.	Equilibrium yield curve showing various BMSY proxies. 
 
-#Harvest Projections and Decision Tables (Groundfish Only)
+#Harvest Projections and Decision Tables
 *Not required in draft assessment undergoing review.
 
 1.  Harvest projections and decision tables (i.e., a matrix of alternative models (states of nature) versus management actions) should cover the plausible range of uncertainty about current stock biomass and a set of candidate fishing mortality targets used for the stock.  See section “\textit{Uncertainty and Decision Tables in Groundfish Stock Assessment}” (this document, pp. \pageref{sec:uncertainty}\-\pageref{sec:uncertaintylast}) on how to define alternative states of nature.  Management decisions in most cases represent the sequence of catches including estimate of OFL based on FMSY (or its proxy) and those obtained by applying the Council 40\-10 harvest policy to each state of nature; however other alternatives may be suggested by the GMT as being more relevant to Council decision making.  OFL calculations should be based on the assumption that future catches equal ABCs and not OFLs.
@@ -378,9 +378,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 \setcounter{table}{1}
 
 
-Just writing something in here in reference to a fig \ref{appendfig}
 
-![appendix figure test \label{appendfig}](plots/SPR4phase.png)
 
 
 \newpage 
@@ -444,8 +442,8 @@ Just writing something in here in reference to a fig \ref{appendfig}
 \renewcommand{\thefigure}{E\arabic{figure}}
 \renewcommand{\thetable}{E\arabic{table}}
 \setcounter{page}{1}
-\setcounter{figure}{1}
-\setcounter{table}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
 
@@ -549,7 +547,7 @@ number of total anglers. The log transformation in the binomial case is
 justified over the traditional binomial glm for similar reasons as the normal 
 log model, as well as simple AIC support of the transformation. All models and 
 model selection criterion were computed using the standard \verb|glm| function 
-in the R software environment for statistical computing \cite{rBase}.
+in the R software environment for statistical computing [@rBase].
 
 <!>
 <!>
@@ -575,15 +573,35 @@ both sensitive and appropriate for use with prediction in this case.
 \renewcommand{\thefigure}{F\arabic{figure}}
 \renewcommand{\thetable}{F\arabic{table}}
 \setcounter{page}{1}
-\setcounter{figure}{1}
-\setcounter{table}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 
 ##Reef Delineation
-We identified reefs as potential habitat for China Rockfish in California, Oregon and Washington using a variety of newly available spatial data sources, including 2, 3 and 5 m bathymetry, substrate, lithology and Habitat Suitability geodatabases.  Available data sources varied by latitude. To delineate reefs from Point Conception to the Oregon border we used a 2 m binary raster layer (3 m for Cordell Bank) for substrate, where 1 = rough, and 0 = smooth habitat (California Seafloor Mapping Project, data available from: http://seafloor.otterlabs.org/index.html).  Rough and smooth substrate was identified by CSMP using 2 rugosity indices based upon bathymetric data, surface:planar area (SA:PA), and vector ruggedness measure (VRM).  We considered areas identified as ‘rough’ as reef habitat.  For reefs named Asilomar, Cypress Point, Portuguese Ledge, and Point Joe only a portion of the reefs were mapped at the 2m resolution, therefore to identify the remaining reef, we used either a 5 m resolution VRM dataset, where the VRM cutoff was greater than 0.001 [@Young2010].  For all reefs derived from either 2 m, 3 m or 5 m resolution, we applied a 5m buffer around each reef habitat for potential error in positional accuracy and all reefs with an area greater than or equal to 100 m\textsuperscript{2} were included. We identified seven reefs outside of the 2 m layer that contained a significant number of CPFV points, which we decided to include in the indices.  Big Reef, Blunts Reef, Isle of St. James, Point Sur Deep, Sandhill Ledge,   portions of San Gregario  and Soap Bank reefs were located just outside of 2m, 3m and 5m ‘footprint’, therefore for these reefs we used the 2005 Habitat Suitability Probability (HSP) geodatabase for China Rockfish [@NMFS2005]. The HSP is a modeled output from Essential Fish Habitat geodatabase and is based upon habitat data, depth, and location, where input data are NMFS trawl datasets. In order to identify reef habitats from the Oregon border to Washington, we used a lithology shapefile [@Goldfinger2014] that was based upon multiple seafloor mapping surveys including multibeam and sidescan sonar, sediment grab and core samples, and images. Seafloor types were classified according to established classification schemes [@Greene1999].  We considered the following lithology types as ‘reef habitat:’ Boulder, cobble, cobble mix, hard, rock, and rock mix.  All spatial data was projected to NAD 1983 UTM Zone 10.
+We identified reefs as potential habitat for China Rockfish in California, Oregon and Washington using a variety of newly available spatial data sources, including 2, 3 and 5 m bathymetry, substrate, lithology and Habitat Suitability geodatabases.  Available data sources varied by latitude. To delineate reefs from Point Conception to the Oregon border we used a 2 m binary raster layer (3 m for Cordell Bank) for substrate, where 1 = rough, and 0 = smooth habitat (California Seafloor Mapping Project, data available from: http://seafloor.otterlabs.org/index.html).  Rough and smooth substrate was identified by CSMP using 2 rugosity indices based upon bathymetric data, surface:planar area (SA:PA), and vector ruggedness measure (VRM).  We considered areas identified as ‘rough’ as reef habitat.  For reefs named Asilomar, Cypress Point, Portuguese Ledge, and Point Joe only a portion of the reefs were mapped at the 2 m resolution, therefore to identify the remaining reef, we used either a 5 m resolution VRM dataset, where the VRM cutoff was greater than 0.001 [@Young2010].  For all reefs derived from either 2 m, 3 m or 5 m resolution, we applied a 5 m buffer around each reef habitat for potential error in positional accuracy and all reefs with an area greater than or equal to 100 m\textsuperscript{2} were included. We identified seven reefs outside of the 2 m layer that contained a significant number of CPFV points, which we decided to include in the indices.  Big Reef, Blunts Reef, Isle of St. James, Point Sur Deep, Sandhill Ledge,   portions of San Gregario  and Soap Bank reefs were located just outside of 2 m, 3 m and 5 m ‘footprint’, therefore for these reefs we used the 2005 Habitat Suitability Probability (HSP) geodatabase for China Rockfish [@NMFS2005]. The HSP is a modeled output from Essential Fish Habitat geodatabase and is based upon habitat data, depth, and location, where input data are NMFS trawl datasets. In order to identify reef habitats from the Oregon border to Washington, we used a lithology shapefile [@Goldfinger2014] that was based upon multiple seafloor mapping surveys including multibeam and sidescan sonar, sediment grab and core samples, and images. Seafloor types were classified according to established classification schemes [@Greene1999].  We considered the following lithology types as ‘reef habitat:’ Boulder, cobble, cobble mix, hard, rock, and rock mix.  All spatial data was projected to NAD 1983 UTM Zone 10.
 
 
-Reef systems were grouped and stratified by depth at a spatial scale biologically meaningful to the individual China rockfish.  China rockfish are typically sedentary and have high site fidelity, therefore we grouped reefs in consideration of how a China rockfish would experience its surroundings.  Lea [-@Lea1999] recaptured China rockfish in the same general location as where they were released, however a few individuals of other rockfish species (copper (\textit{Sebastes caurinus}), gopher (\textit{Sebastes carnatus}), olive (\textit{Sebastes serranoides}) and yellowtail (\textit{Sebastes flavidus})) demonstrated movement up to 1.5 nautical miles (about 2,700 m), but all were captured within the same reef system.  In the Puget Sound copper, brown and quillback were found to have a home range less than 30m\textsuperscript{2} in high relief rocky areas [@Matthews1990].  In other rockfish movement studies, China rockfish were tagged but never recaptured, or there was a sample size of 1 [@Hannah2011], Hannah 2012).  Using this limited information, we considered that China rockfish would swim no more than 200 m over smooth, sand, or muddy habitat to a neighboring reef, therefore if a reef was greater than ~200 m from rocky reef habitat it was considered a different reef system.  If a reef system has contiguous habitat (no channels greater than 200 m) it remained intact, no matter how large the reef.  A small number of reefs were merged into ‘super reefs’ to accommodate 1980s-1990s CDFW location codes that overlapped multiple reefs.  Reef areas were calculated using the zonal stats tool in ArcGIS, stratified by the depth bins 0-19 m, 20-39 m, 40-59 m, 60-79 m, 80-99 m and greater than 100 m using the CSMP depth raster (2 m, 3 m or 5 m resolution).  To get depths for those reefs outside the CSMP ‘footprint’ we used the NOAA Coastal Relief Model raster dataset (90 m) for California, and 100 m digital elevation model (DEM) bathymetry from the Active Tectonics and Seafloor Mapping Lab for Oregon.
+Reef systems were grouped and stratified by depth at a spatial scale biologically meaningful to China rockfish.  China rockfish are typically sedentary and have high site fidelity, therefore we grouped reefs in consideration of how a China rockfish would experience its surroundings.  Lea [-@Lea1999] recaptured China rockfish in the same general location as where they were released, however a few individuals of other rockfish species (copper (\textit{Sebastes caurinus}), gopher (\textit{Sebastes carnatus}), olive (\textit{Sebastes serranoides}) and yellowtail (\textit{Sebastes flavidus})) demonstrated movement up to 1.5 nautical miles (about 2,700 m), but all were captured within the same reef system.  In the Puget Sound copper, brown and quillback were found to have a home range less than 30m\textsuperscript{2} in high relief rocky areas [@Matthews1990].  In other rockfish movement studies, China rockfish were tagged but never recaptured, or there was a sample size of 1 [@Hannah2011], Hannah 2012).  Using this limited information, we considered that China rockfish would swim no more than 200 m over smooth, sand, or muddy habitat to a neighboring reef, therefore if a reef was greater than ~200 m from rocky reef habitat it was considered a different reef system.  If a reef system has contiguous habitat (no channels greater than 200 m) it remained intact, no matter how large the reef (Fig. \cite{MHM_careefs]},\cite{MHM_oreefs}).  A small number of reefs were merged into ‘super reefs’ to accommodate 1980s-1990s CDFW location codes that overlapped multiple reefs [.  Reef areas were calculated using the zonal stats tool in ArcGIS, stratified by the depth bins 0-19 m, 20-39 m, 40-59 m, 60-79 m, 80-99 m and greater than 100 m using the CSMP depth raster (2 m, 3 m or 5 m resolution).  To get depths for those reefs outside the CSMP ‘footprint’ we used the NOAA Coastal Relief Model raster dataset (90 m) for California, and 100 m digital elevation model (DEM) bathymetry from the Active Tectonics and Seafloor Mapping Lab for Oregon.
+
+
+![Map of the reefs near Pt. Reyes, CA (a) and overlaid with the fishing location codes from the CDFW 1987-1998 onboard observer program.\label{MHM_careefs}](plots//MHM_CA_reefmap.png)
+
+![Example of the reefs in Oregon.\label{MHM_orreefs}](plots//MHM_OR_reefs.png)
+
+Regions were designated to gain appropriate sample sizes needed for modelling.  For Oregon, region differences north and south of Florence were explored.  In California, 12 regions north of Pt. Conception were defined as follows:
+
+Region 1: Pt. Conception to Pt. Arguello  
+Region 2: Purisima Point to Pt. Sal  
+Region 3: San Luis Obispo Bay to Mill Creek ($39.959^{\circ}$ N)  
+Region 4: Lopez Point to Monterey Peninsula  
+Region 5: Moss Landing to San Francisco Bay  
+Region 6: Farallon Islands  
+Region 7: Point Bonita to Drakes Bay  
+Region 8: Point Reyes to Point Arena  
+Region 9: Point Arena to south of Ten Mile River  
+Region 10: north of Ten Mile River to Cape Mendocino ($40.16667^{\circ}$ N)   
+Region 11: Cape Mendocino to Eel River  
+Region 12: Trinidad Head to CA/OR border  
 
 
 ##CPFV drift selection
@@ -592,6 +610,506 @@ During the 1987-1998 CDFW onboard observer program, fishing location was recorde
 
 For each CPFV location in the California 1999-2014 and Oregon 2001-2014 data we calculated depth, nearest reef, distance from reef, nearest MPA, distance from MPA using ArcGIS.  Geoprocessing steps used were ‘near’ and ‘extract values to points.’ For consistency across databases, we used the starting location of the drift to determine if the drift was targeting fish associated with a reef.  Drifts that had a distance of 0 m, i.e., were fishing directly on the reef, were included in analyses.  Recognizing that some drifts begin adjacent to a reef with the intention of drifting on to the reef, as well as the fact that the starting location may not be recorded at the very start of a drift, we devised a method for including drifts within a certain distance of a reef.  
 We compiled a list of rockfish species that are strictly reef associated (black and yellow rockfish (\textit{Sebastes chrysomelas}), canary rockfish  (\textit{Sebastes pinniger}), China rockfish (\textit{Sebastes nebulosus}), cowcod (\textit{Sebastes levis}), flag rockfish  (\textit{Sebastes rubrivinctus}), gopher rockfish (\textit{Sebastes carnatus}), grass rockfish (\textit{Sebastes rastrelliger}), greenblotched rockfish (\textit{Sebastes rosenblatti}), kelp rockfish (Sebastes atrovirens}), quillback rockfish (\textit{Sebastes maliger}), rosy rockfish (\textit{Sebastes rosaceus}), starry rockfish (\textit{Sebastes constellatus}), Treefish (\textit{Sebastes serriceps}), vermilion rockfish (\textit{Sebastes miniatus}), yelloweye rockfish (\textit{Sebastes ruberrimus})) (personal communication John Field and Tom Laidig, NMFS SWFSC).  Using drifts that were greater than 0m from a reef and encountered one at least one of the fifteen species listed above, we calculated the depth for which 75% of the drifts were included.  For Oregon this was 83 m, and for California it was 34 m for drifts within the ‘footprint’ and 141 m for drifts outside the ‘footprint.’  Any drift (with or without catch) greater than 83 m from a reef was excluded from the analyses.
+
+
+\newpage
+
+#Appendix G. Regulations Histories{-}
+\renewcommand{\thepage}{G-\arabic{page}}
+\renewcommand{\thefigure}{G\arabic{figure}}
+\renewcommand{\thetable}{G\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+
+##Commerical Fisheries
+
+###Federal waters
+For a list of the commercial regulations in federal waters see the [Commercial Regulations Home Page](http://calcomfish.ucsc.edu/Regulation_Main.asp), which is housed in the CALCOM database.
+
+###Washington
+The following commercial regulations pertain to China rockfish species in washington and were provided by the Washington Department of Fish and Wildlife.
+
+\begin{description}
+    \item[2008] \hfill\\
+        The groundfish trawl fishery was closed in Washington from the seaward RCA boundary to the shore north of $48^{\circ} 10' N$ latitude to address increased encounters with yelloweye and canary rockfish
+        
+    \item[2002] \hfill\\
+        Non-Trawl RCA closed from shore to 100 fm north of $46^{\circ} 16 N$ latitude
+        
+    \item[1995] \hfill\\
+         Commercial hook and line fishing in state waters (0-3 miles) was closed to preserve recreational fishing opportunities and avoid localized depletion; trawlers included in 1999
+         
+    \item[1992] \hfill\\
+        Commercial hook and line limits reduced to 100 lbs north of Cape Alava and from Destruction Island to Leadbetter Pt. 
+
+   \end{description}
+
+
+###Oregon
+The following commercial regulations pertain to China rockfish in Oregon and were provided by the Oregon Department of Fish and Wildlife.
+
+China rockfish are managed in teh Other Nearshore Rockfish complex
+
+\textbf{Harvest cap}: Total amount in regulation allowed to be impacted in a fishery (for a given season) including both discard mortality and landed catch mortality.  Prior to 2007 this term was synonymous with “landing cap.”
+
+\textbf{Landing cap}: Total amount in regulation allowed to be landed in a fishery (for a given season).  Includes only landed catch mortality (known as a harvest cap before 2007).  
+
+####Incidental Catch Limits in Other Fisheries (established in 2004)
+
+\textbf{Non-permitted vessels}: 15 lbs per day of black rockfish, blue rockfish, and nearshore fish, combined, for no more than one landing per day.  These species must make-up 25% or less of landed poundage, and must be taken with gear legal in the permitted fishery.
+
+\textbf{Groundfish trawl fishery}: Vessels may land no more than 1,000 lbs of dead black rockfish, blue rockfish, and nearshore fish combined per calendar year if these species make-up 25% or less of landing.
+
+\textbf{Non-profit aquaria or vessels contracted by non-profit aquaria} may land black rockfish, blue rockfish, and nearshore fish for purposes of display or for conducting research on these species.
+
+####Regulations History
+A minimum size limit of 12 inches (measured from the tip of the snout to the extreme end of the tail) was implemented for China rockfish in 2000.  A sorting requirement for China rockfish was implemented in 2003.
+
+\begin{description}
+  \item[2014] \hfill\\
+          Other Nearshore Rockfish landing cap: 14.3 mt
+        
+          Other Nearshore Rockfish Period Limits:All Periods 700 lbs
+        
+          Rockfish Conservation Area: fishing restricted to inside 30 fm
+
+  
+  \item[2013] \hfill\\ 
+          Other Nearshore Rockfish landing cap: 14.3 mt (excluding tiger and vermillion rockfishes)
+        
+        Other Nearshore Rockfish Period Limits:All Periods 700 lbs
+        
+        
+        Legal Gear Types: Hook and line (including pole and line, troll, longline, and stick gear) and pot gear (max 35 pots) if a Developmental Fisheries permit for Nearshore species using pot gear was issued in 2003
+        
+        Rockfish Conservation Area: fishing restricted to inside 30 fm 
+
+  \item[2012] \hfill\\
+          Other Nearshore Rockfish landing cap: 14.3 mt (excluding tiger and vermillion rockfishes)
+          
+          Other Nearshore Rockfish Period Limits: All Periods 700 lbs
+          
+          Rockfish Conservation Area: fishing restricted to inside 30 fm north of $43^{\circ} N$, restricted to inside 20 fm from $42^{\circ} - 43^{\circ} N$
+  
+  \item[2011] \hfill\\
+         Other Nearshore Rockfish landing cap: 14.3 mt (excluding tiger and vermillion rockfishes)
+
+         Other Nearshore Rockfish Period Limits: All Periods 700 lbs
+ 
+         Rockfish Conservation Area: fishing restricted to inside 30 fm north of $43^{\circ} N$, restricted to inside 20 fm from $42^{\circ} - 43^{\circ} N$
+  \item[2010] \hfill\\
+        Other Nearshore Rockfish landing cap: 14.3 mt (excluding tiger and vermillion rockfishes)
+      
+        Other Nearshore Rockfish Period Limits: All Periods 700 lbs
+      
+        Rockfish Conservation Area: fishing restricted to inside 30 fm north of $43^{\circ} N$, restricted to inside 20 fm from $42^{\circ} - 43^{\circ} N$
+
+  \item[2009] \hfill\\
+        Other Nearshore Rockfish landing cap: 14.3 mt (excluding tiger and vermillion rockfishes)
+        
+        Other Nearshore Rockfish Period Limits: All Periods 700 lbs
+        
+        Legal Gear Types: Hook and line (including pole and line, troll, longline, and stick gear) and pot gear (max 35 pots) if a Developmental Fisheries permit for Nearshore species using pot gear was issued in 2003
+        
+        Rockfish Conservation Area: fishing restricted to inside 30 fm north of $43^{\circ} N$, restricted to inside 20 fm from $42^{\circ} - 43^{\circ} N$
+
+  
+  \item[2008] \hfill\\
+        Other Nearshore Rockfish landing cap: 12.0 mt (excluding tiger and vermillion rockfishes)
+      
+       Other Nearshore Rockfish Period Limits:All Periods 700 lbs
+      
+       Sorting Requirement for All Nearshore Rockfish to Species: first year of all nearshore rockfish recorded to species on commercial fish tickets
+            
+       Rockfish Conservation Area: fishing restricted to inside 30 fm 
+
+  \item[2007] \hfill\\
+      First year of commercial landing caps (formerly known as harvest caps)
+    
+      Other Nearshore Rockfish landing cap: 12.0 mt (excluding tiger and vermillion rockfishes)
+    
+     Other Nearshore Rockfish Period Limits: All Periods 600 lbs
+      
+     Rockfish Conservation Area: fishing restricted to inside 30 fm
+      
+    9/1: Other Nearshore Rockfish changes: Period 5 increase to 700 lbs; Period 6 increase to 700 lbs
+    
+    11/28: Other Nearshore Rockfish change: Period 6 closed
+
+  
+  \item[2006] \hfill\\
+        First and only year with 1-month trip limits
+      
+        Other Nearshore Rockfish harvest cap: 13.5 mt (including tiger and vermillion rockfishes)
+      
+       Other Nearshore Rockfish 1-month Period Limits: All Periods 200 lbs per month
+      
+       Rockfish Conservation Area: fishing restricted to inside 30 fm
+      
+      7/1: Other Nearshore Rockfish change: July increase to 300 lbs
+      
+      8/11: Other Nearshore Rockfish changes: increase to 350 lbs per month for all remaining months
+
+  
+  \item[2005] \hfill\\
+      Other Nearshore Rockfish harvest cap: 12.0 mt 16.0 mt (excluding tiger and vermillion Rockfishes, 13.5 mt including these fish) 
+    
+      Other Nearshore Rockfish Period Limits (Sub-limit from Black and blue Rockfish trip limits):
+     (includes tiger and vermillion Rockfishes, sublimit of Black and blue Rockfish limit): All Periods: 450 lbs
+      
+      Rockfish Conservation Area: fishing restricted to inside 30 fm
+
+     5/1: Other Nearshore Rockfish changes: Periods 3 thru 5 decrease to 325 lbs
+
+    10/11: Other Nearshore Rockfish changes: Period 5 and 6 increase to 400 lbs
+
+  \item[2004] \hfill\\
+        Permit required for vessels to land Black and blue Rockfishes and other nearshore fish identified in House Bill 3108
+       
+       Nearshore logbook required for all vessels participating in the fishery
+
+        ODFW allowed to prescribe legal gear under this permit except:
+            1.  Diving gear may not be used
+            2.	Pots may not be used unless a vessel was previously issued a pot endorsement in the Interim Nearshore Fisheries Plan through the Developmental Fisheries Program during 2003
+
+      Other Nearshore Rockfish harvest cap: 16.0  mt (including tiger and vermillion Rockfishes) 
+
+      Other Nearshore Rockfish 1-month Period Limits (Sub-limit from Black and blue Rockfish trip limits): (includes tiger and vermillion Rockfish), All Periods: 450 lbs
+
+      Rockfish Conservation Area: fishing restricted to inside 30 fm
+
+      9/28: Other Nearshore Rockfish change: Period 5 decrease to 100 lbs
+      
+      11/1: Other Nearshore Rockfish change: Period 6 closed
+
+  \item[2003] \hfill\\
+        Commercial Nearshore Fishery (21 nearshore species) placed in the Developmental Fisheries Program
+
+        House Bill 3108 establishes formal management of the commercial nearshore fishery, comprised of landings of species on the ‘nearshore fish’ list beginning, January 1, 2004
+        
+        Oregon Fish and Wildlife Commission first establishes harvest caps for nearshore species: Other Nearshore Rockfish harvest cap: 21.3 mt
+
+         Bi-monthly trip limits first put into place mid-season (July 16th) in 2003
+      
+         Other Nearshore Rockfish (Sub-limit from Black and blue Rockfish): All periods 300 lbs 
+
+      Rockfish Conservation Area: fishing restricted to inside 27 fm from January – October
+  \item[2002] \hfill\\
+      In October, the Pacfic Fishery Management Council adopted conservative harvest limits for 2003 equal to landings from 2000
+        
+      Oregon Fish and Wildlife Commission directs the Marine Resources Program to evaluate a harvest reduction equal to or greater than 20% of 2000 harvest 
+       
+      Interim commercial harvest management plan implemented place a cap on fishery participants and reduced the nearshore fleet by 50%
+             
+      National Marine Fishery Service begins collecting fishery-dependent data at-sea from vessels participating in the fishery
+       
+      
+
+
+  \item[2000] \hfill\\
+          Pacific City Open Access Minor Nearshore Rockfish Limit (including Black and blue Rockfish here): May 1 - September 30 limit 2,200 lbs per month of which no more than 700 lbs         can be rockfish other than Black and blue Rockfishes
+  \item[1997] \hfill\\
+        New live fish markets in California accelerate growth of the Commercial Nearshore Fishery
+  \item[1994] \hfill\\
+  \item[Early to mid 1990s] \hfill\\
+       Commercial Nearshore Fishery develops as an open access fishery  
+  \end{description}
+
+###California
+The following commercial regulations pertain to China rockfish species in washington and were provided by the California Department of Fish and Wildlife.  There has been a 12 inch minimum size limit on China rockfish since 2001.
+####Gear Restrictions  
+\begin{description}
+    \item[2001] \hfill\\
+        Hook and line limited to 150 hooks with 15 hooks per line within 1 mile of shore
+        
+    \item[1996] \hfill\\
+        Finfish trap permit required
+        
+    \item[1994] \hfill\\
+         Proposition 132 implemented to prohibit gill nets within state waters
+         
+    \item[1953] \hfill\\
+        Legislation prohibits trawl within 3 miles of shore
+   \end{description}
+
+####Limited Entry Permit System and Trip Limits
+ Trips limits now vary according to constraints from bycatch of canary adn yelloweye rockfishes
+\begin{description}
+    \item[2003] \hfill\\
+        Split into shallow and deep nearshore restricted access permits, with shallow nearshore permits in 4 regions and the deep nearshore permits statewide
+        
+        Trip limits for restricted access fishery, with differential trip limits north and south of $40^{\circ} 10' N$ for both permits, and only the deep nearshore permits south of Point Conception
+        
+        Subject to depth restrictions consitsten wit the shoreward non-trawl RCA
+        
+    \item[1999] \hfill\\
+        Nearshore fishery permit requied
+        
+    \item[1994] \hfill\\
+         Limited entry permits and open access fishery established for Sebastes complex
+         
+         Limited entry and open access trip limits on the Sebastes complex
+        
+   \end{description}
+
+##Recreational Fisheries
+
+###Washington
+The following recreational regulations pertain to nearshore rockfish species in washington and were provided by the Washington Department of Fish and Wildlife.
+
+####North Coast (MCA 3 and 4)
+  This area has a 20 fm depth restriction.
+ \begin{description}
+    \item[2014-2013] \hfill\\
+        May 1 - Sept 30: No groundfish except, lingcod, Pacific cod and sablefish on days open to halibut fishing
+        
+    \item[2012-2011] \hfill\\
+        June 1 - Sept 30: No roundfish except on days open to halibut fishing
+        
+    \item[2010-2009] \hfill\\
+         May 21 - SepT 30: No groundfish except on days open to halibut fishing
+
+    \item[2008-2007] \hfill\\
+         May 21 - Sep 30: No grounfish
+
+    \item[2006] \hfill\\
+        May 21 - Setp 30: No rockfish or lingcod
+   \end{description}
+   
+####South Coast (MCA 2)
+  This area has a 30 fm depth restriction.
+  \begin{description}
+    \item[2014-2013] \hfill\\
+        March 18 - June 15: No groundfish except rockfish; Pacific cod and sablefish allowed May 1 June 15; lingcod allowed on days open to halibut
+        
+    \item[2012-2011] \hfill\\
+        March 18 - June 15: No groundfish except rockfish; Pacific cod and sablefish allowed May 1 June 15; lingcod allowed on days open to halibut
+
+        
+    \item[2010-2009] \hfill\\
+         March 18 - June 15: No groundfish; Pacific cod and sablefish allowed May 1 June 15
+
+    \item[2008-2007] \hfill\\
+        March 18 - June 15: No groundfish; Pacific cod and sablefish allowed May 1 June 15
+
+    \item[2006] \hfill\\
+        March 18 - June 15: No rockfish or lingcod
+   \end{description}
+  
+####Columbia River (MCA 1)
+  This area has no depth restriction.
+  \begin{description}
+    \item[2014-2006] \hfill\\
+        Year-round: No groundfish except Pacific cod and sablefish allowed with halibut on board
+   \end{description}
+
+####Daily Groundfish and Rockfish Limits
+Groundfish includes: rockfish, Pacific cod, flatfish (except halibut), lingcod, ratfish, sablefish, cabezon, greenling, sculpins, sharks, skates, and surfperch excluding shiner perch.  There are sub-bag limits for lingcod (2) coastwide  and cabezon (1) in Marine Area 4.  The groundfish daily bag limit in Marine Area 4B was reduced to 10 in 2011.
+
+\textbf{2015-2011}: 20 lbs/day
+        
+\textbf{2010-1961}: 15 fish
+   
+\textbf{1960-1938}: 12 fish
+
+   
+   
+There is no minimum size limit for rockfish.  Marine Area 4B bag limit allows retention of 6 blue and black rockfish only (2010-2015).
+   
+\textbf{2015-1995}: 20 lbs/day
+        
+\textbf{1994-1992}: 15 fish
+   
+\textbf{1991-1961}: 12 fish
+         
+\textbf{1960-1954}: 10 fish
+
+
+
+
+###Oregon
+The following regulations pertain to nearshore rockfish species in Oregon and were provided by the Oregon Department of Fish and Wildlife. There were no bag limits prior to 1976.  Gear restrictions have remained the same for all years, i.e., three hooks.
+
+\begin{description}
+  \item[2015] \hfill\\
+  All rockfish, greenlings, Cabezon, skates, and other marine fish species not listed in the 2015 Oregon Sport Fishing Regulations in the Marine Zone: 7-fish daily bag limit in aggregate, of which no more than three may be blue Rockfish and no more than one may be a Cabezon (when Cabezon is open), and no more than one may be a canary rockfish. \\
+  
+  Retention of Yelloweye, Canary, China, Copper and Quillback rockfish is prohibited.
+  
+  \item[2014 - 2013] \hfill\\ 
+   Same a 2012
+  
+  \item[2012] \hfill\\
+  Rockfish, Cabezon, greenlings (10" min.), and other marine species not listed under Marine Zone in the Oregon Sport Fishing Regulations: 7 daily in aggregate of which no more than 1 may be a Cabezon April 1 – Sept. 30. 
+  
+  30-fathom curve:  Seaward closed April 1-Sept. 30 [for groundfish group].
+  
+  \item[2011] \hfill\\
+  Rockfish, Cabezon, greenling (10" min.), and other marine species not listed under Marine Zone in the Oregon Sport Fishing Regulations:  7 daily in aggregate of which no more than 1 may be a Cabezon April 1 – Sept. 30
+  
+  40-fm curve:  Seaward closed April 1-Sept. 30
+  
+  7/21:   Offshore of 20-fm line closed due to Yelloweye Rockfish impacts
+  
+  8/13: 	Groundfish retention with nearshore halibut (central coast) prohibited
+  
+  10/1: All depths reopened for groundfish (Yelloweye Rockfish impacts sufficiently slowed); Groundfish retention with nearshore halibut allowed again
+  
+  \item[2010] \hfill\\
+  Same as 2009 including "rockfish" et al bag limit: 7 (misprinted in regulations booklet as 6)
+  
+  Definition of "groundfish group" added
+  
+  7/24: Offshore of 20-fm line closed through Dec. 31 due to Yelloweye Rockfish impacts
+  
+  \item[2009] \hfill\\
+  Same as 2008 through April 30 (adopted late), then increase in "marine fish" bag limit
+  
+  Rockfish, Cabezon, greenling (10" min.), and other marine species not listed: 6
+  
+  40-fm curve:  Seaward closed April 1-Sept. 30
+  
+  5/1: "Rockfish" et al bag limit increased to 7 (in permanent rule)
+  
+  \item[2008] \hfill\\
+  Same as 2007
+  
+  7/7:   "Rockfish" et al bag limit reduced from 6 to 5 and closed outside 20-fm line through Dec. 31 [sic – see 9/7 change] and flatfish closed outside 40-fm line through Dec. 31 [sic]
+  
+  9/7: 	Return to preseason regs., i.e., "rockfish" et al  bag limit back to 6 and waters closed offshore of 40-fm line only through Sept. 30 (open offshore Oct-Dec)
+  
+  \item[2007] \hfill\\
+  Rockfish, Cabezon, greenling (10" min.), and other marine species not listed: 6 
+  
+  40-fm curve:  Seaward closed April 1-Sept. 30
+  
+  \item[2006] \hfill\\
+  Rockfish, Cabezon, greenling (10" min.), flounder, sole and other marine species not listed:  6 
+  
+  40-fm curve:  Seaward closed June 1-Sept. 30
+  
+  \item[2005] \hfill\\
+  Rockfish, Cabezon, greenling (10" min.), flounder, sole and other marine species not listed:  8 
+  
+  40-fm curve:  Seaward closed June 1-Sept. 30
+  
+  7/16: Rockfish et al bag limit reduced to 5
+  
+  10/18: Black RF prohibited for boats, Grounfish closed seaward of 40 fm
+  
+  \item[2004] \hfill\\
+  Rockfish, Cabezon, greenling (10" min.), flounder, sole and other marine species not listed:  10, no more than 1 P. Halibut 
+  
+  Retention of yelloweye rockfish and canary rockfish prohibite
+  
+  40-fm curve:  Seaward closed June 1-Sept. 30
+  
+  9/3: Rockfish, lingcod and greenling prohibited
+  
+  \item[2003] \hfill\\
+  Rockfish, Cabezon, greenling, flounder, sole and other marine species not listed:  10, no more than 1 Canary RF, 1 Yelloweye RF and 1 P. Halibut 
+  
+  11/21: ocean closed to GF outside 27-fm line
+  
+  \item[2002] \hfill\\
+  Rockfish:  10, no more than 1 Canary RF and 1 Yelloweye RF
+  
+  \item[2001] \hfill\\
+  Rockfish:  10, no more than 1 Canary RF 
+  
+  \item[2000] \hfill\\
+  Rockfish:  10, no more than 3 Canary RF 
+  
+  \item[1999-1994] \hfill\\
+  Rockfish:  15, no more than 10 Black Rockfish 
+  
+  \item[1993-1986] \hfill\\
+  Rockfish, Cabezon and greenling:  15 
+  
+  \item[1985-1979] \hfill\\
+  Other fish:  25, no more than 3 lingcod, 2 halibut and 15 rockfish/Cabezon/greenling
+  
+  \item[1978] \hfill\\
+  Other fish:  10
+  Then effective 4/1 = - other fish:  25, no more than  3 lingcod, 2 halibut and 15 rockfish/Cabezon/greenling
+  
+  \item[1977] \hfill\\
+  Other fish:  25, no more than 5 lingcod and 2 halibut
+  
+  \item[1976] \hfill\\
+  Other fish:  25
+\end{description}
+
+###California
+![\label{MHM_caregs1}](plots/CAregs/1_CA_rec_regs.pdf)
+
+![\label{MHM_caregs2}](plots/CAregs/2_CA_rec_regs.pdf)
+
+![\label{MHM_caregs3}](plots/CAregs/3_CA_rec_regs.pdf)
+
+![\label{MHM_caregs4}](plots/CAregs/4_CA_rec_regs.pdf)
+
+![\label{MHM_caregs5}](plots/CAregs/5_CA_rec_regs.pdf)
+
+![\label{MHM_caregs6}](plots/CAregs/6_CA_rec_regs.pdf)
+
+![\label{MHM_caregs7}](plots/CAregs/7_CA_rec_regs.pdf)
+
+![\label{MHM_caregs8}](plots/CAregs/8_CA_rec_regs.pdf)
+
+![\label{MHM_caregs9}](plots/CAregs/9_CA_rec_regs.pdf)
+
+![\label{MHM_caregs10}](plots/CAregs/10_CA_rec_regs.pdf)
+
+![\label{MHM_caregs11}](plots/CAregs/11_CA_rec_regs.pdf)
+
+![\label{MHM_caregs12}](plots/CAregs/12_CA_rec_regs.pdf)
+
+![\label{MHM_caregs13}](plots/CAregs/13_CA_rec_regs.pdf)
+
+![\label{MHM_caregs14}](plots/CAregs/14_CA_rec_regs.pdf)
+
+![\label{MHM_caregs15}](plots/CAregs/15_CA_rec_regs.pdf)
+
+
+\newpage
+
+#Appendix H. {-}
+\renewcommand{\thepage}{H-\arabic{page}}
+\renewcommand{\thefigure}{H\arabic{figure}}
+\renewcommand{\thetable}{H\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+blah blah blah if needed
+
+\newpage
+
+#Appendix I. {-}
+\renewcommand{\thepage}{I-\arabic{page}}
+\renewcommand{\thefigure}{I\arabic{figure}}
+\renewcommand{\thetable}{I\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+blah blah blah if needed
+\newpage
+
+#Appendix F. {-}
+\renewcommand{\thepage}{I-\arabic{page}}
+\renewcommand{\thefigure}{I\arabic{figure}}
+\renewcommand{\thetable}{I\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+
+blah blah blah if needed
+
 
 
 \thispagestyle{empty}
