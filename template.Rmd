@@ -1,5 +1,5 @@
 ---
-title: "Stock Assessment of China Rockfish in 2015"
+title: "Status of the China rockfish off the U.S. Pacific Coast in 2015"
 author: ''
 date: ''
 output:
@@ -129,7 +129,7 @@ reference to the principal results from rebuilding analysis if the stock is over
 Scientific name, distribution, the basis of the choice of stock structure, including regional differences in life history or other biological characteristics that should form the basis of management units.
 
 ##Map
-A map showing the scope of the assessment and depicting boundaries for fisheries or data collection strata.
+A map showing the scope of the assessment and depicting boundaries for fisheries or data collection strata is provided in \hl{Figure xxx.}
 
 ##Life History
 Important features of life history that affect management (e.g., migration, sexual dimorphism, bathymetric demography).
@@ -156,174 +156,212 @@ Description of fisheries for this species off Canada, Alaska and/or Mexico, incl
 
 ##Data
 
-###Fishery-Dependent Data: Landings
+###Fishery-Dependent Data: Commercial Landings
+
+**Washington**
+\hl{Theresa}
+
+**Oregon**
+\hl{Patrick}
 
 **California Commercial Landings, 1969-2014**
 
 The [CALCOM](http://128.114.3.187/) database was queried (February 20, 2015) for commercial landing estimates of China rockfish in California. Landings were stratified by year, quarter, live/dead, market category, gear group, port complex, and source of species composition data (actual port samples, borrowed samples, or assumed nominal market category). Total landings from the initial query span the years 1969-2014.
 
-The majority of commercial China rockfish landings are made by vessels using hook-and-line gear (Fig. \ref{EJD_CALCOM_1}). However, landings estimates also include a large fraction of trawl-caught China rockfish from 1969-1988, which is unlikely given the species’ preference for rocky habitat. The reported trawl catch was mainly from the Monterey port complex and was landed in the “China rockfish” market category (258).
+The majority of commercial China rockfish landings are made by vessels using hook-and-line gear (Figure \ref{EJD_CALCOM_1}). However, landings estimates also include a large fraction of trawl-caught China rockfish from 1969-1988, which is unlikely given the species’ preference for rocky habitat. The reported trawl catch was mainly from the Monterey port complex and was landed in the “China rockfish” market category (258).
 
-An analysis of species composition data from port samples in market category 258, by gear type, revealed that the sampled trawl catch landed in the China rockfish market category contained mainly deeper-water species, including greenspotted rockfish (*Sebastes chlorostictus*), sometimes known as “chinafish.” Species landed by hook-and-line gears in the China rockfish market category, on the other hand, consisted of a mixture of nearshore species (e.g. china, quillback, gopher, black-and-yellow, and brown; Fig. \ref{EJD_CALCOM_2}). When port samples are not available to estimate species composition in a stratum, and no samples are available to ‘borrow’ from an adjacent stratum, landings in a market category are assigned to the ‘nominal’ species category, in this case China rockfish.
+An analysis of species composition data from port samples in market category 258, by gear type, revealed that the sampled trawl catch landed in the China rockfish market category contained mainly deeper-water species, including greenspotted rockfish (*Sebastes chlorostictus*), sometimes known as “chinafish.” Species landed by hook-and-line gears in the China rockfish market category, on the other hand, consisted of a mixture of nearshore species (e.g. china, quillback, gopher, black-and-yellow, and brown; Figure \ref{EJD_CALCOM_2}). When port samples are not available to estimate species composition in a stratum, and no samples are available to ‘borrow’ from an adjacent stratum, landings in a market category are assigned to the ‘nominal’ species category, in this case China rockfish.
 
 Given the available species composition data from the trawl catch, and the fact that trawl gear is unlikely to be fished in China rockfish habitat, trawl-caught China rockfish were removed from the landings estimates in the current assessment. A similar analysis led to the removal of a small amount (about 5 mt) of landings by set-net and mid-water trawl gear groups.
 
-In years prior to 1978, landing receipts are available for California but there are no associated port sample data. Typically, a ratio estimator (based on the expanded landings estimates in the earliest sampled years) is used to allocate catch to species in these early years. In the case of China rockfish, this procedure propagated the estimates of trawl-caught China backward in time to 1969 (Fig. \ref{EJD_CALCOM_1}). These ratio estimates of trawl-caught China rockfish were also removed from the final time series of landed catch.
+In years prior to 1978, landing receipts are available for California but there are no associated port sample data. Typically, a ratio estimator (based on the expanded landings estimates in the earliest sampled years) is used to allocate catch to species in these early years. In the case of China rockfish, this procedure propagated the estimates of trawl-caught China backward in time to 1969 (Figure \ref{EJD_CALCOM_1}). These ratio estimates of trawl-caught China rockfish were also removed from the final time series of landed catch.
 
-The previous assessment of China rockfish [@Cope2015_Data-Moderate_Assessment] modeled two China rockfish populations, north and south of **fix this: 40-10** North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Fig. \ref{EJD_CALCOM_3}).
+The previous assessment of China rockfish [@Cope2015_Data-Moderate_Assessment] modeled two China rockfish populations, north and south of **fix this: 40-10** North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Figure \ref{EJD_CALCOM_3}).
 
-California’s commercial live-fish fishery began targeting nearshore rockfish species in the early 1990s [@CDFG_CalCOFI_2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Fig. \ref{EJD_CALCOM_4}).
+California’s commercial live-fish fishery began targeting nearshore rockfish species in the early 1990s [@CDFG_CalCOFI_2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Figure \ref{EJD_CALCOM_4}).
 
 
 *Landings by year and fishery, historical catch estimates, discards (generally specified as a percentage of total catch in weight and in units of mt), catch-at-age, weight-at-age, abundance indices (typically survey and CPUE data), data used to estimate biological parameters (e.g., growth rates, maturity schedules, and natural mortality) with coefficients of variation (CVs) or variances if available.  Include complete tables and figures and date of extraction.*
 
+###Fishery-Dependent Data: Recreational Landings
+
+**Washington**
+\hl{Theresa}
+
+**Oregon**
+\hl{Patrick}
+
+**California**
+\hl{EJ}
+
+###Fishery-Dependent Data: Commercial Discards
+
+**Washington**
+\hl{Theresa}
+
+**Oregon**
+\hl{Ian and Patrick}
+
+**California**
+\hl{Ian}
+
+###Fishery-Dependent Data: Oregon Commercial Logbook
+\hl{Aaron}
+
+###Fishery-Dependent Data: Recreational Discards
+
+**Washington**
+\hl{Theresa}
+
+**Oregon**
+\hl{Patrick}
+
+**California**
+\hl{EJ}
+
+
+###Fishery-Dependent Data: Recreational Dockside Surveys
+
+**Washington**
+\hl{Melissa H}
+
+**Oregon**
+\hl{EJ}
+
+**California**
+\hl{EJ}
+
+###Fishery-Dependent Data: Recreational Onboard Observer Surveys
+The goal of the Observer Programs in California and Oregon is to collect data including charter boat fishing locations, catch and discard of observed fish by species, and lengths of discarded fish.  Both states sample the commercial passenger fishing vessel (CPFV),i.e., charter boat or for-hire fleet.  The onboard observer programs collect drift-specific information at each fishing stop on an observed trip.  At each fishing stop recorded information includes start and end times, start and end location (latitude/longitude), start and end depth, number of observed anglers (a subset of the total anglers), and the catch (retained and discarded) by species of the observed anglers.  Data for the onboard observer indices for the recreational CPFV fleet are from four sampling programs.  
+
+The California Department of Fisheries and Wildlife (CDFW) conducted an onboard observer program in central California from 1987-1998 (Reilly et al. 1998).  These data were previously used in the 2013 data moderate assessments [@Cope2015_Data-Moderate_Assessment], at the level of a fishing trip.  Since the 2013 assessments, the original data sheets were acquired and data were keypunched to the level of fishing stop.  One caveat of this data is that location data were recorded at a finer scale than the catch data.  We aggregated the relevant location information (time and number of observed anglers) to match the available catch information.  Between April 1987 and July 1992 the number of observed anglers was not recorded for each fishing stop, but the number of anglers aboard the vessel is available.  We imputed the number of observed anglers using the number of anglers aboard the vessel and the number of observed anglers at each fishing stop form the August 1998-December 1998 data (see Appendix E for details, pp.\pageref{sec:AppendixE}).  In 1987, trips were only observed in Monterey, CA and were therefore excluded from the analysis.
+
+California implemented a coastwide sampling program in 1999 [@Monk2014].  Cal Poly has conducted an independent onboard sampling program as of 2003 for boats in Port San Luis and Morro Bay [@Stephens2006], but follows the protocols established in Reilly et al. (1998), and modified to reflect sampling changes that CDFW has also adopted, e.g., observing fish as they are landed instead of at the level of a fisher’s bag.  Therefore, the Cal Poly data area incorporated in the same index as the CDFW data from 1999-2014.
+
+We generated separate indices in California for the 1987-1999 and 2000-2014 datasets due to the number of regulation changes occurring throughout the time period (see Appendix H, pp.\pageref{sec:AppendixH}).  CDFW implemented a regulation of three hooks in 2000, which was reduced to (and remains at) two hooks in 2001.
+
+The Oregon Department of Fisheries and Wildlife (ODFW) initiated an onboard observer program in 2001, which became a yearly sampling program in 2003 [@Monk2013].  Both California and Oregon provided onboard sampling data through 2014.  
+
+
+All indices were standardized using a delta-GLM modeling approach [@Lo1992].  Data were analyzed at the drift level and catch was taken to be the sum of observed retained and discarded fish, i.e., number of fish encountered per angler hour.  The onboard observer data from the CDFW 1999-2014 data between north of $40^{\circ} 10'$ and the Oregon border were too sparce to include in the index.  Therefore, indices used in the model with a break at $40^{\circ} 10'$ remain the same as the state-specific onboard observer indices.
+
+*Data Filtering*
+Prior to any analyses, a preliminary data filter was applied.  
+
+Trips/drifts from the CDFW 1988-1998 meeting the following criteria were excluded from analyses:
+1.  Drift associated with a fishing location code that was not assigned to a reef
+2.	Drifts identified as having possible erroneous location, observed anglers, or time data
+3.	Trips encountering <50% groundfish species
+
+Trips/drifts from the ODFW, CDFW 1999-2014, and Cal Poly databases meeting the following criteria were excluded from analyses:
+1.	ODFW halibut-targeted trips were excluded
+2.	Trips encountering <50% groundfish species 
+3.	Drifts within the current Stonewall Bank Yelloweye Rockfish Conservation 
+4.	Drifts within Arcata Bay, Humboldt Bay, South Bay, or San Francisco Bay
+5.	Drifts missing a starting location (latitude/longitude) 
+6.	Drifts identified as having possible erroneous location or time data
+7.	Drifts missing both starting and ending depths 
+8.	Drifts within the habitat data occurring farther than 83 m from a reef in Oregon and 34 m in California (see Appendix F (\pageref{sec:AppendixF}) for details)
+9.	Drifts outside the habitat data in California occurring farther than 141 m from reef (see Appendix F (\pageref{sec:AppendixF}) for details)
+1.	Drifts occurring on a reef with <3 positive encounters of black rockfish
+2.	Drifts occurring on a reef in which black rockfish was observed in <25\% of years the reef was visited.
+
+
+
+**Index standardization: Oregon**
+The filtered dataset included 6,038 drifts, of which 259 (4\%) drifts with positive encounters.  The majority of drifts sampled (75\%) were from north of Florence, although China rockfishw were present in 6\% of drifts in southern Oregon and 3\% of drifts in the north. To increase sample sizes data from waves 2 and 3 were aggregated as well as from 4 and 5 (ODFW does not sample in waves 1 and 6).  Depths greater than 20 m were also binned to 20-59 m.
+
+The selected data contained categorical variables for YEAR (13 levels), WAVE (2 levels), REGION (2 levels, north and south of Florence), and three depth bins (DEPTH: 0-19 m, and 20-59 m). A lognormal model was selected over a gamma for the positive encounters by a deltaAIC of 20.01. Model selection, using AIC, selected a lognormal model with YEAR, WAVE, DEPTH, REGION, and a WAVE:DEPTH interaction, while a binomial with YEAR, REGION, and WAVE was selected.  In the lognormal submodel, stepwise BIC retained the YEAR. In the binomial model, stepwise BIC retained REGION and WAVE. The final YEAR effects from the delta-GLM with main effects YEAR, WAVE and REGION are shown in Table \ref{tab:MHM_OR_onboard} and Figure \ref{fig:MHM_OR_onboard}).
+
+**Index standardization: California**
+*Central California 1988-1998*
+The filtered dataset included 5,557 drifts, of which 852 (15\%) drifts with positive encounters.
+
+*California (north of Pt. Conception) 2000-2014*
+The filtered dataset included 13,993 drifts, of which 1,403 (10\%) drifts with positive encounters.
 
 
 ###Title
-Sample size information for length and age composition data by area, year, gear, market category, etc., including both the number of trips and fish sampled.
 
-###Title
-All data sources that include the species being assessed, which are used in the assessment, and provide the rationale for data sources that are excluded.
-
-###Title
-Clear description of environmental or ecosystem data if included in the assessment.
 
 ###Fishery-Independent Data: sources considered, but not used in assessment
 *Partnership for Interdisciplinary Studies of Coastal Oceans (PISCO)*
 A total of 59 China rockfish were observed in 17,657 SCUBA transects conducted in the southern and central survey regions. Transects were conducted in Northern California and Oregon for two years (2010-2011), with a higher occurence of China rockfish (156 out of 956 transects).
 
 
+###Biological Data: Weight-Length
+
+###Biological Data: Maturity and Fecundity
+
+###Biological Data: Natural Mortality
+
+###Biological Data: Length at age
+
+###Biological Data: Sex ratios
+
+###Biological Data: Aging precision and bias
+\hl{Melissa H}
+
+###Biological Data: Research removals
+
+
+###Biological Data: Ecosystem data
+
+
+
+
 ##History of Modeling Approaches Used for this Stock
 
-###Title
-Response to STAR panel recommendations from the most recent previous assessment.
+###Previous assessments
 
-###Title
-Report of consultations with AP and MT representatives regarding the use of various data sources in the stock assessment.
 
-###Title
-If environmental or ecosystem data are incorporated, report of consultations with technical teams that evaluated ecosystem data or methodologies used in the assessment.
 
 ##Model Description
 
-###Title
-Complete description of any new modeling approaches.
-
-###Title
-Definitions of fleets and areas.
-
-###Title
-Assessment program with last revision date (i.e., date executable program file was compiled).
+###Transition from the 2013 to 2015 stock assessment
 
 
-###Title
-List and description of all likelihood components in the model
+###Summary of data for fleets and areas
 
-###Title
-Constraints on parameters, selectivity assumptions, natural mortality, treatment of age reading bias and/or imprecision, and other fixed parameters.
+###Modeling software
+We used Stock Synthesis 3 version 3.24V, compiled March 8, 2015 by Dr. Richard Methot at the NWFSC. The most recent version (SS-V3.24u) was used, since it included improvements and corrections to older versions.
 
-###Title
-Description of stock-recruitment constraints or components.
+###Data weighting
 
+###Priors
 
-###Title
-Description of how the first year that is included in the model was selected and how the population state at the time is defined (e.g., B0, stable age structure, etc.).
+###General model specifications
 
 
-###Title
-Critical assumptions and consequences of assumption failures.
+###Estimated and fixed parameters
+
 
 ##Model Selection and Evaluation
 
-###Title
-Evidence of search for balance between model realism and parsimony.
+###Key assumptions and structural choices
 
-###Title
-Comparison of key model assumptions, include comparisons based on nested models (e.g., asymptotic vs. domed selectivities, constant vs. time-varying selectivities).  
+###Alternate models explored
 
-###Title
-Summary of alternate model configurations that were tried but rejected.
+###Convergence
 
-###Title
-Likelihood profile for the base-run (or proposed base-run model for a draft assessment undergoing review) configuration over one or more key parameters (e.g., M, h, Q) to show consistency among input data sources.
 
-###Title
-Residual analysis for the base-run configuration (or proposed base-run model in a draft assessment undergoing review) e.g., residual plots, time series plots of observed and predicted values, or other approaches.  Note that model diagnostics are required in draft assessments undergoing review.
 
-###Title
-Convergence status and convergence criteria for the base-run model (or proposed base run). 
 
-###Title
-Randomization run results or other evidence of search for global best estimates.
-
-###Title
-Evaluation of model parameters.  Do they make sense?  Are they credible?
-
-###Title
-Are model results consistent with assessments of the same species in Canada and Alaska?  Are parameter estimates (e.g., survey catchability) consistent with estimates for related stocks?
-
-##Response to STAR Panel Recommendations
-Point-by-point response to the STAR panel recommendations
 
 ##Base-Model(s) Results
 
-###Title
-Table listing all explicit parameters in the stock assessment model used for base model, their purpose (e.g., recruitment parameter, selectivity parameter) and whether or not the parameter was actually estimated in the stock assessment model.
-
-###Title
-Population numbers at age × year × sex (if sex-specific M, growth, or selectivity) (May be provided as a text or spreadsheet file).\* Not required in draft assessment undergoing review.
-
-###Title
-Time-series of total, 1+ (if age 1s are in the model), summary, and spawning biomass (and/or spawning output), depletion relative to B0, recruitment and fishing mortality or exploitation rate estimates (table and figures).
-
-###Title
-Selectivity estimates (if not included elsewhere).
-
-###Title
-Stock-recruitment relationship.
-
-###Title
-OFL, ABC and ACL (and/or ABC and OY or HG) for recent years.
-
-###Title
-Clear description of units for all outputs.
-
-###Title
-Clear description of how discard is included in yield estimates.
-
-###Title
-Clear description of environmental or ecosystem data if included in the assessment.
-
-
-##Uncertainty and Sensitivity Analyses
+##Uncertaincty and Sensitivty Analyses
 \label{sec:uncertainty}
-The best approach for describing uncertainty and the range of probable biomass estimates in groundfish  assessments may depend on the situation.  
-Important factors to consider include:
 
-###Title
-Parameter uncertainty (variance estimation conditioned on a given model, estimation framework, data set choice, and weighting scheme), including likelihood profiles for important assessment parameters (e.g., natural mortality).  This also includes expressing uncertainty in derived outputs of the model and estimating CVs using appropriate methods (e.g., bootstrap, asymptotic methods, Bayesian approaches, such as MCMC). Include the CV of spawning biomass in the first year for which an OFL has not been specified (typically end year +1 or +2).
-
-###Title
-Sensitivity to assumptions about model structure, i.e., model specification uncertainty
-
-###Title
-Sensitivity to data set choice and weighting schemes (e.g., emphasis factors), which may also include a consideration of recent patterns in recruitment.
-
-###Title
-Retrospective analysis, where the model is fitted to a series of shortened input data sets, with the most recent years of input data being dropped.
-
-###Title
-Historical analysis (plot of actual estimates from current and previous assessments).
-
-###Title
-Subjective appraisal of the magnitude and sources of uncertainty.
-
-###Title
-If a range of model runs is used to characterize uncertainty it is important to provide some qualitative or quantitative information about relative probability of each. If no statements about relative probability can be made, then it is important to state that all scenarios (or all scenarios between the bounds depicted by the runs) are equally likely
-
-###Title
 \label{sec:uncertaintylast}
-If possible, ranges depicting uncertainty should include at least three runs: (a) one judged most probable; (b) at least one that depicts the range of uncertainty in the direction of lower current biomass levels; and (c) one that depicts the range of uncertainty in the direction of higher current biomass levels.  The entire range of uncertainty should be carried through stock projections and decision table analyses.
+###Retrospective analysis
+
+
+###Historical assessment analysis
+
+
+###Likelihood profiles
+
 
 
 #Reference Points
@@ -356,9 +394,58 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 
 #Tables
+<!-- Introduction --> 
+
+
+<!-- Commercial landings --> 
+
+
+
+<!-- Recreational Landings --> 
+
+
+
+<!-- Commercial Discards --> 
+
+
+
+<!-- Recreational Discards --> 
+
+
+
+<!-- Oregon commercial logbook --> 
+
+
+
+<!-- Recreational discards --> 
+
+
+
+<!-- Recreational docksie survey --> 
+
+
+
+
+<!-- Recreational onboard observer --> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+OR_onboard = read.csv("C:/China2015/txt_files/OR_onboard.csv")
+
+OR_onboard1 = OR_onboard[-2,c(1,2,3)]
+colnames(OR_onboard1) = c('Year','Index','Log-scale SE')
+```
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+design.table = xtable(OR_onboard1,caption=c("Year effects for the Oregon onboard observer index"),label='tab:OR_onboard',digits=4)
+
+print(design.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
+```
+
+
 
 #Figures
+<!-- Introduction --> 
 
+
+<!-- Commercial landings --> 
 ![Estimated commercial landings of China rockfish (mt) by year and gear group (Source: CALCOM). \label{EJD_CALCOM_1}](plots/EJD_Unaltered_CALCOM_landings_by_year+gear.png)
 
 ![Commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2013. Hook and line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
@@ -366,6 +453,27 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ![Revised California commercial landing estimates (mt) of China rockfish, north and south of Cape Mendocino, 1969-2013 (black bars). Estimates of California’s annual landed commercial catch used in the 2013 stock assessment are plotted for comparison (red line). \label{EJD_CALCOM_3}](plots/EJD_China_comm_lands_by_year-region-compare2013.png)
 
 ![Revised commercial landing estimates (mt) of China rockfish landed live and dead, north and south of Cape Mendocino, 1969-2013. \label{EJD_CALCOM_4}](plots/EJD_China_comm_lands_by_year-region-live.png)
+
+<!-- Recreational Landings --> 
+
+<!-- Commercial Discards --> 
+
+<!-- Recreational Discards --> 
+
+<!-- Oregon commercial logbook --> 
+
+<!-- Recreational discards --> 
+
+<!-- Recreational docksie survey --> 
+
+<!-- Recreational onboard observer --> 
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Oregon onboard observer program, with 95% lognormal confidence intervals."}
+
+plot(OR_onboard$Year, OR_onboard$index, xlab="Year",ylab="Index",ylim=c(0,.09),xlim=c(2001,2014),type='b',xaxt='n',lwd=1.5,pch=19)
+arrows(OR_onboard$Year, OR_onboard$index-OR_onboard$lowerCI, OR_onboard$Year, OR_onboard$index+OR_onboard$upperCI, code=3, angle=90, length=0.01)
+axis(1, at=c(2001:2014), cex.axis=.8)
+```
+
 
 \newpage
 
@@ -438,6 +546,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 \newpage
 
 #Appendix E. Observed Angler Prediction{-}
+\label{sec:AppendixE}
 \renewcommand{\thepage}{E-\arabic{page}}
 \renewcommand{\thefigure}{E\arabic{figure}}
 \renewcommand{\thetable}{E\arabic{table}}
@@ -447,23 +556,21 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 
 
-Beginning in 1992 Calrec Historic began tracking the number of observed anglers in its database, however the full data-set spans from 4/22/87 until 12/31/98. 
-The goal of this analysis is to impute the number of observed anglers in the 
-initial period of the dataset, from 4/22/87 until 7/9/92, when the observed 
-number of active anglers was not yet being recorded.
+The 1987-1998 CDFW oboard observer program did not record the number of anglers at a fishing stop from 4/22/87 until 7/9/92. 
+The goal of this analysis is to impute the number of observed anglers in the initial period of the sampling program from the number of observed anglers and onboard anglers from the later years of the program.
 
 <!>
 <!>
 
-The number of observed anglers is necessarily a subset of the number of total 
-anglers; a quantity which is consistently recorded throughout the entire dataset. 
+The number of observed anglers at a fishing stop is a subset of the number of total 
+number of anglers; a quantity which is consistently recorded throughout the entire dataset. 
 This suggests that a simple binomial regression model could be used to predict 
 the mean number of observed anglers from the number of total anglers, in the 
 initial period of the data. Binomial regression models of this general form were 
 considered in this analysis, as well as a sensitivity analysis among the other 
 potential covariates available in the dataset. Among the potential predictor 
-variables in this study, effects related to the interviewer, trip date, and the 
-trip's identification number (trip ID) number were considered for inclusion in 
+variables in this study, effects related to the interviewer, and trip date 
+were considered for inclusion in 
 the final model by pairwise comparison of fitted model AIC values as well as 
 analysis of parameter significance.
 
@@ -473,13 +580,13 @@ analysis of parameter significance.
 Effects related to interviewer were found to be very significant, although due 
 to the high turn-over rate of the interviewers in these data, interviewer 
 specific effects are not useful for prediction here. However, the total number 
-of present interviewers (one or two interviewers) was found to be strongly 
+of interviewers onboard the vessel (one or two interviewers) was found to be strongly 
 significant and was included in the final models as a categorical effect.
 
 <!>
 <!>
 
-For imputing the observed number of active anglers for the early period of the 
+For imputing the observed number of observed anglers for the early period of the 
 dataset it is important to motivate an assumption of stationarity in the number 
 of observed anglers through time. Thus trip date was considered for inclusion in 
 the model to check for any possibility significance through time. Firstly, date 
@@ -491,19 +598,6 @@ anglers varied significantly through time. All models which included temporal
 effects produced higher overall AIC values, thus supporting the assumption of 
 stationarity in time.
 
-<!>
-<!>
-
-Trip ID was found to contribute a significant effect toward overall inference. 
-Upon further investigation, trip ID was found to encode information about the 
-number of consecutive outings for each interviewer followed by a decimal point 
-and a unique numeric code for each interviewer. This suggests that by ignoring 
-the numbers after the decimal point one could represent a measure of the generic 
-interviewer experience. Inclusion of this variable was tested and is supported 
-by the fitted AIC and parameter significance as a discrete experience variable. 
-Although this variable was supported by the chosen model selection criteria, it 
-was ultimately left out of the final models for further investigation of 
-accuracy of the coding scheme.
 
 <!>
 <!>
@@ -522,6 +616,9 @@ Binomial Log Model:
 \begin{equation}
 y_{ij} \sim B\Big( ~N_{ij}, ~\text{logit}\big(\beta_{0j} + \beta_{1j} \log(x_{ij})\big)~ \Big)
 \end{equation}
+
+
+\newpage
 
 ![captions tell all the things \label{obsAngLogModel}](plots/obsAngGlmLogModel.pdf)
 
@@ -568,16 +665,18 @@ both sensitive and appropriate for use with prediction in this case.
 
 \newpage
 
-#Appendix F. Reef Delineation and Selection Methodologies{-}
+#Appendix F. Reef Delineation and Drift Selection Methodologies{-}
+\label{sec:AppendixF}
 \renewcommand{\thepage}{F-\arabic{page}}
+\renewcommand\thesection{F-\arabic{section}}
 \renewcommand{\thefigure}{F\arabic{figure}}
 \renewcommand{\thetable}{F\arabic{table}}
 \setcounter{page}{1}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\setcounter{section}{1}
 
-
-##Reef Delineation
+**Reef Delineation**
 We identified reefs as potential habitat for China Rockfish in California, Oregon and Washington using a variety of newly available spatial data sources, including 2, 3 and 5 m bathymetry, substrate, lithology and Habitat Suitability geodatabases.  Available data sources varied by latitude. To delineate reefs from Point Conception to the Oregon border we used a 2 m binary raster layer (3 m for Cordell Bank) for substrate, where 1 = rough, and 0 = smooth habitat (California Seafloor Mapping Project, data available from: http://seafloor.otterlabs.org/index.html).  Rough and smooth substrate was identified by CSMP using 2 rugosity indices based upon bathymetric data, surface:planar area (SA:PA), and vector ruggedness measure (VRM).  We considered areas identified as ‘rough’ as reef habitat.  For reefs named Asilomar, Cypress Point, Portuguese Ledge, and Point Joe only a portion of the reefs were mapped at the 2 m resolution, therefore to identify the remaining reef, we used either a 5 m resolution VRM dataset, where the VRM cutoff was greater than 0.001 [@Young2010].  For all reefs derived from either 2 m, 3 m or 5 m resolution, we applied a 5 m buffer around each reef habitat for potential error in positional accuracy and all reefs with an area greater than or equal to 100 m\textsuperscript{2} were included. We identified seven reefs outside of the 2 m layer that contained a significant number of CPFV points, which we decided to include in the indices.  Big Reef, Blunts Reef, Isle of St. James, Point Sur Deep, Sandhill Ledge,   portions of San Gregario  and Soap Bank reefs were located just outside of 2 m, 3 m and 5 m ‘footprint’, therefore for these reefs we used the 2005 Habitat Suitability Probability (HSP) geodatabase for China Rockfish [@NMFS2005]. The HSP is a modeled output from Essential Fish Habitat geodatabase and is based upon habitat data, depth, and location, where input data are NMFS trawl datasets. In order to identify reef habitats from the Oregon border to Washington, we used a lithology shapefile [@Goldfinger2014] that was based upon multiple seafloor mapping surveys including multibeam and sidescan sonar, sediment grab and core samples, and images. Seafloor types were classified according to established classification schemes [@Greene1999].  We considered the following lithology types as ‘reef habitat:’ Boulder, cobble, cobble mix, hard, rock, and rock mix.  All spatial data was projected to NAD 1983 UTM Zone 10.
 
 
@@ -588,6 +687,8 @@ Reef systems were grouped and stratified by depth at a spatial scale biologicall
 
 ![Example of the reefs in Oregon.\label{MHM_orreefs}](plots//MHM_OR_reefs.png)
 
+
+\newpage
 Regions were designated to gain appropriate sample sizes needed for modelling.  For Oregon, region differences north and south of Florence were explored.  In California, 12 regions north of Pt. Conception were defined as follows:
 
 Region 1: Pt. Conception to Pt. Arguello  
@@ -604,7 +705,7 @@ Region 11: Cape Mendocino to Eel River
 Region 12: Trinidad Head to CA/OR border  
 
 
-##CPFV drift selection
+**CPFV drift selection**
 During the 1987-1998 CDFW onboard observer program, fishing location was recorded as one of 459 location codes.  When available, the observer also recorded coordinates, either latitude/longitude or Loran.  The SWFSC converted all Loran coordinates to latitude/longitude.  Using the fishing stops with available coordinates, we assigned a fishing location code to a reef.  A handful of fishing location codes were obviously not associated with a reef, or a reef as identified in the above methods, and were not selected in the final dataset.  If the coordinates spanned two reefs and we were unable to tell which reef was consistently fished for a given location code, we created aggregated the reefs.  This most commonly occurred around the Monterey Bay peninsula.  This was necessary as two-thirds of the fishing stops encountering China rockfish had no recorded coordinates and allowed us to retain all fishing location data.  Therefore, for the 1987-1998 CDFW data,  any fishing location that was assigned to a reef was included in the analyses as one of the filters applied to the data.
 
 
@@ -614,21 +715,25 @@ We compiled a list of rockfish species that are strictly reef associated (black 
 
 \newpage
 
-#Appendix G. Regulations Histories{-}
+#Appendix G. Commercial Regulations Histories{-}
+\label{sec:AppendixG}
 \renewcommand{\thepage}{G-\arabic{page}}
+\renewcommand\thesection{G-\arabic{section}}
 \renewcommand{\thefigure}{G\arabic{figure}}
 \renewcommand{\thetable}{G\arabic{table}}
 \setcounter{page}{1}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\setcounter{section}{1}
 
 
-##Commerical Fisheries
 
-###Federal waters
+**Federal waters**
+
 For a list of the commercial regulations in federal waters see the [Commercial Regulations Home Page](http://calcomfish.ucsc.edu/Regulation_Main.asp), which is housed in the CALCOM database.
 
-###Washington
+**Washington**
+
 The following commercial regulations pertain to China rockfish species in washington and were provided by the Washington Department of Fish and Wildlife.
 
 \begin{description}
@@ -647,7 +752,8 @@ The following commercial regulations pertain to China rockfish species in washin
    \end{description}
 
 
-###Oregon
+**Oregon**
+
 The following commercial regulations pertain to China rockfish in Oregon and were provided by the Oregon Department of Fish and Wildlife.
 
 China rockfish are managed in teh Other Nearshore Rockfish complex
@@ -656,7 +762,7 @@ China rockfish are managed in teh Other Nearshore Rockfish complex
 
 \textbf{Landing cap}: Total amount in regulation allowed to be landed in a fishery (for a given season).  Includes only landed catch mortality (known as a harvest cap before 2007).  
 
-####Incidental Catch Limits in Other Fisheries (established in 2004)
+**Incidental Catch Limits in Other Fisheries (established in 2004)**
 
 \textbf{Non-permitted vessels}: 15 lbs per day of black rockfish, blue rockfish, and nearshore fish, combined, for no more than one landing per day.  These species must make-up 25% or less of landed poundage, and must be taken with gear legal in the permitted fishery.
 
@@ -664,7 +770,8 @@ China rockfish are managed in teh Other Nearshore Rockfish complex
 
 \textbf{Non-profit aquaria or vessels contracted by non-profit aquaria} may land black rockfish, blue rockfish, and nearshore fish for purposes of display or for conducting research on these species.
 
-####Regulations History
+**Regulations History**
+
 A minimum size limit of 12 inches (measured from the tip of the snout to the extreme end of the tail) was implemented for China rockfish in 2000.  A sorting requirement for China rockfish was implemented in 2003.
 
 \begin{description}
@@ -817,9 +924,14 @@ A minimum size limit of 12 inches (measured from the tip of the snout to the ext
        Commercial Nearshore Fishery develops as an open access fishery  
   \end{description}
 
-###California
+\vspace{1cm}
+
+**California**
+
 The following commercial regulations pertain to China rockfish species in washington and were provided by the California Department of Fish and Wildlife.  There has been a 12 inch minimum size limit on China rockfish since 2001.
-####Gear Restrictions  
+
+**Gear Restrictions** 
+
 \begin{description}
     \item[2001] \hfill\\
         Hook and line limited to 150 hooks with 15 hooks per line within 1 mile of shore
@@ -834,16 +946,29 @@ The following commercial regulations pertain to China rockfish species in washin
         Legislation prohibits trawl within 3 miles of shore
    \end{description}
 
-####Limited Entry Permit System and Trip Limits
+**Trip Limits and Depth Restrictions**
+
  Trips limits now vary according to constraints from bycatch of canary adn yelloweye rockfishes
 \begin{description}
     \item[2003] \hfill\\
         Split into shallow and deep nearshore restricted access permits, with shallow nearshore permits in 4 regions and the deep nearshore permits statewide
         
-        Trip limits for restricted access fishery, with differential trip limits north and south of $40^{\circ} 10' N$ for both permits, and only the deep nearshore permits south of Point Conception
+        Trip limits for restricted access fishery, with differential trip limits north and south of $40^{\circ} 10' N$ for both permits, and only the deep   nearshore permits south of Point Conception
         
         Subject to depth restrictions consitsten wit the shoreward non-trawl RCA
+    
+    \item[2002] \hfill\\
+        Closed all waters January and February south of $34^{\circ} 27' N$ 
+   
+        Closed all waters March and April between $40^{\circ} 10' N$ and $34^{\circ} 27' N$ March-April
+    \item[2001] \hfill\\
+          Closed January and February outside of 20 fm south of $34^{\circ} 27' N$ 
         
+          Closed March and April all waters between $40^{\circ} 10' N$ and $34^{\circ} 27' N$
+    \item[2000] \hfill\\
+          Closed January and February south of $36^{\circ} N$
+          
+          Closed March and April between $40^{\circ} 10' N$ and $36^{\circ} N$°
     \item[1999] \hfill\\
         Nearshore fishery permit requied
         
@@ -854,12 +979,26 @@ The following commercial regulations pertain to China rockfish species in washin
         
    \end{description}
 
-##Recreational Fisheries
 
-###Washington
+
+\newpage
+
+#Appendix H. Recreational Regulations Histories{-}
+\label{sec:AppendixH}
+\renewcommand{\thepage}{H-\arabic{page}}
+\renewcommand{\thefigure}{H\arabic{figure}}
+\renewcommand{\thetable}{H\arabic{table}}
+\setcounter{page}{1}
+\setcounter{figure}{1}
+\setcounter{table}{1}
+
+\vspace{1cm}
+
+**Washington**
+
 The following recreational regulations pertain to nearshore rockfish species in washington and were provided by the Washington Department of Fish and Wildlife.
 
-####North Coast (MCA 3 and 4)
+**North Coast (MCA 3 and 4)**
   This area has a 20 fm depth restriction.
  \begin{description}
     \item[2014-2013] \hfill\\
@@ -869,7 +1008,7 @@ The following recreational regulations pertain to nearshore rockfish species in 
         June 1 - Sept 30: No roundfish except on days open to halibut fishing
         
     \item[2010-2009] \hfill\\
-         May 21 - SepT 30: No groundfish except on days open to halibut fishing
+         May 21 - Sept 30: No groundfish except on days open to halibut fishing
 
     \item[2008-2007] \hfill\\
          May 21 - Sep 30: No grounfish
@@ -878,7 +1017,7 @@ The following recreational regulations pertain to nearshore rockfish species in 
         May 21 - Setp 30: No rockfish or lingcod
    \end{description}
    
-####South Coast (MCA 2)
+**South Coast (MCA 2)**
   This area has a 30 fm depth restriction.
   \begin{description}
     \item[2014-2013] \hfill\\
@@ -898,14 +1037,14 @@ The following recreational regulations pertain to nearshore rockfish species in 
         March 18 - June 15: No rockfish or lingcod
    \end{description}
   
-####Columbia River (MCA 1)
+**Columbia River (MCA 1)**
   This area has no depth restriction.
   \begin{description}
     \item[2014-2006] \hfill\\
         Year-round: No groundfish except Pacific cod and sablefish allowed with halibut on board
    \end{description}
 
-####Daily Groundfish and Rockfish Limits
+**Daily Groundfish and Rockfish Limits**
 Groundfish includes: rockfish, Pacific cod, flatfish (except halibut), lingcod, ratfish, sablefish, cabezon, greenling, sculpins, sharks, skates, and surfperch excluding shiner perch.  There are sub-bag limits for lingcod (2) coastwide  and cabezon (1) in Marine Area 4.  The groundfish daily bag limit in Marine Area 4B was reduced to 10 in 2011.
 
 \textbf{2015-2011}: 20 lbs/day
@@ -927,9 +1066,10 @@ There is no minimum size limit for rockfish.  Marine Area 4B bag limit allows re
 \textbf{1960-1954}: 10 fish
 
 
+\vspace{1cm}
 
+**Oregon**
 
-###Oregon
 The following regulations pertain to nearshore rockfish species in Oregon and were provided by the Oregon Department of Fish and Wildlife. There were no bag limits prior to 1976.  Gear restrictions have remained the same for all years, i.e., three hooks.
 
 \begin{description}
@@ -953,7 +1093,7 @@ The following regulations pertain to nearshore rockfish species in Oregon and we
   
   7/21:   Offshore of 20-fm line closed due to Yelloweye Rockfish impacts
   
-  8/13: 	Groundfish retention with nearshore halibut (central coast) prohibited
+  8/13:   Groundfish retention with nearshore halibut (central coast) prohibited
   
   10/1: All depths reopened for groundfish (Yelloweye Rockfish impacts sufficiently slowed); Groundfish retention with nearshore halibut allowed again
   
@@ -1042,7 +1182,8 @@ The following regulations pertain to nearshore rockfish species in Oregon and we
   Other fish:  25
 \end{description}
 
-###California
+
+
 ![\label{MHM_caregs1}](plots/CAregs/1_CA_rec_regs.pdf)
 
 ![\label{MHM_caregs2}](plots/CAregs/2_CA_rec_regs.pdf)
@@ -1073,18 +1214,6 @@ The following regulations pertain to nearshore rockfish species in Oregon and we
 
 ![\label{MHM_caregs15}](plots/CAregs/15_CA_rec_regs.pdf)
 
-
-\newpage
-
-#Appendix H. {-}
-\renewcommand{\thepage}{H-\arabic{page}}
-\renewcommand{\thefigure}{H\arabic{figure}}
-\renewcommand{\thetable}{H\arabic{table}}
-\setcounter{page}{1}
-\setcounter{figure}{1}
-\setcounter{table}{1}
-
-blah blah blah if needed
 
 \newpage
 
