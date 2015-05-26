@@ -154,7 +154,7 @@ Lea [-@Lea1999] recaptured China rockfish in the same general location as where 
 
 In other rockfish movement studies, China rockfish were tagged but never recaptured, or there was a sample size of 1 [@Hannah2011].  
 
-China rockfish can suffer from barotrauma.  Parker [-@Parker2011] found that China rockfish required 250 h to attain neutral buoyancy at 4 atmospheres absolute (ATA, depth equivalent of 30 m) when experiments began at the surface water pressure.
+China rockfish can suffer from barotrauma.  Parker [-@Parker2006] found that China rockfish required 250 h to attain neutral buoyancy at 4 atmospheres absolute (ATA, depth equivalent of 30 m) when experiments began at the surface water pressure.
 
 ##Map
 A map showing the scope of the assessment and depicting boundaries for fisheries or data collection strata is provided in \hl{Figure xxx.}
@@ -208,7 +208,7 @@ In years prior to 1978, landing receipts are available for California but there 
 
 The previous assessment of China rockfish [@Cope2015_Data-Moderate_Assessment] modeled two China rockfish populations, north and south of $40^{\circ} 10'$ North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Figure \ref{EJD_CALCOM_3}).
 
-California’s commercial live-fish fishery began targeting nearshore rockfish species in the early 1990s [@CDFG_CalCOFI_2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Figure \ref{EJD_CALCOM_4}).
+California’s commercial live-fish fishery began targeting nearshore rockfish species in the early 1990s [@CalCOFI2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Figure \ref{EJD_CALCOM_4}).
 
 
 *Landings by year and fishery, historical catch estimates, discards (generally specified as a percentage of total catch in weight and in units of mt), catch-at-age, weight-at-age, abundance indices (typically survey and CPUE data), data used to estimate biological parameters (e.g., growth rates, maturity schedules, and natural mortality) with coefficients of variation (CVs) or variances if available.  Include complete tables and figures and date of extraction.*
