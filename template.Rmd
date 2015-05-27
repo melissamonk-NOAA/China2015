@@ -23,6 +23,7 @@ bibliography: chinarockfish2015.bib
      ##read in necessary libraries
            library(r4ss)
            library(xtable)
+           library(hightlight)
              options(xtable.comment = FALSE)  #turns off xtable comments
 ##############################################################################################################
 #### loads workspace image of the BASE MODEL from SS_output in r4ss    
@@ -179,9 +180,6 @@ Summary of management history (e.g., changes in mesh sizes, trip limits, or othe
 Management performance, including a table or tables comparing Overfishing Limit (OFL), Annual Catch Limit (ACL), Harvest Guideline (HG) [CPS only], landings, and catch (i.e., landings plus discard) for each area and year
 
 
-##Fisheries off Canada, Alaska, and/or Mexico
-Description of fisheries for this species off Canada, Alaska and/or Mexico, including references to any recent assessments of those stocks.
-
 #Assessment
 
 ##Data
@@ -189,7 +187,7 @@ Description of fisheries for this species off Canada, Alaska and/or Mexico, incl
 ###Fishery-Dependent Data: Commercial Landings
 
 **Washington**
-\hl{Theresa}
+There are no records of China rockfish ever being landed by Washington commercial fisheries.  
 
 **Oregon**
 \hl{Patrick}
@@ -216,7 +214,9 @@ California’s commercial live-fish fishery began targeting nearshore rockfish s
 ###Fishery-Dependent Data: Recreational Landings
 
 **Washington**
-\hl{Theresa}
+China is not targeted by fisheries in the Washington state and is rarely encountered south of the Point Grenville. For recreational fisheries, average annual catch has been around 2 mt since 1967.  There were some high catches occurred during the early 1990’s ranged between 5.5 and 6.5 mt.   China is not desired by recreational anglers because it is typically smaller than Black rockfish and harder to filet.  About half of the China caught were released in recent years.  In 2014, the total number of China released exceeded the number of retained. 
+
+China rockfish are more common in northern Washington coast (Marine Catch Areas 1 and 2) from south of Tatoosh Island to Pt. Grenville inside of 15 fathoms.  Makah Bay and the Umatilla reef areas seem to have the largest populations in the area (Tom Burlingame, Excel Fishing Charters, pers comm).  China Rockfish are rare off central Washington coast (Marine Catch Area 2) from the mouth of the Queets River to Leadbetter.  Some charter vessels from Westport have gone multiple seasons without encountering any china (Mark Cedergreen, Westport Charterboat Association, pers comm).  For southern Washington coast (Marine Catch Area 1), from the mouth of the Leadbetter Point to the mouth of Columbia River, suitable habitat is limited.  Catch history (Tables X and X) shows a very distinct geographic pattern. 
 
 **Oregon**
 \hl{Patrick}
@@ -621,6 +621,7 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 
 
 
+
 \newpage 
 
 ##Appendix A1. Sub-headings in Appendix{-}
@@ -660,6 +661,42 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 
 
 
+
+```{r, echo=TRUE, eval=FALSE,size='footnotesize'}
+#V3.24u
+#C starter comment here
+china_bridge_XDBSRA_North.dat
+china_bridge_XDBSRA_North.ctl
+0 # 0=use init values in control file; 1=use ss3.par
+1 # run display detail (0,1,2)
+1 # detailed age-structured reports in REPORT.SSO (0,1) 
+0 # write detailed checkup.sso file (0,1) 
+0 # write parm values to ParmTrace.sso (0=no,1=good,active; 2=good,all; 3=every_iter,all_parms; 4=every,active)
+1 # write to cumreport.sso (0=no,1=like&timeseries; 2=add survey fits)
+1 # Include prior_like for non-estimated parameters (0,1) 
+1 # Use Soft Boundaries to aid convergence (0,1) (recommended)
+2 # Number of datafiles to produce: 1st is input, 2nd is estimates, 3rd and higher are bootstrap
+10 # Turn off estimation for parameters entering after this phase
+0 # MCeval burn interval
+1 # MCeval thin interval
+0 # jitter initial parm value by this fraction
+-1 # min yr for sdreport outputs (-1 for styr)
+-1 # max yr for sdreport outputs (-1 for endyr; -2 for endyr+Nforecastyrs)
+0 # N individual STD years
+#vector of year values
+
+1.0e-05 # final convergence criteria (e.g. 1.0e-04) 
+-4 # retrospective year relative to end year (e.g. -4)
+5 # min age for calc of summary biomass
+1 # Depletion basis:  denom is: 0=skip; 1=rel X*B0; 2=rel X*Bmsy; 3=rel X*B_styr
+0.4 # Fraction (X) for Depletion denominator (e.g. 0.4)
+1 # SPR_report_basis:  0=skip; 1=(1-SPR)/(1-SPR_tgt); 2=(1-SPR)/(1-SPR_MSY); 3=(1-SPR)/(1-SPR_Btarget); 4=rawSPR
+1 # F_report_units: 0=skip; 1=exploitation(Bio); 2=exploitation(Num); 3=sum(Frates); 4=true F for range of ages
+#5 80 #_min and max age over which average F will be calculated
+1 # F_report_basis: 0=raw; 1=F/Fspr; 2=F/Fmsy ; 3=F/Fbtgt
+999 # check value for end of file
+
+```
 
 
 \newpage
@@ -815,7 +852,7 @@ We identified reefs as potential habitat for China Rockfish in California, Orego
 Reef systems were grouped and stratified by depth at a spatial scale biologically meaningful to China rockfish.  China rockfish are typically sedentary and have high site fidelity, therefore we grouped reefs in consideration of how a China rockfish would experience its surroundings.  Lea [-@Lea1999] recaptured China rockfish in the same general location as where they were released, however a few individuals of other rockfish species (copper (\textit{Sebastes caurinus}), gopher (\textit{Sebastes carnatus}), olive (\textit{Sebastes serranoides}) and yellowtail (\textit{Sebastes flavidus})) demonstrated movement up to 1.5 nautical miles (about 2,700 m), but all were captured within the same reef system.  In the Puget Sound copper, brown and quillback were found to have a home range less than 30m\textsuperscript{2} in high relief rocky areas [@Matthews1990].  In other rockfish movement studies, China rockfish were tagged but never recaptured, or there was a sample size of 1 [@Hannah2011], Hannah 2012).  Using this limited information, we considered that China rockfish would swim no more than 200 m over smooth, sand, or muddy habitat to a neighboring reef, therefore if a reef was greater than ~200 m from rocky reef habitat it was considered a different reef system.  If a reef system has contiguous habitat (no channels greater than 200 m) it remained intact, no matter how large the reef (Fig. \cite{MHM_careefs]},\cite{MHM_oreefs}).  A small number of reefs were merged into ‘super reefs’ to accommodate 1980s-1990s CDFW location codes that overlapped multiple reefs [.  Reef areas were calculated using the zonal stats tool in ArcGIS, stratified by the depth bins 0-19 m, 20-39 m, 40-59 m, 60-79 m, 80-99 m and greater than 100 m using the CSMP depth raster (2 m, 3 m or 5 m resolution).  To get depths for those reefs outside the CSMP ‘footprint’ we used the NOAA Coastal Relief Model raster dataset (90 m) for California, and 100 m digital elevation model (DEM) bathymetry from the Active Tectonics and Seafloor Mapping Lab for Oregon.
 
 
-![Map of the reefs near the Monterey peninsula in CA (a) and overlaid with the fishing location codes from the CDFW 1987-1998 onboard observer program. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study.\label{MHM_careefs}](plots//MHM_CA_reefmap.png)
+![Map of the reefs near the Monterey peninsula in CA (a) and overlaid with the fishing location codes from the CDFW 1987-1998 onboard observer program. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. Note that the size of the fishing location points does not reflect the area fished.\label{MHM_careefs}](plots//MHM_CA_reefmap.png)
 
 ![Example of the reefs in Oregon.\label{MHM_orreefs}](plots//MHM_OR_reefs.png)
 
@@ -1090,17 +1127,17 @@ The following commercial regulations pertain to China rockfish species in Califo
         Subject to depth restrictions consistent with the shoreward non-trawl RCA
     
     \item[2002] \hfill\\
-        Closed all waters January and February south of $34^{\circ} 27' N$ 
+        Closed all waters January and February south of $34^{\circ} 27'$ N
    
-        Closed all waters March and April between $40^{\circ} 10' N$ and $34^{\circ} 27' N$ March-April
+        Closed all waters March and April between $40^{\circ} 10'$ N and $34^{\circ} 27'$ N March-April
     \item[2001] \hfill\\
-          Closed January and February outside of 20 fm south of $34^{\circ} 27' N$ 
+          Closed January and February outside of 20 fm south of $34^{\circ} 27'$ N
         
-          Closed March and April all waters between $40^{\circ} 10' N$ and $34^{\circ} 27' N$
+          Closed March and April all waters between $40^{\circ} 10'$ N and $34^{\circ} 27'$ N
     \item[2000] \hfill\\
-          Closed January and February south of $36^{\circ} N$
+          Closed January and February south of $36^{\circ}$ N
           
-          Closed March and April between $40^{\circ} 10' N$ and $36^{\circ} N$°
+          Closed March and April between $40^{\circ} 10'$ N and $36^{\circ}$ N
     \item[1999] \hfill\\
         Nearshore fishery permit requied
         
@@ -1111,6 +1148,16 @@ The following commercial regulations pertain to China rockfish species in Califo
         
    \end{description}
 
+
+**Nearshore Fishery Bycatch Permit**
+This special non-transferrable permit is issued as of 2003 to those qualifying individuals who use either trawl or entangling nets (gill nets).  It allows a minimal bycatch of minor nearshore species (which includes China rockfish) as per the following:
+
+   
+   South Central Coast Region 25 pounds of nearshore fish stocks may be taken per trip
+
+   South Coast Region – 50 pounds of nearshore fish stocks may be taken per trip
+ 
+   No permits are issued for either the North Coast or North-Central Coast Regions.
 
 
 \newpage
