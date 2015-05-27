@@ -43,7 +43,7 @@ adfadfaf
 
 ##Stock{-}
 
-Blah blah Milton says China rockfish live to at least 79 years [@Love2002rockfishes].
+Blah blah Milton says China rockfish live to at least 79 years [@Love2002].
 
 ##Catches{-}
 Trends and current levels-include table for last ten years and graph with long term data
@@ -134,9 +134,9 @@ fishery) and recreationally prized deeper-dwelling nearshore rockfish ranging fr
 California, north to the Gulf of Alaska [@Love2002].  Core abundance is found from northern California to
 southern British Columbia, Canada. China rockfish were historically encountered by the recreational fleet in the Southern California Bight [@Love1998].  Love [-@Love1998] examined the 1980=1996 MRFSS data from southern CA.  In the early years of the study China rockfish were occasioinally enountered, and by 1996 no China rockfish were observed.  
 
-There is limited information available on stock structure or life history.  No genetic research has been conducted for China rockfish, and no published research indicates separate stocks along the West Coast.  China rockfish do not appear to exhibit sexual dimorphism [@Lenartz1991].  The oldest aged China rockfish from Alaska was 78 years old [@Munk2001].  Recently aged China rockfish from the West coast had a maximum age of xx years from xx.  Little is known about the maturity scehdule and fecundity of China rockfish.  Echeveria [-@Esceveria1987] collected 69 China rockfish, of which the age at first maturity was 3 years for males and females (26 cm).  Both males and females exhibited 50% maturity at 4 years (27 cm) and 100% maturity at 6 years (30 cm).   
+There is limited information available on stock structure or life history.  No genetic research has been conducted for China rockfish, and no published research indicates separate stocks along the West Coast.  China rockfish do not appear to exhibit sexual dimorphism [@Lenarz1991].  The oldest aged China rockfish from Alaska was 78 years old [@Munk2001].  Recently aged China rockfish from the West coast had a maximum age of xx years from xx.  Little is known about the maturity scehdule and fecundity of China rockfish.  Echeveria [-@Echeverria1987] collected 69 China rockfish, of which the age at first maturity was 3 years for males and females (26 cm).  Both males and females exhibited 50% maturity at 4 years (27 cm) and 100% maturity at 6 years (30 cm).   
 
-A study by Lea et al. [-@Lea1999] captured females releasing larvae in April and May, and spent females in April, June and October off the coast of California.  One diet study indicated that China rockfish in central California predominantly feed on crustaceans and ophiuroids, while the diets of Chian rockfish in northern California was dominated by crusteaceans and mollusks [@Lea1999].  Echeveria [-@Esceveria1987] identified January - June as the months of parturition for China rockfish in north-central California, wit the peak of repoductive activity in January.
+A study by Lea et al. [-@Lea1999] captured females releasing larvae in April and May, and spent females in April, June and October off the coast of California.  One diet study indicated that China rockfish in central California predominantly feed on crustaceans and ophiuroids, while the diets of Chian rockfish in northern California was dominated by crusteaceans and mollusks [@Lea1999].  Echeveria [-@Echeverria1987] identified January - June as the months of parturition for China rockfish in north-central California, wit the peak of repoductive activity in January.
 
 
 Both juvenile and adult rockfish tend to be solitary and exhibit high site fidelity among rocky habitats. Juvenile China rockfish inhabit rocky areas and can be found in nearshore kelp beds (per comm. \hl{E.J. did you talk with Marc Carr about this}).  An experimental study with captive China rockfish found that juveniles exhibit both site fidelity and territoriality. [@Lee2009].  A tag and recapture study by Lea et al. [-@Lea1999] indicated Chian rockfish have high site fidelity.  While the did not report the exact distance from all China rockfish from the study were recaptured in the same "general locality at which they were released."  In other rockfish movement studies, China rockfish were tagged but never recaptured [@Hanan2012], or there was a sample size of one fish [@Hannah2011].  
@@ -611,7 +611,7 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 \setcounter{figure}{1}
 \setcounter{table}{1}
 
-```{r, echo=TRUE, eval=FALSE,tidy=TRUE}
+```{r, echo=TRUE, eval=FALSE}
 #V3.24u
 #C data file for China rockfish North of 4010 (approximate XDB-SRA model)
 #_observed data: 
@@ -870,7 +870,7 @@ e 0.00)
 \setcounter{table}{1}
 
 
-```{r, echo=TRUE, eval=FALSE, tidy=TRUE}
+```{r, echo=TRUE, eval=FALSE}
 #V3.24u
 #C China rockfish bridge to XDB-SRA model
 1 #_N_Growth_Patterns
@@ -1176,7 +1176,7 @@ generate)
 \setcounter{table}{1}
 
 
-```{r, echo=TRUE, eval=FALSE,size='tiny', tidy=TRUE}
+```{r, echo=TRUE, eval=FALSE,size='tiny'}
 #V3.24u
 #C starter comment here
 china_bridge_XDBSRA_North.dat
