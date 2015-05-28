@@ -25,6 +25,12 @@ bibliography: chinarockfish2015.bib
            library(xtable)
            library(highlight)
              options(xtable.comment = FALSE)  #turns off xtable comments
+#########################################################################
+#CHANGE ME
+      FirstYR=2004  # minimum year for tables
+      LastYR=2013  # maximum year for tables
+#########################################################################
+    
 ##############################################################################################################
 #### loads workspace image of the BASE MODEL from SS_output in r4ss    
      load("Aurora2013.RData")
@@ -35,24 +41,48 @@ bibliography: chinarockfish2015.bib
 
 
 \pagebreak
+
 \pagenumbering{arabic}
 \setcounter{page}{1}
+\renewcommand{\thefigure}{\alph{figure}}
+\renewcommand{\thetable}{\alph{table}}
+
 
 #Executive summary{-}
-adfadfaf
+
 
 ##Stock{-}
 
-Blah blah Milton says China rockfish live to at least 79 years [@Love2002].
+This assessment reprots the states of the China rockfish \emph{Sebastes nebulosus} resource off the coast of the California (north of Pt. Conception $34^{\circ} 27'$ N latitude), Oregon, and Washington using data through 2014.  China rockfish are modeled as........
 
 ##Catches{-}
 Trends and current levels-include table for last ten years and graph with long term data
 
-<!-- BEGIN: CREATE SPAWNING BIOMASS TABLE -->
+
+\hl{insert table: Recent China rockfish landings (mt) by fleet used in teh assessment ....  }
+
+\hl{insert figure  China rockfish landings history from 19xx to 2014 by fleet.}
+
+
+
+##Data and assessment{-}
+date of last assessment, type of assessment model, data available, new information, and information lacking
+
+
+
+##Stock biomass{-}
+trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
+
+
+
+<!-- BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE -->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
       SpawningB = mod$derived_quants[grep("SPB",mod$derived_quants$LABEL),]
       SpawningB = SpawningB[c(-1,-2),]
+      
+      Depletion = mod$derived_quants[grep("Bratio",mod$derived_quants$LABEL),]
+      Depletion = Depletion[c(-1,-2),]
 #########################################################################
 #CHANGE ME
       FirstYR=2004  # minimum year for the Spawning biomass table
@@ -68,30 +98,39 @@ Trends and current levels-include table for last ten years and graph with long t
      SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
      SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
        colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
+
+
+    #pull the estimated depletion and 
+     Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
+                           Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]     
+     Depletionyrs$YEAR = seq(FirstYR,LastYR)
+     Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+     Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+     Depletionyrs$CI = paste("(",Depletionyrs$lowerCI,"-",Depletionyrs$upperCI,")",sep="")
+     Depletiontab=subset(Depletionyrs,select=c('Value','CI'))
+       colnames(Depletiontab) = c('Estimated depletion','~ 95% confidence interval')
+
+     Spawn_Deplete = cbind(SpawningBtab,Depletiontab)
+
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  SpawningB.table = xtable(SpawningBtab, caption=c("Recent trend in beginning of the year biomass and depletion"),
-               label='SpawningB',digits=0)  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 4 values    
-    align(SpawningB.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(SpawningB.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion."),
+               label='SpawningDeplete')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+    align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
-<!-- END: CREATE SPAWNING BIOMASS TABLE -->
+<!-- END: CREATE SPAWNING BIOMASS AND DEPLETION TABLE -->
 
 
-##Data and assessment{-}
-date of last assessment, type of assessment model, data available, new information, and information lacking
 
-##Stock biomass{-}
-trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
+![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for China rockfish. \label{fig:Exploit}](r4ss/plots/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
 
-![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for China rockfish. \label{spawningB}](plots/spawningB.png)
 
-This is a test to see if I can reference Figure \ref{spawningB}. 
-
+ \FloatBarrier
 
 
 
@@ -99,18 +138,145 @@ This is a test to see if I can reference Figure \ref{spawningB}.
 ##Recruitment{-}
 trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates
 
+<!-- BEGIN: CREATE RECRUITMENT TABLE -->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+      
+      Recruit = mod$derived_quants[grep("Recr",mod$derived_quants$LABEL),]
+      Recruit = Recruit[c(-1,-2),]
+#########################################################################
+#CHANGE ME
+      FirstYR=2004  # minimum year for the Spawning biomass table
+      LastYR=2013  # maximum year for the Spawning biomass table
+#########################################################################
+
+    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+     Recruityrs = Recruit[Recruit$LABEL>=paste("Recr_",FirstYR,sep='') &  
+                           Recruit$LABEL<=paste("Recr_",LastYR,sep=''),]     
+     Recruityrs$YEAR = seq(FirstYR,LastYR)
+     Recruityrs$lowerCI = round(Recruityrs$Value +qnorm(0.025)*Recruityrs$StdDev, digits=0)
+     Recruityrs$upperCI = round(Recruityrs$Value -qnorm(0.025)*Recruityrs$StdDev, digits=0)
+     Recruityrs$CI = paste("(",Recruityrs$lowerCI,"-",Recruityrs$upperCI,")",sep="")
+     Recruittab=subset(Recruityrs,select=c('YEAR','Value','CI'))
+       colnames(Recruittab) = c('Year','Estimated Recruitment (1,000s)','~ 95% confidence interval')
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  Recruit.table = xtable(Recruittab, caption=c("Recent recruitment."),
+               label='Recruit',digits=0)  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 4 values    
+    align(Recruit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Recruit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+<!-- END: CREATE RECRUITMENT TABLE -->
+
+
+![Time series of estimated China rockfish recruitments for the base-case model with 95\% confidence or credibility intervals.\label{fig:recruits}](r4ss/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
+
+ \FloatBarrier
+
+
+
+
 
 
 ##Exploitation status{-}
 exploitation rates, i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate - include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).
 
+<!-- BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE -->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+      
+      Exploit = mod$derived_quants[grep("F",mod$derived_quants$LABEL),]
+      Exploit = Exploit[c(-1,-2),]
+      
+      negSPR = subset(mod$sprseries, select=c('Year','SPR','SPR_std'))
+#########################################################################
+#CHANGE ME
+      FirstYR=2004  # minimum year for the Spawning biomass table
+      LastYR=2013  # maximum year for the Spawning biomass table
+#########################################################################
+
+    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+     Exploityrs = Exploit[Exploit$LABEL>=paste("F_",FirstYR,sep='') &  
+                           Exploit$LABEL<=paste("F_",LastYR,sep=''),]     
+     Exploityrs$YEAR = seq(FirstYR,LastYR)
+     Exploityrs$lowerCI = round(Exploityrs$Value +qnorm(0.025)*Exploityrs$StdDev, digits=2)
+     Exploityrs$upperCI = round(Exploityrs$Value -qnorm(0.025)*Exploityrs$StdDev, digits=2)
+     Exploityrs$CI = paste("(",Exploityrs$lowerCI,"-",Exploityrs$upperCI,")",sep="")
+     Exploittab=subset(Exploityrs,select=c('Value','CI'))
+       colnames(Exploittab) = c('Exploitation rate','~ 95% confidence interval')
+
+
+    #pull the estimated depletion and 
+     negSPRyrs = subset(negSPR, Year>=FirstYR & Year<=LastYR)
+     negSPRyrs$SPR = 1 - negSPRyrs$SPR
+     negSPRyrs$lowerCI = round(negSPRyrs$SPR +qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
+     negSPRyrs$upperCI = round(negSPRyrs$SPR -qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
+     negSPRyrs$lowerCI = abs(negSPRyrs$lowerCI)
+     negSPRyrs$upperCI = 0
+     negSPRyrs$CI = paste("(",negSPRyrs$upperCI,"-",negSPRyrs$lowerCI,")",sep="")
+     negSPRtab=subset(negSPRyrs,select=c('Year','SPR','CI'))
+     negSPRtab$Year = as.factor(negSPRtab$Year)
+     colnames(negSPRtab) = c('Year','Estimated 1-SPR (%)','~ 95% confidence interval')
+     
+     negSPR_Exploit = cbind(negSPRtab,Exploittab)
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion."),
+               label='SpawningDeplete')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+    align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(negSPR_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+<!-- END: CREATE EXPLOITATION AND 1-SPR TABLE -->
+
+
+![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the base case assessment model. \label{fig:exploit}](r4ss/plots/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
+
+![Estimated spawning potential ratio (SPR). One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is \hl{20xx}. \label{fig:spr}](r4ss/plots/SPR2_minusSPRseries.png)
+
+![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the base case model. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates \hl{20xx}. \label{fig:phase}](r4ss/plots/SPR4_phase.png)
+
+
+\FloatBarrier
+
 ##Ecosystem considerations{-}
 
 ##Reference points{-}
-management targets and definition of overfishing, including the harvest rate that brings the stock to equilibrium at B40% (the BMSY proxy) and the equilibrium stock size that results from fishing at the default harvest rate (the FMSY proxy). Include a summary table that compares estimated reference points for SSB, SPR, Exploitation Rate and Yield based on SSBproxy for MSY, SPRproxy for MSY, and estimated MSY values (table i. on page 35 of attached Canary rockfish executive summary).
+Reference points and quantities for the China rockfish base case model.  Prior to the 2011-12 PFMC management cycle, China rockfish did not have a component OFL.  Dick and MacCall [-@Dick2010] estimated OFLs for China rockfish using Depletion-Based Stock Reduction Analysis.  The OFL was adopted by PFMC for the 2012-12 and 013-14 management cycles.
+
+
+
 
 ##Management performance{-}
-catches in comparison to OFL, ABC and OY/ACL values for the most recent 10 years (when available), overfishing levels, actual catch and discard. Include OFL(encountered), OFL(retained) and OFL(dead) if different due to discard and discard mortality.
+<!-- BEGIN: CREATE MANAGEMENT PERFORMANCE TABLE --> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+Year = as.factor(seq(FirstYR,LastYR))
+OFL = c(rep('NA',7),rep(47.8,3))
+ACL = rep('NA',length(Year))
+Commland = rep('NA',length(Year))
+TotalCatch = rep('NA',length(Year))
+
+mngmnt = cbind(Year,OFL,ACL,Commland,TotalCatch)
+colnames(mngmnt) = c('Year','OFL contribution (mt)','ACL contribution (mt)','Commercial Landings (mt)', 'Estimated Total Catch (mt)')
+```
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+ mngmnt.table = xtable(mngmnt, caption=c("Recent trend in total catch and commercial landings (mt) relative to the management guidelines. Estimated total catch reflect the commercial landings plus the model estimated discarded biomass."), label='mnmgt_perform')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+    align(mngmnt.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(mngmnt.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+<!-- END: CREATE MANAGEMENT PERFORMANCE TABLE -->
+
+
 
 
 ##Unresolved problem and major uncertainties{-}
@@ -119,12 +285,64 @@ any special issues that complicate scientific assessment, questions about the be
 ##Decision table{-}
 projected yields (OFL, ABC and ACL), spawning biomass, and stock depletion levels for each year.* (Not required in draft assessments undergoing review.)
 
+
+
+<!-- BEGIN: CREATE RESULTS SUMMARY TABLE --> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+
+###collect the data from all the tables
+mngmnt = mngmnt[,c(4,5,2,3)]
+negSPR_Exploit = negSPR_Exploit[,c(2,4)]
+negSPR_Exploit[,c(1,2)] = round(negSPR_Exploit[,c(1,2)],2)
+AgexB = seq(FirstYR,LastYR)
+Spawn_Deplete = Spawn_Deplete[,c(2:5)]
+Spawn_Deplete[,1] = round(Spawn_Deplete[,1],0)
+Spawn_Deplete[,3] = round(Spawn_Deplete[,3],2)
+Recruittab = Recruittab[,c(2,3)]
+base_summary = cbind(mngmnt,negSPR_Exploit,AgexB,Spawn_Deplete ,Recruittab)
+
+
+base_summary = as.data.frame(t(base_summary))
+base_summary$names=c('Comm. landings (mt)','Total Est. Catch (mt)','OFL (mt)','ACL (mt)','1-SPR','Exploitation rate','Age 0+ biomass (mt)','Spawning Biomass','~95% CI','Depletion','~95% CI','Recruits','~95% CI')
+
+base_summary = base_summary[,c(11,1:10)]
+colnames(base_summary) = c("Quantity",seq(FirstYR,LastYR))
+
+```
+
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  base_summary.table = xtable(base_summary, caption=c("China rockfish base case results summary."), label='base_sumamry',digits=0)  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+   align(base_summary.table) = c("crcccccccccc")  
+    print(base_summary.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",scalebox=.85,align=TRUE, hline.after=c(-1,0,4,5,7,9,11,nrow(base_summary.table)) )
+```
+<!-- END: CREATE RESULTS SUMMARY TABLE -->
+
+![Equilibrium yield curve for the base case model. Values are based on teh 20xx fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield}](r4ss/plots/yield1_yield_curve.png)
+
+\FloatBarrier
+\newpage
+
 ##Research and data needs{-}
 identify information gaps that seriously impede the stock assessment.
 
 ##Rebuilding projections{-}
 reference to the principal results from rebuilding analysis if the stock is overfished.* This section should be included in the Final/SAFE version assessment document but is not required for draft assessments undergoing review. See Rebuilding Analysis terms of reference for detailed information on rebuilding analysis requirements.
 
+
+
+
+
+
+\FloatBarrier
+
+\newpage
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
 
 #Introduction
 
@@ -152,7 +370,7 @@ Surveys of rockfishes in \emph{Nereocystis} and \emph{Macrocystis} kelp forests 
 
 
 ##Map
-A map showing the scope of the assessment and depicting boundaries for fisheries or data collection strata is provided in \hl{Figure xxx.}
+A map showing the scope of the assessment and depicting boundaries for fisheries or data collection strata is provided in Figure \ref{fig:boundary_map}.
 
 ##Life History
 
@@ -177,30 +395,44 @@ Management performance, including a table or tables comparing Overfishing Limit 
 #Assessment
 
 ##Data
+Data used in the China rockfish assessment are summarized in Figure \ref{fig:data_sources}.  A description of each data source is below.
+
 
 ###Fishery-Dependent Data: Commercial Landings
 
 **Washington**
+
 There are no records of China rockfish ever being landed by Washington commercial fisheries.  
 
 **Oregon**
-\hl{Patrick}
+
+China rockfish landings from Oregon commercial fisheries were minor until twenty years ago \hl{(figure,table X)}.    Prior to the mid-1990’s, there were only trace landings of China rockfish from longline fisheries (i.e., less than one metric ton per year), and no landings from the trawl fisheries (based on species composition samples  obtained since the 1960’s; [@Douglas1998]).  However, landings of China rockfish rapidly increased from 1995-2000 due to the emergence of a live fish market that paid high prices for ornate rockfish, such as China rockfish (especially in Southern Oregon).  Following a peak in catch from 1998-2000, decreased landings of China rockfish during the early 2000’s coincided with new regulations designed to limit harvests from the live fish fishery, such as landings limits, permit limits, and minimum size limits [@Rodomsky2014]. 
+
+
+There is a relatively high degree of confidence in the accuracy of historic China rockfish landings because comprehensive sampling of commercial landings began before the fishery for China rockfish developed.  Specifically, since 1992, the Oregon Department of Fish and Wildlife has obtained robust species composition samples from landings categories containing China rockfish at fine levels of stratification (i.e., year, quarter, gear, disposition, area caught, and market category).  Contamination, China rockfish landed into improper market categories, has been practically non-existent, presumably due to the high price differential for China rockfish (as opposed to other rockfish).  China rockfish landings since 1992 were obtained from PacFIN, which estimates species specific landings of rockfish by the above mentioned strata.
+
+
+However, China rockfish landings could not be obtained from PacFIN prior to 1992 since China rockfish were not included in species composition samples (of rockfish category landings) from the longline and rod-and-reel fisheries (and thus China rockfish landings incorrectly appear as zeros in PacFIN).  Accordingly, landings of China rockfish were obtained from the commercial catch reconstruction developed by Karnowski et al. [-@Karnowski2014], whom borrowed species compositions (from earliest complete years) and applied them to market category landings from years before species compositions were obtained. 
+
+
+All China rockfish landings from the Karnowski et al. [-@Karnowski2014] reconstruction were used except for those occurring from the salmon troll fishery, which were reported as 1-2 metric tons per year from the mid-1960’s to the early 1990’s.  Since a species composition had never been obtained from the market categories containing China rockfish for the salmon troll fishery, Karnowski et al. [-@Karnowski2014] borrowed species compositions from the recreational salmon fishery and applied them the commercial salmon troll fishery landings.  Although China rockfish appeared in the recreational salmon fishery landings, it was concluded at the Nearshore Stock Assessment Workshop (a meeting between stock assessors and data stewards ) that the China rockfish caught during recreational salmon trips were not caught by troll gear, but rather by jig gear from anglers who also targeted benthic rockfish species before or after trolling for salmon.  Since China rockfish are associated with rock reef habitat [@Love1998] and salmon trollers fish the surface waters for coho salmon and avoid rocky reefs when fishing for Chinook salmon (to prevent entanglement of expensive downrigger gear on rocks), it was deemed improbable that China rockfish be caught by salmon troll gear.   
+
 
 **California Commercial Landings, 1969-2014**
 
 The [CALCOM](http://128.114.3.187/) database was queried (February 20, 2015) for commercial landing estimates of China rockfish in California. Landings were stratified by year, quarter, live/dead, market category, gear group, port complex, and source of species composition data (actual port samples, borrowed samples, or assumed nominal market category). Total landings from the initial query span the years 1969-2014.
 
-The majority of commercial China rockfish landings are made by vessels using hook-and-line gear (Figure \ref{EJD_CALCOM_1}). However, landings estimates also include a large fraction of trawl-caught China rockfish from 1969-1988, which is unlikely given the species’ preference for rocky habitat. The reported trawl catch was mainly from the Monterey port complex and was landed in the “China rockfish” market category (258).
+The majority of commercial China rockfish landings are made by vessels using hook-and-line gear (Figure \ref{fig:EJD_CALCOM_1}). However, landings estimates also include a large fraction of trawl-caught China rockfish from 1969-1988, which is unlikely given the species’ preference for rocky habitat. The reported trawl catch was mainly from the Monterey port complex and was landed in the “China rockfish” market category (258).
 
-An analysis of species composition data from port samples in market category 258, by gear type, revealed that the sampled trawl catch landed in the China rockfish market category contained mainly deeper-water species, including greenspotted rockfish (*Sebastes chlorostictus*), sometimes known as “chinafish.” Species landed by hook-and-line gears in the China rockfish market category, on the other hand, consisted of a mixture of nearshore species (e.g. china, quillback, gopher, black-and-yellow, and brown; Figure \ref{EJD_CALCOM_2}). When port samples are not available to estimate species composition in a stratum, and no samples are available to ‘borrow’ from an adjacent stratum, landings in a market category are assigned to the ‘nominal’ species category, in this case China rockfish.
+An analysis of species composition data from port samples in market category 258, by gear type, revealed that the sampled trawl catch landed in the China rockfish market category contained mainly deeper-water species, including greenspotted rockfish (*Sebastes chlorostictus*), sometimes known as “chinafish.” Species landed by hook-and-line gears in the China rockfish market category, on the other hand, consisted of a mixture of nearshore species (e.g. china, quillback, gopher, black-and-yellow, and brown; Figure \ref{fig:EJD_CALCOM_2}). When port samples are not available to estimate species composition in a stratum, and no samples are available to ‘borrow’ from an adjacent stratum, landings in a market category are assigned to the ‘nominal’ species category, in this case China rockfish.
 
 Given the available species composition data from the trawl catch, and the fact that trawl gear is unlikely to be fished in China rockfish habitat, trawl-caught China rockfish were removed from the landings estimates in the current assessment. A similar analysis led to the removal of a small amount (about 5 mt) of landings by set-net and mid-water trawl gear groups.
 
-In years prior to 1978, landing receipts are available for California but there are no associated port sample data. Typically, a ratio estimator (based on the expanded landings estimates in the earliest sampled years) is used to allocate catch to species in these early years. In the case of China rockfish, this procedure propagated the estimates of trawl-caught China backward in time to 1969 (Figure \ref{EJD_CALCOM_1}). These ratio estimates of trawl-caught China rockfish were also removed from the final time series of landed catch.
+In years prior to 1978, landing receipts are available for California but there are no associated port sample data. Typically, a ratio estimator (based on the expanded landings estimates in the earliest sampled years) is used to allocate catch to species in these early years. In the case of China rockfish, this procedure propagated the estimates of trawl-caught China backward in time to 1969 (Figure \ref{fig:EJD_CALCOM_1}). These ratio estimates of trawl-caught China rockfish were also removed from the final time series of landed catch.
 
-The previous assessment of China rockfish [@Cope2015_Data-Moderate_Assessment] modeled two China rockfish populations, north and south of $40^{\circ} 10'$ North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Figure \ref{EJD_CALCOM_3}).
+The previous assessment of China rockfish [@Cope2015_Data-Moderate_Assessment] modeled two China rockfish populations, north and south of $40^{\circ} 10'$ North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Figure \ref{fig:EJD_CALCOM_3}).
 
-California’s commercial live-fish fishery began targeting nearshore rockfish species in the early 1990s [@CalCOFI2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Figure \ref{EJD_CALCOM_4}).
+California’s commercial live-fish fishery began targeting nearshore rockfish species in the early 1990s [@CalCOFI2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Figure \ref{fig:EJD_CALCOM_4}).
 
 
 *Landings by year and fishery, historical catch estimates, discards (generally specified as a percentage of total catch in weight and in units of mt), catch-at-age, weight-at-age, abundance indices (typically survey and CPUE data), data used to estimate biological parameters (e.g., growth rates, maturity schedules, and natural mortality) with coefficients of variation (CVs) or variances if available.  Include complete tables and figures and date of extraction.*
@@ -208,12 +440,20 @@ California’s commercial live-fish fishery began targeting nearshore rockfish s
 ###Fishery-Dependent Data: Recreational Landings
 
 **Washington**
+
 China is not targeted by fisheries in the Washington state and is rarely encountered south of the Point Grenville. For recreational fisheries, average annual catch has been around 2 mt since 1967.  There were some high catches occurred during the early 1990’s ranged between 5.5 and 6.5 mt.   China is not desired by recreational anglers because it is typically smaller than Black rockfish and harder to filet.  About half of the China caught were released in recent years.  In 2014, the total number of China released exceeded the number of retained. 
 
 China rockfish are more common in northern Washington coast (Marine Catch Areas 1 and 2) from south of Tatoosh Island to Pt. Grenville inside of 15 fathoms.  Makah Bay and the Umatilla reef areas seem to have the largest populations in the area (Tom Burlingame, Excel Fishing Charters, pers comm).  China Rockfish are rare off central Washington coast (Marine Catch Area 2) from the mouth of the Queets River to Leadbetter.  Some charter vessels from Westport have gone multiple seasons without encountering any china (Mark Cedergreen, Westport Charterboat Association, pers comm).  For southern Washington coast (Marine Catch Area 1), from the mouth of the Leadbetter Point to the mouth of Columbia River, suitable habitat is limited.  Catch history (Tables X and X) shows a very distinct geographic pattern. 
 
-**Oregon**
-\hl{Patrick}
+**Oregon Sport Fishery Removals 1973-2014**
+
+China rockfish have been a relatively minor contributor to historic Oregon sport groundfish landings (i.e., typically less than one percent of total catch), and have primarily been from   incidental catches of anglers targeting intermixed schools of suspended rockfish species (e.g., black rockfish, blue rockfish, and yellowtail rockfish).  China rockfish removals from the Oregon sport fishery ramped up relatively quickly during the 1970’s \hl{(Table/Figure X )}, and have since ranged between two and seven metric tons every year, with considerable inter-annual variation. 
+
+Total removals of China rockfish from the Oregon sport fisheries were obtained from estimates produced by the Oregon Recreational Boat Survey (ORBS).  Since 2001, ORBS has produced comprehensive year-round estimates of catch and effort for all developed Oregon ports (and are available from RecFIN).  However, prior to 2001, ORBS sampling was typically only conducted at major ports during the peak months of sport fishing activity, and no estimates of catch were made for unsampled ports and times.  Accordingly, the Oregon Department of Fish and Wildlife (ODFW) reconstructed historic ORBS estimates of China rockfish to include catches from all ports and times (not yet available on RecFIN), as is done in recent years. 
+
+The sport reconstruction addressed four spatial and temporal coverage biases identified during an external review of ORBS by the RecFIN Statistical Subcommittee [@VanVoorhees2000]: (1) “major ports” that were sampled each year were not sampled during the winter months; (2) “minor ports” were not sampled at all during some years; (3) effort counts for private boats excluded afternoon and night trips; and (4) undeveloped launch sites were never sampled (e.g., beaches).  A fifth coverage bias, shoreline and estuary boat removals, was not relevant to China rockfish since landings were typically non-existent during years when sampling occurred.  
+The sport reconstruction utilized ratio estimators, based on years with complete sampling, to expand catches from years with partial sampling.  For instance, the contribution of winter catch to total catch during years with complete sampling was used to the expand catches for years with missing winter catch.  Similarly, the contribution of catch from a minor port to that of the major ports during years with complete sampling was used to expand catches of years that the minor port was not sampled.  
+
 
 **California**
 \hl{EJ}
@@ -330,7 +570,10 @@ The selected data contained categorical variables for \emph{year} (15 levels), W
 *Partnership for Interdisciplinary Studies of Coastal Oceans (PISCO)*
 A total of 59 China rockfish were observed in 17,657 SCUBA transects conducted in the southern and central survey regions. Transects were conducted in Northern California and Oregon for two years (2010-2011), with a higher occurence of China rockfish (156 out of 956 transects).
 
+*California Collaborative Fisheries Research Program (CCFRP)*
+The California Collaborative Fisheries Research Program (CCFRP), created by Rick Starr (Sea Grant and Moss Landing Marine Laboratory) and Dean Wendt (Cal Poly San Luis Obispo), monitors marine protected areas (MPAs) and gathers information useful for fisheries management.  This program has been running in Central California since 2007 and can be found at [here](https://seagrant.mlml.calstate.edu/research/ccfrp/).
 
+Future research is planned to use catch-per-unit-effort (cpue) information from this program, comparing relative abundance indices derived from fishery-dependent (FD) and fishery-independent (FI) monitoring programs.  CCFRP data provides a time series of fishery-independent catch and effort at fixed stations, collecting information at sample sites inside and outside of MPAs spanning about 200 miles of the California coast from Point Buchon to A\~{n}o Nuevo.  This FI information, combined with our current FD information (i.e., CPFV onboard observer data), provides an opportunity for fine-scale spatial and temporal analysis of catch rates and species compositions, specifically addressing the research needs identified in nearshore rockfish stock assessments.
 ###Biological Data: Weight-Length
 
 ###Biological Data: Maturity and Fecundity
@@ -391,6 +634,10 @@ We used Stock Synthesis 3 version 3.24V, compiled March 8, 2015 by Dr. Richard M
 
 
 ##Base-Model(s) Results
+
+biological parameters estimated from the base-case model ....(Table, Figure{\ref{fig:base_bio}})
+
+
 
 ##Uncertaincty and Sensitivty Analyses
 \label{sec:uncertainty}
@@ -536,16 +783,19 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 
 #Figures
 <!-- Introduction --> 
+![Map showing the state boundary lines for management of the recreational fishing fleets.  CRFS Districts 1-6 in California are presented as well as the WDFW Recreational Management Areas in Washington.  Florence, OR is shown as a potential location of model stratification. \label{fig:boundary_map}](plots/boundary_map.png)
 
+<!-- Data --> 
+![Summary of data sources used in the assessment. \label{fig:data_sources}](r4ss/plots/data_plot.png)
 
 <!-- Commercial landings --> 
-![Estimated commercial landings of China rockfish (mt) by year and gear group (Source: CALCOM). \label{EJD_CALCOM_1}](plots/EJD_Unaltered_CALCOM_landings_by_year+gear.png)
+![Estimated commercial landings of China rockfish (mt) by year and gear group (Source: CALCOM). \label{fig:EJD_CALCOM_1}](plots/EJD_Unaltered_CALCOM_landings_by_year+gear.png)
 
-![Commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2013. Hook and line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
+![Commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2013. Hook and line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{fig:EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
 
-![Revised California commercial landing estimates (mt) of China rockfish, north and south of Cape Mendocino, 1969-2013 (black bars). Estimates of California’s annual landed commercial catch used in the 2013 stock assessment are plotted for comparison (red line). \label{EJD_CALCOM_3}](plots/EJD_China_comm_lands_by_year-region-compare2013.png)
+![Revised California commercial landing estimates (mt) of China rockfish, north and south of Cape Mendocino, 1969-2013 (black bars). Estimates of California’s annual landed commercial catch used in the 2013 stock assessment are plotted for comparison (red line). \label{fig:EJD_CALCOM_3}](plots/EJD_China_comm_lands_by_year-region-compare2013.png)
 
-![Revised commercial landing estimates (mt) of China rockfish landed live and dead, north and south of Cape Mendocino, 1969-2013. \label{EJD_CALCOM_4}](plots/EJD_China_comm_lands_by_year-region-live.png)
+![Revised commercial landing estimates (mt) of China rockfish landed live and dead, north and south of Cape Mendocino, 1969-2013. \label{fig:EJD_CALCOM_4}](plots/EJD_China_comm_lands_by_year-region-live.png)
 
 <!-- Recreational Landings --> 
 
