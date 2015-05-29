@@ -25,6 +25,7 @@ bibliography: chinarockfish2015.bib
            library(xtable)
            library(highlight)
              options(xtable.comment = FALSE)  #turns off xtable comments
+            options(scipen=999) # turn off scientific notation
 #########################################################################
 #CHANGE ME
       FirstYR=2004  # minimum year for tables
@@ -66,9 +67,11 @@ Trends and current levels-include table for last ten years and graph with long t
 
 
 ##Data and assessment{-}
-date of last assessment, type of assessment model, data available, new information, and information lacking
+China rockfish was assessed as a data moderate stock in 2013 using the X-DBSRA modeling framework [@Cope2013].  This assessment uses the newest version of Stock Synthesis (3.24v).  
 
+The data used in the assessments includes, landings, length and age compositions of the retained
 
+The assessment model begins in 19xxx, and assumes the stock was at an unfished equilibrium in 19xx. 
 
 ##Stock biomass{-}
 trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
@@ -247,12 +250,88 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 \FloatBarrier
 
 ##Ecosystem considerations{-}
+In this assessment, ecosystem considerations were not explicitly included in the analysis.  This is primarily due to a lack of relevant data and results of analyses (conducted elsewhere) that could contribute ecosystem-related quantitative information for the
+assessment.
+
+However, we did use recently available habitat information to select the data used in the onboard observer indices of relative abundance....? 
 
 ##Reference points{-}
 Reference points and quantities for the China rockfish base case model.  Prior to the 2011-12 PFMC management cycle, China rockfish did not have a component OFL.  Dick and MacCall [-@Dick2010] estimated OFLs for China rockfish using Depletion-Based Stock Reduction Analysis.  The OFL was adopted by PFMC for the 2012-12 and 013-14 management cycles.
 
+<!-- BEGIN: REFERENCE POINTS TABLE --> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
 
+Ref_pts = rbind(
+SSB_Unfished    = mod$derived_quants[grep("SSB_U",mod$derived_quants$LABEL),],
+TotBio_Unfished = mod$derived_quants[grep("TotBio",mod$derived_quants$LABEL),],
+Recr_Unfished   = mod$derived_quants[grep("Recr_Un",mod$derived_quants$LABEL),],
+SPB_2013        = mod$derived_quants[grep("SPB_2013",mod$derived_quants$LABEL),],
+Depletion_2013  = mod$derived_quants[grep("Bratio_2013",mod$derived_quants$LABEL),],
+Refpt_sB        = c(NA,NA,NA),
+SSB_Btgt        = mod$derived_quants[grep("SSB_Btgt",mod$derived_quants$LABEL),],
+SPR_Btgt        = mod$derived_quants[grep("SPR_Btgt",mod$derived_quants$LABEL),],
+Fstd_Btgt       = mod$derived_quants[grep("Fstd_Btgt",mod$derived_quants$LABEL),],
+TotYield_Btgt   = mod$derived_quants[grep("TotYield_Btgt",mod$derived_quants$LABEL),],
+Refpt_SPR       = c(NA,NA,NA),
+SSB_SPRtgt      = mod$derived_quants[grep("SSB_SPRtgt",mod$derived_quants$LABEL),],
+SPR_proxy       = c('SPF_proxy',.5,NA),
+Fstd_SPRtgt     = mod$derived_quants[grep("Fstd_SPRtgt",mod$derived_quants$LABEL),],
+TotYield_SPRtgt = mod$derived_quants[grep("TotYield_SPRtgt",mod$derived_quants$LABEL),],
+Refpts_MSY      = c(NA,NA,NA),
+SSB_MSY         = mod$derived_quants[grep("SSB_MSY",mod$derived_quants$LABEL),],
+SPR_MSY         = mod$derived_quants[grep("SPR_MSY",mod$derived_quants$LABEL),],
+Fstd_MSY        = mod$derived_quants[grep("Fstd_MSY",mod$derived_quants$LABEL),],
+TotYield_MSY    = mod$derived_quants[grep("TotYield_MSY",mod$derived_quants$LABEL),] )
+
+Ref_pts$Value = as.numeric(Ref_pts$Value)
+Ref_pts$StdDev = as.numeric(Ref_pts$StdDev)
+Ref_pts$Value1 = ifelse(Ref_pts$Value>=1,as.character(round(Ref_pts$Value,0)),as.character(round(Ref_pts$Value,4)))   
+
+Ref_pts$lowerCI = round(Ref_pts$Value +qnorm(0.025)*Ref_pts$StdDev, digits=4)
+Ref_pts$upperCI = round(Ref_pts$Value -qnorm(0.025)*Ref_pts$StdDev, digits=4)
+Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI>=1,as.character(round(Ref_pts$lowerCI,0)),as.character(round(Ref_pts$lowerCI,4))) 
+Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1,as.character(round(Ref_pts$upperCI,0)),as.character(round(Ref_pts$upperCI,4))) 
+Ref_pts$CI1 = paste("(",Ref_pts$lowerCI1,"-",Ref_pts$upperCI1,")",sep="")
+
+Quantity= c('Unfished Spawning biomass (mt)',
+'Unfished age 0+ biomass (mt)',
+'Unfished recruitment (R0)',
+'Spawning Biomass (2013)',
+'Depletion (2013)',
+'\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
+'Proxy spawning biomass ($B_{40\\%}$)',
+'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
+'Exploitation rate resulting in $B_{40\\%}$',
+'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
+'\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
+'Spawning biomass ',
+'$SPR_{proxy}$',
+'Exploitation rate corresponding to $SPR_{proxy}$',
+'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
+'\\textbf{\\textit{Reference points based on estimated MSY values}}',
+'Spawning biomass at $MSY$ ($SB_{MSY}$)',
+'$SPR_{MSY}$',
+'Exploitation rate corresponding to $SPR_{MSY}$',
+'$MSY$ (mt) '
+)
+Ref_pts = cbind(Quantity,Ref_pts[,c(4,9)])
+Ref_pts[c(6,11,13,16),3]=''
+Ref_pts[c(6,11,16),2]=''
+colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+ #create the Reference points
+ Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the base case model."), label='Ref_pts')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+  align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
+    print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+```
+
+
+
+<!-- END: REFERENCE POINTS TABLE --> 
 
 ##Management performance{-}
 <!-- BEGIN: CREATE MANAGEMENT PERFORMANCE TABLE --> 
@@ -285,7 +364,7 @@ any special issues that complicate scientific assessment, questions about the be
 ##Decision table{-}
 projected yields (OFL, ABC and ACL), spawning biomass, and stock depletion levels for each year.* (Not required in draft assessments undergoing review.)
 
-
+\hl{NEED TO INCLUDE DECISION TABLE}
 
 <!-- BEGIN: CREATE RESULTS SUMMARY TABLE --> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
@@ -378,7 +457,10 @@ A map showing the scope of the assessment and depicting boundaries for fisheries
 Important features of life history that affect management (e.g., migration, sexual dimorphism, bathymetric demography).
 
 ##Ecosysem Considerations
-Ecosystem considerations (e.g., ecosystem role and trophic relationships of the species, habitat requirements/preferences, relevant data on ecosystem processes that may affect stock or parameters used in the stock assessment, and/or cross-FMP interactions with other fisheries). This section should note if environmental correlations or food web interactions were incorporated into the assessment model. The length and depth of this section would depend on availability of data and reports from the IEA, expertise of the STAT, and whether ecosystem factors are informational to contribute quantitative information to the assessment.
+In this assessment, ecosystem considerations were not explicitly included in the analysis.  This is primarily due to a lack of relevant data and results of analyses (conducted elsewhere) that could contribute ecosystem-related quantitative information for the
+assessment.
+
+However, we did use recently available habitat information to select the data used in the onboard observer indices of relative abundance....? 
 
 
 ##Fishery Information
@@ -732,6 +814,23 @@ print(Orcommlog.table, include.rownames=FALSE, caption.placement="top",tabular.e
 
 
 <!-- Recreational dockside survey --> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+###read in WA dataset
+  #WA_dock = read.csv("./txt_files/WAdock.csv")
+ 
+# WA_dock1 = read.csv("./txt_files/CA_MRFSSdock1.csv")
+# WA_dock1 = WA_dock[1:18,c(1,2,4)]
+ # colnames(WA_dock) = c('Year','Index','Log-scale SE')
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+#WA dockside table
+# WA_dock.table = xtable(WA_dock1,caption=c("Year effects for the washington dockside dockside index"),label='tab:WAdock',digits=4)
+# print(WA_dock.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
+```
+
+
+
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 ##read in CA MRFSS dataset
   CA_MRFSS = read.csv("./txt_files/CA_MRFSSdock.csv")
