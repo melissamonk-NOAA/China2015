@@ -23,7 +23,6 @@ bibliography: chinarockfish2015.bib
      ##read in necessary libraries
            library(r4ss)
            library(xtable)
-           library(highlight)
              options(xtable.comment = FALSE)  #turns off xtable comments
             options(scipen=999) # turn off scientific notation
 #########################################################################
@@ -816,18 +815,18 @@ print(Orcommlog.table, include.rownames=FALSE, caption.placement="top",tabular.e
 <!-- Recreational dockside survey --> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 ###read in WA dataset
-  #WA_dock = read.csv("./txt_files/WAdock.csv")
- 
-# WA_dock1 = read.csv("./txt_files/CA_MRFSSdock1.csv")
-# WA_dock1 = WA_dock[1:18,c(1,2,4)]
- # colnames(WA_dock) = c('Year','Index','Log-scale SE')
+  WA_dock = read.csv("./txt_files/WA_dock.csv")
+  WA_dock1 = WA_dock[,c(1,2,3)]
+ colnames(WA_dock) = c('Year','Index','CV')
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
 #WA dockside table
-# WA_dock.table = xtable(WA_dock1,caption=c("Year effects for the washington dockside dockside index"),label='tab:WAdock',digits=4)
-# print(WA_dock.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
+ WA_dock.table = xtable(WA_dock1,caption=c("Year effects for the Washington dockside index"),label='tab:WAdock',digits=4)
+ print(WA_dock.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
 ```
+
+
 
 
 
@@ -845,6 +844,9 @@ print(Orcommlog.table, include.rownames=FALSE, caption.placement="top",tabular.e
  CA_MRFSS.table = xtable(CA_MRFSS1,caption=c("Year effects for the California MRFSS 1980-2003 dockside index"),label='tab:CA_MRFSSdock',digits=4)
  print(CA_MRFSS.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
 ```
+
+
+
 
 
 <!-- Recreational onboard observer --> 
@@ -915,11 +917,24 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 
 
 <!-- Recreational dockside survey --> 
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Washington dockside program, with 95% lognormal confidence intervals. \\label{fig:WA_dock}"}
+#WASHINGTON
+  WAdock = WA_dock[1:34,]
+  plot(WAdock$Year, WAdock$Index, xlab="Year",ylab="Index",ylim=c(0,1),xlim=c(1981,2014),type='b',xaxt='n',lwd=1.5,pch=19)
+ # arrows(WAdock$Year, WAdock$lowerCI, WAdock$Year, WAdock$upperCI, code=3, angle=90,length=0.01)
+  axis(1, at=seq(1981,2015,by=2), cex.axis=.8)
+```
+
+
+
+
+
+
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Califronia MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:CA_MRFSS}"}
 #OR
   plot(CA_MRFSS$Year, CA_MRFSS$Index, xlab="Year",ylab="Index",ylim=c(0,.25),xlim=c(1980,2003),type='b',xaxt='n',lwd=1.5,pch=19)
   arrows(CA_MRFSS$Year, CA_MRFSS$lowerCI, CA_MRFSS$Year, CA_MRFSS$upperCI, code=3, angle=90,length=0.01)
-  axis(1, at=c(1980:2003), cex.axis=.6)
+  axis(1, at=seq(1980,2003,2), cex.axis=.9)
 ```
 
 
