@@ -1,0 +1,17 @@
+Filter,Criteria,Sample size,Sample size 
+,,with Stephens-,without Stephens-
+,,MacCall Filter,MacCall Filter
+Full data set,All data ,736271,
+Trip type,Retain only bottomfish trips,109619,
+Punch Card Areas,Remove non-rockfish areas ,107762,
+,"(0,5,20,42,51,55,99 (1981-1989);",,
+," 0,5,6,20,41,42,51,53:56,",,
+,61 (1990-2014)),,
+Boat Type,Remove shore-based trips,106063,
+Boat Type,Remove records with missing values,106052,
+Remove NAs,1980-1989 Anglers,106026,
+Stephens-MacCall,Remove trips not in China habitat,12819,-
+Months,Remove months with little to,12755,104615
+,"no data (3,10)",,
+Punch Card Area,"Remove area 52, very few records",12738,102267
+Area,Retain only area 4,10428,54285

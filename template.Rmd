@@ -12,6 +12,7 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 4
+    highlight: haddock
   word_document: default
 documentclass: article
 fontsize: 12pt
@@ -424,49 +425,60 @@ reference to the principal results from rebuilding analysis if the stock is over
 
 #Introduction
 
-##Basic Information
+##Basic Information and Life History
+
 China rockfish \emph{Sebastes nebulosus} is a medium-sized, commercially (mainly in the live-fish
 fishery) and recreationally prized deeper-dwelling nearshore rockfish ranging from southern
 California, north to the Gulf of Alaska [@Love2002].  Core abundance is found from northern California to
-southern British Columbia, Canada. China rockfish were historically encountered by the recreational fleet in the Southern California Bight [@Love1998].  Love [-@Love1998] examined the 1980=1996 MRFSS data from southern CA.  In the early years of the study China rockfish were occasioinally enountered, and by 1996 no China rockfish were observed.  
+southern British Columbia, Canada. China rockfish were historically encountered by the recreational fleet in the Southern California Bight [@Love1998].  Love [-@Love1998] examined the 1980-1996 MRFSS data from southern CA.  In the early years of the study China rockfish were occasioinally enountered, and by 1996 no China rockfish were observed.  
 
-There is limited information available on stock structure or life history.  No genetic research has been conducted for China rockfish, and no published research indicates separate stocks along the West Coast.  China rockfish do not appear to exhibit sexual dimorphism [@Lenarz1991].  The oldest aged China rockfish from Alaska was 78 years old [@Munk2001].  Recently aged China rockfish from the West coast had a maximum age of xx years from xx.  Little is known about the maturity scehdule and fecundity of China rockfish.  Echeveria [-@Echeverria1987] collected 69 China rockfish, of which the age at first maturity was 3 years for males and females (26 cm).  Both males and females exhibited 50% maturity at 4 years (27 cm) and 100% maturity at 6 years (30 cm).   
+There is limited information available on stock structure or life history.  No genetic research has been conducted for China rockfish, and no published research indicates separate stocks along the West Coast.  China rockfish do not appear to exhibit sexual dimorphism [@Lenarz1991], although the data are limited.  Fits to a von Bertallanfy growth curve from age-length data from Washington, Oregon and California used in this assessment indicate less than a 2 cm difference at the maximum length, $L_\infty$ [@vonB1938].  These data represent fish collected from the recreational and commercial sectors as well as for research.
 
-A study by Lea et al. [-@Lea1999] captured females releasing larvae in April and May, and spent females in April, June and October off the coast of California.  One diet study indicated that China rockfish in central California predominantly feed on crustaceans and ophiuroids, while the diets of Chian rockfish in northern California was dominated by crusteaceans and mollusks [@Lea1999].  Echeveria [-@Echeverria1987] identified January - June as the months of parturition for China rockfish in north-central California, wit the peak of repoductive activity in January.
+China rockfish are among the longer-lived rockfish.  Love [-@Love2002] reports China rockfish live to at least 79 year, which is corroborated by the available age data used in this assessment. The oldest aged China rockfish from Alaska was 78 years old [@Munk2001].  Recently aged China rockfish from the West coast had a maximum age of 83 years from California (recreational or research) in 1973.  The oldest aged fish from Oregon was 79 from the commercial fisher in 2003 and in Washington, 77 years from the recreational fleet.  
+
+Little is known about the maturity scehdule and fecundity of China rockfish.  Echeveria [-@Echeverria1987] collected 69 China rockfish, of which the age at first maturity was 3 years for males and females (26 cm).  Both males and females exhibited 50% maturity at 4 years (27 cm) and 100% maturity at 6 years (30 cm).  A study by Lea et al. [-@Lea1999] captured females releasing larvae in April and May, and spent females in April, June and October off the coast of California.   Echeveria [-@Echeverria1987] identified January - June as the months of parturition for China rockfish in north-central California, with the peak of repoductive activity in January.
+
+One diet study indicated that China rockfish in central California predominantly feed on crustaceans and ophiuroids, while the diets of Chian rockfish in northern California was dominated by crusteaceans and mollusks [@Lea1999]. This is simialr to the diet described by Love [-@Love2002] of benthic orgnisms, including brittle stars, crabs, and shrimps.
+
+Both juvenile and adult rockfish tend to be solitary and exhibit high site fidelity within rocky habitats. Surveys of rockfishes in \emph{Nereocystis} and \emph{Macrocystis} kelp forests observed China rockfish in only the \emph{Macrocystis} kelp forests and sighitngs within the kelp forests were rare [@Bodkin1986].  Juvenile China rockfish inhabit rocky areas and can be found in nearshore kelp beds (per comm. \hl{E.J. did you talk with Marc Carr about this}).  An experimental study with captive China rockfish found that juveniles exhibit both site fidelity and territoriality. [@Lee2009].  A tag and recapture study by Lea et al. [-@Lea1999] indicated Chian rockfish have high site fidelity.  While the did not report the exact distance from all China rockfish from the study were recaptured in the same "general locality at which they were released."  In other rockfish movement studies, China rockfish were tagged but never recaptured [@Hanan2012], or there was a sample size of one fish [@Hannah2011].  An ongoing study in Oregon has tagged and tracked seven China rockfish (personal communication Tom Calvanese, Oregon State University).  The maximum distance traveled by any of these China rockfish is xxxx.
+
+Little is known about the mixing of juvenile China rockfish at the pelagic stage as they are not captured in the SWFSC juvenile rockfish cruise.  The 2013 assessment model treated the species as two stocks, one from Pt. Conception, CA to Cape Mendocino, CA ($40{\circ} 10'$ N lat.), which is also the management boundary for China rockfish.  For this assessment we explore assessment models.....
 
 
-Both juvenile and adult rockfish tend to be solitary and exhibit high site fidelity among rocky habitats. Juvenile China rockfish inhabit rocky areas and can be found in nearshore kelp beds (per comm. \hl{E.J. did you talk with Marc Carr about this}).  An experimental study with captive China rockfish found that juveniles exhibit both site fidelity and territoriality. [@Lee2009].  A tag and recapture study by Lea et al. [-@Lea1999] indicated Chian rockfish have high site fidelity.  While the did not report the exact distance from all China rockfish from the study were recaptured in the same "general locality at which they were released."  In other rockfish movement studies, China rockfish were tagged but never recaptured [@Hanan2012], or there was a sample size of one fish [@Hannah2011].  
-
-An ongoing study in Oregon has tagged and tracked seven China rockfish (personal communication Tom Calvanese, Oregon State University).  The maximum distance traveled by any of these China rockfish is xxxx.
+Include?
 
 China rockfish can suffer from barotrauma.  Parker [-@Parker2006] found that China rockfish required 250 h to attain neutral buoyancy at 4 atmospheres absolute (ATA, depth equivalent of 30 m) when experiments began at the surface water pressure.
 
 China rockfish vulnerability to overfishing is one of the highest recorded (V = 2.23) for west coast groundfishes [@Cope2011] and is not listed on the FSSI.
 
 
-Surveys of rockfishes in \emph{Nereocystis} and \emph{Macrocystis} kelp forests observed China rockfish in only the \emph{Macrocystis} kelp forests [@Bodkin1986].
+
 
 
 ##Map
 A map showing the scope of the assessment and depicting boundaries for fisheries or data collection strata is provided in Figure \ref{fig:boundary_map}.
 
-##Life History
-
-
-Important features of life history that affect management (e.g., migration, sexual dimorphism, bathymetric demography).
 
 ##Ecosysem Considerations
-In this assessment, ecosystem considerations were not explicitly included in the analysis.  This is primarily due to a lack of relevant data and results of analyses (conducted elsewhere) that could contribute ecosystem-related quantitative information for the
-assessment.
 
-However, we did use recently available habitat information to select the data used in the onboard observer indices of relative abundance....? 
+In this assessment, ecosystem considerations were not explicitly included in the analysis.  However, we did use infromation on the distribution of rocky habitat to inform the onboard observer proram indices of relative abundance from California and Oregon.  The onboard observer program collects location-specific encounters of China rockfish.  We overlaid the locations of China rockfish encounters with high-resolution bathymetry data to obtain a proxy of the extent of China rockfish habitat (see Appendix F for details, pp.\ref{sec:AppendixF}).
+
+Much reserach is needed to elucidate the role of China rockfish in the ecosystem.  
 
 
 ##Fishery Information
-Important features of current fishery and relevant history of fishery.
+
+China rockfish are most commonly capured by hook and line or traps.  They are rarely encountered in the trawl fishery due to the elusive behavior and affinity for rocky crevices.  Their high site fidelity and territoriality lend to the difficulty of capturing the species.  
+
+
+
+
 
 ##Summary of Management History
 Summary of management history (e.g., changes in mesh sizes, trip limits, or other management actions that may have significantly altered selection, catch rates, or discards).
+
+
+China rockfish are managed within the Minor nearshore Rockfish north complex
 
 
 ##Managament Performance
@@ -563,23 +575,40 @@ The sport reconstruction utilized ratio estimators, based on years with complete
 \hl{EJ}
 
 ###Fishery-Dependent Data: Oregon Commercial Logbook
-The Oregon Department of Fish and Wildlife (ODFW) have required nearshore commercial fishers (both nearshore permitted vessels and open access vessels) to submit fishing logbooks since 2004.  Fisher compliance is generally high, averaging around 80\%, but has varied through time ranging from 65\% in 2007 to 95\% in recent years.  Although required to provide all requested information in the logbook per fishing gear set, there has been substantial variation in the quantity and quality of information reported in logbooks.  Responses from submitted logbooks were entered into a central database and span the years 2004 through 2013.  At the time of this assessment, 2014 logbook submissions were not fully processed and thus were not available.  
+The Oregon Department of Fish and Wildlife (ODFW) have required nearshore commercial fishers (both nearshore permitted vessels and open access vessels) to submit fishing logbooks since 2004.  Fisher compliance is generally high, averaging around 80\%, but has varied through time ranging from 65\% in 2007 to 95\% in recent years.  Although required to provide all requested information in the logbook per fishing gear set, there has been substantial variation in the quantity and quality of information reported in logbooks.  Responses from submitted logbooks were entered into a central database and span the years 2004 through 2013.  At the time of this assessment, 2014 logbook submissions were not fully processed and thus were not available.  A map showing positive reports of China rockfish can be found in Figure \ref{fig:or_commlog_map}.
 
-Logbook information went through several data quality filters to attain as best as possible a consistent and representative data set through time to estimate a relative abundance trend.  Results from the filtration algorithm are summarized in Table \ref{tab:OR_Commlog_sample}.  Of note, only logbook submissions from black and blue rockfish permitted vessels with a nearshore endorsement were included in the analysis, because these vessels consistently fish in areas where China rockfish are encountered.  To minimize temporal variation in reporting errors (or nuances), only vessels that fished all 10 years (2004 – 2013) were deemed the most likely to provide consistent responses through time.  Operators of endorsed vessels may have changed through time.  Individual observations of catch (kg) and effort (hook hour) were at the trip level, where multi-set trips were aggregated to the trip level.  ODFW sets bimonthly trip landing limits for China rockfish and these have changed through time.  However, trip limits have not generally been breached in the subset of logbook data used for China rockfish, and thus there was no need to exclude subsequent trips.  The final subset of logbook data included 3,575 trips (14\% of the full set of logbook data) from 10 vessels. 
+Logbook information went through several data quality filters to attain as best as possible a consistent and representative data set through time to estimate a relative abundance trend.  Results from the filtration algorithm are summarized in Table \ref{tab:OR_Commlog_sample}.  Of note, only logbook submissions from black and blue rockfish permitted vessels with a nearshore endorsement were included in the analysis, because these vessels consistently fish in areas where China rockfish are encountered.  To minimize temporal variation in reporting errors (or nuances), only vessels that fished all 10 years (2004 – 2013) were deemed the most likely to provide consistent responses through time.  Operators of endorsed vessels may have changed through time.  Individual observations of catch (kg) and effort (hook hour) were at the trip level, where multi-set trips were aggregated to the trip level.  ODFW sets bimonthly trip landing limits for China rockfish and these have changed through time.  However, trip limits have not generally been breached in the subset of logbook data used for China rockfish, and thus there was no need to exclude subsequent trips.  The final subset of logbook data included 3,575 trips (14\% of the full set of logbook data) from 10 vessels (Figure \ref{fig:or_commlog_sample}). 
 
 Preliminary data analyses identified levels or limits of filtering variables in order to preserve adequate sample sizes and representative trips for China rockfish.  For example, gear type was restricted to hook and line (excluding longline gear) because this method accounted for 85\% of all sets.  The three main southernmost Oregon ports (Port Orford, Gold Beach, and Brookings) were the only locations that included a sufficient number of sets throughout the time series for nearshore endorsed vessels.  Thus, this abundance index is most representative of the nearshore in southern Oregon waters. Fishing depth at the start of a set was restricted to within 30 fathoms (54.9 m), which included more than 99\% of all sets by nearshore endorsed vessels, to ensure only CPUE in areas where China rockfish are commonly encountered was evaluated.
-Covariates considered in the full model included \emph{month, vessel, port, depth, and people}.  All covariates were specified as categorical variables, except depth was a continuous variable.  \emph{Depth} was included to account for general differences in bathymetry and fishing depth restrictions associated primarily with limiting catch of yelloweye rockfish.  \emph{People} were included in an attempt to control for the potential oversaturation of hooks at a given fishing location and the interaction that multi-crew trips (# fishers onboard) may have on fishing efficiency.  The selection of covariates included in final models were evaluated using standard information criterion for relative goodness of fit (AICc and BIC) in a backwards stepwise fashion, where a covariate remained in the model if model fit was improved relative to an otherwise identical model without the covariate.   
+
+Covariates considered in the full model included \emph{month, vessel, port, depth, and people} (Figure \ref{fig:or_commlog_pos}).  All covariates were specified as categorical variables, except depth was a continuous variable.  \emph{Depth} was included to account for general differences in bathymetry and fishing depth restrictions associated primarily with limiting catch of yelloweye rockfish.  \emph{People} were included in an attempt to control for the potential oversaturation of hooks at a given fishing location and the interaction that multi-crew trips (# fishers onboard) may have on fishing efficiency.  The selection of covariates included in final models were evaluated using standard information criterion for relative goodness of fit (AICc and BIC) in a backwards stepwise fashion, where a covariate remained in the model if model fit was improved relative to an otherwise identical model without the covariate.   
 
 CPUE was modeled using a delta-GLM approach, where the catch occurrence (binomial) component was modeled using a logit link function and the positive catch component was modeled according to a gamma distribution with a log link function.  CPUE was calculated for each trip, where total catch was defined as the sum total of all reported retained catch (in weight) and released catch (numbers converted to weight by applying a median catch weight) and total effort was defined by hook-hours (number of hooks used multiplied by the number of hours fished).  A lognormal distribution for the positive catch component was also evaluated, but graphical summary diagnostics of model adequacy slightly favored the gamma distribution.   A delta-GLMM was also attempted to specify vessel-year interaction effects as stemming from a distribution (random effect) and to account for this added source of variation.  However, the estimation procedure was unstable for the delta-GLMM approach, resulting in overinflated CVs.    
 
-Model selection procedures identified the covariates \emph{vessel, port, depth and people} as important, and along with the categorical \emph{year} factor of interest for the index were the variables included in both the catch occurrence and positive catch component models.  Extracted, back-transformed and bias corrected estimates of the \emph{year} effect were used for the abundance index (Table \ref{tab:OR_commlog}, Figure \ref{fig:OR_commlog}). A jackknife resampling routine was conducted to estimate the standard error (and CV) of the \emph{year} effects.  
+Model selection procedures identified the covariates \emph{vessel, port, depth and people} as important, and along with the categorical \emph{year} factor of interest for the index were the variables included in both the catch occurrence and positive catch component models.  Extracted, back-transformed and bias corrected estimates of the \emph{year} effect were used for the abundance index (Table \ref{tab:OR_commlog}, Figure \ref{fig:OR_commlog_pos}). A jackknife resampling routine was conducted to estimate the standard error (and CV) of the \emph{year} effects.  A jackknife resampling routine was conducted to estimate the standard error (and CV) of the year effects.  The relative effects of each covariate are shown in Figure \ref{fig:OR_commlog_covall} for the catch occurrence component and Figure \ref{fig:OR_commlog_covpos} for the positive catch component.  Standard model diagnostics show adequate fit and general consistency with GLM model assumptions for the positive catch component (Figure \ref{fig:OR_commlog_covpos}).
 
 
 
 ###Fishery-Dependent Data: Recreational Dockside Surveys
 
 **Washington**
-\hl{Melissa H}
+
+The Washington Department of Fish and Wildlife (WDFW) provided recreational dockside fisheries data from 1981 to 2014. These data went through several data quality filters to identify the best subset of the available data that are likely to be consistent over the time series and provide a representative relative index of abundance once standardized. Sample sizes from data filtering steps resulted in 10,248 records applying the Stephens-MacCall data filter [@Stephens2004] and 54,285 without applying the Stephens-MacCall data filter (Table \ref{tab:WA_dock_samplet}) for use in a delta-GLM CPUE standardization. The Stephens-MacCall method is an objective approach for identifying trip records of catch and effort data when fishing locations are unknown, based inference regarding the species composition of the catch identifying habitats where the target species is likely to occur [@Stephens2004]. 
+Covariates considered in the full model included \emph{Year, Month, Boat type, Bag limits, and Depth restrictions} (Figure \ref{fig:WA_dock_summary}).  All covariates were specified as categorical variables. The stepwise selection of covariates included in the final model was evaluated using standard information criterion for relative goodness of fit (AIC). \emph{Depth} was not included in the analysis because it was not uniformly recorded through time, depth data collection began during 2003. The covariates for \emph{Bag limits} and \emph{Depth restrictions} represent management changes. Summer fishing restrictions were limited to depths $\leq{20}$ fathoms in WDFW fishery areas 3 and 4 (northern WA) beginning in 2006 . In WDFW area 2 summer fishing was restricted to depths $\leq{30}$ fathoms beginning in 2006. The daily rockfish limits was 15 fish from 1961-1991, 12 fish from 1992-1994, and reduced to 10 fish in 1995 (see Appendix H for the history of recreational regulations, p.\ref{sec:AppendixH}).
+
+CPUE was modeled using a delta-GLM approach, where the catch occurrence (binomial) component was modeled using a logit link function and the positive catch component was modeled according to a lognormal distribution with a log link function. Data are collected at the trip level, with the number of fish landed and the number of anglers on each vessel being recorded. The amount of time fished by each angler is not recorded. Therefore, the units for CPUE are fish landed/angler. A gamma distribution for the positive catch component was also explored, but model selection favored the lognormal model, although both models provided similar results. 
+
+Model selection procedures selected the covariates \emph{Month} and \emph{Boat type} as important for both the catch occurrence and positive catch component models, and along with the categorical year factor used for the index of abundance (Tables \ref{tab:WA_dock_aic1t} and \ref{tab:WA_dock_aic2t}).  A bootstrap analysis (N=500) was used to estimate the standard errors (and CVs) of the year effects (Table \ref{tab:WAdock}). Standard model diagnostics show adequate fit and general consistency with GLM model assumptions for the positive catch component Figures \ref{fig:WA_dock_diagSM} adn \ref{fig:WA_dock_gamma}).
+
+Due to the large number of records filtered out by the Stephens-MacCall method a model sensitivity was run skipping the Stephens-MacCall data filtering step (Table \ref{tab:WA_dock_samplet}). The alternative index trend is very similar to the index produced with the Stephens-MacCall filter through the mid-2000s (Table \ref{tab:WAdock}). However the index using the Stephens-MacCall filter trends strongly up, whereas the index without the Stephens-MacCall filter declines from the late 2000s to present. 
+Additional model sensitivities that did not impact the standardized index were:  
+
+1.The use of only area 4 data versus using all of the data with an area covariate. A strong majority of the positive data are from area 4, only these data are used in the standardized indices. 
+
+2.Splitting the time series in 2002 to model CPUE from 2002 to 2014 as total catch (discarded fish were recorded beginning in 2002) rather than landed catch.
+
+Producing a model for just southern areas (1 and 2) was not successful due to a lack of positive data over the time series. 
+
 
 **Oregon**
 \hl{EJ}
@@ -765,29 +794,29 @@ Include STAR panel members and affiliations as well as names and affiliations of
 \FloatBarrier
 
 #Tables
-<!-- Introduction --> 
+<!-- Introduction TABLES--> 
 
 
-<!-- Commercial landings --> 
-
-
-
-<!-- Recreational Landings --> 
+<!-- Commercial landings TABLES--> 
 
 
 
-<!-- Commercial Discards --> 
+<!-- Recreational Landings TABLES--> 
 
 
 
-<!-- Recreational Discards --> 
+<!-- Commercial Discards TABLES--> 
 
 
 
-<!-- Oregon commercial logbook --> 
+<!-- Recreational Discards TABLES--> 
+
+
+
+<!-- Oregon commercial logbook TABLES--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 ##read in CA MRFSS dataset
-Or_commlog_ss = read.csv("./txt_files/OR_comm_samplesize.csv")
+  Or_commlog_ss = read.csv("./txt_files/OR_comm_samplesize.csv")
   Or_commlog = read.csv("./txt_files/OR_commlog.csv",header=T)
  
   Or_commlog1 = Or_commlog[,c(1,2,3)]
@@ -806,29 +835,67 @@ Orcommlog.table = xtable(Or_commlog1,caption=c("Abundance indices for China rock
 
 print(Orcommlog.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",table.placement='h')
 ```
+<!-- ******************************************************************************************************************************************** --> 
+
+<!-- Recreational discards TABLES--> 
 
 
-<!-- Recreational discards --> 
 
 
 
-<!-- Recreational dockside survey --> 
+<!-- ******************************************************************************************************************************************** --> 
+<!-- Recreational dockside survey TABLES--> 
+
+
+<!-- WASHINGTON--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-###read in WA dataset
+###READ IN WA datasetS NEEDED
+
+#Table with sample size filtered values
+WA_dock_sample = read.csv("./txt_files/WA_dock_samplesize.csv")
+  colnames(WA_dock_sample) =c('Filter','Criteria','Sample size','Sample size')
+#AIC table with SM filtering
+WA_dock_aic1 = read.csv("./txt_files/WA_dock_aic.csv")
+#AIC table without SM filtering
+WA_dock_aic2 = read.csv("./txt_files/WA_dock_aic2.csv")
+
+#Index values
   WA_dock = read.csv("./txt_files/WA_dock.csv")
-  WA_dock1 = WA_dock[,c(1,2,3)]
- colnames(WA_dock) = c('Year','Index','CV')
+  WA_dock_all = read.csv("./txt_files/WA_dock_all.csv")
+colnames(WA_dock_all) =c('','Area 4 with','Stephens-MacCall','','Area 4 without','Stephens-MacCall','')
+```
+
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+#WA dockside table of summary sample sizes
+ WA_dock.samplet = xtable(WA_dock_sample,caption=c("WDFW recreational dockside data sample sizes at each data filtering step.  The bold value indicates the final sample size used for delta-GLM analysis."),label='tab:WAdock_aic',digits=0)
+align(WA_dock.samplet)='lllcc'
+ print(WA_dock.samplet, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",hline.after=c(-1,2,nrow(WA_dock.samplet)),align=TRUE)
+```
+
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+#WA dockside table aic1
+ WA_dock.aic1t = xtable(WA_dock_aic1,caption=c("AIC values for each model using the data with Stephens-MacCall filtering."),label='tab:WAdock_aic1',digits=0)
+ print(WA_dock.aic1t, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-#WA dockside table
- WA_dock.table = xtable(WA_dock1,caption=c("Year effects for the Washington dockside index"),label='tab:WAdock',digits=4)
- print(WA_dock.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
+#WA dockside table aic2
+ WA_dock.aic2t = xtable(WA_dock_aic2,caption=c("AIC values for each model using the data without Stephens-MacCall filtering."),label='tab:WAdock_aic2',digits=0)
+ print(WA_dock.aic2t, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
 ```
 
 
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+#WA dockside table index
+ WA_dock.table = xtable(WA_dock_all,caption=c("Washington recreational China rockfish CPUE indices."),label='tab:WAdock',digits=4)
+align(WA_dock.table)='llcccccc'
+ print(WA_dock.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",hline.after=c(-1,0,1,nrow(WA_dock.table)),align=TRUE)
+```
 
 
+<!-- cALIFORNIA--> 
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 ##read in CA MRFSS dataset
@@ -848,8 +915,8 @@ print(Orcommlog.table, include.rownames=FALSE, caption.placement="top",tabular.e
 
 
 
-
-<!-- Recreational onboard observer --> 
+<!-- ******************************************************************************************************************************************** --> 
+<!-- Recreational onboard observer TABLES--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 ##read in the 3 sets of files for OR, prehistoric, and CA
   OR_onboard = read.csv("./txt_files/OR_onboard.csv")
@@ -878,18 +945,19 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
   CA.table = xtable(CA_onboard1,caption=c("Year effects for the California 2000-2014 onboard observer index"),label='tab:CA_onboard',digits=4)
   print(CA.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
 ```
+<!-- ******************************************************************************************************************************************** --> 
 
 \newpage
 \FloatBarrier
 
 #Figures
-<!-- Introduction --> 
+<!-- Introduction FIGURES--> 
 ![Map showing the state boundary lines for management of the recreational fishing fleets.  CRFS Districts 1-6 in California are presented as well as the WDFW Recreational Management Areas in Washington.  Florence, OR is shown as a potential location of model stratification. \label{fig:boundary_map}](plots/boundary_map.png)
 
-<!-- Data --> 
+<!-- Data FIGURES--> 
 ![Summary of data sources used in the assessment. \label{fig:data_sources}](r4ss/plots/data_plot.png)
 
-<!-- Commercial landings --> 
+<!-- Commercial landings FIGURES--> 
 ![Estimated commercial landings of China rockfish (mt) by year and gear group (Source: CALCOM). \label{fig:EJD_CALCOM_1}](plots/EJD_Unaltered_CALCOM_landings_by_year+gear.png)
 
 ![Commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2013. Hook and line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{fig:EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
@@ -898,15 +966,40 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 
 ![Revised commercial landing estimates (mt) of China rockfish landed live and dead, north and south of Cape Mendocino, 1969-2013. \label{fig:EJD_CALCOM_4}](plots/EJD_China_comm_lands_by_year-region-live.png)
 
-<!-- Recreational Landings --> 
+<!-- Recreational Landings FIGURES--> 
 
-<!-- Commercial Discards --> 
+<!-- Commercial Discards FIGURES--> 
 
-<!-- Recreational Discards --> 
+<!-- Recreational Discards FIGURES--> 
 
-<!-- Oregon commercial logbook --> 
-![Landings from the commercial fishery logbooks in Oregon. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. \label{AB_commlog}](plots/AB_OR_commlogbook.png)
+<!-- Oregon commercial logbook FIGURES--> 
 
+
+![Landings from the commercial fishery logbooks in Oregon. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. \label{fig:or_commlog_map}](plots/AB_OR_commlogbook.png)
+
+\newpage
+
+![Characterization of the final subset of logbook data used in delta-GLM analyses for China rockfish. \label{fig:or_commlog_sample}](plots/OR_commlog_sample.png)
+
+\newpage
+
+![The distribution of set-level raw positive catch CPUE data relative to potential covariates evaluated in the China rockfish delta-GLM analysis. \label{fig:or_commlog_pos}](plots/OR_commlog_pos.png)
+
+
+
+\newpage
+
+![Summary of the relative effects of each covariate in the catch occurrence model component for China rockfish. \label{fig:or_commlog_covall}](plots/OR_commlog_covall.png)
+
+\newpage
+
+![Summary of the relative effects of each covariate in the positive catch model component for China rockfish. \label{fig:or_commlog_covpos}](plots/OR_commlog_covpos.png)
+
+\newpage
+
+![Diagnostic plots for the China rockfish positive catch component delta-GLM model.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:or_commlog_diag}](plots/OR_commlog_diag.png)
+
+\newpage
 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Oregon commercial logbook, with 95% lognormal confidence intervals. \\label{fig:OR_commlog}"}
 #OR
@@ -916,12 +1009,21 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 ```
 
 
-<!-- Recreational dockside survey --> 
+<!-- Recreational dockside survey FIGURES--> 
+<!-- WASHINGTON--> 
+
+![Summary data plots for the data set with Stephens-MacCall filtering. \label{WA_dock_summarySM}](plots/WA_dock_summarySM.png)
+
+![Diagnostic plots for the China rockfish positive catch component longnormal delta-GLM model for the dataset with Stephens-MacCall filtering.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{WA_dock_diagSM}](plots/WA_dock_diagSM.png)
+
+![Diagnostic plots for the China rockfish positive catch component gamma delta-GLM model for the dataset without Stephens-MacCall filtering.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{WA_dock_gamma}](plots/WA_dock_gamma.png)
+
+
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Washington dockside program, with 95% lognormal confidence intervals. \\label{fig:WA_dock}"}
 #WASHINGTON
   WAdock = WA_dock[1:34,]
   plot(WAdock$Year, WAdock$Index, xlab="Year",ylab="Index",ylim=c(0,1),xlim=c(1981,2014),type='b',xaxt='n',lwd=1.5,pch=19)
- # arrows(WAdock$Year, WAdock$lowerCI, WAdock$Year, WAdock$upperCI, code=3, angle=90,length=0.01)
+  arrows(WAdock$Year, WAdock$Index-WAdock$lowerCI, WAdock$Year, WAdock$Index+WAdock$upperCI, code=3, angle=90,length=0.01)
   axis(1, at=seq(1981,2015,by=2), cex.axis=.8)
 ```
 
@@ -930,8 +1032,14 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 
 
 
+
+<!--OREGON--> 
+
+
+<!-- CALIFORNIA--> 
+
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Califronia MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:CA_MRFSS}"}
-#OR
+#ca
   plot(CA_MRFSS$Year, CA_MRFSS$Index, xlab="Year",ylab="Index",ylim=c(0,.25),xlim=c(1980,2003),type='b',xaxt='n',lwd=1.5,pch=19)
   arrows(CA_MRFSS$Year, CA_MRFSS$lowerCI, CA_MRFSS$Year, CA_MRFSS$upperCI, code=3, angle=90,length=0.01)
   axis(1, at=seq(1980,2003,2), cex.axis=.9)
@@ -942,7 +1050,7 @@ print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.env
 
 
 
-<!-- Recreational onboard observer --> 
+<!-- Recreational onboard observer FIGURES--> 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Oregon onboard observer program, with 95% lognormal confidence intervals. \\label{fig:OR_onboard}"}
 #OR
   plot(OR_onboard$Year, OR_onboard$Index, xlab="Year",ylab="Index",ylim=c(0,.09),xlim=c(2001,2014),type='b',xaxt='n',lwd=1.5,pch=19)
@@ -1791,10 +1899,10 @@ The following commercial regulations pertain to China rockfish species in washin
 
 \begin{description}
     \item[2008] \hfill\\
-        The groundfish trawl fishery was closed in Washington from the seaward RCA boundary to the shore north of $48^{\circ} 10' N$ latitude to address increased encounters with yelloweye and canary rockfish
+        The groundfish trawl fishery was closed in Washington from the seaward RCA boundary to the shore north of $48^{\circ} 10'$ N latitude to address increased encounters with yelloweye and canary rockfish
         
     \item[2002] \hfill\\
-        Non-Trawl RCA closed from shore to 100 fm north of $46^{\circ} 16 N$ latitude
+        Non-Trawl RCA closed from shore to 100 fm north of $46^{\circ} 16$ N latitude
         
     \item[1995] \hfill\\
          Commercial hook and line fishing in state waters (0-3 miles) was closed to preserve recreational fishing opportunities and avoid localized depletion; trawlers included in 1999
@@ -2059,7 +2167,7 @@ This special non-transferrable permit is issued as of 2003 to those qualifying i
 
 **Washington**
 
-The following recreational regulations pertain to nearshore rockfish species in washington and were provided by the Washington Department of Fish and Wildlife.
+The following recreational regulations pertain to nearshore rockfish species in washington and were provided by the Washington Department of Fish and Wildlife.  The sport regulations run from 1 May to 30 April the following year.  Depth restrictions were implemented late in the summer of 2005 by emergency rule and became permanent in 2006.  
 
 **North Coast (MCA 3 and 4)**
  
@@ -2108,7 +2216,10 @@ The following recreational regulations pertain to nearshore rockfish species in 
    \end{description}
 
 **Daily Groundfish and Rockfish Limits**
-Groundfish includes: rockfish, Pacific cod, flatfish (except halibut), lingcod, ratfish, sablefish, cabezon, greenling, sculpins, sharks, skates, and surfperch excluding shiner perch.  There are sub-bag limits for lingcod (2) coastwide  and cabezon (1) in Marine Area 4.  The groundfish daily bag limit in Marine Area 4B was reduced to 10 in 2011.
+
+Groundfish includes: rockfish, Pacific cod, flatfish (except halibut), lingcod, ratfish, sablefish, cabezon, greenling, sculpins, sharks, skates, and surfperch excluding shiner perch.  There are sub-bag limits for lingcod (2) coastwide  and cabezon (1) in Marine Area 4.  The groundfish daily bag limit in Marine Area 4B was reduced to 10 in 2011.  
+
+Groundfish Daily Limits
 
 \textbf{2015-2011}: 12 fish
         
@@ -2117,7 +2228,8 @@ Groundfish includes: rockfish, Pacific cod, flatfish (except halibut), lingcod, 
 \textbf{1960-1938}: 20 lbs/day
 
    
-   
+Rockfish Daily Limits   
+
 There is no minimum size limit for rockfish.  Marine Area 4B bag limit allows retention of 6 blue and black rockfish only (2010-2015).
    
 \textbf{2015-1995}: 10 fish 
@@ -2125,6 +2237,8 @@ There is no minimum size limit for rockfish.  Marine Area 4B bag limit allows re
 \textbf{1994-1992}: 12 fish
    
 \textbf{1991-1961}: 15 fish
+
+\textbf{1960-1954}: 20 lb/day
          
 
 
