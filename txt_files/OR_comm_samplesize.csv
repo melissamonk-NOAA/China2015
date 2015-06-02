@@ -1,11 +1,12 @@
 Filter,Criteria,Sample size,Level
 Full data set,All data ,26592,Set
 Gear type,Hook and line only,22735,Set
-Port ,Port Orford Gold Beach and Brookings,17100,Set
-Depth,Valid set starting depth (<= 30 fm; 54.9 m),15663,Set
+Port ,Port Orford/Gold Beach/Brookings,17100,Set
+Depth,Valid set starting depth ( $\leq 30$ fm; 54.9 m),15663,Set
 Hooks,Valid hook count (1 - 100),16,Set
 Hours,Valid hours fishing (0.1 - 20) ,15180,Set
-People,Valid number of fishers onboard (>=1),14976,Set
-Nearshore Endorsed,Nearshore endorsed vessel only,13262,Set
+People,Valid number of fishers onboard ($\geq 1$),14976,Set
+Nearshore,Nearshore endorsed vessel only,13262,Set
+Endorsed,,,
 Vessel,Completed at least one set in all 10 years (2004 - 2013),3823,Set
 Trip,Aggregate multi-set trip to trip level,3575,Trip
