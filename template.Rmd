@@ -61,10 +61,57 @@ This assessment reprots the states of the China rockfish \emph{Sebastes nebulosu
 ##Catches{-}
 Trends and current levels-include table for last ten years and graph with long term data
 
+Figures \ref{fig:Exec_wa_catch}-\ref{fig:Exec_ca_catch}
+Table \ref{tab:Exec_catch}
 
-\hl{insert table: Recent China rockfish landings (mt) by fleet used in teh assessment ....  }
+<!-- START Executive summary catches figures--!>
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+   #read in executive summary catches figure file
+    Exec_catch_all =  read.csv("./txt_files/Exec_catch_for_figs.csv")
+    colnames(Exec_catch_all) = c('Year','WA rec','OR rec.','OR comm.','CA rec.','CA comm.')
+    Exec_wa_catch = Exec_catch_all[,c(1:2)]
+    Exec_or_catch = Exec_catch_all[,c(1,3,4)]
+    Exec_ca_catch = Exec_catch_all[,c(1,5,6)]
+    
+    Exec_wa_catch = melt(Exec_wa_catch, id="Year")
+    Exec_or_catch = melt(Exec_or_catch, id="Year")
+    Exec_ca_catch = melt(Exec_ca_catch, id="Year")
+    colnames(Exec_wa_catch) = c('Year','Fleet','Removals')
+    colnames(Exec_or_catch) = c('Year','Fleet','Removals')
+    colnames(Exec_ca_catch) = c('Year','Fleet','Removals')
+```
 
-\hl{insert figure  China rockfish landings history from 19xx to 2014 by fleet.}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landing for Washington. Washington has does not have a commercial nearshore fishery. \\label{fig:Exec_wa_catch}"}
+      ggplot(Exec_wa_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
+
+```
+
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landings history for Oregon by fleet (recreational and commercial). \\label{fig:Exec_or_catch}"}
+ggplot(Exec_or_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
+
+```
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landings history fro California by fleet (recreational and commercial).  \\label{fig:Exec_ca_catch}"}
+ggplot(Exec_ca_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
+
+```
+<!-- END Executive summary catches figures--!>
+
+<!-- START Executive summary catches table --!>
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+   #read in executive summary catches table
+      Exec_catch = read.csv("./txt_files/Exec_catch_summary.csv")
+      colnames(Exec_catch) =c('Year', 'Washington recreational','Oregon commercial','Oregon recreational','California commercial','California recreational','Total')
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+    #make executive summary catch table
+     Exec_catch.table = xtable(Exec_catch, caption=c("Recent China rockfish landings (mt) by fleet."),label='tab:Exec_catch')
+     align(Exec_catch.table ) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}',
+                                 '>{\\centering}p{.9in}','>{\\centering}p{.9in}','>{\\centering}p{.6in}')  
+    print(Exec_catch.table , include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
+
+```
+<!-- END Executive summary catches table --!>
 
 
 
@@ -122,7 +169,7 @@ trends and current levels relative to virgin or historic levels, description of 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
   SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion."),
-               label='SpawningDeplete')  #digits=0 rounds the numbers
+               label='tab:SpawningDeplete')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
     align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
@@ -497,7 +544,7 @@ Data used in the China rockfish assessment are summarized in Figure \ref{fig:dat
 
 **Washington**
 
-There are no records of China rockfish ever being landed by Washington commercial fisheries.  
+There are no records of China rockfish being landed by any commercial gears in Washington.  
 
 **Oregon**
 
@@ -535,7 +582,7 @@ California’s commercial live-fish fishery began targeting nearshore rockfish s
 ###Fishery-Dependent Data: Commercial Discards
 
 **Washington**
-\hl{Theresa}
+Discard of China rockfish likely occurred before the closure of nearshore commercial fisheries in 1995 for non-trawl gears and in 1999 for trawl gears.  However, there is no information on historical discards.  For this assessment, we assume no retention or discard of China in any commercial fisheries.       
 
 **Oregon**
 \hl{Ian and Patrick}
@@ -552,10 +599,15 @@ California’s commercial live-fish fishery began targeting nearshore rockfish s
 
 Table \ref{tab:WA_rec_removal}, Figure \ref{fig:WA_rec_removal})
 
+Historically, Washington’s coastal recreational anglers have been salmon orientated.  Most groundfish were considered “scrap fish” by anglers [@Buckley1967].  Beginning in the mid-1970s, and particularly in the wake of the 1974 Boldt Decision, salmon fishing opportunities became increasingly restrictive – seasons were shortened and daily limits were reduced.  The trend continued into the 1980s and 1990s.  In 1994, and for the first time in the state’s history, a one year moratorium on all ocean salmon fishing was implemented in response to dwindling salmon runs.  As salmon fishing opportunities waned over time, recreational and commercial fishers began shifting their interests to other species.  Many recreational coastal anglers shifted their efforts to rockfish.  Prior to declines in salmon fishing opportunities, rockfish, though rarely discarded, were generally not targeted.  The increased interest in rockfish and other groundfish can be linked directly to the decline in salmon fishing opportunities.    
+The coastal recreational fleet is composed of two sectors; privately owned vessels and charter vessels.  Throughout the history of coastal charter boat fishing, Westport has remained the center of charter boat activity; however, as the salmon fishing industry declined, the charter fleet dispersed in search of more lucrative opportunities.  Many of the vessels left the state, and some moved north where rockfish fishing was perceived as being more reliable.  Even though, there are still more charter vessels operating at Westport than at Neah Bay and La Push.  
+The primary focus of coastal rockfish anglers is black rockfish.  Black rockfish occur in greater abundance and closer to shore than other coastal rockfish species, and while generally regarded as a “bottom fish”, they tend not to occupy crack and crevice habitat, thus making them more susceptible to hook and line fishing.  As rockfish daily limits decreased, the likelihood of recreational anglers retaining smaller rockfish species, such as China, as part of their daily bag limit likely also decreased.
+China rockfish are more common in northern Washington coast (Marine Catch Areas 3 and 4) from south of Tatoosh Island to Pt. Grenville inside of 15 fathoms and is rarely encountered south of the Point Grenville.  Makah Bay and the Umatilla reef areas seem to have the largest populations in the area (Tom Burlingame, Excel Fishing Charters, pers comm).  China Rockfish are rare off of the central Washington coast (Marine Catch Area 2) from the mouth of the Queets River to Leadbetter Point.  Some chartered vessels from Westport have gone multiple seasons without encountering any China rockfish in MCA 2 (Mark Cedergreen, Westport Charterboat Association, pers comm).  Suitable habitat is limited in MCA 1, from the mouth of the Leadbetter Point to the mouth of Columbia River. 
+Washington recreational catch estimates were produced by WDFW Ocean Sampling Program.  The recreational estimates are based on a catch expansion procedure that includes a complete count of vessels leaving or entering a port and dockside angler interviews.  Dockside interview collects information on number of anglers fished, catch area, and target species.  Starting in 2002, release species and number of releases were included in the interview, fishing depth in 2005, and the use of descending device in 2012.  Shorebased fishing, other than major jetties, is not sampled and is considered negligible.  Sampling and effort count occur mainly from April to October.  Winter fishing is also considered negligible. 
+We assumed an average weight of 0.88 kg/fish to convert the unit from number of fish to metric tons.  The catch is grouped by year, catch area, and boat type.
 
-China is not targeted by fisheries in the Washington state and is rarely encountered south of the Point Grenville. For recreational fisheries, average annual catch has been around 2 mt since 1967.  There were some high catches occurred during the early 1990’s ranged between 5.5 and 6.5 mt.   China is not desired by recreational anglers because it is typically smaller than Black rockfish and harder to filet.  About half of the China caught were released in recent years.  In 2014, the total number of China released exceeded the number of retained. 
 
-China rockfish are more common in northern Washington coast (Marine Catch Areas 1 and 2) from south of Tatoosh Island to Pt. Grenville inside of 15 fathoms.  Makah Bay and the Umatilla reef areas seem to have the largest populations in the area (Tom Burlingame, Excel Fishing Charters, pers comm).  China Rockfish are rare off central Washington coast (Marine Catch Area 2) from the mouth of the Queets River to Leadbetter.  Some charter vessels from Westport have gone multiple seasons without encountering any china (Mark Cedergreen, Westport Charterboat Association, pers comm).  For southern Washington coast (Marine Catch Area 1), from the mouth of the Leadbetter Point to the mouth of Columbia River, suitable habitat is limited.  Catch history (Tables X and X) shows a very distinct geographic pattern. 
+Discards-by-depth are estimated using the same catch expansion algorithm for retained catch.  This information is not available before 2002.  To extrapolate back in time, we applied proportions of releases based on ratio estimator of 2003-2007 data.  GMT’s surface mortality-by-depth was then applied to the number of released fish.  An average weight a 0.88 kg/fish was used.  Releases are group by year, catch area, and boat type.
 
 **Oregon Sport Fishery Removals 1973-2014**
 
@@ -632,7 +684,7 @@ Trips that had erroneous trips hours as entered on paper and then entered electr
 **California**
 \hl{EJ}
 
-###Fishery-Dependent Data: Recreational Onboard Observer Surveys
+###Fishery-Dependent Data: Recreational Onboard Observer Surveys 
 The goal of the Observer Programs in California and Oregon is to collect data including charter boat fishing locations, catch and discard of observed fish by species, and lengths of discarded fish.  Both states sample the commercial passenger fishing vessel (CPFV),i.e., charter boat or for-hire fleet.  The onboard observer programs collect drift-specific information at each fishing stop on an observed trip.  At each fishing stop recorded information includes start and end times, start and end location (latitude/longitude), start and end depth, number of observed anglers (a subset of the total anglers), and the catch (retained and discarded) by species of the observed anglers.  Data for the onboard observer indices for the recreational CPFV fleet are from four sampling programs.  
 
 The California Department of Fisheries and Wildlife (CDFW) conducted an onboard observer program in central California from 1987-1998 (Reilly et al. 1998).  These data were previously used in the 2013 data moderate assessments [@Cope2015_Data-Moderate_Assessment], at the level of a fishing trip.  Since the 2013 assessments, the original data sheets were acquired and data were keypunched to the level of fishing stop.  One caveat of this data is that location data were recorded at a finer scale than the catch data.  We aggregated the relevant location information (time and number of observed anglers) to match the available catch information.  Between April 1987 and July 1992 the number of observed anglers was not recorded for each fishing stop, but the number of anglers aboard the vessel is available.  We imputed the number of observed anglers using the number of anglers aboard the vessel and the number of observed anglers at each fishing stop form the August 1998-December 1998 data (see Appendix E for details, pp.\pageref{sec:AppendixE}).  In 1987, trips were only observed in Monterey, CA and were therefore excluded from the analysis.
@@ -647,26 +699,27 @@ The Oregon Department of Fisheries and Wildlife (ODFW) initiated an onboard obse
 All indices were standardized using a delta-GLM modeling approach [@Lo1992].  Data were analyzed at the drift level and catch was taken to be the sum of observed retained and discarded fish, i.e., number of fish encountered per angler hour.  The onboard observer data from the CDFW 1999-2014 data between north of $40^\circ 10^\prime$ and the Oregon border were too sparce to include in the index.  Therefore, indices used in the model with a break at $40^\circ 10^\prime$ remain the same as the state-specific onboard observer indices.
 
 *Data Filtering*
-
+\label{sec:onboard_datafilter}
 Prior to any analyses, a preliminary data filter was applied.  
 
-Trips/drifts from the CDFW 1988-1998 meeting the following criteria were excluded from analyses:
-1.  Drift associated with a fishing location code that was not assigned to a reef
-2.	Drifts identified as having possible erroneous location, observed anglers, or time data
-3.	Trips encountering <50% groundfish species
+Trips/drifts from the CDFW 1988-1998 meeting the following criteria were excluded from analyses:    
+1. Drift associated with a fishing location code that was not assigned to a reef    
+2. Drifts identified as having possible erroneous location, observed anglers, or time data    
+3. Trips encountering <50% groundfish species    
 
-Trips/drifts from the ODFW, CDFW 1999-2014, and Cal Poly databases meeting the following criteria were excluded from analyses:
-1.	ODFW halibut-targeted trips were excluded
-2.	Trips encountering <50% groundfish species 
-3.	Drifts within the current Stonewall Bank Yelloweye Rockfish Conservation 
-4.	Drifts within Arcata Bay, Humboldt Bay, South Bay, or San Francisco Bay
-5.	Drifts missing a starting location (latitude/longitude) 
-6.	Drifts identified as having possible erroneous location or time data
-7.	Drifts missing both starting and ending depths 
-8.	Drifts within the habitat data occurring farther than 83 m from a reef in Oregon and 34 m in California (see Appendix F (\pageref{sec:AppendixF}) for details)
-9.	Drifts outside the habitat data in California occurring farther than 141 m from reef (see Appendix F (\pageref{sec:AppendixF}) for details)
-1.	Drifts occurring on a reef with <3 positive encounters of black rockfish
-2.	Drifts occurring on a reef in which black rockfish was observed in <25\% of years the reef was visited.
+Trips/drifts from the ODFW, CDFW 1999-2014, and Cal Poly databases meeting the following criteria were excluded from analyses:    
+1. ODFW halibut-targeted trips were excluded  
+2. Drifts south of Pt. Conception (only 2 China rockfish observed south of Pt. Conception)
+3. Trips encountering <50% groundfish species     
+4. Drifts within the current Stonewall Bank Yelloweye Rockfish Conservation      
+5. Drifts within Arcata Bay, Humboldt Bay, South Bay, or San Francisco Bay      
+6. Drifts missing a starting location (latitude/longitude)      
+7. Drifts identified as having possible erroneous location or time data     
+8. Drifts missing both starting and ending depths       
+9. Drifts within the habitat data occurring farther than 83 m from a reef in Oregon and 34 m in California (see Appendix F (\pageref{sec:AppendixF}) for details)      
+10.	Drifts outside the habitat data in California occurring farther than 141 m from reef (see Appendix F (\pageref{sec:AppendixF}) for details)     
+11.	Drifts occurring on a reef with <3 positive encounters of black rockfish      
+12.	Drifts occurring on a reef in which black rockfish was observed in <25\% of years the reef was visited.     
 
 
 
@@ -719,7 +772,10 @@ Future research is planned to use catch-per-unit-effort (cpue) information from 
 ###Biological Data: Sex ratios
 
 ###Biological Data: Aging precision and bias
-\hl{Melissa H}
+
+\hl{Ian}
+
+
 
 ###Biological Data: Research removals
 
@@ -876,8 +932,8 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
    WA_rec_removal.table = xtable(WA_rec_removal, caption = c("Recreational removals (mt) from the Washington party/charter (PC) and 
-                                                               private (PR) vessels.  Northern WA represents MCA 4 and soutern WA represents 
-                                                               MCAs 1-3.  WDFW provided all data."),
+                                                               private (PR) vessels.  Northern WA represents MCAs 3 and 4 and soutern WA represents 
+                                                               MCAs 1 and 2.  WDFW provided all data."),
                                                                label="tab:WA_rec_removal")
     align(WA_rec_removal.table) = 'lcccccc'
   
@@ -977,6 +1033,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- Recreational dockside survey TABLES--> 
 
 
+
 <!-- WASHINGTON read in data--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
     ###READ IN WA datasetS NEEDED
@@ -1009,7 +1066,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
           #WA dockside table aic1
              WA_dock.aic1t = xtable(WA_dock_aic1,caption=c("AIC values for each model using the data with Stephens-MacCall filtering 
-                                                         for the Washington dockside       index."),label='tab:WAdock_aic1',digits=0)
+                                                         for the Washington dockside index."),label='tab:WAdock_aic1',digits=0)
              print(WA_dock.aic1t, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
 ```
 
@@ -1047,6 +1104,29 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 
 <!-- ******************************************************************************************************************************************** --> 
+<!-- Recreational onboard observer TABLES - data filter table-->
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+    # Read in data filter table
+      Onboard_filter = read.csv("./txt_files/Onboard_filter.csv")
+      colnames(Onboard_filter) = c('Dataset',  'Filter',  'Criteria',	'Positive drifts',	'Total drifts')
+```
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+          #onboard filter table
+             Onboard_filter.table = xtable(Onboard_filter,caption=c("Onboard observer dataset filtering criteria and resutling sample sizes 
+                                                                    used for China rockfish."),label='tab:WAdock_aic1',digits=0)
+             align( Onboard_filter.table) = c('l','>{\\raggedright}p{.8in}','>{\\raggedright}p{1.4in}','>{\\raggedright}p{1.8in}',
+                                             '>{\\centering}p{1in}','>{\\centering}p{.8in}')  
+             print(Onboard_filter.table, include.rownames=FALSE, sanitize.text.function = function(x){x},caption.placement="top",hline.after=c(-1,0,5,9,nrow(Onboard_filter.table)))
+
+```
+
+
+
+
+
+
+
 <!-- Recreational onboard observer TABLES - read in data--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
         ##read in the 3 sets of files for OR, prehistoric, and CA
@@ -1138,7 +1218,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
     WA_rec_remov1 = melt(WA_rec_remov,id='Year')
     colnames(WA_rec_remov1) = c('Year','Fleet','Removals')
 ```
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Washington recreational party/charter and private sectors.    Northern WA represents MCA 4 and soutern WA represents MCAs 1-3. \\label{fig:WA_rec_removal}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Washington recreational party/charter and private sectors.    Northern WA represents MCAs 3 and 4 and soutern WA represents MCAs 1 and 2. \\label{fig:WA_rec_removal}"}
       ggplot(WA_rec_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1967,2014,5))+ ylab("Removals (mt)")
 
 ```
@@ -1261,26 +1341,89 @@ Include STAR panel members and affiliations as well as names and affiliations of
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
 <!-- Recreational onboard observer FIGURES--> 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Oregon onboard observer program, with 95% lognormal confidence intervals. \\label{fig:OR_onboard}"}
+
+<!-- Recreational onboard Oregon FIGURES--> 
+![Characterization of the final subset of Oregon onboard observer data used in delta-GLM analyses for China rockfish. \label{fig:OR_onboard_summary}](plots/OR_onboard_summary.png)
+
+![The distribution of drift-level CPUE data relative to potential covariates evaluated in the China rockfish Oregon onboard observer delta-GLM analysis. \label{fig:OR_onboard_CPAH}](plots/OR_onboard_CPAH.png)
+
+
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Index for the Oregon onboard observer program, with 95% lognormal confidence intervals. \\label{fig:OR_onboard}"}
 #OR
   plot(OR_onboard$Year, OR_onboard$Index, xlab="Year",ylab="Index",ylim=c(0,.09),xlim=c(2001,2014),type='b',xaxt='n',lwd=1.5,pch=19)
   arrows(OR_onboard$Year, OR_onboard$Index-OR_onboard$lowerCI, OR_onboard$Year, OR_onboard$Index+OR_onboard$upperCI, code=3, angle=90,length=0.01)
-  axis(1, at=c(2001:2014), cex.axis=.8)
+  axis(1, at=c(2001:2014), cex.axis=.7)
+
 ```
+
+\newpage
+
+![Diagnostic plots for the China rockfish positive catch component lognromal delta-GLM model for the Oregon onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:OR_onboard_diag}](plots/OR_onboard_diag.png)
+
+<!-- Recreational onboard prehistoric CA FIGURES-->
+
+![Characterization of the final subset of 1998-1999 California onboard observer data used in delta-GLM analyses for China rockfish. \label{fig:prehist_onboard_summary}](plots/prehist_onboard_summary.png)
+
+![The distribution of drift-level CPUE data relative to potential covariates evaluated in the China rockfish 1998-1999 California onboard observer delta-GLM analysis. \label{fig:prehist_onboard_CPAH}](plots/prehist_onboard_CPAH.png)
 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the California 1998-1999 onboard observer program, with 95% lognormal confidence intervals.\\label{fig:prehist_onboard}"}
 #prehist
   plot(prehist_onboard$Year, prehist_onboard$Index, xlab="Year",ylab="Index",ylim=c(0,.21),xlim=c(1988,1999),type='b',xaxt='n',lwd=1.5,pch=19)
   arrows(prehist_onboard$Year, prehist_onboard$Index-prehist_onboard$lowerCI, prehist_onboard$Year, prehist_onboard$Index+prehist_onboard$upperCI, code=3, angle=90,length=0.01)
   axis(1, at=c(1988:1999), cex.axis=.8)
+
 ```
+
+\newpage
+
+![Diagnostic plots for the China rockfish positive catch component lognromal delta-GLM model for the 1998-1999 California onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:prehist_onboard_diag}](plots/prehist_onboard_diag.png)
+
+
+
+<!-- Recreational onboard CA FIGURES-->
+
+![Characterization of the final subset of 2000-2014 California onboard observer data used in delta-GLM analyses for China rockfish. \label{fig:CA_onboard_summary}](plots/CA_onboard_summary.png)
+
+![The distribution of drift-level CPUE data relative to potential covariates evaluated in the China rockfish 2000-2014 California onboard observer delta-GLM analysis. \label{fig:CA_onboard_CPAH}](plots/CA_onboard_CPAH.png)
 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the California 2000-2014 onboard observer program, with 95% lognormal confidence intervals.\\label{fig:CA_onboard}"}
 #CA
   plot(CA_onboard$Year, CA_onboard$Index, xlab="Year",ylab="Index",ylim=c(0,.2),xlim=c(2000,2014),type='b',xaxt='n',lwd=1.5,pch=19)
   arrows(CA_onboard$Year, CA_onboard$Index-CA_onboard$lowerCI, CA_onboard$Year, CA_onboard$Index+CA_onboard$upperCI, code=3, angle=90, length=0.01)
   axis(1, at=c(2000:2014), cex.axis=.8)
+
 ```
+
+\newpage
+
+![Diagnostic plots for the China rockfish positive catch component lognromal delta-GLM model for the 2000-2014 California onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:CA_onboard_diag}](plots/CA_onboard_diag.png)
+
+
+\FloatBarrier
+<!-- ******************************************************************************************************************************************** --> 
+<!-- START BIOLOGICAL DATA FIGURES--> 
+
+
+<!-- maturity and fecundity FIGURES--> 
+
+<!-- length at age FIGURES--> 
+
+<!-- aging precicion and bias FIGURES--> 
+![Aging precision between two current age readers at the NWFSC.  \label{fig:age_error1}](plots/age_error1.png)
+![Aging precision between a current anda  former NWFSC age reader.  \label{fig:age_error2}](plots/age_error2.png)
+![Aging precision between NWFSC and WDFW age readers.  \label{fig:age_error3}](plots/age_error3.png)
+
+<!-- END BIOLOGICAL DATA FIGURES--> 
+
+
+
+
+
+
+
+
+
+
 
 \FloatBarrier
 \newpage
