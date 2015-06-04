@@ -1,0 +1,15 @@
+\\textbf{Logormal submodel},BIC
+Year + Wave + Depth + Region + Year:Region + Region:Wave + Depth:Wave,1077.61
+Year + Wave + Depth + Region + Wave:Region + Wave:Depth,844.77
+Year + Wave + Depth + Region + Wave:Depth,737.25
+Year + Wave + Depth + Region,653.74
+Wave + Depth + Region,611.27
+Depth + Region,580.73
+,
+,
+,
+\\textbf{Binomial submodel},BIC
+Year + Depth + Region + Wave,4217.86
+Year + Depth + Region,4201.99
+,
+,

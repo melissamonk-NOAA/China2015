@@ -560,24 +560,24 @@ However, China rockfish landings could not be obtained from PacFIN prior to 1992
 All China rockfish landings from the Karnowski et al. [-@Karnowski2014] reconstruction were used except for those occurring from the salmon troll fishery, which were reported as 1-2 metric tons per year from the mid-1960’s to the early 1990’s.  Since a species composition had never been obtained from the market categories containing China rockfish for the salmon troll fishery, Karnowski et al. [-@Karnowski2014] borrowed species compositions from the recreational salmon fishery and applied them the commercial salmon troll fishery landings.  Although China rockfish appeared in the recreational salmon fishery landings, it was concluded at the Nearshore Stock Assessment Workshop ([Agenda Item D.8 Attachment 10](http://tinyurl.com/ndrrx9r), June 2015) that the China rockfish caught during recreational salmon trips were not caught by troll gear, but rather by jig gear from anglers who also targeted benthic rockfish species before or after trolling for salmon.  Since China rockfish are associated with rock reef habitat [@Love1998] and salmon trollers fish the surface waters for coho salmon and avoid rocky reefs when fishing for Chinook salmon (to prevent entanglement of expensive downrigger gear on rocks), it was deemed improbable that China rockfish be caught by salmon troll gear.   
 
 
-**California Commercial Landings, 1969-2014**
+**California**
 
-The [CALCOM](http://128.114.3.187/) database was queried (February 20, 2015) for commercial landing estimates of China rockfish in California. Landings were stratified by year, quarter, live/dead, market category, gear group, port complex, and source of species composition data (actual port samples, borrowed samples, or assumed nominal market category). Total landings from the initial query span the years 1969-2014.
+The [CALCOM](http://128.114.3.187/) database was queried (May 15, 2015) for commercial landing estimates of China rockfish in California, 1969-2014. Landings were stratified by year, quarter, live/dead, market category, gear group, port complex, and source of species composition data (actual port samples, borrowed samples, or assumed nominal market category).
 
-The majority of commercial China rockfish landings are made by vessels using hook-and-line gear (Figure \ref{fig:EJD_CALCOM_1}). However, landings estimates also include a large fraction of trawl-caught China rockfish from 1969-1988, which is unlikely given the species’ preference for rocky habitat. The reported trawl catch was mainly from the Monterey port complex and was landed in the “China rockfish” market category (258).
+The majority of commercial China rockfish landings are made by vessels using hook-and-line gear (Figure \ref{fig:EJD_CALCOM_1}). However, CALCOM landings estimates also include a large fraction of trawl-caught China rockfish from 1969-1988, which is unlikely given the species’ preference for rocky habitat. The reported trawl catch was mainly from the Monterey port complex and was landed in the “China rockfish” market category (258).
 
-An analysis of species composition data from port samples in market category 258, by gear type, revealed that the sampled trawl catch landed in the China rockfish market category contained mainly deeper-water species, including greenspotted rockfish (*Sebastes chlorostictus*), sometimes known as “chinafish.” Species landed by hook-and-line gears in the China rockfish market category, on the other hand, consisted of a mixture of nearshore species (e.g. china, quillback, gopher, black-and-yellow, and brown; Figure \ref{fig:EJD_CALCOM_2}). When port samples are not available to estimate species composition in a stratum, and no samples are available to ‘borrow’ from an adjacent stratum, landings in a market category are assigned to the ‘nominal’ species category, in this case China rockfish.
+An analysis of species composition data from port samples in market category 258, by gear type, revealed that the sampled trawl-caught lengings contained mainly deeper-water species, including greenspotted rockfish (*Sebastes chlorostictus*), sometimes known as “chinafish.” Species landed by hook-and-line gears in the China rockfish market category, on the other hand, consisted of a mixture of nearshore species (e.g. china, quillback, gopher, black-and-yellow, and brown; Figure \ref{fig:EJD_CALCOM_2}). When port samples are not available to estimate species composition in a stratum, and no samples are available to ‘borrow’ from an adjacent stratum, landings in a market category are assigned to the ‘nominal’ species category, in this case China rockfish.
 
-Given the available species composition data from the trawl catch, and the fact that trawl gear is unlikely to be fished in China rockfish habitat, trawl-caught China rockfish were removed from the landings estimates in the current assessment. A similar analysis led to the removal of a small amount (about 5 mt) of landings by set-net and mid-water trawl gear groups.
+Given the available species composition data from the trawl catch, and the fact that trawl gear is unlikely to be fished in China rockfish habitat, estimates of trawl-caught China rockfish were removed from the landings estimates in the current assessment. A similar analysis led to the removal of a small amount (about 5 mt) of landings by set-net and mid-water trawl gear groups.
 
-In years prior to 1978, landing receipts are available for California but there are no associated port sample data. Typically, a ratio estimator (based on the expanded landings estimates in the earliest sampled years) is used to allocate catch to species in these early years. In the case of China rockfish, this procedure propagated the estimates of trawl-caught China backward in time to 1969 (Figure \ref{fig:EJD_CALCOM_1}). These ratio estimates of trawl-caught China rockfish were also removed from the final time series of landed catch.
+In years prior to 1978, landing receipts are available for California but there are no associated port sample data. In CALCOM, a ratio estimator (based on the expanded landings estimates in the earliest sampled years) is used to allocate catch to species in unsampled years. In the case of China rockfish, this procedure propagated the estimates of trawl-caught China backward in time to 1969 (Figure \ref{fig:EJD_CALCOM_1}). These ratio estimates of trawl-caught China rockfish were also removed from the final time series of landed catch.
 
 The previous assessment of China rockfish [@Cope2015_Data-Moderate_Assessment] modeled two China rockfish populations, north and south of $40^\circ 10^\prime$ North latitude (roughly Cape Mendocino). The majority of landings occurred south of Cape Mendocino, and the revised estimates are substantially lower in early years, primarily due to the removal of trawl catch (Figure \ref{fig:EJD_CALCOM_3}).
 
-California’s commercial live-fish fishery began targeting nearshore rockfish species in the early 1990s [@CalCOFI2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Table \ref{tab:OR_comm_removal}, Figure \ref{fig:EJD_CALCOM_4}).
+California’s commercial live-fish fishery began targeting nearshore rockfish species in the mid-1980s in southern California, and condition codes (live or dead) were required on landing receipts starting in 1993 [@CalCOFI2002]. However, fish landed live are not always recorded as live landings on the landing receipts, so estimates of live landings should be viewed as a minimum estimate [@CalCOFI2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Table \ref{tab:OR_comm_removal}, Figure \ref{fig:EJD_CALCOM_4}).
 
+Commercial landings of China rockfish in California from 1916-1968 were obtained from the historical reconstruction of Ralston et al. ([-@Ralston2010]; also available from the CALCOM website). Their analysis differentiates between trawl-caught landings and “other” gears. In the case of China rockfish, less than 2 mt of landings from 1916-1968 were attributed to trawl gears, and these were excluded from the assessment. The remaining “other” gear types (cumulative removals of 197 mt from 1916-1968) landed China rockfish mainly south of Cape Mendocino, with a short pulse of landings between Cape Mendocino and the California-Oregon border in the 1930s and early 1940s (Figure \ref{fig:CA_reconstruct_landings}). Due to the relatively large landing estimates south of Cape Mendocino in the early years, catches from 1900 to 1916 were interpolated with a linear ramp from 0 mt in 1900 to 6.1 mt in 1916 (the first year of commercial landings estimated by  Ralston et al. [-@Ralston2010]).
 
-*Landings by year and fishery, historical catch estimates, discards (generally specified as a percentage of total catch in weight and in units of mt), catch-at-age, weight-at-age, abundance indices (typically survey and CPUE data), data used to estimate biological parameters (e.g., growth rates, maturity schedules, and natural mortality) with coefficients of variation (CVs) or variances if available.  Include complete tables and figures and date of extraction.*
 
 ###Fishery-Dependent Data: Commercial Discards
 
@@ -748,7 +748,21 @@ The filtered dataset included 13,993 drifts, of which 1,403 (10\%) drifts with p
 The selected data contained categorical variables for \emph{year} (15 levels), WAVE (6 levels), \emph{region} (6 levels), and four depth bins (\emph{depth}: 0-19 m, 20-39 m, 40-59 m, and 60-79 m). A lognormal model was selected over a gamma for the positive encounters by a deltaAIC of 115.91. Model selection, using AIC, selected a lognormal model with \emph{year, depth, and region}, while a binomial with \emph{year, region, depth}, and a \emph{year:region} interaction was selected.  However, the standard errors of the binomial model with interactions were large, and suggested data were too sparse to explore the \emph{year:region} interaction.  For the lognormal submodel, stepwise BIC retained the \emph{year} and \emph{region}. For the binomial submodel, stepwise BIC retained \emph{region}, and \emph{depth}. The final YEAR effects from the delta-GLM with main effects \emph{year, region}, and \emph{depth} are shown in Table \ref{tab:CA_onboard} and Figure \ref{fig:CA_onboard}).  The covariates in the final model suggest the relative abundance of China rockfish decreases with depth, specifically in depths greater than 59 m, and increases south to north.
 
 
-###Title
+###Fishery Dependent Data: Biological sampling
+*Recreational: Washington (WDFW)*
+
+
+
+Recreational length- and age- composition data were provided directly from WDFW during winter 2015. WDFW routinely collected recreational biological samples for China rockfish between 1995 and 2014, with all but one year sampled during 1979 to 1983. These composition data lack information on the number of fish sampled out of those landed in a given trip, and therefore are used without expansion to the sample level. Unexpanded recreational composition data are frequently used in west coast stock assessments for the above reason. Length and age data collected from dockside recreational samples WA are summarized by the number of fish sampled (Table \ref{tab:WA_FishD_bio}). The WA recreational length- and age- compositions are shown in \hl{Figure X R4ss data plots of WDFW comp data; caption:WDFW length- and age-composition data.}.
+
+
+*PacFIN: Oregon and Californa*
+
+Biological data from commercial fisheries for china rockfish were extracted from PacFIN (PSMFC) on May 18, 2015. Commercial landings and the biological characteristics of hook and line landings were sampled from 1995-2014 in Oregon and in 1991-2013 California. There is no commercial catch of China rockfish in the state of Washington. Currently, port biologists employed by each state fishery agency collect species-composition information and biological data from the landed catches. The monitoring programs currently in place vary between the states but are generally based on stratified, multistage sampling designs. The OR data were available by live fish fishery landings and dead fish fishery landings, but fish conditions were not available for PacFIN for the CA landings. Due to the lack of fish condition data for CA in PacFIN, the CA commercial fishery compositions were provided directly from the state, rather than from PacFIN. 
+
+Annual commercial length- and age-frequency distributions were developed for each state for which observations were available, following the same bin structure as was used for research observations. For each fleet, the raw observations were expanded to the sample level, to allow for any fish that were not measured, then to the trip level to account for the relative size of the landing from which the sample was obtained. Length and age data collected from commercial landings for OR and CA are summarized by the number of port samples (Tables \ref{tab:OR_pacfin_bio}-\ref{tab:CA_pacfin_bio}). Figure X \hl{Figure from SS} shows plots of the commercial length and age composition data.
+
+
 
 
 ###Fishery-Independent Data: sources considered, but not used in assessment
@@ -761,6 +775,7 @@ A total of 59 China rockfish were observed in 17,657 SCUBA transects conducted i
 The California Collaborative Fisheries Research Program (CCFRP), created by Rick Starr (Sea Grant and Moss Landing Marine Laboratory) and Dean Wendt (Cal Poly San Luis Obispo), monitors marine protected areas (MPAs) and gathers information useful for fisheries management.  This program has been running in Central California since 2007 and can be found at [here](https://seagrant.mlml.calstate.edu/research/ccfrp/).
 
 Future research is planned to use catch-per-unit-effort (cpue) information from this program, comparing relative abundance indices derived from fishery-dependent (FD) and fishery-independent (FI) monitoring programs.  CCFRP data provides a time series of fishery-independent catch and effort at fixed stations, collecting information at sample sites inside and outside of MPAs spanning about 200 miles of the California coast from Point Buchon to A\~{n}o Nuevo.  This FI information, combined with our current FD information (i.e., CPFV onboard observer data), provides an opportunity for fine-scale spatial and temporal analysis of catch rates and species compositions, specifically addressing the research needs identified in nearshore rockfish stock assessments.
+
 ###Biological Data: Weight-Length
 
 ###Biological Data: Maturity and Fecundity
@@ -877,7 +892,8 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- Introduction TABLES--> 
 
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Commercial landings TABLES--> 
+<!-- ************************************************Commercial landings TABLES*******************************************************************--> 
+<!-- ******************************************************************************************************************************************** -->
 
 <!-- Oregon commercial removal TABLE--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
@@ -917,13 +933,16 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Commercial Discards TABLES--> 
+<!-- ************************************************Commercial Discards TABLES*******************************************************************--> 
+<!-- ******************************************************************************************************************************************** -->
+
 
 
 
 
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Recreational Landings and discards TABLES--> 
+<!-- ************************************************Recreational Landings and discards TABLES****************************************************--> 
+<!-- ******************************************************************************************************************************************** -->
 
 <!-- Washington rec removal TABLES--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
@@ -987,7 +1006,8 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Oregon commercial logbook TABLES - read in data--> 
+<!-- ************************************************Oregon commercial logbook TABLES - read in data**********************************************--> 
+<!-- ******************************************************************************************************************************************** -->
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       ##read in datasets - sample size and index
@@ -1020,18 +1040,9 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 
 
-
 <!-- ******************************************************************************************************************************************** --> 
-
-<!-- Recreational discards TABLES--> 
-
-
-
-
-
-<!-- ******************************************************************************************************************************************** --> 
-<!-- Recreational dockside survey TABLES--> 
-
+<!-- ************************************************Recreational dockside survey TABLES**********************************************************--> 
+<!-- ******************************************************************************************************************************************** -->
 
 
 <!-- WASHINGTON read in data--> 
@@ -1104,7 +1115,8 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Recreational onboard observer TABLES - data filter table-->
+<!-- *********************************Recreational onboard observer TABLES - data filter table****************************************************-->
+<!-- ******************************************************************************************************************************************** -->
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
     # Read in data filter table
@@ -1117,13 +1129,10 @@ Include STAR panel members and affiliations as well as names and affiliations of
                                                                     used for China rockfish."),label='tab:WAdock_aic1',digits=0)
              align( Onboard_filter.table) = c('l','>{\\raggedright}p{.8in}','>{\\raggedright}p{1.4in}','>{\\raggedright}p{1.8in}',
                                              '>{\\centering}p{1in}','>{\\centering}p{.8in}')  
-             print(Onboard_filter.table, include.rownames=FALSE, sanitize.text.function = function(x){x},caption.placement="top",hline.after=c(-1,0,5,9,nrow(Onboard_filter.table)))
+             print(Onboard_filter.table, include.rownames=FALSE, sanitize.text.function = function(x){x},
+                   caption.placement="top",hline.after=c(-1,0,5,9,nrow(Onboard_filter.table)))
 
 ```
-
-
-
-
 
 
 
@@ -1158,6 +1167,61 @@ Include STAR panel members and affiliations as well as names and affiliations of
           CA.table = xtable(CA_onboard1,caption=c("Year effects for the California 2000-2014 onboard observer index"),label='tab:CA_onboard',digits=4)
           print(CA.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
 ```
+
+
+<!-- ******************************************************************************************************************************************** --> 
+<!--  *********************************************Fishery depenent biological sampling TABLES****************************************************-->
+<!-- ******************************************************************************************************************************************** -->
+\FloatBarrier
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+     ### Washington recreational bio data table
+       WA_FishD_bio = read.csv("./txt_files/WA_FishD_Bio.csv")
+       colnames(WA_FishD_bio) = c('Year',  'N fish lengths',	'N fish ages')
+
+```
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+     ### Washington recreational bio data table
+         WA_FishD_bio.table = xtable(WA_FishD_bio, caption=c("The annual number of fish sampled by WDFW for ages and lengths."),
+                                 label='tab:WA_FishD_bio')
+         align(WA_FishD_bio.table) = c('l','>{\\centering}p{.4in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}')          
+         print(WA_FishD_bio.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",align=TRUE)
+
+```
+
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+     ### OR/CA PacFIN bio data table
+       OR_CAbiopacfin = read.csv("./txt_files/OR_CA_bio_pacfin.csv")
+       colnames(OR_CAbiopacfin) = c('Year', 'State','Fish condition',	'N port samples with lengths','N fish length samples',	
+                                  'N port samples with ages',	'N fish age samples')
+      OR_pacfin_bio = subset(OR_CAbiopacfin,State=='OR')
+      CA_pacfin_bio = subset(OR_CAbiopacfin,State=='CA')
+      CA_pacfin_bio = CA_pacfin_bio[,c(1:5)]
+```
+\FloatBarrier
+\newpage
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+     ### OR/CA PacFIN bio data table
+         OR_pacfin_bio.table = xtable(OR_pacfin_bio, caption=c("Number of length and age port samples and fish sampled in Oregon. Source:PacFIN."),
+                                 label='tab:OR_CA_bio_pacfin_bio')
+         align(OR_pacfin_bio.table) = c('l','c','c','>{\\centering}p{.9in}','>{\\centering}p{.9in}',
+                                            '>{\\centering}p{.9in}','>{\\centering}p{.9in}','>{\\centering}p{.9in}') 
+         print(OR_pacfin_bio.table, include.rownames=FALSE, caption.placement="top")
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+     ### OR/CA PacFIN bio data table
+         CA_pacfin_bio.table = xtable(CA_pacfin_bio, caption=c("Number of length and age port samples and fish sampled in California. Source:PacFIN."),
+                                 label='tab:OR_CA_bio_pacfin_bio')
+         align(CA_pacfin_bio.table) = c('l','c','c','>{\\centering}p{.9in}','>{\\centering}p{1in}','>{\\centering}p{1in}') 
+         print(CA_pacfin_bio.table, include.rownames=FALSE, caption.placement="top")
+```
+
+\FloatBarrier
+<!-- ******************************************************************************************************************************************** --> 
+<!-- *****************************************************BEGIN FIGURES************************************************************************** --> 
 <!-- ******************************************************************************************************************************************** --> 
 
 \newpage
@@ -1165,21 +1229,35 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 #Figures
 
-
+<!-- ******************************************************************************************************************************************** --> 
+<!-- *****************************************************INTRODUCTION FIGURES******************************************************************* --> 
+<!-- ******************************************************************************************************************************************** --> 
 <!-- Introduction FIGURES--> 
 ![Map showing the state boundary lines for management of the recreational fishing fleets.  CRFS Districts 1-6 in California are presented as well as the WDFW Recreational Management Areas in Washington.  Florence, OR is shown as a potential location of model stratification. \label{fig:boundary_map}](plots/boundary_map.png)
 
 
+
+
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Data FIGURES--> 
+<!-- *********************************************************Data FIGURES************************************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
+
 ![Summary of data sources used in the assessment. \label{fig:data_sources}](r4ss/plots/data_plot.png)
 
 
-<!-- ******************************************************************************************************************************************** --> 
+
+
+
+
+
 \FloatBarrier
-<!-- Commercial landings FIGURES--> 
+
+<!-- ******************************************************************************************************************************************** --> 
+<!-- ***********************************************************Commercial landings FIGURES*******************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
 
 <!--Oregon comm landings FIGURES--> 
+
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
     OR_comm_remov = OR_comm_removal[,1:5]
@@ -1192,25 +1270,38 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 
 
-
 <!--California comm landings FIGURES--> 
 ![Estimated commercial landings of China rockfish (mt) by year and gear group (Source: CALCOM). \label{fig:EJD_CALCOM_1}](plots/EJD_Unaltered_CALCOM_landings_by_year+gear.png)
 
-![Commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2013. Hook and line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{fig:EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
+![Commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2014. Hook and line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{fig:EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
 
-![Revised California commercial landing estimates (mt) of China rockfish, north and south of Cape Mendocino, 1969-2013 (black bars). Estimates of California’s annual landed commercial catch used in the 2013 stock assessment are plotted for comparison (red line). \label{fig:EJD_CALCOM_3}](plots/EJD_China_comm_lands_by_year-region-compare2013.png)
+![Revised California commercial landing estimates (mt) of China rockfish, north and south of Cape Mendocino, 1969-2014 (black bars). Estimates of California’s annual landed commercial catch used in the 2013 stock assessment are plotted for comparison (red line). \label{fig:EJD_CALCOM_3}](plots/EJD_China_comm_lands_by_year-region-compare2014.png)
 
-![Revised commercial landing estimates (mt) of China rockfish landed live and dead, north and south of Cape Mendocino, 1969-2013. \label{fig:EJD_CALCOM_4}](plots/EJD_China_comm_lands_by_year-region-live.png)
+![Revised commercial landing estimates (mt) of China rockfish landed live and dead, north and south of Cape Mendocino, 1969-2014. \label{fig:EJD_CALCOM_4}](plots/EJD_China_comm_lands_by_year-region-live.png)
+
+![Reconstructed historical commercial landings of China Rockfish in California, excluding trawl gear landings, 1916-1968. Source: Ralston et al. 2010 \label{fig:CA_reconstruct_landings}](plots/CA_reconstruct_landings.png)
 
 
-<!-- ******************************************************************************************************************************************** --> 
+
+
+
+
+
 \FloatBarrier
-<!-- Commercial Discards FIGURES--> 
+<!-- ******************************************************************************************************************************************** --> 
+<!-- ***************************************************************Commercial Discards FIGURES***************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
+
+
+
+
 
 
 
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Recreational Landings and Discards FIGURES--> 
+<!-- ****************************************************Recreational Landings and Discards FIGURES***********************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
+
 
 <!-- Washington Rec removals FIGURES--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
@@ -1257,8 +1348,8 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Oregon commercial logbook FIGURES--> 
-
+<!-- ****************************************************Oregon commercial logbook FIGURES********************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
 
 ![Landings from the commercial fishery logbooks in Oregon. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. \label{fig:OR_commlog_map}](plots/AB_OR_commlogbook.png)
 
@@ -1276,11 +1367,9 @@ Include STAR panel members and affiliations as well as names and affiliations of
       axis(1, at=c(2004:2013), cex.axis=.6)
 ```
 
-
 \newpage
 
 ![The distribution of set-level raw positive catch CPUE data relative to potential covariates evaluated in the China rockfish Oregon commercial logbook delta-GLM analysis. \label{fig:OR_commlog_pos}](plots/OR_commlog_pos.png)
-
 
 
 \newpage
@@ -1295,10 +1384,14 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 ![Diagnostic plots for the China rockfish positive catch component delta-GLM model fro teh Oregon commercial logbook index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:OR_commlog_diag}](plots/OR_commlog_diag.png)
 
-\FloatBarrier
 
+
+
+
+\FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Recreational dockside survey FIGURES--> 
+<!-- ****************************************************Recreational dockside survey FIGURES****************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
 
 <!-- WASHINGTON dockside figures--> 
 
@@ -1318,11 +1411,6 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 
 
-
-
-
-
-
 <!--OREGON dockside figures--> 
 
 
@@ -1340,9 +1428,10 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
-<!-- Recreational onboard observer FIGURES--> 
+<!-- ****************************************************Recreational onboard observer FIGURES****************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
 
-<!-- Recreational onboard Oregon FIGURES--> 
+<!-- OR Recreational onboard Oregon FIGURES--> 
 ![Characterization of the final subset of Oregon onboard observer data used in delta-GLM analyses for China rockfish. \label{fig:OR_onboard_summary}](plots/OR_onboard_summary.png)
 
 ![The distribution of drift-level CPUE data relative to potential covariates evaluated in the China rockfish Oregon onboard observer delta-GLM analysis. \label{fig:OR_onboard_CPAH}](plots/OR_onboard_CPAH.png)
@@ -1401,14 +1490,26 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
-<!-- START BIOLOGICAL DATA FIGURES--> 
+<!-- ****************************************************START BIOLOGICAL DATA FIGURES************************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
 
 
-<!-- maturity and fecundity FIGURES--> 
 
-<!-- length at age FIGURES--> 
+<!-- ******************************************************************************************************************************************** --> 
+<!-- ****************************************************maturity and fecundity FIGURES***********************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
 
-<!-- aging precicion and bias FIGURES--> 
+
+
+<!-- ******************************************************************************************************************************************** --> 
+<!-- ****************************************************length at age FIGURES********************************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
+
+
+
+<!-- ******************************************************************************************************************************************** --> 
+<!-- ****************************************************aging precicion and bias FIGURES*********************************************************--> 
+<!-- ******************************************************************************************************************************************** --> 
 ![Aging precision between two current age readers at the NWFSC.  \label{fig:age_error1}](plots/age_error1.png)
 ![Aging precision between a current anda  former NWFSC age reader.  \label{fig:age_error2}](plots/age_error2.png)
 ![Aging precision between NWFSC and WDFW age readers.  \label{fig:age_error3}](plots/age_error3.png)
@@ -1421,9 +1522,9 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 
 
-
-
-
+<!-- ******************************************************************************************************************************************** --> 
+<!-- ************************************************************BEGIN APPENDICES**************************************************************** --> 
+<!-- ******************************************************************************************************************************************** --> 
 
 \FloatBarrier
 \newpage
