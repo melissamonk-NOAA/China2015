@@ -1,5 +1,5 @@
 Region,SouthOf4010Dead,SouthOf4010Live,NorthOf4010Dead,NorthOf4010Live,Total,Source
-1900,0,,,,0,Ralston et al. 2010
+1900,0,"\colorbox{Emerald}{\makebox(3in,.1in){    }}",,,0,Ralston et al. 2010
 1901,0.383,,,,0.383,Ralston et al. 2010
 1902,0.766,,,,0.766,Ralston et al. 2010
 1903,1.149,,,,1.149,Ralston et al. 2010
