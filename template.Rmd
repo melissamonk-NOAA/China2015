@@ -36,7 +36,8 @@ bibliography: chinarockfish2015.bib
     
 ##############################################################################################################
 #### loads workspace image of the BASE MODEL from SS_output in r4ss    
-     load("Aurora2013.RData")
+     #load("Aurora2013.RData")
+      load("Chinasouth2015.RData")
    # mod = myreplist
      #check the structure of the data here to make sure it contains "mod," the SS_output variable
 ##############################################################################################################
@@ -118,11 +119,11 @@ ggplot(Exec_ca_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='s
 
 
 ##Data and assessment{-}
-China rockfish was assessed as a data moderate stock in 2013 using the X-DBSRA modeling framework [@Cope2015].  This assessment uses the newest version of Stock Synthesis (3.24v).  
+China rockfish was assessed as a data moderate stock in 2013 using the X-DBSRA modeling framework [@Cope2015].  This assessment uses the newest version of Stock Synthesis (3.24u).  
 
 The data used in the assessments includes, landings, length and age compositions of the retained
 
-The assessment model begins in 19xxx, and assumes the stock was at an unfished equilibrium in 19xx. 
+The assessment model begins in 1900, and assumes the stock was at an unfished equilibrium in 19xx. 
 
 ##Stock biomass{-}
 trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
@@ -293,9 +294,9 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 
 ![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the base case assessment model. \label{fig:exploit}](r4ss/plots/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
 
-![Estimated spawning potential ratio (SPR). One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is \hl{20xx}. \label{fig:spr}](r4ss/plots/SPR2_minusSPRseries.png)
+![Estimated spawning potential ratio (SPR). One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is 2014. \label{fig:spr}](r4ss/plots/SPR2_minusSPRseries.png)
 
-![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the base case model. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates \hl{20xx}. \label{fig:phase}](r4ss/plots/SPR4_phase.png)
+![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the base case model. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates 2014. \label{fig:phase}](r4ss/plots/SPR4_phase.png)
 
 
 \FloatBarrier
@@ -464,7 +465,7 @@ base_summary = cbind(mngmt_N,negSPR_Exploit,AgexB,Spawn_Deplete ,Recruittab)
 
 
 
-![Equilibrium yield curve for the base case model. Values are based on teh 20xx fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield}](r4ss/plots/yield1_yield_curve.png)
+![Equilibrium yield curve for the base case model. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield}](r4ss/plots/yield1_yield_curve.png)
 
 \FloatBarrier
 \newpage
@@ -847,7 +848,7 @@ Future research is planned to use catch-per-unit-effort (cpue) information from 
 ###Summary of data for fleets and areas
 
 ###Modeling software
-We used Stock Synthesis 3 version 3.24V, compiled March 8, 2015 by Dr. Richard Methot at the NWFSC. The most recent version (SS-V3.24u) was used, since it included improvements and corrections to older versions.
+We used Stock Synthesis 3 version 3.24u by Dr. Richard Methot at the NWFSC. The most recent version (SS-V3.24u) was used, since it included improvements and corrections to older versions.
 
 ###Data weighting
 
@@ -1421,11 +1422,10 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- ***************************************************************Commercial Discards FIGURES***************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
+![Estimates of discarded and retained China rockfish north and south of $40^\circ 10^\prime$ in the commercial Nearshore Fixed-gear fishery. Note that the y-axis limits and range of years differ between panels. Estimated surviving discards are only shown for the area south of $40^\circ 10^\prime$.  \label{fig:discard_comm_est}](plots/Discard_comm_est.png)
 
 
-
-
-
+![Relationship between estimated discards and landings of China rockfish in the Nearshore Fixed-gear fishery north of $40^\circ 10^\prime$. The gray points indicate estimates from individual years and the red line is a linear regression through those estimates with intercept fixed at 0. The slope of the linear regression is 0.0269, indicating that discards on average represent 2.69\% of the landings in this sector. \label{fig:discard_comm_relN}](plots/Discard_comm_relN.png)
 
 <!-- ******************************************************************************************************************************************** --> 
 <!-- ****************************************************Recreational Landings and Discards FIGURES***********************************************--> 
