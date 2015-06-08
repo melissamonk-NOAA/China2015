@@ -811,12 +811,27 @@ The California Collaborative Fisheries Research Program (CCFRP), created by Rick
 Future research is planned to use catch-per-unit-effort (cpue) information from this program, comparing relative abundance indices derived from fishery-dependent (FD) and fishery-independent (FI) monitoring programs.  CCFRP data provides a time series of fishery-independent catch and effort at fixed stations, collecting information at sample sites inside and outside of MPAs spanning about 200 miles of the California coast from Point Buchon to A\~{n}o Nuevo.  This FI information, combined with our current FD information (i.e., CPFV onboard observer data), provides an opportunity for fine-scale spatial and temporal analysis of catch rates and species compositions, specifically addressing the research needs identified in nearshore rockfish stock assessments.
 
 ###Biological Data: Weight-Length
+The weight-length relationship is based on the standard power function: $W = \alpha(^\beta)$ where $W$ is individual weight (kg), $L$ is length (cm), and $\alpha$ and $\beta$ are coefficients used as constants.
+
+This assessment uses weight-length parameters for females of $\alpha=1.17x10^{-5}$ and $\beta=3.177$, derived from Lea et al. [-@Lea1999].  A fit of the length-weight relationship to the Oregon ORBS data yielded parameters $\alpha=2.06^{-5}$ and $\beta=3.02$
+
 
 ###Biological Data: Maturity and Fecundity
+China rockfish maturity-at-length data are sparse and was gathered from two available sources, one from California and one from Oregon.  Echeveria [-@Echeverria1987] collected 69 China rockfish from central and northern California, of which the age at first maturity was 3 years for males and females (26 cm).  Both males and females exhibited 50% maturity at 4 years (27 cm) and 100% maturity at 6 years (30 cm).  
+
+In Oregon, Hannah and Blume [-@Hannah2011] determined a length at 50% maturity at 28.5 cm from a sample size of 239 China rockfish.  Maturity was fit to a logistic curve,  $p_l = \frac{e^{B_0+{B_l}^1}}{1+e^{{B_0}+{B_l}^1}}$, where $p_l$ is the proportion of the natural fish at length $l$, and $B_0$ and $B_1$ are the regression coefficients.  Parameter estiamtes from Hannah and Blume [-@Hannah2011] are $B_0 = -13.320$ and $B_1 = 0.467$.
+
+Fecundity is modeled as a function of female spawning biomass.
 
 ###Biological Data: Natural Mortality
+ 
+
 
 ###Biological Data: Length at age
+
+
+
+
 
 ###Biological Data: Sex ratios
 
