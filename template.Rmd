@@ -372,6 +372,7 @@ Ref_pts[c(6,11,16),2]=''
 colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
 ```
 
+
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
  Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the base case model."), label='Ref_pts')  #digits=0 rounds the numbers
@@ -380,29 +381,30 @@ colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\
     print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
 
-
-
 <!-- END: REFERENCE POINTS TABLE --> 
 
 ##Management performance{-}
-<!-- BEGIN: CREATE MANAGEMENT PERFORMANCE TABLE --> 
+<!-- BEGIN: CREATE MANAGEMENT PERFORMANCE TABLE - WILL PROBABLY NEED TO BE TWO TABLES--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-Year = as.factor(seq(FirstYR,LastYR))
-OFL = c(rep('NA',7),rep(47.8,3))
-ACL = rep('NA',length(Year))
-Commland = rep('NA',length(Year))
-TotalCatch = rep('NA',length(Year))
 
-mngmnt = cbind(Year,OFL,ACL,Commland,TotalCatch)
-colnames(mngmnt) = c('Year','OFL contribution (mt)','ACL contribution (mt)','Commercial Landings (mt)', 'Estimated Total Catch (mt)')
+mngmnt = read.csv("./txt_files/mngmt_performance.csv")
+
+colnames(mngmnt) = c('Year','Management guideline',	'Nearshore rockfish north', 'China contrib. north',	
+                     'Estimated catch north',	'Nearshore rockfish south',	'China contrib. south',	
+                     'Estimated catch south')
+
 ```
+
+
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
- mngmnt.table = xtable(mngmnt, caption=c("Recent trend in total catch and commercial landings (mt) relative to the management guidelines. Estimated total catch reflect the commercial landings plus the model estimated discarded biomass."), label='mnmgt_perform')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-    align(mngmnt.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(mngmnt.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
-          width="\\textwidth")
+ mngmnt.table = xtable(mngmnt, caption=c("Recent trend in total catch and commercial landings (mt) relative to the management guidelines. Estimated total catch reflect the commercial landings plus the model estimated discarded biomass. Note: 2015 and 2016 ACLs are proposed and not yet in regulations "), label='mnmgt_perform')  #digits=0 rounds the numbers
+ 
+#   xtable requires a placeholder for rownames, hence 6 values    
+    align(mngmnt.table) = c('l','>{\\raggedleft}p{.4in}','>{\\raggedleft}p{1.3in}','>{\\centering}p{.8in}','>{\\centering}p{.7in}',
+                            '>{\\centering}p{.8in}','>{\\centering}p{.8in}','>{\\centering}p{.7in}',
+                            '>{\\centering}p{.8in}')  
+    print(mngmnt.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x},scalebox=.9)
 ```
 <!-- END: CREATE MANAGEMENT PERFORMANCE TABLE -->
 
@@ -421,7 +423,9 @@ projected yields (OFL, ABC and ACL), spawning biomass, and stock depletion level
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
 ###collect the data from all the tables
-mngmnt = mngmnt[,c(4,5,2,3)]
+# read in the management table
+mngmt_N = read.csv("./txt_files/mngmt_performance_base.csv")
+mngmt_N = mngmt_N[,c(2:7)]
 negSPR_Exploit = negSPR_Exploit[,c(2,4)]
 negSPR_Exploit[,c(1,2)] = round(negSPR_Exploit[,c(1,2)],2)
 AgexB = seq(FirstYR,LastYR)
@@ -429,26 +433,36 @@ Spawn_Deplete = Spawn_Deplete[,c(2:5)]
 Spawn_Deplete[,1] = round(Spawn_Deplete[,1],0)
 Spawn_Deplete[,3] = round(Spawn_Deplete[,3],2)
 Recruittab = Recruittab[,c(2,3)]
-base_summary = cbind(mngmnt,negSPR_Exploit,AgexB,Spawn_Deplete ,Recruittab)
+base_summary = cbind(mngmt_N,negSPR_Exploit,AgexB,Spawn_Deplete ,Recruittab)
 
 
-base_summary = as.data.frame(t(base_summary))
-base_summary$names=c('Comm. landings (mt)','Total Est. Catch (mt)','OFL (mt)','ACL (mt)','1-SPR','Exploitation rate','Age 0+ biomass (mt)','Spawning Biomass','~95% CI','Depletion','~95% CI','Recruits','~95% CI')
-
-base_summary = base_summary[,c(11,1:10)]
-colnames(base_summary) = c("Quantity",seq(FirstYR,LastYR))
+ base_summary = as.data.frame(t(base_summary))
+ base_summary$names=c('Comm. landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL','China contrib. ABC/OFL',
+                      'Nearshore RF OY/ACL','China contrib. OY/ACL'
+                      ,'1-SPR','Exploitation rate','Age 0+ biomass (mt)','Spawning Biomass','~95% CI','Depletion',
+                      '~95% CI','Recruits','~95% CI')
+ 
+ base_summary = base_summary[,c(11,1:10)]
+ colnames(base_summary) = c("Quantity",seq(FirstYR,LastYR))
 
 ```
 
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  #create the Spawning biomass table
-  base_summary.table = xtable(base_summary, caption=c("China rockfish base case results summary."), label='base_sumamry',digits=0)  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-   align(base_summary.table) = c("crcccccccccc")  
-    print(base_summary.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",scalebox=.85,align=TRUE, hline.after=c(-1,0,4,5,7,9,11,nrow(base_summary.table)) )
+#  create the Spawning biomass table
+  base_summary.table = xtable(base_summary, caption=c("China rockfish North? base case results summary."), 
+                              label='base_summary',digits=0) 
+   
+    align(base_summary.table) = c("crcccccccccc")  
+    print(base_summary.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",
+           scalebox=.8,align=TRUE, hline.after=c(-1,0,4,5,7,9,11,nrow(base_summary.table)) )
 ```
 <!-- END: CREATE RESULTS SUMMARY TABLE -->
+
+
+
+
+
 
 ![Equilibrium yield curve for the base case model. Values are based on teh 20xx fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield}](r4ss/plots/yield1_yield_curve.png)
 
@@ -587,11 +601,17 @@ Commercial landings of China rockfish in California from 1916-1968 were obtained
 
 Discard of China rockfish likely occurred before the closure of nearshore commercial fisheries in 1995 for non-trawl gears and in 1999 for trawl gears.  However, there is no information on historical discards.  For this assessment, we assume no retention or discard of China in any commercial fisheries.       
 
-**Oregon**
-\hl{Ian and Patrick}
+**Oregon and California**
 
-**California**
-\hl{Ian}
+Estimates of discarded China rockfish in commercial fisheries were provided by the West Coast Groundfish Observer Program (WCGOP). These were available for the years 2003-2013 north of $40^\circ 10^\prime$ N lat., and 2004-2013 to the south. WCGOP provided estimates with and without the depth-specific discard mortality rates applied \hl{(thus far, this is just true for the southern area)}. These estimates indicate that the Nearshore Fixed-gear fishery was the only sector with observed discards of China rockfish and there were strong differences in rates of discarding north and south of $40^\circ 10^\prime$, (Figure \ref{fig:discard_comm_est}). 
+
+Discard rates were consistently low north of $40^\circ 10^\prime$, where no year had estimated mortality from discards greater than either 0.5 mt or 5\% of the landings. A linear regression relating discards to retained (with intercept fixed at the origin) had a slope of  0.0269, indicating that discards on average represent 2.69\% of the landings in this sector (Figure \ref{fig:discard_comm_relN}). This value is similar to a simple average of the discard fractions, which was 2.75\%.
+
+South of $40^\circ 10^\prime$, commercial landings were lower and estimated discards higher. The maximum discard mortality estimate was 1.8 mt for 2012 which was 126\% of the 1.4 mt nearshore fixed gear landings in that area in that year. The total discard amount for that year, including fish estimated as surviving, was 2.7 mt, almost double the landed amount.  There is also an increasing trend over the observed period (2004-2013) with an average for the first three years of 30\% of all China rockfish catch discarded and an average over the final three years of 63\% discarded.
+
+Discards patterns in the area of Northern California between $40^\circ 10^\prime$, and $42^\circ$ appears to be more similar to Oregon than the rest of California (Table \ref{discard_comm_bylat}). Although expanded fleet-wide discard estimates were not available on this smaller spatial-scale, only 9\% of observed trips between $40^\circ 10^\prime – 42^\circ$ that were associated with any catch of China rockfish had any observed discards of China rockfish. South of $40^\circ 10^\prime$, 82\%-100\% of such trips had observed discards of China rockfish.
+
+The patterns of the discards in commercial fisheries suggest that north of $40^\circ 10^\prime$ discard mortality of China rockfish is small enough that it is more parsimonious to account for this mortality increasing the landed catch estimates by 2.69\%. South of $40^\circ 10^\prime$, total discards are greater than landings in some years and discard mortality represents a large fraction of the total mortality of China rockfish. The discards are primarily fish below the minimum legal size of 12 inches \hl{(REFERENCE FUTURE FIGURE OF DISCARD COMP DATA)}. These factors support modeling the discard process explicitly through a retention function. This will allows the model to apply the mortality from discards to the appropriate subset of the population. Furthermore, the increasing trend in discard rates may be an indication of changes in population size structure that should be accounted for in the assessment.
 
 
 
@@ -949,9 +969,22 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- ******************************************************************************************************************************************** --> 
 <!-- ************************************************Commercial Discards TABLES*******************************************************************--> 
 <!-- ******************************************************************************************************************************************** -->
+<!-- CA/OR commercial discards TABLES--> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+     discard_comm = read.csv("./txt_files/Discard_comm_bylat.csv")
+     colnames(discard_comm) = c('Latitude range','Trips observed','Trips with discards','Percent with discards')
+```
 
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+      discard_comm.table = xtable(discard_comm, caption = c("Total number of observed trips associated with catch of China rockfish and trips 
+                                                      with observed discards of China rockfish aggregated by $2^\\circ$ latitude bins. Range of years 
+                                                      is 2003—2013 North of $40^\\circ 10^\\prime$ and 2004—2013 to the south. No observed catch of China
+                                                      rockfish occurred between $40^\\circ$ and $40^\\circ 10^\\prime$."),label="tab:discard_comm_bylat")
+      align(discard_comm.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}') 
+                                    
+      print(discard_comm.table,include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x})
 
-
+```
 
 
 <!-- ******************************************************************************************************************************************** --> 
