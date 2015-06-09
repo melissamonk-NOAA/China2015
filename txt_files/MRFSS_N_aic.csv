@@ -1,0 +1,7 @@
+Model,Binomial,Gamma
+~Year,1395,-833.5
+~Year + Wave,1375.4,-829.4
+~Year + Region,1390.5,\textbf{-833.5}
+~Year + Wave + Region,\tectbf{1373.5},-830.1
+~Year + Area X + Region + Year: Region,1378.6,-822.9
+~Year + Area X + Region + Year: Wave,30264.4,-767.6

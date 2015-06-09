@@ -1,0 +1,9 @@
+Filter,Criteria,Sample size (number of trips)
+Full data set,Charter boat trips from Oregon (statewide) and Northern California (Humbolt and Del Norte counties),6801
+Region known,Deleted records without region information,6677
+Ocean trips,"Kept only Ocean Trips (no Estuary trips, etc.)",6317
+Hook and line,Removed gear types other than hook and line (e.g. spear),6262
+Zero anglers,Drop trips with zero anglers,6261
+Extreme counter-indicators,"Drop trips with “common” species that never co-occur with China (Coho salmon, silvergray rockfish, and Sablefish)",5937
+Stephens-MacCall,"Retain all positive China trips, plus “False Positives” (trips predicted to be in China habitat, but with no China retained)",1099
+Drop offshore trips,Drop trips >3 miles from shore,1023
