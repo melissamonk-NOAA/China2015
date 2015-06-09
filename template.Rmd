@@ -1320,7 +1320,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
         MRFSS_N_index = read.csv("./txt_files/MRFSS_N_index.csv")
 
         colnames(MRFSS_N_filter) = c('Filter','Criteria','Sample size (no. of trips)')
-        colnames(MRFSS_N_sample_size) = c('Year', 'Northern CA (Humboldt & Del Norte)','Southern Oregon','Northern Oregon')
+        colnames(MRFSS_N_sample_size) = c('Year', 'Northern CA (Humboldt and Del Norte)','Southern Oregon','Northern Oregon')
         colnames(MRFSS_N_aic) = c('Model','Binomial','Gamma')
         colnames(MRFSS_N_index)[1:3] = c('Year','Index','Log-scale SE')
         MRFSS_N_index1 = MRFSS_N_index[,c(1:3)]
@@ -1328,43 +1328,41 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-        #MRFSS S filter
+        #MRFSS N filter
          MRFSS_N_filter.table = xtable(MRFSS_N_filter,caption=c("Sample sizes at each data filtering step for the Oregon and Northern California 
                                                                 (Humbolt and Del Norte counties) MRFSS dockside data. The bold value indicates the final 
                                                                 sample size used for delta-GLM analysis."),label='tab:MRFSS_N_filter')
         align(MRFSS_N_filter.table) = c('l','>{\\raggedright}p{1.8in}','>{\\raggedright}p{2.8in}','>{\\raggedright}p{1.5in}')          
-        print(MRFSS_N_filter.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",
-                         sanitize.text.function = function(x){x})
+        print(MRFSS_N_filter.table, include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x})
 ```
 \FloatBarrier
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-        #MRFSS S filter
+        #MRFSS N sample
          MRFSS_N_sample_size.table = xtable(MRFSS_N_sample_size,caption=c("Number of trips by year and subregion in the Oregon and Northern California 
-                                                                          recreational MRFSS index. “Southern” Oregon is defined as ports south of Florence. 
-                                                                          “Northern” Oregon includes the port of Florence and all ports to the OR-WA border. 
+                                                                          recreational MRFSS index. Southern Oregon is defined as ports south of Florence. 
+                                                                          Northern Oregon includes the port of Florence and all ports to the OR-WA border. 
                                                                           Trips in Northern CA were combined with Southern Oregon for the CPUE index."),
                                                                             label='tab:MRFSS_N_sample_size')
         align(MRFSS_N_sample_size.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1.2in}')          
-        print(MRFSS_N_sample_size.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",
-                         sanitize.text.function = function(x){x})
+        print(MRFSS_N_sample_size.table, include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x})
 ```
 \FloatBarrier
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-        #MRFSS S filter
-         MRFSS_N_aic.table = xtable(MRFSS_N_aic,caption=c("AIC values for each model in the Oregon and Northern California MRFSS dockside index."),
-                                            label='tab:MRFSS_N_aic')
-        align(MRFSS_N_aic.table) = c('l','>{\\raggedright}p{2.5in}','>{\\centering}p{1in}','>{\\centering}p{1in}')          
-        print(MRFSS_N_aic.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",
-                         sanitize.text.function = function(x){x})
+        #MRFSS N aic
+#         MRFSS_N_aic.table = xtable(MRFSS_N_aic,caption=c("AIC values for each model in the Oregon and Northern California MRFSS dockside index."),
+#                                            label='tab:MRFSS_N_aic')
+#        align(MRFSS_N_aic.table) = c('l','>{\\raggedright}p{2.5in}','>{\\centering}p{1in}','>{\\centering}p{1in}')          
+#        print(MRFSS_N_aic.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",
+#                         sanitize.text.function = function(x){x})
 ```
 \FloatBarrier
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-        #MRFSS S filter
-         MRFSS_N_index1.table = xtable(MRFSS_N_index1,caption=c("Year effects for the Northern CA MRFSS dockside index."),
-                                            label='tab:MRFSS_N_index')
-        align(MRFSS_N_index1.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
-        print(MRFSS_N_index1.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",
-                         sanitize.text.function = function(x){x})
+        #MRFSS S index
+#         MRFSS_N_index1.table = xtable(MRFSS_N_index1,caption=c("Year effects for the Northern CA MRFSS dockside index."),
+#                                            label='tab:MRFSS_N_index')
+#        align(MRFSS_N_index1.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
+#        print(MRFSS_N_index1.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",
+#                         sanitize.text.function = function(x){x})
 ```
 
 
