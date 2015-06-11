@@ -4,6 +4,7 @@ author: ''
 date: ''
 output:
   pdf_document:
+    latex_engine: xelatex
     fig_caption: yes
     keep_tex: true
     includes:
@@ -22,7 +23,7 @@ bibliography: chinarockfish2015.bib
 ---
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
      ##read in necessary libraries
-           library(r4ss)
+          # library(r4ss)
            library(xtable)
            library(ggplot2)
            library(reshape2)
@@ -30,15 +31,15 @@ bibliography: chinarockfish2015.bib
              options(scipen=999) # turn off scientific notation
 #########################################################################
 #CHANGE ME
-      FirstYR=2004  # minimum year for tables
-      LastYR=2013  # maximum year for tables
+      FirstYR=2005  # minimum year for tables
+      LastYR=2014  # maximum year for tables
 #########################################################################
     
 ##############################################################################################################
 #### loads workspace image of the BASE MODEL from SS_output in r4ss    
      #load("Aurora2013.RData")
+      load("Chinanorth2015.RData")
       load("Chinasouth2015.RData")
-   # mod = myreplist
      #check the structure of the data here to make sure it contains "mod," the SS_output variable
 ##############################################################################################################
 ```
@@ -133,10 +134,10 @@ trends and current levels relative to virgin or historic levels, description of 
 <!-- BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE -->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
-      SpawningB = mod$derived_quants[grep("SPB",mod$derived_quants$LABEL),]
+      SpawningB = modS$derived_quants[grep("SPB",modS$derived_quants$LABEL),]
       SpawningB = SpawningB[c(-1,-2),]
       
-      Depletion = mod$derived_quants[grep("Bratio",mod$derived_quants$LABEL),]
+      Depletion = modS$derived_quants[grep("Bratio",modS$derived_quants$LABEL),]
       Depletion = Depletion[c(-1,-2),]
 #########################################################################
 #CHANGE ME
@@ -182,8 +183,11 @@ trends and current levels relative to virgin or historic levels, description of 
 
 
 
-![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for China rockfish. \label{fig:Exploit}](r4ss/plots/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
+![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the northern model of China rockfish. \label{fig:Exploit_N}](r4ss_north/plots/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
 
+
+
+![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the southern model of China rockfish. \label{fig:Exploit_S}](r4ss_south/plots/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
 
  \FloatBarrier
 
@@ -196,7 +200,7 @@ trends and current levels relative to virgin or historic levels-include table fo
 <!-- BEGIN: CREATE RECRUITMENT TABLE -->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
-      Recruit = mod$derived_quants[grep("Recr",mod$derived_quants$LABEL),]
+      Recruit = modS$derived_quants[grep("Recr",modS$derived_quants$LABEL),]
       Recruit = Recruit[c(-1,-2),]
 #########################################################################
 #CHANGE ME
@@ -228,7 +232,10 @@ trends and current levels relative to virgin or historic levels-include table fo
 <!-- END: CREATE RECRUITMENT TABLE -->
 
 
-![Time series of estimated China rockfish recruitments for the base-case model with 95\% confidence or credibility intervals.\label{fig:recruits}](r4ss/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
+![Time series of estimated China rockfish recruitments for the northern base-case model with 95\% confidence or credibility intervals.\label{fig:recruits_N}](r4ss_north/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
+
+
+![Time series of estimated China rockfish recruitments for the southern base-case model with 95\% confidence or credibility intervals.\label{fig:recruits_S}](r4ss_south/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
 
  \FloatBarrier
 
@@ -243,10 +250,10 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 <!-- BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE -->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
-      Exploit = mod$derived_quants[grep("F",mod$derived_quants$LABEL),]
+      Exploit = modS$derived_quants[grep("F",modS$derived_quants$LABEL),]
       Exploit = Exploit[c(-1,-2),]
       
-      negSPR = subset(mod$sprseries, select=c('Year','SPR','SPR_std'))
+      negSPR = subset(modS$sprseries, select=c('Year','SPR','SPR_std'))
 #########################################################################
 #CHANGE ME
       FirstYR=2004  # minimum year for the Spawning biomass table
@@ -292,12 +299,21 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 <!-- END: CREATE EXPLOITATION AND 1-SPR TABLE -->
 
 
-![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the base case assessment model. \label{fig:exploit}](r4ss/plots/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
+![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the northern base case assessment model. \label{fig:exploit_N}](r4ss_north/plots/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
 
-![Estimated spawning potential ratio (SPR). One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is 2014. \label{fig:spr}](r4ss/plots/SPR2_minusSPRseries.png)
 
-![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the base case model. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates 2014. \label{fig:phase}](r4ss/plots/SPR4_phase.png)
+![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the southern base case assessment model. \label{fig:exploit_S}](r4ss_south/plots/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
 
+
+
+![Estimated spawning potential ratio (SPR) for the northern model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is 2014. \label{fig:spr_N}](r4ss_north/plots/SPR2_minusSPRseries.png)
+
+![Estimated spawning potential ratio (SPR) for the southern model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is 2014. \label{fig:spr_S}](r4ss_south/plots/SPR2_minusSPRseries.png)
+
+
+![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the northern base case model. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates 2014. \label{fig:phase_N}](r4ss_north/plots/SPR4_phase.png)
+
+![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the southern base case model. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates 2014. \label{fig:phase_S}](r4ss_south/plots/SPR4_phase.png)
 
 \FloatBarrier
 
@@ -315,26 +331,26 @@ Reference points and quantities for the China rockfish base case model.  Prior t
 
 
 Ref_pts = rbind(
-SSB_Unfished    = mod$derived_quants[grep("SSB_U",mod$derived_quants$LABEL),],
-TotBio_Unfished = mod$derived_quants[grep("TotBio",mod$derived_quants$LABEL),],
-Recr_Unfished   = mod$derived_quants[grep("Recr_Un",mod$derived_quants$LABEL),],
-SPB_2013        = mod$derived_quants[grep("SPB_2013",mod$derived_quants$LABEL),],
-Depletion_2013  = mod$derived_quants[grep("Bratio_2013",mod$derived_quants$LABEL),],
+SSB_Unfished    = modS$derived_quants[grep("SSB_U",modS$derived_quants$LABEL),],
+TotBio_Unfished = modS$derived_quants[grep("TotBio",modS$derived_quants$LABEL),],
+Recr_Unfished   = modS$derived_quants[grep("Recr_Un",modS$derived_quants$LABEL),],
+SPB_2013        = modS$derived_quants[grep("SPB_2013",modS$derived_quants$LABEL),],
+Depletion_2013  = modS$derived_quants[grep("Bratio_2013",modS$derived_quants$LABEL),],
 Refpt_sB        = c(NA,NA,NA),
-SSB_Btgt        = mod$derived_quants[grep("SSB_Btgt",mod$derived_quants$LABEL),],
-SPR_Btgt        = mod$derived_quants[grep("SPR_Btgt",mod$derived_quants$LABEL),],
-Fstd_Btgt       = mod$derived_quants[grep("Fstd_Btgt",mod$derived_quants$LABEL),],
-TotYield_Btgt   = mod$derived_quants[grep("TotYield_Btgt",mod$derived_quants$LABEL),],
+SSB_Btgt        = modS$derived_quants[grep("SSB_Btgt",modS$derived_quants$LABEL),],
+SPR_Btgt        = modS$derived_quants[grep("SPR_Btgt",modS$derived_quants$LABEL),],
+Fstd_Btgt       = modS$derived_quants[grep("Fstd_Btgt",modS$derived_quants$LABEL),],
+TotYield_Btgt   = modS$derived_quants[grep("TotYield_Btgt",modS$derived_quants$LABEL),],
 Refpt_SPR       = c(NA,NA,NA),
-SSB_SPRtgt      = mod$derived_quants[grep("SSB_SPRtgt",mod$derived_quants$LABEL),],
+SSB_SPRtgt      = modS$derived_quants[grep("SSB_SPRtgt",modS$derived_quants$LABEL),],
 SPR_proxy       = c('SPF_proxy',.5,NA),
-Fstd_SPRtgt     = mod$derived_quants[grep("Fstd_SPRtgt",mod$derived_quants$LABEL),],
-TotYield_SPRtgt = mod$derived_quants[grep("TotYield_SPRtgt",mod$derived_quants$LABEL),],
+Fstd_SPRtgt     = modS$derived_quants[grep("Fstd_SPRtgt",modS$derived_quants$LABEL),],
+TotYield_SPRtgt = modS$derived_quants[grep("TotYield_SPRtgt",modS$derived_quants$LABEL),],
 Refpts_MSY      = c(NA,NA,NA),
-SSB_MSY         = mod$derived_quants[grep("SSB_MSY",mod$derived_quants$LABEL),],
-SPR_MSY         = mod$derived_quants[grep("SPR_MSY",mod$derived_quants$LABEL),],
-Fstd_MSY        = mod$derived_quants[grep("Fstd_MSY",mod$derived_quants$LABEL),],
-TotYield_MSY    = mod$derived_quants[grep("TotYield_MSY",mod$derived_quants$LABEL),] )
+SSB_MSY         = modS$derived_quants[grep("SSB_MSY",modS$derived_quants$LABEL),],
+SPR_MSY         = modS$derived_quants[grep("SPR_MSY",modS$derived_quants$LABEL),],
+Fstd_MSY        = modS$derived_quants[grep("Fstd_MSY",modS$derived_quants$LABEL),],
+TotYield_MSY    = modS$derived_quants[grep("TotYield_MSY",modS$derived_quants$LABEL),] )
 
 Ref_pts$Value = as.numeric(Ref_pts$Value)
 Ref_pts$StdDev = as.numeric(Ref_pts$StdDev)
@@ -465,7 +481,9 @@ base_summary = cbind(mngmt_N,negSPR_Exploit,AgexB,Spawn_Deplete ,Recruittab)
 
 
 
-![Equilibrium yield curve for the base case model. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield}](r4ss/plots/yield1_yield_curve.png)
+![Equilibrium yield curve for the northern base case model. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield_N}](r4ss_north/plots/yield1_yield_curve.png)
+
+![Equilibrium yield curve for the southern base case model. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield_S}](r4ss_south/plots/yield1_yield_curve.png)
 
 \FloatBarrier
 \newpage
@@ -1625,8 +1643,9 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- *********************************************************Data FIGURES************************************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-![Summary of data sources used in the assessment. \label{fig:data_sources}](r4ss/plots/data_plot.png)
+![Summary of data sources used in the northern assessment. \label{fig:data_sources_N}](r4ss_north/plots/data_plot.png)
 
+![Summary of data sources used in the southern assessment. \label{fig:data_sources_S}](r4ss_south/plots/data_plot.png)
 
 
 
@@ -1648,7 +1667,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
     colnames(OR_comm_remov1) = c('Year','Fleet','Removals')
 ```
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Oregon commercial fleet, north and south of Florence, OR. \\label{fig:OR_comm_removal}"}
-      ggplot(OR_comm_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Removals (mt)")
+  #    ggplot(OR_comm_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Removals (mt)")
 
 ```
 
@@ -1818,9 +1837,16 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 <!-- *****************************************************Oregon dockside figures*************************************************************--> 
 
+![. Species coefficients from the binomial GLM for presence/absence of China rockfish in the Oregon Recreational Boat Survey (ORBS) data set. Horizontal bars are 95\% confidence intervals.  \label{fig:ORBS_SM}](plots/ORBS_SM.png)
 
 
+![. Comparison of delta-GLM index trends in Southern Oregon, Northern Oregon, and a habitat area-weighted index.  \label{fig:ORBS_index_compare}](plots/ORBS_index_compare.png)
 
+
+![. Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the Southern Oregon Recreational Boat Survey (ORBS) data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:ORBS_diag_lognormal}](plots/ORBS_diag_lognormal.png)
+
+
+![Diagnostic plots for the China rockfish delta-GLM index (gamma component) for the Northern Oregon Recreational Boat Survey (ORBS) data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:ORBS_diag_gamma}](plots/ORBS_diag_gamma.png)
 
 <!-- *****************************************************CA dockside figures*************************************************************--> 
 
@@ -2760,7 +2786,7 @@ During the 1987-1998 CDFW onboard observer program, fishing location was recorde
 
 
 For each CPFV location in the California 1999-2014 and Oregon 2001-2014 data we calculated depth, nearest reef, distance from reef, nearest MPA, distance from MPA using ArcGIS.  Geoprocessing steps used were ‘near’ and ‘extract values to points.’ For consistency across databases, we used the starting location of the drift to determine if the drift was targeting fish associated with a reef.  Drifts that had a distance of 0 m, i.e., were fishing directly on the reef, were included in analyses.  Recognizing that some drifts begin adjacent to a reef with the intention of drifting on to the reef, as well as the fact that the starting location may not be recorded at the very start of a drift, we devised a method for including drifts within a certain distance of a reef.  
-We compiled a list of rockfish species that are strictly reef associated (black and yellow rockfish (\textit{Sebastes chrysomelas}), canary rockfish  (\textit{Sebastes pinniger}), China rockfish (\textit{Sebastes nebulosus}), cowcod (\textit{Sebastes levis}), flag rockfish  (\textit{Sebastes rubrivinctus}), gopher rockfish (\textit{Sebastes carnatus}), grass rockfish (\textit{Sebastes rastrelliger}), greenblotched rockfish (\textit{Sebastes rosenblatti}), kelp rockfish (\textit{Sebastes atrovirens}), quillback rockfish (\textit{Sebastes maliger}), rosy rockfish (\textit{Sebastes rosaceus}), starry rockfish (\textit{Sebastes constellatus}), Treefish (\textit{Sebastes serriceps}), vermilion rockfish (\textit{Sebastes miniatus}), yelloweye rockfish (\textit{Sebastes ruberrimus})) (personal communication John Field and Tom Laidig, NMFS SWFSC).  Using drifts that were greater than 0m from a reef and encountered one at least one of the fifteen species listed above, we calculated the depth for which 75% of the drifts were included.  For Oregon this was 83 m, and for California it was 34 m for drifts within the ‘footprint’ and 141 m for drifts outside the ‘footprint.’  Any drift (with or without catch) greater than 83 m from a reef was excluded from the analyses.
+We compiled a list of rockfish species that are strictly reef associated (black and yellow rockfish (\textit{Sebastes chrysomelas}), canary rockfish  (\textit{Sebastes pinniger}), China rockfish (\textit{Sebastes nebulosus}), cowcod (\textit{Sebastes levis}), flag rockfish  (\textit{Sebastes rubrivinctus}), gopher rockfish (\textit{Sebastes carnatus}), grass rockfish (\textit{Sebastes rastrelliger}), greenblotched rockfish (\textit{Sebastes rosenblatti}), kelp rockfish (\textit{Sebastes atrovirens}), quillback rockfish (\textit{Sebastes maliger}), rosy rockfish (\textit{Sebastes rosaceus}), starry rockfish (\textit{Sebastes constellatus}), Treefish (\textit{Sebastes serriceps}), vermilion rockfish (\textit{Sebastes miniatus}), yelloweye rockfish (\textit{Sebastes ruberrimus})) (personal communication John Field and Tom Laidig, NMFS SWFSC).  Using drifts that were greater than 0m from a reef and encountered one at least one of the fifteen species listed above, we calculated the depth for which 75\% of the drifts were included.  For Oregon this was 83 m, and for California it was 34 m for drifts within the ‘footprint’ and 141 m for drifts outside the ‘footprint.’  Any drift (with or without catch) greater than 83 m from a reef was excluded from the analyses.
 
 
 \newpage
