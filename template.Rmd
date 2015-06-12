@@ -66,7 +66,7 @@ Trends and current levels-include table for last ten years and graph with long t
 Figures \ref{fig:Exec_wa_catch}-\ref{fig:Exec_ca_catch}
 Table \ref{tab:Exec_catch}
 
-<!-- START Executive summary catches figures--!>
+<!-- *******************START Executive summary catches figures**************************************--!>
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
    #read in executive summary catches figure file
     Exec_catch_all =  read.csv("./txt_files/Exec_catch_for_figs.csv")
@@ -83,24 +83,24 @@ Table \ref{tab:Exec_catch}
     colnames(Exec_ca_catch) = c('Year','Fleet','Removals')
 ```
 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landing for Washington. Washington has does not have a commercial nearshore fishery. \\label{fig:Exec_wa_catch}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landings for Washington. Washington has does not have a commercial nearshore fishery. \\label{fig:Exec_wa_catch}"}
       ggplot(Exec_wa_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
 
 ```
 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landings history for Oregon by fleet (recreational and commercial). \\label{fig:Exec_or_catch}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Stacked line plot of China rockfish landings history for Oregon by fleet (recreational and commercial). \\label{fig:Exec_or_catch}"}
 ggplot(Exec_or_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
 
 ```
 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landings history fro California by fleet (recreational and commercial).  \\label{fig:Exec_ca_catch}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Stacked line plot of China rockfish landings history for California by fleet (recreational and commercial).  \\label{fig:Exec_ca_catch}"}
 ggplot(Exec_ca_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
 
 ```
 
 <!-- END Executive summary catches figures--!>
 
-<!-- START Executive summary catches table --!>
+<!-- ***********************START Executive summary catches table*********************************** --!>
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
    #read in executive summary catches table
       Exec_catch = read.csv("./txt_files/Exec_catch_summary.csv")
@@ -131,18 +131,18 @@ trends and current levels relative to virgin or historic levels, description of 
 
 
 
-<!-- BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE -->
+<!-- *************BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE NORTH ***************************-->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
-      SpawningB = modS$derived_quants[grep("SPB",modS$derived_quants$LABEL),]
+      SpawningB = modN$derived_quants[grep("SPB",modN$derived_quants$LABEL),]
       SpawningB = SpawningB[c(-1,-2),]
       
-      Depletion = modS$derived_quants[grep("Bratio",modS$derived_quants$LABEL),]
+      Depletion = modN$derived_quants[grep("Bratio",modN$derived_quants$LABEL),]
       Depletion = Depletion[c(-1,-2),]
 #########################################################################
 #CHANGE ME
-      FirstYR=2004  # minimum year for the Spawning biomass table
-      LastYR=2013  # maximum year for the Spawning biomass table
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
@@ -172,14 +172,65 @@ trends and current levels relative to virgin or historic levels, description of 
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion."),
+  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the northern China rockfish model."),
                label='tab:SpawningDeplete')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
     align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
-<!-- END: CREATE SPAWNING BIOMASS AND DEPLETION TABLE -->
+
+
+<!--****************************BEGIN SPAWNING DEPLETE TABLE SOUTH****************************************** -->
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+      
+      SpawningB = modS$derived_quants[grep("SPB",modS$derived_quants$LABEL),]
+      SpawningB = SpawningB[c(-1,-2),]
+      
+      Depletion = modS$derived_quants[grep("Bratio",modS$derived_quants$LABEL),]
+      Depletion = Depletion[c(-1,-2),]
+#########################################################################
+#CHANGE ME
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
+#########################################################################
+
+    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+     SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
+                           SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),]     
+     SpawningByrs$YEAR = seq(FirstYR,LastYR)
+     SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+     SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+     SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
+     SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
+       colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
+
+
+    #pull the estimated depletion and 
+     Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
+                           Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]     
+     Depletionyrs$YEAR = seq(FirstYR,LastYR)
+     Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+     Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+     Depletionyrs$CI = paste("(",Depletionyrs$lowerCI,"-",Depletionyrs$upperCI,")",sep="")
+     Depletiontab=subset(Depletionyrs,select=c('Value','CI'))
+       colnames(Depletiontab) = c('Estimated depletion','~ 95% confidence interval')
+
+     Spawn_Deplete = cbind(SpawningBtab,Depletiontab)
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the southern China rockfish model."),
+               label='tab:SpawningDeplete')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+    align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+<!-- END: CREATE SPAWNING BIOMASS AND DEPLETION TABLES -->
 
 
 
@@ -197,15 +248,49 @@ trends and current levels relative to virgin or historic levels, description of 
 ##Recruitment{-}
 trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates
 
-<!-- BEGIN: CREATE RECRUITMENT TABLE -->
+<!--*************************BEGIN: CREATE RECRUITMENT TABLE ********************************-->
+<!-- BEGIN: CREATE RECRUITMENT TABLE NORTH -->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+      
+      Recruit = modN$derived_quants[grep("Recr",modN$derived_quants$LABEL),]
+      Recruit = Recruit[c(-1,-2),]
+#########################################################################
+#CHANGE ME
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
+#########################################################################
+
+    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+     Recruityrs = Recruit[Recruit$LABEL>=paste("Recr_",FirstYR,sep='') &  
+                           Recruit$LABEL<=paste("Recr_",LastYR,sep=''),]     
+     Recruityrs$YEAR = seq(FirstYR,LastYR)
+     Recruityrs$lowerCI = round(Recruityrs$Value +qnorm(0.025)*Recruityrs$StdDev, digits=0)
+     Recruityrs$upperCI = round(Recruityrs$Value -qnorm(0.025)*Recruityrs$StdDev, digits=0)
+     Recruityrs$CI = paste("(",Recruityrs$lowerCI,"-",Recruityrs$upperCI,")",sep="")
+     Recruittab=subset(Recruityrs,select=c('YEAR','Value','CI'))
+       colnames(Recruittab) = c('Year','Estimated Recruitment (1,000s)','~ 95% confidence interval')
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  Recruit.table = xtable(Recruittab, caption=c("Recent recruitment."),
+               label='Recruit',digits=0)  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 4 values    
+    align(Recruit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Recruit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+
+<!--************************** BEGIN: CREATE RECRUITMENT TABLE SOUTH********************************* -->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
       Recruit = modS$derived_quants[grep("Recr",modS$derived_quants$LABEL),]
       Recruit = Recruit[c(-1,-2),]
 #########################################################################
 #CHANGE ME
-      FirstYR=2004  # minimum year for the Spawning biomass table
-      LastYR=2013  # maximum year for the Spawning biomass table
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
@@ -248,16 +333,17 @@ trends and current levels relative to virgin or historic levels-include table fo
 exploitation rates, i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate - include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).
 
 <!-- BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE -->
+<!-- ***************BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE NORTH**********************************-->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
-      Exploit = modS$derived_quants[grep("F",modS$derived_quants$LABEL),]
+      Exploit = modN$derived_quants[grep("F",modN$derived_quants$LABEL),]
       Exploit = Exploit[c(-1,-2),]
       
-      negSPR = subset(modS$sprseries, select=c('Year','SPR','SPR_std'))
+      negSPR = subset(modN$sprseries, select=c('Year','SPR','SPR_std'))
 #########################################################################
 #CHANGE ME
-      FirstYR=2004  # minimum year for the Spawning biomass table
-      LastYR=2013  # maximum year for the Spawning biomass table
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
@@ -289,7 +375,59 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion."),
+  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion for the northern China rockfish model."),
+               label='SpawningDeplete')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+    align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(negSPR_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+
+\FloatBarrier
+
+<!-- **********************BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE SOUTH***************************-->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+      
+      Exploit = modS$derived_quants[grep("F",modS$derived_quants$LABEL),]
+      Exploit = Exploit[c(-1,-2),]
+      
+      negSPR = subset(modS$sprseries, select=c('Year','SPR','SPR_std'))
+#########################################################################
+#CHANGE ME
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
+#########################################################################
+
+    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+     Exploityrs = Exploit[Exploit$LABEL>=paste("F_",FirstYR,sep='') &  
+                           Exploit$LABEL<=paste("F_",LastYR,sep=''),]     
+     Exploityrs$YEAR = seq(FirstYR,LastYR)
+     Exploityrs$lowerCI = round(Exploityrs$Value +qnorm(0.025)*Exploityrs$StdDev, digits=2)
+     Exploityrs$upperCI = round(Exploityrs$Value -qnorm(0.025)*Exploityrs$StdDev, digits=2)
+     Exploityrs$CI = paste("(",Exploityrs$lowerCI,"-",Exploityrs$upperCI,")",sep="")
+     Exploittab=subset(Exploityrs,select=c('Value','CI'))
+       colnames(Exploittab) = c('Exploitation rate','~ 95% confidence interval')
+
+
+    #pull the estimated depletion and 
+     negSPRyrs = subset(negSPR, Year>=FirstYR & Year<=LastYR)
+     negSPRyrs$SPR = 1 - negSPRyrs$SPR
+     negSPRyrs$lowerCI = round(negSPRyrs$SPR +qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
+     negSPRyrs$upperCI = round(negSPRyrs$SPR -qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
+     negSPRyrs$lowerCI = abs(negSPRyrs$lowerCI)
+     negSPRyrs$upperCI = 0
+     negSPRyrs$CI = paste("(",negSPRyrs$upperCI,"-",negSPRyrs$lowerCI,")",sep="")
+     negSPRtab=subset(negSPRyrs,select=c('Year','SPR','CI'))
+     negSPRtab$Year = as.factor(negSPRtab$Year)
+     colnames(negSPRtab) = c('Year','Estimated 1-SPR (%)','~ 95% confidence interval')
+     
+     negSPR_Exploit = cbind(negSPRtab,Exploittab)
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion for the southern China rockfish model."),
                label='SpawningDeplete')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
     align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
@@ -297,7 +435,7 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
           width="\\textwidth")
 ```
 <!-- END: CREATE EXPLOITATION AND 1-SPR TABLE -->
-
+\FloatBarrier
 
 ![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the northern base case assessment model. \label{fig:exploit_N}](r4ss_north/plots/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
 
@@ -318,18 +456,89 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 \FloatBarrier
 
 ##Ecosystem considerations{-}
-In this assessment, ecosystem considerations were not explicitly included in the analysis.  This is primarily due to a lack of relevant data and results of analyses (conducted elsewhere) that could contribute ecosystem-related quantitative information for the
-assessment.
+In this assessment, ecosystem considerations were not explicitly included in the analysis.  This is primarily due to a lack of relevant data and results of analyses (conducted elsewhere) that could contribute ecosystem-related quantitative information for the assessment.
 
-However, we did use recently available habitat information to select the data used in the onboard observer indices of relative abundance....? 
+We did use recently available habitat information to select the data used in the onboard observer indices (see Appendix F, p.\ref{sec:AppendixF}).
 
 ##Reference points{-}
-Reference points and quantities for the China rockfish base case model.  Prior to the 2011-12 PFMC management cycle, China rockfish did not have a component OFL.  Dick and MacCall [-@Dick2010] estimated OFLs for China rockfish using Depletion-Based Stock Reduction Analysis.  The OFL was adopted by PFMC for the 2012-12 and 013-14 management cycles.
+The management line for China rockfish is at $40^\circ 10^\prime$, with differing management guidelines north and south.  From 2005-2010, the Minor Nearshore Rockfish Complex was managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ACL within the Minor Neashore Rockfish Complex, based on the work by Dick and MacCall [-@Dick2010].
 
-<!-- BEGIN: REFERENCE POINTS TABLE --> 
+\FloatBarrier
+
+<!-- BEGIN: REFERENCE POINTS TABLE -->
+<!-- BEGIN: REFERENCE POINTS TABLE NORTH--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+Ref_pts = rbind(
+SSB_Unfished    = modN$derived_quants[grep("SSB_U",modN$derived_quants$LABEL),],
+TotBio_Unfished = modN$derived_quants[grep("TotBio",modN$derived_quants$LABEL),],
+Recr_Unfished   = modN$derived_quants[grep("Recr_Un",modN$derived_quants$LABEL),],
+SPB_2013        = modN$derived_quants[grep("SPB_2013",modN$derived_quants$LABEL),],
+Depletion_2013  = modN$derived_quants[grep("Bratio_2013",modN$derived_quants$LABEL),],
+Refpt_sB        = c(NA,NA,NA),
+SSB_Btgt        = modN$derived_quants[grep("SSB_Btgt",modN$derived_quants$LABEL),],
+SPR_Btgt        = modN$derived_quants[grep("SPR_Btgt",modN$derived_quants$LABEL),],
+Fstd_Btgt       = modN$derived_quants[grep("Fstd_Btgt",modN$derived_quants$LABEL),],
+TotYield_Btgt   = modN$derived_quants[grep("TotYield_Btgt",modN$derived_quants$LABEL),],
+Refpt_SPR       = c(NA,NA,NA),
+SSB_SPRtgt      = modN$derived_quants[grep("SSB_SPRtgt",modN$derived_quants$LABEL),],
+SPR_proxy       = c('SPF_proxy',.5,NA),
+Fstd_SPRtgt     = modN$derived_quants[grep("Fstd_SPRtgt",modN$derived_quants$LABEL),],
+TotYield_SPRtgt = modN$derived_quants[grep("TotYield_SPRtgt",modN$derived_quants$LABEL),],
+Refpts_MSY      = c(NA,NA,NA),
+SSB_MSY         = modN$derived_quants[grep("SSB_MSY",modN$derived_quants$LABEL),],
+SPR_MSY         = modN$derived_quants[grep("SPR_MSY",modN$derived_quants$LABEL),],
+Fstd_MSY        = modN$derived_quants[grep("Fstd_MSY",modN$derived_quants$LABEL),],
+TotYield_MSY    = modN$derived_quants[grep("TotYield_MSY",modN$derived_quants$LABEL),] )
+
+Ref_pts$Value = as.numeric(Ref_pts$Value)
+Ref_pts$StdDev = as.numeric(Ref_pts$StdDev)
+Ref_pts$Value1 = ifelse(Ref_pts$Value>=1,as.character(round(Ref_pts$Value,0)),as.character(round(Ref_pts$Value,4)))   
+
+Ref_pts$lowerCI = round(Ref_pts$Value +qnorm(0.025)*Ref_pts$StdDev, digits=4)
+Ref_pts$upperCI = round(Ref_pts$Value -qnorm(0.025)*Ref_pts$StdDev, digits=4)
+Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI>=1,as.character(round(Ref_pts$lowerCI,0)),as.character(round(Ref_pts$lowerCI,4))) 
+Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1,as.character(round(Ref_pts$upperCI,0)),as.character(round(Ref_pts$upperCI,4))) 
+Ref_pts$CI1 = paste("(",Ref_pts$lowerCI1,"-",Ref_pts$upperCI1,")",sep="")
+
+Quantity= c('Unfished Spawning biomass (mt)',
+'Unfished age 0+ biomass (mt)',
+'Unfished recruitment (R0)',
+'Spawning Biomass (2013)',
+'Depletion (2013)',
+'\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
+'Proxy spawning biomass ($B_{40\\%}$)',
+'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
+'Exploitation rate resulting in $B_{40\\%}$',
+'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
+'\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
+'Spawning biomass ',
+'$SPR_{proxy}$',
+'Exploitation rate corresponding to $SPR_{proxy}$',
+'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
+'\\textbf{\\textit{Reference points based on estimated MSY values}}',
+'Spawning biomass at $MSY$ ($SB_{MSY}$)',
+'$SPR_{MSY}$',
+'Exploitation rate corresponding to $SPR_{MSY}$',
+'$MSY$ (mt) '
+)
+Ref_pts = cbind(Quantity,Ref_pts[,c(4,9)])
+Ref_pts[c(6,11,13,16),3]=''
+Ref_pts[c(6,11,16),2]=''
+colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
+```
 
 
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+ #create the Reference points
+ Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the northern base case model."), label='Ref_pts')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+  align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
+    print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+```
+
+\FloatBarrier
+<!-- BEGIN: REFERENCE POINTS TABLE SOUTH--> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 Ref_pts = rbind(
 SSB_Unfished    = modS$derived_quants[grep("SSB_U",modS$derived_quants$LABEL),],
 TotBio_Unfished = modS$derived_quants[grep("TotBio",modS$derived_quants$LABEL),],
@@ -392,13 +601,14 @@ colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
- Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the base case model."), label='Ref_pts')  #digits=0 rounds the numbers
+ Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the southern base case model."), label='Ref_pts')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
   align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
     print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
-
 <!-- END: REFERENCE POINTS TABLE --> 
+\FloatBarrier
+
 
 ##Management performance{-}
 <!-- BEGIN: CREATE MANAGEMENT PERFORMANCE TABLE - WILL PROBABLY NEED TO BE TWO TABLES--> 
@@ -434,7 +644,6 @@ any special issues that complicate scientific assessment, questions about the be
 ##Decision table{-}
 projected yields (OFL, ABC and ACL), spawning biomass, and stock depletion levels for each year.* (Not required in draft assessments undergoing review.)
 
-\hl{NEED TO INCLUDE DECISION TABLE}
 
 <!-- BEGIN: CREATE RESULTS SUMMARY TABLE --> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
@@ -514,7 +723,7 @@ reference to the principal results from rebuilding analysis if the stock is over
 China rockfish \emph{Sebastes nebulosus} is a medium-sized, commercially (mainly in the live-fish
 fishery) and recreationally prized deeper-dwelling nearshore rockfish ranging from southern
 California, north to the Gulf of Alaska [@Love2002].  Core abundance is found from northern California to
-southern British Columbia, Canada. China rockfish were historically encountered by the recreational fleet in the Southern California Bight [@Love1998].  Love [-@Love1998] examined the 1980-1996 MRFSS data from southern CA.  In the early years of the study China rockfish were occasionally encountered, and by 1996 no China rockfish were observed.  
+southern British Columbia, Canada. China rockfish were historically encountered by the recreational fleet in the Southern California Bight [@Love1998].  Love et al. [-@Love1998] examined the 1980-1996 MRFSS data from southern CA.  In the early years of the study China rockfish were occasionally encountered, and by 1996 no China rockfish were observed.  However, a coding error in RecFIN was later discovered that included San Luis Obispo as part of southern CA in the 1980s, when it shoudl have been coded as central CA.  Although rockfish are occasionally encountered south of Pt. Conception, the majority of China rockfish from Love et al. [-@Love1998] were likely from San Luis Obispo county.
 
 There is limited information available on stock structure or life history.  No genetic research has been conducted for China rockfish, and no published research indicates separate stocks along the West Coast.  China rockfish do not appear to exhibit sexual dimorphism [@Lenarz1991], although the data are limited.  Fits to a von Bertalanffy growth curve from age-length data from Washington, Oregon and California used in this assessment indicate regional differences in growth and estimates of $L_\infty$ [@vonB1938].  These data represent fish collected from the recreational and commercial sectors as well as for research.
 
@@ -526,16 +735,14 @@ One diet study indicated that China rockfish in central California predominantly
 
 Both juvenile and adult rockfish tend to be solitary and exhibit high site fidelity within rocky habitats. Surveys of rockfishes in \emph{Nereocystis} and \emph{Macrocystis} kelp forests observed China rockfish in only the \emph{Macrocystis} kelp forests and sightings within the kelp forests were rare [@Bodkin1986].  Juvenile China rockfish inhabit rocky areas and can be found in nearshore kelp beds (per comm. \hl{E.J. did you talk with Marc Carr about this}).  An experimental study with captive China rockfish found that juveniles exhibit both site fidelity and territoriality. [@Lee2009].  A tag and recapture study by Lea et al. [-@Lea1999] indicated China rockfish have high site fidelity.  While the did not report the exact distance from all China rockfish from the study were recaptured in the same "general locality at which they were released."  In other rockfish movement studies, China rockfish were tagged but never recaptured [@Hanan2012], or there was a sample size of one fish [@Hannah2011].  An ongoing study in Oregon has tagged and tracked seven China rockfish (personal communication Tom Calvanese, Oregon State University).  The maximum distance traveled by any of these China rockfish is xxxx.
 
-Little is known about the mixing of juvenile China rockfish at the pelagic stage as they are not captured in the SWFSC juvenile rockfish cruise.  The 2013 assessment model treated the species as two stocks, one from Pt. Conception, CA to Cape Mendocino, CA ($40^\circ 10^\prime$ N lat.), which is also the management boundary for China rockfish.  For this assessment we explore assessment models.....
+Little is known about the mixing of juvenile China rockfish at the pelagic stage as they are not captured in the SWFSC juvenile rockfish cruise.  The 2013 assessment model treated the species as two stocks, one from Pt. Conception, CA to Cape Mendocino, CA ($40^\circ 10^\prime$ N lat.), which is also the management boundary for China rockfish.  For this assessment we explore assessment models north and south of $40^\circ 10^\prime$, as well as separate northern Califronia/Oregon and Washington models in the north.
+
+China rockfish vulnerability to overfishing is one of the highest recorded (V = 2.23) for west coast groundfishes [@Cope2011] and is not listed on the FSSI.
 
 
 Include?
 
 China rockfish can suffer from barotrauma.  Parker [-@Parker2006] found that China rockfish required 250 h to attain neutral buoyancy at 4 atmospheres absolute (ATA, depth equivalent of 30 m) when experiments began at the surface water pressure.
-
-China rockfish vulnerability to overfishing is one of the highest recorded (V = 2.23) for west coast groundfishes [@Cope2011] and is not listed on the FSSI.
-
-
 
 
 
@@ -547,22 +754,26 @@ A map showing the scope of the assessment and depicting boundaries for fisheries
 
 In this assessment, ecosystem considerations were not explicitly included in the analysis.  However, we did use information on the distribution of rocky habitat to inform the onboard observer program indices of relative abundance from California and Oregon.  The onboard observer program collects location-specific encounters of China rockfish.  We overlaid the locations of China rockfish encounters with high-resolution bathymetry data to obtain a proxy of the extent of China rockfish habitat (see Appendix F for details, pp.\ref{sec:AppendixF}).
 
-Much research is needed to elucidate the role of China rockfish in the ecosystem.  
+Much research is needed to elucidate the role of China rockfish in the ecosystem, including predator/prey interactions.  
 
 
-##Fishery Information
+##Fishery Information and Summary of Management History
 
-China rockfish are most commonly captured by hook and line or traps.  They are rarely encountered in the trawl fishery due to the elusive behavior and affinity for rocky crevices.  Their high site fidelity and territoriality lend to the difficulty of capturing the species.  
+The rockfish fishery off the U.S. Pacific coast first developed off California in the late
+19th century
+
+The rockfish fishery was established in the early 1940s, when the United States became
+involved in World War II and wartime shortage of red meat created an increased demand
+for other sources of protein [@Alverson1964; @Harry1961]. 
+
+China rockfish are most commonly captured by hook and line or traps.  They are rarely encountered in the trawl fishery due to the elusive behavior and affinity for rocky crevices.  Their high site fidelity and territoriality lend to the evasivenes of the species.  
 
 
 
-
-
-##Summary of Management History
 Summary of management history (e.g., changes in mesh sizes, trip limits, or other management actions that may have significantly altered selection, catch rates, or discards).
 
 
-China rockfish are managed within the Minor nearshore rockfish north complex
+China rockfish are managed within the Minor nearshore Rockfish Somplex
 
 
 ##Managament Performance
@@ -572,7 +783,7 @@ Management performance, including a table or tables comparing Overfishing Limit 
 #Assessment
 
 ##Data
-Data used in the China rockfish assessment are summarized in Figure \ref{fig:data_sources}.  A description of each data source is below.
+Data used in the China rockfish assessment are summarized in Figures \ref{fig:data_sources_N} - \ref{fig:data_sources_S}.  A description of each data source is below.
 
 
 ###Fishery-Dependent Data: Commercial Landings
@@ -658,7 +869,7 @@ More than 90% of china rockfish were caught of the northern Washington coast on 
 
 Release information was not available until 2002.  Number of releases by species and the depth of release were added to OSP dockside questionnaire in 2002 and 2005, respectively.  Release-by-depth are estimated using the same catch expansion algorithm for retained catch.  Surface release mortalities adopted by the Groundfish Management Team (GMT) were then applied to the number of release estimates for total mortality calculation.  The average weight of 0.88 kg/fish was also used for releases.  For pre-2002 release, we applied proportions of releases based on a ratio estimator using 2003-2007 data.  For the split between charter and private vessels, the same algorithm used for splitting retained catch was applied.
 
-Discard rates are higher in the northern area than that in the southern area \hl{(Tables X1 and X2) - add in or leave out?}.  Since 2011, more than 50% of the China rockfish caught were released by anglers.  The release rates are lower in the southern area between 14% and 26% in recent years.  This may due to the rare encountering of china off southern Washington coast. 
+Discard rates are higher in the northern area than that in the southern area.  Since 2011, more than 50% of the China rockfish caught were released by anglers.  The release rates are lower in the southern area between 14% and 26% in recent years.  This may due to the rare encountering of china off southern Washington coast. 
 
 
 
@@ -728,43 +939,53 @@ Additional model sensitivities that did not impact the standardized index were:
 Producing a model for just southern areas (1 and 2) was not successful due to a lack of positive data over the time series. 
 
 
-**Oregon**
-
-For the Oregon sport fisheries, two indices of abundance were used in the assessment: (1) catch rates from the onboard observer program and (2) catch rates from the dockside survey component of the ORBS (Oregon Recreational Boat Survey).  For the onboard observer index, all data elements were verified by a biologist, and thus there was a high degree of certainty in the catch, effort, and locations fished; however, there was limited spatial-temporal coverage and only charter boats were included (not private boats).  In contrast, the ORBS dockside survey has more comprehensive coverage and much greater samples sizes (i.e., 50-70 times more trips than onboard observer program), but there was less confidence in the data elements, as only catch and the number of anglers were verified by biologists (all other trip details were angler-reported).  A single fishing trip can be sampled in both by the onboard observer program and also dockside within ORBS. Because the onboard observer program data is at a much finer scale than the trip-based dockside data; we removed trips from the ORBS database that were double-sampled and chose to retain all onboard observer trips.
-
-Catch rates obtained from the dockside survey component of ORBS were used as an index of relative abundance.  In order to provide estimates of total catch and effort for the Oregon sport fisheries, ORBS obtains catch rates from a portion of vessels via a dockside survey, and applies them to total effort counts.  During the dockside survey, biologists intercept vessels returning from fishing trips and record catch, effort, and other trip-related details (e.g., grid area fished, target species, depth, port, etc.).  Since catch and effort are both obtained, the dockside survey of ORBS was also used as index of abundance in this assessment.
-
-Modifications had to be made to trip hours from the original ORBS dataset to create a standardize unit of effort.  Since trip hours in ORBS was not hours fished, rather the total duration of the trip (as measured from the time the boat crossed into the ocean until the time they were interviewed at the dock), travel times had to be determined and subtracted from trip hours in order to get a standardized measure of trips hours.  Accordingly, a total distance function was created for each trip based on the river miles (distance along the navigable channel from the port to the bar (river mouth)) and ocean miles (i.e., straight distance from the river bar to the ocean grid fished, wrapping around obstructions if needed).  Total distance was then converted to travel time based on generalized vessel speeds for private (i.e., 18 mph) and charter boats (i.e., 13 mph) provided by Wayne Butler (Oregon charter captain; personal communication).  It is important to note that the original trips hours minus travel hours still does not equal hours fished because it does account for time needed to move from drift to drift; however, since the number of resets between drifts would be expected to be related to fish abundance (as with catch rates), the modified trips hours was deemed a viable effort unit for the assessment.  
-
-
-
-Trips that had erroneous trips hours as entered on paper and then entered electronically later. These were the steps taken to correct the issue:
-1. Trip hours is computed automatically by the data logger based on the time the interview is entered electronically 
-2. If samplers write their interviews on paper and enter them electronically later when they have time (as believed to have happened despite being instructed not to), then the trip hours are overly inflated
-3. To potentially remove these errors, we computed time intervals between interviews.  Pulses of interviews a minute or two apart are very likely to have been from bunches of paper interviews entered at electronically in one sitting, as normal interviews are somewhat sporadic and take more than a minute to complete.
-
 
 **California MRFSS Dockside Charter Boat Index, Sotuh of $40^\circ 10^\prime$**
-\hl{EJ}
 
-Table \ref{tab:MRFSS_S_filter}
-Table \ref{tab:MRFSS_S_sample_size}
-Table \ref{tab:MRFSS_S_aic}
-Table \ref{tab:MRFSS_S_index}
+From 1980 to 2003 the Marine Recreational Fisheries Statistical Survey (MRFSS) program sampled landings at dockside (called an “intercept”) upon termination of recreational fishing trips. The program was temporarily suspended from 1990‐1992 due to lack of funding, and sampling of California charter boats north of San Luis Obispo County did not resume until 1995. For purposes of this assessment, the MRFSS time series is truncated at 2003 due to regulatory changes and an increasing fraction of trips sampled by onboard observers (see “Recreational Onboard Observer Surveys”). Although the program sampled various fishing modes, only the California party and charter boat (a.k.a. “PC mode,” commercial passenger fishing vessel, or CPFV) samples are used in the present analysis due to availability of catch and effort data aggregated at the trip level.
+Each entry in the RecFIN Type 3 database corresponds to a single fish examined by a sampler at a particular survey site. Since only a subset of the catch may be sampled, each record also identifies the total number of that species possessed by the group of anglers being interviewed. The number of anglers and the hours fished are also recorded. Unfortunately the Type 3 data do not indicate which records belong to the same boating trip. Because our aim is to obtain a measure of catch per unit effort (fish per angler hour), it is necessary to separate the records into individual trips. For this reason trips must be inferred from the RecFIN data. This is a lengthy process, and is outlined in Supplemental Materials (“Identifying Trips in RecFIN”).
 
-Figure \ref{fig:MRFSS_S_SM}
-Figure \ref{fig:MRFSS_S_diag}
+Since recreational fishing trips target a wide variety of species, standardization of the catch rates requires selecting trips that are likely to have fished in habitats containing China rockfish. The method of Stephens and MacCall [-@Stephens2004] was used to identify trips with a high probability of catching China rockfish, based on the species composition of the catch in a given trip. Prior to applying the Stephens-MacCall filter, we identified potentially informative “predictor” species, i.e. those with sufficient sample sizes and temporal coverage (at least 30 positive trips total, distributed across at least 10 years of the index) to inform the binomial model. Coefficients from the Stephens-MacCall analysis (a binomial GLM) are positive for species which co-occur with China rockfish, and negative for species that are not caught with China rockfish. As expected, positive indicators of China rockfish trips include several species of nearshore rockfish, and counter-indicators include several species of flatfish, salmon, and deep-water rockfish (Figure \ref{fig:MRFSS_S_SM}). One species (albacore, Thunnus alalunga) that met the requirement of 30 positive trips over at least 10 years never co-occurred with China rockfish. All trips catching albacore were excluded from the data set used to model CPUE. Records from 1993 and 1994 were also dropped from the index, due to poor spatial coverage (all trips were in San Luis Obispo county).
 
-**California MRFSS Dockside Charter Boat Index, North of $40^\circ 10^\prime$**
-\hl{EJ}
+The percentage of trips that caught China Rockfish was 13.6\% prior to filtering, and 70.8\% in the final, filtered data set (n=431; Table \ref{tab:MRFSS_S_filter}).  The number of sampler-examined trips varies by year and county, and counties with small sample sizes were aggregated with adjacent counties into four \emph{regions}. (Table \ref{tab:MRFSS_S_sample_size}). Samples from Humboldt and Del Norte counties were included with the Oregon MRFSS index.
 
-Table \ref{tab:MRFSS_N_filter}
-Table \ref{tab:MRFSS_N_sample_size}
-Table \ref{tab:MRFSS_N_aic}
-Table \ref{tab:MRFSS_N_index}
+CPUE (number of fish per angler hour) was modelled using a “delta-GLM” model [@Lo1992; @Stefansson1996]. Model selection using AIC supported inclusion of \emph{year} and \emph{region} effects in both the binomial and lognormal components of the index (Table \ref{tab:MRFSS_S_aic}). The addition of two-month \emph{wave} effects (to allow for seasonal changes in CPUE) did not improve model fit. Data in the binomial component also supported inclusion of a distance from shore variable (\emph{AREA\_X}). Residual-based model diagnostics for the positive component of the index suggest the data generally met the assumptions of the GLM (Figure \ref{fig:MRFSS_S_diag}). The resulting index  is highly variable, but suggests a decline in catch rates after 1995 relative to preceding years (Table \ref{tab:MRFSS_S_index}; Figure \ref{fig:MRFSS_S_index}).
 
-Figure \ref{fig:MRFSS_N_SM}
-Figure \ref{fig:MRFSS_N_diag}
+**Northern California and Oregon Dockside Charter Boat Indices (MRFSS and ORBS)**
+
+For the Oregon sport fisheries, three indices of abundance were used in the assessment: (1) catch rates from the onboard observer program and (2) catch rates from the dockside survey component of the ORBS (Oregon Recreational Boat Survey), and (3) catch rates from the dockside Marine Recreational Fisheries Statistical Survey (MRFSS, see description of California MRFSS index, above).  For the onboard observer index, all data elements were verified by a biologist, and thus there was a high degree of certainty in the catch, effort, and locations fished; however, there was limited spatial-temporal coverage and only charter boats were included (not private boats).  In contrast, the ORBS dockside survey has more comprehensive coverage and much greater samples sizes (i.e., 50-70 times more trips than onboard observer program), but there was less confidence in the data elements, as only catch and the number of anglers were verified by biologists (all other trip details were angler-reported).  The two dockside programs (ORBS and MRFSS) differ in terms of the measure of fishing effort (details below). A single fishing trip can be sampled in both by the onboard observer program and also dockside within ORBS. Because the onboard observer program data is at a much finer scale than the trip-based dockside data; we removed trips from the ORBS database that were double-sampled and chose to retain all onboard observer trips.
+
+**Index Standardization: MRFSS Dockside Charter Boat CPUE for Northern CA and Oregon**
+
+Trip-based catch and effort data from MRFSS dockside samplers in Oregon, 1980-2003, was obtained from ODFW (P. Mirick, pers. comm.). The data include trips from private boats as well as charter vessels. Development of an index based on private boats was initiated by the STAT, but later abandoned. A very small percentage of private boat trips in Oregon catch China rockfish (295 / 11725 trips, or 2.5\%) in the unfiltered data set, and charter boat trips had a larger percentage of positive trips in the unfiltered data set (649 / 6750, or 9.6\%) over the same time period.
+
+As with the California MRFSS data, precise location of fishing is unknown for the Oregon MRFSS trip-based data set (only the interview site and a course measure of distance from shore are known). Therefore, the Stephens-MacCall approach to trip selection was again used, along with a set of preliminary filters applied to the data to make catch rates more comparable over time (Table \ref{tab:MRFSS_N_filter}). Out of 6801 trips from Northern California and Oregon, 5937 trips were included in the Stephens-MacCall analysis. We identified potentially informative “predictor” species, i.e. those with sufficient sample sizes and temporal coverage (at least 30 positive trips total, distributed across at least 10 years of the index) to include in the Stephens-MacCall analysis (binomial GLM). Three of species met the “predictor species” criterion, but were never caught with China rockfish (Coho salmon, silvergray rockfish, and sablefish). Trips catching these strong “counter-indicator” species were excluded from the data set, thereby avoiding extremely large negative regression coefficients in the binomial GLM. Species with positive coefficients from the binomial GLM included several nearshore rockfish such as vermilion, tiger, yelloweye, and black, as well as other nearshore species (cabezon, kelp greenling, lingcod) (Figure \ref{fig:MRFSS_N_SM}). Counter-indicators (in addition to those listed above) included salmonids, deep-water and pelagic rockfishes, and Pacific halibut. The threshold probability recommended by Stephens and MacCall (equal rates of false positives and false negatives) was used to identify trips which did not catch a China rockfish, but had a high-probability of doing so (considered effective effort for China). These “false positives” and all trips catching a China rockfish were retained for estimation of the relative abundance index.
+
+The Stephens-MacCall analysis identified 1099 trips as effective effort for China rockfish. An additional 76 trips were deleted (>3 miles from shore) due to poor temporal and spatial sampling coverage, resulting in a final sample size of 1023 trips fit it the delta-GLM (Table \ref{tab:MRFSS_N_sample_size}). Trips were grouped into two regions (Southern Oregon and Northern Oregon) with Florence, OR being the southernmost port in the northern region. The small number of trips from northern California was grouped with the southern Oregon region in the delta-GLM.
+
+A gamma model for positive observations in the delta-GLM was selected over a lognormal model based on visual inspection of residuals (Figure \ref{fig:MRFSS_N_diag}) and the appropriately defined model likelihoods. The AIC for the gamma GLM was smallest (most negative) for models with only a year effect or a year and region effect (Table \ref{tab:MRFSS_N_aic}). Fit to the binomial model was greatly improved with a seasonal effect (\emph{wave}), so this was retained in the final delta-GLM. The data did not support interaction terms with the year effect.
+
+The final MRFSS index for northern California and Oregon shows larger catch rates in early years with considerable inter-annual variability (Table \ref{tab:MRFSS_N_index}, Figure \ref{fig:MRFSS_N_index}). Catch rates after 1995 are lower and less variable among years, except for the last year (2003) which is significantly lower but estimated with lower precision than other years in the index (log-scale standard error of 0.53).
+
+
+**Index Standardization: Oregon Recreational Boat Survey (ORBS) Dockside Charter Boat CPUE**
+
+In order to provide estimates of total catch and effort for the Oregon sport fisheries, ORBS obtains catch rates from a portion of vessels via a dockside survey, and applies them to total effort counts.  During the dockside survey, biologists intercept vessels returning from fishing trips and record catch, effort, and other trip-related details (e.g., grid area fished, target species, depth, port, etc.).  Since catch and effort per sampled trip are both obtained, the dockside survey of ORBS was also used to develop an index of abundance for China rockfish
+Modifications had to be made to trip hours from the original ORBS dataset to create a standardized unit of effort.  Since trip hours in ORBS are not hours fished, as in MRFSS, but rather the total duration of the trip (as measured from the time the boat crossed into the ocean until the time they were interviewed at the dock), travel times had to be determined and subtracted from trip hours in order to get a standardized measure of fishing effort per trip.  Accordingly, a total distance function was created for each trip based on the river miles (distance along the navigable channel from the port to the bar (river mouth)) and ocean miles (i.e., straight distance from the river bar to the ocean grid fished, wrapping around obstructions if needed).  Total distance was then converted to travel time based on generalized vessel speeds for private (i.e., 18 mph) and charter boats (i.e., 13 mph) provided by Wayne Butler (Oregon charter captain; personal communication).  It is important to note that the original trips hours minus travel hours still does not equal hours fished because it does account for time needed to move from drift to drift; however, since the number of resets between drifts would be expected to be related to fish abundance (as with catch rates), the modified trips hours was deemed a viable effort unit for the assessment.
+Some trips had erroneous trips hours (discrepancies between values entered on paper and then entered electronically later). These were the steps taken to correct the issue:
+1. Trip hours is computed automatically by the data logger based on the time the interview is entered electronically 
+2. If samplers write their interviews on paper and enter them electronically later when they have time (as believed to have happened despite being instructed not to), then the trip hours are inflated.
+3. To potentially remove these errors, we computed time intervals between interviews.  Pulses of interviews a minute or two apart are very likely to have been from bunches of paper interviews entered at electronically in one sitting, as normal interviews are somewhat sporadic and take more than a minute to complete.
+
+The ORBS dockside charter boat records (years 2001-2014) include 36,752 trips in the unfiltered data set, of which 4,080 caught China rockfish (11\%). As with the other trip-based CPUE data sets, the Stephens-MacCall method was used to identify trips with a high probability of catching China rockfish. Prior to using the Stephens-MacCall approach to select relevant trips, a number of other filters were applied to the data to minimize variability in CPUE estimates. Criteria for valid trips included vessels with 20+ sampled trips (13\% of vessels accounted for 89\% of trips), trip hours <12. Trips targeting tuna and dive trips were excluded from the analysis (see Table  \ref{tab:ORBS_filter} for other filters).
+As with the MRFSS indices, potentially informative species for the Stephens-MacCall analysis were defined as those occurring in at least 30 unique trips, in 10 different years (Figure \ref{fig:ORBS_SM}). Some of these never occurred with China rockfish (strong ‘counter-indicators’) and records with these species were removed from the data prior to estimation of the index. Strong counter-indicators for the ORBS data set included blue shark, white sturgeon, steelhead, and albacore. Trips in which at least 99\% of the catch consisted of pelagic rockfish were also excluded, as anglers were likely targeting semi-pelagic rockfish (Table \ref{tab:ORBS_filter}).
+Coefficients from the Stephens-MacCall analysis identified several rockfish species (black, rosy, tiger, bocaccio, vermilion, yelloweye, copper, etc.) as indicators of positive China rockfish catch, along with lingcod, kelp greenling, and cabezon. Counter-indicators included deep-water rockfish, salmonids, and Pacific Halibut. Brown rockfish, another nearshore rockfish species, was among the counter-indicator species, reasons for which are unclear to the STAT at this time.
+A total of 6232 trips were retained following the Stephens-MacCall filter (Table \ref{tab:ORBS_sample_size}). Model selection with AIC proceeded as with the other dockside indices, but the ORBS data supported an interaction term in the lognormal component of the delta-GLM (Table \ref{tab:ORBS_aic}). The interaction was not supported by the binomial model (although AIC retained a region effect), but the keeping the year-region interaction term in the positive model reduced the AIC by 38 points over a model with year and region alone (Table \ref{tab:ORBS_aic}).
+To account for this interaction, separate delta-GLM models (each with a year and wave effect) were fit to the regional data (Southern OR and Northern OR, split at Florence). The regional indices show little change in the northern region, but a decline in catch rates in the south (Figure \ref{fig:ORBS_index_compare}). Residual diagnostics for the regional models did not show strong deviations from model assumptions in either area (Figures \ref{fig:ORBS_diag_lognormal}  and \ref{fig:ORBS_diag_gamma}). Estimated area of rocky reefs off Oregon was generated using GIS (see description of onboard observer indices), and we calculated an area-weighted index based on the relative proportion of reef habitat in each region (total reef habitat distributed as 35.4\% north, 64.6\% south).
+The final, area-weighted index (Table \ref{tab:ORBS_index}, Figure \ref{fig:ORBS_index}) shows a declining stock (on average, statewide), but the STAT emphasizes that this does not capture regional patterns in CPUE, and may underestimate the fishing impacts in the southern region, and overestimate impacts in the north.
+
+
+
 
 
 
@@ -1269,6 +1490,8 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 
 
+
+
 <!-- ****************************************************CA MRFSS dockside***************************************************************************** -->
 <!-- MRFSS S--> 
 
@@ -1278,7 +1501,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
         MRFSS_S_sample_size = read.csv("./txt_files/MRFSS_S_sample_size.csv")
         MRFSS_S_aic = read.csv("./txt_files/MRFSS_S_aic.csv")
         MRFSS_S_index = read.csv("./txt_files/MRFSS_S_index.csv")
-
+        MRFSS_S_index_allyrs = read.csv("./txt_files/MRFSS_S_index_allyrs.csv")
         colnames(MRFSS_S_filter) = c('Filter','Criteria','Sample size (no. of trips)')
         colnames(MRFSS_S_sample_size) = c('Year', 'San Luis Obispo','Monterey-Santa Cruz','S.F. Bay Area','Mendocino-Sonoma')
         colnames(MRFSS_S_aic) = c('Model','Binomial','Lognormal')
@@ -1336,7 +1559,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
         MRFSS_N_sample_size = read.csv("./txt_files/MRFSS_N_sample_size.csv")
         MRFSS_N_aic = read.csv("./txt_files/MRFSS_N_aic.csv")
         MRFSS_N_index = read.csv("./txt_files/MRFSS_N_index.csv")
-
+        MRFSS_N_index_allyrs = read.csv("./txt_files/MRFSS_N_index_allyrs.csv")
         colnames(MRFSS_N_filter) = c('Filter','Criteria','Sample size (no. of trips)')
         colnames(MRFSS_N_sample_size) = c('Year', 'Northern CA (Humboldt and Del Norte)','Southern Oregon','Northern Oregon')
         colnames(MRFSS_N_aic) = c('Model','Binomial','Gamma')
@@ -1367,36 +1590,77 @@ Include STAR panel members and affiliations as well as names and affiliations of
 \FloatBarrier
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
         #MRFSS N aic
-#         MRFSS_N_aic.table = xtable(MRFSS_N_aic,caption=c("AIC values for each model in the Oregon and Northern California MRFSS dockside index."),
-#                                            label='tab:MRFSS_N_aic')
-#        align(MRFSS_N_aic.table) = c('l','>{\\raggedright}p{2.5in}','>{\\centering}p{1in}','>{\\centering}p{1in}')          
-#        print(MRFSS_N_aic.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",
-#                         sanitize.text.function = function(x){x})
+         MRFSS_N_aic.table = xtable(MRFSS_N_aic,caption=c("AIC values for each model in the Oregon and Northern California MRFSS dockside index."), label='tab:MRFSS_N_aic')
+        align(MRFSS_N_aic.table) = c('l','>{\\raggedright}p{2.5in}','>{\\centering}p{1in}','>{\\centering}p{1in}')          
+        print(MRFSS_N_aic.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
 \FloatBarrier
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
         #MRFSS S index
-#         MRFSS_N_index1.table = xtable(MRFSS_N_index1,caption=c("Year effects for the Northern CA MRFSS dockside index."),
-#                                            label='tab:MRFSS_N_index')
-#        align(MRFSS_N_index1.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
-#        print(MRFSS_N_index1.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",
-#                         sanitize.text.function = function(x){x})
+         MRFSS_N_index1.table = xtable(MRFSS_N_index1,caption=c("Year effects for the Northern CA MRFSS dockside index."),
+                                            label='tab:MRFSS_N_index')
+        align(MRFSS_N_index1.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
+        print(MRFSS_N_index1.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",sanitize.text.function = function(x){x})
+```
+
+
+<!-- ****************************************************ORBS dockside***************************************************************************** -->
+<!-- OREGON read in data--> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+    ###READ IN OR datasetS NEEDED
+    
+    #Table with sample size filtered values
+      ORBS_filter = read.csv("./txt_files/ORBS_filter.csv")
+    #Table with sample size filtered values
+      ORBS_sample = read.csv("./txt_files/ORBS_sample_size.csv")
+     #AIC table with SM filtering
+      ORBS_aic = read.csv("./txt_files/ORBS_aic.csv")
+    #Index values
+      ORBS_index = read.csv("./txt_files/ORBS_index.csv")
+      ORBS_index1 = ORBS_index[,c(1:3)]
+      colnames(ORBS_index1) = c('Year','Index','Log-scale SE')
+
+        colnames(ORBS_filter) = c('Filter','Criteria','Sample size (no. of trips)')
+        colnames(ORBS_sample) = c('Year', 'Southern Oregon','Northern Oregon')
+        colnames(ORBS_aic) = c('Model','Binomial','Lognormal')
+
+    ```
+
+<!-- OREGON tables--> 
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+        #ORBS filter
+         ORBS_filter.table = xtable(ORBS_filter,caption=c("Sample sizes at each data filtering step for the Oregon Recreational Boat Survey data. The bold value indicates the final sample size used for delta-GLM analysis. "),label='tab:ORBS_filter')
+        align(ORBS_filter.table) = c('l','>{\\raggedright}p{1.8in}','>{\\raggedright}p{3.2in}','>{\\raggedright}p{1in}')          
+        print(ORBS_filter.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+```
+\FloatBarrier
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+        #ORBS sample size
+         ORBS_sample_size.table = xtable(ORBS_sample,caption=c("Number of trips by year and subregion in the Oregon Recreational Boat Survey (ORBS) charter boat index. Southern Oregon is defined as ports south of Florence. Northern Oregon includes the port of Florence and all ports to the OR\\-WA border."),
+                                            label='tab:ORBS_sample_size')
+        align(ORBS_sample_size.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
+        print(ORBS_sample_size.table, include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x})
+```
+\FloatBarrier
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+        #ORBS aic
+         ORBS_aic.table = xtable(ORBS_aic,caption=c("AIC values for each model in the Oregon Recreational Boat Survey (ORBS) charter boat index. (*) The binomial model with interaction between year and wave did not converge."),
+                                            label='tab:ORBS_aic')
+        align(ORBS_aic.table) = c('l','>{\\raggedright}p{3in}','>{\\centering}p{1in}','>{\\centering}p{1in}')          
+        print(ORBS_aic.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+```
+\FloatBarrier
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+        #ORBS index
+         ORBS_index1.table = xtable(ORBS_index1,caption=c(". The Oregon Recreational Boat Survey (ORBS) charter boat index (area-weighted)."),
+                                            label='tab:ORBS_index')
+        align(ORBS_index1.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
+        print(ORBS_index1.table, include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x})
 ```
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- MRFSS N--> 
 
 
 
@@ -1626,7 +1890,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- ******************************************************************************************************************************************** --> 
 
 \newpage
-\FloatBarrier
+
 
 #Figures
 
@@ -1662,12 +1926,12 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-    OR_comm_remov = OR_comm_removal[,1:5]
+    OR_comm_remov = OR_comm_removal[,c(1:5)]
     OR_comm_remov1 = melt(OR_comm_remov,id='Year')
     colnames(OR_comm_remov1) = c('Year','Fleet','Removals')
 ```
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Oregon commercial fleet, north and south of Florence, OR. \\label{fig:OR_comm_removal}"}
-  #    ggplot(OR_comm_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Removals (mt)")
+      ggplot(OR_comm_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Removals (mt)")
 
 ```
 
@@ -1750,7 +2014,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- ****************************************************Oregon commercial logbook FIGURES********************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-![Landings from the commercial fishery logbooks in Oregon. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. \label{fig:OR_commlog_map}](plots/AB_OR_commlogbook.png)
+![Landings from the commercial fishery logbooks in Oregon. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. \label{fig:OR_commlog_map}](plots/OR_commlogbook_map.png)
 
 \newpage
 
@@ -1835,6 +2099,41 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 
 
+
+```
+
+<!-- *****************************************************CA dockside figures*************************************************************--> 
+
+<!-- MRFSS S--> 
+![Species coefficients from the binomial GLM for presence/absence of China rockfish in the southern California MRFSS data set. Horizontal bars are 95\% confidence intervals. Albacore coefficient (<-10) excluded for scale.  \label{fig:MRFSS_S_SM}](plots/MRFSS_S_SM.png)
+
+
+![Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the southern California MRFSS data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:MRFSS_S_diag}](plots/MRFSS_S_diag.png)
+
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the northern Califronia MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:MRFSS_S_index}"}
+#ca
+  plot(MRFSS_S_index_allyrs$Year, MRFSS_S_index_allyrs$Index, xlab="Year",ylab="Index",ylim=c(0,.2),xlim=c(1980,2003),type='b',xaxt='n',lwd=1.5,pch=19)
+  arrows(MRFSS_S_index_allyrs$Year, MRFSS_S_index_allyrs$lowerCI, MRFSS_S_index_allyrs$Year, MRFSS_S_index_allyrs$upperCI, code=3, angle=90,length=0.01)
+  axis(1, at=seq(1980,2003,2), cex.axis=.9)
+```
+
+
+<!-- MRFSS N--> 
+
+![Species coefficients from the binomial GLM for presence/absence of China rockfish in the northern California MRFSS data set. Horizontal bars are 95\% confidence intervals. Albacore coefficient (<-10) excluded for scale.  \label{fig:MRFSS_N_SM}](plots/MRFSS_N_SM.png)
+
+
+![Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the northern California MRFSS data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:MRFSS_N_diag}](plots/MRFSS_N_diag.png)
+
+
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the northern Califronia MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:MRFSS_N_index}"}
+#ca
+  plot(MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$Index, xlab="Year",ylab="Index",ylim=c(0,.35),xlim=c(1980,2003),type='b',xaxt='n',lwd=1.5,pch=19)
+  arrows(MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$lowerCI, MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$upperCI, code=3, angle=90,length=0.01)
+  axis(1, at=seq(1980,2003,2), cex.axis=.9)
+```
+
+
 <!-- *****************************************************Oregon dockside figures*************************************************************--> 
 
 ![. Species coefficients from the binomial GLM for presence/absence of China rockfish in the Oregon Recreational Boat Survey (ORBS) data set. Horizontal bars are 95\% confidence intervals.  \label{fig:ORBS_SM}](plots/ORBS_SM.png)
@@ -1848,32 +2147,12 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 ![Diagnostic plots for the China rockfish delta-GLM index (gamma component) for the Northern Oregon Recreational Boat Survey (ORBS) data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:ORBS_diag_gamma}](plots/ORBS_diag_gamma.png)
 
-<!-- *****************************************************CA dockside figures*************************************************************--> 
-
-<!-- MRFSS S--> 
-![Species coefficients from the binomial GLM for presence/absence of China rockfish in the California MRFSS South data set. Horizontal bars are 95\% confidence intervals. Albacore coefficient (<-10) excluded for scale.  \label{fig:MRFSS_S_SM}](plots/MRFSS_S_SM.png)
-
-
-![Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the California MRFSS South data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:MRFSS_S_diag}](plots/MRFSS_S_diag.png)
-
-<!-- MRFSS N--> 
-
-![Species coefficients from the binomial GLM for presence/absence of China rockfish in the California MRFSS North data set. Horizontal bars are 95\% confidence intervals. Albacore coefficient (<-10) excluded for scale.  \label{fig:MRFSS_N_SM}](plots/MRFSS_N_SM.png)
-
-
-![Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the California MRFSS North data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:MRFSS_N_diag}](plots/MRFSS_N_diag.png)
-
-
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Califronia MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:CA_MRFSS}"}
-#ca
- # plot(CA_MRFSS$Year, CA_MRFSS$Index, xlab="Year",ylab="Index",ylim=c(0,.25),xlim=c(1980,2003),type='b',xaxt='n',lwd=1.5,pch=19)
-  #arrows(CA_MRFSS$Year, CA_MRFSS$lowerCI, CA_MRFSS$Year, CA_MRFSS$upperCI, code=3, angle=90,length=0.01)
-  #axis(1, at=seq(1980,2003,2), cex.axis=.9)
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Oregon Recreational Boat Survey (ORBS) charter boat  index (area-weighted), with 95% lognormal confidence intervals. \\label{fig:ORBS_index}"}
+#or
+  plot(ORBS_index$Year, ORBS_index$Index, xlab="Year",ylab="Index",ylim=c(0,.035),xlim=c(2001,2014),type='b',xaxt='n',lwd=1.5,pch=19)
+  arrows(ORBS_index$Year, ORBS_index$lowerCI, ORBS_index$Year, ORBS_index$upperCI, code=3, angle=90,length=0.01)
+  axis(1, at=seq(2001,2014,2), cex.axis=.9)
 ```
-
-
-
-
 
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
