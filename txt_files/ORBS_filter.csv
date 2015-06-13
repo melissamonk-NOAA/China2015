@@ -7,4 +7,4 @@ No tuna or dive trips,Drop TripType=(T or D); no China caught on tuna trips; CPU
 Extreme counter-indicators,"Drop trips with common species that never co-occur with China (Blue shark, white sturgeon, steelhead and albacore)",30004
 Delete catch = NA,Delete 3 trips with catch=NA,30001
 Pelagic Rockfish Target,"Delete trips in which >99\% of catch is pelagic rockfish (silvergray, widow, yellowtail, black, blue)",28215
-Stephens-MacCall,"Retain all positive China trips, plus False Positives (trips predicted to be in China habitat, but with no China retained)",6232
+Stephens-MacCall,"Retain all positive China trips, plus False Positives (trips predicted to be in China habitat, but with no China retained)",\textbf{6232}
