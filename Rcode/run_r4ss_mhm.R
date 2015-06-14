@@ -26,7 +26,21 @@ SS_plots(modS,png=TRUE,html=FALSE,dir="C:/Assessment2015/SS_chinaS/")
 
 
 
+# create base model summary list
+base.summary <- SSsummarize(list(modN, modC, modS))
+dir.plots <- 'c:/Assessment2015/Compare/plots'  # could be moved to github if we wish
 
+# vector of names and colors for N, C, and S
+mod.names <- c("North","Central","South")
+mod.cols  <- c("blue", "purple", "red")
+############################################################################
+# time series comparison plots for exec summary (and repeated with regular plots)
+SSplotComparisons(base.summary, plot=FALSE, print=TRUE, plotdir=dir.plots,
+                  spacepoints=20,  # years between points on each line
+                  initpoint=0,     # "first" year of points (modular arithmetic)
+                  staggerpoints=0, # points aligned across models
+                  endyrvec=2015,   # final year to show in time series
+                  legendlabels=mod.names, filenameprefix="base_", col=mod.cols)
 
 ##################################################################################
 
