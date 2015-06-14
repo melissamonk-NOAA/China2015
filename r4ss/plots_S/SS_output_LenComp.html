@@ -1,0 +1,143 @@
+<html><head><title>SS Output</title>
+    <!-- source for text below is http://unraveled.com/publications/css_tabs/ -->
+    <!-- CSS Tabs is licensed under Creative Commons Attribution 3.0 - http://creativecommons.org/licenses/by/3.0/ -->
+    
+    <style type="text/css">
+    
+    body {
+    font: 100% verdana, arial, sans-serif;
+    background-color: #fff;
+    margin: 50px;
+    }
+    
+    /* begin css tabs */
+    
+    ul#tabnav { /* general settings */
+    text-align: left; /* set to left, right or center */
+    margin: 1em 0 1em 0; /* set margins as desired */
+    font: bold 11px verdana, arial, sans-serif; /* set font as desired */
+    border-bottom: 1px solid #6c6; /* set border COLOR as desired */
+    list-style-type: none;
+    padding: 3px 10px 2px 10px; /* THIRD number must change with respect to padding-top (X) below */
+    }
+    
+    ul#tabnav li { /* do not change */
+    display: inline;
+    }
+    
+    body#tab1 li.tab1, body#tab2 li.tab2, body#tab3 li.tab3, body#tab4 li.tab4 { /* settings for selected tab */
+    border-bottom: 1px solid #fff; /* set border color to page background color */
+    background-color: #fff; /* set background color to match above border color */
+    }
+    
+    body#tab1 li.tab1 a, body#tab2 li.tab2 a, body#tab3 li.tab3 a, body#tab4 li.tab4 a { /* settings for selected tab link */
+    background-color: #fff; /* set selected tab background color as desired */
+    color: #000; /* set selected tab link color as desired */
+    position: relative;
+    top: 1px;
+    padding-top: 4px; /* must change with respect to padding (X) above and below */
+    }
+    
+    ul#tabnav li a { /* settings for all tab links */
+    padding: 2px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+    border: 1px solid #6c6; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+    background-color: #cfc; /* set unselected tab background color as desired */
+    color: #666; /* set unselected tab link color as desired */
+    margin-right: 0px; /* set additional spacing between tabs as desired */
+    text-decoration: none;
+    border-bottom: none;
+    }
+    
+    ul#tabnav a:hover { /* settings for hover effect */
+    background: #fff; /* set desired hover color */
+    }
+    
+    /* end css tabs */
+    
+    
+    h2 {
+    font-size: 20px;
+    color: #4c994c;
+    padding-top: 1px;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #6c6;
+    padding-bottom: 2px;
+    padding-left: 0px;
+    }
+    </style></head>
+<!-- Site navigation menu -->
+   <ul id="tabnav">
+    <li class="tab1"><a href="SS_output.html">Home</a></li>
+    <li class="tab2"><a href="SS_output_Bio.html">Bio</a></li>
+    <li class="tab3"><a href="SS_output_Sel.html">Sel</a></li>
+    <li class="tab4"><a href="SS_output_Timeseries.html">Timeseries</a></li>
+    <li class="tab5"><a href="SS_output_S-R.html">S-R</a></li>
+    <li class="tab6"><a href="SS_output_Catch.html">Catch</a></li>
+    <li class="tab7"><a href="SS_output_SPR.html">SPR</a></li>
+    <li class="tab8"><a href="SS_output_Discard.html">Discard</a></li>
+    <li class="tab9"><a href="SS_output_Index.html">Index</a></li>
+    <li class="tab10"><a href="SS_output_Numbers.html">Numbers</a></li>
+    <li class="tab11"><a href="SS_output_LenComp.html">LenComp</a></li>
+    <li class="tab12"><a href="SS_output_AgeComp.html">AgeComp</a></li>
+    <li class="tab13"><a href="SS_output_A@LComp.html">A@LComp</a></li>
+    <li class="tab14"><a href="SS_output_Yield.html">Yield</a></li>
+    <li class="tab15"><a href="SS_output_Data.html">Data</a></li>
+  </ul>
+
+
+<h2><a name="LenComp">LenComp</h2>
+<p align=left><a href='comp_lenfit_flt1mkt2.png'><img src='comp_lenfit_flt1mkt2.png' border=0 width=500></a><br>length comps, retained, 1_CA_SouthOf4010_Comm_Dead<br><i><small>file: <a href='comp_lenfit_flt1mkt2.png'>comp_lenfit_flt1mkt2.png</a></small></i>
+<p align=left><a href='comp_lenfit_residsflt1mkt2.png'><img src='comp_lenfit_residsflt1mkt2.png' border=0 width=500></a><br>Pearson residuals, retained, 1_CA_SouthOf4010_Comm_Dead (max=1.11) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_residsflt1mkt2.png'>comp_lenfit_residsflt1mkt2.png</a></small></i>
+<p align=left><a href='comp_lenfit_sampsize_flt1mkt2.png'><img src='comp_lenfit_sampsize_flt1mkt2.png' border=0 width=500></a><br>N-EffN comparison, length comps, retained, 1_CA_SouthOf4010_Comm_Dead<br><i><small>file: <a href='comp_lenfit_sampsize_flt1mkt2.png'>comp_lenfit_sampsize_flt1mkt2.png</a></small></i>
+<p align=left><a href='comp_lenfit_data_weighting_TA1.8_1_CA_SouthOf4010_Comm_Dead.png'><img src='comp_lenfit_data_weighting_TA1.8_1_CA_SouthOf4010_Comm_Dead.png' border=0 width=500></a><br>Francis data weighting method TA1.8 1_CA_SouthOf4010_Comm_Dead <br> Suggested sample size adjustment (with 95% interval) for len data from 1_CA_SouthOf4010_Comm_Dead:<br>1.0515 (0.7948-6.6754)<br><i><small>file: <a href='comp_lenfit_data_weighting_TA1.8_1_CA_SouthOf4010_Comm_Dead.png'>comp_lenfit_data_weighting_TA1.8_1_CA_SouthOf4010_Comm_Dead.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt2mkt2.png'><img src='comp_lenfit_flt2mkt2.png' border=0 width=500></a><br>length comps, retained, 2_CA_SouthOf4010_Comm_Live<br><i><small>file: <a href='comp_lenfit_flt2mkt2.png'>comp_lenfit_flt2mkt2.png</a></small></i>
+<p align=left><a href='comp_lenfit_residsflt2mkt2.png'><img src='comp_lenfit_residsflt2mkt2.png' border=0 width=500></a><br>Pearson residuals, retained, 2_CA_SouthOf4010_Comm_Live (max=6.04) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_residsflt2mkt2.png'>comp_lenfit_residsflt2mkt2.png</a></small></i>
+<p align=left><a href='comp_lenfit_sampsize_flt2mkt2.png'><img src='comp_lenfit_sampsize_flt2mkt2.png' border=0 width=500></a><br>N-EffN comparison, length comps, retained, 2_CA_SouthOf4010_Comm_Live<br><i><small>file: <a href='comp_lenfit_sampsize_flt2mkt2.png'>comp_lenfit_sampsize_flt2mkt2.png</a></small></i>
+<p align=left><a href='comp_lenfit_data_weighting_TA1.8_2_CA_SouthOf4010_Comm_Live.png'><img src='comp_lenfit_data_weighting_TA1.8_2_CA_SouthOf4010_Comm_Live.png' border=0 width=500></a><br>Francis data weighting method TA1.8 2_CA_SouthOf4010_Comm_Live <br> Suggested sample size adjustment (with 95% interval) for len data from 2_CA_SouthOf4010_Comm_Live:<br>1.0078 (0.6342-3.8644)<br><i><small>file: <a href='comp_lenfit_data_weighting_TA1.8_2_CA_SouthOf4010_Comm_Live.png'>comp_lenfit_data_weighting_TA1.8_2_CA_SouthOf4010_Comm_Live.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt2mkt1.png'><img src='comp_lenfit_flt2mkt1.png' border=0 width=500></a><br>length comps, discard, 2_CA_SouthOf4010_Comm_Live<br><i><small>file: <a href='comp_lenfit_flt2mkt1.png'>comp_lenfit_flt2mkt1.png</a></small></i>
+<p align=left><a href='comp_lenfit_residsflt2mkt1.png'><img src='comp_lenfit_residsflt2mkt1.png' border=0 width=500></a><br>Pearson residuals, discard, 2_CA_SouthOf4010_Comm_Live (max=4.1) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_residsflt2mkt1.png'>comp_lenfit_residsflt2mkt1.png</a></small></i>
+<p align=left><a href='comp_lenfit_sampsize_flt2mkt1.png'><img src='comp_lenfit_sampsize_flt2mkt1.png' border=0 width=500></a><br>N-EffN comparison, length comps, discard, 2_CA_SouthOf4010_Comm_Live<br><i><small>file: <a href='comp_lenfit_sampsize_flt2mkt1.png'>comp_lenfit_sampsize_flt2mkt1.png</a></small></i>
+<p align=left><a href='comp_lenfit_data_weighting_TA1.8_2_CA_SouthOf4010_Comm_Live.png'><img src='comp_lenfit_data_weighting_TA1.8_2_CA_SouthOf4010_Comm_Live.png' border=0 width=500></a><br>Francis data weighting method TA1.8 2_CA_SouthOf4010_Comm_Live <br> Suggested sample size adjustment (with 95% interval) for len data from 2_CA_SouthOf4010_Comm_Live:<br>1.0078 (0.6368-3.4829)<br><i><small>file: <a href='comp_lenfit_data_weighting_TA1.8_2_CA_SouthOf4010_Comm_Live.png'>comp_lenfit_data_weighting_TA1.8_2_CA_SouthOf4010_Comm_Live.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt3mkt0_page1.png'><img src='comp_lenfit_flt3mkt0_page1.png' border=0 width=500></a><br>length comps, whole catch, 3_CA_SouthOf4010_Rec_PC (plot 1 of 3)<br><i><small>file: <a href='comp_lenfit_flt3mkt0_page1.png'>comp_lenfit_flt3mkt0_page1.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt3mkt0_page2.png'><img src='comp_lenfit_flt3mkt0_page2.png' border=0 width=500></a><br>length comps, whole catch, 3_CA_SouthOf4010_Rec_PC (plot 2 of 3)<br><i><small>file: <a href='comp_lenfit_flt3mkt0_page2.png'>comp_lenfit_flt3mkt0_page2.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt3mkt0_page3.png'><img src='comp_lenfit_flt3mkt0_page3.png' border=0 width=500></a><br>length comps, whole catch, 3_CA_SouthOf4010_Rec_PC (plot 3 of 3)<br><i><small>file: <a href='comp_lenfit_flt3mkt0_page3.png'>comp_lenfit_flt3mkt0_page3.png</a></small></i>
+<p align=left><a href='comp_lenfit_residsflt3mkt0_page3.png'><img src='comp_lenfit_residsflt3mkt0_page3.png' border=0 width=500></a><br>Pearson residuals, whole catch, 3_CA_SouthOf4010_Rec_PC (max=4.59) (plot 3 of 3) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_residsflt3mkt0_page3.png'>comp_lenfit_residsflt3mkt0_page3.png</a></small></i>
+<p align=left><a href='comp_lenfit_sampsize_flt3mkt0.png'><img src='comp_lenfit_sampsize_flt3mkt0.png' border=0 width=500></a><br>N-EffN comparison, length comps, whole catch, 3_CA_SouthOf4010_Rec_PC<br><i><small>file: <a href='comp_lenfit_sampsize_flt3mkt0.png'>comp_lenfit_sampsize_flt3mkt0.png</a></small></i>
+<p align=left><a href='comp_lenfit_data_weighting_TA1.8_3_CA_SouthOf4010_Rec_PC.png'><img src='comp_lenfit_data_weighting_TA1.8_3_CA_SouthOf4010_Rec_PC.png' border=0 width=500></a><br>Francis data weighting method TA1.8 3_CA_SouthOf4010_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for len data from 3_CA_SouthOf4010_Rec_PC:<br>0.7941 (0.5828-1.3057)<br><i><small>file: <a href='comp_lenfit_data_weighting_TA1.8_3_CA_SouthOf4010_Rec_PC.png'>comp_lenfit_data_weighting_TA1.8_3_CA_SouthOf4010_Rec_PC.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt4mkt0_page1.png'><img src='comp_lenfit_flt4mkt0_page1.png' border=0 width=500></a><br>length comps, whole catch, 4_CA_SouthOf4010_Rec_PR (plot 1 of 2)<br><i><small>file: <a href='comp_lenfit_flt4mkt0_page1.png'>comp_lenfit_flt4mkt0_page1.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt4mkt0_page2.png'><img src='comp_lenfit_flt4mkt0_page2.png' border=0 width=500></a><br>length comps, whole catch, 4_CA_SouthOf4010_Rec_PR (plot 2 of 2)<br><i><small>file: <a href='comp_lenfit_flt4mkt0_page2.png'>comp_lenfit_flt4mkt0_page2.png</a></small></i>
+<p align=left><a href='comp_lenfit_residsflt4mkt0_page2.png'><img src='comp_lenfit_residsflt4mkt0_page2.png' border=0 width=500></a><br>Pearson residuals, whole catch, 4_CA_SouthOf4010_Rec_PR (max=4.56) (plot 2 of 2) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_residsflt4mkt0_page2.png'>comp_lenfit_residsflt4mkt0_page2.png</a></small></i>
+<p align=left><a href='comp_lenfit_sampsize_flt4mkt0.png'><img src='comp_lenfit_sampsize_flt4mkt0.png' border=0 width=500></a><br>N-EffN comparison, length comps, whole catch, 4_CA_SouthOf4010_Rec_PR<br><i><small>file: <a href='comp_lenfit_sampsize_flt4mkt0.png'>comp_lenfit_sampsize_flt4mkt0.png</a></small></i>
+<p align=left><a href='comp_lenfit_data_weighting_TA1.8_4_CA_SouthOf4010_Rec_PR.png'><img src='comp_lenfit_data_weighting_TA1.8_4_CA_SouthOf4010_Rec_PR.png' border=0 width=500></a><br>Francis data weighting method TA1.8 4_CA_SouthOf4010_Rec_PR <br> Suggested sample size adjustment (with 95% interval) for len data from 4_CA_SouthOf4010_Rec_PR:<br>0.9705 (0.5987-2.1555)<br><i><small>file: <a href='comp_lenfit_data_weighting_TA1.8_4_CA_SouthOf4010_Rec_PR.png'>comp_lenfit_data_weighting_TA1.8_4_CA_SouthOf4010_Rec_PR.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt5mkt0.png'><img src='comp_lenfit_flt5mkt0.png' border=0 width=500></a><br>length comps, whole catch, 5_CA_SouthOf4010_Rec_PC_DWV_index<br><i><small>file: <a href='comp_lenfit_flt5mkt0.png'>comp_lenfit_flt5mkt0.png</a></small></i>
+<p align=left><a href='comp_lenfit_residsflt5mkt0.png'><img src='comp_lenfit_residsflt5mkt0.png' border=0 width=500></a><br>Pearson residuals, whole catch, 5_CA_SouthOf4010_Rec_PC_DWV_index (max=3.35) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_residsflt5mkt0.png'>comp_lenfit_residsflt5mkt0.png</a></small></i>
+<p align=left><a href='comp_lenfit_sampsize_flt5mkt0.png'><img src='comp_lenfit_sampsize_flt5mkt0.png' border=0 width=500></a><br>N-EffN comparison, length comps, whole catch, 5_CA_SouthOf4010_Rec_PC_DWV_index<br><i><small>file: <a href='comp_lenfit_sampsize_flt5mkt0.png'>comp_lenfit_sampsize_flt5mkt0.png</a></small></i>
+<p align=left><a href='comp_lenfit_data_weighting_TA1.8_5_CA_SouthOf4010_Rec_PC_DWV_index.png'><img src='comp_lenfit_data_weighting_TA1.8_5_CA_SouthOf4010_Rec_PC_DWV_index.png' border=0 width=500></a><br>Francis data weighting method TA1.8 5_CA_SouthOf4010_Rec_PC_DWV_index <br> Suggested sample size adjustment (with 95% interval) for len data from 5_CA_SouthOf4010_Rec_PC_DWV_index:<br>1.8039 (1.1744-4.9572)<br><i><small>file: <a href='comp_lenfit_data_weighting_TA1.8_5_CA_SouthOf4010_Rec_PC_DWV_index.png'>comp_lenfit_data_weighting_TA1.8_5_CA_SouthOf4010_Rec_PC_DWV_index.png</a></small></i>
+<p align=left><a href='comp_lenfit_flt7mkt0.png'><img src='comp_lenfit_flt7mkt0.png' border=0 width=500></a><br>length comps, whole catch, 7_CA_SouthOf4010_CCFRP_comps_only<br><i><small>file: <a href='comp_lenfit_flt7mkt0.png'>comp_lenfit_flt7mkt0.png</a></small></i>
+<p align=left><a href='comp_lenfit_residsflt7mkt0.png'><img src='comp_lenfit_residsflt7mkt0.png' border=0 width=500></a><br>Pearson residuals, whole catch, 7_CA_SouthOf4010_CCFRP_comps_only (max=5) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_residsflt7mkt0.png'>comp_lenfit_residsflt7mkt0.png</a></small></i>
+<p align=left><a href='comp_lenfit_sampsize_flt7mkt0.png'><img src='comp_lenfit_sampsize_flt7mkt0.png' border=0 width=500></a><br>N-EffN comparison, length comps, whole catch, 7_CA_SouthOf4010_CCFRP_comps_only<br><i><small>file: <a href='comp_lenfit_sampsize_flt7mkt0.png'>comp_lenfit_sampsize_flt7mkt0.png</a></small></i>
+<p align=left><a href='comp_lenfit_data_weighting_TA1.8_7_CA_SouthOf4010_CCFRP_comps_only.png'><img src='comp_lenfit_data_weighting_TA1.8_7_CA_SouthOf4010_CCFRP_comps_only.png' border=0 width=500></a><br>Francis data weighting method TA1.8 7_CA_SouthOf4010_CCFRP_comps_only <br> Suggested sample size adjustment (with 95% interval) for len data from 7_CA_SouthOf4010_CCFRP_comps_only:<br>0.961 (0.4983-13.1073)<br><i><small>file: <a href='comp_lenfit_data_weighting_TA1.8_7_CA_SouthOf4010_CCFRP_comps_only.png'>comp_lenfit_data_weighting_TA1.8_7_CA_SouthOf4010_CCFRP_comps_only.png</a></small></i>
+<p align=left><a href='comp_lenfit_mkt2_aggregated_across_time.png'><img src='comp_lenfit_mkt2_aggregated_across_time.png' border=0 width=500></a><br>length comps, retained, aggregated across time by fleet<br><i><small>file: <a href='comp_lenfit_mkt2_aggregated_across_time.png'>comp_lenfit_mkt2_aggregated_across_time.png</a></small></i>
+<p align=left><a href='comp_lenfit_mkt1_aggregated_across_time.png'><img src='comp_lenfit_mkt1_aggregated_across_time.png' border=0 width=500></a><br>length comps, discard, aggregated across time by fleet<br><i><small>file: <a href='comp_lenfit_mkt1_aggregated_across_time.png'>comp_lenfit_mkt1_aggregated_across_time.png</a></small></i>
+<p align=left><a href='comp_lenfit_mkt0_aggregated_across_time.png'><img src='comp_lenfit_mkt0_aggregated_across_time.png' border=0 width=500></a><br>length comps, whole catch, aggregated across time by fleet<br><i><small>file: <a href='comp_lenfit_mkt0_aggregated_across_time.png'>comp_lenfit_mkt0_aggregated_across_time.png</a></small></i>
+<p align=left><a href='comp_lenfit_sex1mkt2_multi-fleet_comparison.png'><img src='comp_lenfit_sex1mkt2_multi-fleet_comparison.png' border=0 width=500></a><br>Note: this plot doesn't seem to be working right for some models.<br><br> Pearson residuals, sexes combined, retained, comparing across fleets <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_sex1mkt2_multi-fleet_comparison.png'>comp_lenfit_sex1mkt2_multi-fleet_comparison.png</a></small></i>
+<p align=left><a href='comp_lenfit_sex1mkt1_multi-fleet_comparison.png'><img src='comp_lenfit_sex1mkt1_multi-fleet_comparison.png' border=0 width=500></a><br>Note: this plot doesn't seem to be working right for some models.<br><br> Pearson residuals, sexes combined, discard, comparing across fleets <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_sex1mkt1_multi-fleet_comparison.png'>comp_lenfit_sex1mkt1_multi-fleet_comparison.png</a></small></i>
+<p align=left><a href='comp_lenfit_sex1mkt0_multi-fleet_comparison.png'><img src='comp_lenfit_sex1mkt0_multi-fleet_comparison.png' border=0 width=500></a><br>Note: this plot doesn't seem to be working right for some models.<br><br> Pearson residuals, sexes combined, whole catch, comparing across fleets <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_lenfit_sex1mkt0_multi-fleet_comparison.png'>comp_lenfit_sex1mkt0_multi-fleet_comparison.png</a></small></i>
+<p align=left><a href='comp_gstlenfit_flt3mkt0.png'><img src='comp_gstlenfit_flt3mkt0.png' border=0 width=500></a><br>ghost length comps, whole catch, 3_CA_SouthOf4010_Rec_PC<br><i><small>file: <a href='comp_gstlenfit_flt3mkt0.png'>comp_gstlenfit_flt3mkt0.png</a></small></i>
+<p align=left><a href='comp_gstlenfit_residsflt3mkt0.png'><img src='comp_gstlenfit_residsflt3mkt0.png' border=0 width=500></a><br>Pearson residuals, whole catch, 3_CA_SouthOf4010_Rec_PC (max=NA) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_gstlenfit_residsflt3mkt0.png'>comp_gstlenfit_residsflt3mkt0.png</a></small></i>
+<p align=left><a href='comp_gstlenfit_flt4mkt0.png'><img src='comp_gstlenfit_flt4mkt0.png' border=0 width=500></a><br>ghost length comps, whole catch, 4_CA_SouthOf4010_Rec_PR<br><i><small>file: <a href='comp_gstlenfit_flt4mkt0.png'>comp_gstlenfit_flt4mkt0.png</a></small></i>
+<p align=left><a href='comp_gstlenfit_residsflt4mkt0.png'><img src='comp_gstlenfit_residsflt4mkt0.png' border=0 width=500></a><br>Pearson residuals, whole catch, 4_CA_SouthOf4010_Rec_PR (max=NA) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).<br><i><small>file: <a href='comp_gstlenfit_residsflt4mkt0.png'>comp_gstlenfit_residsflt4mkt0.png</a></small></i>

@@ -38,8 +38,9 @@ bibliography: chinarockfish2015.bib
 ##############################################################################################################
 #### loads workspace image of the BASE MODEL from SS_output in r4ss    
      #load("Aurora2013.RData")
-      load("Chinanorth2015.RData")
-      load("Chinasouth2015.RData")
+      load("./r4ss/Chinanorth2015.RData")
+      load("./r4ss/Chinasouth2015.RData")
+      load("./r4ss/Chinasouth2015.RData")
      #check the structure of the data here to make sure it contains "mod," the SS_output variable
 ##############################################################################################################
 ```
@@ -994,13 +995,14 @@ The final, area-weighted index (Table \ref{tab:ORBS_index}, Figure \ref{fig:ORBS
 ###Fishery-Dependent Data: Recreational Onboard Observer Surveys 
 The goal of the Observer Programs in California and Oregon is to collect data including charter boat fishing locations, catch and discard of observed fish by species, and lengths of discarded fish.  Both states sample the commercial passenger fishing vessel (CPFV),i.e., charter boat or for-hire fleet.  The onboard observer programs collect drift-specific information at each fishing stop on an observed trip.  At each fishing stop recorded information includes start and end times, start and end location (latitude/longitude), start and end depth, number of observed anglers (a subset of the total anglers), and the catch (retained and discarded) by species of the observed anglers.  Data for the onboard observer indices for the recreational CPFV fleet are from four sampling programs.  
 
-The California Department of Fisheries and Wildlife (CDFW) conducted an onboard observer program in central California from 1987-1998 (Reilly et al. 1998).  These data were previously used in the 2013 data moderate assessments [@Cope2015], at the level of a fishing trip.  Since the 2013 assessments, the original data sheets were acquired and data were keypunched to the level of fishing stop.  One caveat of this data is that location data were recorded at a finer scale than the catch data.  We aggregated the relevant location information (time and number of observed anglers) to match the available catch information.  Between April 1987 and July 1992 the number of observed anglers was not recorded for each fishing stop, but the number of anglers aboard the vessel is available.  We imputed the number of observed anglers using the number of anglers aboard the vessel and the number of observed anglers at each fishing stop form the August 1998-December 1998 data (see Appendix E for details, pp.\pageref{sec:AppendixE}).  In 1987, trips were only observed in Monterey, CA and were therefore excluded from the analysis.
 
-California implemented a statewide sampling program in 1999 [@Monk2014].  California Polytechnic State University (Cal Poly) has conducted an independent onboard sampling program as of 2003 for boats in Port San Luis and Morro Bay [@Stephens2006], but follows the protocols established in Reilly et al. (1998), and modified to reflect sampling changes that CDFW has also adopted, e.g., observing fish as they are landed instead of at the level of a fisher’s bag.  Therefore, the Cal Poly data area incorporated in the same index as the CDFW data from 1999-2014.
+The California Department of Fisheries and Wildlife (CDFW) conducted an onboard observer program in central California from 1987-1998 (Reilly et al. 1998).  These data were previously used in the 2013 data moderate assessments [@Cope2015], at the level of a fishing trip.  Since the 2013 assessments, the original data sheets were acquired and data were keypunched to the level of fishing stop.  One caveat of this data is that location data were recorded at a finer scale than the catch data.  We aggregated the relevant location information (time and number of observed anglers) to match the available catch information.  Between April 1987 and July 1992 the number of observed anglers was not recorded for each fishing stop, but the number of anglers aboard the vessel is available.  We imputed the number of observed anglers using the number of anglers aboard the vessel and the number of observed anglers at each fishing stop form the August 1998-December 1998 data (see Appendix E for details, pp.\pageref{sec:AppendixE}).  In 1987, trips were only observed in Monterey, CA and were therefore excluded from the analysis.  CDFW collected lengths of both retained and discarded fish during this time period.  All China rockfish measured were retained and lengths are used as length compositions for this index.
+
+California implemented a statewide sampling program in 1999 [@Monk2014].  California Polytechnic State University (Cal Poly) has conducted an independent onboard sampling program as of 2003 for boats in Port San Luis and Morro Bay [@Stephens2006], but follows the protocols established in Reilly et al. (1998), and modified to reflect sampling changes that CDFW has also adopted, e.g., observing fish as they are landed instead of at the level of a fisher’s bag.  Therefore, the Cal Poly data area incorporated in the same index as the CDFW data from 1999-2014.  CalPoly collects lengths of both retained and discarded fish.  
 
 We generated separate relative indices of abundance in California for the 1987-1999 and 2000-2014 datasets due to the number of regulation changes occurring throughout the time period (see Appendix H, pp.\pageref{sec:AppendixH}).  CDFW implemented a regulation of three hooks in 2000, which was reduced to (and remains at) two hooks in 2001.
 
-The Oregon Department of Fisheries and Wildlife (ODFW) initiated an onboard observer program in 2001, which became a yearly sampling program in 2003 [@Monk2013].  Both California and Oregon provided onboard sampling data through 2014.  
+The Oregon Department of Fisheries and Wildlife (ODFW) initiated an onboard observer program in 2001, which became a yearly sampling program in 2003 [@Monk2013].  Both California and Oregon provided onboard sampling data through 2014.  Both of these programs only collected lengths of discarded fish, and the number of lengths of China rockfish from these studies is small (Figure \ref{fig:onboard_discard_lengths}).
 
 
 All indices were standardized using a delta-GLM modeling approach [@Lo1992].  Data were analyzed at the drift level and catch was taken to be the sum of observed retained and discarded fish, i.e., number of fish encountered per angler hour.  The onboard observer data from the CDFW 1999-2014 data between north of $40^\circ 10^\prime$ and the Oregon border were too sparse to include in the index.  Therefore, indices used in the model with a break at $40^\circ 10^\prime$ remain the same as the state-specific onboard observer indices.
@@ -2164,6 +2166,10 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- ****************************************************Recreational onboard observer FIGURES****************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
+![Frequency distribution of the discard lengths from the Oregon (ODFW 2001,2003-2014) and California (CDFW 1999-2014, CalPoly 2001-2014) onboard observer programs. \label{fig:onboard_discard_lengths}](plots/onboard_discard_lengths.png)
+
+
+
 <!-- OR Recreational onboard Oregon FIGURES--> 
 ![Characterization of the final subset of Oregon onboard observer data used in delta-GLM analyses for China rockfish. \label{fig:OR_onboard_summary}](plots/OR_onboard_summary.png)
 
@@ -3279,7 +3285,6 @@ A minimum size limit of 12 inches (measured from the tip of the snout to the ext
           Pacific City Open Access Minor Nearshore Rockfish Limit (including black and blue Rockfish here): May 1 - September 30 limit 2,200 lbs per month of which no more than 700 lbs         can be rockfish other than black and blue rockfishes
   \item[1997] \hfill\\
         New live fish markets in California accelerate growth of the Commercial Nearshore Fishery
-  \item[1994] \hfill\\
   \item[Early to mid 1990s] \hfill\\
        Commercial Nearshore Fishery develops as an open access fishery  
   \end{description}
