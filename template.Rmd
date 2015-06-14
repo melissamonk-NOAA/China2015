@@ -99,9 +99,9 @@ ggplot(Exec_ca_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='s
 
 ```
 
-<!-- END Executive summary catches figures--!>
 
-<!-- ***********************START Executive summary catches table*********************************** --!>
+
+<!-- *****************************START Executive summary catches table************************************************ --!>
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
    #read in executive summary catches table
       Exec_catch = read.csv("./txt_files/Exec_catch_summary.csv")
@@ -116,7 +116,7 @@ ggplot(Exec_ca_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='s
     print(Exec_catch.table , include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
 
 ```
-<!-- END Executive summary catches table --!>
+<!-- *****************************************END Executive summary catches table************************************** --!>
 
 
 
@@ -130,15 +130,65 @@ The assessment model begins in 1900, and assumes the stock was at an unfished eq
 ##Stock biomass{-}
 trends and current levels relative to virgin or historic levels, description of uncertainty-include table for last 10 years and graph with long term estimates
 
+\ref{tab:SpawnDeplete_N}-\ref{tab:SpawnDepelte_S}
+\ref{fig:Spawnbio_all}
 
 
-<!-- *************BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE NORTH ***************************-->
+<!-- ***********************BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE NORTH ***************************-->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
       SpawningB = modN$derived_quants[grep("SPB",modN$derived_quants$LABEL),]
       SpawningB = SpawningB[c(-1,-2),]
       
       Depletion = modN$derived_quants[grep("Bratio",modN$derived_quants$LABEL),]
+      Depletion = Depletion[c(-1,-2),]
+#########################################################################
+#CHANGE ME
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
+#########################################################################
+
+    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+     SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
+                           SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),]     
+     SpawningByrs$YEAR = seq(FirstYR,LastYR)
+     SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+     SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+     SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
+     SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
+       colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
+
+    #pull the estimated depletion and 
+     Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
+                           Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]     
+     Depletionyrs$YEAR = seq(FirstYR,LastYR)
+     Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+     Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+     Depletionyrs$CI = paste("(",Depletionyrs$lowerCI,"-",Depletionyrs$upperCI,")",sep="")
+     Depletiontab=subset(Depletionyrs,select=c('Value','CI'))
+       colnames(Depletiontab) = c('Estimated depletion','~ 95% confidence interval')
+     Spawn_Deplete = cbind(SpawningBtab,Depletiontab)
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the northern China rockfish model."),
+               label='tab:SpawningDeplete_N')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+    align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+
+<!--****************************BEGIN SPAWNING DEPLETE TABLE AL****************************************** -->
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+      
+      SpawningB = modC$derived_quants[grep("SPB",modC$derived_quants$LABEL),]
+      SpawningB = SpawningB[c(-1,-2),]
+      
+      Depletion = modC$derived_quants[grep("Bratio",modC$derived_quants$LABEL),]
       Depletion = Depletion[c(-1,-2),]
 #########################################################################
 #CHANGE ME
@@ -173,14 +223,13 @@ trends and current levels relative to virgin or historic levels, description of 
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the northern China rockfish model."),
-               label='tab:SpawningDeplete')  #digits=0 rounds the numbers
+  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the southern (south of $40^\\circ 10^\\prime$ N. latitude) China rockfish model."),
+               label='tab:SpawningDeplete_C')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
     align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
-
 
 <!--****************************BEGIN SPAWNING DEPLETE TABLE SOUTH****************************************** -->
 
@@ -224,22 +273,18 @@ trends and current levels relative to virgin or historic levels, description of 
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the southern China rockfish model."),
-               label='tab:SpawningDeplete')  #digits=0 rounds the numbers
+  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the southern (south of $40^\\circ 10^\\prime$ N. latitude) China rockfish model."),
+               label='tab:SpawningDeplete_S')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
     align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
-<!-- END: CREATE SPAWNING BIOMASS AND DEPLETION TABLES -->
+<!--********************************** END: CREATE SPAWNING BIOMASS AND DEPLETION TABLES************************************-->
 
 
+![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the three models of China rockfish (North=Washington state, Central = $40^\circ 10^\prime$ N. lat. to the OR/WA border, and South = south of $40^\circ 10^\prime$ N. lat.).  \label{fig:Spawnbio_all}](r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png)
 
-![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the northern model of China rockfish. \label{fig:Exploit_N}](r4ss_north/plots/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
-
-
-
-![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the southern model of China rockfish. \label{fig:Exploit_S}](r4ss_south/plots/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
 
  \FloatBarrier
 
@@ -248,6 +293,9 @@ trends and current levels relative to virgin or historic levels, description of 
 
 ##Recruitment{-}
 trends and current levels relative to virgin or historic levels-include table for last 10 years and graph with long term estimates
+
+\ref{tab:Recruit_N}-\ref{tab:Recruit_S}
+\ref{fig:recruits_all}
 
 <!--*************************BEGIN: CREATE RECRUITMENT TABLE ********************************-->
 <!-- BEGIN: CREATE RECRUITMENT TABLE NORTH -->
@@ -275,8 +323,41 @@ trends and current levels relative to virgin or historic levels-include table fo
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  Recruit.table = xtable(Recruittab, caption=c("Recent recruitment."),
-               label='Recruit',digits=0)  #digits=0 rounds the numbers
+  Recruit.table = xtable(Recruittab, caption=c("Recent recruitmentfor the northern model (Washington state MCAs 1-4 ."),
+               label='tab:Recruit_N',digits=0)  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 4 values    
+    align(Recruit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Recruit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+
+<!--************************** BEGIN: CREATE RECRUITMENT TABLE Central********************************* -->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+      
+      Recruit = modC$derived_quants[grep("Recr",modC$derived_quants$LABEL),]
+      Recruit = Recruit[c(-1,-2),]
+#########################################################################
+#CHANGE ME
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
+#########################################################################
+
+    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+     Recruityrs = Recruit[Recruit$LABEL>=paste("Recr_",FirstYR,sep='') &  
+                           Recruit$LABEL<=paste("Recr_",LastYR,sep=''),]     
+     Recruityrs$YEAR = seq(FirstYR,LastYR)
+     Recruityrs$lowerCI = round(Recruityrs$Value +qnorm(0.025)*Recruityrs$StdDev, digits=0)
+     Recruityrs$upperCI = round(Recruityrs$Value -qnorm(0.025)*Recruityrs$StdDev, digits=0)
+     Recruityrs$CI = paste("(",Recruityrs$lowerCI,"-",Recruityrs$upperCI,")",sep="")
+     Recruittab=subset(Recruityrs,select=c('YEAR','Value','CI'))
+       colnames(Recruittab) = c('Year','Estimated Recruitment (1,000s)','~ 95% confidence interval')
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  Recruit.table = xtable(Recruittab, caption=c("Recent recruitment for the central ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) model."),
+               label='tab:Recruit_C',digits=0)  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 4 values    
     align(Recruit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(Recruit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
@@ -308,33 +389,33 @@ trends and current levels relative to virgin or historic levels-include table fo
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  Recruit.table = xtable(Recruittab, caption=c("Recent recruitment."),
-               label='Recruit',digits=0)  #digits=0 rounds the numbers
+  Recruit.table = xtable(Recruittab, caption=c("Recent recruitment for the southern (south of $40^\\circ 10^\\prime$ N. latitude) model."),
+               label='tab:Recruit_S',digits=0)  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 4 values    
     align(Recruit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(Recruit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
-<!-- END: CREATE RECRUITMENT TABLE -->
+<!--********************************* END: CREATE RECRUITMENT TABLE********************************************* -->
+\FloatBarrier
+
+![Time series of estimated China rockfish recruitments for the the three base-case model with 95\% confidence or credibility intervals.\label{fig:recruits_all}](r4ss/plots_compare/base_compare8_recruits_uncertainty.png)
 
 
-![Time series of estimated China rockfish recruitments for the northern base-case model with 95\% confidence or credibility intervals.\label{fig:recruits_N}](r4ss_north/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
-
-
-![Time series of estimated China rockfish recruitments for the southern base-case model with 95\% confidence or credibility intervals.\label{fig:recruits_S}](r4ss_south/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png)
 
  \FloatBarrier
-
-
-
 
 
 
 ##Exploitation status{-}
 exploitation rates, i.e., total catch divided by exploitable biomass, or the annual SPR harvest rate - include a table with the last 10 years of data and a graph showing the trend in fishing mortality relative to the target (y-axis) plotted against the trend in biomass relative to the target (x-axis).
 
-<!-- BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE -->
-<!-- ***************BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE NORTH**********************************-->
+Tables \ref{tab:SPR_Exploit_N}-\ref{tab:SPR_Exploit_S}
+Figures \ref{fig:reldeplete_all}, \ref{fig:spr_all},\ref{fig:phase_all}
+
+
+<!-- ***************BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE************************************************ -->
+<!-- *************** EXPLOITATION AND 1-SPR TABLE NORTH**********************************-->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
       Exploit = modN$derived_quants[grep("F",modN$derived_quants$LABEL),]
@@ -376,8 +457,59 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion for the northern China rockfish model."),
-               label='SpawningDeplete')  #digits=0 rounds the numbers
+  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion for the  (Washington state MCAs 1-4) China rockfish model."),
+               label='tab:SPR_Exploit_N')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+    align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(negSPR_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+          width="\\textwidth")
+```
+\FloatBarrier
+
+<!-- *****************************EXPLOITATION AND 1-SPR TABLE SOUTH***************************-->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+      
+      Exploit = modC$derived_quants[grep("F",modC$derived_quants$LABEL),]
+      Exploit = Exploit[c(-1,-2),]
+      
+      negSPR = subset(modC$sprseries, select=c('Year','SPR','SPR_std'))
+#########################################################################
+#CHANGE ME
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
+#########################################################################
+
+    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+     Exploityrs = Exploit[Exploit$LABEL>=paste("F_",FirstYR,sep='') &  
+                           Exploit$LABEL<=paste("F_",LastYR,sep=''),]     
+     Exploityrs$YEAR = seq(FirstYR,LastYR)
+     Exploityrs$lowerCI = round(Exploityrs$Value +qnorm(0.025)*Exploityrs$StdDev, digits=2)
+     Exploityrs$upperCI = round(Exploityrs$Value -qnorm(0.025)*Exploityrs$StdDev, digits=2)
+     Exploityrs$CI = paste("(",Exploityrs$lowerCI,"-",Exploityrs$upperCI,")",sep="")
+     Exploittab=subset(Exploityrs,select=c('Value','CI'))
+       colnames(Exploittab) = c('Exploitation rate','~ 95% confidence interval')
+
+
+    #pull the estimated depletion and 
+     negSPRyrs = subset(negSPR, Year>=FirstYR & Year<=LastYR)
+     negSPRyrs$SPR = 1 - negSPRyrs$SPR
+     negSPRyrs$lowerCI = round(negSPRyrs$SPR +qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
+     negSPRyrs$upperCI = round(negSPRyrs$SPR -qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
+     negSPRyrs$lowerCI = abs(negSPRyrs$lowerCI)
+     negSPRyrs$upperCI = 0
+     negSPRyrs$CI = paste("(",negSPRyrs$upperCI,"-",negSPRyrs$lowerCI,")",sep="")
+     negSPRtab=subset(negSPRyrs,select=c('Year','SPR','CI'))
+     negSPRtab$Year = as.factor(negSPRtab$Year)
+     colnames(negSPRtab) = c('Year','Estimated 1-SPR (%)','~ 95% confidence interval')
+     
+     negSPR_Exploit = cbind(negSPRtab,Exploittab)
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  #create the Spawning biomass table
+  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion for the central ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) China rockfish model."),
+               label='tab:SPR_Exploit_C')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
     align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(negSPR_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
@@ -386,7 +518,7 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 
 \FloatBarrier
 
-<!-- **********************BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE SOUTH***************************-->
+<!-- *****************************EXPLOITATION AND 1-SPR TABLE SOUTH***************************-->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
       
       Exploit = modS$derived_quants[grep("F",modS$derived_quants$LABEL),]
@@ -428,8 +560,8 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion for the southern China rockfish model."),
-               label='SpawningDeplete')  #digits=0 rounds the numbers
+  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in beginning of the year biomass and depletion for the southern (south of $40^\\circ 10^\\prime$ N. latitude) China rockfish model."),
+               label='tab:SPR_Exploit_S')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
     align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(negSPR_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
@@ -438,21 +570,13 @@ exploitation rates, i.e., total catch divided by exploitable biomass, or the ann
 <!-- END: CREATE EXPLOITATION AND 1-SPR TABLE -->
 \FloatBarrier
 
-![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the northern base case assessment model. \label{fig:exploit_N}](r4ss_north/plots/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
+![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the three base case assessment models. \label{fig:reldeplete_all}](r4ss/plots_compare/base_compare4_Bratio_uncertainty.png)
 
 
-![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the southern base case assessment model. \label{fig:exploit_S}](r4ss_south/plots/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
+![Estimated spawning potential ratio (SPR) for the three models. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is 2014. \label{fig:spr_all}](r4ss/plots_compare/base_compare6_SPRratio_uncertainty.png)
 
 
-
-![Estimated spawning potential ratio (SPR) for the northern model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is 2014. \label{fig:spr_N}](r4ss_north/plots/SPR2_minusSPRseries.png)
-
-![Estimated spawning potential ratio (SPR) for the southern model. One minus SPR is plotted so that higher exploitation rates occur on the upper portion of the y-axis. The management target is plotted as a red horizontal line and values above this reflect harvests in excess of the overfishing proxy based on the SPR\textsubscript{30\%} harvest rate. The last year in the time series is 2014. \label{fig:spr_S}](r4ss_south/plots/SPR2_minusSPRseries.png)
-
-
-![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the northern base case model. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates 2014. \label{fig:phase_N}](r4ss_north/plots/SPR4_phase.png)
-
-![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the southern base case model. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates 2014. \label{fig:phase_S}](r4ss_south/plots/SPR4_phase.png)
+![Phase plot of estimated relative (1-SPR) vs. relative spawning biomass for the three base case models. The relative (1-SPR) is (1-SPR) divided by 30\% (the SPR target). Relative depletion is the annual spawning biomass divided by the spawning biomass corresponding to 25\% of the unfished spawning biomass. The red point indicates 2014. \label{fig:phase_all}](r4ss/plots_compare/base_compare13_phase_plot.png)
 
 \FloatBarrier
 
@@ -464,10 +588,12 @@ We did use recently available habitat information to select the data used in the
 ##Reference points{-}
 The management line for China rockfish is at $40^\circ 10^\prime$ N. latitude, with differing management guidelines north and south.  From 2005-2010, the Minor Nearshore Rockfish Complex was managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ACL within the Minor Nearshore Rockfish Complex, based on the work by Dick and MacCall [-@Dick2010] and the previous assessment by Cope et al. [-@Cope2015].
 
+Tables \ref{tab:Ref_pts_N}-\ref{tab:Ref_pts_S}
+
 \FloatBarrier
 
-<!-- BEGIN: REFERENCE POINTS TABLE -->
-<!-- BEGIN: REFERENCE POINTS TABLE NORTH--> 
+<!-- ********************************BEGIN: REFERENCE POINTS TABLE********************************************** -->
+<!-- ***********************************REFERENCE POINTS TABLE NORTH*********************************************--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 Ref_pts = rbind(
 SSB_Unfished    = modN$derived_quants[grep("SSB_U",modN$derived_quants$LABEL),],
@@ -528,17 +654,86 @@ Ref_pts[c(6,11,16),2]=''
 colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
 ```
 
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+ #create the Reference points
+ Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the northern (Washington state MCAs 1-4) base case model."), label='tab:Ref_pts_N')  #digits=0 rounds the numbers
+    #xtable requires a placeholder for rownames, hence 6 values    
+  align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
+    print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+```
+\FloatBarrier
+
+<!-- ***********************************REFERENCE POINTS TABLE CENTRAL*******************************************--> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+Ref_pts = rbind(
+SSB_Unfished    = modC$derived_quants[grep("SSB_U",modC$derived_quants$LABEL),],
+TotBio_Unfished = modC$derived_quants[grep("TotBio",modC$derived_quants$LABEL),],
+Recr_Unfished   = modC$derived_quants[grep("Recr_Un",modC$derived_quants$LABEL),],
+SPB_2013        = modC$derived_quants[grep("SPB_2013",modC$derived_quants$LABEL),],
+Depletion_2013  = modC$derived_quants[grep("Bratio_2013",modC$derived_quants$LABEL),],
+Refpt_sB        = c(NA,NA,NA),
+SSB_Btgt        = modC$derived_quants[grep("SSB_Btgt",modC$derived_quants$LABEL),],
+SPR_Btgt        = modC$derived_quants[grep("SPR_Btgt",modC$derived_quants$LABEL),],
+Fstd_Btgt       = modC$derived_quants[grep("Fstd_Btgt",modC$derived_quants$LABEL),],
+TotYield_Btgt   = modC$derived_quants[grep("TotYield_Btgt",modC$derived_quants$LABEL),],
+Refpt_SPR       = c(NA,NA,NA),
+SSB_SPRtgt      = modC$derived_quants[grep("SSB_SPRtgt",modC$derived_quants$LABEL),],
+SPR_proxy       = c('SPF_proxy',.5,NA),
+Fstd_SPRtgt     = modC$derived_quants[grep("Fstd_SPRtgt",modC$derived_quants$LABEL),],
+TotYield_SPRtgt = modC$derived_quants[grep("TotYield_SPRtgt",modC$derived_quants$LABEL),],
+Refpts_MSY      = c(NA,NA,NA),
+SSB_MSY         = modC$derived_quants[grep("SSB_MSY",modC$derived_quants$LABEL),],
+SPR_MSY         = modC$derived_quants[grep("SPR_MSY",modC$derived_quants$LABEL),],
+Fstd_MSY        = modC$derived_quants[grep("Fstd_MSY",modC$derived_quants$LABEL),],
+TotYield_MSY    = modC$derived_quants[grep("TotYield_MSY",modC$derived_quants$LABEL),] )
+
+Ref_pts$Value = as.numeric(Ref_pts$Value)
+Ref_pts$StdDev = as.numeric(Ref_pts$StdDev)
+Ref_pts$Value1 = ifelse(Ref_pts$Value>=1,as.character(round(Ref_pts$Value,0)),as.character(round(Ref_pts$Value,4)))   
+
+Ref_pts$lowerCI = round(Ref_pts$Value +qnorm(0.025)*Ref_pts$StdDev, digits=4)
+Ref_pts$upperCI = round(Ref_pts$Value -qnorm(0.025)*Ref_pts$StdDev, digits=4)
+Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI>=1,as.character(round(Ref_pts$lowerCI,0)),as.character(round(Ref_pts$lowerCI,4))) 
+Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1,as.character(round(Ref_pts$upperCI,0)),as.character(round(Ref_pts$upperCI,4))) 
+Ref_pts$CI1 = paste("(",Ref_pts$lowerCI1,"-",Ref_pts$upperCI1,")",sep="")
+
+Quantity= c('Unfished Spawning biomass (mt)',
+'Unfished age 0+ biomass (mt)',
+'Unfished recruitment (R0)',
+'Spawning Biomass (2013)',
+'Depletion (2013)',
+'\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
+'Proxy spawning biomass ($B_{40\\%}$)',
+'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
+'Exploitation rate resulting in $B_{40\\%}$',
+'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
+'\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
+'Spawning biomass ',
+'$SPR_{proxy}$',
+'Exploitation rate corresponding to $SPR_{proxy}$',
+'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
+'\\textbf{\\textit{Reference points based on estimated MSY values}}',
+'Spawning biomass at $MSY$ ($SB_{MSY}$)',
+'$SPR_{MSY}$',
+'Exploitation rate corresponding to $SPR_{MSY}$',
+'$MSY$ (mt) '
+)
+Ref_pts = cbind(Quantity,Ref_pts[,c(4,9)])
+Ref_pts[c(6,11,13,16),3]=''
+Ref_pts[c(6,11,16),2]=''
+colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
+```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
- Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the northern base case model."), label='Ref_pts')  #digits=0 rounds the numbers
+ Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the central ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) base case model."), label='tab:Ref_pts_C')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
   align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
     print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
 
 \FloatBarrier
-<!-- BEGIN: REFERENCE POINTS TABLE SOUTH--> 
+<!-- ***********************************REFERENCE POINTS TABLE SOUTH********************************************--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 Ref_pts = rbind(
 SSB_Unfished    = modS$derived_quants[grep("SSB_U",modS$derived_quants$LABEL),],
@@ -599,22 +794,21 @@ Ref_pts[c(6,11,16),2]=''
 colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
 ```
 
-
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
- Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the southern base case model."), label='Ref_pts')  #digits=0 rounds the numbers
+ Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the southern (south of $40^\\circ 10^\\prime$ N. latitude) base case model."), label='tab:Ref_pts_S')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
   align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
     print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
-<!-- END: REFERENCE POINTS TABLE --> 
+<!-- ****************************END: REFERENCE POINTS TABLE ****************************************************--> 
 \FloatBarrier
 
 
 ##Management performance{-}
 
 
-<!-- BEGIN: CREATE MANAGEMENT PERFORMANCE TABLE - WILL PROBABLY NEED TO BE TWO TABLES--> 
+<!-- **************BEGIN: CREATE MANAGEMENT PERFORMANCE TABLE - WILL PROBABLY NEED TO BE TWO TABLES*****************************--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
 mngmnt = read.csv("./txt_files/mngmt_performance.csv")
@@ -624,7 +818,6 @@ colnames(mngmnt) = c('Year','Management guideline',	'Nearshore rockfish north', 
                      'Estimated catch south')
 
 ```
-
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
@@ -636,7 +829,7 @@ colnames(mngmnt) = c('Year','Management guideline',	'Nearshore rockfish north', 
                             '>{\\centering}p{.8in}')  
     print(mngmnt.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x},scalebox=.9)
 ```
-<!-- END: CREATE MANAGEMENT PERFORMANCE TABLE -->
+<!-- ********************************END: CREATE MANAGEMENT PERFORMANCE TABLE *************************************************-->
 
 
 
@@ -648,7 +841,7 @@ any special issues that complicate scientific assessment, questions about the be
 TBD
 
 
-<!-- BEGIN: CREATE RESULTS SUMMARY TABLE --> 
+<!--**************************************** BEGIN: CREATE RESULTS SUMMARY TABLE ***********************************************--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
 ###collect the data from all the tables
@@ -684,18 +877,17 @@ base_summary = cbind(mngmt_N,negSPR_Exploit,AgexB,Spawn_Deplete ,Recruittab)
    
     align(base_summary.table) = c("crcccccccccc")  
     print(base_summary.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",
-           scalebox=.8,align=TRUE, hline.after=c(-1,0,4,5,7,9,11,nrow(base_summary.table)) )
+           scalebox=.8,align=TRUE, hline.after=c(-1,0,7,9,11,nrow(base_summary.table)) )
 ```
-<!-- END: CREATE RESULTS SUMMARY TABLE -->
+<!-- *************************************END: CREATE RESULTS SUMMARY TABLE ***************************************************-->
 
 
 
 
 
 
-![Equilibrium yield curve for the northern base case model. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield_N}](r4ss_north/plots/yield1_yield_curve.png)
+![Equilibrium yield curve for the northern base case model. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield_N}](r4ss/plots_N/yield1_yield_curve.png)
 
-![Equilibrium yield curve for the southern base case model. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield_S}](r4ss_south/plots/yield1_yield_curve.png)
 
 \FloatBarrier
 \newpage
@@ -1916,9 +2108,11 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- *********************************************************Data FIGURES************************************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-![Summary of data sources used in the northern assessment. \label{fig:data_sources_N}](r4ss_north/plots/data_plot.png)
+![Summary of data sources used in the northern assessment. \label{fig:data_sources_N}](r4ss/plots_N/data_plot.png)
 
-![Summary of data sources used in the southern assessment. \label{fig:data_sources_S}](r4ss_south/plots/data_plot.png)
+![Summary of data sources used in the central assessment. \label{fig:data_sources_S}](r4ss/plots_C/data_plot.png)
+
+![Summary of data sources used in the southern assessment. \label{fig:data_sources_S}](r4ss/plots_S/data_plot.png)
 
 
 
@@ -2166,7 +2360,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- ****************************************************Recreational onboard observer FIGURES****************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-![Frequency distribution of the discard lengths from the Oregon (ODFW 2001,2003-2014) and California (CDFW 1999-2014, CalPoly 2001-2014) onboard observer programs. \label{fig:onboard_discard_lengths}](plots/onboard_discard_lengths.png)
+![Frequencies of the discard lengths from the Oregon (ODFW 2001,2003-2014) and California (CDFW 1999-2014 and CalPoly 2001-2014) onboard observer programs. \label{fig:onboard_discard_lengths}](plots/onboard_discard_lengths.png)
 
 
 
