@@ -950,11 +950,11 @@ The percentage of trips that caught China Rockfish was 13.6\% prior to filtering
 
 CPUE (number of fish per angler hour) was modelled using a “delta-GLM” model [@Lo1992; @Stefansson1996]. Model selection using AIC supported inclusion of \emph{year} and \emph{region} effects in both the binomial and lognormal components of the index (Table \ref{tab:MRFSS_S_aic}). The addition of two-month \emph{wave} effects (to allow for seasonal changes in CPUE) did not improve model fit. Data in the binomial component also supported inclusion of a distance from shore variable (\emph{AREA\_X}). Residual-based model diagnostics for the positive component of the index suggest the data generally met the assumptions of the GLM (Figure \ref{fig:MRFSS_S_diag}). The resulting index  is highly variable, but suggests a decline in catch rates after 1995 relative to preceding years (Table \ref{tab:MRFSS_S_index}; Figure \ref{fig:MRFSS_S_index}).
 
-**California North of \bodlmath{$40^\circ 10^\prime$} and Oregon Dockside Charter Boat Indices (MRFSS and ORBS)**
+**California North of \boldmath{$40^\circ 10^\prime$} and Oregon Dockside Charter Boat Indices (MRFSS and ORBS)**
 
 For the Oregon sport fisheries, three indices of abundance were used in the assessment: (1) catch rates from the onboard observer program, (2) catch rates from the dockside survey component of the ORBS (Oregon Recreational Boat Survey), and (3) catch rates from the dockside Marine Recreational Fisheries Statistical Survey (MRFSS, see description of California MRFSS index, above).  For the onboard observer index, all data elements were verified by a biologist, and thus there was a high degree of certainty in the catch, effort, and locations fished; however, there was limited spatial-temporal coverage and only charter boats were included (not private boats).  In contrast, the ORBS dockside survey has more comprehensive coverage and much greater samples sizes (i.e., 50-70 times more trips than onboard observer program), but there was less confidence in the data elements, as only catch and the number of anglers were verified by biologists (all other trip details were angler-reported).  The two dockside programs (ORBS and MRFSS) differ in terms of the measure of fishing effort (details below). A single fishing trip can be sampled in both by the onboard observer program and also dockside within ORBS. Because the onboard observer program data is at a much finer scale than the trip-based dockside data; we removed trips from the ORBS database that were double-sampled and chose to retain all onboard observer trips.
 
-**Index Standardization: MRFSS Dockside Charter Boat CPUE for California North of \bodlmath{$40^\circ 10^\prime$} and Oregon**
+**Index Standardization: MRFSS Dockside Charter Boat CPUE for California North of \boldmath{$40^\circ 10^\prime$} and Oregon**
 
 Trip-based catch and effort data from MRFSS dockside samplers in Oregon, 1980-2003, was obtained from ODFW (P. Mirick, pers. comm.). The data include trips from private boats as well as charter vessels. Development of an index based on private boats was initiated by the STAT, but later abandoned. A very small percentage of private boat trips in Oregon catch China rockfish (295 / 11725 trips, or 2.5\%) in the unfiltered data set, and charter boat trips had a larger percentage of positive trips in the unfiltered data set (649 / 6750, or 9.6\%) over the same time period.
 
@@ -3223,8 +3223,8 @@ A minimum size limit of 12 inches (measured from the tip of the snout to the ext
   \item[2005] \hfill\\
       Other Nearshore Rockfish harvest cap: 12.0 mt 16.0 mt (excluding tiger and vermillion rockfishes, 13.5 mt including these fish) 
     
-      Other Nearshore Rockfish Period Limits (Sub-limit from Black and blue Rockfish trip limits):
-     (includes tiger and vermillion rockfishes, sublimit of Black and blue Rockfish limit): All Periods: 450 lbs
+      Other Nearshore Rockfish Period Limits (Sub-limit from black and blue Rockfish trip limits):
+     (includes tiger and vermillion rockfishes, sublimit of black and blue Rockfish limit): All Periods: 450 lbs
       
       Rockfish Conservation Area: fishing restricted to inside 30 fm
 
@@ -3233,7 +3233,7 @@ A minimum size limit of 12 inches (measured from the tip of the snout to the ext
     10/11: Other Nearshore Rockfish changes: Period 5 and 6 increase to 400 lbs
 
   \item[2004] \hfill\\
-        Permit required for vessels to land Black and blue rockfishes and other nearshore fish identified in House Bill 3108
+        Permit required for vessels to land black and blue rockfishes and other nearshore fish identified in House Bill 3108
        
        Nearshore logbook required for all vessels participating in the fishery
 
@@ -3243,7 +3243,7 @@ A minimum size limit of 12 inches (measured from the tip of the snout to the ext
 
       Other Nearshore Rockfish harvest cap: 16.0  mt (including tiger and vermillion rockfishes) 
 
-      Other Nearshore Rockfish 1-month Period Limits (Sub-limit from Black and blue Rockfish trip limits): (includes tiger and vermillion Rockfish), All Periods: 450 lbs
+      Other Nearshore Rockfish 1-month Period Limits (Sub-limit from black and blue Rockfish trip limits): (includes tiger and vermillion Rockfish), All Periods: 450 lbs
 
       Rockfish Conservation Area: fishing restricted to inside 30 fm
 
@@ -3260,7 +3260,7 @@ A minimum size limit of 12 inches (measured from the tip of the snout to the ext
 
          Bi-monthly trip limits first put into place mid-season (July 16th) in 2003
       
-         Other Nearshore Rockfish (Sub-limit from Black and blue Rockfish): All periods 300 lbs 
+         Other Nearshore Rockfish (Sub-limit from black and blue Rockfish): All periods 300 lbs 
 
       Rockfish Conservation Area: fishing restricted to inside 27 fm from January – October
   \item[2002] \hfill\\
@@ -3276,7 +3276,7 @@ A minimum size limit of 12 inches (measured from the tip of the snout to the ext
 
 
   \item[2000] \hfill\\
-          Pacific City Open Access Minor Nearshore Rockfish Limit (including Black and blue Rockfish here): May 1 - September 30 limit 2,200 lbs per month of which no more than 700 lbs         can be rockfish other than Black and blue rockfishes
+          Pacific City Open Access Minor Nearshore Rockfish Limit (including black and blue Rockfish here): May 1 - September 30 limit 2,200 lbs per month of which no more than 700 lbs         can be rockfish other than black and blue rockfishes
   \item[1997] \hfill\\
         New live fish markets in California accelerate growth of the Commercial Nearshore Fishery
   \item[1994] \hfill\\
@@ -3311,7 +3311,7 @@ The following commercial regulations pertain to China rockfish species in Califo
  Trips limits now vary according to constraints from bycatch of canary and yelloweye rockfishes
 \begin{description}
     \item[2003] \hfill\\
-        A shallow nearshore is needed with permits in 4 management regions
+        A shallow nearshore permit is needed in 4 management regions
         
         Trip limits for restricted access fishery, with differential trip limits north and south of $40^\circ 10^\prime$ N 
         
@@ -3333,9 +3333,9 @@ The following commercial regulations pertain to China rockfish species in Califo
         Nearshore fishery permit required
         
     \item[1994] \hfill\\
-         Limited entry permits and open access fishery established for Sebastes complex
+         Limited entry permits and open access fishery established for \emph{Sebastes} complex
          
-         Limited entry and open access trip limits on the Sebastes complex
+         Limited entry and open access trip limits on the \emph{Sebastes} complex
         
    \end{description}
 
@@ -3535,10 +3535,10 @@ The following regulations pertain to nearshore rockfish species in Oregon and we
   Rockfish:  10, no more than 1 Canary RF 
   
   \item[2000] \hfill\\
-  Rockfish:  10, no more than 3 Canary RF 
+  Rockfish:  10, no more than 3 canary RF 
   
   \item[1999-1994] \hfill\\
-  Rockfish:  15, no more than 10 Black Rockfish 
+  Rockfish:  15, no more than 10 black Rockfish 
   
   \item[1993-1986] \hfill\\
   Rockfish, Cabezon and greenling:  15 
