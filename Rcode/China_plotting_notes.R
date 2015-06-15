@@ -61,4 +61,10 @@ legend('topright', legend=mod.names, col=mod.cols, lwd=3, bg='white', bty='n')
 # close PNG file
 dev.off()
 
-
+############################################################################
+# plot data by type and year
+#   need extra right-hand margin and differing heights based on data quantity
+#   this should overwrite just a single existing figure in each case
+SS_plots(out.N, pheight=4, plot=24, SSplotDatMargin=18)
+SS_plots(out.C, pheight=6, plot=24, SSplotDatMargin=18)
+SS_plots(out.S, pheight=5, plot=24, SSplotDatMargin=18)
