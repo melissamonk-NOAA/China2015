@@ -7,7 +7,9 @@ library(r4ss)
 setwd('C:/Assessment2015/SS_chinaN')
 modN = SS_output(dir='C:/Assessment2015/SS_chinaN', forecast=T, covar=T, ncol=1000)
 save.image("Chinanorth2015.RData")
-SS_plots(modN,png=TRUE,html=FALSE,dir="C:/Assessment2015/SS_chinaN/")
+SS_plots(modN,png=TRUE,html=FALSE,datplot=TRUE,uncertainty=FALSE,maxrows=6, maxcols=6, 
+         maxrows2=4, maxcols2=4,
+         dir="C:/Assessment2015/SS_chinaN/")
 
 
 #read in the SS central output file
