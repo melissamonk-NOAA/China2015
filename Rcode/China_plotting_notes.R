@@ -46,3 +46,19 @@ legend('topleft', legend=mod.names, col=mod.cols, lwd=3, bg='white')
 # close PNG file
 dev.off()
 
+
+############################################################################
+# plot comparison of yield curves
+png(file.path(dir.plots, 'yield_comparison_3-models.png'),
+    width=6.5, height=6.5, res=300, units='in', pointsize=10)
+par(las=1)
+SSplotYield(out.S, col=mod.cols[3], subplot=1)
+grid()
+SSplotYield(out.C, col=mod.cols[2], subplot=1, add=TRUE)
+SSplotYield(out.N, col=mod.cols[1], subplot=1, add=TRUE)
+# legend to cover up non-useful Females/Males default legend
+legend('topright', legend=mod.names, col=mod.cols, lwd=3, bg='white', bty='n')
+# close PNG file
+dev.off()
+
+
