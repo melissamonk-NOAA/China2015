@@ -886,9 +886,9 @@ base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
 
 
  base_summary = as.data.frame(t(base_summary))
- base_summary$names=c('Comm. landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL',
+ base_summary$names=c('Landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL',
                       'China contrib. ABC/OFL', 'Nearshore RF OY/ACL','China contrib. OY/ACL',
-                      'Comm. landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL',
+                      'Landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL',
                       'China contrib. ABC/OFL','Nearshore RF OY/ACL','China contrib. OY/ACL'
                       ,'1-SPR','Exploitation rate','Age 0+ biomass (mt)','Spawning Biomass',
                       '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI','1-SPR',
@@ -923,7 +923,7 @@ base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
 
 
 
-![Equilibrium yield curve for the northern base case model. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield_N}](r4ss/plots_N/yield1_yield_curve.png)
+![Equilibrium yield curve for the the base case models. Values are based on the 2014 fishery selectivity and distribution with steepness fixed at xxxx. \label{fig:yield_all}](r4ss/plots_compare/yield_comparison_3_models.png)
 
 
 \FloatBarrier
@@ -1386,7 +1386,7 @@ Future research is planned to use catch-per-unit-effort (cpue) information from 
 
 *Recreational: Washington (WDFW)*
 
-Recreational length- and age- composition data were provided directly from WDFW during winter 2015. WDFW routinely collected recreational biological samples for China rockfish between 1995 and 2014, with all but one year sampled during 1979 to 1983. These composition data lack information on the number of fish sampled out of those landed in a given trip, and therefore are used without expansion to the sample level. Unexpanded recreational composition data are frequently used in west coast stock assessments for the above reason. Length and age data collected from dockside recreational samples WA are summarized by the number of fish sampled (Table \ref{tab:WA_FishD_bio}). The WA recreational length- and age- compositions are shown in Figures \ref{fig:N_comp_lendat_flt1mkt0}, \ref{fig:N_comp_lendat_flt3mkt0}, and \ref{fig:N_comp_condAALdat_bubflt3mkt0}.
+Recreational length- and age- composition data were provided directly from WDFW during winter 2015. WDFW routinely collected recreational biological samples for China rockfish between 1995 and 2014, with all but one year sampled during 1979 to 1983. These composition data lack information on the number of fish sampled out of those landed in a given trip, and therefore are used without expansion to the sample level. Unexpanded recreational composition data are frequently used in west coast stock assessments for the above reason. Length and age data collected from dockside recreational samples WA are summarized by the number of fish sampled (Table \ref{tab:WA_FishD_bio}). The WA recreational length- and age- compositions are shown in Figures \ref{fig:N_comp_lendat_flt1mkt2}, \ref{fig:N_comp_lendat_flt3mkt2}, and \ref{fig:N_comp_condAALdat_bubflt3mkt2}.
 
 
 *Commercial: PacFIN (Oregon and Californa)*
@@ -2587,11 +2587,11 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 <!--WASHINGTON-->
 
-![WDFW length compositions for the southern Washington recreational fleet, all modes. \label{fig:N_comp_lendat_flt1mkt0}](r4ss/plots_N/comp_lendat_flt1mkt0.png)
+![WDFW length compositions for the southern Washington recreational fleet, all modes. \label{fig:N_comp_lendat_flt1mkt2}](r4ss/plots_N/comp_lendat_flt1mkt2.png)
 
-![WDFW length compositions for the northern Washington recreational CPFV fleet. \label{fig:N_comp_lendat_flt3mkt0}](r4ss/plots_N/comp_lendat_flt3mkt0.png)
+![WDFW length compositions for the northern Washington recreational CPFV fleet. \label{fig:N_comp_lendat_flt3mkt2}](r4ss/plots_N/comp_lendat_flt3mkt2.png)
 
-![WDFW conditional age at length for the recreational fishery in northern Washington. \label{fig:N_comp_condAALdat_bubflt3mkt0}](r4ss/plots_N/comp_condAALdat_bubflt3mkt0.png)
+![WDFW conditional age at length for the recreational fishery in northern Washington. \label{fig:N_comp_condAALdat_bubflt3mkt2}](r4ss/plots_N/comp_condAALdat_bubflt3mkt2.png)
 
 
 
