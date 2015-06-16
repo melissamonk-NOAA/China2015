@@ -10,13 +10,26 @@ if (system("hostname", intern=TRUE) %in% c("NWCDW01724920","NWCLW01724829") ){
 }
 
 # read base model from each area
-dir.S.base <- file.path(dir.mods, 'China_South_2015-06-11_EJ_v01_estimate_h_and_M_Bratio')
-dir.C.base <- file.path(dir.mods, 'central_v6_June13_forecast')
-dir.N.base <- file.path(dir.mods, 'north_v8_June13_forecast')
+dir.S.base <- file.path(dir.mods, 'China_South_2015-06-14_EJ_v01_PRE-STAR_BASE')
+dir.C.base <- file.path(dir.mods, 'China_Central_PRE-STAR_BASE_candidate1')
+dir.N.base <- file.path(dir.mods, 'China_North_PRE-STAR_BASE_candidate1')
 out.S <- SS_output(dir.S.base)
 out.C <- SS_output(dir.C.base)
 out.N <- SS_output(dir.N.base)
 
+
+############################################################################
+# make default plots from individual models
+# Melissa M., you've probably covered this already elsewhere 
+SS_plots(out.N, datplot=TRUE, uncertainty=TRUE,
+         maxrows=6, maxcols=6, maxrows2=4, maxcols2=4)
+SS_plots(out.C, datplot=TRUE, uncertainty=TRUE,
+         maxrows=6, maxcols=6, maxrows2=4, maxcols2=4)
+SS_plots(out.S, datplot=TRUE, uncertainty=TRUE,
+         maxrows=6, maxcols=6, maxrows2=4, maxcols2=4)
+
+############################################################################
+# stuff for comparing across models
 
 # vector of names and colors for N, C, and S
 mod.names <- c("North","Central","South")
@@ -24,6 +37,7 @@ mod.cols  <- c("blue", "purple", "red")
 
 # create base model summary list
 base.summary <- SSsummarize(list(out.N, out.C, out.S))
+
 
 ############################################################################
 # time series comparison plots for exec summary (and repeated with regular plots)
