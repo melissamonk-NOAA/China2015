@@ -10,7 +10,7 @@ if (system("hostname", intern=TRUE) %in% c("NWCDW01724920","NWCLW01724829") ){
 }
 
 # read base model from each area
-dir.S.base <- file.path(dir.mods, 'China_South_2015-06-14_EJ_v01_PRE-STAR_BASE')
+dir.S.base <- file.path(dir.mods, 'China_South_2015-06-15_EJ_v01_PRE-STAR_BASE')
 dir.C.base <- file.path(dir.mods, 'China_Central_PRE-STAR_BASE_candidate1')
 dir.N.base <- file.path(dir.mods, 'China_North_PRE-STAR_BASE_candidate1')
 out.S <- SS_output(dir.S.base)
@@ -23,7 +23,7 @@ out.N$estimated_non_rec_devparameters["SR_LN(R0)",]$Value
 out.C$estimated_non_rec_devparameters["SR_LN(R0)",]$Value
 ## [1] 3.56152
 out.S$estimated_non_rec_devparameters["SR_LN(R0)",]$Value
-## [1] 4.91365
+## [1] 4.76973
 
 # vectors of log(R0) spanning estimates 
 logR0vec.N <- seq(3.5, 2.3, -.1)
@@ -85,36 +85,29 @@ dir.prof.R0.C <- file.path(dir.mods, "profiles", "prof.R0.C")
 copy.SS.files(mod="C", target=dir.prof.R0.C, control.for.profile=TRUE, overwrite=TRUE)
 SS_profile(dir=dir.prof.R0.C, string="R0", profilevec=logR0vec.C, extras="-nohess -nox")
 
-# mortality profiles
-dir.prof.M.C <- file.path(dir.mods, "profiles", "prof.M.C")
-copy.SS.files(mod="C", target=dir.prof.M.C, control.for.profile=TRUE, overwrite=TRUE)
-SS_profile(dir=dir.prof.M.C, string="NatM_p_1_Fem_GP_1",
-           profilevec=M.vec, extras="-nohess -nox")
+dir.prof.R0.S <- file.path(dir.mods, "profiles", "prof.R0.S")
+copy.SS.files(mod="S", target=dir.prof.R0.S, control.for.profile=TRUE, overwrite=TRUE)
+SS_profile(dir=dir.prof.R0.S, string="R0", profilevec=logR0vec.S, extras="-nohess -nox")
 
+# mortality profiles
 dir.prof.M.N <- file.path(dir.mods, "profiles", "prof.M.N")
 copy.SS.files(mod="N", target=dir.prof.M.N, control.for.profile=TRUE, overwrite=TRUE)
 SS_profile(dir=dir.prof.M.N, string="NatM_p_1_Fem_GP_1",
            profilevec=M.vec, extras="-nohess -nox")
 
+dir.prof.M.C <- file.path(dir.mods, "profiles", "prof.M.C")
+copy.SS.files(mod="C", target=dir.prof.M.C, control.for.profile=TRUE, overwrite=TRUE)
+SS_profile(dir=dir.prof.M.C, string="NatM_p_1_Fem_GP_1",
+           profilevec=M.vec, extras="-nohess -nox")
+
+dir.prof.M.S <- file.path(dir.mods, "profiles", "prof.M.S")
+copy.SS.files(mod="S", target=dir.prof.M.S, control.for.profile=TRUE, overwrite=TRUE)
+SS_profile(dir=dir.prof.M.S, string="NatM_p_1_Fem_GP_1",
+           profilevec=M.vec, extras="-nohess -nox")
+
 ####################################################################################
 ### plotting profile results
 ####################################################################################
-
-# Mortality profile Central
-profilemodels <- SSgetoutput(dirvec=dir.prof.M.C, keyvec=1:length(M.vec), getcovar=FALSE)
-# summarize output
-profilesummary <- SSsummarize(profilemodels)
-# open PNG file (allows extra axis to be added)
-png(file.path(dir.mods, "profiles/profile_Mortality.C.png"),
-    width=6.5, height=5, res=300, units='in', pointsize=10)
-SSplotProfile(profilesummary,           # summary object
-              minfraction = 0.0001,
-              sort.by.max.change = FALSE,
-              plotdir=dir.prof.M.C,
-              profile.string = "NatM_p_1_Fem_GP_1", # substring of profile parameter
-              profile.label="Natural mortality (M)") # axis label
-axis(1,at=0.053) # axis showing base model values (prior median)
-dev.off() # close PNG file
 
 # Mortality profile North
 profilemodels <- SSgetoutput(dirvec=dir.prof.M.N, keyvec=1:length(M.vec), getcovar=FALSE)
@@ -132,7 +125,39 @@ SSplotProfile(profilesummary,           # summary object
 axis(1,at=0.053) # axis showing base model values (prior median)
 dev.off() # close PNG file
 
-# R0 profile Central
+# Mortality profile Central
+profilemodels <- SSgetoutput(dirvec=dir.prof.M.C, keyvec=1:length(M.vec), getcovar=FALSE)
+# summarize output
+profilesummary <- SSsummarize(profilemodels)
+# open PNG file (allows extra axis to be added)
+png(file.path(dir.mods, "profiles/profile_Mortality.C.png"),
+    width=6.5, height=5, res=300, units='in', pointsize=10)
+SSplotProfile(profilesummary,           # summary object
+              minfraction = 0.0001,
+              sort.by.max.change = FALSE,
+              plotdir=dir.prof.M.C,
+              profile.string = "NatM_p_1_Fem_GP_1", # substring of profile parameter
+              profile.label="Natural mortality (M)") # axis label
+axis(1,at=0.053) # axis showing base model values (prior median)
+dev.off() # close PNG file
+
+# Mortality profile South
+profilemodels <- SSgetoutput(dirvec=dir.prof.M.S, keyvec=1:length(M.vec), getcovar=FALSE)
+# summarize output
+profilesummary <- SSsummarize(profilemodels)
+# open PNG file (allows extra axis to be added)
+png(file.path(dir.mods, "profiles/profile_Mortality.S.png"),
+    width=6.5, height=5, res=300, units='in', pointsize=10)
+SSplotProfile(profilesummary,           # summary object
+              minfraction = 0.001,
+              sort.by.max.change = FALSE,
+              plotdir=dir.prof.M.S,
+              profile.string = "NatM_p_1_Fem_GP_1", # substring of profile parameter
+              profile.label="Natural mortality (M)") # axis label
+axis(1,at=0.053) # axis showing base model values (prior median)
+dev.off() # close PNG file
+
+# R0 profile North
 profilemodels <- SSgetoutput(dirvec=dir.prof.R0.N, keyvec=1:length(logR0vec.N),
                              getcovar=FALSE)
 profilemodels$MLE <- out.N
@@ -166,3 +191,22 @@ SSplotProfile(profilesummary,           # summary object
               profile.label="Log of unfished equilibrium recruitment, log(R0)") # axis label
 file.copy(file.path(dir.prof.R0.C, 'profile_plot_likelihood.png'),
           file.path(dir.prof.R0.C, '../profile_logR0.C.png'), overwrite=TRUE)
+
+# R0 profile South
+profilemodels <- SSgetoutput(dirvec=dir.prof.R0.S, keyvec=1:length(logR0vec.S),
+                             getcovar=FALSE)
+profilemodels$MLE <- out.S
+profilesummary <- SSsummarize(profilemodels)
+# plot profile using summary created above
+SSplotProfile(profilesummary,           # summary object
+              models=1:9,
+              minfraction = 0.0001,
+              sort.by.max.change = FALSE,
+              #xlim=c(3.2,4.6),
+              ymax=100,
+              plotdir=dir.prof.R0.S,
+              print=TRUE,
+              profile.string = "R0", # substring of profile parameter
+              profile.label="Log of unfished equilibrium recruitment, log(R0)") # axis label
+file.copy(file.path(dir.prof.R0.S, 'profile_plot_likelihood.png'),
+          file.path(dir.prof.R0.S, '../profile_logR0.S.png'), overwrite=TRUE)
