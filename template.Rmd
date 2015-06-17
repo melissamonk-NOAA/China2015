@@ -2917,11 +2917,26 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- **********************************************CENTRAL Retrospective analysis FIGURES******************************************************** -->
 ![Retrospective analyses for the central model.  \label{fig:C_retro.S_compare1_spawnbio](r4ss/plots_retros//retro.C_compare1_spawnbio.png)
 
-<!-- **********************************************NORTHERN Retrospective analysis FIGURES******************************************************* --> 
 
+<!-- **********************************************NORTHERN Retrospective analysis FIGURES******************************************************* --> 
 ![Retrospective analyses for the northern model.  \label{fig:N_retro.S_compare1_spawnbio](r4ss/plots_retros/retro.N_compare1_spawnbio.png)
 
 
+<!-- ******************************************************************************************************************************************** --> 
+<!-- ********************************************************Likelihood profile FIGURES********************************************************** --> 
+<!-- ******************************************************************************************************************************************** -->
+
+<!-- **************************************************R0 Likelihood profile FIGURES******************************************************* --> 
+![Likelihood profile for unfished recruitment (R0) for the northern model.  \label{fig:N_profile_logR0.N](r4ss/plots_profiles/profile_logR0.N.png)
+![Likelihood profile for unfished recruitment (R0) for the central model.  \label{fig:C_profile_logR0.C](r4ss/plots_profiles/profile_logR0.C.png)
+![Likelihood profile for unfished recruitment (R0) for the southern model.  \label{fig:S_profile_logR0.S](r4ss/plots_profiles/profile_logR0.S.png)
+
+<!-- ***************************************************M Likelihood profile FIGURES******************************************************* -->
+![Likelihood profile for natural mortality ($M$) for the central model.  \label{fig:C_profile_Mortality.C](r4ss/plots_profiles/profile_Mortality.C.png)
+![Likelihood profile for natural mortality ($M$) for the southern model. \label{fig:S_profile_Mortality.S](r4ss/plots_profiles/profile_Mortality.S.png)
+![Likelihood profile for natural mortality ($M$) for the northern model.  \label{fig:N_profile_Mortality.N](r4ss/plots_profiles/profile_Mortality.N.png)
+
+<!-- **************************************************h Likelihood profile FIGURES******************************************************* -->
 
 
 
