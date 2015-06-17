@@ -1,4 +1,7 @@
 # unfinished example of table of parameters for China models
+library(r4ss)
+ setwd("C:/China2015")
+ load("./r4ss/Chinanorth2015.RData")
 
 likenames <- NULL
 parnames <- c("NatM_p_1_Fem",
@@ -14,7 +17,7 @@ parnames <- c("NatM_p_1_Fem",
               paste0("Retain_2P_1"),
               paste0("Retain_2P_2"))
 
-pars.S <- SStableComparisons(SSsummarize(list(out.S)),
+pars.S <- SStableComparisons(SSsummarize(list(modN)),
                              names=parnames, likenames=likenames)
 pars.S$parameter <- NA
 pars.S$parameter[grep("NatM",pars.S$Label)] <- "Natural mortality"

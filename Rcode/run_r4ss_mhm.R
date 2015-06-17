@@ -89,7 +89,7 @@ dev.off()
 
 ####write the entire myreplist to a file
 sink("list_of_dataframes.csv", type="output")
-invisible(lapply(modC, function(x) dput(write.csv(x))))
+invisible(lapply(modS, function(x) dput(write.csv(x))))
 sink()
 
 

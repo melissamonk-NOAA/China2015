@@ -1,0 +1,18 @@
+Parameter,Number estimated,Bounds (lowhigh),Priot (Mean SD) Type,Estimate
+Natural mortality ($M$),0,,-,0.053
+L($R_0$),1,"(3,12)",-,3.56
+Steepness ($h$),0,-,-,0.773
+\textbf{Growth},,,,
+Length at age 0,0,-,-,2
+Length at age 30,1,"(20,50)","(34,10) Normal",37.44
+von Bertalanffy k,1,"(0.01,0.3)",-,0.14
+CV of length at age 0,0,-,-,0.1
+CV of length at age 20,1,"(0,2)",-,0.08
+\textbf{Indices},,,,
+Extra SD - southern OR recreational CPFV,1,"(0,2)",-,0.15
+Extra SD - northern OR recreational private,1,"(0,2)",-,0.5
+Extra SD - southern OR recreational ORBS,1,"(0,2)",-,0.08
+\textbf{Selectivity},,,,
+Length at peak selectivity for fleet norhtner CA commercial dead-fish fishery,1,"(19,36)",-,34.94
+Length at peak selectivity for northern CA commercial live-fish fishery,1,"(19,36)",-,32.35
+Length at peak selectivity for all recreational fleets,0,,-,34.9

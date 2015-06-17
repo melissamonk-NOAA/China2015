@@ -1,0 +1,25 @@
+Parameter,Number estimated,Bounds (lowhigh),Estimate
+Natural mortality ($M$),0,-,0.053
+L($R_0$),1,-,4.77
+Steepness ($h$),0,-,0.773
+\textbf{Growth},,,
+Length at age 0,0,-,2
+Length at age 30,1,"(25, 45)",31.6
+von Bertalanffy k,1,"(0.05, 0.3)",0.16
+CV of length at age 0,0,-,0.1
+CV of length at age 20,1,"(0.03,0.2)",0.11
+\textbf{Indices},,,
+Extra SD -  Recreational dockside CPFV ,1,"(0,2)",0.1
+Extra SD -  Recreational onboard CPFV 1988-1999,1,"(0,2)",0.16
+Extra SD  - Recreational onboard CPFV 2000-2014,1,"(0,2)",0.23
+\textbf{Selectivity},,,
+Length at peak selectivity - Commercial dead-fish fishery,1,"(19, 45)",32.11
+Ascending width - Commercial dead-fish fishery,,"(0,9)",3.33373
+Length at peak selectivity - Commercial live-fish fishery,1,"(20,40)",32
+Ascending width - Commercial live-fish fishery,,"(0,9)",3.88843
+Length at peak selectivity - Recretaional dockside CPFV,1,"(19,45)",31.02
+Ascending width - Recreational dockside CPFV,,"(0,9)",3.41263
+Length at peak selectivity - Recreational dockside private,1,"(19,45)",33.72
+Ascending width - Recreational dockside private,,"(0,9)",3.5477
+Length at 50% retention for commercial live-fish fishery,1,"(20,40)",30.65
+Slope for retention for commercial live-fish fishery,1,"(0.2,0.3)",0.82
