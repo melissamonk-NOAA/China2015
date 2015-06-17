@@ -10,7 +10,7 @@ if (system("hostname", intern=TRUE) %in% c("NWCDW01724920","NWCLW01724829") ){
 }
 
 # read base model from each area
-dir.S.base <- file.path(dir.mods, 'China_South_2015-06-14_EJ_v01_PRE-STAR_BASE')
+dir.S.base <- file.path(dir.mods, 'China_South_2015-06-15_EJ_v01_PRE-STAR_BASE')
 dir.C.base <- file.path(dir.mods, 'China_Central_PRE-STAR_BASE_candidate1')
 dir.N.base <- file.path(dir.mods, 'China_North_PRE-STAR_BASE_candidate1')
 out.S <- SS_output(dir.S.base)
