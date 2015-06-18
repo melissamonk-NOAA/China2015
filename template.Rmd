@@ -919,6 +919,7 @@ base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
 
 
 \FloatBarrier
+
 \newpage
 
 ##Research and data needs{-}
