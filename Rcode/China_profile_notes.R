@@ -76,6 +76,7 @@ copy.SS.files <- function(mod="N", target=NULL,
 # run profiles
 ####################################################################################
 
+##################################################################################
 # log(R0) profiles
 dir.prof.R0.N <- file.path(dir.mods, "profiles", "prof.R0.N")
 copy.SS.files(mod="N", target=dir.prof.R0.N, control.for.profile=TRUE)
@@ -89,6 +90,7 @@ dir.prof.R0.S <- file.path(dir.mods, "profiles", "prof.R0.S")
 copy.SS.files(mod="S", target=dir.prof.R0.S, control.for.profile=TRUE, overwrite=TRUE)
 SS_profile(dir=dir.prof.R0.S, string="R0", profilevec=logR0vec.S, extras="-nohess -nox")
 
+##################################################################################
 # mortality profiles
 dir.prof.M.N <- file.path(dir.mods, "profiles", "prof.M.N")
 copy.SS.files(mod="N", target=dir.prof.M.N, control.for.profile=TRUE, overwrite=TRUE)
@@ -105,10 +107,28 @@ copy.SS.files(mod="S", target=dir.prof.M.S, control.for.profile=TRUE, overwrite=
 SS_profile(dir=dir.prof.M.S, string="NatM_p_1_Fem_GP_1",
            profilevec=M.vec, extras="-nohess -nox")
 
+##################################################################################
+# steepness profiles
+dir.prof.h.N <- file.path(dir.mods, "profiles", "prof.h.N")
+copy.SS.files(mod="N", target=dir.prof.h.N, control.for.profile=TRUE, overwrite=TRUE)
+SS_profile(dir=dir.prof.h.N, string="steep",
+           profilevec=h.vec, extras="-nohess -nox")
+
+dir.prof.h.C <- file.path(dir.mods, "profiles", "prof.h.C")
+copy.SS.files(mod="C", target=dir.prof.h.C, control.for.profile=TRUE, overwrite=TRUE)
+SS_profile(dir=dir.prof.h.C, string="steep",
+           profilevec=h.vec, extras="-nohess -nox")
+
+dir.prof.h.S <- file.path(dir.mods, "profiles", "prof.h.S")
+copy.SS.files(mod="S", target=dir.prof.h.S, control.for.profile=TRUE, overwrite=TRUE)
+SS_profile(dir=dir.prof.h.S, string="steep",
+           profilevec=h.vec, extras="-nohess -nox")
+
 ####################################################################################
 ### plotting profile results
 ####################################################################################
 
+##################################################################################
 # Mortality profile North
 profilemodels <- SSgetoutput(dirvec=dir.prof.M.N, keyvec=1:length(M.vec), getcovar=FALSE)
 # summarize output
@@ -125,6 +145,7 @@ SSplotProfile(profilesummary,           # summary object
 axis(1,at=0.053) # axis showing base model values (prior median)
 dev.off() # close PNG file
 
+##################################################################################
 # Mortality profile Central
 profilemodels <- SSgetoutput(dirvec=dir.prof.M.C, keyvec=1:length(M.vec), getcovar=FALSE)
 # summarize output
@@ -141,6 +162,7 @@ SSplotProfile(profilesummary,           # summary object
 axis(1,at=0.053) # axis showing base model values (prior median)
 dev.off() # close PNG file
 
+##################################################################################
 # Mortality profile South
 profilemodels <- SSgetoutput(dirvec=dir.prof.M.S, keyvec=1:length(M.vec), getcovar=FALSE)
 # summarize output
@@ -157,6 +179,7 @@ SSplotProfile(profilesummary,           # summary object
 axis(1,at=0.053) # axis showing base model values (prior median)
 dev.off() # close PNG file
 
+##################################################################################
 # R0 profile North
 profilemodels <- SSgetoutput(dirvec=dir.prof.R0.N, keyvec=1:length(logR0vec.N),
                              getcovar=FALSE)
@@ -174,6 +197,7 @@ SSplotProfile(profilesummary,           # summary object
 file.copy(file.path(dir.prof.R0.N, 'profile_plot_likelihood.png'),
           file.path(dir.prof.R0.N, '../profile_logR0.N.png'), overwrite=TRUE)
 
+##################################################################################
 # R0 profile Central
 profilemodels <- SSgetoutput(dirvec=dir.prof.R0.C, keyvec=1:length(logR0vec.C),
                              getcovar=FALSE)
@@ -192,6 +216,7 @@ SSplotProfile(profilesummary,           # summary object
 file.copy(file.path(dir.prof.R0.C, 'profile_plot_likelihood.png'),
           file.path(dir.prof.R0.C, '../profile_logR0.C.png'), overwrite=TRUE)
 
+##################################################################################
 # R0 profile South
 profilemodels <- SSgetoutput(dirvec=dir.prof.R0.S, keyvec=1:length(logR0vec.S),
                              getcovar=FALSE)
@@ -210,3 +235,63 @@ SSplotProfile(profilesummary,           # summary object
               profile.label="Log of unfished equilibrium recruitment, log(R0)") # axis label
 file.copy(file.path(dir.prof.R0.S, 'profile_plot_likelihood.png'),
           file.path(dir.prof.R0.S, '../profile_logR0.S.png'), overwrite=TRUE)
+
+##################################################################################
+# Steepness profile North
+profilemodels <- SSgetoutput(dirvec=dir.prof.h.N, keyvec=1:length(h.vec), getcovar=FALSE)
+# summarize output
+profilesummary <- SSsummarize(profilemodels)
+# open PNG file (allows extra axis to be added)
+png(file.path(dir.mods, "profiles/profile_Steepness.N.png"),
+    width=6.5, height=5, res=300, units='in', pointsize=10)
+SSplotProfile(profilesummary,           # summary object
+              minfraction = 0.001,
+              sort.by.max.change = FALSE,
+              plotdir=dir.prof.h.N,
+              profile.string = "steep", # substring of profile parameter
+              profile.label="Stock-recruit steepness (h)",
+              axes=FALSE)
+axis(1,at=h.vec[h.vec!=0.773]) # axis for small numbers
+axis(1,at=h.vec[h.vec==0.773]) # axis with more decimals
+axis(2)
+dev.off() # close PNG file
+
+##################################################################################
+# Steepness profile Central
+profilemodels <- SSgetoutput(dirvec=dir.prof.h.C, keyvec=1:length(h.vec), getcovar=FALSE)
+# summarize output
+profilesummary <- SSsummarize(profilemodels)
+# open PNG file (allows extra axis to be added)
+png(file.path(dir.mods, "profiles/profile_Steepness.C.png"),
+    width=6.5, height=5, res=300, units='in', pointsize=10)
+SSplotProfile(profilesummary,           # summary object
+              minfraction = 0.0001,
+              sort.by.max.change = FALSE,
+              plotdir=dir.prof.h.C,
+              profile.string = "steep", # substring of profile parameter
+              profile.label="Stock-recruit steepness (h)",
+              axes=FALSE)
+axis(1,at=h.vec[h.vec!=0.773]) # axis for small numbers
+axis(1,at=h.vec[h.vec==0.773]) # axis with more decimals
+axis(2)
+dev.off() # close PNG file
+
+##################################################################################
+# Steepness profile South
+profilemodels <- SSgetoutput(dirvec=dir.prof.h.S, keyvec=1:length(h.vec), getcovar=FALSE)
+# summarize output
+profilesummary <- SSsummarize(profilemodels)
+# open PNG file (allows extra axis to be added)
+png(file.path(dir.mods, "profiles/profile_Steepness.S.png"),
+    width=6.5, height=5, res=300, units='in', pointsize=10)
+SSplotProfile(profilesummary,           # summary object
+              minfraction = 0.001,
+              sort.by.max.change = FALSE,
+              plotdir=dir.prof.h.S,
+              profile.string = "steep", # substring of profile parameter
+              profile.label="Stock-recruit steepness (h)",
+              axes=FALSE)
+axis(1,at=h.vec[h.vec!=0.773]) # axis for small numbers
+axis(1,at=h.vec[h.vec==0.773]) # axis with more decimals
+axis(2)
+dev.off() # close PNG file

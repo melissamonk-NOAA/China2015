@@ -50,7 +50,7 @@ SSplotComparisons(base.summary, plot=FALSE, print=TRUE, plotdir=dir.plots,
 
 ############################################################################
 # plot comparison of growth curves
-png(file.path(dir.plots, 'growth_comparison_June11_beta.png'),
+png(file.path(dir.plots, 'growth_comparison_PRE-STAR_BASE.png'),
     width=6.5, height=5, res=300, units='in')
 SSplotBiology(out.N, colvec=c(mod.cols[1],NA,NA), subplot=1)
 SSplotBiology(out.C, colvec=c(mod.cols[2],NA,NA), subplot=1, add=TRUE)
