@@ -33,8 +33,8 @@ bibliography: chinarockfish2015.bib
              options(scipen=999) # turn off scientific notation
 #########################################################################
 #CHANGE ME
-      FirstYR=2005  # minimum year for tables
-      LastYR=2014  # maximum year for tables
+      FirstYR=2006  # minimum year for tables
+      LastYR=2015  # maximum year for tables
 #########################################################################
     
 ##############################################################################################################
@@ -151,8 +151,8 @@ The assessment for the southern management area suggests that China rockfish wer
       Depletion = Depletion[c(-1,-2),]
 #########################################################################
 #CHANGE ME
-      FirstYR=2005  # minimum year for the Spawning biomass table
-      LastYR=2014  # maximum year for the Spawning biomass table
+      FirstYR=2006  # minimum year for the Spawning biomass table
+      LastYR=2015  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
@@ -200,8 +200,8 @@ The assessment for the southern management area suggests that China rockfish wer
       Depletion = Depletion[c(-1,-2),]
 #########################################################################
 #CHANGE ME
-      FirstYR=2005  # minimum year for the Spawning biomass table
-      LastYR=2014  # maximum year for the Spawning biomass table
+      FirstYR=2006  # minimum year for the Spawning biomass table
+      LastYR=2015  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
@@ -289,7 +289,7 @@ The assessment for the southern management area suggests that China rockfish wer
           width="\\textwidth")
 ```
 <!--********************************** END: CREATE SPAWNING BIOMASS AND DEPLETION TABLES************************************-->
-
+\FloatBarrier
 
 ![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the three models of China rockfish (North=Washington state, Central = $40^\circ 10^\prime$ N. lat. to the OR/WA border, and South = south of $40^\circ 10^\prime$ N. lat.).  \label{fig:Spawnbio_all}](r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png)
 
@@ -581,7 +581,7 @@ In this assessment, ecosystem considerations were not explicitly included in the
 Recently available habitat information was used to select the data used in the onboard observer indices (see Appendix F, p.\ref{sec:AppendixF}).
 
 ##Reference points{-}
-The management line for China rockfish is at $40^\circ 10^\prime$, with differing management guidelines north and south.  From 2005-2010, the Minor Nearshore Rockfish Complex was managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ABC within the Minor Nearshore Rockfish Complex, based on the work by Dick and MacCall [-@Dick2010].
+The management line for China rockfish is at $40^\circ 10^\prime$, with differing management guidelines north and south.  From 2005-2010, the Nearshore Rockfish Complexes north and south of $40^\circ 10^\prime$ N. latitude were managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ABC within the northern and southern Nearshore Rockfish Complexes, based on the work by Dick and MacCall [-@Dick2010].
 
 This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%, corresponding to 33.4 mt (~95% asymptotic interval: 27.4 – 39.4 mt) of spawning biomass in the base model (Table \ref{tab:Ref_pts_N}).  Unfished spawning stock biomass was estimated to be 64.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 25.9 mt, which gives a catch of 3.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 3.1 mt.
 
@@ -974,14 +974,13 @@ Much research is needed to elucidate the role of China rockfish in the ecosystem
 
 
 ##Fishery Information and Summary of Management History
-The rockfish fishery off the U.S. Pacific coast first developed off California in the late
-19th century as a hook and line fishery [@Love2002].  The rockfish fishery was established in the early 1940s, when the United States became involved in World War II and wartime shortage of red meat created an increased demand for other sources of protein [@Alverson1964; @Harry1961]. China rockfish are most commonly captured by hook and line or traps.  They are rarely encountered in the trawl fishery due to the elusive behavior and affinity for rocky crevices.  Their high site fidelity and territoriality lend to the evasiveness of the species.  
+The rockfish fishery off the U.S. Pacific coast first developed off California in the late 19th century as a hook and line fishery [@Love2002].  The rockfish fishery was established in the early 1940s, when the United States became involved in World War II and wartime shortage of red meat created an increased demand for other sources of protein [@Alverson1964; @Harry1961]. China rockfish are most commonly captured by hook and line or traps.  They are rarely encountered in the trawl fishery due to the elusive behavior and affinity for rocky crevices.  Their high site fidelity and territoriality lend to the evasiveness of the species.  
 
 Catch reconstructions of China rockfish indicate a developing fishing in California in the 1940s, and not until the 1980s in Oregon. The recreational fishery in Washington developed in the late 1960s, but the magnitude of catches compared to the other states is relatively small.  China rockfish is not a directed target recreational species in any of the three states.
 
-Prior to 2000 the Pacific Fishery Management Council (PFMC; Council) managed the fishery for China rockfish as part of the \emph{Sebastes} complex, with no separate Acceptable Biological Catch (ABC) or Optimum Yield (OY) for China rockfish.  In 2000, the Council established the Minor Nearshore Complex, of which China rockfish is included.
+Prior to 2000 the Pacific Fishery Management Council (PFMC; Council) managed the fishery for China rockfish as part of the \emph{Sebastes} complex, with no separate Acceptable Biological Catch (ABC) or Optimum Yield (OY) for China rockfish.  In 2000, the Council established the northern and southern Nearshore Complexes (north and south of $40^\circ 10^\prime$), of which China rockfish is included.
 
-The Council established management guidelines for the Minor Nearshore Rockfish Complex in the 2005-2006 management cycle (Total Catch OY;  122 mt north of $40^\circ 10^\prime$ N. latitude and 615 mt south of $40^\circ 10^\prime$).  The 2011-2012 management cycle adopted and Overfishing Limit (OFL) and Annual Catch Limit (ACL) for the Minor Nearshore Rockfish Complex and the China rockfish contribution to the complex, which differ north and south of $40^\circ 10^\prime$ N. latitude.  In 2003, the Council established Rockfish Conservation Areas to control catches of overfished rockfish species, and large portions of the shelf were closed to fishing. 
+The Council established management guidelines for the northern and southern Nearshore Rockfish Complexes in the 2005-2006 management cycle (Total Catch OY;  122 mt north of $40^\circ 10^\prime$ N. latitude and 615 mt south of $40^\circ 10^\prime$).  The 2011-2012 management cycle adopted and Overfishing Limit (OFL) and Annual Catch Limit (ACL) for the northern and southern Nearshore Rockfish Complexes, and the China rockfish contribution to the complex, which differ north and south of $40^\circ 10^\prime$ N. latitude.  In 2003, the Council established Rockfish Conservation Areas to control catches of overfished rockfish species, and large portions of the shelf were closed to fishing. 
 
 In 1995, Washington closed commercial hook and line gear in state waters (0-3 miles).  Oregon’s commercial nearshore fishery developed in the mid 1990s as an open access fishery.  Oregon adopted formal management of the commercial nearshore fishery in 2004.  Oregon adopted a 12 inch size limit in the commercial fishery for China rockfish in 2000, and California did the same in 2001.California required a nearshore fishery permit as of 1999 and has has area-specific closures since 2000 to minimize interactions with canary and yelloweye rockfishes.
 
@@ -1659,11 +1658,11 @@ This stock assessment estimates that China rockfish in the north are above the b
 
 **Central Model** 
 
-This stock assessment estimates that central area China rockfish are just above the biomass target (Table \ref{tab:Timeseries_C}; Figure \ref{fig:C_ts9_Spawning_depletion}). The rate of spawning biomass decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate (Figure \ref{fig:C_ts9_Spawning_depletion}). The estimated relative depletion level in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 85.9 mt (~95% asymptotic interval: 73.1 – 98.7 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table  \ref{tab:SpawningDeplete_C}). Unfished spawning stock biomass was estimated to be 204.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 81.8 mt, which gives a catch of 9.4 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 8.8 mt. Table (Table \ref{tab:Ref_pts_C}) shows the full suite of estimated reference points for the central area model and Figure \ref{fig:C_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that central area China rockfish are just above the biomass target (Table \ref{tab:Timeseries_C};  Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The rate of spawning biomass decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate (Figure \ref{fig:C_ts9_Spawning_depletion}). The estimated relative depletion level in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 85.9 mt (~95% asymptotic interval: 73.1 – 98.7 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table  \ref{tab:SpawningDeplete_C}). Unfished spawning stock biomass was estimated to be 204.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 81.8 mt, which gives a catch of 9.4 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 8.8 mt. Table (Table \ref{tab:Ref_pts_C}) shows the full suite of estimated reference points for the central area model and Figure \ref{fig:C_yield1_yield_curve} shows the equilibrium yield curve.
 
 **Southern Model**
 
-This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years (Table \ref{tab:Timeseries_S}; Figure \ref{fig:S_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 111.5 mt (~95% asymptotic interval:  89.9 – 133.1 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table \ref{tab:SpawningDeplete_S}). Unfished spawning stock biomass was estimated to be 376.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 150.6 mt, which gives a catch of 20.8 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.3 mt. Table (Table \ref{tab:Ref_pts_S}) shows the full suite of estimated reference points for the southern area model and Figure \ref{fig:S_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years (Table \ref{tab:Timeseries_S}; Figure \ref{fig:S_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 111.5 mt (~95% asymptotic interval:  89.9 – 133.1 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table \ref{tab:SpawningDeplete_S}). Unfished spawning stock biomass was estimated to be 376.5 mt in the base case model Figure (\ref{fig:C_ts9_Spawning_depletion}). The target stock size  based on the biomass target ($SB_{40\%}$) is 150.6 mt, which gives a catch of 20.8 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.3 mt. Table (Table \ref{tab:Ref_pts_S}) shows the full suite of estimated reference points for the southern area model and Figure \ref{fig:S_yield1_yield_curve} shows the equilibrium yield curve.
 
 
 
@@ -1684,7 +1683,7 @@ Current medium-term projections of expected China spawning biomass from the cent
 
 **Southern Model**
 
-Current medium-term projections of expected China spawning biomass from the central base model suggests stable catches near current levels as the stock is just above the current target stock size under the default harvest control rule (Table \ref{tab:Forecast_S}). The stock is expected to remain just above the target stock size, increasing slightly, during the projection period, assuming stationarity in the stock-recruitment assumptions. 
+Current medium-term projections of expected China spawning biomass from the southern base model suggests the stock is just under the current target stock size under the default harvest control rule (Table \ref{tab:Forecast_S}). The stock is expected to remain below the target stock size, increasing by approximately 26 mt, during the projection period, assuming stationarity in the stock-recruitment assumptions. 
 
 
 #Regional Management Considerations
@@ -3322,7 +3321,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!-- ******************************************************************************************************************************************** --> 
 ![Aging precision between two current age readers at the NWFSC.  \label{fig:age_error1}](plots/age_error1.png)
 
-![Aging precision between a current anda  former NWFSC age reader.  \label{fig:age_error2}](plots/age_error2.png)
+![Aging precision between a current and former NWFSC age reader.  \label{fig:age_error2}](plots/age_error2.png)
 
 ![Aging precision between NWFSC and WDFW age readers.  \label{fig:age_error3}](plots/age_error3.png)
 
@@ -3419,7 +3418,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Fits to the WCGOP discard data in the southern model.  \label{fig:S_discard_dataCommercial_Live}](r4ss/plots_S/discard_dataCommercial_Live.png)
 
-![Predicted discard amounts by yera and fleet for the southern model.  \label{fig:S_catch7 discards stacked plot (depends on multiple fleets)}](r4ss/plots_S/catch7 discards stacked plot (depends on multiple fleets).png)
+![Predicted discard amounts by year and fleet for the southern model.  \label{fig:S_catch7 discards stacked plot (depends on multiple fleets)}](r4ss/plots_S/catch7 discards stacked plot (depends on multiple fleets).png)
 
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
@@ -3427,39 +3426,39 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!-- ******************************************************************************************************************************************** -->
 
 <!-- *********************************************NORTHERN Uncertainty and Sensitivity FIGURES*************************************************** --> 
-![Sensivitiy of the spawning biomass to dropping a single data type from the southern model.  \label{fig:N_compare1_spawnbio}](r4ss/plots_sensitivity/N_compare1_spawnbio.png)
+![Sensitivity of the spawning biomass to dropping a single data type from the northern model.  \label{fig:N_compare1_spawnbio}](r4ss/plots_sensitivity/N_compare1_spawnbio.png)
 
-![Sensivitiy of the relative spawning biomass to dropping a single data type from the southern model.  \label{fig:N_compare3_Bratio}](r4ss/plots_sensitivity/N_compare3_Bratio.png)
+![Sensitivity of the relative spawning biomass to dropping a single data type from the northern model.  \label{fig:N_compare3_Bratio}](r4ss/plots_sensitivity/N_compare3_Bratio.png)
 
 
 <!-- *********************************************CENTRAL Uncertainty and Sensitivity FIGURES*************************************************** --> 
-![Sensivitiy of the spawning biomass to dropping a single data type from the southern model.  \label{fig:C_compare1_spawnbio}](r4ss/plots_sensitivity/C_compare1_spawnbio.png)
+![Sensitivity of the spawning biomass to dropping a single data type from the central model.  \label{fig:C_compare1_spawnbio}](r4ss/plots_sensitivity/C_compare1_spawnbio.png)
 
-![Sensivitiy of the relative spawning biomass to dropping a single data type from the southern model.  \label{fig:C_compare3_Bratio}](r4ss/plots_sensitivity/C_compare3_Bratio.png)
+![Sensitivity of the relative spawning biomass to dropping a single data type from the central model.  \label{fig:C_compare3_Bratio}](r4ss/plots_sensitivity/C_compare3_Bratio.png)
 
 
 \FloatBarrier
 
 <!-- *********************************************SOUTHERN Uncertainty and Sensitivity FIGURES*************************************************** --> 
-![Sensivitiy of the spawning biomass to dropping a single data type from the southern model.  \label{fig:S_drop1_compare1_spawnbio}](r4ss/plots_sensitivity/S_drop1_compare1_spawnbio.png)
+![Sensitivity of the spawning biomass to dropping a single data type from the southern model.  \label{fig:S_drop1_compare1_spawnbio}](r4ss/plots_sensitivity/S_drop1_compare1_spawnbio.png)
 
-![Sensivitiy of the relative spawning biomass to dropping a single data type from the southern model.  \label{fig:S_drop1_compare3_Bratio}](r4ss/plots_sensitivity/S_drop1_compare3_Bratio.png)
+![Sensitivity of the relative spawning biomass to dropping a single data type from the southern model.  \label{fig:S_drop1_compare3_Bratio}](r4ss/plots_sensitivity/S_drop1_compare3_Bratio.png)
 
-![Sensivitiy of removal of marginal age composition data and conditional age-at-length data from the southern model.  \label{fig:S_drop1_growth_comparison}](r4ss/plots_sensitivity/S_drop1_growth_comparison.png)
+![Sensitivity of removal of marginal age composition data and conditional age-at-length data from the southern model.  \label{fig:S_drop1_growth_comparison}](r4ss/plots_sensitivity/S_drop1_growth_comparison.png)
 
 \FloatBarrier
 
-![Sensivitiy of the spawning biomass to the method of data weighting in the southern model.  \label{fig:S_data_weights_compare1_spawnbio}](r4ss/plots_sensitivity/S_data_weights_compare1_spawnbio.png)
+![Sensitivity of the spawning biomass to the method of data weighting in the southern model.  \label{fig:S_data_weights_compare1_spawnbio}](r4ss/plots_sensitivity/S_data_weights_compare1_spawnbio.png)
 
-![Sensivitiy of the relative spawning biomass to the method of data weighting in the southern model.  \label{fig:S_data_weights_compare3_Bratio}](r4ss/plots_sensitivity/S_data_weights_compare3_Bratio.png)
+![Sensitivity of the relative spawning biomass to the method of data weighting in the southern model.  \label{fig:S_data_weights_compare3_Bratio}](r4ss/plots_sensitivity/S_data_weights_compare3_Bratio.png)
 
-![Sensivitiy of the model to fixing growth parameters to external estimates in the southern model.  \label{fig:S_ext_growth_comparison}](r4ss/plots_sensitivity/S_ext_growth_comparison.png)
+![Sensitivity of the model to fixing growth parameters to external estimates in the southern model.  \label{fig:S_ext_growth_comparison}](r4ss/plots_sensitivity/S_ext_growth_comparison.png)
 
-![Sensivitiy of the spawning biomass to fixing growth parameters to external estimates in the southern model.  \label{fig:S_growth_compare1_spawnbio}](r4ss/plots_sensitivity/S_growth_compare1_spawnbio.png)
+![Sensitivity of the spawning biomass to fixing growth parameters to external estimates in the southern model.  \label{fig:S_growth_compare1_spawnbio}](r4ss/plots_sensitivity/S_growth_compare1_spawnbio.png)
 
 \FloatBarrier 
 
-![Sensivitiy of the relative spawning biomass to fixing growth parameters to external estimates in the southern model.  \label{fig:S_growth_compare3_Bratio}](r4ss/plots_sensitivity/S_growth_compare3_Bratio.png)
+![Sensitivity of the relative spawning biomass to fixing growth parameters to external estimates in the southern model.  \label{fig:S_growth_compare3_Bratio}](r4ss/plots_sensitivity/S_growth_compare3_Bratio.png)
 
 ![Prior distributions for stock-recruit steepness (upper panel) and natural mortality (lower panel). Fixed values used in all three base models are indicated by the red triangles. Blue vertical lines show estimates of these parameters from a southern model sensitivity analysis in which these values were estimated.  \label{fig:S_est_h_and_M_priors_and_MLEs}](r4ss/plots_sensitivity/S_est_h_and_M_priors_and_MLEs.png)
 
@@ -3535,12 +3534,15 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Time series of the spawning stock biomass for the northern model, with 95% asymptotic intervals.  \label{fig:N_ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals}](r4ss/plots_N/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
 
+![Spawning depletion relative to the management target and minimum stock size threshold for the northern model.  \label{fig:N_ts9_Spawning_depletion}](r4ss/plots_N/ts9_Spawning_depletion.png)
+
 ![Equilibrium yield curve for the northern model.  \label{fig:N_yield1_yield_curve}](r4ss/plots_N/yield1_yield_curve.png)
 
 
 
 \FloatBarrier
 <!-- *****************************************************CENTRAL REFERENCE POINTS FIGURES******************************************************* --> 
+![Time series of the spawning stock biomass for the central model, with 95% asymptotic intervals.  \label{fig:C_ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals}](r4ss/plots_C/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
 
 ![Spawning depletion relative to the management target and minimum stock size threshold for the central model.  \label{fig:C_ts9_Spawning_depletion}](r4ss/plots_C/ts9_Spawning_depletion.png)
 
