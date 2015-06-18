@@ -14,11 +14,11 @@ SS_plots(modN, pheight=4, plot=24, SSplotDatMargin=18)
 
 
 #read in the SS central output file
-setwd('C:/Assessment 2015/China rockfish/SS/SS_chinaC')
-modC = SS_output(dir='C:/Assessment 2015/China rockfish/SS/SS_chinaC', forecast=T, covar=T, ncol=1000)
+setwd('C:/Assessment2015/SS_chinaC_2')
+modC = SS_output(dir='C:/Assessment2015/SS_chinaC_2', forecast=T, covar=T, ncol=1000)
 save.image("Chinacentral2015.RData")
 SS_plots(modC,png=TRUE,html=FALSE,datplot=TRUE,uncertainty=FALSE,maxrows=6, maxcols=6, 
-         maxrows2=4, maxcols2=4,dir="C:/Assessment 2015/China rockfish/SS/SS_chinaC")
+         maxrows2=4, maxcols2=4,dir="C:/Assessment2015/SS_chinaC_2")
 SS_plots(modC, pheight=6, plot=24, SSplotDatMargin=18)
 #SS_plots(out.S, pheight=5, plot=24, SSplotDatMargin=18)
 
