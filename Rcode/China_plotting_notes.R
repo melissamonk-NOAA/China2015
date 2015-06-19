@@ -11,7 +11,7 @@ if (system("hostname", intern=TRUE) %in% c("NWCDW01724920","NWCLW01724829") ){
 
 # read base model from each area
 dir.S.base <- file.path(dir.mods, 'China_South_2015-06-15_EJ_v01_PRE-STAR_BASE')
-dir.C.base <- file.path(dir.mods, 'China_Central_PRE-STAR_BASE_candidate1')
+dir.C.base <- file.path(dir.mods, 'China_Central_PRE-STAR_BASE_candidate2')
 dir.N.base <- file.path(dir.mods, 'China_North_PRE-STAR_BASE_candidate1')
 out.S <- SS_output(dir.S.base)
 out.C <- SS_output(dir.C.base)
@@ -47,6 +47,13 @@ SSplotComparisons(base.summary, plot=FALSE, print=TRUE, plotdir=dir.plots,
                   staggerpoints=0, # points aligned across models
                   endyrvec=2015,   # final year to show in time series
                   legendlabels=mod.names, filenameprefix="base_", col=mod.cols)
+SSplotComparisons(base.summary, plot=FALSE, print=TRUE, plotdir=dir.plots,
+                  subplot=1:10,
+                  spacepoints=20,  # years between points on each line
+                  initpoint=0,     # "first" year of points (modular arithmetic)
+                  staggerpoints=0, # points aligned across models
+                  endyrvec=2025,   # final year to show in time series
+                  legendlabels=mod.names, filenameprefix="forecast_", col=mod.cols)
 
 ############################################################################
 # plot comparison of growth curves
