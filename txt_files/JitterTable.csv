@@ -1,0 +1,6 @@
+Status,North,Central,South
+Returned to base case,100,94,67
+Found local minimum,0,0,32
+Found better solution,0,0,0
+Error in likelihood,0,6,1
+Total,100,100,100
