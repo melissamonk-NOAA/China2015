@@ -28,6 +28,46 @@ SS_plots(out.C, datplot=TRUE, uncertainty=TRUE,
 SS_plots(out.S, datplot=TRUE, uncertainty=TRUE,
          maxrows=6, maxcols=6, maxrows2=4, maxcols2=4)
 
+
+############################################################################
+# plots of comps and residuals in custom sizes
+# NOTE: depends on r4ss update on 6-21-15
+
+# northern model multi-fleet length data bubble plot in custom size
+SSplotComps(out.N, pheight=6,
+            bub=TRUE, datonly=TRUE, cexZ1=4, subplot=24, print=TRUE,
+            plotdir=file.path(dir.N.base, 'plots'))
+# northern model multi-fleet length residual bubble plot in custom size
+SSplotComps(out.N, pheight=6,
+            bub=TRUE, datonly=FALSE, subplot=24, print=TRUE,
+            plotdir=file.path(dir.N.base, 'plots'))
+
+# shorter version of central model fleet names to fit in multi-fleet plot
+C.fleetnames.short <- c("1_CA_North_Comm_Dead" ,  "2_CA_North_Comm_Live",
+                        "3_CA_North_Rec_PC"    ,  "4_CA_North_Rec_PR",
+                        "5_OR_South_Comm_Dead"  ,  "6_OR_South_Comm_Live",
+                        "7_OR_South_Rec_PC"     ,  "8_OR_South_Rec_PR",
+                        "9_OR_North_Comm"       ,  "10_OR_North_Rec_PC",
+                        "11_OR_North_Rec_PR"    ,  "12_OR_South_Rec_PC_ORBS")
+# central model multi-fleet length data bubble plot in custom size
+SSplotComps(out.C, fleetnames=C.fleetnames.short, pheight=8,
+            bub=TRUE, datonly=TRUE, cexZ1=4, subplot=24, print=TRUE,
+            plotdir=file.path(dir.C.base, 'plots'))
+# central model multi-fleet length residual bubble plot in custom size
+SSplotComps(out.C, fleetnames=C.fleetnames.short, pheight=8,
+            bub=TRUE, datonly=FALSE, subplot=24, print=TRUE,
+            plotdir=file.path(dir.C.base, 'plots'))
+
+
+# southern model multi-fleet length data bubble plot in custom size
+SSplotComps(out.S, pheight=7,
+            bub=TRUE, datonly=TRUE, cexZ1=4, subplot=24, print=TRUE,
+            plotdir=file.path(dir.S.base, 'plots'))
+# southern model multi-fleet length residual bubble plot in custom size
+SSplotComps(out.S, pheight=7,
+            bub=TRUE, datonly=FALSE, subplot=24, print=TRUE,
+            plotdir=file.path(dir.S.base, 'plots'))
+
 ############################################################################
 # stuff for comparing across models
 
