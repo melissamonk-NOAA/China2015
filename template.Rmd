@@ -1,5 +1,5 @@
 ---
-title: "Status of the China rockfish off the U.S. Pacific Coast in 2015"
+title: "Status of China rockfish off the U.S. Pacific Coast in 2015"
 author: ''
 date: ''
 output:
@@ -60,14 +60,14 @@ bibliography: chinarockfish2015.bib
 
 ##Stock{-}
 
-This assessment reports the states of the China rockfish (\emph{Sebastes nebulosus}) resource in U.S. waters off the coast of the California, Oregon, and Washington using data through 2014.  China rockfish are modelled with three independent stock assessment models to account for spatial variation in exploitation history as well as regional differences in growth and size composition of the catch. The northern area model is defined as Washington state Marine Catch Areas (MCAs) 1-4.  The central area model spans from the Oregon-Washington border to $40^\circ 10^\prime$ N. latitude.  The southern area model spans $40^\circ 10^\prime$ N. latitude to the U.S.-Mexico border.  However, very little catch of China rockfish occurs south of Point Conception, California ($34^\circ 27^\prime$ N latitude).
+This assessment reports the states of the China rockfish (\emph{Sebastes nebulosus}) resource in U.S. waters off the coast of the California, Oregon, and Washington using data through 2014.  China rockfish are modelled with three independent stock assessments to account for spatial variation in exploitation history as well as regional differences in growth and size composition of the catch. The northern area model is defined as Washington state Marine Catch Areas (MCAs) 1-4.  The central area model spans from the Oregon-Washington border to $40^\circ 10^\prime$ N. latitude.  The southern area model spans $40^\circ 10^\prime$ N. latitude to the U.S.-Mexico border.  However, very little catch of China rockfish occurs south of Point Conception, California ($34^\circ 27^\prime$ N latitude).
 
 ##Catches{-}
-China rockfish are most often caught by hook and line (both recreational and commercial fisheries) as well as by traps for the commercial live-fish fishery.  Although China rockfish were not a major target species, the commercial rockfish fishery along the U.S. Pacific West Coast developed in the late 1800s and early 1990s. Available estimates of China rockfish catch in California begin in the early 1900s, along with small commercial catches in Oregon until recreational landings began to increase in the early 1970s (Figures \ref{fig:Exec_wa_catch}-\ref{fig:Exec_ca_catch}). Reconstructed recreational landings of China rockfish in the assessment begin in 1967. As of 1995, Washington has prohibited commercial nearshore fixed gear in state waters and does not have a historical reconstruction of China rockfish commercial landings. The majority of commercial removals of China rockfish are now landed by live-fish fisheries in California and southern Oregon. The magnitude of total removals over the last 10 years peaked in 2009 (35.52 mt) and has been decreasing since then. In recent years, California has the largest removals of the three states (dominated by the recreational fleet) with smallest removals coming from the Oregon recreational fleet (Table \ref{tab:Exec_catch}).
+China rockfish are most often caught by hook and line (both recreational and commercial fisheries) as well as by traps for the commercial live-fish fishery.  Although China rockfish were not a major target species, the commercial rockfish fishery along the U.S. Pacific West Coast developed in the late 1800s and early 1990s. Available estimates of China rockfish catch in California begin in the early 1900s, along with small commercial catches in Oregon until recreational landings began to increase in the early 1970s (Figures \ref{fig:Exec_wa_catch}-\ref{fig:Exec_ca_catch}). Reconstructed recreational landings of China rockfish in the northern assessment begin in 1967. As of 1995, Washington has prohibited commercial nearshore fixed gear in state waters and does not have a historical reconstruction of China rockfish commercial landings. The majority of commercial removals of China rockfish are now landed by live-fish fisheries in California and southern Oregon. The magnitude of total removals over the last 10 years peaked in 2009 (35.52 mt) and has been decreasing since then. In recent years, California has the largest removals of the three states (dominated by the recreational fleet) with smallest removals coming from the Oregon recreational fleet (Table \ref{tab:Exec_catch}).
 
-The nearshore live-fish fishery developed in California in the late 1980s and early 1990s and extended into Oregon by the mid-1990s, driven by the market prices for live fish.  Northern Oregon (north of Florence) does not contribute significantly to the live-fish fishery (maximum removal of 0.02 mt) as the the market for this sector of the fishery is centered in California.  Catches from the live-fish fishery peaked in southern Oregon (south of Florence) has composed the majority of the catch since 1999 and peaked in 2002.  In California, the landings of live fish begin exceeding the landings of dead fish south of $40^\circ 10^\prime$ N. latitude in 1999 and north of  $40^\circ 40^\prime$ N latitude in 1999; and the pattern continues through 2014.
+The nearshore live-fish fishery developed in California in the late 1980s and early 1900s and extended into Oregon by the mid-1990s, driven by the market prices for live fish.  Northern Oregon (north of Florence) does not contribute significantly to the live-fish fishery (maximum removal of 0.02 mt) as the the market for this sector of the fishery is centered in California.  Catches from the live-fish fishery in southern Oregon (south of Florence) has composed the majority of the catch in that state since 1999, and peaked in 2002.  In California, the landings of live fish begin exceeding the landings of dead fish south of $40^\circ 10^\prime$ N. latitude in 1999 and north of  $40^\circ 10^\prime$ N. latitude in 1999; and the pattern continues through 2014.
 
-The historical reconstruction of landings from the recreational fishery for China rockfish in California goes back to the 1928, and the fishery began significantly increasing in the late 1940s.  The recreational catches in California are significantly higher than the commercial catches, and have decreased in the last 15 years (Table \ref{tab:Exec_catch}).  Recreational catches in California peaked in 1987 at 53.29 mt and has declined to roughly 10-20 mt per year over the last 10 years. The trend is opposite in Oregon, with the magnitude of the commercial landings greater than the recreational landings. The historical landings from the recreational fleet in Oregon start in 1973 at 0.86 mt, peak in 1983 at 6.07 mt and again in 1993 at 6.04 mt.  The recreational catches over the last 10 years in Oregon have ranged from 1.67 mt in 2014 to 3.66 mt in 2007.  Recreational landings in Washington peaked in 1992 (7.98 mt) and have remained between 2-4 mt from 2005-2014.
+The historical reconstruction of landings from the recreational fishery for China rockfish in California goes back to the 1928, and the fishery began significantly increasing in the late 1940s.  The recreational catches in California are significantly higher than the commercial catches, and have decreased in the last 5 years (Table \ref{tab:Exec_catch}).  Recreational catches in California peaked in 1987 at 53.29 mt and have declined to roughly 10-20 mt per year over the last 10 years. The trend is opposite in Oregon, with the magnitude of the commercial landings greater than the recreational landings. The historical landings from the recreational fleet in Oregon start in 1973 at 0.86 mt, peak in 1983 at 6.07 mt and again in 1993 at 6.04 mt.  The recreational catches over the last 10 years in Oregon have ranged from 1.67 mt in 2014 to 3.66 mt in 2007.  Recreational landings in Washington peaked in 1992 (7.98 mt) and have remained between 2-4 mt from 2005-2014.
 
 
 \FloatBarrier
@@ -127,9 +127,9 @@ ggplot(Exec_ca_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='s
 \newpage
 
 ##Data and assessment{-}
-China rockfish was assessed as a data moderate stock in 2013 [@Cope2015] using the XDB-SRA modeling framework.  This assessment uses the newest version of Stock Synthesis (3.24u).  The model begins in 1900, and assumes the stock was at an unfished equilibrium in 1898.
+China rockfish was assessed as a data moderate stock in 2013 [@Cope2015] using the XDB-SRA modeling framework.  This assessment uses the newest version of Stock Synthesis (3.24u).  The model begins in 1900, and assumes the stock was at an unfished equilibrium that year.
 
-Data within the central and northern models were stratified as follows: Central model north and south of Florence, OR and MCAs 1-2 (southern WA) and MCAs 3-4 (northern WA) (Figure \ref{fig:boundary_map}).  Data for the management area south of $40^\circ 10^\prime$ N. latitude are aggregated, in part because historical removals from the dominant fisheries (recreational charter and private boat modes) prior to 2004 are not available at a finer spatial scale. The data used in the assessments includes commercial landings, CPUE indices from recreational and commercial (OR) fleets, and length and age compositions.  Discard data (total discards in mt, size compositions, and discard mortality rates) from the commercial live-fish fishery were modelled south of $40^\circ 10^\prime$ N. latitude.  Where available, age and length compositions for the recreational party/charter (CPFV) and private/rental modes were developed separately.
+Data within the central and northern models were stratified as follows: Central model north and south of Florence, OR and MCAs 1-2 (southern WA) and MCAs 3-4 (northern WA) (Figure \ref{fig:boundary_map}).  Data for the management area south of $40^\circ 10^\prime$ N. latitude are aggregated, in part because historical removals from the dominant fisheries (recreational charter and private boat modes) prior to 2004 are not available at a finer spatial scale. The data used in the assessments includes commercial and recreational landings, Catch per Unit Effort (CPUE) indices from recreational and commercial (OR) fleets, and length and age compositions.  Discard data (total discards in mt, size compositions, and discard mortality rates) from the commercial live-fish fishery were modelled south of $40^\circ 10^\prime$ N. latitude.  Where available, age and length compositions for the recreational party/charter (CPFV) and private/rental modes were developed separately.
  
 ![Map depicting the boundaries for the three base-case models, Southern model (south of $40^\circ 10^\prime$ N. latitude), Central model (south of $40^\circ 10^\prime$ N. latitude to the OR-WA border), and the Northern model (WA state MCAs 1-4).  \label{fig:assess_region_map}](plots/assess_region_map.png)
 
@@ -418,11 +418,13 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
       Exploit = modN$derived_quants[grep("F",modN$derived_quants$LABEL),]
       Exploit = Exploit[c(-1,-2),]
       
-      negSPR = subset(modN$sprseries, select=c('Year','SPR','SPR_std'))
+      SPRratio = modN$derived_quants[grep("SPRratio",modN$derived_quants$LABEL),]
+      SPRratio = SPRratio[c(-1,-2),]
+
 #########################################################################
 #CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
@@ -437,28 +439,27 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
 
 
     #pull the estimated depletion and 
-     negSPRyrs = subset(negSPR, Year>=FirstYR & Year<=LastYR)
-     negSPRyrs$SPR = 1 - negSPRyrs$SPR
-     negSPRyrs$lowerCI = round(negSPRyrs$SPR +qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
-     negSPRyrs$upperCI = round(negSPRyrs$SPR -qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
-     negSPRyrs$lowerCI = abs(negSPRyrs$lowerCI)
-     negSPRyrs$upperCI = 0
-     negSPRyrs$CI = paste("(",negSPRyrs$upperCI,"-",negSPRyrs$lowerCI,")",sep="")
-     negSPRtab=subset(negSPRyrs,select=c('Year','SPR','CI'))
-     negSPRtab$Year = as.factor(negSPRtab$Year)
-     colnames(negSPRtab) = c('Year','Estimated 1-SPR (%)','~ 95% confidence interval')
-     
-     negSPR_Exploit = cbind(negSPRtab,Exploittab)
-     negSPR_Exploit_N = negSPR_Exploit
+      SPRratioyrs = SPRratio[SPRratio$LABEL>=paste("SPRratio_",FirstYR,sep='') &  
+                       SPRratio$LABEL<=paste("SPRratio_",LastYR,sep=''),]     
+    SPRratioyrs$Year = seq(FirstYR,LastYR)
+    SPRratioyrs$lowerCI = round(SPRratioyrs$Value +qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
+    SPRratioyrs$upperCI = round(SPRratioyrs$Value -qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
+    SPRratioyrs$CI = paste("(",SPRratioyrs$lowerCI,"-",SPRratioyrs$upperCI,")",sep="")
+    SPRratiotab=subset(SPRratioyrs,select=c('Year','Value','CI'))
+    SPRratiotab$Year = as.factor(SPRratiotab$Year)
+    colnames(SPRratiotab) = c('Year','Fishing intensity','~ 95% confidence interval')
+    
+    SPRratio_Exploit = cbind(SPRratiotab,Exploittab)
+    SPRratio_Exploit_N = SPRratio_Exploit
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the (Washington state MCAs 1-4) China rockfish model."),
+  SPRratio_Exploit.table = xtable(SPRratio_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the northern China rockfish model (Washington state MCAs 1-4)."),
                label='tab:SPR_Exploit_N')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
-    align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(negSPR_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+    align(SPRratio_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SPRratio_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 \FloatBarrier
@@ -469,11 +470,13 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
       Exploit = modC$derived_quants[grep("F",modC$derived_quants$LABEL),]
       Exploit = Exploit[c(-1,-2),]
       
-      negSPR = subset(modC$sprseries, select=c('Year','SPR','SPR_std'))
+      SPRratio = modC$derived_quants[grep("SPRratio",modC$derived_quants$LABEL),]
+      SPRratio = SPRratio[c(-1,-2),]
+
 #########################################################################
 #CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
@@ -488,28 +491,27 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
 
 
     #pull the estimated depletion and 
-     negSPRyrs = subset(negSPR, Year>=FirstYR & Year<=LastYR)
-     negSPRyrs$SPR = 1 - negSPRyrs$SPR
-     negSPRyrs$lowerCI = round(negSPRyrs$SPR +qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
-     negSPRyrs$upperCI = round(negSPRyrs$SPR -qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
-     negSPRyrs$lowerCI = abs(negSPRyrs$lowerCI)
-     negSPRyrs$upperCI = 0
-     negSPRyrs$CI = paste("(",negSPRyrs$upperCI,"-",negSPRyrs$lowerCI,")",sep="")
-     negSPRtab=subset(negSPRyrs,select=c('Year','SPR','CI'))
-     negSPRtab$Year = as.factor(negSPRtab$Year)
-     colnames(negSPRtab) = c('Year','Estimated 1-SPR (%)','~ 95% confidence interval')
-     
-     negSPR_Exploit = cbind(negSPRtab,Exploittab)
-     negSPR_Exploit_C = negSPR_Exploit
+      SPRratioyrs = SPRratio[SPRratio$LABEL>=paste("SPRratio_",FirstYR,sep='') &  
+                       SPRratio$LABEL<=paste("SPRratio_",LastYR,sep=''),]     
+    SPRratioyrs$Year = seq(FirstYR,LastYR)
+    SPRratioyrs$lowerCI = round(SPRratioyrs$Value +qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
+    SPRratioyrs$upperCI = round(SPRratioyrs$Value -qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
+    SPRratioyrs$CI = paste("(",SPRratioyrs$lowerCI,"-",SPRratioyrs$upperCI,")",sep="")
+    SPRratiotab=subset(SPRratioyrs,select=c('Year','Value','CI'))
+    SPRratiotab$Year = as.factor(SPRratiotab$Year)
+    colnames(SPRratiotab) = c('Year','Fishing intensity','~ 95% confidence interval')
+    
+    SPRratio_Exploit = cbind(SPRratiotab,Exploittab)
+    SPRratio_Exploit_C = SPRratio_Exploit
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the central ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) China rockfish model."),
+  SPRratio_Exploit.table = xtable(SPRratio_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the central China rockfish model ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border)."),
                label='tab:SPR_Exploit_C')  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 6 values    
-    align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(negSPR_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+    align(SPRratio_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SPRratio_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 
@@ -521,11 +523,12 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
       Exploit = modS$derived_quants[grep("F",modS$derived_quants$LABEL),]
       Exploit = Exploit[c(-1,-2),]
       
-      negSPR = subset(modS$sprseries, select=c('Year','SPR','SPR_std'))
+      SPRratio = modS$derived_quants[grep("SPRratio",modS$derived_quants$LABEL),]
+      SPRratio = SPRratio[c(-1,-2),]
 #########################################################################
 #CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table
 #########################################################################
 
     #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
@@ -540,28 +543,27 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
 
 
     #pull the estimated depletion and 
-     negSPRyrs = subset(negSPR, Year>=FirstYR & Year<=LastYR)
-     negSPRyrs$SPR = 1 - negSPRyrs$SPR
-     negSPRyrs$lowerCI = round(negSPRyrs$SPR +qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
-     negSPRyrs$upperCI = round(negSPRyrs$SPR -qnorm(0.025)*negSPRyrs$SPR_std, digits=2)
-     negSPRyrs$lowerCI = abs(negSPRyrs$lowerCI)
-     negSPRyrs$upperCI = 0
-     negSPRyrs$CI = paste("(",negSPRyrs$upperCI,"-",negSPRyrs$lowerCI,")",sep="")
-     negSPRtab=subset(negSPRyrs,select=c('Year','SPR','CI'))
-     negSPRtab$Year = as.factor(negSPRtab$Year)
-     colnames(negSPRtab) = c('Year','Estimated 1-SPR (%)','~ 95% confidence interval')
-     
-     negSPR_Exploit = cbind(negSPRtab,Exploittab)
-     negSPR_Exploit_S = negSPR_Exploit
+     SPRratioyrs = SPRratio[SPRratio$LABEL>=paste("SPRratio_",FirstYR,sep='') &  
+                       SPRratio$LABEL<=paste("SPRratio_",LastYR,sep=''),]     
+    SPRratioyrs$Year = seq(FirstYR,LastYR)
+    SPRratioyrs$lowerCI = round(SPRratioyrs$Value +qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
+    SPRratioyrs$upperCI = round(SPRratioyrs$Value -qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
+    SPRratioyrs$CI = paste("(",SPRratioyrs$lowerCI,"-",SPRratioyrs$upperCI,")",sep="")
+    SPRratiotab=subset(SPRratioyrs,select=c('Year','Value','CI'))
+    SPRratiotab$Year = as.factor(SPRratiotab$Year)
+    colnames(SPRratiotab) = c('Year','Fishing intensity','~ 95% confidence interval')
+    
+    SPRratio_Exploit = cbind(SPRratiotab,Exploittab)
+    SPRratio_Exploit_S = SPRratio_Exploit
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  negSPR_Exploit.table = xtable(negSPR_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the southern (south of $40^\\circ 10^\\prime$ N. latitude) China rockfish model."),
+  SPRratio_Exploit.table = xtable(SPRratio_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the southern China rockfish model (south of $40^\\circ 10^\\prime$ N. latitude)."),
                label='tab:SPR_Exploit_S')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-    align(negSPR_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(negSPR_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+   
+    align(SPRratio_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SPRratio_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 <!-- END: CREATE EXPLOITATION AND 1-SPR TABLE -->
@@ -813,6 +815,11 @@ China rockfish is managed in the northern and southern Nearshore Rockfish Comple
 <!-- *************************BEGIN: CREATE MANAGEMENT PERFORMANCE TABLE*******************************************--> 
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+#########################################################################
+#CHANGE ME
+      FirstYR=2006  # minimum year for the Spawning biomass table
+      LastYR=2015  # maximum year for the Spawning biomass table
+#########################################################################
 
 mngmnt = read.csv("./txt_files/mngmt_performance.csv")
 
@@ -851,32 +858,45 @@ mngmt = read.csv("./txt_files/mngmt_performance_base.csv")
 mngmt = mngmt[,-1]
 
 ###north
-negSPR_Exploit_N = negSPR_Exploit_N[,c(2,4)]
-negSPR_Exploit_N[,c(1,2)] = round(negSPR_Exploit_N[,c(1,2)],2)
-AgexB_N = seq(FirstYR,LastYR)
+SPRratio_Exploit_N = SPRratio_Exploit_N[,c(2,4)]
+SPRratio_Exploit_N[,c(1,2)] = round(SPRratio_Exploit_N[,c(1,2)],2)
+SPRratio_Exploit_N = SPRratio_Exploit_N[-dim(SPRratio_Exploit_N)[1],]
+blanks = c(NA,NA)
+SPRratio_Exploit_N = rbind(SPRratio_Exploit_N,blanks)
+Age5biomassN = modN$timeseries[,c('Yr',"Bio_smry")]
+Age5biomassyrsN = subset(Age5biomassN, Yr>=(FirstYR) & Yr<=(LastYR))
+Age5biomassyrsN = Age5biomassyrsN[,2]
 Spawn_Deplete_N = Spawn_Deplete_N[,c(2:5)]
 Spawn_Deplete_N[,1] = round(Spawn_Deplete_N[,1],0)
 Spawn_Deplete_N[,3] = round(Spawn_Deplete_N[,3],2)
 Recruittab_N = Recruittab_N[,c(2,3)]
-North_summary = cbind(negSPR_Exploit_N,AgexB_N,Spawn_Deplete_N,Recruittab_N)
+North_summary = cbind(SPRratio_Exploit_N,Age5biomassyrsN,Spawn_Deplete_N,Recruittab_N)
 ###central
-negSPR_Exploit_C = negSPR_Exploit_C[,c(2,4)]
-negSPR_Exploit_C[,c(1,2)] = round(negSPR_Exploit_C[,c(1,2)],2)
-AgexB_C = seq(FirstYR,LastYR)
+SPRratio_Exploit_C = SPRratio_Exploit_C[,c(2,4)]
+SPRratio_Exploit_C[,c(1,2)] = round(SPRratio_Exploit_C[,c(1,2)],2)
+SPRratio_Exploit_C = SPRratio_Exploit_C[-dim(SPRratio_Exploit_C)[1],]
+SPRratio_Exploit_C = rbind(SPRratio_Exploit_C,blanks)
+Age5biomassC = modC$timeseries[,c('Yr',"Bio_smry")]
+Age5biomassyrsC = subset(Age5biomassC, Yr>=(FirstYR) & Yr<=(LastYR))
+Age5biomassyrsC = Age5biomassyrsC[,2]
 Spawn_Deplete_C = Spawn_Deplete_C[,c(2:5)]
 Spawn_Deplete_C[,1] = round(Spawn_Deplete_C[,1],0)
 Spawn_Deplete_C[,3] = round(Spawn_Deplete_C[,3],2)
 Recruittab_C = Recruittab_C[,c(2,3)]
-Central_summary = cbind(negSPR_Exploit_C,AgexB_C,Spawn_Deplete_C,Recruittab_C)
+Central_summary = cbind(SPRratio_Exploit_C,Age5biomassyrsC,Spawn_Deplete_C,Recruittab_C)
 ###south
-negSPR_Exploit_S = negSPR_Exploit_S[,c(2,4)]
-negSPR_Exploit_S[,c(1,2)] = round(negSPR_Exploit_S[,c(1,2)],2)
-AgexB_S = seq(FirstYR,LastYR)
+SPRratio_Exploit_S = SPRratio_Exploit_S[,c(2,4)]
+SPRratio_Exploit_S[,c(1,2)] = round(SPRratio_Exploit_S[,c(1,2)],2)
+SPRratio_Exploit_S = SPRratio_Exploit_S[-dim(SPRratio_Exploit_S)[1],]
+SPRratio_Exploit_S = rbind(SPRratio_Exploit_S,blanks)
+Age5biomassS = modS$timeseries[,c('Yr',"Bio_smry")]
+Age5biomassyrsS = subset(Age5biomassS, Yr>=(FirstYR) & Yr<=(LastYR))
+Age5biomassyrsS = Age5biomassyrsS[,2]
 Spawn_Deplete_S = Spawn_Deplete_S[,c(2:5)]
 Spawn_Deplete_S[,1] = round(Spawn_Deplete_S[,1],0)
 Spawn_Deplete_S[,3] = round(Spawn_Deplete_S[,3],2)
 Recruittab_S = Recruittab_S[,c(2,3)]
-South_summary = cbind(negSPR_Exploit_S,AgexB_S,Spawn_Deplete_S,Recruittab_S)
+South_summary = cbind(SPRratio_Exploit_S,Age5biomassyrsS,Spawn_Deplete_S,Recruittab_S)
 
 
 base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
@@ -888,11 +908,11 @@ base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
                       'China contrib. ABC/OFL', 'Nearshore RF OY/ACL','China contrib. OY/ACL',
                       'Landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL',
                       'China contrib. ABC/OFL','Nearshore RF OY/ACL','China contrib. OY/ACL'
-                      ,'1-SPR','Exploitation rate','Age 0+ biomass (mt)','Spawning Biomass',
+                      ,'1-SPR','Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
                       '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI','1-SPR',
-                      'Exploitation rate','Age 0+ biomass (mt)','Spawning Biomass',
+                      'Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
                       '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI','1-SPR',
-                      'Exploitation rate','Age 0+ biomass (mt)','Spawning Biomass',
+                      'Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
                       '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI')
  base_summary$region = c('North of','$40^\\circ 10^\\prime$ N','','','','',
                          'South of','$40^\\circ 10^\\prime$ N','','','','',
@@ -1051,7 +1071,7 @@ Discard of China rockfish likely occurred before the closure of nearshore commer
 
 **Oregon and California**
 
-Estimates of discarded China rockfish in commercial fisheries were provided by the West Coast Groundfish Observer Program (WCGOP). These were available for the years 2003-2013 north of $40^\circ 10^\prime$ N lat., and 2004-2013 to the south. WCGOP provided estimates with and without the depth-specific discard mortality rates applied. These estimates indicate that the Nearshore Fixed-gear fishery was the only sector with observed discards of China rockfish and there were strong differences in rates of discarding north and south of $40^\circ 10^\prime$ N. latitude, (Figure \ref{fig:discard_comm_est}). 
+Estimates of discarded China rockfish in commercial fisheries were provided by the West Coast Groundfish Observer Program (WCGOP). These were available for the years 2003-2013 north of $40^\circ 10^\prime$ N lat., and 2004-2013 to the south. WCGOP provided estimates with and without the depth-specific discard mortality rates applied. These estimates indicate that the Nearshore Fixed-gear fishery was the only sector with observed discards of China rockfish and there were strong differences in rates of discarding north and south of $40^\circ 10^\prime$ N. latitude, (Figure \ref{fig:discard_comm_est} and Table \ref{tab:WCGOP_trip_discard}). 
 
 Discard rates were consistently low north of $40^\circ 10^\prime$, where no year had estimated mortality from discards greater than either 0.5 mt or 5\% of the landings. A linear regression relating discards to retained (with intercept fixed at the origin) had a slope of  0.0269, indicating that discards on average represent 2.69\% of the landings in this sector (Figure \ref{fig:discard_comm_relN}). This value is similar to a simple average of the discard fractions, which was 2.75\%.
 
@@ -1059,9 +1079,9 @@ South of $40^\circ 10^\prime$ N. latitude, commercial landings were lower and es
 
 Discards patterns in the area of Northern California between $40^\circ 10^\prime$, and $42^\circ$ N. latitude appears to be more similar to Oregon than the rest of California (Table \ref{tab:discard_comm_bylat}). Although expanded fleet-wide discard estimates were not available on this smaller spatial-scale, only 9\% of observed trips between $40^\circ 10^\prime$ to $42^\circ$ that were associated with any catch of China rockfish had any observed discards of China rockfish. South of $40^\circ 10^\prime$, 82\%-100\% of such trips had observed discards of China rockfish.
 
-The patterns of the discards in commercial fisheries suggest that north of $40^\circ 10^\prime$ discard mortality of China rockfish is small enough that it is more parsimonious to account for this mortality increasing the landed catch estimates by 2.69\%. South of $40^\circ 10^\prime$, total discards are greater than landings in some years and discard mortality represents a large fraction of the total mortality of China rockfish. The discards are primarily fish below the minimum legal size of 12 inches (Figure discard TBD). These factors support modeling the discard process explicitly through a retention function. This will allows the model to apply the mortality from discards to the appropriate subset of the population. Furthermore, the increasing trend in discard rates may be an indication of changes in population size structure that should be accounted for in the assessment.
+The patterns of the discards in commercial fisheries suggest that north of $40^\circ 10^\prime$ discard mortality of China rockfish is small enough that it is more parsimonious to account for this mortality increasing the landed catch estimates by 2.69\%. South of $40^\circ 10^\prime$, total discards are greater than landings in some years and discard mortality represents a large fraction of the total mortality of China rockfish. The discards are primarily fish below the minimum legal size of 12 inches (Figure \ref{fig:S_comp_lendat_flt2mkt1}). These factors support modeling the discard process explicitly through a retention function. This will allows the model to apply the mortality from discards to the appropriate subset of the population. Furthermore, the increasing trend in discard rates may be an indication of changes in population size structure that should be accounted for in the assessment.
 
-
+In order to explicitly model the discard and retention process, it is necessary to use the estimate of total discarded fish, whether surviving or not, as this is the best representation of the amount of fish the were selected by the fishery but not represented in the landed catch. Discard mortality can then be applied separately to the model estimates of discarded fish. The mortality of discarded China rockfish is estimated by WCGOP as a function of the fishing depth which varies by year (Table \ref{tab:WCGOP_trip_discard}). The average mortality fraction south of $40^\circ 10^\prime$ across all years was 59%.
 
 
 ###Fishery-Dependent Data: Recreational Landings and Discards
@@ -1354,7 +1374,7 @@ _Northern model (Washington state MCAs 1-4)_
 
 *Recreational: Washington (WDFW)*
 
-Recreational length- and age- composition data were provided directly from WDFW during winter 2015. WDFW routinely collected recreational biological samples for China rockfish between 1995 and 2014, with all but one year sampled during 1979 to 1983. These composition data lack information on the number of fish sampled out of those landed in a given trip, and therefore are used without expansion to the sample level. Unexpanded recreational composition data are frequently used in west coast stock assessments for the above reason. Length and age data collected from dockside recreational samples WA are summarized by the number of fish sampled (Table \ref{tab:WA_FishD_bio}). The WA recreational length- and age- compositions are shown in Figures \ref{fig:N_comp_lendat_flt1mkt2}, \ref{fig:N_comp_lendat_flt3mkt2}, and \ref{fig:N_comp_condAALdat_bubflt3mkt2}.
+Recreational length- and age- composition data were provided directly from WDFW during winter 2015. WDFW routinely collected recreational biological samples for China rockfish between 1995 and 2014, with all but one year sampled during 1979 to 1983. These composition data lack information on the number of fish sampled out of those landed in a given trip, and therefore are used without expansion to the sample level. Unexpanded recreational composition data are frequently used in west coast stock assessments for the above reason. Length and age data collected from dockside recreational samples WA are summarized by the number of fish sampled (Table \ref{tab:WA_FishD_bio}). The WA recreational length- and age- compositions are shown in Figures \ref{fig:N_comp_lendat_flt1mkt2}, \ref{fig:N_comp_lendat_flt3mkt2}, \ref{fig:N_comp_lendat_sex1mkt2_multi-fleet_comparison}, and \ref{fig:N_comp_condAALdat_bubflt3mkt2}.
 
 *Recreational: California MRFSS and CRFS length composition data*
 
@@ -1372,7 +1392,7 @@ The Northern California Marine Sport Fish Survey conducted an assessment survey 
 
 Biological data from commercial fisheries for China rockfish were extracted from PacFIN (PSMFC) on May 18, 2015. Commercial landings and the biological characteristics of hook and line landings were sampled from 1995-2014 in Oregon and in 1991-2013 California. There is no commercial catch of China rockfish in the state of Washington. Currently, port biologists employed by each state fishery agency collect species-composition information and biological data from the landed catches. The monitoring programs currently in place vary between the states but are generally based on stratified, multistage sampling designs. The OR data were available by live fish fishery landings and dead fish fishery landings, but fish conditions were not available for PacFIN for the CA landings. Due to the lack of fish condition data for CA in PacFIN, the CA commercial fishery compositions were downloaded from the [CALCOM](http://128.114.3.187/) database.
 
-Annual commercial length- and age-frequency distributions were developed for each state for which observations were available, following the same bin structure as was used for research observations. For each fleet, the raw observations were expanded to the sample level, to allow for any fish that were not measured, then to the trip level to account for the relative size of the landing from which the sample was obtained. Length and age data collected from commercial landings for OR and CA are summarized by the number of port samples (Tables \ref{tab:OR_pacfin_bio} and \ref{tab:CA_pacfin_bio}). Figures \ref{fig:C_comp_lendat_flt5mkt2}, \ref{fig:C_comp_lendat_flt6mkt2}, and \ref{fig:C_comp_condAALdat_bubflt5mkt2} show plots of the commercial length and age composition data for the central model.  Figures \ref{fig:S_comp_lendat_flt1mkt2}, \ref{fig:S_comp_lendat_flt2mkt1}, and \ref{fig:S_comp_lendat_flt2mkt2} show plots of the commercial length and age composition data for the southern model.
+Annual commercial length- and age-frequency distributions were developed for each state for which observations were available, following the same bin structure as was used for research observations. For each fleet, the raw observations were expanded to the sample level, to allow for any fish that were not measured, then to the trip level to account for the relative size of the landing from which the sample was obtained. Length and age data collected from commercial landings for OR and CA are summarized by the number of port samples (Tables \ref{tab:OR_pacfin_bio} and \ref{tab:CA_pacfin_bio}). Figures \ref{fig:C_comp_lendat_flt5mkt2}, \ref{fig:C_comp_lendat_flt6mkt2},\ref{fig:C_comp_lendat_sex1mkt2_multi-fleet_comparison}, \ref{fig:C_comp_condAALdat_bubflt5mkt2}, and \ref{fig:C_comp_condAALdat_bubflt7mkt2} show plots of the commercial length and age composition data for the central model.  Figures \ref{fig:S_comp_lendat_flt1mkt2}, \ref{fig:S_comp_lendat_flt2mkt1}, and \ref{fig:S_comp_lendat_flt2mkt2} show plots of the commercial length and age composition data for the southern model.
 
 
 *Research: NMFS groundfish ecology survey*      
@@ -1381,7 +1401,7 @@ From 2001-2005, the SWFSC Fisheries Ecology Division conducted longline surveys 
 
 *Research: California Collaborative Fisheries Research Program (CCFRP)*
 
-The [California Collaborative Fisheries Research Program](https://seagrant.mlml.calstate.edu/research/ccfrp/) (CCFRP), created by Rick Starr (Sea Grant and Moss Landing Marine Laboratory) and Dean Wendt (Cal Poly San Luis Obispo), monitors marine protected areas (MPAs) and gathers information useful for fisheries management.  This program has been running in Central California since 2007.  Length compositions for China rockfish were included in this assessment (Figure \ref{fig:S_comp_lendat_flt7mkt0}).
+The [California Collaborative Fisheries Research Program](https://seagrant.mlml.calstate.edu/research/ccfrp/) (CCFRP), created by Rick Starr (Sea Grant and Moss Landing Marine Laboratory) and Dean Wendt (Cal Poly San Luis Obispo), monitors marine protected areas (MPAs) and gathers information useful for fisheries management [@Starr2015].  This program has been running in Central California since 2007.  Length compositions for China rockfish were included in this assessment (Figure \ref{fig:S_comp_lendat_flt7mkt0}).
 
 Future research is planned to use catch-per-unit-effort (cpue) information from this program, comparing relative abundance indices derived from fishery-dependent (FD) and fishery-independent (FI) monitoring programs.  CCFRP data provides a time series of fishery-independent catch and effort at fixed stations, collecting information at sample sites inside and outside of MPAs spanning about 200 miles of the California coast from Point Buchon to A{\~n}o Nuevo.  This FI information, combined with our current FD information (i.e., CPFV onboard observer data), provides an opportunity for fine-scale spatial and temporal analysis of catch rates and species compositions, specifically addressing the research needs identified in nearshore rockfish stock assessments.
 
@@ -1489,7 +1509,7 @@ The first formal assessment of China rockfish was conducted as a data moderate a
 
 4. Revised catch histories for California, Oregon, and Washington. \emph{Rationale}: agency representatives for each state either prepared (OR and WA) or reviewed (CA) revised catch histories for the commercial and recreational fisheries.
 
-5. Updated indices of abundance through 2014. \emph{Rationale}: following research recommendations from the last assessment, current indices include revised recreational CPUE based on spatially-referenced, onboard observer data combined with habitat data, as well as catch and effort data by fishing-stop from the 1998-1999 CDFW onboard observer program.
+5. Updated indices of abundance through 2014. \emph{Rationale}: following research recommendations from the last assessment, current indices include revised recreational CPUE based on spatially-referenced, onboard observer data combined with habitat data, as well as catch and effort data by fishing-stop from the 1988-1999 CDFW onboard observer program.
 
 6. Two new recreational dockside CPUE indices for northern Washington (1981-2014) and Oregon (2004-2014). \emph{Rationale}: Previous assessment had no trend information for Washington state, and did not include CPUE from the high-intensity dockside sampling program in Oregon (ORBS).
 
@@ -1571,17 +1591,18 @@ Base models for all three areas (northern, central, and southern) are combined s
 
 **Northern**
 
-The combined sex northern base-case model produces reasonable estimates of growth parameters, with China rockfish in northern Washington reaching a maximum length of 35.1 cm  (Table \ref{tab:N_model_params}, Figure \ref{fig:growth_all}). The northern base-case model was able to fit the northern Washington recreational index of abundance with an estimated additional standard deviation of 0.15 (Table \ref{tab:N_model_params}). However, there are runs of years in which the model consistently either over or under fits the data (Figure \ref{fig:N_index2_cpuefit_3_WA_NorthernWA_Rec_PR}). The model fit to the index estimates a declining trend in the fit between the 1980s and 1990s, followed by a flat trend through recent years.
+The northern base-case model produces reasonable estimates of growth parameters, with China rockfish in northern Washington reaching a maximum length of 35.1 cm  (Table \ref{tab:N_model_params}, Figure \ref{fig:growth_all}). The northern base-case model was able to fit the northern Washington recreational index of abundance with an estimated additional standard deviation of 0.15 (Table \ref{tab:N_model_params}). However, there are runs of years in which the model consistently either over or under fits the data (Figure \ref{fig:N_index2_cpuefit_3_WA_NorthernWA_Rec_PR}). The model fit to the index estimates a declining trend in the fit between the 1980s and 1990s, followed by a flat trend through recent years.
  
-Fits to the time aggregated southern Washington recreational length distributions are poor, where data are sparse, with the model expecting more fish sized approximately 27 cm to 34 cm and fewer fish greater than 40 cm than are present in the data (Figure \ref{fig:N_comp_lenfit_mkt2_aggregated_across_time}). However, fits to the time aggregated northern Washington recreational length distributions, the area with most of the data and landings, are good (Figure \ref{fig:N_comp_lenfit_mkt2_aggregated_across_time}). The model fits the recreational conditional age-at-length data reasonably (Figure \ref{fig:N_comp_condAALfit_data_weighting_TA1.8_condAge3_WA_NorthernWA_Rec_PR}), particularly for years with larger sample sizes.
+Fits to the time aggregated southern Washington recreational length distributions are poor, where data are sparse, with the model expecting more fish sized approximately 27 cm to 34 cm and fewer fish greater than 40 cm than are present in the data (Figure \ref{fig:N_comp_lenfit_mkt2_aggregated_across_time}). However, fits to the time aggregated northern Washington recreational length distributions, the area with most of the data and landings, are good 
+(Figures \ref{fig:N_comp_lenfit_mkt2_aggregated_across_time} and \ref{fig:N_comp_lenfit_sex1mkt2_multi-fleet_comparison}). The model fits the recreational conditional age-at-length data reasonably (Figures \ref{fig:N_comp_condAALfit_residsflt3mkt2} and \ref{fig:N_comp_gstagefit_flt3mkt2}).  There are a few outliers, including two 15-year-old fish in the 22 cm bin in 2005 and one 14-year-old fish in the 20 cm bin in 2010 but there are no strong patterns in the residuals.
  
 Estimated selectivity curves for the Washington recreational southern and northern fleets suggest different ascending width parameters, resulting in the southern fleet selecting smaller China rockfish than the northern fleet (Figure \ref{fig:N_sel01_multiple_fleets_length1}). The southern fleet asymptote was unable to be estimated so it was fixed to the estimate from the northern fleet.
 
 **Central**
 
-The combined sex central base-case model produces reasonable estimates of growth parameters, with China rockfish in the central area reaching a maximum length of 37.4 cm  (Table \ref{tab:C_model_params}, Figure \ref{fig:growth_all}). The central base-case model fits to the indices of abundance are generally flat to slightly declining, with many model fits showing runs of years in which the model consistently either over or under fits the data (Figures \ref{fig:C_index2_cpuefit_6_OR_SouthernOR_Comm_Live}, \ref{fig:C_index2_cpuefit_7_OR_SouthernOR_Rec_PC}, \ref{fig:C_index2_cpuefit_10_OR_NorthernOR_Rec_PC}, and \ref{fig:C_index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS}). Each of the central model indices of abundance except the Oregon southern commercial live fish fishery were fit estimating additional standard deviations of 0.15, 0.50, and 0.08 for the Oregon southern recreational party/charter fishery, the Oregon northern recreational party/charter fishery, and the Oregon southern recreational party/charter fishery, respectively (Table \ref{tab:C_model_params}). 
+The central base-case model produces reasonable estimates of growth parameters, with China rockfish in the central area reaching a maximum length of 37.4 cm  (Table \ref{tab:C_model_params}, Figure \ref{fig:growth_all}). The central base-case model fits to the indices of abundance are generally flat to slightly declining, with many model fits showing runs of years in which the model consistently either over or under fits the data (Figures \ref{fig:C_index2_cpuefit_6_OR_SouthernOR_Comm_Live}, \ref{fig:C_index2_cpuefit_7_OR_SouthernOR_Rec_PC}, \ref{fig:C_index2_cpuefit_10_OR_NorthernOR_Rec_PC}, \ref{fig:C_index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS},and \ref{fig:C_comp_lenfit_sex1mkt2_multi-fleet_comparison}). Each of the central model indices of abundance except the Oregon southern commercial live fish fishery were fit estimating additional standard deviations of 0.15, 0.50, and 0.08 for the Oregon southern recreational party/charter fishery, the Oregon northern recreational party/charter fishery, and the Oregon southern recreational party/charter fishery, respectively (Table \ref{tab:C_model_params}). 
 
-Fits to the time-aggregated central model length distributions are reasonable given the small samples sizes, particularly during the early years, and the mirroring of fleet selectivities between fleets (Figure \ref{fig:C_comp_lenfit_mkt2_aggregated_across_time}). The model fits the Oregon southern commercial fishery best, shifts the peak of the fitted distribution to the left for the Oregon southern recreational private/rental, Oregon southern recreational party/charter, and Oregon northern recreational private/rental fleets, and under fits the peak of the time aggregated length distributions for the Oregon southern commercial live fish and Oregon northern recreational party/charter fleets. The model fits the conditional age-at-length data poorly during the early 2000s, with fits improving through time (Figures \ref{fig:C_comp_condAALfit_data_weighting_TA1.8_condAge5_OR_SouthernOR_Comm_Dead} and \ref{fig:C_comp_condAALfit_data_weighting_TA1.8_condAge7_OR_SouthernOR_Rec_PC}). In many cases the model expects more fish in the plus group (age 50) than are actually present in the data (for example Figure \ref{fig:C_comp_agefit_mkt2_aggregated_across_time}).
+Fits to the time-aggregated central model length distributions are reasonable given the small samples sizes, particularly during the early years, and the mirroring of fleet selectivities between fleets (Figure \ref{fig:C_ comp_agefit_flt10mkt2}). The model fits the Oregon southern commercial fishery best, shifts the peak of the fitted distribution to the left for the Oregon southern recreational private/rental, Oregon southern recreational party/charter, and Oregon northern recreational private/rental fleets, and under fits the peak of the time aggregated length distributions for the Oregon southern commercial live fish and Oregon northern recreational party/charter fleets. The model fits the conditional age-at-length data from the southern Oregon commercial dead-fish fishery poorly with clusters in the residuals and fewer observations in the age-50+ bin than expected by the model (Figure \ref{fig:C_comp_condAALfit_residsflt5mkt2}). The residual patterns are less notable in the fit to conditional age-at-length data from the southern Oregon recreational party/charter (Figure \ref{fig:C_comp_condAALfit_residsflt7mkt2}). For both these datasets, the largest residuals are associated with young fish at large sizes, including commercial catch of fish aged 10 years and younger in the 35-40cm range in 2002 through 2004 and a recreational observation in 2011 in the 44 cm bin estimated at 10 years old.  In many cases the model expects more fish in the plus group (age 50) than are actually present in the data.
 
 The central model does not explicitly model discards due to low discard rates and the limited availability of discard data. However, a discard fraction of 2.69% of the annual commercial landings has been added to the commercial landings to account for the total removals by the commercial fisheries. 
 
@@ -1763,7 +1784,34 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- ******************************************************************************************************************************************** --> 
 <!-- ************************************************Commercial Discards TABLES*******************************************************************--> 
 <!-- ******************************************************************************************************************************************** -->
-<!-- CA/OR commercial discards TABLES--> 
+<!-- CA/OR commercial discards TABLES1--> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+     WCGOP_trip_discard = read.csv("./txt_files/WCGOP_trips.csv")
+     colnames(WCGOP_trip_discard) = c('Year','Area','Estimated total discard (mt)','CV of total discard','Estimated dead discard (mt)',
+                                      'Estimated mortality fraction','Estimated landings (mt)','Estimated dead discard + landings',
+                                      'Ratio of dead discard:total dead')
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+      WCGOP_trip_discard.table = xtable(WCGOP_trip_discard, caption = c("Estimated discarded and retained China Rockfish in the Nearshore 
+                                                                        Fixed-gear Fishery provided by the West Coast Groundfish Observer 
+                                                                        Program (WCGOP). For the area South of $40^\\circ 10^\\prime$, where 
+                                                                        discards are higher, bootstraping was used to estimated a coefficient 
+                                                                        of variation (CV) of the total discard amount. The mortality of discarded
+                                                                        China Rockfish is estimated by WCGOP as a function of the fishing depth 
+                                                                        which varies by year. The average mortality fraction south of 
+                                                                        $40^\\circ 10^\\prime$ across all years was 59\\%."),label="tab:WCGOP_trip_discard")
+      
+     align(WCGOP_trip_discard.table) = c('l','c','c','>{\\centering}p{.7in}','>{\\centering}p{.7in}','>{\\centering}p{.7in}',
+                                         '>{\\centering}p{.7in}','>{\\centering}p{.7in}','>{\\centering}p{.7in}','>{\\centering}p{.7in}') 
+                                    
+      print(WCGOP_trip_discard.table,include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x},scalebox=.9)
+
+```
+
+
+
+<!-- CA/OR commercial discards TABLES2--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
      discard_comm = read.csv("./txt_files/Discard_comm_bylat.csv")
      colnames(discard_comm) = c('Latitude range','Trips observed','Trips with discards','Percent with discards')
@@ -2092,7 +2140,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 \FloatBarrier
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
         #MRFSS S index
-         MRFSS_N_index1.table = xtable(MRFSS_N_index1,caption=c("Year effects for the Northern CA MRFSS dockside index."),
+         MRFSS_N_index1.table = xtable(MRFSS_N_index1,caption=c("Year effects for the Oregon and Northern CA MRFSS dockside index."),
                                             label='tab:MRFSS_N_index')
         align(MRFSS_N_index1.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
         print(MRFSS_N_index1.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",sanitize.text.function = function(x){x})
@@ -2226,14 +2274,14 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
     #prehistoric AIC and year effects tables
-             prehist_onboard_aic.table = xtable(prehist_onboard_aic,caption=c("AIC and BIC values for each model considered for the California 1998-1999
+             prehist_onboard_aic.table = xtable(prehist_onboard_aic,caption=c("AIC and BIC values for each model considered for the California 1988-1999
                                                                     onboard observer index."), label='tab:prehist_onboard_aic',digits=2)
             align(prehist_onboard_aic.table)='llcc'  
             print(prehist_onboard_aic.table, include.rownames=FALSE, sanitize.text.function = function(x){x},
                    caption.placement="top",scalebox=.9)
         
     #prehistoric table
-          prehist.table = xtable(prehist_onboard1,caption=c("Year effects for the California 1998-1999 onboard observer index"),
+          prehist.table = xtable(prehist_onboard1,caption=c("Year effects for the California 1988-1999 onboard observer index"),
                                  label='tab:prehist_onboard',digits=4)
           print(prehist.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth")
         
@@ -2416,7 +2464,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
     Forecast_N = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
                      SpawningByrs$Value,Depletionyrs$Value))
     
-    colnames(Forecast_N)=c("Year","OFL contriubtion (mt)","Landings (mt)","Age 5+ biomass (mt)",
+    colnames(Forecast_N)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
                          "Spawning Biomass (mt)","Depletion")
     Forecast_N$Year= as.factor(Forecast_N$Year)
 
@@ -2470,7 +2518,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
     Forecast_C = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
                      SpawningByrs$Value,Depletionyrs$Value))
     
-    colnames(Forecast_C)=c("Year","OFL contriubtion (mt)","Landings (mt)","Age 5+ biomass (mt)",
+    colnames(Forecast_C)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
                          "Spawning Biomass (mt)","Depletion")
     Forecast_C$Year= as.factor(Forecast_C$Year)
 
@@ -2525,7 +2573,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
     Forecast_S = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
                      SpawningByrs$Value,Depletionyrs$Value))
     
-    colnames(Forecast_S)=c("Year","OFL contriubtion (mt)","Landings (mt)","Age 5+ biomass (mt)",
+    colnames(Forecast_S)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
                          "Spawning Biomass (mt)","Depletion")
     Forecast_S$Year= as.factor(Forecast_S$Year)
 
@@ -2991,7 +3039,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!-- ***************************************************************Commercial Discards FIGURES***************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-![Estimates of discarded and retained China rockfish north and south of $40^\circ 10^\prime$ in the commercial Nearshore Fixed-gear fishery. Note that the y-axis limits and range of years differ between panels. Estimated surviving discards are only shown for the area south of $40^\circ 10^\prime$.  \label{fig:discard_comm_est}](plots/Discard_comm_est.png)
+![Estimates of discarded and retained China rockfish north and south of $40^\circ 10^\prime$ in the commercial Nearshore Fixed-gear fishery. Note that the y-axis limits and range of years differ between panels.  \label{fig:discard_comm_est}](plots/Discard_comm_est.png)
 
 
 ![Relationship between estimated discards and landings of China rockfish in the Nearshore Fixed-gear fishery north of $40^\circ 10^\prime$. The gray points indicate estimates from individual years and the red line is a linear regression through those estimates with intercept fixed at 0. The slope of the linear regression is 0.0269, indicating that discards on average represent 2.69\% of the landings in this sector. \label{fig:discard_comm_relN}](plots/Discard_comm_relN.png)
@@ -3047,7 +3095,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!-- ****************************************************Oregon commercial logbook FIGURES********************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-![Landings from the commercial fishery logbooks in Oregon. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. \label{fig:OR_commlog_map}](plots/OR_commlogbook_map.png)
+![Landings from the commercial fishery logbooks in Oregon. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. \label{fig:OR_commlog_map}](plots/OR_commlogbook_map.pdf)
 
 \newpage
 
@@ -3150,13 +3198,13 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 <!-- MRFSS N--> 
 
-![Species coefficients from the binomial GLM for presence/absence of China rockfish in the northern California MRFSS data set. Horizontal bars are 95\% confidence intervals. Albacore coefficient (<-10) excluded for scale.  \label{fig:MRFSS_N_SM}](plots/MRFSS_N_SM.png)
+![Species coefficients from the binomial GLM for presence/absence of China rockfish in the Oregon and northern California MRFSS data set. Horizontal bars are 95\% confidence intervals. Albacore coefficient (<-10) excluded for scale.  \label{fig:MRFSS_N_SM}](plots/MRFSS_N_SM.png)
 
 
-![Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the northern California MRFSS data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:MRFSS_N_diag}](plots/MRFSS_N_diag.png)
+![Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the Oregon and northern California MRFSS data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:MRFSS_N_diag}](plots/MRFSS_N_diag.png)
 
 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the northern Califronia MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:MRFSS_N_index}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Oregon and northern Califronia MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:MRFSS_N_index}"}
 #ca
   plot(MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$Index, xlab="Year",ylab="Index",ylim=c(0,.35),xlim=c(1980,2003),type='b',xaxt='n',lwd=1.5,pch=19)
   arrows(MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$lowerCI, MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$upperCI, code=3, angle=90,length=0.01)
@@ -3217,11 +3265,11 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 <!-- Recreational onboard prehistoric CA FIGURES-->
 
-![Characterization of the final subset of 1998-1999 California onboard observer data used in delta-GLM analyses for China rockfish. \label{fig:prehist_onboard_summary}](plots/prehist_onboard_summary.png)
+![Characterization of the final subset of 1988-1999 California onboard observer data used in delta-GLM analyses for China rockfish. \label{fig:prehist_onboard_summary}](plots/prehist_onboard_summary.png)
 
-![The distribution of drift-level CPUE data relative to potential covariates evaluated in the China rockfish 1998-1999 California onboard observer delta-GLM analysis. \label{fig:prehist_onboard_CPAH}](plots/prehist_onboard_CPAH.png)
+![The distribution of drift-level CPUE data relative to potential covariates evaluated in the China rockfish 1988-1999 California onboard observer delta-GLM analysis. \label{fig:prehist_onboard_CPAH}](plots/prehist_onboard_CPAH.png)
 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the California 1998-1999 onboard observer program, with 95% lognormal confidence intervals.\\label{fig:prehist_onboard}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the California 1988-1999 onboard observer program, with 95% lognormal confidence intervals.\\label{fig:prehist_onboard}"}
 #prehist
   plot(prehist_onboard$Year, prehist_onboard$Index, xlab="Year",ylab="Index",ylim=c(0,.21),xlim=c(1988,1999),type='b',xaxt='n',lwd=1.5,pch=19)
   arrows(prehist_onboard$Year, prehist_onboard$Index-prehist_onboard$lowerCI, prehist_onboard$Year, prehist_onboard$Index+prehist_onboard$upperCI, code=3, angle=90,length=0.01)
@@ -3231,7 +3279,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 \newpage
 
-![Diagnostic plots for the China rockfish positive catch component lognromal delta-GLM model for the 1998-1999 California onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:prehist_onboard_diag}](plots/prehist_onboard_diag.png)
+![Diagnostic plots for the China rockfish positive catch component lognromal delta-GLM model for the 1988-1999 California onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:prehist_onboard_diag}](plots/prehist_onboard_diag.png)
 
 
 
@@ -3269,14 +3317,15 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![WDFW length compositions for the northern Washington recreational CPFV fleet. \label{fig:N_comp_lendat_flt3mkt2}](r4ss/plots_N/comp_lendat_flt3mkt2.png)
 
-![WDFW conditional age at length for the recreational fishery in northern Washington. \label{fig:N_comp_condAALdat_bubflt3mkt2}](r4ss/plots_N/comp_condAALdat_bubflt3mkt2.png)
+![Length compositions for northern model. \label{fig:N_comp_lendat_sex1mkt2_multi-fleet_comparison}](r4ss/plots_N/(r4ss/plots_N/comp_lendat_sex1mkt2_multi-fleet_comparison.png)
 
+![Conditional age-at-length compositions for recreational private/rental catch in northern WA in the northern model.  \label{fig:N_comp_condAALdat_bubflt3mkt2}](r4ss/plots_N/comp_condAALdat_bubflt3mkt2.png)
 
 <!--EJ sections lengths-->
 
-![Distribution of lengths by year from the CDFW south of Cape Mendocino. \label{fig:S_CDFW_length_comps_by_district_1980-2014}](plots/S_CDFW_length_comps_by_district_19802014.png)
+![Distribution of lengths by CRFS district from CDFW, south of Cape Mendocino. \label{fig:S_CDFW_length_comps_by_district_1980-2014}](plots/S_CDFW_length_comps_by_district_19802014.png)
 
-![Distribution of lengths from the CDFW CRFS survey south of Cape Mendocino. \label{fig:S_CDFW_length_comps_by_year+district_2004-2014}](plots/S_CDFW_length_comps_by_yeardistrict_20042014.png)
+![Distribution of lengths from the CDFW CRFS survey south of Cape Mendocino, by year and district. \label{fig:S_CDFW_length_comps_by_year+district_2004-2014}](plots/S_CDFW_length_comps_by_yeardistrict_20042014.png)
 
 
 ![Oregon (ORBS) recreational CPFV fleet length distributions by region and year. \label{fig:ORBS_length_dists_by_region_and_year}](plots/ORBS_length_dists_by_region_and_year.png)
@@ -3287,13 +3336,17 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Length compositions for retained fish from the southern Oregon commercial live-fish fishery. \label{fig:C_comp_lendat_flt6mkt2}](r4ss/plots_C/comp_lendat_flt6mkt2.png)
 
+![Length compositions for central model. \label{fig:C_comp_lendat_sex1mkt2_multi-fleet_comparison}](r4ss/plots_C/comp_lendat_sex1mkt2_multi-fleet_comparison.png)
+
 ![Conditional age-at-length data for retained fish from the southern Oregon commercial dead-fish fishery. \label{fig:C_comp_condAALdat_bubflt5mkt2}](r4ss/plots_C/comp_condAALdat_bubflt5mkt2.png)
 
-![Length compositions by year for the California commercial dead-dish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt1mkt2}](r4ss/plots_S/comp_lendat_flt1mkt2.png)
+![Conditional age-at-length compositions for the commercial dead-fish fishery in southern OR in the central model. \label{fig:C_comp_condAALdat_bubflt7mkt2}](r4ss/plots_C/comp_condAALdat_bubflt7mkt2.png)
 
-![Length compositions by year for discarded fish in the California commercial live-dish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt1}](r4ss/plots_S/comp_lendat_flt2mkt1.png)
+![Length compositions by year for the California commercial dead-fish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt1mkt2}](r4ss/plots_S/comp_lendat_flt1mkt2.png)
 
-![Length compositions by year for retained fish in the California commercial live-dish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt2}](r4ss/plots_S/comp_lendat_flt2mkt2.png)
+![Length compositions by year for discarded fish in the California commercial fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt1}](r4ss/plots_S/comp_lendat_flt2mkt1.png)
+
+![Length compositions by year for retained fish in the California commercial live-fish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt2}](r4ss/plots_S/comp_lendat_flt2mkt2.png)
 
 \FloatBarrier
 
@@ -3367,7 +3420,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 <!-- *******************************************************NORTHERN BASE MODEL FIGURES********************************************************** --> 
 
-![Fits to growth by sex for the northern model.  \label{fig:growth_all}](r4ss/plots_compare/growth_comparison_PRE-STAR_BASE.png)
+![Fits to growth among models with no sex-specific growth.  \label{fig:growth_all}](r4ss/plots_compare/growth_comparison_PRE-STAR_BASE.png)
 
 
 ![Fits to private boat recreational dockside index for Washington, northern model.  \label{fig:N_index2_cpuefit_3_WA_NorthernWA_Rec_PR}](r4ss/plots_N/index2_cpuefit_3_WA_NorthernWA_Rec_PR.png)
@@ -3375,7 +3428,12 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Fits to the time aggregated recreational length distributions for the northern model.  \label{fig:N_comp_lenfit_mkt2_aggregated_across_time}](r4ss/plots_N/comp_lenfit_mkt2_aggregated_across_time.png)
 
-![Fits conditional age-at-length data for the northern model.  \label{fig:N_comp_condAALfit_data_weighting_TA1.8_condAge3_WA_NorthernWA_Rec_PR}](r4ss/plots_N/comp_condAALfit_data_weighting_TA1.8_condAge3_WA_NorthernWA_Rec_PR.png)
+![Residuals in fit to length compositions for northern model. Filled circles indicate observed values greater than expected values. \label{fig:N_comp_lenfit_sex1mkt2_multi-fleet_comparison}](r4ss/plots_N/comp_lenfit_sex1mkt2_multi-fleet_comparison.png)
+
+
+![Residuals in fit to conditional age-at-length compositions for recreational private/rental catch in northern WA in the northern model. Filled circles indicate observed values greater than expected values.  \label{fig:N_comp_condAALfit_residsflt3mkt2}](r4ss/plots_N/comp_condAALfit_residsflt3mkt2.png)
+
+![Implied fit to the marginal age-frequencies for recreational private/rental catch in northern WA in the northern model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:N_comp_gstagefit_flt3mkt2}](r4ss/plots_N/comp_gstagefit_flt3mkt2.png)
 
 ![Estimated selectivity curves for the Washington recreational fleets.  \label{fig:N_sel01_multiple_fleets_length1}](r4ss/plots_N/sel01_multiple_fleets_length1.png)
 
@@ -3394,13 +3452,21 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Fits to the northern Oregon recreational CPFV fleet ORBS dockside index for the central model.  \label{fig:C_index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS}](r4ss/plots_C/index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS.png)
 
-![Fits to the time aggregated recreational length distributions for the central model.  \label{fig:C_comp_lenfit_mkt2_aggregated_across_time}](r4ss/plots_C/comp_lenfit_mkt2_aggregated_across_time.png)
+!["Residuals in fit to conditional age-at-length compositions for the commercial dead-fish fishery in southern OR in the central model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_condAALfit_residsflt5mkt2}](r4ss/plots_C/comp_condAALfit_residsflt5mkt2.png)
+
+![Residuals in fit to conditional age-at-length compositions for the recreational party/charter fishery in southern OR in the central model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_condAALfit_residsflt7mkt2}](r4ss/plots_C/comp_condAALfit_residsflt7mkt2.png)
+
+![Implied fit to the marginal age-frequencies for the commercial dead-fish fishery in southern OR in the central model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:C_comp_gstagefit_flt5mkt2.png}](r4ss/plots_C/comp_gstagefit_flt5mkt2.png)
+
+![Implied fit to the marginal age-frequencies for recreational party/charter fishery in southern OR in the central model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:C_comp_gstagefit_flt7mkt2}](r4ss/plots_C/comp_gstagefit_flt7mkt2.png)
+
+
+![Residuals in fit to length compositions for northern model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_lenfit_sex1mkt2_multi-fleet_comparison}](r4ss/plots_C/comp_lenfit_sex1mkt2_multi-fleet_comparison.png)
+
 
 \FloatBarrier
 
-![Fits to the conditioanal age-at-length for the southern Oregon commercial dead-fish fishery, central model.  \label{fig:C_comp_condAALfit_data_weighting_TA1.8_condAge5_OR_SouthernOR_Comm_Dead}](r4ss/plots_C/comp_condAALfit_data_weighting_TA1.8_condAge5_OR_SouthernOR_Comm_Dead.png)
-
-![Fits to the conditioanal age-at-length for the southern Oregon recreational CPFV fleet, central model.  \label{fig:C_comp_condAALfit_data_weighting_TA1.8_condAge7_OR_SouthernOR_Rec_PC}](r4ss/plots_C/comp_condAALfit_data_weighting_TA1.8_condAge7_OR_SouthernOR_Rec_PC.png)
+![Fits to the marginal age composition for the northern OR recreational party/charter in the central model  \label{fig:C_ comp_agefit_flt10mkt2}](r4ss/plots_C/comp_agefit_flt10mkt2.png)
 
 \FloatBarrier
 
