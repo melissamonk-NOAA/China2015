@@ -43,6 +43,9 @@ bibliography: chinarockfish2015.bib
       load("./r4ss/Chinanorth2015.RData")
       load("./r4ss/Chinasouth2015.RData")
       load("./r4ss/Chinacentral2015.RData")
+      
+  #number of workspaces
+      n_models = 3
      #check the structure of the data here to make sure it contains "mod," the SS_output variable
 ##############################################################################################################
 ```
@@ -65,9 +68,9 @@ This assessment reports the states of the China rockfish (\emph{Sebastes nebulos
 ##Catches{-}
 China rockfish are most often caught by hook and line (both recreational and commercial fisheries) as well as by traps for the commercial live-fish fishery.  Although China rockfish were not a major target species, the commercial rockfish fishery along the U.S. Pacific West Coast developed in the late 1800s and early 1990s. Available estimates of China rockfish catch in California begin in the early 1900s, along with small commercial catches in Oregon until recreational landings began to increase in the early 1970s (Figures \ref{fig:Exec_wa_catch}-\ref{fig:Exec_ca_catch}). Reconstructed recreational landings of China rockfish in the northern assessment begin in 1967. As of 1995, Washington has prohibited commercial nearshore fixed gear in state waters and does not have a historical reconstruction of China rockfish commercial landings. The majority of commercial removals of China rockfish are now landed by live-fish fisheries in California and southern Oregon. The magnitude of total removals over the last 10 years peaked in 2009 (35.52 mt) and has been decreasing since then. In recent years, California has the largest removals of the three states (dominated by the recreational fleet) with smallest removals coming from the Oregon recreational fleet (Table \ref{tab:Exec_catch}).
 
-The nearshore live-fish fishery developed in California in the late 1980s and early 1900s and extended into Oregon by the mid-1990s, driven by the market prices for live fish.  Northern Oregon (north of Florence) does not contribute significantly to the live-fish fishery (maximum removal of 0.02 mt) as the the market for this sector of the fishery is centered in California.  Catches from the live-fish fishery in southern Oregon (south of Florence) has composed the majority of the catch in that state since 1999, and peaked in 2002.  In California, the landings of live fish begin exceeding the landings of dead fish south of $40^\circ 10^\prime$ N. latitude in 1999 and north of  $40^\circ 10^\prime$ N. latitude in 1999; and the pattern continues through 2014.
+The nearshore live-fish fishery developed in California in the late 1980s and early 1990s and extended into Oregon by the mid-1990s, driven by the market prices for live fish.  Northern Oregon (north of Florence) does not contribute significantly to the live-fish fishery (maximum removal of 0.02 mt) as the the market for this sector of the fishery is centered in California.  Catches from the live-fish fishery in southern Oregon (south of Florence) has composed the majority of the catch in that state since 1999, and peaked in 2002.  In California, the landings of live fish begin exceeding the landings of dead fish south of $40^\circ 10^\prime$ N. latitude in 1999 and north of  $40^\circ 10^\prime$ N. latitude in 1999; and the pattern continues through 2014.
 
-The historical reconstruction of landings from the recreational fishery for China rockfish in California goes back to the 1928, and the fishery began significantly increasing in the late 1940s.  The recreational catches in California are significantly higher than the commercial catches, and have decreased in the last 5 years (Table \ref{tab:Exec_catch}).  Recreational catches in California peaked in 1987 at 53.29 mt and have declined to roughly 10-20 mt per year over the last 10 years. The trend is opposite in Oregon, with the magnitude of the commercial landings greater than the recreational landings. The historical landings from the recreational fleet in Oregon start in 1973 at 0.86 mt, peak in 1983 at 6.07 mt and again in 1993 at 6.04 mt.  The recreational catches over the last 10 years in Oregon have ranged from 1.67 mt in 2014 to 3.66 mt in 2007.  Recreational landings in Washington peaked in 1992 (7.98 mt) and have remained between 2-4 mt from 2005-2014.
+The historical reconstruction of landings from the recreational fishery for China rockfish in California goes back to the 1928, and the fishery began significantly increasing in the late 1940s.  The recreational catches in California are significantly higher than the commercial catches, and have decreased in the last five years (Table \ref{tab:Exec_catch}).  Recreational catches in California peaked in 1987 at 53.29 mt and have declined to roughly 10-20 mt per year over the last 10 years. The trend is opposite in Oregon, with the magnitude of the commercial landings greater than the recreational landings. The historical landings from the recreational fleet in Oregon start in 1973 at 0.86 mt, peak in 1983 at 6.07 mt and again in 1993 at 6.04 mt.  The recreational catches over the last 10 years in Oregon have ranged from 1.67 mt in 2014 to 3.66 mt in 2007.  Recreational landings in Washington peaked in 1992 (7.98 mt) and have remained between 2-4 mt from 2005-2014.
 
 
 \FloatBarrier
@@ -142,155 +145,93 @@ The assessment for the southern management area suggests that China rockfish wer
 
 
 
-<!-- ***********************BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE NORTH ***************************-->
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      SpawningB = modN$derived_quants[grep("SPB",modN$derived_quants$LABEL),]
-      SpawningB = SpawningB[c(-1,-2),]
-      
-      Depletion = modN$derived_quants[grep("Bratio",modN$derived_quants$LABEL),]
-      Depletion = Depletion[c(-1,-2),]
+<!-- ***********************BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE DATA ***************************-->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}      
+
 #########################################################################
 #CHANGE ME
       FirstYR=2006  # minimum year for the Spawning biomass table
       LastYR=2015  # maximum year for the Spawning biomass table
 #########################################################################
 
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-     SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
-                           SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),]     
-     SpawningByrs$YEAR = seq(FirstYR,LastYR)
-     SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
-     SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
-     SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
-     SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
-       colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
+   for (model in 1:n_models){
+  if(model==1){
+         mod=modN
+         mod_area='N'
+    } else {
+  if(model==2){
+         mod=modC
+         mod_area='C'
+    } else {
+         mod=modS
+         mod_area='S'
+    }}
 
-    #pull the estimated depletion and 
-     Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
-                           Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]     
-     Depletionyrs$YEAR = seq(FirstYR,LastYR)
-     Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=2)
-     Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=2)
-     Depletionyrs$CI = paste("(",Depletionyrs$lowerCI,"-",Depletionyrs$upperCI,")",sep="")
-     Depletiontab=subset(Depletionyrs,select=c('Value','CI'))
-       colnames(Depletiontab) = c('Estimated depletion','~ 95% confidence interval')
-     Spawn_Deplete = cbind(SpawningBtab,Depletiontab)
-     Spawn_Deplete_N = Spawn_Deplete
+      SpawningB = mod$derived_quants[grep("SPB",mod$derived_quants$LABEL),]
+      SpawningB = SpawningB[c(-1,-2),]
+      
+      Depletion = mod$derived_quants[grep("Bratio",mod$derived_quants$LABEL),]
+      Depletion = Depletion[c(-1,-2),]
+    
+  #spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+      SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
+                                 SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),]     
+      SpawningByrs$YEAR = seq(FirstYR,LastYR)
+      SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+      SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+      SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
+      SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
+      colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
+      
+  #estimated depletion
+      Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
+                                 Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]     
+      Depletionyrs$YEAR = seq(FirstYR,LastYR)
+      Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+      Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+      Depletionyrs$CI = paste("(",Depletionyrs$lowerCI,"-",Depletionyrs$upperCI,")",sep="")
+      Depletiontab=subset(Depletionyrs,select=c('Value','CI'))
+      colnames(Depletiontab) = c('Estimated depletion','~ 95% confidence interval')
+      
+      assign(paste('Spawn_Deplete_',mod_area,sep=''),cbind(SpawningBtab,Depletiontab))
+}
 
 ```
-
+<!--****************************BEGIN SPAWNING DEPLETE TABLE NORTHL****************************************** -->
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the northern China rockfish model."),
-               label='tab:SpawningDeplete_N')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-    align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+    Spawn_Deplete_N.table = xtable(Spawn_Deplete_N, caption=c("Recent trend in beginning of the year biomass and depletion for the northern China rockfish model."),
+                                                              label='tab:SpawningDeplete_N')  #digits=0 rounds the numbers 
+    align(Spawn_Deplete_N.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Spawn_Deplete_N.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 
-<!--****************************BEGIN SPAWNING DEPLETE TABLE AL****************************************** -->
-
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      SpawningB = modC$derived_quants[grep("SPB",modC$derived_quants$LABEL),]
-      SpawningB = SpawningB[c(-1,-2),]
-      
-      Depletion = modC$derived_quants[grep("Bratio",modC$derived_quants$LABEL),]
-      Depletion = Depletion[c(-1,-2),]
-#########################################################################
-#CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
-#########################################################################
-
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-     SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
-                           SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),]     
-     SpawningByrs$YEAR = seq(FirstYR,LastYR)
-     SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
-     SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
-     SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
-     SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
-       colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
-
-
-    #pull the estimated depletion and 
-     Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
-                           Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]     
-     Depletionyrs$YEAR = seq(FirstYR,LastYR)
-     Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=2)
-     Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=2)
-     Depletionyrs$CI = paste("(",Depletionyrs$lowerCI,"-",Depletionyrs$upperCI,")",sep="")
-     Depletiontab=subset(Depletionyrs,select=c('Value','CI'))
-       colnames(Depletiontab) = c('Estimated depletion','~ 95% confidence interval')
-
-     Spawn_Deplete = cbind(SpawningBtab,Depletiontab)
-     Spawn_Deplete_C = Spawn_Deplete
-```
-
+<!--****************************BEGIN SPAWNING DEPLETE TABLE CENTRAL****************************************** -->
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the central (north of $40^\\circ 10^\\prime$ N. latitude to the OR-WA border) China rockfish model."),
-               label='tab:SpawningDeplete_C')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-    align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+    Spawn_Deplete_C.table = xtable(Spawn_Deplete_C, caption=c("Recent trend in beginning of the year biomass and depletion for the central 
+                                                              (north of $40^\\circ 10^\\prime$ N. latitude to the OR-WA border) China rockfish model."),
+                                                              label='tab:SpawningDeplete_C')  #digits=0 rounds the numbers   
+    align(Spawn_Deplete_C.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Spawn_Deplete_C.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 
 <!--****************************BEGIN SPAWNING DEPLETE TABLE SOUTH****************************************** -->
-
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      SpawningB = modS$derived_quants[grep("SPB",modS$derived_quants$LABEL),]
-      SpawningB = SpawningB[c(-1,-2),]
-      
-      Depletion = modS$derived_quants[grep("Bratio",modS$derived_quants$LABEL),]
-      Depletion = Depletion[c(-1,-2),]
-#########################################################################
-#CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
-#########################################################################
-
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-     SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
-                           SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),]     
-     SpawningByrs$YEAR = seq(FirstYR,LastYR)
-     SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
-     SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
-     SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
-     SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
-       colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
-
-
-    #pull the estimated depletion and 
-     Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
-                           Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]     
-     Depletionyrs$YEAR = seq(FirstYR,LastYR)
-     Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=2)
-     Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=2)
-     Depletionyrs$CI = paste("(",Depletionyrs$lowerCI,"-",Depletionyrs$upperCI,")",sep="")
-     Depletiontab=subset(Depletionyrs,select=c('Value','CI'))
-       colnames(Depletiontab) = c('Estimated depletion','~ 95% confidence interval')
-
-     Spawn_Deplete = cbind(SpawningBtab,Depletiontab)
-     Spawn_Deplete_S = Spawn_Deplete
-```
-
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  SpawningDeplete.table = xtable(Spawn_Deplete, caption=c("Recent trend in beginning of the year biomass and depletion for the southern (south of $40^\\circ 10^\\prime$ N. latitude) China rockfish model."),
-               label='tab:SpawningDeplete_S')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-    align(SpawningDeplete.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(SpawningDeplete.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+    Spawn_Deplete_S.table = xtable(Spawn_Deplete_S, caption=c("Recent trend in beginning of the year biomass and depletion for 
+                                                            the southern (south of $40^\\circ 10^\\prime$ N. latitude) China rockfish model."),
+                                                            label='tab:SpawningDeplete_S')  #digits=0 rounds the numbers    
+    align(Spawn_Deplete_S.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Spawn_Deplete_S.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 <!--********************************** END: CREATE SPAWNING BIOMASS AND DEPLETION TABLES************************************-->
+
 \FloatBarrier
+
 
 ![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the three models of China rockfish (North=Washington state, Central = $40^\circ 10^\prime$ N. lat. to the OR/WA border, and South = south of $40^\circ 10^\prime$ N. lat.).  \label{fig:Spawnbio_all}](r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png)
 
@@ -304,98 +245,62 @@ Length and age composition data for China rockfish contain insufficient informat
 <!--*************************BEGIN: CREATE RECRUITMENT TABLE ********************************-->
 <!-- BEGIN: CREATE RECRUITMENT TABLE NORTH -->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      Recruit = modN$derived_quants[grep("Recr",modN$derived_quants$LABEL),]
+      for (model in 1:n_models){
+        if(model==1){
+               mod=modN
+               mod_area='N'
+          } else {
+        if(model==2){
+               mod=modC
+               mod_area='C'
+          } else {
+               mod=modS
+               mod_area='S'
+          }}
+      Recruit = mod$derived_quants[grep("Recr",mod$derived_quants$LABEL),]
       Recruit = Recruit[c(-1,-2),]
-#########################################################################
-#CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
-#########################################################################
-
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+#recruitment and std.dev data, calculate lower and upper 95% CI                 
      Recruityrs = Recruit[Recruit$LABEL>=paste("Recr_",FirstYR,sep='') &  
                            Recruit$LABEL<=paste("Recr_",LastYR,sep=''),]     
      Recruityrs$YEAR = seq(FirstYR,LastYR)
-     Recruityrs$lowerCI = round(Recruityrs$Value +qnorm(0.025)*Recruityrs$StdDev, digits=0)
-     Recruityrs$upperCI = round(Recruityrs$Value -qnorm(0.025)*Recruityrs$StdDev, digits=0)
+     Recruityrs$lowerCI = round(Recruityrs$Value +qnorm(0.025)*Recruityrs$StdDev, digits=2)
+     Recruityrs$upperCI = round(Recruityrs$Value -qnorm(0.025)*Recruityrs$StdDev, digits=2)
      Recruityrs$CI = paste("(",Recruityrs$lowerCI,"-",Recruityrs$upperCI,")",sep="")
      Recruittab=subset(Recruityrs,select=c('YEAR','Value','CI'))
        colnames(Recruittab) = c('Year','Estimated Recruitment (1,000s)','~ 95% confidence interval')
-    Recruittab_N = Recruittab
+    assign(paste('Recruittab_',mod_area,sep=''),Recruittab)
+}
 ```
 
+<!--************************** BEGIN: CREATE RECRUITMENT TABLE North********************************* -->
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  #create the Spawning biomass table
-  Recruit.table = xtable(Recruittab, caption=c("Recent recruitmentfor the northern model (Washington state MCAs 1-4 ."),label='tab:Recruit_N',digits=2)  #digits=0 rounds the numbers
+#create the recruitment table
+  Recruit_N.table = xtable(Recruittab_N, caption=c("Recent recruitment for the northern model (Washington state MCAs 1-4 ."),
+                                                  label='tab:Recruit_N',digits=2)  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 4 values    
-    align(Recruit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(Recruit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+    align(Recruit_N.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Recruit_N.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 
 <!--************************** BEGIN: CREATE RECRUITMENT TABLE Central********************************* -->
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      Recruit = modC$derived_quants[grep("Recr",modC$derived_quants$LABEL),]
-      Recruit = Recruit[c(-1,-2),]
-#########################################################################
-#CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
-#########################################################################
-
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-     Recruityrs = Recruit[Recruit$LABEL>=paste("Recr_",FirstYR,sep='') &  
-                           Recruit$LABEL<=paste("Recr_",LastYR,sep=''),]     
-     Recruityrs$YEAR = seq(FirstYR,LastYR)
-     Recruityrs$lowerCI = round(Recruityrs$Value +qnorm(0.025)*Recruityrs$StdDev, digits=0)
-     Recruityrs$upperCI = round(Recruityrs$Value -qnorm(0.025)*Recruityrs$StdDev, digits=0)
-     Recruityrs$CI = paste("(",Recruityrs$lowerCI,"-",Recruityrs$upperCI,")",sep="")
-     Recruittab=subset(Recruityrs,select=c('YEAR','Value','CI'))
-       colnames(Recruittab) = c('Year','Estimated Recruitment (1,000s)','~ 95% confidence interval')
-     Recruittab_C = Recruittab
-```
-
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  #create the Spawning biomass table
-  Recruit.table = xtable(Recruittab, caption=c("Recent recruitment for the central ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) model."),
-               label='tab:Recruit_C',digits=2)  #digits=0 rounds the numbers
+#create the recruitment table
+  Recruit_C.table = xtable(Recruittab_C, caption=c("Recent recruitment for the central ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) model."),
+                                                  label='tab:Recruit_C',digits=2)  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 4 values    
-    align(Recruit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(Recruit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+    align(Recruit_C.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Recruit_C.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 
 <!--************************** BEGIN: CREATE RECRUITMENT TABLE SOUTH********************************* -->
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      Recruit = modS$derived_quants[grep("Recr",modS$derived_quants$LABEL),]
-      Recruit = Recruit[c(-1,-2),]
-#########################################################################
-#CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
-#########################################################################
-
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-     Recruityrs = Recruit[Recruit$LABEL>=paste("Recr_",FirstYR,sep='') &  
-                           Recruit$LABEL<=paste("Recr_",LastYR,sep=''),]     
-     Recruityrs$YEAR = seq(FirstYR,LastYR)
-     Recruityrs$lowerCI = round(Recruityrs$Value +qnorm(0.025)*Recruityrs$StdDev, digits=0)
-     Recruityrs$upperCI = round(Recruityrs$Value -qnorm(0.025)*Recruityrs$StdDev, digits=0)
-     Recruityrs$CI = paste("(",Recruityrs$lowerCI,"-",Recruityrs$upperCI,")",sep="")
-     Recruittab=subset(Recruityrs,select=c('YEAR','Value','CI'))
-       colnames(Recruittab) = c('Year','Estimated Recruitment (1,000s)','~ 95% confidence interval')
-     Recruittab_S = Recruittab
-```
-
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-  Recruit.table = xtable(Recruittab, caption=c("Recent recruitment for the southern (south of $40^\\circ 10^\\prime$ N. latitude) model."), label='tab:Recruit_S',digits=2)  #digits=0 rounds the numbers
+  Recruit_S.table = xtable(Recruittab_S, caption=c("Recent recruitment for the southern (south of $40^\\circ 10^\\prime$ N. latitude) model."), label='tab:Recruit_S',digits=2)  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 4 values    
-    align(Recruit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(Recruit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+    align(Recruit_S.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(Recruit_S.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 <!--********************************* END: CREATE RECRUITMENT TABLE********************************************* -->
@@ -411,14 +316,24 @@ Length and age composition data for China rockfish contain insufficient informat
 Harvest rates estimated by the northern area model for Washington briefly exceeded target levels in the late 1980s and early 1990s, but have since been at or below target levels (Table \ref{tab:SPR_Exploit_N} and Figure \ref{fig:spr_all}). Model results for the central area also suggest that harvest rates have commonly exceeded the current proxy MSY value over the past two decades after peaking in the late 1990s (Table \ref{tab:SPR_Exploit_C} and Figure \ref{fig:spr_all}). Historical harvest rates for China rockfish rose steadily in the southern management area until the mid-1990s and exceeded the target SPR harvest rate for several decades, but have recently returned to target levels (Table \ref{tab:SPR_Exploit_S} and Figure \ref{fig:spr_all}).A summary of China rockfish exploitation histories for the northern, central, and southern areas is provided as Figure \ref{fig:phase_all}.
 
 
-<!-- ***************BEGIN: CREATE EXPLOITATION AND 1-SPR TABLE************************************************ -->
-<!-- *************** EXPLOITATION AND 1-SPR TABLE NORTH**********************************-->
+<!-- *******************************************************BEGIN: CREATE EXPLOITATION AND SPRratio TABLE********************************************************** -->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      Exploit = modN$derived_quants[grep("F",modN$derived_quants$LABEL),]
+     for (model in 1:n_models){
+        if(model==1){
+               mod=modN
+               mod_area='N'
+          } else {
+        if(model==2){
+               mod=modC
+               mod_area='C'
+          } else {
+               mod=modS
+               mod_area='S'
+          }}  
+      Exploit = mod$derived_quants[grep("F",mod$derived_quants$LABEL),]
       Exploit = Exploit[c(-1,-2),]
       
-      SPRratio = modN$derived_quants[grep("SPRratio",modN$derived_quants$LABEL),]
+      SPRratio = mod$derived_quants[grep("SPRratio",mod$derived_quants$LABEL),]
       SPRratio = SPRratio[c(-1,-2),]
 
 #########################################################################
@@ -427,7 +342,7 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
       LastYR=2014  # maximum year for the Spawning biomass table
 #########################################################################
 
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
+  #exploitation and calculate lower and upper 95% CI                 
      Exploityrs = Exploit[Exploit$LABEL>=paste("F_",FirstYR,sep='') &  
                            Exploit$LABEL<=paste("F_",LastYR,sep=''),]     
      Exploityrs$YEAR = seq(FirstYR,LastYR)
@@ -438,7 +353,7 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
        colnames(Exploittab) = c('Exploitation rate','~ 95% confidence interval')
 
 
-    #pull the estimated depletion and 
+  #spawning potential ratio and calculate lower and upper 95% CI  
       SPRratioyrs = SPRratio[SPRratio$LABEL>=paste("SPRratio_",FirstYR,sep='') &  
                        SPRratio$LABEL<=paste("SPRratio_",LastYR,sep=''),]     
     SPRratioyrs$Year = seq(FirstYR,LastYR)
@@ -449,124 +364,47 @@ Harvest rates estimated by the northern area model for Washington briefly exceed
     SPRratiotab$Year = as.factor(SPRratiotab$Year)
     colnames(SPRratiotab) = c('Year','Fishing intensity','~ 95% confidence interval')
     
-    SPRratio_Exploit = cbind(SPRratiotab,Exploittab)
-    SPRratio_Exploit_N = SPRratio_Exploit
+      assign(paste('SPRratio_Exploit_',mod_area,sep=''),cbind(SPRratiotab,Exploittab))
+}
 ```
-
+<!-- *****************************EXPLOITATION AND SPRratio TABLE NORTH***************************-->
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  #create the Spawning biomass table
-  SPRratio_Exploit.table = xtable(SPRratio_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the northern China rockfish model (Washington state MCAs 1-4)."),
-               label='tab:SPR_Exploit_N')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-    align(SPRratio_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(SPRratio_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+  #create the exploitation and SPRratio
+   SPRratio_Exploit_N.table = xtable(SPRratio_Exploit_N, caption=c("Recent trend in spawning potential ratio and 
+                                                                  exploitation for the northern China rockfish model (Washington state MCAs 1-4)."),
+                                                                  label='tab:SPR_Exploit_N')  #digits=0 rounds the numbers
+   
+    align(SPRratio_Exploit_N.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SPRratio_Exploit_N.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 \FloatBarrier
 
-<!-- *****************************EXPLOITATION AND 1-SPR TABLE CENTRAL***************************-->
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      Exploit = modC$derived_quants[grep("F",modC$derived_quants$LABEL),]
-      Exploit = Exploit[c(-1,-2),]
-      
-      SPRratio = modC$derived_quants[grep("SPRratio",modC$derived_quants$LABEL),]
-      SPRratio = SPRratio[c(-1,-2),]
-
-#########################################################################
-#CHANGE ME
-      FirstYR=2005  # minimum year for the Spawning biomass table
-      LastYR=2014  # maximum year for the Spawning biomass table
-#########################################################################
-
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-     Exploityrs = Exploit[Exploit$LABEL>=paste("F_",FirstYR,sep='') &  
-                           Exploit$LABEL<=paste("F_",LastYR,sep=''),]     
-     Exploityrs$YEAR = seq(FirstYR,LastYR)
-     Exploityrs$lowerCI = round(Exploityrs$Value +qnorm(0.025)*Exploityrs$StdDev, digits=2)
-     Exploityrs$upperCI = round(Exploityrs$Value -qnorm(0.025)*Exploityrs$StdDev, digits=2)
-     Exploityrs$CI = paste("(",Exploityrs$lowerCI,"-",Exploityrs$upperCI,")",sep="")
-     Exploittab=subset(Exploityrs,select=c('Value','CI'))
-       colnames(Exploittab) = c('Exploitation rate','~ 95% confidence interval')
-
-
-    #pull the estimated depletion and 
-      SPRratioyrs = SPRratio[SPRratio$LABEL>=paste("SPRratio_",FirstYR,sep='') &  
-                       SPRratio$LABEL<=paste("SPRratio_",LastYR,sep=''),]     
-    SPRratioyrs$Year = seq(FirstYR,LastYR)
-    SPRratioyrs$lowerCI = round(SPRratioyrs$Value +qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
-    SPRratioyrs$upperCI = round(SPRratioyrs$Value -qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
-    SPRratioyrs$CI = paste("(",SPRratioyrs$lowerCI,"-",SPRratioyrs$upperCI,")",sep="")
-    SPRratiotab=subset(SPRratioyrs,select=c('Year','Value','CI'))
-    SPRratiotab$Year = as.factor(SPRratiotab$Year)
-    colnames(SPRratiotab) = c('Year','Fishing intensity','~ 95% confidence interval')
-    
-    SPRratio_Exploit = cbind(SPRratiotab,Exploittab)
-    SPRratio_Exploit_C = SPRratio_Exploit
-```
-
+<!-- *****************************EXPLOITATION AND SPRratio TABLE CENTRAL***************************-->
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  #create the Spawning biomass table
-  SPRratio_Exploit.table = xtable(SPRratio_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the central China rockfish model ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border)."),
-               label='tab:SPR_Exploit_C')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-    align(SPRratio_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(SPRratio_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+  #create the exploitation and SPRratio
+    SPRratio_Exploit_C.table = xtable(SPRratio_Exploit_C, caption=c("Recent trend in spawning potential ratio and exploitation 
+                                                                  for the central China rockfish model ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border)."),
+                                                                  label='tab:SPR_Exploit_C')  #digits=0 rounds the numbers
+    align(SPRratio_Exploit_C.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SPRratio_Exploit_C.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
 
 \FloatBarrier
 
 <!-- *****************************EXPLOITATION AND 1-SPR TABLE SOUTH***************************-->
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-      
-      Exploit = modS$derived_quants[grep("F",modS$derived_quants$LABEL),]
-      Exploit = Exploit[c(-1,-2),]
-      
-      SPRratio = modS$derived_quants[grep("SPRratio",modS$derived_quants$LABEL),]
-      SPRratio = SPRratio[c(-1,-2),]
-#########################################################################
-#CHANGE ME
-      FirstYR=2005  # minimum year for the Spawning biomass table
-      LastYR=2014  # maximum year for the Spawning biomass table
-#########################################################################
-
-    #pull the spawning biomass and std.dev data, calculate lower and upper 95% CI                 
-     Exploityrs = Exploit[Exploit$LABEL>=paste("F_",FirstYR,sep='') &  
-                           Exploit$LABEL<=paste("F_",LastYR,sep=''),]     
-     Exploityrs$YEAR = seq(FirstYR,LastYR)
-     Exploityrs$lowerCI = round(Exploityrs$Value +qnorm(0.025)*Exploityrs$StdDev, digits=2)
-     Exploityrs$upperCI = round(Exploityrs$Value -qnorm(0.025)*Exploityrs$StdDev, digits=2)
-     Exploityrs$CI = paste("(",Exploityrs$lowerCI,"-",Exploityrs$upperCI,")",sep="")
-     Exploittab=subset(Exploityrs,select=c('Value','CI'))
-       colnames(Exploittab) = c('Exploitation rate','~ 95% confidence interval')
-
-
-    #pull the estimated depletion and 
-     SPRratioyrs = SPRratio[SPRratio$LABEL>=paste("SPRratio_",FirstYR,sep='') &  
-                       SPRratio$LABEL<=paste("SPRratio_",LastYR,sep=''),]     
-    SPRratioyrs$Year = seq(FirstYR,LastYR)
-    SPRratioyrs$lowerCI = round(SPRratioyrs$Value +qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
-    SPRratioyrs$upperCI = round(SPRratioyrs$Value -qnorm(0.025)*SPRratioyrs$StdDev, digits=2)
-    SPRratioyrs$CI = paste("(",SPRratioyrs$lowerCI,"-",SPRratioyrs$upperCI,")",sep="")
-    SPRratiotab=subset(SPRratioyrs,select=c('Year','Value','CI'))
-    SPRratiotab$Year = as.factor(SPRratiotab$Year)
-    colnames(SPRratiotab) = c('Year','Fishing intensity','~ 95% confidence interval')
-    
-    SPRratio_Exploit = cbind(SPRratiotab,Exploittab)
-    SPRratio_Exploit_S = SPRratio_Exploit
-```
-
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  #create the Spawning biomass table
-  SPRratio_Exploit.table = xtable(SPRratio_Exploit, caption=c("Recent trend in spawning potential ratio (entered as 1-SPR) and exploitation for the southern China rockfish model (south of $40^\\circ 10^\\prime$ N. latitude)."),
-               label='tab:SPR_Exploit_S')  #digits=0 rounds the numbers
-   
-    align(SPRratio_Exploit.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
-    print(SPRratio_Exploit.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
+  #create the exploitation and SPRratio
+   SPRratio_Exploit_S.table = xtable(SPRratio_Exploit_S, caption=c("Recent trend in spawning potential ratio and 
+                                                                   exploitation for the southern China rockfish model 
+                                                                   (south of $40^\\circ 10^\\prime$ N. latitude)."),
+                                                                   label='tab:SPR_Exploit_S')  #digits=0 rounds the numbers
+    align(SPRratio_Exploit_S.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    print(SPRratio_Exploit_S.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
-<!-- END: CREATE EXPLOITATION AND 1-SPR TABLE -->
+<!-- END: CREATE EXPLOITATION AND SPRratio TABLE -->
 \FloatBarrier
 
 
@@ -584,7 +422,7 @@ In this assessment, ecosystem considerations were not explicitly included in the
 Recently available habitat information was used to select the data used in the onboard observer indices (see Appendix F, p.\ref{sec:AppendixF}).
 
 ##Reference points{-}
-The management line for China rockfish is at $40^\circ 10^\prime$, with differing management guidelines north and south.  From 2005-2010, the Nearshore Rockfish Complexes north and south of $40^\circ 10^\prime$ N. latitude were managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ABC within the northern and southern Nearshore Rockfish Complexes, based on the work by Dick and MacCall [-@Dick2010].
+The management line for China rockfish is at $40^\circ 10^\prime$ N. latitude, with differing management guidelines north and south.  From 2005-2010, the Nearshore Rockfish Complexes north and south of $40^\circ 10^\prime$ N. latitude were managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ABC within the northern and southern Nearshore Rockfish Complexes, based on the work by Dick and MacCall [-@Dick2010].
 
 This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%, corresponding to 33.4 mt (~95% asymptotic interval: 27.4 – 39.4 mt) of spawning biomass in the base model (Table \ref{tab:Ref_pts_N}).  Unfished spawning stock biomass was estimated to be 64.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 25.9 mt, which gives a catch of 3.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 3.1 mt.
 
@@ -597,28 +435,42 @@ This stock assessment estimates that China rockfish south of $40^\circ 10^\prime
 
 <!-- ********************************BEGIN: REFERENCE POINTS TABLE********************************************** -->
 <!-- ***********************************REFERENCE POINTS TABLE NORTH*********************************************--> 
+
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+for (model in 1:n_models){
+  if(model==1){
+    mod=modN
+    mod_area='N'
+  } else {
+    if(model==2){
+      mod=modC
+      mod_area='C'
+    } else {
+      mod=modS
+      mod_area='S'
+    }}
+
 Ref_pts = rbind(
-SSB_Unfished    = modN$derived_quants[grep("SSB_U",modN$derived_quants$LABEL),],
-TotBio_Unfished = modN$derived_quants[grep("TotBio",modN$derived_quants$LABEL),],
-Recr_Unfished   = modN$derived_quants[grep("Recr_Un",modN$derived_quants$LABEL),],
-SPB_2015        = modN$derived_quants[grep("SPB_2015",modN$derived_quants$LABEL),],
-Depletion_2015  = modN$derived_quants[grep("Bratio_2015",modN$derived_quants$LABEL),],
-Refpt_sB        = c(NA,NA,NA),
-SSB_Btgt        = modN$derived_quants[grep("SSB_Btgt",modN$derived_quants$LABEL),],
-SPR_Btgt        = modN$derived_quants[grep("SPR_Btgt",modN$derived_quants$LABEL),],
-Fstd_Btgt       = modN$derived_quants[grep("Fstd_Btgt",modN$derived_quants$LABEL),],
-TotYield_Btgt   = modN$derived_quants[grep("TotYield_Btgt",modN$derived_quants$LABEL),],
-Refpt_SPR       = c(NA,NA,NA),
-SSB_SPRtgt      = modN$derived_quants[grep("SSB_SPRtgt",modN$derived_quants$LABEL),],
-SPR_proxy       = c('SPF_proxy',.5,NA),
-Fstd_SPRtgt     = modN$derived_quants[grep("Fstd_SPRtgt",modN$derived_quants$LABEL),],
-TotYield_SPRtgt = modN$derived_quants[grep("TotYield_SPRtgt",modN$derived_quants$LABEL),],
-Refpts_MSY      = c(NA,NA,NA),
-SSB_MSY         = modN$derived_quants[grep("SSB_MSY",modN$derived_quants$LABEL),],
-SPR_MSY         = modN$derived_quants[grep("SPR_MSY",modN$derived_quants$LABEL),],
-Fstd_MSY        = modN$derived_quants[grep("Fstd_MSY",modN$derived_quants$LABEL),],
-TotYield_MSY    = modN$derived_quants[grep("TotYield_MSY",modN$derived_quants$LABEL),] )
+  SSB_Unfished    = mod$derived_quants[grep("SSB_U",mod$derived_quants$LABEL),],
+  TotBio_Unfished = mod$derived_quants[grep("TotBio",mod$derived_quants$LABEL),],
+  Recr_Unfished   = mod$derived_quants[grep("Recr_Un",mod$derived_quants$LABEL),],
+  SPB_2015        = mod$derived_quants[grep("SPB_2015",mod$derived_quants$LABEL),],
+  Depletion_2015  = mod$derived_quants[grep("Bratio_2015",mod$derived_quants$LABEL),],
+  Refpt_sB        = c(NA,NA,NA),
+  SSB_Btgt        = mod$derived_quants[grep("SSB_Btgt",mod$derived_quants$LABEL),],
+  SPR_Btgt        = mod$derived_quants[grep("SPR_Btgt",mod$derived_quants$LABEL),],
+  Fstd_Btgt       = mod$derived_quants[grep("Fstd_Btgt",mod$derived_quants$LABEL),],
+  TotYield_Btgt   = mod$derived_quants[grep("TotYield_Btgt",mod$derived_quants$LABEL),],
+  Refpt_SPR       = c(NA,NA,NA),
+  SSB_SPRtgt      = mod$derived_quants[grep("SSB_SPRtgt",mod$derived_quants$LABEL),],
+  SPR_proxy       = c('SPF_proxy',.5,NA),
+  Fstd_SPRtgt     = mod$derived_quants[grep("Fstd_SPRtgt",mod$derived_quants$LABEL),],
+  TotYield_SPRtgt = mod$derived_quants[grep("TotYield_SPRtgt",mod$derived_quants$LABEL),],
+  Refpts_MSY      = c(NA,NA,NA),
+  SSB_MSY         = mod$derived_quants[grep("SSB_MSY",mod$derived_quants$LABEL),],
+  SPR_MSY         = mod$derived_quants[grep("SPR_MSY",mod$derived_quants$LABEL),],
+  Fstd_MSY        = mod$derived_quants[grep("Fstd_MSY",mod$derived_quants$LABEL),],
+  TotYield_MSY    = mod$derived_quants[grep("TotYield_MSY",mod$derived_quants$LABEL),] )
 
 Ref_pts$Value = as.numeric(Ref_pts$Value)
 Ref_pts$StdDev = as.numeric(Ref_pts$StdDev)
@@ -631,181 +483,68 @@ Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1,as.character(round(Ref_pts$upperCI,
 Ref_pts$CI1 = paste("(",Ref_pts$lowerCI1,"-",Ref_pts$upperCI1,")",sep="")
 
 Quantity= c('Unfished Spawning biomass (mt)',
-'Unfished age 0+ biomass (mt)',
-'Unfished recruitment (R0, thousands)',
-'Spawning Biomass (2015)',
-'Depletion (2015)',
-'\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
-'Proxy spawning biomass ($B_{40\\%}$)',
-'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
-'Exploitation rate resulting in $B_{40\\%}$',
-'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
-'\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
-'Spawning biomass ',
-'$SPR_{proxy}$',
-'Exploitation rate corresponding to $SPR_{proxy}$',
-'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
-'\\textbf{\\textit{Reference points based on estimated MSY values}}',
-'Spawning biomass at $MSY$ ($SB_{MSY}$)',
-'$SPR_{MSY}$',
-'Exploitation rate at $MSY$',
-'$MSY$ (mt) '
+            'Unfished age 0+ biomass (mt)',
+            'Unfished recruitment (R0, thousands)',
+            'Spawning Biomass (2015)',
+            'Depletion (2015)',
+            '\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
+            'Proxy spawning biomass ($B_{40\\%}$)',
+            'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
+            'Exploitation rate resulting in $B_{40\\%}$',
+            'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
+            '\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
+            'Spawning biomass ',
+            '$SPR_{proxy}$',
+            'Exploitation rate corresponding to $SPR_{proxy}$',
+            'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
+            '\\textbf{\\textit{Reference points based on estimated MSY values}}',
+            'Spawning biomass at $MSY$ ($SB_{MSY}$)',
+            '$SPR_{MSY}$',
+            'Exploitation rate at $MSY$',
+            '$MSY$ (mt) '
 )
 Ref_pts = cbind(Quantity,Ref_pts[,c(4,9)])
 Ref_pts[c(6,11,13,16),3]=''
 Ref_pts[c(6,11,16),2]=''
 colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
-```
 
+assign(paste('Ref_pts_',mod_area,sep=''),Ref_pts)
+}
+```
+<!-- ***********************************REFERENCE POINTS TABLE NORTH*******************************************--> 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
- Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the northern (Washington state MCAs 1-4) base case model."), label='tab:Ref_pts_N')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-  align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
-    print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+    Ref_pts_N.table = xtable(Ref_pts_N, caption=c("Summary of reference points and management quantities for the northern 
+                                               (Washington state MCAs 1-4) base case model."), label='tab:Ref_pts_N')  
+    align(Ref_pts_N.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
+    print(Ref_pts_N.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
 \FloatBarrier
 
 <!-- ***********************************REFERENCE POINTS TABLE CENTRAL*******************************************--> 
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-Ref_pts = rbind(
-SSB_Unfished    = modC$derived_quants[grep("SSB_U",modC$derived_quants$LABEL),],
-TotBio_Unfished = modC$derived_quants[grep("TotBio",modC$derived_quants$LABEL),],
-Recr_Unfished   = modC$derived_quants[grep("Recr_Un",modC$derived_quants$LABEL),],
-SPB_2015        = modC$derived_quants[grep("SPB_2015",modC$derived_quants$LABEL),],
-Depletion_2015  = modC$derived_quants[grep("Bratio_2015",modC$derived_quants$LABEL),],
-Refpt_sB        = c(NA,NA,NA),
-SSB_Btgt        = modC$derived_quants[grep("SSB_Btgt",modC$derived_quants$LABEL),],
-SPR_Btgt        = modC$derived_quants[grep("SPR_Btgt",modC$derived_quants$LABEL),],
-Fstd_Btgt       = modC$derived_quants[grep("Fstd_Btgt",modC$derived_quants$LABEL),],
-TotYield_Btgt   = modC$derived_quants[grep("TotYield_Btgt",modC$derived_quants$LABEL),],
-Refpt_SPR       = c(NA,NA,NA),
-SSB_SPRtgt      = modC$derived_quants[grep("SSB_SPRtgt",modC$derived_quants$LABEL),],
-SPR_proxy       = c('SPF_proxy',.5,NA),
-Fstd_SPRtgt     = modC$derived_quants[grep("Fstd_SPRtgt",modC$derived_quants$LABEL),],
-TotYield_SPRtgt = modC$derived_quants[grep("TotYield_SPRtgt",modC$derived_quants$LABEL),],
-Refpts_MSY      = c(NA,NA,NA),
-SSB_MSY         = modC$derived_quants[grep("SSB_MSY",modC$derived_quants$LABEL),],
-SPR_MSY         = modC$derived_quants[grep("SPR_MSY",modC$derived_quants$LABEL),],
-Fstd_MSY        = modC$derived_quants[grep("Fstd_MSY",modC$derived_quants$LABEL),],
-TotYield_MSY    = modC$derived_quants[grep("TotYield_MSY",modC$derived_quants$LABEL),] )
-
-Ref_pts$Value = as.numeric(Ref_pts$Value)
-Ref_pts$StdDev = as.numeric(Ref_pts$StdDev)
-Ref_pts$Value1 = ifelse(Ref_pts$Value>=1,as.character(round(Ref_pts$Value,1)),as.character(round(Ref_pts$Value,4)))   
-
-Ref_pts$lowerCI = round(Ref_pts$Value +qnorm(0.025)*Ref_pts$StdDev, digits=4)
-Ref_pts$upperCI = round(Ref_pts$Value -qnorm(0.025)*Ref_pts$StdDev, digits=4)
-Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI>=1,as.character(round(Ref_pts$lowerCI,1)),as.character(round(Ref_pts$lowerCI,4))) 
-Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1,as.character(round(Ref_pts$upperCI,1)),as.character(round(Ref_pts$upperCI,4))) 
-Ref_pts$CI1 = paste("(",Ref_pts$lowerCI1,"-",Ref_pts$upperCI1,")",sep="")
-
-Quantity= c('Unfished Spawning biomass (mt)',
-'Unfished age 0+ biomass (mt)',
-'Unfished recruitment (R0, thousands)',
-'Spawning Biomass (2015)',
-'Depletion (2015)',
-'\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
-'Proxy spawning biomass ($B_{40\\%}$)',
-'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
-'Exploitation rate resulting in $B_{40\\%}$',
-'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
-'\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
-'Spawning biomass ',
-'$SPR_{proxy}$',
-'Exploitation rate corresponding to $SPR_{proxy}$',
-'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
-'\\textbf{\\textit{Reference points based on estimated MSY values}}',
-'Spawning biomass at $MSY$ ($SB_{MSY}$)',
-'$SPR_{MSY}$',
-'Exploitation rate at $MSY$',
-'$MSY$ (mt) '
-)
-Ref_pts = cbind(Quantity,Ref_pts[,c(4,9)])
-Ref_pts[c(6,11,13,16),3]=''
-Ref_pts[c(6,11,16),2]=''
-colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
-```
-
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
- Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the central ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) base case model."), label='tab:Ref_pts_C')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-  align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
-    print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+    Ref_pts_C.table = xtable(Ref_pts_C, caption=c("Summary of reference points and management quantities for the central 
+                                               ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) base case model."), 
+                                                label='tab:Ref_pts_C')  #digits=0 rounds the numbers
+    align(Ref_pts_C.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
+    print(Ref_pts_C.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
 
 \FloatBarrier
 <!-- ***********************************REFERENCE POINTS TABLE SOUTH********************************************--> 
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-Ref_pts = rbind(
-SSB_Unfished    = modS$derived_quants[grep("SSB_U",modS$derived_quants$LABEL),],
-TotBio_Unfished = modS$derived_quants[grep("TotBio",modS$derived_quants$LABEL),],
-Recr_Unfished   = modS$derived_quants[grep("Recr_Un",modS$derived_quants$LABEL),],
-SPB_2015        = modS$derived_quants[grep("SPB_2015",modS$derived_quants$LABEL),],
-Depletion_2015  = modS$derived_quants[grep("Bratio_2015",modS$derived_quants$LABEL),],
-Refpt_sB        = c(NA,NA,NA),
-SSB_Btgt        = modS$derived_quants[grep("SSB_Btgt",modS$derived_quants$LABEL),],
-SPR_Btgt        = modS$derived_quants[grep("SPR_Btgt",modS$derived_quants$LABEL),],
-Fstd_Btgt       = modS$derived_quants[grep("Fstd_Btgt",modS$derived_quants$LABEL),],
-TotYield_Btgt   = modS$derived_quants[grep("TotYield_Btgt",modS$derived_quants$LABEL),],
-Refpt_SPR       = c(NA,NA,NA),
-SSB_SPRtgt      = modS$derived_quants[grep("SSB_SPRtgt",modS$derived_quants$LABEL),],
-SPR_proxy       = c('SPF_proxy',.5,NA),
-Fstd_SPRtgt     = modS$derived_quants[grep("Fstd_SPRtgt",modS$derived_quants$LABEL),],
-TotYield_SPRtgt = modS$derived_quants[grep("TotYield_SPRtgt",modS$derived_quants$LABEL),],
-Refpts_MSY      = c(NA,NA,NA),
-SSB_MSY         = modS$derived_quants[grep("SSB_MSY",modS$derived_quants$LABEL),],
-SPR_MSY         = modS$derived_quants[grep("SPR_MSY",modS$derived_quants$LABEL),],
-Fstd_MSY        = modS$derived_quants[grep("Fstd_MSY",modS$derived_quants$LABEL),],
-TotYield_MSY    = modS$derived_quants[grep("TotYield_MSY",modS$derived_quants$LABEL),] )
-
-Ref_pts$Value = as.numeric(Ref_pts$Value)
-Ref_pts$StdDev = as.numeric(Ref_pts$StdDev)
-Ref_pts$Value1 = ifelse(Ref_pts$Value>=1,as.character(round(Ref_pts$Value,1)),as.character(round(Ref_pts$Value,4)))   
-
-Ref_pts$lowerCI = round(Ref_pts$Value +qnorm(0.025)*Ref_pts$StdDev, digits=4)
-Ref_pts$upperCI = round(Ref_pts$Value -qnorm(0.025)*Ref_pts$StdDev, digits=4)
-Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI>=1,as.character(round(Ref_pts$lowerCI,1)),as.character(round(Ref_pts$lowerCI,4))) 
-Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1,as.character(round(Ref_pts$upperCI,1)),as.character(round(Ref_pts$upperCI,4))) 
-Ref_pts$CI1 = paste("(",Ref_pts$lowerCI1,"-",Ref_pts$upperCI1,")",sep="")
-
-Quantity= c('Unfished Spawning biomass (mt)',
-'Unfished age 0+ biomass (mt)',
-'Unfished recruitment (R0, thousands)',
-'Spawning Biomass (2015)',
-'Depletion (2015)',
-'\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
-'Proxy spawning biomass ($B_{40\\%}$)',
-'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
-'Exploitation rate resulting in $B_{40\\%}$',
-'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
-'\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
-'Spawning biomass ',
-'$SPR_{proxy}$',
-'Exploitation rate corresponding to $SPR_{proxy}$',
-'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
-'\\textbf{\\textit{Reference points based on estimated MSY values}}',
-'Spawning biomass at $MSY$ ($SB_{MSY}$)',
-'$SPR_{MSY}$',
-'Exploitation rate at $MSY$',
-'$MSY$ (mt) '
-)
-Ref_pts = cbind(Quantity,Ref_pts[,c(4,9)])
-Ref_pts[c(6,11,13,16),3]=''
-Ref_pts[c(6,11,16),2]=''
-colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\\%  Confidence Interval}')
-```
-
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
- Ref_pts.table = xtable(Ref_pts, caption=c("Summary of reference points and management quantities for the southern (south of $40^\\circ 10^\\prime$ N. latitude) base case model."), label='tab:Ref_pts_S')  #digits=0 rounds the numbers
-    #xtable requires a placeholder for rownames, hence 6 values    
-  align(Ref_pts.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
-    print(Ref_pts.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+   Ref_pts_S.table = xtable(Ref_pts_S, caption=c("Summary of reference points and management quantities for the southern 
+                                               (south of $40^\\circ 10^\\prime$ N. latitude) base case model."), 
+                                               label='tab:Ref_pts_S')  #digits=0 rounds the numbers
+    align(Ref_pts_S.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
+    print(Ref_pts_S.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
-<!-- ****************************END: REFERENCE POINTS TABLE ****************************************************--> 
+<!-- ************************************************************END: REFERENCE POINTS TABLE ******************************************************************************--> 
 \FloatBarrier
+
+
 
 
 ##Management performance{-}
@@ -817,23 +556,22 @@ China rockfish is managed in the northern and southern Nearshore Rockfish Comple
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #########################################################################
 #CHANGE ME
-      FirstYR=2006  # minimum year for the Spawning biomass table
-      LastYR=2015  # maximum year for the Spawning biomass table
-#########################################################################
+      FirstYR=2005  # minimum year for the Spawning biomass table
+      LastYR=2014  # maximum year for the Spawning biomass table 
 
-mngmnt = read.csv("./txt_files/mngmt_performance.csv")
+  mngmnt = read.csv("./txt_files/mngmt_performance.csv")
 
-colnames(mngmnt) = c('Year','Management guideline',	'Nearshore rockfish north', 'China contrib. north',	
+  colnames(mngmnt) = c('Year','Management guideline',	'Nearshore rockfish north', 'China contrib. north',	
                      'Estimated catch north',	'Nearshore rockfish south',	'China contrib. south',	
                      'Estimated catch south')
-
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  #create the Spawning biomass table
- mngmnt.table = xtable(mngmnt, caption=c("Recent trend in total catch and commercial landings (mt) relative to the management guidelines. Estimated total catch reflect the commercial landings plus the model estimated discarded biomass. Note: 2015 and 2016 ACLs are proposed and not yet in regulations "), label='tab:mnmgt_perform')  #digits=0 rounds the numbers
- 
-#   xtable requires a placeholder for rownames, hence 6 values    
+ #create the management performance table
+     mngmnt.table = xtable(mngmnt, caption=c("Recent trend in total catch and commercial landings (mt) relative to the management 
+                                             guidelines. Estimated total catch reflect the commercial landings plus the model estimated 
+                                             discarded biomass. Note: 2015 and 2016 ACLs are proposed and not yet in regulations "), 
+                                             label='tab:mnmgt_perform')  #digits=0 rounds the numbers
     align(mngmnt.table) = c('l','>{\\raggedleft}p{.4in}','>{\\raggedleft}p{1.3in}','>{\\centering}p{.8in}','>{\\centering}p{.7in}',
                             '>{\\centering}p{.8in}','>{\\centering}p{.8in}','>{\\centering}p{.7in}',
                             '>{\\centering}p{.8in}')  
@@ -848,7 +586,7 @@ TBD
 TBD
 
 
-<!--**************************************** BEGIN: CREATE RESULTS SUMMARY TABLE ***********************************************--> 
+<!--*********************************************************** BEGIN: CREATE RESULTS SUMMARY TABLE **************************************************************************--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
 ###collect the data from all the tables
@@ -857,63 +595,71 @@ TBD
 mngmt = read.csv("./txt_files/mngmt_performance_base.csv")
 mngmt = mngmt[,-1]
 
-###north
-SPRratio_Exploit_N = SPRratio_Exploit_N[,c(2,4)]
-SPRratio_Exploit_N[,c(1,2)] = round(SPRratio_Exploit_N[,c(1,2)],2)
-SPRratio_Exploit_N = SPRratio_Exploit_N[-dim(SPRratio_Exploit_N)[1],]
-blanks = c(NA,NA)
-SPRratio_Exploit_N = rbind(SPRratio_Exploit_N,blanks)
-Age5biomassN = modN$timeseries[,c('Yr',"Bio_smry")]
-Age5biomassyrsN = subset(Age5biomassN, Yr>=(FirstYR) & Yr<=(LastYR))
-Age5biomassyrsN = Age5biomassyrsN[,2]
-Spawn_Deplete_N = Spawn_Deplete_N[,c(2:5)]
-Spawn_Deplete_N[,1] = round(Spawn_Deplete_N[,1],0)
-Spawn_Deplete_N[,3] = round(Spawn_Deplete_N[,3],2)
-Recruittab_N = Recruittab_N[,c(2,3)]
-North_summary = cbind(SPRratio_Exploit_N,Age5biomassyrsN,Spawn_Deplete_N,Recruittab_N)
-###central
-SPRratio_Exploit_C = SPRratio_Exploit_C[,c(2,4)]
-SPRratio_Exploit_C[,c(1,2)] = round(SPRratio_Exploit_C[,c(1,2)],2)
-SPRratio_Exploit_C = SPRratio_Exploit_C[-dim(SPRratio_Exploit_C)[1],]
-SPRratio_Exploit_C = rbind(SPRratio_Exploit_C,blanks)
-Age5biomassC = modC$timeseries[,c('Yr',"Bio_smry")]
-Age5biomassyrsC = subset(Age5biomassC, Yr>=(FirstYR) & Yr<=(LastYR))
-Age5biomassyrsC = Age5biomassyrsC[,2]
-Spawn_Deplete_C = Spawn_Deplete_C[,c(2:5)]
-Spawn_Deplete_C[,1] = round(Spawn_Deplete_C[,1],0)
-Spawn_Deplete_C[,3] = round(Spawn_Deplete_C[,3],2)
-Recruittab_C = Recruittab_C[,c(2,3)]
-Central_summary = cbind(SPRratio_Exploit_C,Age5biomassyrsC,Spawn_Deplete_C,Recruittab_C)
-###south
-SPRratio_Exploit_S = SPRratio_Exploit_S[,c(2,4)]
-SPRratio_Exploit_S[,c(1,2)] = round(SPRratio_Exploit_S[,c(1,2)],2)
-SPRratio_Exploit_S = SPRratio_Exploit_S[-dim(SPRratio_Exploit_S)[1],]
-SPRratio_Exploit_S = rbind(SPRratio_Exploit_S,blanks)
-Age5biomassS = modS$timeseries[,c('Yr',"Bio_smry")]
-Age5biomassyrsS = subset(Age5biomassS, Yr>=(FirstYR) & Yr<=(LastYR))
-Age5biomassyrsS = Age5biomassyrsS[,2]
-Spawn_Deplete_S = Spawn_Deplete_S[,c(2:5)]
-Spawn_Deplete_S[,1] = round(Spawn_Deplete_S[,1],0)
-Spawn_Deplete_S[,3] = round(Spawn_Deplete_S[,3],2)
-Recruittab_S = Recruittab_S[,c(2,3)]
-South_summary = cbind(SPRratio_Exploit_S,Age5biomassyrsS,Spawn_Deplete_S,Recruittab_S)
+#north
+    SPRratio_Exploit_N = SPRratio_Exploit_N[,c(2,4)]
+    SPRratio_Exploit_N[,c(1,2)] = round(SPRratio_Exploit_N[,c(1,2)],2)
+    SPRratio_Exploit_N = SPRratio_Exploit_N[-dim(SPRratio_Exploit_N)[1],]
+    blanks = c(NA,NA)
+    SPRratio_Exploit_N = rbind(SPRratio_Exploit_N,blanks)
+    Age5biomassN = modN$timeseries[,c('Yr',"Bio_smry")]
+    Age5biomassyrsN = subset(Age5biomassN, Yr>=(FirstYR) & Yr<=(LastYR))
+    Age5biomassyrsN = Age5biomassyrsN[,2]
+    Age5biomassyrsN = round(Age5biomassyrsN,2)
+    Spawn_Deplete_N = Spawn_Deplete_N[,c(2:5)]
+    Spawn_Deplete_N[,1] = round(Spawn_Deplete_N[,1],0)
+    Spawn_Deplete_N[,3] = round(Spawn_Deplete_N[,3],2)
+    Recruittab_N = Recruittab_N[,c(2,3)]
+  North_summary = cbind(SPRratio_Exploit_N,Age5biomassyrsN,Spawn_Deplete_N,Recruittab_N)
+#central
+    SPRratio_Exploit_C = SPRratio_Exploit_C[,c(2,4)]
+    SPRratio_Exploit_C[,c(1,2)] = round(SPRratio_Exploit_C[,c(1,2)],2)
+    SPRratio_Exploit_C = SPRratio_Exploit_C[-dim(SPRratio_Exploit_C)[1],]
+    SPRratio_Exploit_C = rbind(SPRratio_Exploit_C,blanks)
+    Age5biomassC = modC$timeseries[,c('Yr',"Bio_smry")]
+    Age5biomassyrsC = subset(Age5biomassC, Yr>=(FirstYR) & Yr<=(LastYR))
+    Age5biomassyrsC = Age5biomassyrsC[,2]
+    Age5biomassyrsC = round(Age5biomassyrsC,2)
+    Spawn_Deplete_C = Spawn_Deplete_C[,c(2:5)]
+    Spawn_Deplete_C[,1] = round(Spawn_Deplete_C[,1],0)
+    Spawn_Deplete_C[,3] = round(Spawn_Deplete_C[,3],2)
+    Recruittab_C = Recruittab_C[,c(2,3)]
+  Central_summary = cbind(SPRratio_Exploit_C,Age5biomassyrsC,Spawn_Deplete_C,Recruittab_C)
+#south
+    SPRratio_Exploit_S = SPRratio_Exploit_S[,c(2,4)]
+    SPRratio_Exploit_S[,c(1,2)] = round(SPRratio_Exploit_S[,c(1,2)],2)
+    SPRratio_Exploit_S = SPRratio_Exploit_S[-dim(SPRratio_Exploit_S)[1],]
+    SPRratio_Exploit_S = rbind(SPRratio_Exploit_S,blanks)
+    Age5biomassS = modS$timeseries[,c('Yr',"Bio_smry")]
+    Age5biomassyrsS = subset(Age5biomassS, Yr>=(FirstYR) & Yr<=(LastYR))
+    Age5biomassyrsS = Age5biomassyrsS[,2]
+    Age5biomassyrsS = round(Age5biomassyrsS,2)
+    Spawn_Deplete_S = Spawn_Deplete_S[,c(2:5)]
+    Spawn_Deplete_S[,1] = round(Spawn_Deplete_S[,1],0)
+    Spawn_Deplete_S[,3] = round(Spawn_Deplete_S[,3],2)
+    Recruittab_S = Recruittab_S[,c(2,3)]
+  South_summary = cbind(SPRratio_Exploit_S,Age5biomassyrsS,Spawn_Deplete_S,Recruittab_S)
 
-
-base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
+#bind all the data together
+ base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
 
 
 
  base_summary = as.data.frame(t(base_summary))
  base_summary$names=c('Landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL',
                       'China contrib. ABC/OFL', 'Nearshore RF OY/ACL','China contrib. OY/ACL',
+                      
                       'Landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL',
-                      'China contrib. ABC/OFL','Nearshore RF OY/ACL','China contrib. OY/ACL'
-                      ,'1-SPR','Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
-                      '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI','1-SPR',
-                      'Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
-                      '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI','1-SPR',
-                      'Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
+                      'China contrib. ABC/OFL','Nearshore RF OY/ACL','China contrib. OY/ACL',
+                      
+                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
+                      '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI',
+                      
+                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
+                      '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI',
+                      
+                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
                       '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI')
+
  base_summary$region = c('North of','$40^\\circ 10^\\prime$ N','','','','',
                          'South of','$40^\\circ 10^\\prime$ N','','','','',
                          'Northern','model','','','','','','','',
@@ -924,7 +670,6 @@ base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
 
 ```
 
-
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
 #  create the Spawning biomass table
   base_summary.table = xtable(base_summary, caption=c("China rockfish base case results summary."), 
@@ -934,7 +679,7 @@ base_summary = cbind(mngmt,North_summary, Central_summary, South_summary)
     print(base_summary.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",sanitize.text.function = function(x){x},
            scalebox=.75,align=TRUE, hline.after=c(-1,0,6,12,21,30,nrow(base_summary.table)) )
 ```
-<!-- *************************************END: CREATE RESULTS SUMMARY TABLE ***************************************************-->
+<!-- ********************************************************END: CREATE RESULTS SUMMARY TABLE *****************************************************************************-->
 
 
 ![Equilibrium yield curve for the the base case models. Values are based on the 2014 fishery selectivity and with steepness fixed at 0.773. \label{fig:yield_all}](r4ss/plots_compare/yield_comparison_3_models.png)
@@ -982,16 +727,13 @@ Both juvenile and adult rockfish tend to be solitary and exhibit high site fidel
 Little is known about the mixing of juvenile China rockfish at the pelagic stage as they are not captured in the SWFSC juvenile rockfish cruise.  The 2013 assessment model treated the species as two stocks, north and south of Cape Mendocino, CA ($40^\circ 10^\prime$ N lat.), which is also the management boundary for China rockfish.  For this assessment we explore assessment models north and south of $40^\circ 10^\prime$, as well as separate northern California/Oregon and Washington models in the north.  
 
 
-
-
-
 ##Map
 A map showing the scope of the assessment and depicting boundaries for fisheries or data collection strata is provided in Figure \ref{fig:boundary_map}.
 
 
 ##Ecosystem Considerations
 
-In this assessment, ecosystem considerations were not explicitly included in the analysis.  However, we did use information on the distribution of rocky habitat to inform the onboard observer program indices of relative abundance from California and Oregon.  The onboard observer program collects location-specific encounters of China rockfish.  We overlaid the locations of China rockfish encounters with high-resolution bathymetry data to obtain a proxy of the extent of China rockfish habitat (see Appendix F for details, pp.\pageref{sec:AppendixF}).
+In this assessment, ecosystem considerations were not explicitly included in the analysis.  However, we did use information on the distribution of rocky habitat to inform the onboard observer program indices of relative abundance from California and Oregon.  The onboard observer program collects location-specific encounters of China rockfish.  We overlaid the locations of China rockfish encounters with high-resolution bathymetry data to obtain a proxy of the extent of China rockfish habitat (see Appendix F for details, p.\pageref{sec:AppendixF}).
 
 Much research is needed to elucidate the role of China rockfish in the ecosystem, including predator/prey interactions.  
 
@@ -1028,7 +770,7 @@ Data used in the China rockfish assessment are summarized in Figures \ref{fig:da
 
 **Washington**
 
-Washington does not have a nearshore commercial fishery and there are no records of China rockfish being landed by any commercial gears in Washington.  
+Washington does not have a nearshore commercial fishery and there are no records of China rockfish being landed by any commercial gears in Washington.  There is no record of tribal catch of China rockfish in Washington.   
 
 **Oregon**
 
@@ -1073,13 +815,13 @@ Discard of China rockfish likely occurred before the closure of nearshore commer
 
 Estimates of discarded China rockfish in commercial fisheries were provided by the West Coast Groundfish Observer Program (WCGOP). These were available for the years 2003-2013 north of $40^\circ 10^\prime$ N lat., and 2004-2013 to the south. WCGOP provided estimates with and without the depth-specific discard mortality rates applied. These estimates indicate that the Nearshore Fixed-gear fishery was the only sector with observed discards of China rockfish and there were strong differences in rates of discarding north and south of $40^\circ 10^\prime$ N. latitude, (Figure \ref{fig:discard_comm_est} and Table \ref{tab:WCGOP_trip_discard}). 
 
-Discard rates were consistently low north of $40^\circ 10^\prime$, where no year had estimated mortality from discards greater than either 0.5 mt or 5\% of the landings. A linear regression relating discards to retained (with intercept fixed at the origin) had a slope of  0.0269, indicating that discards on average represent 2.69\% of the landings in this sector (Figure \ref{fig:discard_comm_relN}). This value is similar to a simple average of the discard fractions, which was 2.75\%.
+Discard rates were consistently low north of $40^\circ 10^\prime$, where no year had estimated mortality from discards greater than either 0.5 mt or 5% of the landings. A linear regression relating discards to retained (with intercept fixed at the origin) had a slope of  0.0269, indicating that discards on average represent 2.69% of the landings in this sector (Figure \ref{fig:discard_comm_relN}). This value is similar to a simple average of the discard fractions, which was 2.75%.
 
-South of $40^\circ 10^\prime$ N. latitude, commercial landings were lower and estimated discards higher. The maximum discard mortality estimate was 1.8 mt for 2012 which was 126\% of the 1.4 mt nearshore fixed gear landings in that area in that year. The total discard amount for that year, including fish estimated as surviving, was 2.7 mt, almost double the landed amount.  There is also an increasing trend over the observed period (2004-2013) with an average for the first three years of 30\% of all China rockfish catch discarded and an average over the final three years of 63\% discarded.
+South of $40^\circ 10^\prime$ N. latitude, commercial landings were lower and estimated discards higher. The maximum discard mortality estimate was 1.8 mt for 2012 which was 126% of the 1.4 mt nearshore fixed gear landings in that area in that year. The total discard amount for that year, including fish estimated as surviving, was 2.7 mt, almost double the landed amount.  There is also an increasing trend over the observed period (2004-2013) with an average for the first three years of 30% of all China rockfish catch discarded and an average over the final three years of 63% discarded.
 
-Discards patterns in the area of Northern California between $40^\circ 10^\prime$, and $42^\circ$ N. latitude appears to be more similar to Oregon than the rest of California (Table \ref{tab:discard_comm_bylat}). Although expanded fleet-wide discard estimates were not available on this smaller spatial-scale, only 9\% of observed trips between $40^\circ 10^\prime$ to $42^\circ$ that were associated with any catch of China rockfish had any observed discards of China rockfish. South of $40^\circ 10^\prime$, 82\%-100\% of such trips had observed discards of China rockfish.
+Discards patterns in the area of Northern California between $40^\circ 10^\prime$, and $42^\circ$ N. latitude appears to be more similar to Oregon than the rest of California (Table \ref{tab:discard_comm_bylat}). Although expanded fleet-wide discard estimates were not available on this smaller spatial-scale, only 9% of observed trips between $40^\circ 10^\prime$ to $42^\circ$ that were associated with any catch of China rockfish had any observed discards of China rockfish. South of $40^\circ 10^\prime$, 82%-100% of such trips had observed discards of China rockfish.
 
-The patterns of the discards in commercial fisheries suggest that north of $40^\circ 10^\prime$ discard mortality of China rockfish is small enough that it is more parsimonious to account for this mortality increasing the landed catch estimates by 2.69\%. South of $40^\circ 10^\prime$, total discards are greater than landings in some years and discard mortality represents a large fraction of the total mortality of China rockfish. The discards are primarily fish below the minimum legal size of 12 inches (Figure \ref{fig:S_comp_lendat_flt2mkt1}). These factors support modeling the discard process explicitly through a retention function. This will allows the model to apply the mortality from discards to the appropriate subset of the population. Furthermore, the increasing trend in discard rates may be an indication of changes in population size structure that should be accounted for in the assessment.
+The patterns of the discards in commercial fisheries suggest that north of $40^\circ 10^\prime$ discard mortality of China rockfish is small enough that it is more parsimonious to account for this mortality increasing the landed catch estimates by 2.69%. South of $40^\circ 10^\prime$, total discards are greater than landings in some years and discard mortality represents a large fraction of the total mortality of China rockfish. The discards are primarily fish below the minimum legal size of 12 inches (Figure \ref{fig:S_comp_lendat_flt2mkt1}). These factors support modeling the discard process explicitly through a retention function. This will allows the model to apply the mortality from discards to the appropriate subset of the population. Furthermore, the increasing trend in discard rates may be an indication of changes in population size structure that should be accounted for in the assessment.
 
 In order to explicitly model the discard and retention process, it is necessary to use the estimate of total discarded fish, whether surviving or not, as this is the best representation of the amount of fish the were selected by the fishery but not represented in the landed catch. Discard mortality can then be applied separately to the model estimates of discarded fish. The mortality of discarded China rockfish is estimated by WCGOP as a function of the fishing depth which varies by year (Table \ref{tab:WCGOP_trip_discard}). The average mortality fraction south of $40^\circ 10^\prime$ across all years was 59%.
 
@@ -1107,7 +849,6 @@ Release information was not available until 2002.  Number of releases by species
 Discard rates are higher in the northern area than that in the southern area.  Since 2011, more than 50% of the China rockfish caught were released by anglers.  The release rates are lower in the southern area between 14% and 26% in recent years.  This may due to the rare encountering of China off southern Washington coast. 
 
 
-
 **Oregon Sport Fishery Removals 1973-2014**
 
 China rockfish have been a relatively minor contributor to historic Oregon sport groundfish landings (i.e., typically less than one percent of total catch), and have primarily been from   incidental catches of anglers targeting intermixed schools of suspended rockfish species (e.g., black rockfish, blue rockfish, and yellowtail rockfish).  China rockfish removals from the Oregon sport fishery ramped up relatively quickly during the 1970s (Table \ref{tab:OR_rec_removal}, Figure \ref{fig:OR_rec_removal}), and have since ranged between two and seven metric tons every year, with considerable inter-annual variation. 
@@ -1123,7 +864,7 @@ The sport reconstruction utilized ratio estimators, based on years with complete
 
 **California**
 
-In California, recreational fishing has accounted for over 70\% of cumulative China rockfish removals statewide (1900-2014, landings and discard), and over 84\% of statewide removals since 2005 (Table \ref{tab:CA_rec_removal} and Figure \ref{fig:CA_rec_removal}).  Almost all the removals are attributed to boat fishing modes (party/charter and private/rental fleets), with only a negligible contribution from shore-based fishing modes (RecFIN, 2015).
+In California, recreational fishing has accounted for over 70% of cumulative China rockfish removals statewide (1900-2014, landings and discard), and over 84% of statewide removals since 2005 (Table \ref{tab:CA_rec_removal} and Figure \ref{fig:CA_rec_removal}).  Almost all the removals are attributed to boat fishing modes (party/charter and private/rental fleets), with only a negligible contribution from shore-based fishing modes (RecFIN, 2015).
 
 Estimates from the California Recreational Fisheries Survey (CRFS) were downloaded from the Recreational Fisheries Information Network ([RecFIN] (www.recfin.org)). This survey covers the years 2004-2014, and estimates of retained plus discarded catch (catch types A and B1) were downloaded in numbers of fish as well as metric tons by year, boat mode (“PC” = party/charter, “PR”=private/rental), month, and CRFS district. In some strata, estimates of catch in numbers had no corresponding catch in weight due to missing average weight values in RecFIN. For these strata, catch in weight was estimated using the product of catch in numbers and average weight in the same year. Catches in weight (mt) were aggregated by year, boat mode, and CRFS district (cite catch table here). As an approximation, removals in CRFS District 6 were assigned to the management area north of Cape Mendocino.
 
@@ -1131,17 +872,17 @@ From 1980-2003, sampling of recreational fisheries in California was conducted a
 
 The MRFSS program did not provide estimates of removals stratified north and south of Cape Mendocino. However, CDFW has maintained logbook records since 1957 of total rockfish catch by CDFW statistical block (Table \ref{tab:CA_rec_removal}) from the PC mode (aka the Commercial Passenger Fishing Vessel or “CPFV” fleet). Following the approach used in the last China rockfish assessment [@Cope2015], we calculated the ratio of total rockfish catch (all species combined) for statistical blocks less than 233 (blocks north of Cape Mendocino) to total rockfish catch in the area north of Point Conception ($34^\circ 27^\prime$ N. latitude) by year. The ratios were then scaled such that the percentage of catch north of Mendocino in 2003 matched the observed ratio of catch in District 6 to Districts 3-6 from 2004-2011. These adjusted ratios were applied to annual MRFSS estimates for the area north of Point Conception in order to estimate landings north and south of Cape Mendocino in the years 1980-2003.
 
-Estimates of recreational removals (catch and discard) from 1928-1979 were reconstructed by Ralston et al. [-@Ralston2010] (Table \ref{tab:CA_rec_removal}). Similar to the MRFSS data, the estimates produced by Ralston et al. did not partition catch to areas north and south of Cape Mendocino, so CPFV logbook data was used to determine the fraction of removals north and south of Cape Mendocino. Adjusted annual percentages (Table \ref{tab:CA_rec_removal_NS}) were applied to the reconstructed recreational catches back to 1957, and the average percentage in 1957-58 (0.74\%) was applied to all previous years and assumed constant back to 1928.
+Estimates of recreational removals (catch and discard) from 1928-1979 were reconstructed by Ralston et al. [-@Ralston2010] (Table \ref{tab:CA_rec_removal}). Similar to the MRFSS data, the estimates produced by Ralston et al. did not partition catch to areas north and south of Cape Mendocino, so CPFV logbook data was used to determine the fraction of removals north and south of Cape Mendocino. Adjusted annual percentages (Table \ref{tab:CA_rec_removal_NS}) were applied to the reconstructed recreational catches back to 1957, and the average percentage in 1957-58 (0.74%) was applied to all previous years and assumed constant back to 1928.
 
 
 
 ###Fishery-Dependent Data: Oregon Commercial Logbook
 
-The Oregon Department of Fish and Wildlife (ODFW) has required nearshore commercial fishers (both nearshore permitted vessels and open access vessels) to submit fishing logbooks since 2004.  Fisher compliance is generally high, averaging around 80\%, but has varied through time ranging from 65\% in 2007 to 95\% in recent years.  Although required to provide all requested information in the logbook per fishing gear set, there has been substantial variation in the quantity and quality of information reported in logbooks.  Responses from submitted logbooks were entered into a central database and span the years 2004 through 2013.  At the time of this assessment, 2014 logbook submissions were not fully processed and thus were not available.  A map showing positive reports of China rockfish can be found in Figure \ref{fig:OR_commlog_map}.
+The Oregon Department of Fish and Wildlife (ODFW) has required nearshore commercial fishers (both nearshore permitted vessels and open access vessels) to submit fishing logbooks since 2004.  Fisher compliance is generally high, averaging around 80%, but has varied through time ranging from 65% in 2007 to 95% in recent years.  Although required to provide all requested information in the logbook per fishing gear set, there has been substantial variation in the quantity and quality of information reported in logbooks.  Responses from submitted logbooks were entered into a central database and span the years 2004 through 2013.  At the time of this assessment, 2014 logbook submissions were not fully processed and thus were not available.  A map showing positive reports of China rockfish can be found in Figure \ref{fig:OR_commlog_map}.
 
-Logbook information went through several data quality filters to attain as best as possible a consistent and representative data set through time to estimate a relative abundance trend.  Results from the filtration algorithm are summarized in Table \ref{tab:OR_commlog_sample}.  Of note, only logbook submissions from black and blue rockfish permitted vessels with a nearshore endorsement were included in the analysis, because these vessels consistently fish in areas where China rockfish are encountered.  To minimize temporal variation in reporting errors (or nuances), only vessels that fished all 10 years (2004 to 2013) were deemed the most likely to provide consistent responses through time.  Operators of endorsed vessels may have changed through time.  Individual observations of catch (kg) and effort (hook hour) were at the trip level, where multi-set trips were aggregated to the trip level.  ODFW sets bimonthly trip landing limits for China rockfish and these have changed through time.  However, trip limits have not generally been breached in the subset of logbook data used for China rockfish, and thus there was no need to exclude subsequent trips.  The final subset of logbook data included 3,575 trips (14\% of the full set of logbook data) from 10 vessels (Figure \ref{fig:OR_commlog_sample}). 
+Logbook information went through several data quality filters to attain as best as possible a consistent and representative data set through time to estimate a relative abundance trend.  Results from the filtration algorithm are summarized in Table \ref{tab:OR_commlog_sample}.  Of note, only logbook submissions from black and blue rockfish permitted vessels with a nearshore endorsement were included in the analysis, because these vessels consistently fish in areas where China rockfish are encountered.  To minimize temporal variation in reporting errors (or nuances), only vessels that fished all 10 years (2004 to 2013) were deemed the most likely to provide consistent responses through time.  Operators of endorsed vessels may have changed through time.  Individual observations of catch (kg) and effort (hook hour) were at the trip level, where multi-set trips were aggregated to the trip level.  ODFW sets bimonthly trip landing limits for China rockfish and these have changed through time.  However, trip limits have not generally been breached in the subset of logbook data used for China rockfish, and thus there was no need to exclude subsequent trips.  The final subset of logbook data included 3,575 trips (14% of the full set of logbook data) from 10 vessels (Figure \ref{fig:OR_commlog_sample}). 
 
-Preliminary data analyses identified levels or limits of filtering variables in order to preserve adequate sample sizes and representative trips for China rockfish.  For example, gear type was restricted to hook and line (excluding longline gear) because this method accounted for 85\% of all sets.  The three main southernmost Oregon ports (Port Orford, Gold Beach, and Brookings) were the only locations that included a sufficient number of sets throughout the time series for nearshore endorsed vessels.  Thus, this abundance index is most representative of the nearshore in southern Oregon waters. Fishing depth at the start of a set was restricted to within 30 fathoms (54.9 m), which included more than 99\% of all sets by nearshore endorsed vessels, to ensure only CPUE in areas where China rockfish are commonly encountered was evaluated.
+Preliminary data analyses identified levels or limits of filtering variables in order to preserve adequate sample sizes and representative trips for China rockfish.  For example, gear type was restricted to hook and line (excluding longline gear) because this method accounted for 85% of all sets.  The three main southernmost Oregon ports (Port Orford, Gold Beach, and Brookings) were the only locations that included a sufficient number of sets throughout the time series for nearshore endorsed vessels.  Thus, this abundance index is most representative of the nearshore in southern Oregon waters. Fishing depth at the start of a set was restricted to within 30 fathoms (54.9 m), which included more than 99% of all sets by nearshore endorsed vessels, to ensure only CPUE in areas where China rockfish are commonly encountered was evaluated.
 
 Covariates considered in the full model included \emph{month, vessel, port, depth, and people} (Figure \ref{fig:OR_commlog_pos}).  All covariates were specified as categorical variables, except depth was a continuous variable.  \emph{Depth} was included to account for general differences in bathymetry and fishing depth restrictions associated primarily with limiting catch of yelloweye rockfish.  \emph{People} were included in an attempt to control for the potential oversaturation of hooks at a given fishing location and the interaction that multi-crew trips (# fishers onboard) may have on fishing efficiency.  The selection of covariates included in final models were evaluated using standard information criterion for relative goodness of fit (AICc and BIC) in a backwards stepwise fashion, where a covariate remained in the model if model fit was improved relative to an otherwise identical model without the covariate.   
 
@@ -1186,7 +927,7 @@ Since recreational fishing trips target a wide variety of species, standardizati
 
 The percentage of trips that caught China Rockfish was 13.6\% prior to filtering, and 70.8\% in the final, filtered data set (n=431; Table \ref{tab:MRFSS_S_filter}).  The number of sampler-examined trips varies by year and county, and counties with small sample sizes were aggregated with adjacent counties into four \emph{regions}. (Table \ref{tab:MRFSS_S_sample_size}). Samples from Humboldt and Del Norte counties were included with the Oregon MRFSS index.
 
-CPUE (number of fish per angler hour) was modelled using a “delta-GLM” model [@Lo1992; @Stefansson1996]. Model selection using AIC supported inclusion of \emph{year} and \emph{region} effects in both the binomial and lognormal components of the index (Table \ref{tab:MRFSS_S_aic}). The addition of two-month \emph{wave} effects (to allow for seasonal changes in CPUE) did not improve model fit. Data in the binomial component also supported inclusion of a distance from shore variable (\emph{AREA\_X}). Residual-based model diagnostics for the positive component of the index suggest the data generally met the assumptions of the GLM (Figure \ref{fig:MRFSS_S_diag}). The resulting index  is highly variable, but suggests a decline in catch rates after 1995 relative to preceding years (Table \ref{tab:MRFSS_S_index}; Figure \ref{fig:MRFSS_S_index}).
+CPUE (number of fish per angler hour) was modelled using a "delta-GLM"" model [@Lo1992; @Stefansson1996]. Model selection using AIC supported inclusion of \emph{year} and \emph{region} effects in both the binomial and lognormal components of the index (Table \ref{tab:MRFSS_S_aic}). The addition of two-month \emph{wave} effects (to allow for seasonal changes in CPUE) did not improve model fit. Data in the binomial component also supported inclusion of a distance from shore variable (\emph{AREA\_X}). Residual-based model diagnostics for the positive component of the index suggest the data generally met the assumptions of the GLM (Figure \ref{fig:MRFSS_S_diag}). The resulting index  is highly variable, but suggests a decline in catch rates after 1995 relative to preceding years (Table \ref{tab:MRFSS_S_index}; Figure \ref{fig:MRFSS_S_index}).
 
 **California North of \boldmath{$40^\circ 10^\prime$} and Oregon Dockside Charter Boat Indices (MRFSS and ORBS)**
 
@@ -1216,15 +957,15 @@ Some trips had erroneous trips hours (discrepancies between values entered on pa
 2. If samplers write their interviews on paper and enter them electronically later when they have time (as believed to have happened despite being instructed not to), then the trip hours are inflated.
 3. To potentially remove these errors, we computed time intervals between interviews.  Pulses of interviews a minute or two apart are very likely to have been from bunches of paper interviews entered at electronically in one sitting, as normal interviews are somewhat sporadic and take more than a minute to complete.
 
-The ORBS dockside charter boat records (years 2001-2014) include 36,752 trips in the unfiltered data set, of which 4,080 caught China rockfish (11\%). As with the other trip-based CPUE data sets, the Stephens-MacCall method was used to identify trips with a high probability of catching China rockfish. Prior to using the Stephens-MacCall approach to select relevant trips, a number of other filters were applied to the data to minimize variability in CPUE estimates. Criteria for valid trips included vessels with 20+ sampled trips (13\% of vessels accounted for 89\% of trips) and trip hours <12. Trips targeting tuna and dive trips were excluded from the analysis (see Table  \ref{tab:ORBS_filter} for other filters).
+The ORBS dockside charter boat records (years 2001-2014) include 36,752 trips in the unfiltered data set, of which 4,080 caught China rockfish (11%). As with the other trip-based CPUE data sets, the Stephens-MacCall method was used to identify trips with a high probability of catching China rockfish. Prior to using the Stephens-MacCall approach to select relevant trips, a number of other filters were applied to the data to minimize variability in CPUE estimates. Criteria for valid trips included vessels with 20+ sampled trips (13% of vessels accounted for 89% of trips) and trip hours <12. Trips targeting tuna and dive trips were excluded from the analysis (see Table  \ref{tab:ORBS_filter} for other filters).
 
-As with the MRFSS indices, potentially informative species for the Stephens-MacCall analysis were defined as those occurring in at least 30 unique trips, in 10 different years (Figure \ref{fig:ORBS_SM}). Some of these never occurred with China rockfish (strong ‘counter-indicators’) and records with these species were removed from the data prior to estimation of the index. Strong counter-indicators for the ORBS data set included blue shark, white sturgeon, steelhead, and albacore. Trips in which at least 99\% of the catch consisted of pelagic rockfish were also excluded, as anglers were likely targeting semi-pelagic rockfish (Table \ref{tab:ORBS_filter}).
+As with the MRFSS indices, potentially informative species for the Stephens-MacCall analysis were defined as those occurring in at least 30 unique trips, in 10 different years (Figure \ref{fig:ORBS_SM}). Some of these never occurred with China rockfish (strong ‘counter-indicators’) and records with these species were removed from the data prior to estimation of the index. Strong counter-indicators for the ORBS data set included blue shark, white sturgeon, steelhead, and albacore. Trips in which at least 99% of the catch consisted of pelagic rockfish were also excluded, as anglers were likely targeting semi-pelagic rockfish (Table \ref{tab:ORBS_filter}).
 
 Coefficients from the Stephens-MacCall analysis identified several rockfish species (black, rosy, tiger, bocaccio, vermilion, yelloweye, copper, etc.) as indicators of positive China rockfish catch, along with lingcod, kelp greenling, and cabezon. Counter-indicators included deep-water rockfish, salmonids, and Pacific Halibut. Brown rockfish, another nearshore rockfish species, was among the counter-indicator species, reasons for which are unclear to the STAT at this time.
 
 A total of 6232 trips were retained following the Stephens-MacCall filter (Table \ref{tab:ORBS_sample_size}). Model selection with AIC proceeded as with the other dockside indices, but the ORBS data supported an interaction term in the lognormal component of the delta-GLM (Table \ref{tab:ORBS_aic}). The interaction was not supported by the binomial model (although AIC retained a region effect), but the keeping the year-region interaction term in the positive model reduced the AIC by 38 points over a model with year and region alone (Table \ref{tab:ORBS_aic}).
 
-To account for this interaction, separate delta-GLM models (each with a year and wave effect) were fit to the regional data (Southern OR and Northern OR, split at Florence). The regional indices show little change in the northern region, but a decline in catch rates in the south (Figure \ref{fig:ORBS_index_compare}). Residual diagnostics for the regional models did not show strong deviations from model assumptions in either area (Figures \ref{fig:ORBS_diag_lognormal}  and \ref{fig:ORBS_diag_gamma}). Estimated area of rocky reefs off Oregon was generated using GIS (see description of onboard observer indices), and we calculated an area-weighted index based on the relative proportion of reef habitat in each region (total reef habitat distributed as 35.4\% north, 64.6\% south).
+To account for this interaction, separate delta-GLM models (each with a year and wave effect) were fit to the regional data (Southern OR and Northern OR, split at Florence). The regional indices show little change in the northern region, but a decline in catch rates in the south (Figure \ref{fig:ORBS_index_compare}). Residual diagnostics for the regional models did not show strong deviations from model assumptions in either area (Figures \ref{fig:ORBS_diag_lognormal}  and \ref{fig:ORBS_diag_gamma}). Estimated area of rocky reefs off Oregon was generated using GIS (see description of onboard observer indices), and we calculated an area-weighted index based on the relative proportion of reef habitat in each region (total reef habitat distributed as 35.4% north, 64.6% south).
 
 The final, area-weighted index (Table \ref{tab:ORBS_index}, Figure \ref{fig:ORBS_index}) shows a declining stock (on average, statewide), but the STAT emphasizes that this does not capture regional patterns in CPUE, and may underestimate the fishing impacts in the southern region, and overestimate impacts in the north.
 
@@ -1233,11 +974,11 @@ The final, area-weighted index (Table \ref{tab:ORBS_index}, Figure \ref{fig:ORBS
 The goal of the Observer Programs in California and Oregon is to collect data including charter boat fishing locations, catch and discard of observed fish by species, and lengths of discarded fish.  Both states sample the commercial passenger fishing vessel (CPFV),i.e., charter boat or for-hire fleet.  The onboard observer programs collect drift-specific information at each fishing stop on an observed trip.  At each fishing stop recorded information includes start and end times, start and end location (latitude/longitude), start and end depth, number of observed anglers (a subset of the total anglers), and the catch (retained and discarded) by species of the observed anglers.  Data for the onboard observer indices for the recreational CPFV fleet are from four sampling programs.  
 
 
-The California Department of Fisheries and Wildlife (CDFW) conducted an onboard observer program in central California from 1987-1998 (Reilly et al. 1998).  These data were previously used in the 2013 data moderate assessments [@Cope2015], at the level of a fishing trip.  Since the 2013 assessments, the original data sheets were acquired and data were keypunched to the level of fishing stop.  One caveat of this data is that location data were recorded at a finer scale than the catch data.  We aggregated the relevant location information (time and number of observed anglers) to match the available catch information.  Between April 1987 and July 1992 the number of observed anglers was not recorded for each fishing stop, but the number of anglers aboard the vessel is available.  We imputed the number of observed anglers using the number of anglers aboard the vessel and the number of observed anglers at each fishing stop form the August 1998-December 1998 data (see Appendix E for details, pp.\pageref{sec:AppendixE}).  In 1987, trips were only observed in Monterey, CA and were therefore excluded from the analysis.  CDFW collected lengths of both retained and discarded fish during this time period.  All China rockfish measured were retained and lengths are used as length compositions for this index.
+The California Department of Fisheries and Wildlife (CDFW) conducted an onboard observer program in central California from 1987-1998 (Reilly et al. 1998).  These data were previously used in the 2013 data moderate assessments [@Cope2015], at the level of a fishing trip.  Since the 2013 assessments, the original data sheets were acquired and data were keypunched to the level of fishing stop.  One caveat of this data is that location data were recorded at a finer scale than the catch data.  We aggregated the relevant location information (time and number of observed anglers) to match the available catch information.  Between April 1987 and July 1992 the number of observed anglers was not recorded for each fishing stop, but the number of anglers aboard the vessel is available.  We imputed the number of observed anglers using the number of anglers aboard the vessel and the number of observed anglers at each fishing stop form the August 1998-December 1998 data (see Appendix E for details, p.\pageref{sec:AppendixE}).  In 1987, trips were only observed in Monterey, CA and were therefore excluded from the analysis.  CDFW collected lengths of both retained and discarded fish during this time period.  All China rockfish measured were retained and lengths are used as length compositions for this index.
 
 California implemented a statewide sampling program in 1999 [@Monk2014].  California Polytechnic State University (Cal Poly) has conducted an independent onboard sampling program as of 2003 for boats in Port San Luis and Morro Bay [@Stephens2006], but follows the protocols established in Reilly et al. (1998), and modified to reflect sampling changes that CDFW has also adopted, e.g., observing fish as they are landed instead of at the level of a fisher’s bag.  Therefore, the Cal Poly data area incorporated in the same index as the CDFW data from 1999-2014.  CalPoly collects lengths of both retained and discarded fish.  
 
-We generated separate relative indices of abundance in California for the 1987-1999 and 2000-2014 datasets due to the number of regulation changes occurring throughout the time period (see Appendix H, pp.\pageref{sec:AppendixH}).  CDFW implemented a regulation of three hooks in 2000, which was reduced to (and remains at) two hooks in 2001.
+We generated separate relative indices of abundance in California for the 1987-1999 and 2000-2014 datasets due to the number of regulation changes occurring throughout the time period (see Appendix H, p.\pageref{sec:AppendixH}).  CDFW implemented a regulation of three hooks in 2000, which was reduced to (and remains at) two hooks in 2001.
 
 The Oregon Department of Fisheries and Wildlife (ODFW) initiated an onboard observer program in 2001, which became a yearly sampling program in 2003 [@Monk2013].  Both California and Oregon provided onboard sampling data through 2014.  Both of these programs only collected lengths of discarded fish, and the number of lengths of China rockfish from these studies is small (Figure \ref{fig:onboard_discard_lengths}).
 
@@ -1264,8 +1005,8 @@ Trips/drifts from the ODFW, CDFW 1999-2014, and Cal Poly databases meeting the f
 6. Drifts missing a starting location (latitude/longitude)      
 7. Drifts identified as having possible erroneous location or time data     
 8. Drifts missing both starting and ending depths       
-9. Drifts within the habitat data occurring farther than 83 m from a reef in Oregon and 34 m in California (see Appendix F (pp. \pageref{sec:AppendixF}) for details)      
-10.	Drifts outside the habitat data in California occurring farther than 141 m from reef (see Appendix F (pp. \pageref{sec:AppendixF}) for details)     
+9. Drifts within the habitat data occurring farther than 83 m from a reef in Oregon and 34 m in California (see Appendix F (p. \pageref{sec:AppendixF}) for details)      
+10.	Drifts outside the habitat data in California occurring farther than 141 m from reef (see Appendix F (p. \pageref{sec:AppendixF}) for details)     
 11.	Drifts occurring on a reef with <3 positive encounters of black rockfish      
 12.	Drifts occurring on a reef in which black rockfish was observed in <25\% of years the reef was visited.     
 
@@ -1275,7 +1016,7 @@ Trips/drifts from the ODFW, CDFW 1999-2014, and Cal Poly databases meeting the f
 
 At the March 2015 Nearshore Stock Assessments Workshop the issue of hook saturation by black rockfish \emph{Sebastes melanops} in Oregon was raised ([Agenda Item D.8 Attachment 10](http://tinyurl.com/ndrrx9r), June 2015).  The recreational fishery in Oregon specifically targets black rockfish.  While black rockfish associate with rocky habitat, they are a schooling, midwater species.  Fishermen specifically targeting black rockfish may not drop their lines to the seafloor, or may encounter black rockfish and other midwater species before their lines can reach the seafloor.  To address this issue in the onboard observer data, we filtered out drifts for which the catch (retained plus discarded) consisted of at least 95\% black, blue \emph{Sebastes mystinus} and yellowtail \emph{Sebastes flavidus} rockfishes, the most commonly occurring midwater rockfish species.  This resulted in a decrease in the number of drifts by 4,092, only three of which observed China rockfish.  
 
-The filtered dataset included 6,038 drifts, of which 259 (4\%) drifts with positive encounters (Table \ref{tab:Onboard_filter}).  The majority of drifts sampled (75\%) were from north of Florence, although China rockfish were present in 6\% of drifts in southern Oregon and 3\% of drifts in the north. 
+The filtered dataset included 6,038 drifts, of which 259 (4%) drifts with positive encounters (Table \ref{tab:Onboard_filter}).  The majority of drifts sampled (75%) were from north of Florence, although China rockfish were present in 6% of drifts in southern Oregon and 3% of drifts in the north. 
 Covariates considered in the full model included \emph{year, depth, month or 2-month wave} and, \emph{region} (Figures \ref{fig:OR_onboard_summary} and \ref{fig:OR_onboard_CPAH}). To increase sample sizes data from waves 2 and 3 were aggregated as well as from 4 and 5 (ODFW does not sample in waves 1 and 6).  Depths greater than 20 m were also binned to 20-59 m.
 
 The final selected dataset contained categorical variables for \emph{year} (13 levels), \emph{wave} (2 levels), \emph{region} (2 levels, north and south of Florence), and three depth bins (\emph{depth}: 0-19 m, and 20-59 m). A lognormal model was selected over a gamma for the positive encounters by a deltaAIC of 20.01. Model selection, using AIC, selected a lognormal model with \emph{year, wave, depth, region}, and a \emph{wave:depth} interaction, while a binomial with \emph{year, region}, and \emph{wave} was selected (Table \ref{tab:OR_onboard_aic}).  In the lognormal submodel, stepwise BIC retained the \emph{year}. In the binomial model, stepwise BIC retained \emph{region} and \emph{wave}. The final \emph{year} effects from the delta-GLM with main effects \emph{year, region}, and \emph{wave} are shown in Table \ref{tab:OR_onboard} and Figure \ref{fig:OR_onboard}). The final model suggests that relative abundance was slightly higher in southern Oregon, and in waves 4 and 5.   Standard model diagnostics show adequate fit and general consistency with GLM model assumptions for the positive catch component (Figure \ref{fig:OR_onboard_diag}).
@@ -1284,7 +1025,7 @@ The final selected dataset contained categorical variables for \emph{year} (13 l
 
 *Central California 1988-1998*
 
-The filtered dataset included 5,557 drifts, of which 852 (15\%) drifts with positive encounters (Table \ref{tab:Onboard_filter}). To increase sample sizes, data from Regions 2 and 3 were aggregated as well as Regions 8 and 9.  Samples north of Ten Mile River were too sparse to reliably include in the index.
+The filtered dataset included 5,557 drifts, of which 852 (15%) drifts with positive encounters (Table \ref{tab:Onboard_filter}). To increase sample sizes, data from Regions 2 and 3 were aggregated as well as Regions 8 and 9.  Samples north of Ten Mile River were too sparse to reliably include in the index.
 
 Covariates considered in the full model included \emph{year, depth, month or 2-month wave} and, \emph{region} (Figures \ref{fig:prehist_onboard_summary} and \ref{fig:prehist_onboard_CPAH}).  The selected data contained categorical variables for \emph{year} (13 levels), \emph{wave} (6 levels), \emph{region} (5 levels), and four depth bins (\emph{depth}: 0-19 m, 20-39 m, 40-59 m, and 60-79 m). A lognormal model was selected over a gamma for the positive encounters by a deltaAIC of 125.06. Model selection, using AIC, selected a lognormal model with \emph{year, depth, and region}, while a binomial with \emph{year, region, depth, wave}, and a \emph{year:region} interaction was selected.  However, the standard errors of the binomial model with interactions were large, and suggested data were too sparse to explore the \emph{year:region} interaction.  For the lognormal submodel, stepwise BIC retained the \emph{depth} and \emph{region} (Table \ref{tab:prehist_onboard_aic}). For the binomial submodel, stepwise BIC retained \emph{year, region}, and \emph{depth}. The final \emph{year} effects from the delta-GLM with main effects \emph{year, region}, and \emph{depth} are shown in Table \ref{tab:prehist_onboard} and Figure \ref{fig:prehist_onboard}).  The covariates in the final model suggest the relative abundance of China rockfish decreases with depth and increases north of Monterey, CA.  Standard model diagnostics show adequate fit and general consistency with GLM model assumptions for the positive catch component (Figure \ref{fig:prehist_onboard_diag})
 
@@ -1294,6 +1035,7 @@ Covariates considered in the full model included \emph{year, depth, month or 2-m
 The filtered dataset included 13,993 drifts, of which 1,403 (10\%) drifts with positive encounters (Table \ref{tab:Onboard_filter}).  CDFW began sampling Region 12 (Trinidad Head to the OR border) in 2008 and no trips from Region 11 (Cape Mendocino to the Eel River) were sampled from 2000-2014.  From 2008-2014, only 10 drifts encountering China rockfish were observed in Region 12.  Therefore, the following index only reflects the population south of Cape Mendocino.  Further, to increase sample sizes drifts from Regions 2 and 3 were aggregated as well as Regions 7 and 8, and Regions 9 and 10.
 
 Covariates considered in the full model included \emph{year, depth, month or 2-month wave} and, \emph{region} (Figures \ref{fig:CA_onboard_summary} and \ref{fig:CA_onboard_CPAH}).  The selected data contained categorical variables for \emph{year} (15 levels), \emph{wave} (6 levels), \emph{region} (6 levels), and four depth bins (\emph{depth}: 0-19 m, 20-39 m, 40-59 m, and 60-79 m). A lognormal model was selected over a gamma for the positive encounters by a deltaAIC of 115.91. Model selection, using AIC, selected a lognormal model with \emph{year, depth, and region}, while a binomial with \emph{year, region, depth}, and a \emph{year:region} interaction was selected.  However, the standard errors of the binomial model with interactions were large, and suggested data were too sparse to explore the \emph{year:region} interaction.  For the lognormal submodel, stepwise BIC retained the \emph{year} and \emph{region} (Table \ref{tab:CA_onboard_aic}). For the binomial submodel, stepwise BIC retained \emph{region}, and \emph{depth}. The final \emph{YEAR} effects from the delta-GLM with main effects \emph{year, region}, and \emph{depth} are shown in Table \ref{tab:CA_onboard} and Figure \ref{fig:CA_onboard}).  The covariates in the final model suggest the relative abundance of China rockfish decreases with depth, specifically in depths greater than 59 m, and increases south to north.  Standard model diagnostics show adequate fit and general consistency with GLM model assumptions for the positive catch component (Figure \ref{fig:CA_onboard_diag})
+
 
 ###Fishery-Independent Data: sources considered, but not used in assessment
  *Northwest Fisheries Science Center (NWFSC) slope survey*    
@@ -1311,12 +1053,7 @@ The Pikitch study was conducted between 1985 and 1987 [@Pikitch1988].  The north
 *Enhanced Data Collection Project (EDCP)*       
 The EDCP was conducted by ODFW to collect information on bycatch and discard groundfish species off the coast of Oregon from late 1995 to early 1999.  EDCP had limited spatial coverage in Oregon waters only.  China rockfish are not targeted using trawl gear, and therefore we did not use data from this survey in the assessment.
 
-
-
-
-###Fishery-Independent Data: sources considered, but not used in assessment
 *Partnership for Interdisciplinary Studies of Coastal Oceans (PISCO)*
-
 A total of 59 China rockfish were observed in 17,657 SCUBA transects conducted in the southern and central survey regions. Transects were conducted in Northern California and Oregon for two years (2010-2011), with a higher occurrence of China rockfish (156 out of 956 transects).
 
 
@@ -1749,7 +1486,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
      colnames(OR_comm_removal) = c('Year','Southern Dead','Northern Dead','Southern Live','Northern Live','Total Removals','Source')
 ```
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-   OR_comm_removal.table = xtable(OR_comm_removal, caption = c("Commercial removals (mt) from the Oregon for the live and dead commercial 
+   OR_comm_removal.table = xtable(OR_comm_removal, caption = c("Commercial removals (mt) from the Oregon live and dead commercial 
                                                                fisheries, north and source of Florence, OR."),label="tab:OR_comm_removal")
    align(OR_comm_removal.table) = c('l','c','>{\\centering}p{.6in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}',
                                       '>{\\centering}p{1in}','l')  
@@ -1767,7 +1504,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
      colnames(CA_comm_removal) = c('Year','South of $40^\\circ 10^\\prime$ Dead','South of $40^\\circ 10^\\prime$ Live','North of $40^\\circ 10^\\prime$ Dead','North of $40^\\circ 10^\\prime$ Live','Total Removals','Source')
 ```
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-   CA_comm_removal.table = xtable(CA_comm_removal, caption = c("Commercial removals (mt) from the California for the live and dead commercial fisheries."),
+   CA_comm_removal.table = xtable(CA_comm_removal, caption = c("Commercial removals (mt) from the California live and dead commercial fisheries."),
                                                                label="tab:CA_comm_removal")
    align(CA_comm_removal.table) = c('l','c','>{\\centering}p{.6in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}',
                                       '>{\\centering}p{.8in}','l')  
@@ -1776,8 +1513,6 @@ Include STAR panel members and affiliations as well as names and affiliations of
                      add.to.row = list(pos = list(0),command = "\\hline \\endhead "))
 
 ```
-
-
 
 
 
@@ -1819,9 +1554,10 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
       discard_comm.table = xtable(discard_comm, caption = c("Total number of observed trips associated with catch of China rockfish and trips 
-                                                      with observed discards of China rockfish aggregated by $2^\\circ$ latitude bins. Range of years 
-                                                      is 2003—2013 North of $40^\\circ 10^\\prime$ and 2004—2013 to the south. No observed catch of China
-                                                      rockfish occurred between $40^\\circ$ and $40^\\circ 10^\\prime$."),label="tab:discard_comm_bylat")
+                                                            with observed discards of China rockfish aggregated by $2^\\circ$ latitude bins. Range of years 
+                                                            is 2003-2013 North of $40^\\circ 10^\\prime$ and 2004—2013 to the south. Note: No
+                                                            observed catch of China rockfish occurred between $40^\\circ$ and $40^\\circ 10^\\prime$."),
+                                                            label="tab:discard_comm_bylat")
       align(discard_comm.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}') 
                                     
       print(discard_comm.table,include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x})
@@ -1924,7 +1660,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 <!-- Oregon commercial logbook TABLES--> 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
       #OR commerical logbook sample size table
-         Orcommlogss.table = xtable(Or_commlog_ss,caption=c("Logbook filtering criteria and resulting sample sizes used 
+         Orcommlogss.table = xtable(Or_commlog_ss,caption=c("Commerical logbook filtering criteria and resulting sample sizes used 
                                                                    for China rockfish.  Bold value indicates the final trip-level 
                                                                    sample size used for delta-GLM analysis."),label='tab:OR_commlog_sample',digits=0)
          align(Orcommlogss.table) = 'lllcc'
@@ -2180,7 +1916,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 \FloatBarrier
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
         #ORBS sample size
-         ORBS_sample_size.table = xtable(ORBS_sample,caption=c("Number of trips by year and subregion in the Oregon Recreational Boat Survey (ORBS) charter boat index. Southern Oregon is defined as ports south of Florence. Northern Oregon includes the port of Florence and all ports to the OR\\-WA border."),
+         ORBS_sample_size.table = xtable(ORBS_sample,caption=c("Number of trips by year and subregion in the Oregon Recreational Boat Survey (ORBS) charter boat index. Southern Oregon is defined as ports south of Florence. Northern Oregon includes the port of Florence and all ports to the OR-WA border."),
                                             label='tab:ORBS_sample_size')
         align(ORBS_sample_size.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
         print(ORBS_sample_size.table, include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x})
@@ -2313,7 +2049,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 ```
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
      ### Washington recreational bio data table
-         WA_FishD_bio.table = xtable(WA_FishD_bio, caption=c("The annual number of fish sampled by WDFW for ages and lengths."),
+         WA_FishD_bio.table = xtable(WA_FishD_bio, caption=c("The annual number of China rockfish sampled by WDFW for ages and lengths."),
                                  label='tab:WA_FishD_bio')
          align(WA_FishD_bio.table) = c('l','>{\\centering}p{.4in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}')          
          print(WA_FishD_bio.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",width="\\textwidth",align=TRUE)
@@ -2603,7 +2339,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   N_model_params.table = xtable(N_model_params, caption=c("Description of model parameters in the northern base-case assessment model."),
-                                label='tab:N_model_params',digits=2)    
+                                label='tab:N_model_params',digits=3)    
   align(N_model_params.table) = c('l','>{\\raggedright}p{3in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}')  
   print(N_model_params.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x},scalebox=.9)
 ```
@@ -2619,7 +2355,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   C_model_params.table = xtable(C_model_params, caption=c("Description of model parameters in the central base-case assessment model."),
-                                label='tab:C_model_params',digits=2)    
+                                label='tab:C_model_params',digits=3)    
   align(C_model_params.table) = c('l','>{\\raggedright}p{3in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}')  
   print(C_model_params.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x},scalebox=.9)
 ```
@@ -2635,7 +2371,7 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   S_model_params.table = xtable(S_model_params, caption=c("Description of model parameters in the southern base-case assessment model."),
-                                label='tab:S_model_params',digits=2)    
+                                label='tab:S_model_params',digits=3)    
   align(S_model_params.table) = c('l','>{\\raggedright}p{3in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}')  
   print(S_model_params.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x},scalebox=.9)
 ```
@@ -2711,6 +2447,8 @@ colnames(Timeseries)=c("Year","Total biomass (mt)","Spawning biomass (mt)",
                        "Depletion","Age-0 recruits",
                      "Total catch (mt)","Relative exploitation rate","SPR")
 Timeseries$Year = as.factor(Timeseries$Year)
+#remove 2015 values for last three columns
+ Timeseries[nrow(Timeseries),c((ncol(Timeseries)-2):ncol(Timeseries))] <- NA
 
 ```
 
@@ -2764,7 +2502,6 @@ Recruit = Recruit[c(-1,-2),]
 Recruityrs = Recruit[Recruit$LABEL>=paste("Recr_",FirstYR,sep='') &  
                        Recruit$LABEL<=paste("Recr_",LastYR,sep=''),]  
 
-
 #Landings
 Landings = modC$sprseries[ ,c("Year","Dead_Catch_B")]
 Landingsyrs = subset(Landings, Year>(FirstYR-1) & Year<(LastYR+1))
@@ -2784,15 +2521,15 @@ Exploited = merge(Depl_years,Exploityrs, all.x=T,all.y=T,by.x='Year',by.y='Year'
 Exploited[is.na(Exploited)] <- 0
 Exploited$total = Exploited$Depl + Exploited$Value
 
-
 Timeseries = as.data.frame(cbind(seq(FirstYR,LastYR,1),Bio_allyrs$Bio_all, SpawningByrs$Value,Depleteyrs$total, 
                    Recruityrs$Value, Landingsyrs$Dead_Catch_B,Exploited$total,SPRyrs$SPR))
                  
-
 colnames(Timeseries)=c("Year","Total biomass (mt)","Spawning biomass (mt)",
                        "Depletion","Age-0 recruits",
                      "Total catch (mt)","Relative exploitation rate","SPR")
 Timeseries$Year = as.factor(Timeseries$Year)
+#remove 2015 values for last three columns
+ Timeseries[nrow(Timeseries),c((ncol(Timeseries)-2):ncol(Timeseries))] <- NA
 
 ```
 
@@ -2872,6 +2609,8 @@ colnames(Timeseries)=c("Year","Total biomass (mt)","Spawning biomass (mt)",
                        "Depletion","Age-0 recruits",
                      "Total catch (mt)","Relative exploitation rate","SPR")
 Timeseries$Year = as.factor(Timeseries$Year)
+#remove 2015 values for last three columns
+ Timeseries[nrow(Timeseries),c((ncol(Timeseries)-2):ncol(Timeseries))] <- NA
 
 ```
 
