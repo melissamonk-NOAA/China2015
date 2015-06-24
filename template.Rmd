@@ -265,7 +265,8 @@ Length and age composition data for China rockfish contain insufficient informat
      Recruityrs$YEAR = seq(FirstYR,LastYR)
      Recruityrs$lowerCI = round(Recruityrs$Value +qnorm(0.025)*Recruityrs$StdDev, digits=2)
      Recruityrs$upperCI = round(Recruityrs$Value -qnorm(0.025)*Recruityrs$StdDev, digits=2)
-     Recruityrs$CI = paste("(",Recruityrs$lowerCI,"-",Recruityrs$upperCI,")",sep="")
+     Recruityrs$CI = paste("(",Recruityrs$lowerCI," - ",Recruityrs$upperCI,")",sep="")
+     Recruityrs$Value = round(Recruityrs$Value,digits=2)
      Recruittab=subset(Recruityrs,select=c('YEAR','Value','CI'))
        colnames(Recruittab) = c('Year','Estimated Recruitment (1,000s)','~ 95% confidence interval')
     assign(paste('Recruittab_',mod_area,sep=''),Recruittab)
@@ -555,9 +556,6 @@ China rockfish is managed in the northern and southern Nearshore Rockfish Comple
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 #########################################################################
-#CHANGE ME
-      FirstYR=2005  # minimum year for the Spawning biomass table
-      LastYR=2014  # maximum year for the Spawning biomass table 
 
   mngmnt = read.csv("./txt_files/mngmt_performance.csv")
 
@@ -588,7 +586,9 @@ TBD
 
 <!--*********************************************************** BEGIN: CREATE RESULTS SUMMARY TABLE **************************************************************************--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-
+#CHANGE ME
+      FirstYR=2006  # minimum year for the Spawning biomass table
+      LastYR=2015  # maximum year for the Spawning biomass table 
 ###collect the data from all the tables
 # read in the management table
 #AgexB = seq(FirstYR,LastYR)
@@ -675,7 +675,9 @@ mngmt = mngmt[,-1]
   base_summary.table = xtable(base_summary, caption=c("China rockfish base case results summary."), 
                               label='tab:base_summary',digits=0) 
    
-    align(base_summary.table) = c("crrcccccccccc")  
+    align(base_summary.table) = c('l','r','r', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}'
+                                  , '>{\\centering}p{.8in}', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}'
+                                  , '>{\\centering}p{.8in}', '>{\\centering}p{.8in}')  
     print(base_summary.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",sanitize.text.function = function(x){x},
            scalebox=.75,align=TRUE, hline.after=c(-1,0,6,12,21,30,nrow(base_summary.table)) )
 ```
