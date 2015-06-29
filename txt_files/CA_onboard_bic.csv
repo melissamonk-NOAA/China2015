@@ -1,13 +1,13 @@
 Model,AIC,BIC
 \textbf{Logormal submodel},,
-~Year + Wave + Depth + Region + Year:Region + Region:Wave + Depth:Wave,2557.98,3136.79
-~Year + Wave + Depth + Region + Wave:Region + Wave:Depth,2521.72,2777.23
-~Year + Wave + Depth + Region + Wave:Depth,2512.92,2695.42
-~Year + Wave + Depth + Region,2507.39,2642.96
-~Year + Depth + Region,\textbf{2505.26},\textbf{2625.20}
-~Year + Region,,2611.56
+~Year + Wave + Depth + Region + Year:Region + Region:Wave + Depth:Wave,2348.95,2927.52
+~Year + Wave + Depth + Region + Wave:Region + Wave:Depth,2316.05,2571.45
+~Year + Wave + Depth + Region + Wave:Depth,2308.72,2493.08
+~Year + Wave + Depth + Region,2301.14,2372.95
+~Year + Depth + Region,\textbf{2299.87},\textbf{2273.95}
+~Year + Region,,2339.58
 \textbf{Binomial submodel},,
-~Depth + Region + Wave + Year,8034.85,8229.11
-~Depth + Region + Wave,,8174.72
-~Depth + Region + Year,\textbf{8033.30},
-~Depth + Region,,8153.39
+~Depth + Region + Wave + Year,8025.34,8219.59
+~Depth + Region + Wave,,8165.79
+~Depth + Region + Year,\textbf{8023.65},
+~Depth + Region,,8144.34
