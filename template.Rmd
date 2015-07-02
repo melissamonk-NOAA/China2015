@@ -976,7 +976,7 @@ The final, area-weighted index (Table \ref{tab:ORBS_index}, Figure \ref{fig:ORBS
 The goal of the Observer Programs in California and Oregon is to collect data including charter boat fishing locations, catch and discard of observed fish by species, and lengths of discarded fish.  Both states sample the commercial passenger fishing vessel (CPFV),i.e., charter boat or for-hire fleet.  The onboard observer programs collect drift-specific information at each fishing stop on an observed trip.  At each fishing stop recorded information includes start and end times, start and end location (latitude/longitude), start and end depth, number of observed anglers (a subset of the total anglers), and the catch (retained and discarded) by species of the observed anglers.  Data for the onboard observer indices for the recreational CPFV fleet are from four sampling programs.  
 
 
-The California Department of Fisheries and Wildlife (CDFW) conducted an onboard observer program in central California from 1987-1998 (Reilly et al. 1998).  These data were previously used in the 2013 data moderate assessments [@Cope2015], at the level of a fishing trip.  Since the 2013 assessments, the original data sheets were acquired and data were keypunched to the level of fishing stop.  One caveat of this data is that location data were recorded at a finer scale than the catch data.  We aggregated the relevant location information (time and number of observed anglers) to match the available catch information.  Between April 1987 and July 1992 the number of observed anglers was not recorded for each fishing stop, but the number of anglers aboard the vessel is available.  We imputed the number of observed anglers using the number of anglers aboard the vessel and the number of observed anglers at each fishing stop form the August 1998-December 1998 data (see Appendix E for details, p.\pageref{sec:AppendixE}).  In 1987, trips were only observed in Monterey, CA and were therefore excluded from the analysis.  CDFW collected lengths of both retained and discarded fish during this time period.  All China rockfish measured were retained and lengths are used as length compositions for this index.
+The California Department of Fisheries and Wildlife (CDFW) conducted an onboard observer program in central California from 1987-1998 (Reilly et al. 1998).  These data were previously used in the 2013 data moderate assessments [@Cope2015], at the level of a fishing trip.  Since the 2013 assessments, the original data sheets were acquired and data were keypunched to the level of fishing stop.  One caveat of this data is that location data were recorded at a finer scale than the catch data.  We aggregated the relevant location information (time and number of observed anglers) to match the available catch information.  Between April 1987 and July 1992 the number of observed anglers was not recorded for each fishing stop, but the number of anglers aboard the vessel is available.  We imputed the number of observed anglers using the number of anglers aboard the vessel and the number of observed anglers at each fishing stop from the August 1992-December 1998 data (see Appendix E for details, p.\pageref{sec:AppendixE}).  In 1987, trips were only observed in Monterey, CA and were therefore excluded from the analysis.  CDFW collected lengths of both retained and discarded fish during this time period.  All China rockfish measured were retained and lengths are used as length compositions for this index.
 
 California implemented a statewide sampling program in 1999 [@Monk2014].  California Polytechnic State University (Cal Poly) has conducted an independent onboard sampling program as of 2003 for boats in Port San Luis and Morro Bay [@Stephens2006], but follows the protocols established in Reilly et al. (1998), and modified to reflect sampling changes that CDFW has also adopted, e.g., observing fish as they are landed instead of at the level of a fisher’s bag.  Therefore, the Cal Poly data area incorporated in the same index as the CDFW data from 1999-2014.  CalPoly collects lengths of both retained and discarded fish.  
 
@@ -1195,7 +1195,7 @@ Ageing imprecision was estimated using a collection of 529 China rockfish otolit
 ###Biological Data: Weight-Length
 The weight-length relationship is based on the standard power function: $W = \alpha(L^\beta)$ where $W$ is individual weight (kg), $L$ is length (cm), and $\alpha$ and $\beta$ are coefficients used as constants.
 
-This assessment uses weight-length parameters for females of $\alpha=1.17x10^{-5}$ and $\beta=3.177$, derived from Lea et al. [-@Lea1999].  A fit of the length-weight relationship to the Oregon ORBS data yielded a curve that was very similar to that reported in Lea et al. [-@Lea1999], $\alpha=2.06x10^{-5}$ and $\beta=3.02$ (Figure \ref{fig:weight_length})
+This assessment uses weight-length parameters for females of $\alpha=1.17x10^{-5}$ and $\beta=3.177$, derived from Lea et al. [-@Lea1999].  A fit of the length-weight relationship to the Oregon ORBS data, $\alpha=2.06x10^{-5}$ and $\beta=3.02$,  yielded a curve that was very similar to that reported in Lea et al. [-@Lea1999](Figure \ref{fig:weight_length})
 
 
 ###Biological Data: Maturity and Fecundity
@@ -9055,9 +9055,14 @@ The goal of this analysis is to impute the number of observed anglers in the ini
 <!>
 
 The number of observed anglers at a fishing stop is a subset of the number of total 
-number of anglers; a quantity which is consistently recorded throughout the entire dataset. 
-This suggests that a simple binomial regression model could be used to predict 
-the mean number of observed anglers from the number of total anglers, in the 
+number of anglers onboard the vessel (paid plus free anglers); a quantity which is consistently 
+recorded throughout the entire dataset.  We explored the using the total number of observed anglers onboard
+the vessel in the following analyses, but it was not recorded in a consitent manner through time, e.g., recorded as
+the maximum number of anglers observed at a fishing stop during the trip, a sum of the observed anglers at each
+fishing stop, or the average number of observed anglers at all fishings stops, etc.
+
+We explored a binomial regression model to predict 
+the mean number of observed anglers at a fishing stop from the number of total anglers, in the 
 initial period of the data. Binomial regression models of this general form were 
 considered in this analysis, as well as a sensitivity analysis among the other 
 potential covariates available in the dataset. Among the potential predictor 
