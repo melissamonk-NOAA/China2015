@@ -1131,7 +1131,7 @@ The Northern California Marine Sport Fish Survey conducted an assessment survey 
 
 Biological data from commercial fisheries for China rockfish were extracted from PacFIN (PSMFC) on May 18, 2015. Commercial landings and the biological characteristics of hook and line landings were sampled from 1995-2014 in Oregon and in 1991-2013 California. There is no commercial catch of China rockfish in the state of Washington. Currently, port biologists employed by each state fishery agency collect species-composition information and biological data from the landed catches. The monitoring programs currently in place vary between the states but are generally based on stratified, multistage sampling designs. The OR data were available by live fish fishery landings and dead fish fishery landings, but fish conditions were not available for PacFIN for the CA landings. Due to the lack of fish condition data for CA in PacFIN, the CA commercial fishery compositions were downloaded from the [CALCOM](http://128.114.3.187/) database.
 
-Annual commercial length- and age-frequency distributions were developed for each state for which observations were available, following the same bin structure as was used for research observations. For each fleet, the raw observations were expanded to the sample level, to allow for any fish that were not measured, then to the trip level to account for the relative size of the landing from which the sample was obtained. Length and age data collected from commercial landings for OR and CA are summarized by the number of port samples (Tables \ref{tab:OR_pacfin_bio} and \ref{tab:CA_pacfin_bio}). Figures \ref{fig:C_comp_lendat_flt5mkt2}, \ref{fig:C_comp_lendat_flt6mkt2},\ref{fig:C_comp_lendat_sex1mkt2_multi-fleet_comparison}, \ref{fig:C_comp_condAALdat_bubflt5mkt2}, and \ref{fig:C_comp_condAALdat_bubflt7mkt2} show plots of the commercial length and age composition data for the central model.  Figures \ref{fig:S_comp_lendat_flt1mkt2}, \ref{fig:S_comp_lendat_flt2mkt1}, and \ref{fig:S_comp_lendat_flt2mkt2} show plots of the commercial length and age composition data for the southern model.
+Annual commercial length- and age-frequency distributions were developed for each state for which observations were available, following the same bin structure as was used for research observations. For each fleet, the raw observations were expanded to the sample level, to allow for any fish that were not measured, then to the trip level to account for the relative size of the landing from which the sample was obtained. Length and age data collected from commercial landings for OR and CA are summarized by the number of port samples (Tables \ref{tab:OR_pacfin_bio} and \ref{tab:CA_calcom_bio}). Figures \ref{fig:C_comp_lendat_flt5mkt2}, \ref{fig:C_comp_lendat_flt6mkt2},\ref{fig:C_comp_lendat_sex1mkt2_multi-fleet_comparison}, \ref{fig:C_comp_condAALdat_bubflt5mkt2}, and \ref{fig:C_comp_condAALdat_bubflt7mkt2} show plots of the commercial length and age composition data for the central model.  Figures \ref{fig:S_comp_lendat_flt1mkt2}, \ref{fig:S_comp_lendat_flt2mkt1}, and \ref{fig:S_comp_lendat_flt2mkt2} show plots of the commercial length and age composition data for the southern model.
 
 
 *Research: NMFS groundfish ecology survey*      
@@ -2060,32 +2060,38 @@ Include STAR panel members and affiliations as well as names and affiliations of
 
 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-     ### OR/CA PacFIN bio data table
-       OR_CAbiopacfin = read.csv("./txt_files/OR_CA_bio_pacfin.csv")
+     ### OR PacFIN bio sample size table
+       OR_CAbiopacfin = read.csv("./txt_files/Pacfin_sample_OR.csv")
        colnames(OR_CAbiopacfin) = c('Year', 'State','Fish condition',	'N port samples with lengths','N fish length samples',	
                                   'N port samples with ages',	'N fish age samples')
       OR_pacfin_bio = subset(OR_CAbiopacfin,State=='OR')
-      CA_pacfin_bio = subset(OR_CAbiopacfin,State=='CA')
-      CA_pacfin_bio = CA_pacfin_bio[,c(1:5)]
 ```
 \FloatBarrier
 \newpage
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
      ### OR/CA PacFIN bio data table
-         OR_pacfin_bio.table = xtable(OR_pacfin_bio, caption=c("Number of length and age port samples and fish sampled in Oregon. Source:PacFIN."),
-                                 label='tab:OR_pacfin_bio')
+         OR_pacfin_bio.table = xtable(OR_pacfin_bio, caption=c("Number of length and age port samples and fish sampled 
+                                                               in Oregon. Source:PacFIN."),
+                                                                label='tab:OR_pacfin_bio')
          align(OR_pacfin_bio.table) = c('l','c','c','>{\\centering}p{.9in}','>{\\centering}p{.9in}',
                                             '>{\\centering}p{.9in}','>{\\centering}p{.9in}','>{\\centering}p{.9in}') 
          print(OR_pacfin_bio.table, include.rownames=FALSE, caption.placement="top")
 ```
 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+     ### CA  CALCOM bio sample size table
+       CAcalcom = read.csv("./txt_files/Calcom_sample_CA.csv")
+       colnames(CAcalcom) = c('','Year', 'Number of clusters','Number of fish')
+```
+
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-     ### OR/CA PacFIN bio data table
-         CA_pacfin_bio.table = xtable(CA_pacfin_bio, caption=c("Number of length and age port samples and fish sampled in California. Source:PacFIN."),
-                                 label='tab:CA_pacfin_bio')
-         align(CA_pacfin_bio.table) = c('l','c','c','>{\\centering}p{.9in}','>{\\centering}p{1in}','>{\\centering}p{1in}') 
-         print(CA_pacfin_bio.table, include.rownames=FALSE, caption.placement="top")
+     ### CA CALCOM bio sample size table
+         CAcalcom.table = xtable(CAcalcom, caption=c("Number of length samples and fish sampled in California, 
+                                                     south of $40^\\circ 10^\\prime$. Source:CALCOM."),
+                                                    label='tab:CA_calcom_bio')
+         align(CAcalcom.table) = c('l','l','l','>{\\centering}p{.9in}','>{\\centering}p{1in}') 
+         print(CAcalcom.table, include.rownames=FALSE, caption.placement="top",hline.after=c(-1,0,8,nrow(CAcalcom.table)))
 ```
 
 \FloatBarrier
@@ -2945,7 +2951,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 ![Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the Oregon and northern California MRFSS data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:MRFSS_N_diag}](plots/MRFSS_N_diag.png)
 
 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Oregon and northern Califronia MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:MRFSS_N_index}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Oregon and northern California MRFSS dockside program, with 95% lognormal confidence intervals. \\label{fig:MRFSS_N_index}"}
 #ca
   plot(MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$Index, xlab="Year",ylab="Index",ylim=c(0,.35),xlim=c(1980,2003),type='b',xaxt='n',lwd=1.5,pch=19)
   arrows(MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$lowerCI, MRFSS_N_index_allyrs$Year, MRFSS_N_index_allyrs$upperCI, code=3, angle=90,length=0.01)
@@ -9167,12 +9173,12 @@ both sensitive and appropriate for use with prediction in this case.
 We identified reefs as potential habitat for China rockfish in California, Oregon and Washington using a variety of newly available spatial data sources, including 2, 3 and 5 m bathymetry, substrate, lithology and Habitat Suitability geodatabases.  Available data sources varied by latitude. To delineate reefs from Point Conception to the Oregon border we used a 2 m binary raster layer (3 m for Cordell Bank) for substrate, where 1 = rough, and 0 = smooth habitat (California Seafloor Mapping Project, data available from: http://seafloor.otterlabs.org/index.html).  Rough and smooth substrate was identified by CSMP using 2 rugosity indices based upon bathymetric data, surface:planar area (SA:PA), and vector ruggedness measure (VRM).  We considered areas identified as ‘rough’ as reef habitat.  For reefs named Asilomar, Cypress Point, Portuguese Ledge, and Point Joe only a portion of the reefs were mapped at the 2 m resolution, therefore to identify the remaining reef, we used either a 5 m resolution VRM dataset, where the VRM cutoff was greater than 0.001 [@Young2010].  For all reefs derived from either 2 m, 3 m or 5 m resolution, we applied a 5 m buffer around each reef habitat for potential error in positional accuracy and all reefs with an area greater than or equal to 100 m\textsuperscript{2} were included. We identified seven reefs outside of the 2 m layer that contained a significant number of CPFV points, which we decided to include in the indices.  Big Reef, Blunts Reef, Isle of St. James, Point Sur Deep, Sandhill Ledge,   portions of San Gregario  and Soap Bank reefs were located just outside of 2 m, 3 m and 5 m ‘footprint’, therefore for these reefs we used the 2005 Habitat Suitability Probability (HSP) geodatabase for China rockfish [@NMFS2005]. The HSP is a modeled output from Essential Fish Habitat geodatabase and is based upon habitat data, depth, and location, where input data are NMFS trawl datasets. In order to identify reef habitats from the Oregon border to Washington, we used a lithology shapefile [@Goldfinger2014] that was based upon multiple seafloor mapping surveys including multibeam and sidescan sonar, sediment grab and core samples, and images. Seafloor types were classified according to established classification schemes [@Greene1999].  We considered the following lithology types as ‘reef habitat:’ Boulder, cobble, cobble mix, hard, rock, and rock mix.  All spatial data was projected to NAD 1983 UTM Zone 10.
 
 
-Reef systems were grouped and stratified by depth at a spatial scale biologically meaningful to China rockfish.  China rockfish are typically sedentary and have high site fidelity, therefore we grouped reefs in consideration of how a China rockfish would experience its surroundings.  Lea [-@Lea1999] recaptured China rockfish in the same general location as where they were released, however a few individuals of other rockfish species (copper (\textit{Sebastes caurinus}), gopher (\textit{Sebastes carnatus}), olive (\textit{Sebastes serranoides}) and yellowtail (\textit{Sebastes flavidus})) demonstrated movement up to 1.5 nautical miles (about 2,700 m), but all were captured within the same reef system.  In the Puget Sound copper, brown and quillback were found to have a home range less than 30m\textsuperscript{2} in high relief rocky areas [@Matthews1990].  In other rockfish movement studies, China rockfish were tagged but never recaptured, or there was a sample size of 1 [@Hannah2011], Hannah 2012).  Using this limited information, we considered that China rockfish would swim no more than 200 m over smooth, sand, or muddy habitat to a neighboring reef, therefore if a reef was greater than ~200 m from rocky reef habitat it was considered a different reef system.  If a reef system has contiguous habitat (no channels greater than 200 m) it remained intact, no matter how large the reef (Fig. \cite{MHM_careefs]},\cite{MHM_oreefs}).  A small number of reefs were merged into ‘super reefs’ to accommodate 1980s-1990s CDFW location codes that overlapped multiple reefs [.  Reef areas were calculated using the zonal stats tool in ArcGIS, stratified by the depth bins 0-19 m, 20-39 m, 40-59 m, 60-79 m, 80-99 m and greater than 100 m using the CSMP depth raster (2 m, 3 m or 5 m resolution).  To get depths for those reefs outside the CSMP ‘footprint’ we used the NOAA Coastal Relief Model raster dataset (90 m) for California, and 100 m digital elevation model (DEM) bathymetry from the Active Tectonics and Seafloor Mapping Lab for Oregon.
+Reef systems were grouped and stratified by depth at a spatial scale biologically meaningful to China rockfish.  China rockfish are typically sedentary and have high site fidelity, therefore we grouped reefs in consideration of how a China rockfish would experience its surroundings.  Lea [-@Lea1999] recaptured China rockfish in the same general location as where they were released, however a few individuals of other rockfish species (copper (\textit{Sebastes caurinus}), gopher (\textit{Sebastes carnatus}), olive (\textit{Sebastes serranoides}) and yellowtail (\textit{Sebastes flavidus})) demonstrated movement up to 1.5 nautical miles (about 2,700 m), but all were captured within the same reef system.  In the Puget Sound copper, brown and quillback were found to have a home range less than 30m\textsuperscript{2} in high relief rocky areas [@Matthews1990].  In other rockfish movement studies, China rockfish were tagged but never recaptured, or there was a sample size of 1 [@Hannah2011], Hannah 2012).  Using this limited information, we considered that China rockfish would swim no more than 200 m over smooth, sand, or muddy habitat to a neighboring reef, therefore if a reef was greater than ~200 m from rocky reef habitat it was considered a different reef system.  If a reef system has contiguous habitat (no channels greater than 200 m) it remained intact, no matter how large the reef (Figures \ref{fig:MHM_careefs} and \ref{fig:MHM_orreefs}).  A small number of reefs were merged into ‘super reefs’ to accommodate 1980s-1990s CDFW location codes that overlapped multiple reefs [.  Reef areas were calculated using the zonal stats tool in ArcGIS, stratified by the depth bins 0-19 m, 20-39 m, 40-59 m, 60-79 m, 80-99 m and greater than 100 m using the CSMP depth raster (2 m, 3 m or 5 m resolution).  To get depths for those reefs outside the CSMP ‘footprint’ we used the NOAA Coastal Relief Model raster dataset (90 m) for California, and 100 m digital elevation model (DEM) bathymetry from the Active Tectonics and Seafloor Mapping Lab for Oregon.
 
 
-![Map of the reefs near the Monterey peninsula in CA (a) and overlaid with the fishing location codes from the CDFW 1987-1998 onboard observer program. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. Note that the size of the fishing location points does not reflect the area fished.\label{MHM_careefs}](plots//MHM_CA_reefmap.png)
+![Map of the reefs near the Monterey peninsula in CA (a) and overlaid with the fishing location codes from the CDFW 1987-1998 onboard observer program. All fishing locations follow the confidentiality guidelines and were fished by at least three vessels during the study. Note that the size of the fishing location points does not reflect the area fished. \label{fig:MHM_careefs}](plots/MHM_CA_reefmap.png)
 
-![Example of the reefs in Oregon.\label{MHM_orreefs}](plots//MHM_OR_reefs.png)
+![Example of the reefs in Oregon. \label{fig:MHM_orreefs}](plots/MHM_OR_reefs.png)
 
 
 \newpage
@@ -9719,6 +9725,8 @@ The following regulations pertain to nearshore rockfish species in Oregon and we
 \newpage
 
 
-\thispagestyle{empty}
 
 #References{-}
+
+\renewcommand{\thepage}{}
+
