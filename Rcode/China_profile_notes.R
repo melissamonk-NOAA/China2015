@@ -37,7 +37,7 @@ M.vec <- sort(c(0.053, seq(0.04, 0.12, 0.02)))
 h.vec <- c(0.3, 0.6, 0.773, 0.9)
 
 # create new folder to contain all profiles
-dir.create(file.path(dir.mods, "profiles"))
+#dir.create(file.path(dir.mods, "profiles"))
 
 ####################################################################################
 # function to copy input files
@@ -145,6 +145,10 @@ SSplotProfile(profilesummary,           # summary object
 axis(1,at=0.053) # axis showing base model values (prior median)
 dev.off() # close PNG file
 
+SSplotComparisons(profilesummary, subplot=1, legendlabels=paste0("M=",M.vec),
+                  png=TRUE, plotdir=file.path(dir.mods, "profiles"), models=1:4,
+                  filenameprefix="profile_Mortality.N_")
+
 ##################################################################################
 # Mortality profile Central
 profilemodels <- SSgetoutput(dirvec=dir.prof.M.C, keyvec=1:length(M.vec), getcovar=FALSE)
@@ -162,6 +166,11 @@ SSplotProfile(profilesummary,           # summary object
 axis(1,at=0.053) # axis showing base model values (prior median)
 dev.off() # close PNG file
 
+# time series plots from profiles
+SSplotComparisons(profilesummary, subplot=1, legendlabels=paste0("M=",M.vec),
+                  png=TRUE, plotdir=file.path(dir.mods, "profiles"), models=1:4,
+                  filenameprefix="profile_Mortality.C_")
+
 ##################################################################################
 # Mortality profile South
 profilemodels <- SSgetoutput(dirvec=dir.prof.M.S, keyvec=1:length(M.vec), getcovar=FALSE)
@@ -178,6 +187,10 @@ SSplotProfile(profilesummary,           # summary object
               profile.label="Natural mortality (M)") # axis label
 axis(1,at=0.053) # axis showing base model values (prior median)
 dev.off() # close PNG file
+
+SSplotComparisons(profilesummary, subplot=1, legendlabels=paste0("M=",M.vec),
+                  png=TRUE, plotdir=file.path(dir.mods, "profiles"), models=1:4,
+                  filenameprefix="profile_Mortality.S_")
 
 ##################################################################################
 # R0 profile North
@@ -199,6 +212,7 @@ file.copy(file.path(dir.prof.R0.N, 'profile_plot_likelihood.png'),
 
 ##################################################################################
 # R0 profile Central
+dir.prof.R0.C <- file.path(dir.mods, "profiles", "prof.R0.C")
 profilemodels <- SSgetoutput(dirvec=dir.prof.R0.C, keyvec=1:length(logR0vec.C),
                              getcovar=FALSE)
 profilemodels$MLE <- out.C
@@ -215,6 +229,33 @@ SSplotProfile(profilesummary,           # summary object
               profile.label="Log of unfished equilibrium recruitment, log(R0)") # axis label
 file.copy(file.path(dir.prof.R0.C, 'profile_plot_likelihood.png'),
           file.path(dir.prof.R0.C, '../profile_logR0.C.png'), overwrite=TRUE)
+# Piner Plot showing influence of age comps by fleet
+PinerPlot(profilesummary,           # summary object
+          component="Age_like",
+          main="Changes in length-composition likelihoods by fleet",
+          minfraction = 0.0001,
+          xlim=c(3.2,4.6),
+          ymax=200,
+          plotdir=dir.prof.R0.C,
+          print=FALSE,
+          profile.string = "R0", # substring of profile parameter
+          profile.label="Log of unfished equilibrium recruitment, log(R0)") # axis label
+file.copy(file.path(dir.prof.R0.C, 'profile_plot_likelihood.png'),
+          file.path(dir.prof.R0.C, '../profile_logR0.C.png'), overwrite=TRUE)
+
+
+# plot profile using summary created above
+SSplotProfile(profilesummary,           # summary object
+              minfraction = 0.0001,
+              sort.by.max.change = FALSE,
+              xlim=c(3.2,4.6),
+              ymax=5,
+              plotdir=dir.prof.R0.C,
+              print=TRUE,
+              profile.string = "R0", # substring of profile parameter
+              profile.label="Log of unfished equilibrium recruitment, log(R0)") # axis label
+file.copy(file.path(dir.prof.R0.C, 'profile_plot_likelihood.png'),
+          file.path(dir.prof.R0.C, '../profile_logR0.C_ymax5.png'), overwrite=TRUE)
 
 ##################################################################################
 # R0 profile South
