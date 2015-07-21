@@ -581,7 +581,45 @@ China rockfish is managed in the northern and southern Nearshore Rockfish Comple
 TBD
 
 ##Decision table{-}
-TBD
+###Northern model
+
+
+<!-- *************************BEGIN: NORTHERN DECISION TABLE*******************************************-->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+         decision_north = read.csv("./txt_files/DecisionTable_North.csv")
+         colnames(decision_north) = c('', 'Year',	'Catch',	'Spawning Output',	'Depletion',
+                                      'Spawning Output',	'Depletion',	'Spawning Output',	'Depletion')
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+        decision_north.table = xtable(decision_north, caption=c("Summary of 10-year projections beginning in 2017 for alternate states of nature 
+                                                           based on an axis of uncertainty.  Columns range over low, mid, and high states of
+                                                           nature, and rows range over different assumptions of catch levels"), 
+                                                 label='tab:decision_table_north')
+      
+        align(decision_north.table) = c('l','l|','c','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c') 
+
+            addtorow <- list()
+            addtorow$pos <- list()
+            addtorow$pos[[1]] <- -1
+            addtorow$pos[[2]] <- -1
+            addtorow$command <- c( ' \\multicolumn{3}{c}{} &  \\multicolumn{2}{c}{} 
+                                   &  \\multicolumn{2}{c}{\\textbf{States of nature}} 
+                                   &   \\multicolumn{2}{c}{} \\\\\n', 
+                                 ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{Low M 0.05} 
+                                   &  \\multicolumn{2}{c}{Base M 0.07} 
+                                   &   \\multicolumn{2}{c}{High M 0.09} \\\\\n')
+     print(decision_north.table,add.to.row=addtorow, include.rownames=FALSE, caption.placement="top",
+         hline.after=c(-1,0,10,20,30,nrow(decision_north.table)),scalebox=.9)
+
+#,tabular.environment="tabularx",width="\\textwidth", 
+```
+<!-- *************************END: NORTHERN DECISION TABLE*******************************************-->
+###Central model
+
+
+###Southern model
 
 
 <!--*********************************************************** BEGIN: CREATE RESULTS SUMMARY TABLE **************************************************************************--> 
@@ -3199,7 +3237,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Fits to the northern Oregon recreational CPFV fleet ORBS dockside index for the central model.  \label{fig:C_index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS}](r4ss/plots_C/index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS.png)
 
-!["Residuals in fit to conditional age-at-length compositions for the commercial dead-fish fishery in southern OR in the central model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_condAALfit_residsflt5mkt2}](r4ss/plots_C/comp_condAALfit_residsflt5mkt2.png)
+![Residuals in fit to conditional age-at-length compositions for the commercial dead-fish fishery in southern OR in the central model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_condAALfit_residsflt5mkt2}](r4ss/plots_C/comp_condAALfit_residsflt5mkt2.png)
 
 ![Residuals in fit to conditional age-at-length compositions for the recreational party/charter fishery in southern OR in the central model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_condAALfit_residsflt7mkt2}](r4ss/plots_C/comp_condAALfit_residsflt7mkt2.png)
 
@@ -3290,15 +3328,14 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Prior distributions for stock-recruit steepness (upper panel) and natural mortality (lower panel). Fixed values used in all three base models are indicated by the red triangles. Blue vertical lines show estimates of these parameters from a southern model sensitivity analysis in which these values were estimated.  \label{fig:S_est_h_and_M_priors_and_MLEs}](r4ss/plots_sensitivity/S_est_h_and_M_priors_and_MLEs.png)
 
-![Comparison of fixed values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_compare1_spawnbio}](r4ss/plots_sensitivity/S_est_h_and_M_compare1_spawnbio.png)
 
 \FloatBarrier
 
 ![Sensitivity of spawning biomass to fixed versus estiamted values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_compare1_spawnbio}](r4ss/plots_sensitivity/S_est_h_and_M_compare1_spawnbio.png)
 
-![Sensitivity of realtive spawning biomass to fixed versus estiamted values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_compare3_Bratio}](r4ss/plots_sensitivity/S_est_h_and_M_compare3_Bratio.png)
+![Sensitivity of relative spawning biomass to fixed versus estiamted values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_compare3_Bratio}](r4ss/plots_sensitivity/S_est_h_and_M_compare3_Bratio.png)
 
-![Sensitivity of growth to fixed versus estiamted values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_growth_comparison}](r4ss/plots_sensitivity/S_est_h_and_M_growth_comparison.png)
+![Sensitivity of growth to fixed versus estimated values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_growth_comparison}](r4ss/plots_sensitivity/S_est_h_and_M_growth_comparison.png)
 
 
 
