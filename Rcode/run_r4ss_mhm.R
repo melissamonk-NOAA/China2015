@@ -1,45 +1,50 @@
 library(r4ss)
 #library(xtable)
 
-#setwd('C:/China2015')
+#setwd('C:/China2015/SS')
 #dir.create(file.path(paste(getwd()), "plots_N"))
 #read in the SS north output file
-setwd('C:/Assessment 2015/China rockfish/SS/SS_chinaN')
-modN = SS_output(dir='C:/Assessment 2015/China rockfish/SS/SS_chinaN', forecast=T, covar=T, ncol=1000)
-save.image("Chinanorth2015.RData")
-SS_plots(modN,png=TRUE,html=FALSE,datplot=TRUE,uncertainty=FALSE,maxrows=6, maxcols=6, 
-         maxrows2=4, maxcols2=4,
-         dir="C:/Assessment 2015/China rockfish/SS/SS_chinaN")
-SS_plots(modN, pheight=4, plot=24, SSplotDatMargin=18)
+
+##set the working directory for the northern model
+setwd('C:/China2015/r4ss')
+#run r4ss for each model
+modN = SS_output(dir='C:/China2015/SS/Northern_base', forecast=T, covar=T, ncol=1000)
+modC = SS_output(dir='C:/China2015/SS/Central_base', forecast=T, covar=T, ncol=1000)
+modS = SS_output(dir='C:/China2015/SS/Southern_base', forecast=T, covar=T, ncol=1000)
+#save the workspace an image
+save.image("China_SS_output2015.RData")
 
 
-#read in the SS central output file
-setwd('C:/Assessment2015/SS_chinaC_2')
-modC = SS_output(dir='C:/Assessment2015/SS_chinaC_2', forecast=T, covar=T, ncol=1000)
-save.image("Chinacentral2015.RData")
-SS_plots(modC,png=TRUE,html=FALSE,datplot=TRUE,uncertainty=FALSE,maxrows=6, maxcols=6, 
-         maxrows2=4, maxcols2=4,dir="C:/Assessment2015/SS_chinaC_2")
-SS_plots(modC, pheight=6, plot=24, SSplotDatMargin=18)
-#SS_plots(out.S, pheight=5, plot=24, SSplotDatMargin=18)
 
-#read in the SS south output file
-setwd('C:/Assessment 2015/China rockfish/SS/SS_chinaS')
-modS = SS_output(dir='C:/Assessment 2015/China rockfish/SS/SS_chinaS', forecast=T, covar=T, ncol=1000)
-save.image("Chinasouth2015.RData")
-SS_plots(modS,png=TRUE,html=FALSE,datplot=TRUE,uncertainty=FALSE,maxrows=6, maxcols=6, 
-         maxrows2=4, maxcols2=4,dir="C:/Assessment 2015/China rockfish/SS/SS_chinaS")
-#SS_plots(modS, pheight=5, plot=24, SSplotDatMargin=18)
 
-load("C:/Assessment 2015/China rockfish/SS/SS_chinaN/Chinanorth2015.RData")
-load("C:/Assessment 2015/China rockfish/SS/SS_chinaC/Chinacentral2015.RData")
-load("C:/Assessment 2015/China rockfish/SS/SS_chinaS/Chinasouth2015.RData")
+##RUN r4ss plots for each model
 
+#North
+SS_plots(modN,png=TRUE,html=FALSE,datplot=TRUE,uncertainty=TRUE,maxrows=6, maxcols=6, 
+         maxrows2=4, maxcols2=4, printfolder='',
+         dir="C:/China2015/r4ss/plots_N")
+#SS_plots(modN, pheight=4, plot=24, SSplotDatMargin=18,dir="C:/China2015/r4ss/plots_N",printfolder='')
+
+#Central
+SS_plots(modC,png=TRUE,html=FALSE,datplot=TRUE,uncertainty=TRUE,maxrows=6, maxcols=6, 
+         maxrows2=4, maxcols2=4, printfolder='',
+         dir="C:/China2015/r4ss/plots_C")
+#SS_plots(modC, pheight=6, plot=24, SSplotDatMargin=18,dir="C:/China2015/r4ss/plots_C")
+
+#South
+SS_plots(modS,png=TRUE,html=FALSE,datplot=TRUE,uncertainty=TRUE,maxrows=6, maxcols=6, 
+         maxrows2=4, maxcols2=4, printfolder='',
+         dir="C:/China2015/r4ss/plots_S")
+#SS_plots(modS, pheight=5, plot=24, SSplotDatMargin=18,dir="C:/China2015/r4ss/plots_S")
+
+###############################################################################################################
+#MODEL COMPARISON PLOTS
 # create base model summary list
 out.N = modN
 out.C = modC
 out.S = modS
 base.summary <- SSsummarize(list(out.N,out.C, out.S))
-dir.plots <- 'c:/Assessment 2015/China rockfish/SS/Compare/plots'  # could be moved to github if we wish
+dir.plots <- 'C:/China2015/r4ss/plots_compare' 
 
 # vector of names and colors for N, C, and S
 mod.names <- c("North","Central","South")
@@ -81,18 +86,15 @@ SSplotYield(out.N, col=mod.cols[1], subplot=1, add=TRUE)
 legend('topright', legend=mod.names, col=mod.cols, lwd=3, bg='white', bty='n')
 # close PNG file
 dev.off()
-#load('Chinanorth2015.RData')
-#load('Chinasouth2015.Rdata')
 
 
 
 
-####write the entire myreplist to a file
-sink("list_of_dataframes.csv", type="output")
-invisible(lapply(modS, function(x) dput(write.csv(x))))
-sink()
+####write the entire myreplist and mod structure to a file
+#sink("list_of_dataframes.csv", type="output")
+#invisible(lapply(modS, function(x) dput(write.csv(x))))
+#sink()
 
-
-sink("mod_structure.csv", type="output")
-invisible(str(modC,list.len = 9999))
-sink()
+#sink("mod_structure.csv", type="output")
+#invisible(str(modC,list.len = 9999))
+#sink()

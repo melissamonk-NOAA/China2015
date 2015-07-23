@@ -1,0 +1,38 @@
+library(r4ss)
+out <- SS_output(getwd(),covar=FALSE)
+out <- SS_output(getwd())
+flt.names <- c("Commercial_Dead","Commercial_Live","Rec_Charter","Rec_Private",
+"Rec_Charter_Onboard_87-98","Rec_Charter_Onboard_1999-2014",
+"CCFRP_comps","Abrams_thesis_CAAL")
+SS_plots(out, uncertainty=F)
+SS_plots(out, fleetnames=flt.names, )
+SS_plots(out, datplot=TRUE, maxrows=6, maxcols=6, maxrows2=4, maxcols2=4)
+library(r4ss)
+out <- SS_output(getwd(),covar=FALSE)
+out <- SS_output(getwd())
+flt.names <- c("Commercial_Dead","Commercial_Live","Rec_Charter","Rec_Private",
+"Rec_Charter_Onboard_87-98","Rec_Charter_Onboard_1999-2014",
+"CCFRP_comps","Abrams_thesis_CAAL")
+SS_plots(out, uncertainty=F)
+SS_plots(out, fleetnames=flt.names, )
+.3389*1.4446
+library(r4ss)
+out <- SS_output(getwd(),covar=FALSE)
+out <- SS_output(getwd())
+SS_plots(out, uncertainty=F)
+(0.0715807+0.069)/2
+(0.072+0.069)/2
+SS_plots(out, uncertainty=F)
+SS_plots(out, fleetnames=flt.names, )
+SS_plots(out, datplot=TRUE, maxrows=6, maxcols=6, maxrows2=4, maxcols2=4)
+library(r4ss)
+out <- SS_output(getwd(),covar=FALSE)
+out <- SS_output(getwd())
+SS_plots(out, uncertainty=F)
+SS_plots(out, fleetnames=flt.names, )
+flt.names <- c("Commercial_Dead","Commercial_Live","Rec_Charter","Rec_Private",
+"Rec_Charter_Onboard_87-98","Rec_Charter_Onboard_1999-2014",
+"CCFRP_comps","Abrams_thesis_CAAL")
+SS_plots(out, uncertainty=F)
+SS_plots(out, fleetnames=flt.names, )
+SS_plots(out, datplot=TRUE, maxrows=6, maxcols=6, maxrows2=4, maxcols2=4)

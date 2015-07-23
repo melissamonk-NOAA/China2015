@@ -38,11 +38,8 @@ bibliography: chinarockfish2015.bib
 #########################################################################
     
 ##############################################################################################################
-#### loads workspace image of the BASE MODEL from SS_output in r4ss    
-     #load("Aurora2013.RData")
-      load("./r4ss/Chinanorth2015.RData")
-      load("./r4ss/Chinasouth2015.RData")
-      load("./r4ss/Chinacentral2015.RData")
+#### loads workspace image of the BASE MODEL(S) from SS_output in r4ss    
+      load("./r4ss/China_SS_output2015.RData")
       
   #number of workspaces
       n_models = 3
@@ -435,8 +432,6 @@ This stock assessment estimates that China rockfish south of $40^\circ 10^\prime
 \FloatBarrier
 
 <!-- ********************************BEGIN: REFERENCE POINTS TABLE********************************************** -->
-<!-- ***********************************REFERENCE POINTS TABLE NORTH*********************************************--> 
-
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 for (model in 1:n_models){
   if(model==1){
@@ -464,7 +459,7 @@ Ref_pts = rbind(
   TotYield_Btgt   = mod$derived_quants[grep("TotYield_Btgt",mod$derived_quants$LABEL),],
   Refpt_SPR       = c(NA,NA,NA),
   SSB_SPRtgt      = mod$derived_quants[grep("SSB_SPRtgt",mod$derived_quants$LABEL),],
-  SPR_proxy       = c('SPF_proxy',.5,NA),
+  SPR_proxy       = c('SPR_proxy',.5,NA),
   Fstd_SPRtgt     = mod$derived_quants[grep("Fstd_SPRtgt",mod$derived_quants$LABEL),],
   TotYield_SPRtgt = mod$derived_quants[grep("TotYield_SPRtgt",mod$derived_quants$LABEL),],
   Refpts_MSY      = c(NA,NA,NA),
@@ -472,7 +467,7 @@ Ref_pts = rbind(
   SPR_MSY         = mod$derived_quants[grep("SPR_MSY",mod$derived_quants$LABEL),],
   Fstd_MSY        = mod$derived_quants[grep("Fstd_MSY",mod$derived_quants$LABEL),],
   TotYield_MSY    = mod$derived_quants[grep("TotYield_MSY",mod$derived_quants$LABEL),] )
-
+Ref_pts = Ref_pts[,1:3]
 Ref_pts$Value = as.numeric(Ref_pts$Value)
 Ref_pts$StdDev = as.numeric(Ref_pts$StdDev)
 Ref_pts$Value1 = ifelse(Ref_pts$Value>=1,as.character(round(Ref_pts$Value,1)),as.character(round(Ref_pts$Value,4)))   
@@ -504,6 +499,7 @@ Quantity= c('Unfished Spawning biomass (mt)',
             'Exploitation rate at $MSY$',
             '$MSY$ (mt) '
 )
+
 Ref_pts = cbind(Quantity,Ref_pts[,c(4,9)])
 Ref_pts[c(6,11,13,16),3]=''
 Ref_pts[c(6,11,16),2]=''
@@ -512,6 +508,8 @@ colnames(Ref_pts) = c('\\textbf{Quantity}','\\textbf{Estimate}','\\textbf{\\~95\
 assign(paste('Ref_pts_',mod_area,sep=''),Ref_pts)
 }
 ```
+
+
 <!-- ***********************************REFERENCE POINTS TABLE NORTH*******************************************--> 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
@@ -526,7 +524,7 @@ assign(paste('Ref_pts_',mod_area,sep=''),Ref_pts)
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
     Ref_pts_C.table = xtable(Ref_pts_C, caption=c("Summary of reference points and management quantities for the central 
-                                               ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) base case model."), 
+                                              ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) base case model."), 
                                                 label='tab:Ref_pts_C')  #digits=0 rounds the numbers
     align(Ref_pts_C.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
     print(Ref_pts_C.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
@@ -539,8 +537,8 @@ assign(paste('Ref_pts_',mod_area,sep=''),Ref_pts)
    Ref_pts_S.table = xtable(Ref_pts_S, caption=c("Summary of reference points and management quantities for the southern 
                                                (south of $40^\\circ 10^\\prime$ N. latitude) base case model."), 
                                                label='tab:Ref_pts_S')  #digits=0 rounds the numbers
-    align(Ref_pts_S.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
-    print(Ref_pts_S.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
+   align(Ref_pts_S.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
+   print(Ref_pts_S.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
 ```
 <!-- ************************************************************END: REFERENCE POINTS TABLE ******************************************************************************--> 
 \FloatBarrier
@@ -580,8 +578,11 @@ China rockfish is managed in the northern and southern Nearshore Rockfish Comple
 ##Unresolved problem and major uncertainties{-}
 TBD
 
+\FloatBarrier
+
 ##Decision table{-}
-###Northern model
+
+**Northern model**
 
 
 <!-- *************************BEGIN: NORTHERN DECISION TABLE*******************************************-->
@@ -616,10 +617,14 @@ TBD
 #,tabular.environment="tabularx",width="\\textwidth", 
 ```
 <!-- *************************END: NORTHERN DECISION TABLE*******************************************-->
-###Central model
 
+\FloatBarrier
 
-###Southern model
+**Central model**
+
+\FloatBarrier
+
+**Southern model**
 
 
 <!--*********************************************************** BEGIN: CREATE RESULTS SUMMARY TABLE **************************************************************************--> 
@@ -758,7 +763,7 @@ There is limited information available on either stock structure or life history
 
 China rockfish are among the longer-lived rockfish.  Love [-@Love2002] reports China rockfish live to at least 79 years, which is corroborated by the available age data used in this assessment. The oldest aged China rockfish from Alaska was 78 years old [@Munk2001].  Recently aged China rockfish from the West Coast had a maximum age of 83 years from California (recreational or research) in 1973.  The oldest aged fish from Oregon was 79 from the commercial dead-fish fishery in 2003 and in Washington, 77 years from the recreational fleet in 2000.  
 
-Little is known about the maturity schedule and fecundity of China rockfish.  Echeveria [-@Echeverria1987] collected 69 China rockfish, of which the age at first maturity was 3 years for males and females (26 cm).  Both males and females exhibited 50% maturity at 4 years (27 cm) and 100% maturity at 6 years (30 cm).  A study by Lea et al. [-@Lea1999] captured females releasing larvae in April and May, and spent females in April, June and October off the coast of California.   Echeveria [-@Echeverria1987] identified January - June as the months of parturition for China rockfish in north-central California, with the peak of reproductive activity in January.
+Little is known about the maturity schedule and fecundity of China rockfish.  Echeverria [-@Echeverria1987] collected 69 China rockfish, of which the age at first maturity was 3 years for males and females (26 cm).  Both males and females exhibited 50% maturity at 4 years (27 cm) and 100% maturity at 6 years (30 cm).  A study by Lea et al. [-@Lea1999] captured females releasing larvae in April and May, and spent females in April, June and October off the coast of California.   Echeverria [-@Echeverria1987] identified January - June as the months of parturition for China rockfish in north-central California, with the peak of reproductive activity in January.
 
 One diet study indicated that China rockfish in central California predominantly feed on crustaceans and ophiuroids, while the diets of China rockfish in northern California was dominated by crustaceans and mollusks [@Lea1999]. This is similar to the diet described by Love [-@Love2002] of benthic organisms, including brittle stars, crabs, and shrimps.
 
@@ -1271,12 +1276,65 @@ The stock north of $40^\circ 10^\prime$ N. latitude was found to be below target
 
 The stock south of $40^\circ 10^\prime$ N latitude was found to be above target biomass, as a percentage of unfished biomass (aka “depletion”).  The median of the posterior southern spawning biomass in 2013 was estimated at 66\% (264 mt), and the fishing mortality rate in 2012 was 27\% of $F_{MSY}$.
 
+###2013 Data Moderate Recommendations
 
+\begin{description}[style=unboxed]
+
+  \item[Recommendation 1: Continued research on the uncertainty in the catch histories of all groundfishes.  Reconstructions of historical catches are still needed for certain areas, time periods, and fisheries. Currently, reconstructed catches are available for California’s commercial and recreational fisheries extending back to 1916 and 1928, respectively (Ralston et al. 2010). Oregon has completed a reconstruction for its commercial catch since 1876 (V. Gertseva, NMFS; pers. comm.), but recreational catch prior to 1980 is assumed to be zero in this analysis. Recreational catch in Washington was reconstructed to 1975 for these assessments, and interpolated back to 1960. A thorough reconstruction of historical commercial catches (prior to 1981) is urgently needed for Washington. Estimates of uncertainty in historical catch reconstructions are needed for all states.] \hfill \\
+
+2015 STAT response: Oregon completed a reconstruction of the  recreational catches back to 1973. There is currently no reconstruction of the commercial catches in Washington, and no estimates of uncertainty are available for any catch reconstruction.
+
+\item[Recommendation 2: Single-species stock assessment models are still unable to address systematic changes in productivity due to external factors such as inter-species relationships and low-frequency aspects of climate change. Relatively simple data-moderate models may provide tractable linkages to ecosystem models, and are relatively easy to modify to reflect ecosystem forces.] \hfill \\
+
+2015 STAT response: No additional ecosystem or environmental data were   included in the 2015 China rockfish assessment.
+
+\item[Recommendation 3: Exploration of trans-boundary assessments with Canada should be initiated, and would benefit all parties. This also requires development of data inputs including historical catch reconstructions. Due to their transparency, data-moderate assessments may play an especially useful role in promoting trans-boundary fishery science.] \hfill \\
+
+2015 STAT response: Canada has not conducted a stock assessment for  China rockfish.
+
+\item[Recommendation 4: The data-moderate assessments assume known catches, but there is considerable uncertainty in historical catch reconstructions, particularly for the recreational fishery. This uncertainty has not been measured, and tools for incorporating this uncertainty in assessments are not well developed. This is an issue for all assessments.] \hfill \\
+
+2015 STAT response: See response to the first recommendation.
+
+\item[Recommendation 5: There are fundamental differences between XDB-SRA and exSSS in how stock productivity is modeled. For exSSS, FMSY increases as the ratio of BMSY/B0 decreases in a deterministic way, while there is no prior relationship between FMSY and the ratio of BMSY/B0 for XDB-SRA. It is unclear which of these assumptions is most appropriate. This is a broader issue than for just data-moderate assessments, since it questions the appropriateness of two-parameter curves such as Beverton-Holt to model the stock recruit relationship. Research to improve understanding of the relationship between the inputs of the XDB-SRA and exSSS productivity parameters is encouraged.] \hfill \\
+
+2015 STAT response: The 2015 China rockfish assessment assumes a   Beverton-Holt stock-recruit relationship, with a fixed value for steepness   in all three models. The STAT agrees with the recommendation, and considers this a priority for “off-year” research.
+
+\item[Recommendation 6: Different priors (uniform of q / uniform on log-q) for the additional variance term were used in the two assessment models. It is unclear which performs best, and, since this term affects the weights given to each index in the model fitting, the form of the prior will influence model results, particularly when the indices are in conflict.] \hfill \\
+
+2015 STAT response: Additional variance parameters were estimated for all indices in the China rockfish models, but no explicit prior was used in Stock Synthesis, apart from specifying parameter bounds.
+
+
+\item[Recommendation 7: Compare the standardized (onboard observer) indices from the proposed method with indices constructed by applying the Stephens-MacCall approach to the data aggregated by trip.] \hfill \\
+
+2015 STAT response:  Time constraints have not allowed for this analysis and it is a priority research topic for the next off-cycle year.
+
+\item[Recommendation 8: The GMT representative also recommended expanding the analysis of CPUE data to additional sectors of the recreational fishery, such as private and rental boats. CPUE indices from these sectors may be useful in future assessments of nearshore stocks.] \hfill \\
+
+2015 STAT response: Time constraints did not allow a private-mode index for the California recreational dockside survey.  Oregon and Washington both provided data for the private/rental and party/charter recreational  fleets from dockside surveys. A private boat mode index was considered for Oregon, but rejected due to infrequent catches of China. The WA recreational index included boat mode (charter and private) as a categorical variable in the delta-GLM analysis. \hfill \\
+
+\item[Recommendation 9: The GMT representative noted that for certain nearshore species there is potential utility in using post-2003 RecFIN dockside data as well as onboard sampling data since depth restrictions have not constrained access to the adult population.] \hfill \\
+
+2015 STAT response: The 2015 China rockfish assessment utilizes data   through 2014 for the onboard observer programs in California and   Oregon.  The California post-2003 dockside data were not used because a large percentage of the trips north of Pt. Conception were also sampled by the onboard observer program.
+
+\item[Recommendation 10: The Panel strongly emphasizes the value of conducting a data workshop during which catches, indices, biology, and other data inputs are reviewed.] \hfill \\
+
+2015 STAT response: The China STAT team participated in the Nearshore Stock Assessment Workshop held March 31-April 2, 2015 in Portland, OR.
+
+\item[Recommendation 11: The historical CPFV drift-specific data should be keypunched, which should allow the algorithm for developing CPFV-based data indices to be improved.] \hfill \\
+
+2015 STAT response: The SWFSC Fisheries Ecology Division key-punched and error-checked the CDFW 1987-1998 onboard observer survey data.  These data were included in an onboard index.
+
+\item[Recommendation 12: Recommendation: Habitat maps should be developed so that structural rather than true zeros are designated using data which are independent from the data used to determine the indices.] \hfill \\
+
+2015 STAT response: Habitat maps and 'reefs' were defined by the SWFSC using the California Seafloor Mapping Project and the Oregon State waters Mapping Program mapping products.  These habitat maps were used to select data for the onboard observer indices in both California and Oregon.
+
+\end{description}
 
 ##Model Description
 
 ###Transition from the 2013 to 2015 stock assessment
-The first formal assessment of China rockfish was conducted as a data moderate assessment in 2013 [@Cope2015].  The results of the 2013 assessment were based on catch histories and indices of abundance from onboard (OR and CA) and dockside (OR and CA) surveys of the recreational fishing fleet.  Below, we describe the most important changes made since the last full assessment and explain rationale for each change:
+The first formal assessment of China rockfish was conducted as a data moderate assessment in 2013 [@Cope2015].  The results of the 2013 assessment were based on catch histories and indices of abundance from onboard (OR and CA) and dockside (OR and CA) surveys of the recreational fishing fleet.  Below, we describe the most important changes made since the last full assessment and explain rationale for each change.  [Note: descriptions below apply to the pre-STAR base model, and were not modified to reflect the final base model in order to provide a record of events leading to selection of the final model]:
 
 1. Population dynamics model changed from a Bayesian surplus production model (XDB-SRA) with two areas (U.S. waters north and south of $40^\circ 10^\prime$ N latitude) to a length-based, age-structured statistical catch at age model (Stock Synthesis) with three areas (U.S. waters south of $40^\circ 10^\prime$ N latitude, $40^\circ 10^\prime$ N latitude to the OR-WA border, and from the OR-WA border to the U.S.-Canadian border). \emph{Rationale}: The assessment is moving from a data moderate to a full assessment, incorporating new data sources, e.g. individual growth, age and length compositions of landed and discarded catch.
 
@@ -1368,12 +1426,13 @@ Base models for all three areas (northern, central, and southern) are combined s
 
 **Northern**
 
-The northern base-case model produces reasonable estimates of growth parameters, with China rockfish in northern Washington reaching a maximum length of 35.1 cm  (Table \ref{tab:N_model_params}, Figure \ref{fig:growth_all}). The northern base-case model was able to fit the northern Washington recreational index of abundance with an estimated additional standard deviation of 0.15 (Table \ref{tab:N_model_params}). However, there are runs of years in which the model consistently either over or under fits the data (Figure \ref{fig:N_index2_cpuefit_3_WA_NorthernWA_Rec_PR}). The model fit to the index estimates a declining trend in the fit between the 1980s and 1990s, followed by a flat trend through recent years.
+The northern base-case model produces reasonable estimates of growth parameters, with China rockfish in northern Washington reaching a maximum length of 35.4 cm  (Table \ref{tab:N_model_params}, Figure \ref{fig:growth_all}). The northern base-case model was able to fit the northern Washington recreational index of abundance with an estimated additional standard deviation of 0.13 (Table \ref{tab:N_model_params}). However, there are runs of years in which the model consistently either over or under fits the data (Figure \ref{fig:N_index2_cpuefit_3_WA_NorthernWA_Rec_PR}). The model fit to the index estimates a declining trend in the fit between the 1980s and 1990s, followed by a flat trend through recent years.
  
 Fits to the time aggregated southern Washington recreational length distributions are poor, where data are sparse, with the model expecting more fish sized approximately 27 cm to 34 cm and fewer fish greater than 40 cm than are present in the data (Figure \ref{fig:N_comp_lenfit_mkt2_aggregated_across_time}). However, fits to the time aggregated northern Washington recreational length distributions, the area with most of the data and landings, are good 
 (Figures \ref{fig:N_comp_lenfit_mkt2_aggregated_across_time} and \ref{fig:N_comp_lenfit_sex1mkt2_multi-fleet_comparison}). The model fits the recreational conditional age-at-length data reasonably (Figures \ref{fig:N_comp_condAALfit_residsflt3mkt2} and \ref{fig:N_comp_gstagefit_flt3mkt2}).  There are a few outliers, including two 15-year-old fish in the 22 cm bin in 2005 and one 14-year-old fish in the 20 cm bin in 2010 but there are no strong patterns in the residuals.
  
 Estimated selectivity curves for the Washington recreational southern and northern fleets suggest different ascending width parameters, resulting in the southern fleet selecting smaller China rockfish than the northern fleet (Figure \ref{fig:N_sel01_multiple_fleets_length1}). The southern fleet asymptote was unable to be estimated so it was fixed to the estimate from the northern fleet.
+
 
 **Central**
 
@@ -1415,9 +1474,8 @@ The base-case assessment model includes parameter uncertainty from a variety of 
 
 **Northern Model**
 
-Tabular results for the northern area model sensitivity runs can be viewed here: Table \ref{tab:N_sensitivity}, and associated figures are here: Figures \ref{fig:N_compare1_spawnbio} and \ref{fig:N_compare3_Bratio}. The model for the northern management area was not sensitive to dropping the index of abundance, data weighting methods, downweighting length comps (75% reduction in Francis weights, i.e. weights multiplied by 0.25). The models that attempted to estimate the size at age 0 and CV at Age minimum growth parameters resulted parameters going to bounds, producing unrealistic estimates for these parameter values. The model was highly sensitive to the exclusion of age the composition data and fixing growth the externally estimated values. Lack of age data and fixing growth to the external estimates produced an approximate doubling in the estimates of the stock size and in the status of the population. Removal of the age composition data, modeled as conditional age-at-length, impacts the scale of the model, in part because the model is no longer able to estimate reasonable values of growth parameters. Fixing growth to the externally estimated values is problematic because the data lack small/young fish, resulting in high sensitivity to the k estimate. 
+Tabular results for the northern area model sensitivity runs can be viewed here: Table \ref{tab:N_sensitivity}, and associated figures are here: Figures \ref{fig:N_compare1_spawnbio} and \ref{fig:N_compare3_Bratio}. The model for the northern management area was not sensitive to dropping the index of abundance or downweighting length comps (75% reduction in Francis weights, i.e. weights multiplied by 0.25). The models that attempted to estimate the size at age 0 and CV at Age minimum growth parameters resulted parameters going to bounds, producing unrealistic estimates for these parameter values. The model was highly sensitive to the exclusion of age the composition data, the methods for weighting the age composition data (as CAAL), and the treatment of M (either fixed at the mode of the prior,0.053, or estimated, 0.069). Removing or extreme downweighting of the age data when implementing Francis method A produced an approximate doubling in the estimates of the stock size and in the status of the population. Removal of the age composition data, modeled as conditional age-at-length, impacts the scale of the model, in part because the model is no longer able to estimate reasonable values of growth parameters. When estimated with their respective prior distributions, both steepness and natural mortality are larger than the fixed values in the base model (h = 0.95, and M = 0.069). While the higher h estimate is inconsistent with the current understanding of rockfish productivity, the higher estimate of M lead to better fits in the CAAL data and a larger estimated population size and stock status. 
 
-When estimated with their respective prior distributions, both steepness and natural mortality are larger than the fixed values in the base model (h = 0.95, and M = 0.07). However, the higher estimate of M contradicts the observed maximum age of 83 and the higher h estimate is inconsistent with the current understanding of rockfish productivity.
 
 **Central Model** 
 
@@ -1454,16 +1512,17 @@ Likelihood profiles were conducted over four values for the steepness of the sto
 
 **Northern Model**
 
-This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades (Table \ref{tab:Timeseries_N}; Figure \ref{fig:N_ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 33.4 mt (~95% asymptotic interval: 27.4 – 39.4 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table  \ref{tab:SpawningDeplete_N}; Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). Unfished spawning stock biomass was estimated to be 64.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 25.9 mt, which gives a catch of 3.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 3.1 mt. Table \ref{tab:Ref_pts_N} shows the full suite of estimated reference points for the northern area model and Figure \ref{fig:N_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that China rockfish in the north are well above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades (Table \ref{tab:Timeseries_N}; Figure \ref{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.6% - 83.2%), corresponding to 17.9 million eggs (~95% asymptotic interval: 8.8 – 27.1 mt) of spawning output in the base model (Table  \ref{tab:SpawningDeplete_N}; Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). Unfished spawning output was estimated to be 24.4 million eggs in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 million eggs, which gives a catch of 6.2 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt. Table \ref{tab:Ref_pts_N} shows the full suite of estimated reference points for the northern area model and Figure \ref{fig:N_yield1_yield_curve} shows the equilibrium yield curve.
+
 
 
 **Central Model** 
 
-This stock assessment estimates that central area China rockfish are just above the biomass target (Table \ref{tab:Timeseries_C};  Figure \ref{fig:C_ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals}). The rate of spawning biomass decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate (Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 85.9 mt (~95% asymptotic interval: 73.1 – 98.7 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table  \ref{tab:SpawningDeplete_C}). Unfished spawning stock biomass was estimated to be 204.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 81.8 mt, which gives a catch of 9.4 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 8.8 mt. Table \ref{tab:Ref_pts_C} shows the full suite of estimated reference points for the central area model and Figure \ref{fig:C_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that central area China rockfish are just above the biomass target (Table \ref{tab:Timeseries_C};  Figure \ref{fig:C_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The rate of spawning biomass decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate (Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 85.9 mt (~95% asymptotic interval: 73.1 – 98.7 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table  \ref{tab:SpawningDeplete_C}). Unfished spawning stock biomass was estimated to be 204.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 81.8 mt, which gives a catch of 9.4 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 8.8 mt. Table \ref{tab:Ref_pts_C} shows the full suite of estimated reference points for the central area model and Figure \ref{fig:C_yield1_yield_curve} shows the equilibrium yield curve.
 
 **Southern Model**
 
-This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years (Table \ref{tab:Timeseries_S}; Figure \ref{fig:S_ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 111.5 mt (~95% asymptotic interval:  89.9 – 133.1 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table \ref{tab:SpawningDeplete_S}). Unfished spawning stock biomass was estimated to be 376.5 mt in the base case model (Figure \ref{fig:S_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The target stock size  based on the biomass target ($SB_{40\%}$) is 150.6 mt, which gives a catch of 20.8 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.3 mt. Table \ref{tab:Ref_pts_S} shows the full suite of estimated reference points for the southern area model and Figure \ref{fig:S_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years (Table \ref{tab:Timeseries_S}; Figure \ref{fig:S_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 111.5 mt (~95% asymptotic interval:  89.9 – 133.1 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table \ref{tab:SpawningDeplete_S}). Unfished spawning stock biomass was estimated to be 376.5 mt in the base case model (Figure \ref{fig:S_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The target stock size  based on the biomass target ($SB_{40\%}$) is 150.6 mt, which gives a catch of 20.8 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.3 mt. Table \ref{tab:Ref_pts_S} shows the full suite of estimated reference points for the southern area model and Figure \ref{fig:S_yield1_yield_curve} shows the equilibrium yield curve.
 
 
 
@@ -1475,8 +1534,10 @@ See section “\textit{Uncertainty and Decision Tables in Groundfish Stock Asses
 The forecasts of stock abundance and yield was developed using the base models. The total catches in 2015 and 2016 are set to the PFMC adopted China rockfish contribution ACLs (Table \ref{tab:mnmgt_perform}). The exploitation rate for 2017 and beyond is based upon an SPR of 50%. The average 2010-2014 exploitation rate was used to distribute catches among the fisheries. 
 
 **Northern Model**
-
 Current medium-term projections of expected China spawning biomass from the northern base model suggests slight declines from the current levels as the stock moves towards the current target stock size under the default  harvest control rule (Table \ref{tab:Forecast_N}, Figures \ref{fig:forecast_compare2_spawnbio_uncertainty} and \ref{fig:forecast_compare4_Bratio_uncertainty}). The stock is expected to remain above the target stock size during the projection period, assuming stationarity in the stock-recruitment assumptions. 
+
+Uncertainty in the forecasts is based upon the three states of nature agreed upon at the STAR panel and are based on a low value of M, 0.05, and a high value, 0.09. Current medium-term forecasts based on the alternative states of nature project that the stock, under the current control rule as applied to the base model, will decline towards the target stock size Table \ref{tab:decision_table_north}. The current control rule under the low state of nature results in a stock decline into the precautionary zone, while the high state of nature maintains the stock at near unfished levels. Removing the catches resulting from the low M state of nature, assuming the base and high values of M both maintain the stock at well above the current target stock size, as does removing the recent average catches under all states of nature. Removing the high M catches under the base model M and high M states of nature results in the population going to extremely low levels during the projection period, spawning biomass and stock depletion values are not reported for years in which the stock goes to these very low levels. 
+
 
 **Central Model** 
 
@@ -3121,7 +3182,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Length compositions for retained fish from the southern Oregon commercial live-fish fishery. \label{fig:C_comp_lendat_flt6mkt2}](r4ss/plots_C/comp_lendat_flt6mkt2.png)
 
-![Length compositions for central model. \label{fig:C_comp_lendat_sex1mkt2_multi-fleet_comparison}](r4ss/plots_C/comp_lendat_sex1mkt2_multi-fleet_comparison.png)
+<!-- ![Length compositions for central model. \label{fig:C_comp_lendat_sex1mkt2_multi-fleet_comparison}](r4ss/plots_C/comp_lendat_sex1mkt2_multi-fleet_comparison.png) -->
 
 ![Conditional age-at-length data for retained fish from the southern Oregon commercial dead-fish fishery. \label{fig:C_comp_condAALdat_bubflt5mkt2}](r4ss/plots_C/comp_condAALdat_bubflt5mkt2.png)
 
@@ -3129,18 +3190,18 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Length compositions by year for the California commercial dead-fish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt1mkt2}](r4ss/plots_S/comp_lendat_flt1mkt2.png)
 
-![Length compositions by year for discarded fish in the California commercial fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt1}](r4ss/plots_S/comp_lendat_flt2mkt1.png)
+<!-- ![Length compositions by year for discarded fish in the California commercial fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt1}](r4ss/plots_S/comp_lendat_flt2mkt1.png) -->
 
 ![Length compositions by year for retained fish in the California commercial live-fish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt2}](r4ss/plots_S/comp_lendat_flt2mkt2.png)
 
 \FloatBarrier
 
 <!--RESEARCH-->
-![CCFRP research program length compositions for the southern model.\label{fig:S_comp_lendat_flt7mkt0}](r4ss/plots_S/comp_lendat_flt7mkt0.png)
+<!-- ![CCFRP research program length compositions for the southern model.\label{fig:S_comp_lendat_flt7mkt0}](r4ss/plots_S/comp_lendat_flt7mkt0.png) -->
 
 \FloatBarrier
 
-![Conditional age-at-length compositions by year from the Abrams thesis study, used in the southern model.\label{fig:S_comp_condAALdat_bubflt8mkt0}](r4ss/plots_S/comp_condAALdat_bubflt8mkt0.png)
+<!-- ![Conditional age-at-length compositions by year from the Abrams thesis study, used in the southern model.\label{fig:S_comp_condAALdat_bubflt8mkt0}](r4ss/plots_S/comp_condAALdat_bubflt8mkt0.png) -->
 
 
 
@@ -3205,7 +3266,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 <!-- *******************************************************NORTHERN BASE MODEL FIGURES********************************************************** --> 
 
-![Fits to growth among models with no sex-specific growth.  \label{fig:growth_all}](r4ss/plots_compare/growth_comparison_PRE-STAR_BASE.png)
+![Fits to growth among models with no sex-specific growth.  \label{fig:growth_all}](r4ss/plots_compare/growth_comparison_June11_beta.png)
 
 
 ![Fits to private boat recreational dockside index for Washington, northern model.  \label{fig:N_index2_cpuefit_3_WA_NorthernWA_Rec_PR}](r4ss/plots_N/index2_cpuefit_3_WA_NorthernWA_Rec_PR.png)
@@ -3229,7 +3290,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Fits to the southern Oregon commercial live-fish fishery for the central model.  \label{fig:C_index2_cpuefit_6_OR_SouthernOR_Comm_Live}](r4ss/plots_C/index2_cpuefit_6_OR_SouthernOR_Comm_Live.png)
 
-![Fits to the southern Oregon recreational CPFV fleet dockside index for the central model.  \label{fig:C_index2_cpuefit_7_OR_SouthernOR_Rec_PC}](r4ss/plots_C/index2_cpuefit_7_OR_SouthernOR_Rec_PC.png)
+<!-- ![Fits to the southern Oregon recreational CPFV fleet dockside index for the central model.  \label{fig:C_index2_cpuefit_7_OR_SouthernOR_Rec_PC}](r4ss/plots_C/index2_cpuefit_7_OR_SouthernOR_Rec_PC.png)  -->
 
 ![Fits to the northern Oregon recreational CPFV fleet onboard observer index for the central model.  \label{fig:C_index2_cpuefit_10_OR_NorthernOR_Rec_PC}](r4ss/plots_C/index2_cpuefit_10_OR_NorthernOR_Rec_PC.png)
 
@@ -3246,7 +3307,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 ![Implied fit to the marginal age-frequencies for recreational party/charter fishery in southern OR in the central model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:C_comp_gstagefit_flt7mkt2}](r4ss/plots_C/comp_gstagefit_flt7mkt2.png)
 
 
-![Residuals in fit to length compositions for northern model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_lenfit_sex1mkt2_multi-fleet_comparison}](r4ss/plots_C/comp_lenfit_sex1mkt2_multi-fleet_comparison.png)
+<!-- ![Residuals in fit to length compositions for northern model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_lenfit_sex1mkt2_multi-fleet_comparison}](r4ss/plots_C/comp_lenfit_sex1mkt2_multi-fleet_comparison.png)  -->
 
 
 \FloatBarrier
@@ -3265,26 +3326,26 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 
 
-![Fits to the CA recreational CPFV fleet dockside index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter}](r4ss/plots_S/index2_cpuefit_Rec_Charter.png)
+<!-- ![Fits to the CA recreational CPFV fleet dockside index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter}](r4ss/plots_S/index2_cpuefit_Rec_Charter.png) -->
 
 
-![Fits to the CA recreational CPFV fleet 1988-1999 onboard observer index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter_Onboard_87-98}](r4ss/plots_S/index2_cpuefit_Rec_Charter_Onboard_87-98.png)
+<!-- ![Fits to the CA recreational CPFV fleet 1988-1999 onboard observer index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter_Onboard_87-98}](r4ss/plots_S/index2_cpuefit_Rec_Charter_Onboard_87-98.png) -->
 
-![Fits to the CA recreational CPFV fleet 2000-2014 onboard observer index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter_Onboard_1999-2014}](r4ss/plots_S/index2_cpuefit_Rec_Charter_Onboard_1999-2014.png)
+<!-- ![Fits to the CA recreational CPFV fleet 2000-2014 onboard observer index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter_Onboard_1999-2014}](r4ss/plots_S/index2_cpuefit_Rec_Charter_Onboard_1999-2014.png) -->
 
 \FloatBarrier
 
 ![Fits to the length compositions from fleets in the southern model.  \label{fig:S_comp_lenfit_mkt2_aggregated_across_time}](r4ss/plots_S/comp_lenfit_mkt2_aggregated_across_time.png)
 
-![Fits to the length compositions of discarded fish from the commercial live-fish fishery fleet in the southern model.  \label{fig:S_comp_lenfit_mkt1_aggregated_across_time}](r4ss/plots_S/comp_lenfit_mkt1_aggregated_across_time.png)
+<!-- ![Fits to the length compositions of discarded fish from the commercial live-fish fishery fleet in the southern model.  \label{fig:S_comp_lenfit_mkt1_aggregated_across_time}](r4ss/plots_S/comp_lenfit_mkt1_aggregated_across_time.png) -->
 
 ![Fits to the length compositions of the central California 1988-1999 onboard observer and CCFRP surveys in the southern model.  \label{fig:S_comp_lenfit_mkt0_aggregated_across_time}](r4ss/plots_S/comp_lenfit_mkt0_aggregated_across_time.png)
 
-![Fits to the conditional age-at-length data from Jeff Abrams' thesis, southern model.  \label{fig:S_comp_condAALfit_Andre_plotsflt8mkt0}](r4ss/plots_S/comp_condAALfit_Andre_plotsflt8mkt0.png)
+<!-- ![Fits to the conditional age-at-length data from Jeff Abrams' thesis, southern model.  \label{fig:S_comp_condAALfit_Andre_plotsflt8mkt0}](r4ss/plots_S/comp_condAALfit_Andre_plotsflt8mkt0.png) -->
 
-![Fits to the WCGOP discard data in the southern model.  \label{fig:S_discard_dataCommercial_Live}](r4ss/plots_S/discard_dataCommercial_Live.png)
+<!-- ![Fits to the WCGOP discard data in the southern model.  \label{fig:S_discard_dataCommercial_Live}](r4ss/plots_S/discard_dataCommercial_Live.png) -->
 
-![Predicted discard amounts by year and fleet for the southern model.  \label{fig:S_catch7 discards stacked plot (depends on multiple fleets)}](r4ss/plots_S/catch7 discards stacked plot (depends on multiple fleets).png)
+<!-- ![Predicted discard amounts by year and fleet for the southern model.  \label{fig:S_catch7 discards stacked plot (depends on multiple fleets)}](r4ss/plots_S/catch7 discards stacked plot (depends on multiple fleets).png)  -->
 
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
@@ -3397,7 +3458,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 \FloatBarrier
 <!-- *****************************************************NORTHERN REFERENCE POINTS FIGURES****************************************************** --> 
 
-![Time series of the spawning stock biomass for the northern model, with 95% asymptotic intervals.  \label{fig:N_ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals}](r4ss/plots_N/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
+![Time series of the spawning stock biomass for the northern model, with 95% asymptotic intervals.  \label{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}](r4ss/plots_N/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
 
 ![Spawning depletion relative to the management target and minimum stock size threshold for the northern model.  \label{fig:N_ts9_Spawning_depletion}](r4ss/plots_N/ts9_Spawning_depletion.png)
 
@@ -3408,7 +3469,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 \FloatBarrier
 
 <!-- *****************************************************CENTRAL REFERENCE POINTS FIGURES******************************************************* --> 
-![Time series of the spawning stock biomass for the central model, with 95% asymptotic intervals.  \label{fig:C_ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals}](r4ss/plots_C/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
+![Time series of the spawning stock biomass for the central model, with 95% asymptotic intervals.  \label{fig:C_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}](r4ss/plots_C/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
 
 ![Spawning depletion relative to the management target and minimum stock size threshold for the central model.  \label{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}](r4ss/plots_C/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
 
@@ -3416,7 +3477,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 <!-- *****************************************************SOUTHERN REFERENCE POINTS FIGURES****************************************************** --> 
 
-![Time series of the spawning stock biomass for the southern model, with 95% asymptotic intervals.  \label{fig:S_ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals}](r4ss/plots_S/ts7_Spawning_biomass_(mt)_with_95_asymptotic_intervals_intervals.png)
+![Time series of the spawning stock biomass for the southern model, with 95% asymptotic intervals.  \label{fig:S_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}](r4ss/plots_S/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
 
 
 ![Spawning depletion relative to the management target and minimum stock size threshold for the southern model.  \label{fig:S_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}](r4ss/plots_S/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
