@@ -737,12 +737,6 @@ mngmt = mngmt[,-1]
 ##Research and data needs{-}
 TBD
 
-##Rebuilding projections{-}
-TBD if necessary
-
-
-
-
 
 \FloatBarrier
 
@@ -770,6 +764,9 @@ One diet study indicated that China rockfish in central California predominantly
 Both juvenile and adult rockfish tend to be solitary and exhibit high site fidelity within rocky habitats. Surveys of rockfishes in \emph{Nereocystis} and \emph{Macrocystis} kelp forests observed China rockfish in only the \emph{Macrocystis} kelp forests, and overall sightings within the kelp forests were rare [@Bodkin1986].  Juvenile China rockfish inhabit shallow, subtidal waters [@Love2002], and an experimental study with captive China rockfish found that juveniles exhibit both site fidelity and territoriality [@Lee2009].  A tag and recapture study by Lea et al. [-@Lea1999] indicated China rockfish have high site fidelity.  While Lea et al. [-@Lea1999] did not report the exact distance from all China rockfish from the study were recaptured in the same "general locality at which they were released."  In other rockfish movement studies, China rockfish were tagged but never recaptured [@Hanan2012], or there was a sample size of one fish [@Hannah2011].  An ongoing study has used acoustic telemetry to tag and track seven China rockfish at Redfish Rocks, off the south coast of Oregon (pers. comm. Tom Calvanese, Oregon State University).  The location where each fish was released after tagging was recorded using GPS. The maximum distance traveled from release point was calculated using the location of the most distant receiver at which that fish was detected, plus 250 m (estimated receiver detection range).  Preliminary analyses estimate the maximum distance traveled by China rockfish (n=7) averaged 1,344 $\pm$ 334 m between May 1, 2011, and December 31, 2012.
 
 Little is known about the mixing of juvenile China rockfish at the pelagic stage as they are not captured in the SWFSC juvenile rockfish cruise.  The 2013 assessment model treated the species as two stocks, north and south of Cape Mendocino, CA ($40^\circ 10^\prime$ N lat.), which is also the management boundary for China rockfish.  For this assessment we explore assessment models north and south of $40^\circ 10^\prime$, as well as separate northern California/Oregon and Washington models in the north.  
+
+###Early Life History
+China rockfish, like other species in the genus Sebastes, are iteroparous, have internal fertilization,and bear live young. Gestation periods range from 1-2 months among the \emph{Sebastes} spp. that have been studied, but no data specific to China rockfish were found in our literature search. Parturition (release of larvae into the water) by China rockfish was reported between January and June in Central California [@Echeverria1987], but the duration of the pelagic larval and juvenile stages is unknown. Closely-related, nearshore rockfish species (e.g. gopher, black-and-yellow, kelp, and copper) recruit at small sizes (1.5-2 cm), and are thought to have short pelagic juvenile stages relative to other \emph{Sebastes} [@Anderson1983; @Love2002].
 
 
 ##Map
@@ -866,7 +863,7 @@ South of $40^\circ 10^\prime$ N. latitude, commercial landings were lower and es
 
 Discards patterns in the area of Northern California between $40^\circ 10^\prime$, and $42^\circ$ N. latitude appears to be more similar to Oregon than the rest of California (Table \ref{tab:discard_comm_bylat}). Although expanded fleet-wide discard estimates were not available on this smaller spatial-scale, only 9% of observed trips between $40^\circ 10^\prime$ to $42^\circ$ that were associated with any catch of China rockfish had any observed discards of China rockfish. South of $40^\circ 10^\prime$, 82%-100% of such trips had observed discards of China rockfish.
 
-The patterns of the discards in commercial fisheries suggest that north of $40^\circ 10^\prime$ discard mortality of China rockfish is small enough that it is more parsimonious to account for this mortality increasing the landed catch estimates by 2.69%. South of $40^\circ 10^\prime$, total discards are greater than landings in some years and discard mortality represents a large fraction of the total mortality of China rockfish. The discards are primarily fish below the minimum legal size of 12 inches (Figure \ref{fig:S_comp_lendat_flt2mkt1}). These factors support modeling the discard process explicitly through a retention function. This will allow the model to apply the mortality from discards to the appropriate subset of the population. Furthermore, the increasing trend in discard rates may be an indication of changes in population size structure that should be accounted for in the assessment.
+The patterns of the discards in commercial fisheries suggest that north of $40^\circ 10^\prime$ discard mortality of China rockfish is small enough that it is more parsimonious to account for this mortality increasing the landed catch estimates by 2.69%. South of $40^\circ 10^\prime$, total discards are greater than landings in some years and discard mortality represents a large fraction of the total mortality of China rockfish. The discards are primarily fish below the minimum legal size of 12 inches (Figure \ref{fig:S_comp_lendat_flt5mkt2}). These factors support modeling the discard process explicitly through a retention function. This will allow the model to apply the mortality from discards to the appropriate subset of the population. Furthermore, the increasing trend in discard rates may be an indication of changes in population size structure that should be accounted for in the assessment.
 
 In order to explicitly model the discard and retention process, it is necessary to use the estimate of total discarded fish, whether surviving or not, as this is the best representation of the amount of fish that were selected by the fishery but not represented in the landed catch. Discard mortality can then be applied separately to the model estimates of discarded fish. The mortality of discarded China rockfish is estimated by WCGOP as a function of the fishing depth which varies by year (Table \ref{tab:WCGOP_trip_discard}). The average mortality fraction south of $40^\circ 10^\prime$ across all years was 59%.
 
@@ -1174,7 +1171,7 @@ The Northern California Marine Sport Fish Survey conducted an assessment survey 
 
 Biological data from commercial fisheries for China rockfish were extracted from PacFIN (PSMFC) on May 18, 2015. Commercial landings and the biological characteristics of hook and line landings were sampled from 1995-2014 in Oregon and in 1991-2013 California. There is no commercial catch of China rockfish in the state of Washington. Currently, port biologists employed by each state fishery agency collect species-composition information and biological data from the landed catches. The monitoring programs currently in place vary between the states but are generally based on stratified, multistage sampling designs. The OR data were available by live fish fishery landings and dead fish fishery landings, but fish conditions were not available for PacFIN for the CA landings. Due to the lack of fish condition data for CA in PacFIN, the CA commercial fishery compositions were downloaded from the [CALCOM](http://128.114.3.187/) database.
 
-Annual commercial length- and age-frequency distributions were developed for each state for which observations were available, following the same bin structure as was used for research observations. For each fleet, the raw observations were expanded to the sample level, to allow for any fish that were not measured, then to the trip level to account for the relative size of the landing from which the sample was obtained. Length and age data collected from commercial landings for OR and CA are summarized by the number of port samples (Tables \ref{tab:OR_pacfin_bio} and \ref{tab:CA_calcom_bio}). Figures \ref{fig:C_comp_lendat_flt5mkt2}, \ref{fig:C_comp_lendat_flt6mkt2},\ref{fig:C_comp_lendat_sex1mkt2_multi-fleet_comparison}, \ref{fig:C_comp_condAALdat_bubflt5mkt2}, and \ref{fig:C_comp_condAALdat_bubflt7mkt2} show plots of the commercial length and age composition data for the central model.  Figures \ref{fig:S_comp_lendat_flt1mkt2}, \ref{fig:S_comp_lendat_flt2mkt1}, and \ref{fig:S_comp_lendat_flt2mkt2} show plots of the commercial length and age composition data for the southern model.
+Annual commercial length- and age-frequency distributions were developed for each state for which observations were available, following the same bin structure as was used for research observations. For each fleet, the raw observations were expanded to the sample level, to allow for any fish that were not measured, then to the trip level to account for the relative size of the landing from which the sample was obtained. Length and age data collected from commercial landings for OR and CA are summarized by the number of port samples (Tables \ref{tab:OR_pacfin_bio} and \ref{tab:CA_calcom_bio}). Figures \ref{fig:C_comp_lendat_flt5mkt2}, \ref{fig:C_comp_lendat_flt6mkt2},\ref{fig:C_comp_lendat_sex1mkt2_page1_multi-fleet_comparison},\ref{fig:C_comp_lendat_sex1mkt2_page2_multi-fleet_comparison}, \ref{fig:C_comp_condAALdat_bubflt5mkt2}, and \ref{fig:C_comp_condAALdat_bubflt7mkt2} show plots of the commercial length and age composition data for the central model.  Figures \ref{fig:S_comp_lendat_flt1mkt2}, \ref{fig:S_comp_lendat_flt2mkt2}, and \ref{fig:S_comp_lendat_flt5mkt2} show plots of the commercial length and age composition data for the southern model.
 
 
 *Research: NMFS groundfish ecology survey*      
@@ -1183,14 +1180,14 @@ From 2001-2005, the SWFSC Fisheries Ecology Division conducted longline surveys 
 
 *Research: California Collaborative Fisheries Research Program (CCFRP)*
 
-The [California Collaborative Fisheries Research Program](https://seagrant.mlml.calstate.edu/research/ccfrp/) (CCFRP), created by Rick Starr (Sea Grant and Moss Landing Marine Laboratory) and Dean Wendt (Cal Poly San Luis Obispo), monitors marine protected areas (MPAs) and gathers information useful for fisheries management [@Starr2015].  This program has been running in Central California since 2007.  Length compositions for China rockfish were included in this assessment (Figure \ref{fig:S_comp_lendat_flt7mkt0}).
+The [California Collaborative Fisheries Research Program](https://seagrant.mlml.calstate.edu/research/ccfrp/) (CCFRP), created by Rick Starr (Sea Grant and Moss Landing Marine Laboratory) and Dean Wendt (Cal Poly San Luis Obispo), monitors marine protected areas (MPAs) and gathers information useful for fisheries management [@Starr2015].  This program has been running in Central California since 2007.  Length compositions for China rockfish were included in this assessment (Figure \ref{fig:S_comp_lendat_flt8mkt0}).
 
 Future research is planned to use catch-per-unit-effort (CPUE) information from this program, comparing relative abundance indices derived from fishery-dependent and fishery-independent monitoring programs.  CCFRP data provides a time series of fishery-independent catch and effort at fixed stations, collecting information at sample sites inside and outside of MPAs spanning about 200 miles of the California coast from Point Buchon to $\text{A\~{n}o}$ Nuevo.  This fishery-independent information, combined with our current fishery-dependent information (i.e., CPFV onboard observer data), provides an opportunity for fine-scale spatial and temporal analysis of catch rates and species compositions, specifically addressing the research needs identified in nearshore rockfish stock assessments.
 
 
 *Research: Abrams Thesis*
 
-Jeff Abrams [-@Abrams2014] conducted a research study aboard recreational charter boats from Crescent City Harbor, Trinidad Bay and the Noyo River Harbor.  Rocky habitat was identified from high resolution bathymetric data and gridded into 500 m by 500 m cells (California Seafloor Mapping Project, data available from: http://seafloor.otterlabs.org/index.html).  During a sampling event, cells were randomly selected to fish.  Fish were captured via hook-and-line by either researchers, students, or recreational fishers.  The charter boat captain was not allowed to search and target fish within the cell.  Fishing drifts started at the up-current/wind side of the cell and drifted to the opposite edge of the cell, then stopped the clock and reset for another drift (Jeff Abrams, pers. comm.)  If it was certain that fishing was occurring over sand, the captain would generally reset. However, because cells were selected with a minimum area of rocky habitat, this was rare.  This studied provided 138 individual China rockfish, which were used as Conditional Age-at-Length (CAAL) in the southern model (Figure \ref{fig:S_comp_condAALdat_bubflt8mkt0}).
+Jeff Abrams [-@Abrams2014] conducted a research study aboard recreational charter boats from Crescent City Harbor, Trinidad Bay and the Noyo River Harbor.  Rocky habitat was identified from high resolution bathymetric data and gridded into 500 m by 500 m cells (California Seafloor Mapping Project, data available from: http://seafloor.otterlabs.org/index.html).  During a sampling event, cells were randomly selected to fish.  Fish were captured via hook-and-line by either researchers, students, or recreational fishers.  The charter boat captain was not allowed to search and target fish within the cell.  Fishing drifts started at the up-current/wind side of the cell and drifted to the opposite edge of the cell, then stopped the clock and reset for another drift (Jeff Abrams, pers. comm.)  If it was certain that fishing was occurring over sand, the captain would generally reset. However, because cells were selected with a minimum area of rocky habitat, this was rare.  This studied provided 138 individual China rockfish, which were used as Conditional Age-at-Length (CAAL) in the southern model (Figure \ref{fig:S_comp_condAALdat_bubflt9mkt0}).
 
 
 ###Biological Data: Age structures
@@ -1331,6 +1328,234 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
 
 \end{description}
 
+##Response to the STAR Panel Recommendations
+\begin{description}[style=unboxed]
+
+\item[Request No. 1: Explore the utility of using California Recreational Fisheries Survey (CRFS) data from 2004-2007 to partition California catches in the early years based on the proportion of catch in the private recreational and charter modes north and south of $40^\circ 10^\prime$ N latitude (concerns the southern and central models).] \hfill \\
+
+    \textbf{Rationale:} This may be a better alternative to the current approach of using logbook data to partition the recreational catches north 
+      and south of $40^\circ 10^\prime$ N latitude.    
+
+    \textbf{STAT Response:} This request was not completed, and was repeated as request no. 13.
+
+\item[Request No. 2: Add the current assessment biomass trends for current base model to the plot in the draft assessment that compares the XDB-SRA and SS3 runs and plot an additional set of runs for all models where steepness and natural mortality are estimated with priors (add results from the northern and central models).  This would be two sets of plots with spawning biomass and depletion (all models).] \hfill \\
+
+    \textbf{Rationale:} To provide a comparison between the previous assessment results using XDB-SRA and the current assessment. 
+    XDB-SRA has more flexible productivity assumptions than SS3, so estimating h and M was regarded as a way to more closely mimic 
+    XDB-SRA using stock synthesis.
+
+    \textbf{STAT Response:} The plots were provided (Figures \ref{fig:STARrequest_S} and \ref{fig:STARrequest_NC}).  Since XDB-SRA 
+    had knife-edge maturity at age 5, summary biomass for ages 5 and older was used in the plot to provide a common basis for comparison. 
+    For the southern model, the SS3 model with estimated h and M and XDB-SRA show similar results in absolute summary biomass and depletion.  
+    For the north plus central models, it was not possible to simultaneously estimate h and M, but again the results were similar. 
+
+\item[Request No. 3: Compare the amount of available habitat for China rockfish in the area covered by northern and central models with estimates of $R_0$ for the northern and central models.] \hfill \\
+
+    \textbf{Rationale:} Available habitat by region may provide an independent proxy for the relative abundance of the stock in each region.
+  
+    \textbf{STAT Response:} Available rocky habitat was examined using two methods, and ratios of habitat between areas showed an increase in 
+    habitat from the northern area, to the central area, and to southern area with the most habitat.  The Panel regarded this as a useful exercise 
+    for ranking assessment areas, but it cannot be used for determining relative abundance.  There were a number of methodological issues that would 
+    need to be addressed to do this more rigorously, and ultimately its application to stock assessment would be indirect given the assumptions 
+    required. The Panel will consider making a research recommendation to examine the estimated area of reefs at more finely resolved scales.
+
+\item[Request No. 4: Provide a model run where historical discards for the live-fish fishery are modeled as a separate fleet.  For the discard fleet, estimate actual tonnage of catch: apply the discard fraction for the earliest four years to estimate discards back to 2000 with a ramp from 1990 to 2000 (selectivity for this fleet is the determined from the discard length comps) (southern model only).] \hfill \\
+
+    \textbf{Rationale:} Fits to discard amount for the live-fish fishery by the model since 2000 are poor, and the model structure does not allow 
+    flexibility to decrease the discards prior to 2000.
+
+    \textbf{STAT Response:} This was done. Fits generally improved and the estimated selectivity pattern for the discard fleet appeared reasonable. 
+    The STAR Panel and the STAT agreed that the base model should incorporate this new approach.
+
+\item[Request No. 5: Provide the proportion of trips removed using the Stephens-MacCall filter over time as a diagnostic for all area models.] \hfill \\
+
+    \textbf{Rationale:} To evaluate potential bias in the filtering procedure. 
+
+    \textbf{STAT Response:} This was done for the northern area, and proportion of trips retained showed a temporal pattern of a slight 
+    increase followed by a decline in number of trips retained.  The STAT asked that this request considered a low priority for the other 
+    areas because it was not clear what patterns in proportion of trips removed would indicate and the models were not sensitive to index 
+    treatment.  The Panel agreed.  Further investigation is needed and this will be added to the list of research recommendations.  
+    Examination of the characteristics of trips retained/removed using the Stephens-MacCall method should be a routine part of index standardization.
+
+\item[Request No. 6: For the central model, provide a run where the northern California size composition data are added to the model, estimate two selectivity parameters (i.e., the simpler selectivity function), and estimate M to understand how this affects fits to the length composition data.  Provide residual plots.] \hfill \\
+
+    \textbf{Rationale:} This may produce a selectivity pattern that has a more realistic peak (full selection of a reasonable portion of observed lengths).
+
+    \textbf{STAT Response:} The selectivity pattern improved but estimates a very high M (0.12) and produces an implausible estimate of biomass 
+    (>1000 times the base model). The model is not supportable as a change to the base model.
+
+\item[Request No. 7: Exclude the Marine Recreational Fisheries Statistics Survey (MRFSS) index in Oregon to define a new base case for the central model.] \hfill \\
+
+    \textbf{Rationale:}  It was learned that multiple intercept interviews were done for a single trip, so the index was not constructed from 
+    trip level data, as was intended. This only affects MRFSS index for Oregon.
+
+    \textbf{STAT Response:} Excluding this index had a minor effect on model results.  This problem should be correctable so the STAR panel 
+    will list this as a research recommendation.
+
+\item[Request No. 8: Add in the northern California length composition data to central area model.  The selectivity pattern for this fishery should mirror the southern Oregon selectivity pattern.  Retune the length composition data.] \hfill \\
+
+    \textbf{Rationale:} These data were inadvertently left out of the model.
+
+    \textbf{STAT Response:} This was done.  Adding these data had a minor effect on model results. 
+
+\item[Request No. 9: For the central area model, attempt to estimate the selectivity patterns for each fishery and determine which of the selectivity patterns provides plausible estimates.  Take the mean of those estimates (peak and/or spread parameters) and use the mean as a prior for the poorly estimated selectivities.  Consider using the mode of the observed length distribution as a prior for the peak parameter.] \hfill \\
+
+    \textbf{Rationale:} To provide a more objective means to reflect selectivity parameters for those fleets where those parameters cannot be estimated.
+
+    \textbf{STAT Response:} Alternative procedures resulted in models with small difference to the base case depletion, though scale is dependent 
+    on the choice of peak value for selectivity for parameters that were required to be fixed (highest estimated value that didn’t hit the bound of 
+    45 cm).  The Panel agreed that the original procedure used for the base case was simple and more supportable from a methodological viewpoint.
+
+\item[Request No. 10: For the central area model, repeat Request  No. 9 using a two parameter ascending logistic curve for selectivity.] \hfill \\
+
+    \textbf{Rationale:} To examine the effect on model results of using a different functional form for asymptotic selectivity.
+
+    \textbf{STAT Response:} Logistic curves did not improve model results, and all the same issues remain.
+
+\item[Request No. 11: Turn on estimation of recruitment deviations for all models, and iteratively increase $\sigma_R$ from a low value until the residual pattern stabilizes.] \hfill \\
+
+    \textbf{Rationale:} To determine whether estimating recruitment deviations can be supported by any of the models.
+
+    \textbf{STAT Response:} All models estimated extremely large recruitments in the 1980s and early 1990s that seem implausible and are not 
+    obvious in size composition data. For the southern area model, the standard error of recruitment deviance is larger than $\sigma_R$  for 
+    many early estimates, which is a nonsensical result. The likelihood components show slightly worse fit to indices, an improved fit for age 
+    composition data, and the most improvement for size composition data. This suggests that the estimated recruitment deviations are being 
+    driven by relatively subtle signals in the length composition data rather than improved ability to fit the trends in the indices.  The Panel
+    concluded that there was insufficient information to estimate recruitment deviations for all models. Therefore no changes were made to the base 
+    model. One potential area of research for data-moderate stocks would be evaluate the effect of assuming different levels autocorrelation in the 
+    stock-recruit relationship.  This might help curb the tendency to estimate extreme recruitment with sparse datasets.
+
+\item[Request No. 12: For all models, explore alternative methods of reweighting the conditional age-at-length data, but do not increase the weight on any data set.  Alternatives to evaluate are: the unmodified sample size (the method used for the base case), and Francis weighting method A and B (report the values of A and B).] \hfill \\
+
+    \textbf{Rationale:} Methods for weighting conditional age-at-length data are a current active area of research with no generally agreed procedures,
+    so model sensitivity to each method requires examination.
+
+    \textbf{STAT Response:} For the southern area model the weights for both the Francis A and B methods were above one, so no reweighting was 
+    applied. For both the central and the northern area models, Francis method A for the most part strongly downweights the conditional age-at-length data.  
+    The situation is most extreme for the northern area model, where iterative application of Frances method A appeared to be leading to a zero weight 
+    being given to conditional age-at-length data. Weighting is highly influential on both absolute biomass and relative depletion.
+
+    The Francis method A appears to produce unrealistically small weights for conditional age-at-length data in some cases. Apparently Francis method A 
+    is the recommended approach in preference to method B (C. Francis, pers. comm.), but the Panel was unable to find clear rationale for this recommendation.
+    The harmonic mean method has a history of use and theoretical basis in the multinomial distribution, and generally provides weightings that are intermediate 
+    to no weighting (unmodified initial otolith counts) and the Frances method A. The Panel recommended that the harmonic mean should be used for now as it
+    provides a compromise between no weighting and Francis A, while noting that a workshop with a focus on these methods later this year may result in the
+    general recommendation of one of the existing methods or a new procedure.  
+
+\item[Request No. 13: Explore the utility of using California Recreational Fisheries Survey (CRFS) data from 2004-2007 to partition California catches in the early years based on the proportion of catch in the private recreational and charter modes north and south of $40^\circ 10^\prime$ N latitude (this concerns the southern and central models). This is a repeat of Request No. 1.] \hfill \\
+
+    \textbf{Rationale:} This may be a better alternative to the current approach of using logbook data to partition the recreational catches north and 
+    south of $40^\circ 10^\prime$ N latitude.
+
+\textbf{STAT Response:} This analysis was completed. South of $40^\circ 10^\prime$ N latitude, the difference in model results between using CRFS data and logbook for the apportioning catches is small. North of $40^\circ 10^\prime$ N latitude there is a greater difference, primarily a change in initial stock size.  The logbook method was based on data collected over a long period of time, while the CRFS method is based only on recent data.  The logbook method better captures temporal changes in fishery, while CRFS method provides better information on relative catches between private and charter boats.  In Oregon, recreational fishing for nearshore rockfish began around 1970, and this should be indicative of northern California.  The STAR panel and STAT agreed that the logbook method should be used because the reconstructed catches are more consistent with what is known about the gradual development of the recreational fishery in northern California. Nevertheless, the Panel flagged improved methods for reconstructing recreational catches as a research recommendation.
+
+\item[Request No. 14: A set of revised base models should be brought forward with following recommended changes:] \hfill \\
+\begin{itemize}
+\item \textbf{Use weight specific fecundity relationships from Dick (2009) for all models.}
+\item \textbf{Update 2011 and 2012 data in the onboard observer CPUE index (southern model).}
+\item \textbf{Change the years in the Abrams dataset to 2010-2011; remove observations N of $40^\circ 10^\prime$ N latitude (southern model).}
+\item \textbf{Model discards as a separate fleet (southern model).}
+\item \textbf{Remove Oregon MRFSS index (central model).}
+\item \textbf{Add northern California length composition data (central model).}
+\item \textbf{Fix any selectivity parameters hitting upper bounds (central model).}
+\end{itemize}
+
+    \textbf{Rationale:} All of these changes have been identified and agreed to as changes that need to be made to the base models.
+
+    \textbf{STAT Response:} The changes were implemented to establish a new set of base models for China rockfish.
+
+\item[Request No. 15: Tune all models using the harmonic mean method for the conditional age-at-length composition and marginal age composition data. ] \hfill \\
+
+    \textbf{Rationale:} The Panel recommended that the harmonic mean method be used to re-weight the conditional age-at-length composition data.
+
+    \textbf{STAT Response:} This was done.
+
+\item[Request No. 16: Estimate M in the revised base models for southern and northern models, and use the average of those estimates as a fixed value for all models.] \hfill \\
+
+    \textbf{Rationale:} The northern and southern area models (but not the central area model) provide some objective basis for the selection of an 
+    appropriate value for M.
+
+    \textbf{STAT Response:} Although the estimates of M for the northern and southern area models are reasonable, the estimate for the central area M 
+    (0.116) is difficult to support. The age composition data are noisy, but fits suggest that more young fish are observed than would be expected for 
+    lower values of M, outweighing the effect of older fish on the fits, which results in the preference towards a higher M in this model. There are a 
+    good number of observations of older fish that arguably are more important in terms of stock status that should be fitted by the model, and only the 
+    lower M values provide a reasonable fit to the oldest age observations. Values of M of 0.09 and above lead to unrealistically high biomass and minimal
+    effect of fishing, results which appear to conflict with the habitat-based relative biomass among models. The median of the prior for M is 0.05 for this
+    stock, and it is unclear why the data are so informative about the value of M.  The northern and southern area models have more age data than the central
+    area model, and the abundance indices show contrast, which is not apparent in the central area indices. Consequently the northern and southern area models
+    may provide more supportable values for M. The Panel’s proposed approach is to use the average of the estimated M values for the southern and northern area
+    models (0.07) as a fixed value for all assessments.
+
+\item[Request No. 17: Provide likelihood profiles for M in all revised base models; consider providing a combined likelihood profile in one graphic for all models.] \hfill \\
+
+    \textbf{Rationale:} Since the estimated values for M may be used as fixed value in all assessments, the Panel would like examine the likelihood 
+    profiles as a useful diagnostic.
+
+    \textbf{STAT Response:} Likelihood profiles for both the southern and northern area models appear quite reasonable, particularly the northern 
+    area model where both the index data and the age data support the estimated M value. It should be noted that since these models are not estimating 
+    recruitment deviations, they are highly constrained, and may provide misleadingly precise estimates compared to models with greater flexibility.
+
+\item[Request No. 18: Normalize all indices and provide time series plots in which groups of comparable indices are plotted together (southern and central models).  Provide time series plots in which groups of comparable index residuals are plotted together.] \hfill \\
+
+    \textbf{Rationale:} To assess the comparability of indices prior to incorporation in the assessment model.
+ 
+    \textbf{STAT Response:} This was done, see Figures \ref{fig:STARrequest18_S} and \ref{fig:STARrequest18_C}. In the southern area model, overall 
+    trends are broadly consistent with the model biomass and show a decline to the late 1990s, followed by an increase. The model has the ability to 
+    scale the periods before and after 2000 due a lack of overlap of indices in this period.  The observer CPFV index shows a sustained decline after 
+    2005 that the model is unable to match, even when recruitment deviations are turned on.  Because China rockfish is a very long-lived species, 
+    age-structured population dynamics precludes rapid changes in abundance when fishing is relatively stable, suggesting that there must be some 
+    other cause for this recent trend. Indices for the central area show similar pattern from 2000 to 2014 across three indices that are also difficult
+    to account for with China rockfish population dynamics. The Panel discussed potential interactions with other species (e.g., black rockfish) due 
+    to hook competition, and regulatory changes as factors that could affect CPUE indices derived from a multi-species recreational fishery.  Panel will 
+    add a research recommendation that these factors be investigated. 
+
+\item[Request No. 19: Provide likelihood profiles on M for all base models, which now are using a fixed value of M of 0.07.  Plot predicted spawning output on the M profile plots.] \hfill \\
+
+    \textbf{Rationale:} To evaluate whether the profiles for M for the base models for the northern and southern area are well determined as a 
+    justification using a single fixed value across all models, and to also demonstrate the inadequacy of the central model for estimating M
+
+    \textbf{STAT Response:} This was done. The new base models behaved as expected (except for spawning output declining at very high M for southern 
+    area model). 
+
+\item[Request No. 20: Provide bracketing model runs varying M (high and low Ms should be equidistant from the base M (high M =0.09; base M = 0.07; low M = 0.05 (set to mode of the prior)) for potential decision tables.  Assume projected ACL removals for a category 2 stock (P* = 0.45, σ = 0.72, 40-10 adj. as needed) applied to high and low M scenarios. Also provide projected ACL removals under base case, and recent year catches (if different than base case ACLs).] \hfill \\
+
+    \textbf{Rationale:} Development of a potential axis of uncertainty based on M.
+ 
+    \textbf{STAT Response:} This was done.
+
+\item[Request No. 21: Update the figures from Request No. 2 with the new base models (show summary biomass).] \hfill \\
+
+    \textbf{Rationale:} To provide a comparison between the previous assessment results using XDB-SRA and the current assessment.
+
+    \textbf{STAT Response:} This was done and is reflected in the plots for Request No. 2 . The current base models deviate more strongly from 
+    the results using XDB-SRA than the pre-STAR models, but results remain broadly consistent (i.e., biomass estimates differ by no more than a factor of two). 
+
+\item[Request No. 22: Provide runs of for the central model treating all age compositions as marginal (fix growth parameters, and alternatively fix and estimate M).] \hfill \\
+
+    \textbf{Rationale:} This may provide improved fits to composition data, and may also provide further evidence that large values for M 
+    above 0.1 for the central model are implausible.
+
+    \textbf{STAT Response:} Results were only very slightly different to the base model, so no additional information was provided for the assessment.
+
+\item[Request No. 23: Provide two runs from the base for the southern area model that bracket uncertainty in steepness. Use values of 0.6 and 0.9 which are close to the 12.5 and 87.5 percentiles from the Thorson prior. Provide projected biomass to compare with current bracketing models with M.] \hfill \\
+
+    \textbf{Rationale:} To determine whether uncertainty in M sufficiently captures uncertainty for decision tables for the southern area model.
+
+    \textbf{STAT Response:} This was done. The bracketing model runs for steepness and M produced remarkably similar results, allowing the Panel 
+    to agree to use only M to bracket uncertainty for management advice for the southern area model, and to do the same for the northern and central 
+    area models.
+
+\item[Request No. 24: The STAR panel requested a detailed justification be provided for the decisions regarding stock structure assumed in the assessment(s) (i.e., growth differences, size composition, fishery discard rates, evidence of low larval drift, and management history and jurisdiction).] \hfill \\
+
+    \textbf{Rationale:} This information was not provided in detail in the draft assessment document. This is just a bookkeeping request as the
+    Panel had discussed with the STAT the importance of providing supporting information on stock structure decisions, but no formal request was 
+    forwarded to the STAT.
+
+    \textbf{STAT Response:} This information will be included in the final assessment document.
+
+\end{description}
+
+
 ##Model Description
 
 ###Transition from the 2013 to 2015 stock assessment
@@ -1436,7 +1661,7 @@ Estimated selectivity curves for the Washington recreational southern and northe
 
 **Central**
 
-The central base-case model produces reasonable estimates of growth parameters, with China rockfish in the central area reaching a maximum length of 37.4 cm  (Table \ref{tab:C_model_params}, Figure \ref{fig:growth_all}). The central base-case model fits to the indices of abundance are generally flat to slightly declining, with many model fits showing runs of years in which the model consistently either over or under fits the data (Figures \ref{fig:C_index2_cpuefit_6_OR_SouthernOR_Comm_Live}, \ref{fig:C_index2_cpuefit_7_OR_SouthernOR_Rec_PC}, \ref{fig:C_index2_cpuefit_10_OR_NorthernOR_Rec_PC}, \ref{fig:C_index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS},and \ref{fig:C_comp_lenfit_sex1mkt2_multi-fleet_comparison}). Each of the central model indices of abundance except the Oregon southern commercial live fish fishery were fit estimating additional standard deviations of 0.15, 0.50, and 0.08 for the Oregon southern recreational party/charter fishery, the Oregon northern recreational party/charter fishery, and the Oregon southern recreational party/charter fishery, respectively (Table \ref{tab:C_model_params}). 
+The central base-case model produces reasonable estimates of growth parameters, with China rockfish in the central area reaching a maximum length of 37.4 cm  (Table \ref{tab:C_model_params}, Figure \ref{fig:growth_all}). The central base-case model fits to the indices of abundance are generally flat to slightly declining, with many model fits showing runs of years in which the model consistently either over or under fits the data (Figures \ref{fig:C_index2_cpuefit_6_OR_SouthernOR_Comm_Live}, \ref{fig:C_index2_cpuefit_10_OR_NorthernOR_Rec_PC}, \ref{fig:C_index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS},\ref{fig:C_comp_lenfit_sex1mkt2_page1_multi-fleet_comparison}, and \ref{fig:C_comp_lenfit_sex1mkt2_page2_multi-fleet_comparison}). Each of the central model indices of abundance except the Oregon southern commercial live fish fishery were fit estimating additional standard deviations of 0.15, 0.50, and 0.08 for the Oregon southern recreational party/charter fishery, the Oregon northern recreational party/charter fishery, and the Oregon southern recreational party/charter fishery, respectively (Table \ref{tab:C_model_params}). 
 
 Fits to the time-aggregated central model length distributions are reasonable given the small samples sizes, particularly during the early years, and the mirroring of fleet selectivities between fleets (Figure \ref{fig:C_ comp_agefit_flt10mkt2}). The model fits the Oregon southern commercial fishery best, shifts the peak of the fitted distribution to the left for the Oregon southern recreational private/rental, Oregon southern recreational party/charter, and Oregon northern recreational private/rental fleets, and under fits the peak of the time aggregated length distributions for the Oregon southern commercial live fish and Oregon northern recreational party/charter fleets. The model fits the conditional age-at-length data from the southern Oregon commercial dead-fish fishery poorly with clusters in the residuals and fewer observations in the age-50+ bin than expected by the model (Figure \ref{fig:C_comp_condAALfit_residsflt5mkt2}). The residual patterns are less notable in the fit to conditional age-at-length data from the southern Oregon recreational party/charter (Figure \ref{fig:C_comp_condAALfit_residsflt7mkt2}). For both these datasets, the largest residuals are associated with young fish at large sizes, including commercial catch of fish aged 10 years and younger in the 35-40cm range in 2002 through 2004 and a recreational observation in 2011 in the 44 cm bin estimated at 10 years old.  In many cases the model expects more fish in the plus group (age 50) than are actually present in the data.
 
@@ -1446,13 +1671,13 @@ Asymptotic selectivity curves are estimated for five groups of fleets: 1) Northe
 
 **Southern**
 
-The model for the area south of $40^\circ 10^\prime$ N. latitude produces reasonable values of estimated growth parameters in the base-case model, with China rockfish in the southern management area reaching an asymptotic length (converted from Schnute parameterization) of 31.8 cm, with von Bertalanffy growth coefficient, k = 0.163, and a coefficient of variation of 11% for length at age 30 (Figure \ref{fig:growth_all}). The southern base-case model was able to fit the southern area recreational dockside index of abundance with an estimated additional standard deviation of 0.23, and the two recreational onboard indices (1988-1999 and 2000-2014) with additional SDs of 0.16 and 0.23, respectively (Table \ref{tab:S_model_params}). However, in all three indices, there are runs of years in which the model consistently either over or under fits the data. The model is able to capture a decline in catch rates from the 1980s to the late 1990s / early 2000s in the dockside recreational CPUE index (Figure \ref{fig:S_index2_cpuefit_Rec_Charter}), but slightly underestimates a declining trend in the 1988-1999 onboard observer index (Figure \ref{fig:S_index2_cpuefit_Rec_Charter_Onboard_87-98}). The model is consistent with an observed increasing trend from 2000-2012 in the more recent onboard observer index, but was not able to capture a recent drop in catch rates in recent years (Figure \ref{fig:S_index2_cpuefit_Rec_Charter_Onboard_1999-2014}).
+The model for the area south of $40^\circ 10^\prime$ N. latitude produces reasonable values of estimated growth parameters in the base-case model, with China rockfish in the southern management area reaching an asymptotic length (converted from Schnute parameterization) of 31.8 cm, with von Bertalanffy growth coefficient, k = 0.163, and a coefficient of variation of 11% for length at age 30 (Figure \ref{fig:growth_all}). The southern base-case model was able to fit the southern area recreational dockside index of abundance with an estimated additional standard deviation of 0.23, and the two recreational onboard indices (1988-1999 and 2000-2014) with additional SDs of 0.16 and 0.23, respectively (Table \ref{tab:S_model_params}). However, in all three indices, there are runs of years in which the model consistently either over or under fits the data. The model is able to capture a decline in catch rates from the 1980s to the late 1990s / early 2000s in the dockside recreational CPUE index (Figure \ref{fig:S_index2_cpuefit_3_CA_SouthOf4010_Rec_PC}), but slightly underestimates a declining trend in the 1988-1999 onboard observer index (Figure \ref{fig:S_index2_cpuefit_6_CA_SouthOf4010_Rec_PC_DWV_index}). The model is consistent with an observed increasing trend from 2000-2012 in the more recent onboard observer index, but was not able to capture a recent drop in catch rates in recent years (Figure \ref{fig:S_index2_cpuefit_7_CA_SouthOf4010_Rec_PC_onboard_index}).
 
 Fits to the time-aggregated southern recreational private boat length distributions, the fleet with most of the data and landings, are most consistent with the observed data (Figure \ref{fig:S_comp_lenfit_mkt2_aggregated_across_time}). Lengths for the recreational charter boat and commercial fishery (fish landed dead) are also fit reasonably well by the model, with predicted lengths slightly smaller and larger than observed sizes in the two fleets, respectively, across years (Figure \ref{fig:S_comp_lenfit_mkt2_aggregated_across_time}). Length data from the commercial live-fish fishery are fit least well by the model, predicting smaller-than-observed lengths across years for the retained catch (Figure \ref{fig:S_comp_lenfit_mkt2_aggregated_across_time}) and fewer small fish in the discarded catch than are observed on average (Figure \ref{fig:S_comp_lenfit_mkt1_aggregated_across_time}).
 
 Fits to the length compositions from the central California onboard observer and CCFRP surveys (fleets observing whole, retained plus discarded, catch) are better than the commercial live-fish fishery, but not as good as the recreational private boat length data (Figure \ref{fig:S_comp_lenfit_mkt0_aggregated_across_time}). Observed lengths in the onboard observer data are slightly smaller than model predictions, and the CCFRP data represent a narrower range of lengths than the model predicts.
 
-The model fits the conditional age-at-length data from Jeff Abrams' thesis [@Abrams2014] reasonably well (Figure \ref{fig:S_comp_condAALfit_Andre_plotsflt8mkt0}), particularly for years with larger sample sizes.
+The model fits the conditional age-at-length data from Jeff Abrams' thesis [@Abrams2014] reasonably well (Figure \ref{fig:S_comp_condAALfit_Andre_plotsflt9mkt0}), particularly for years with larger sample sizes.
 
 Length-based selectivity parameters estimated in the southern base model include, for each fleet, the size at 100% vulnerability ('peak' parameter), and the 'width' of the ascending limb of the selectivity curve (a cumulative normal distribution). Peak values ranged from 31 cm (recreational party/charter boats) to 33.7 cm (recreational private boats). While the recreational catches represent both retained and discarded fish, the composition data in the base model represents only retained fish. Length composition data for discarded fish are available from the onboard charter boat observer programs, and could potentially be used to model retention and selectivity separately. The STAT was not able to attempt this analysis for the southern model at the time of writing, but intends to examine this further. One selectivity parameter, the peak parameter for the commercial live-fish fishery, was unable to be estimated (hit an unreasonable upper bound, >45 cm). This parameter was fixed in the base model at 32 cm for the commercial live-fish fishery, and the width parameter was estimated.
 
@@ -3182,7 +3407,10 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Length compositions for retained fish from the southern Oregon commercial live-fish fishery. \label{fig:C_comp_lendat_flt6mkt2}](r4ss/plots_C/comp_lendat_flt6mkt2.png)
 
-<!-- ![Length compositions for central model. \label{fig:C_comp_lendat_sex1mkt2_multi-fleet_comparison}](r4ss/plots_C/comp_lendat_sex1mkt2_multi-fleet_comparison.png) -->
+![Length compositions for central model, figure 1 of 2. \label{fig:C_comp_lendat_sex1mkt2_page1_multi-fleet_comparison}](r4ss/plots_C/comp_lendat_sex1mkt2_page1_multi-fleet_comparison.png)
+
+![Length compositions for central model continued, figure 2 of 2. \label{fig:C_comp_lendat_sex1mkt2_page2_multi-fleet_comparison}](r4ss/plots_C/comp_lendat_sex1mkt2_page2_multi-fleet_comparison.png)
+
 
 ![Conditional age-at-length data for retained fish from the southern Oregon commercial dead-fish fishery. \label{fig:C_comp_condAALdat_bubflt5mkt2}](r4ss/plots_C/comp_condAALdat_bubflt5mkt2.png)
 
@@ -3190,18 +3418,18 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Length compositions by year for the California commercial dead-fish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt1mkt2}](r4ss/plots_S/comp_lendat_flt1mkt2.png)
 
-<!-- ![Length compositions by year for discarded fish in the California commercial fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt1}](r4ss/plots_S/comp_lendat_flt2mkt1.png) -->
+![Length compositions by year for discarded fish in the California commercial fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt5mkt2}](r4ss/plots_S/comp_lendat_flt5mkt2.png)
 
 ![Length compositions by year for retained fish in the California commercial live-fish fishery south of $40^\circ 10^\prime$. \label{fig:S_comp_lendat_flt2mkt2}](r4ss/plots_S/comp_lendat_flt2mkt2.png)
 
 \FloatBarrier
 
 <!--RESEARCH-->
-<!-- ![CCFRP research program length compositions for the southern model.\label{fig:S_comp_lendat_flt7mkt0}](r4ss/plots_S/comp_lendat_flt7mkt0.png) -->
+![CCFRP research program length compositions for the southern model.\label{fig:S_comp_lendat_flt8mkt0}](r4ss/plots_S/comp_lendat_flt8mkt0.png)
 
 \FloatBarrier
 
-<!-- ![Conditional age-at-length compositions by year from the Abrams thesis study, used in the southern model.\label{fig:S_comp_condAALdat_bubflt8mkt0}](r4ss/plots_S/comp_condAALdat_bubflt8mkt0.png) -->
+![Conditional age-at-length compositions by year from the Abrams thesis study, used in the southern model.\label{fig:S_comp_condAALdat_bubflt9mkt0}](r4ss/plots_S/comp_condAALdat_bubflt9mkt0.png)
 
 
 
@@ -3244,8 +3472,21 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
 <!-- *************************************************History of modelleing approaches FIGURES*************************************************** --> 
+<!-- ******************************************************************************************************************************************** --> 
+
+
+<!-- ******************************************************************************************************************************************** --> 
+<!-- *************************************************STAR PANEL Recommendations FIGURES******************************************************** --> 
+<!-- ******************************************************************************************************************************************** --> 
+
+![Normalized indices (left) and residuals for indices (right) for the southern model.   \label{fig:STARrequest18_S}](plots/STARrequest18_S.png)
+
+![Normalized indices (left) and residuals for indices (right) for the central model.   \label{fig:STARrequest18_C}](plots/STARrequest18_C.png)
+
+<!-- ******************************************************************************************************************************************** --> 
 <!-- ****************************************************Model description section FIGURES******************************************************* --> 
 <!-- ******************************************************************************************************************************************** --> 
+
 
 ![Time series of spawning biomass from the 2013 XDB-SRA assessment of China rockfish north of $40^\circ 10^\prime$ N. latitude, and an age-structured production model in Stock Synthesis v3 (SS3) fit to the same data.  \label{fig:transition_spawnB_N}](plots/Transition_spawnB_N.png)
 
@@ -3307,8 +3548,9 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 ![Implied fit to the marginal age-frequencies for recreational party/charter fishery in southern OR in the central model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:C_comp_gstagefit_flt7mkt2}](r4ss/plots_C/comp_gstagefit_flt7mkt2.png)
 
 
-<!-- ![Residuals in fit to length compositions for northern model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_lenfit_sex1mkt2_multi-fleet_comparison}](r4ss/plots_C/comp_lenfit_sex1mkt2_multi-fleet_comparison.png)  -->
+![Residuals in fit to length compositions for northern model. Filled circles indicate observed values greater than expected values, figure 1 of 2.  \label{fig:C_comp_lenfit_sex1mkt2_page1_multi-fleet_comparison}](r4ss/plots_C/comp_lenfit_sex1mkt2_page1_multi-fleet_comparison.png)
 
+![Residuals in fit to length compositions for northern model. Filled circles indicate observed values greater than expected values continued, figure 2 of 2.  \label{fig:C_comp_lenfit_sex1mkt2_page2_multi-fleet_comparison}](r4ss/plots_C/comp_lenfit_sex1mkt2_page2_multi-fleet_comparison.png)
 
 \FloatBarrier
 
@@ -3326,22 +3568,22 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 
 
-<!-- ![Fits to the CA recreational CPFV fleet dockside index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter}](r4ss/plots_S/index2_cpuefit_Rec_Charter.png) -->
+![Fits to the CA recreational CPFV fleet dockside index for the southern model.  \label{fig:S_index2_cpuefit_3_CA_SouthOf4010_Rec_PC}](r4ss/plots_S/index2_cpuefit_3_CA_SouthOf4010_Rec_PC.png)
 
 
-<!-- ![Fits to the CA recreational CPFV fleet 1988-1999 onboard observer index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter_Onboard_87-98}](r4ss/plots_S/index2_cpuefit_Rec_Charter_Onboard_87-98.png) -->
+![Fits to the CA recreational CPFV fleet 1988-1999 onboard observer index for the southern model.  \label{fig:S_index2_cpuefit_6_CA_SouthOf4010_Rec_PC_DWV_index}](r4ss/plots_S/index2_cpuefit_6_CA_SouthOf4010_Rec_PC_DWV_index.png)
 
-<!-- ![Fits to the CA recreational CPFV fleet 2000-2014 onboard observer index for the southern model.  \label{fig:S_index2_cpuefit_Rec_Charter_Onboard_1999-2014}](r4ss/plots_S/index2_cpuefit_Rec_Charter_Onboard_1999-2014.png) -->
+![Fits to the CA recreational CPFV fleet 2000-2014 onboard observer index for the southern model.  \label{fig:S_index2_cpuefit_7_CA_SouthOf4010_Rec_PC_onboard_index}](r4ss/plots_S/index2_cpuefit_7_CA_SouthOf4010_Rec_PC_onboard_index.png) -->
 
 \FloatBarrier
 
 ![Fits to the length compositions from fleets in the southern model.  \label{fig:S_comp_lenfit_mkt2_aggregated_across_time}](r4ss/plots_S/comp_lenfit_mkt2_aggregated_across_time.png)
 
-<!-- ![Fits to the length compositions of discarded fish from the commercial live-fish fishery fleet in the southern model.  \label{fig:S_comp_lenfit_mkt1_aggregated_across_time}](r4ss/plots_S/comp_lenfit_mkt1_aggregated_across_time.png) -->
+![Fits to the length compositions of discarded fish from the commercial fishery fleets in the southern model.  \label{fig:S_comp_lenfit_mkt0_aggregated_across_time}](r4ss/plots_S/comp_lenfit_mkt0_aggregated_across_time.png) -->
 
 ![Fits to the length compositions of the central California 1988-1999 onboard observer and CCFRP surveys in the southern model.  \label{fig:S_comp_lenfit_mkt0_aggregated_across_time}](r4ss/plots_S/comp_lenfit_mkt0_aggregated_across_time.png)
 
-<!-- ![Fits to the conditional age-at-length data from Jeff Abrams' thesis, southern model.  \label{fig:S_comp_condAALfit_Andre_plotsflt8mkt0}](r4ss/plots_S/comp_condAALfit_Andre_plotsflt8mkt0.png) -->
+![Fits to the conditional age-at-length data from Jeff Abrams' thesis, southern model.  \label{fig:S_comp_condAALfit_Andre_plotsflt9mkt0}](r4ss/plots_S/comp_condAALfit_Andre_plotsflt9mkt0.png)
 
 <!-- ![Fits to the WCGOP discard data in the southern model.  \label{fig:S_discard_dataCommercial_Live}](r4ss/plots_S/discard_dataCommercial_Live.png) -->
 
