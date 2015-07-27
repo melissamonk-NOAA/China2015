@@ -50,11 +50,13 @@
 2 # code means to read fleet/time specific basis (2=dead catch; 3=retained catch; 99=F)  as below (units are from fleetunits; note new codes in SSV3.20)
 # Input fixed catch values
 #Year Seas Fleet Catch(or_F) Basis
-#Year Seas Fleet Catch                      fleet
-  2015    1     1  0.03 # 1_WA_SouthernWA_Rec_PCPR
-  2015    1     2  0.24   # 2_WA_NorthernWA_Rec_PC
-  2015    1     3  2.18   # 3_WA_NorthernWA_Rec_PR
-  2016    1     1  0.03 # 1_WA_SouthernWA_Rec_PCPR
-  2016    1     2  0.24   # 2_WA_NorthernWA_Rec_PC
-  2016    1     3  2.18   # 3_WA_NorthernWA_Rec_PR
+#Scaled to ACLs Northern model average catches
+#Year	Seas	Fleet	Catch
+2015	1	1	0.02
+2015	1	2	0.19
+2015	1	3	1.76
+2016	1	1	0.02
+2016	1	2	0.2
+2016	1	3	1.81
+
 999 # verify end of input
