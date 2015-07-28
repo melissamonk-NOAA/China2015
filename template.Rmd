@@ -134,15 +134,15 @@ Data within the central and northern models were stratified as follows: Central 
 ![Map depicting the boundaries for the three base-case models, Southern model (south of $40^\circ 10^\prime$ N. latitude), Central model (south of $40^\circ 10^\prime$ N. latitude to the OR-WA border), and the Northern model (WA state MCAs 1-4).  \label{fig:assess_region_map}](plots/assess_region_map.png)
 
 ##Stock biomass{-}
-Estimated spawning biomass in the northern area (Washington state) declined between the 1960s and 1990s but has been largely stable during the past two decades (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_N}).  The estimated relative depletion level (spawning biomass relative to unfished spawning biomass) of the northern stock in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%) (Figure \ref{fig:reldeplete_all}).
+Estimated spawning output in the northern area (Washington state) declined between the 1960s and 1990s but has been largely stable during the past two decades (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_N}).  The estimated relative depletion level (spawning output relative to unfished spawning output) of the northern stock in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%) (Figure \ref{fig:reldeplete_all}).
 
-The central area model for China rockfish estimates that spawning biomass is just above the biomass target in 2015 (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_C}). The rate of spawning biomass decline is estimated to be steepest during the 1980s to 1990s and continued to decline from the early 2000s at a slower rate to an estimated minimum of 41.5% in 2014. The estimated relative depletion level of the central stock in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%) (Figure \ref{fig:reldeplete_all}).
+The central area model for China rockfish estimates that spawning output is just above the biomass target in 2015 (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_C}). The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and continued to decline from the early 2000s at a slower rate to an estimated minimum of 41.5% in 2014. The estimated relative depletion level of the central stock in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%) (Figure \ref{fig:reldeplete_all}).
 
-The assessment for the southern management area suggests that China rockfish were lightly, but steadily exploited since the early 1900s, with more rapid declines in spawning biomass beginning with development of the recreational fishery in the 1950s (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_S}). The estimated relative depletion level of the southern stock in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%) (Figure \ref{fig:reldeplete_all}). Although spawning biomass in the southern area is more depleted than the central and northern areas, it is the only area with an increasing trend over the past 15 years.
+The assessment for the southern management area suggests that China rockfish were lightly, but steadily exploited since the early 1900s, with more rapid declines in spawning output beginning with development of the recreational fishery in the 1950s (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_S}). The estimated relative depletion level of the southern stock in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%) (Figure \ref{fig:reldeplete_all}). Although spawning output in the southern area is more depleted than the central and northern areas, it is the only area with an increasing trend over the past 15 years.
 
 
 
-<!-- ***********************BEGIN: CREATE SPAWNING BIOMASS AND DEPLETION TABLE DATA ***************************-->
+<!-- ***********************BEGIN: CREATE spawning output AND DEPLETION TABLE DATA ***************************-->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}      
 
 #########################################################################
@@ -178,7 +178,7 @@ The assessment for the southern management area suggests that China rockfish wer
       SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
       SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
       SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
-      colnames(SpawningBtab) = c('Year','Spawning Biomass (mt)','~ 95% confidence interval')
+      colnames(SpawningBtab) = c('Year','Spawning Output (MM eggs)','~ 95% confidence interval')
       
   #estimated depletion
       Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
@@ -218,7 +218,7 @@ The assessment for the southern management area suggests that China rockfish wer
 <!--****************************BEGIN SPAWNING DEPLETE TABLE SOUTH****************************************** -->
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-    Spawn_Deplete_S.table = xtable(Spawn_Deplete_S, caption=c("Recent trend in beginning of the year biomass and depletion for 
+    Spawn_Deplete_S.table = xtable(Spawn_Deplete_S, caption=c("Recent trend in beginning of the year spawning output and depletion for 
                                                             the southern (south of $40^\\circ 10^\\prime$ N. latitude) China rockfish model."),
                                                             label='tab:SpawningDeplete_S')  #digits=0 rounds the numbers    
     align(Spawn_Deplete_S.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
@@ -230,7 +230,7 @@ The assessment for the southern management area suggests that China rockfish wer
 \FloatBarrier
 
 
-![Time series of spawning biomass trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the three models of China rockfish (North=Washington state, Central = $40^\circ 10^\prime$ N. lat. to the OR/WA border, and South = south of $40^\circ 10^\prime$ N. lat.).  \label{fig:Spawnbio_all}](r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png)
+![Time series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the three models of China rockfish (North=Washington state, Central = $40^\circ 10^\prime$ N. lat. to the OR/WA border, and South = south of $40^\circ 10^\prime$ N. lat.).  \label{fig:Spawnbio_all}](r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png)
 
 ![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the three base case assessment models. \label{fig:reldeplete_all}](r4ss/plots_compare/base_compare4_Bratio_uncertainty.png)
 
@@ -422,11 +422,11 @@ Recently available habitat information was used to select the data used in the o
 ##Reference points{-}
 The management line for China rockfish is at $40^\circ 10^\prime$ N. latitude, with differing management guidelines north and south.  From 2005-2010, the Nearshore Rockfish Complexes north and south of $40^\circ 10^\prime$ N. latitude were managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ABC within the northern and southern Nearshore Rockfish Complexes, based on the work by Dick and MacCall [-@Dick2010].
 
-This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%, corresponding to 33.4 mt (~95% asymptotic interval: 27.4 – 39.4 mt) of spawning biomass in the base model (Table \ref{tab:Ref_pts_N}).  Unfished spawning stock biomass was estimated to be 64.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 25.9 mt, which gives a catch of 3.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 3.1 mt.
+This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning output of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%, corresponding to 33.4 mt (~95% asymptotic interval: 27.4 – 39.4 mt) of spawning output in the base model (Table \ref{tab:Ref_pts_N}).  Unfished spawning stock biomass was estimated to be 64.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 25.9 mt, which gives a catch of 3.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 3.1 mt.
 
-This stock assessment estimates that central area China rockfish are just above the biomass target. The rate of spawning biomass decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate. The estimated relative depletion level in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%), corresponding to 85.9 mt (~95% asymptotic interval: 73.1 – 98.7 mt) of spawning biomass in the base model (Table \ref{tab:Ref_pts_C}). Unfished spawning stock biomass was estimated to be 204.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 81.8 mt, which gives a catch of 9.4 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 8.8 mt. 
+This stock assessment estimates that central area China rockfish are just above the biomass target. The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate. The estimated relative depletion level in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%), corresponding to 85.9 mt (~95% asymptotic interval: 73.1 – 98.7 mt) of spawning output in the base model (Table \ref{tab:Ref_pts_C}). Unfished spawning stock biomass was estimated to be 204.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 81.8 mt, which gives a catch of 9.4 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 8.8 mt. 
 
-This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years. The estimated relative depletion level in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%), corresponding to 111.5 mt (~95% asymptotic interval:  89.9 – 133.1 mt) of spawning biomass in the base model (Table \ref{tab:Ref_pts_S}). Unfished spawning stock biomass was estimated to be 376.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 150.6 mt, which gives a catch of 20.8 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.3 mt. 
+This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years. The estimated relative depletion level in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%), corresponding to 111.5 mt (~95% asymptotic interval:  89.9 – 133.1 mt) of spawning output in the base model (Table \ref{tab:Ref_pts_S}). Unfished spawning stock biomass was estimated to be 376.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 150.6 mt, which gives a catch of 20.8 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.3 mt. 
 
 
 \FloatBarrier
@@ -478,23 +478,23 @@ Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI>=1,as.character(round(Ref_pts$lowerCI,
 Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1,as.character(round(Ref_pts$upperCI,1)),as.character(round(Ref_pts$upperCI,4))) 
 Ref_pts$CI1 = paste("(",Ref_pts$lowerCI1,"-",Ref_pts$upperCI1,")",sep="")
 
-Quantity= c('Unfished Spawning biomass (mt)',
+Quantity= c('Unfished spawning output (MM eggs)',
             'Unfished age 0+ biomass (mt)',
             'Unfished recruitment (R0, thousands)',
-            'Spawning Biomass (2015)',
+            'Spawning output (2015)',
             'Depletion (2015)',
             '\\textbf{$\\text{Reference points based on } \\mathbf{SB_{40\\%}}$}',
-            'Proxy spawning biomass ($B_{40\\%}$)',
+            'Proxy spawning output ($B_{40\\%}$)',
             'SPR resulting in $B_{40\\%}$ ($SPR_{B40\\%}$)',
             'Exploitation rate resulting in $B_{40\\%}$',
             'Yield with $SPR_{B40\\%}$ at $B_{40\\%}$ (mt)',
             '\\textbf{\\textit{Reference points based on SPR proxy for MSY}}',
-            'Spawning biomass ',
+            'Spawning output',
             '$SPR_{proxy}$',
             'Exploitation rate corresponding to $SPR_{proxy}$',
             'Yield with $SPR_{proxy}$ at $SB_{SPR}$ (mt)',
             '\\textbf{\\textit{Reference points based on estimated MSY values}}',
-            'Spawning biomass at $MSY$ ($SB_{MSY}$)',
+            'Spawning output at $MSY$ ($SB_{MSY}$)',
             '$SPR_{MSY}$',
             'Exploitation rate at $MSY$',
             '$MSY$ (mt) '
@@ -582,7 +582,37 @@ TBD
 
 ##Decision table{-}
 
-**Northern model**
+
+
+<!-- ***************************************BEGIN OFL TABLE********************************************************************-->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+     #Get the OFL catch data from each model
+      OFL_N = modN$derived_quants[grep("OFL",modN$derived_quants$LABEL),]
+      OFL_N = OFL_N[c(-1,-2),2]
+      
+      OFL_C = modC$derived_quants[grep("OFL",modC$derived_quants$LABEL),]
+      OFL_C = OFL_C[c(-1,-2),2]
+      
+      OFL_S = modS$derived_quants[grep("OFL",modS$derived_quants$LABEL),]
+      OFL_S = OFL_S[c(-1,-2),2]
+  
+   #Turn into a dataframe and get the total
+      OFL = as.data.frame(cbind(OFL_N, OFL_C, OFL_S))
+      OFL$Total = rowSums(OFL)
+      OFL$Year=seq(2017,2026,1)
+      OFL$Year = as.factor(OFL$Year)
+      OFL = OFL[,c(5,1,2,3,4)]
+      colnames(OFL) = c('Year','North','Central','South','Total') 
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+    OFL.table = xtable(OFL, caption=c("Projections of potential OFL (mt) for each model, using the base model forecast."),
+                            label = 'tab:OFL_projection')
+
+    print(OFL.table,include.rownames=FALSE, caption.placement="top")
+```
+
+<!-- *****************************************END OFL TABLE*******************************************-->
 
 
 <!-- *************************BEGIN: NORTHERN DECISION TABLE*******************************************-->
@@ -621,7 +651,6 @@ TBD
 
 \FloatBarrier
 
-**Central model**
 
 <!-- *************************BEGIN: CENTRAL DECISION TABLE*******************************************-->
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
@@ -659,7 +688,40 @@ TBD
 
 \FloatBarrier
 
-**Southern model**
+
+<!-- *************************BEGIN: SOUTH DECISION TABLE*******************************************-->
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+         decision_south = read.csv("./txt_files/DecisionTable_south.csv")
+         colnames(decision_south) = c('', 'Year',  'Catch',  'Spawning Output',	'Depletion',
+                                      'Spawning Output',	'Depletion',	'Spawning Output',	'Depletion')
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+        decision_south.table = xtable(decision_south, caption=c("Summary of 10-year projections beginning in 2017 for alternate states of nature 
+                                                           based on an axis of uncertainty for the southern model.  Columns range over low, mid,
+                                                           and high states of nature, and rows range over different assumptions of catch 
+                                                           levels"), 
+                                                           label='tab:decision_table_south')
+      
+        align(decision_south.table) = c('l','l|','c','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c') 
+
+            addtorow <- list()
+            addtorow$pos <- list()
+            addtorow$pos[[1]] <- -1
+            addtorow$pos[[2]] <- -1
+            addtorow$command <- c( ' \\multicolumn{3}{c}{} &  \\multicolumn{2}{c}{} 
+                                   &  \\multicolumn{2}{c}{\\textbf{States of nature}} 
+                                   &   \\multicolumn{2}{c}{} \\\\\n', 
+                                 ' \\multicolumn{3}{c}{}  &  \\multicolumn{2}{c}{Low M 0.05} 
+                                   &  \\multicolumn{2}{c}{Base M 0.07} 
+                                   &   \\multicolumn{2}{c}{High M 0.09} \\\\\n')
+     print(decision_south.table,add.to.row=addtorow, include.rownames=FALSE, caption.placement="top",
+         hline.after=c(-1,0,10,20,30,nrow(decision_south.table)),scalebox=.9)
+
+#,tabular.environment="tabularx",width="\\textwidth", 
+```
+<!-- *************************END: SOUTH DECISION TABLE*******************************************-->
 
 
 <!--*********************************************************** BEGIN: CREATE RESULTS SUMMARY TABLE **************************************************************************--> 
@@ -729,13 +791,13 @@ mngmt = mngmt[,-1]
                       'Landings (mt)','Total Est. Catch (mt)','Nearshore RF ABC/OFL',
                       'China contrib. ABC/OFL','Nearshore RF OY/ACL','China contrib. OY/ACL',
                       
-                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
+                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Output',
                       '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI',
                       
-                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
+                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Output',
                       '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI',
                       
-                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Biomass',
+                      '(1-$SPR$)(1-$SPR_{50\\%}$)','Exploitation rate','Age 5+ biomass (mt)','Spawning Output',
                       '~95\\% CI','Depletion','~95\\% CI','Recruits','~95\\% CI')
 
  base_summary$region = c('North of','$40^\\circ 10^\\prime$ N','','','','',
@@ -1406,11 +1468,7 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
 
     \textbf{Rationale:} To evaluate potential bias in the filtering procedure. 
 
-    \textbf{STAT Response:} This was done for the northern area, and proportion of trips retained showed a temporal pattern of a slight 
-    increase followed by a decline in number of trips retained.  The STAT asked that this request considered a low priority for the other 
-    areas because it was not clear what patterns in proportion of trips removed would indicate and the models were not sensitive to index 
-    treatment.  The Panel agreed.  Further investigation is needed and this will be added to the list of research recommendations.  
-    Examination of the characteristics of trips retained/removed using the Stephens-MacCall method should be a routine part of index standardization.
+    \textbf{STAT Response:} This was done for the northern area, and proportion of trips retained showed a temporal pattern of a slight increase followed by a decline in number of trips retained.  The STAT asked that this request be considered a low priority for the other areas because it was not clear what the patterns in proportion of trips retained would indicate, and the northern area model was not sensitive to index treatment.  The Panel agreed.  Further investigation is needed and this will be added to the list of research recommendations.  Examination of the characteristics of trips retained/removed using the Stephens-MacCall method should be a routine part of index standardization. 
 
 \item[Request No. 6: For the central model, provide a run where the northern California size composition data are added to the model, estimate two selectivity parameters (i.e., the simpler selectivity function), and estimate M to understand how this affects fits to the length composition data.  Provide residual plots.] \hfill \\
 
@@ -1484,7 +1542,7 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
 
 \textbf{STAT Response:} This analysis was completed. South of $40^\circ 10^\prime$ N latitude, the difference in model results between using CRFS data and logbook for the apportioning catches is small. North of $40^\circ 10^\prime$ N latitude there is a greater difference, primarily a change in initial stock size.  The logbook method was based on data collected over a long period of time, while the CRFS method is based only on recent data.  The logbook method better captures temporal changes in fishery, while CRFS method provides better information on relative catches between private and charter boats.  In Oregon, recreational fishing for nearshore rockfish began around 1970, and this should be indicative of northern California.  The STAR panel and STAT agreed that the logbook method should be used because the reconstructed catches are more consistent with what is known about the gradual development of the recreational fishery in northern California. Nevertheless, the Panel flagged improved methods for reconstructing recreational catches as a research recommendation.
 
-\item[Request No. 14: A set of revised base models should be brought forward with following recommended changes:] \hfill \\
+\item[Request No. 14: A set of revised base models should be brought forward with the following recommended changes:] \hfill \\
 \begin{itemize}
 \item \textbf{Use weight specific fecundity relationships from Dick (2009) for all models.}
 \item \textbf{Update 2011 and 2012 data in the onboard observer CPUE index (southern model).}
@@ -1501,9 +1559,9 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
 
 \item[Request No. 15: Tune all models using the harmonic mean method for the conditional age-at-length composition and marginal age composition data. ] \hfill \\
 
-    \textbf{Rationale:} The Panel recommended that the harmonic mean method be used to re-weight the conditional age-at-length composition data.
+    \textbf{Rationale:} The Panel recommended that the harmonic mean method be used to re-weight the conditional age-at-length composition data, because it is a well-understood and frequently applied method that provided intermediate results compared to other alternatives.
 
-    \textbf{STAT Response:} This was done.
+    \textbf{STAT Response:} This was done and considered appropriate as a new base model.
 
 \item[Request No. 16: Estimate M in the revised base models for southern and northern models, and use the average of those estimates as a fixed value for all models.] \hfill \\
 
@@ -1523,7 +1581,7 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
 
 \item[Request No. 17: Provide likelihood profiles for M in all revised base models; consider providing a combined likelihood profile in one graphic for all models.] \hfill \\
 
-    \textbf{Rationale:} Since the estimated values for M may be used as fixed value in all assessments, the Panel would like examine the likelihood 
+    \textbf{Rationale:} Since the estimated values for M may be used as fixed value in all assessments, the Panel would like the STAT to examine the likelihood 
     profiles as a useful diagnostic.
 
     \textbf{STAT Response:} Likelihood profiles for both the southern and northern area models appear quite reasonable, particularly the northern 
@@ -1552,7 +1610,7 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
     \textbf{STAT Response:} This was done. The new base models behaved as expected (except for spawning output declining at very high M for southern 
     area model). 
 
-\item[Request No. 20: Provide bracketing model runs varying M (high and low Ms should be equidistant from the base M (high M =0.09; base M = 0.07; low M = 0.05 (set to mode of the prior)) for potential decision tables.  Assume projected ACL removals for a category 2 stock (P* = 0.45, σ = 0.72, 40-10 adj. as needed) applied to high and low M scenarios. Also provide projected ACL removals under base case, and recent year catches (if different than base case ACLs).] \hfill \\
+\item[Request No. 20: Provide bracketing model runs varying M (high and low Ms should be equidistant from the base M (high M =0.09; base M = 0.07; low M = 0.05 (set to the median of the prior)) for potential decision tables.  Assume projected ACL removals for a category 2 stock (P* = 0.45, σ = 0.72, 40-10 adj. as needed) applied to high and low M scenarios. Also provide projected ACL removals under base case, and recent year catches (if different than base case ACLs).] \hfill \\
 
     \textbf{Rationale:} Development of a potential axis of uncertainty based on M.
  
@@ -1562,7 +1620,7 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
 
     \textbf{Rationale:} To provide a comparison between the previous assessment results using XDB-SRA and the current assessment.
 
-    \textbf{STAT Response:} This was done and is reflected in the plots for Request No. 2 . The current base models deviate more strongly from 
+    \textbf{STAT Response:} This was done (Figure \ref{fig:STARrequest21}). The current base models deviate more strongly from 
     the results using XDB-SRA than the pre-STAR models, but results remain broadly consistent (i.e., biomass estimates differ by no more than a factor of two). 
 
 \item[Request No. 22: Provide runs of for the central model treating all age compositions as marginal (fix growth parameters, and alternatively fix and estimate M).] \hfill \\
@@ -1646,7 +1704,8 @@ The STAT team used Stock Synthesis 3 version 3.24u by Dr. Richard Methot at the 
 ###Data weighting
 Length composition sample sizes for all models were tuned by the "Francis method" (also known as "TA1.8")  [@Francis2011], as implemented in the r4ss package. This approach involves comparing the residuals in the model’s expected mean length with respect to the observed mean length and associated uncertainty derived from the composition vectors and their associated input sample sizes. The sample sizes are then tuned so that the observed and expected variability are consistent. After adjustment to the sample sizes, models were not re-tuned as long as the bootstrap uncertainty value around the tuning factor overlapped 1.0.
 
-Age compositions and conditional-age-at-length (CAAL) compositions were not re-weighted. Two variations on the Francis method are available for CAAL data, dependent on whether or not the vectors of age at length are considered independent within each year. This is a topic of ongoing research and there is no clear guidance on a preferred method. In the southern model, both approaches indicated that the fit was already better than expected with the input sample sizes left in place. For the central and northern models, one method suggested that the CAAL sample sizes should be reduced to achieve reasonable fit while the other suggested no tuning was needed. In order to ensure that the growth curves adequately informed by the age-at-length information, we chose to maintain the initial age composition sample sizes for all models.
+AAge compositions and conditional-age-at-length (CAAL) compositions were re-weighted using the Ianelli-McAllister harmonic mean method [@McAllister1997]. Two variations on the Francis method were also considered for the CAAL data, dependent on whether or not the vectors of age at length are considered independent within each year. Data weighting in general, and the Francis method are topics of ongoing research and there is no clear guidance on a preferred method. In the southern model, both approaches indicated that the fit was already better than expected with the input sample sizes left in place. For the central and northern models, Francis method A suggested that the CAAL sample sizes should be greatly reduced to achieve reasonable fit (effectively down weighting the CAAL data out of the northern model) while Francis method B suggested little tuning was needed. 
+
 
 ###Priors
 The median of the priors for Beverton-Holt steepness parameter (Dorn, M. and Thorson, J., pers. comm.) and natural mortality [@Hamel2015] were used as fixed values across the three models. The priors were applied in sensitivity analyses where these parameters were estimated.
@@ -1659,6 +1718,8 @@ Stock synthesis has a broad suite of structural options available. Where possibl
 This stock assessment is divided into three independent areas, the south (California south of $40^\circ 10^\prime$ N latitude), the central (north of $40^\circ 10^\prime$ N latitude to the Oregon-Washington border), and the north (Washington state) based on latitudinal patterns in the length composition data and fits to size at age data. The time-series of landings begins during 1900, and captures the inception of the fishery, so the stock is assumed to be in equilibrium at the beginning of the modeled period.
  
 The internal population dynamics model tracks ages 0-80, where age 80 is the ‘plus-group’. As there is little growth occurring at age 80, the data use a plus group of age 50; there are relatively few observations in the age compositions that are greater than age 50.
+
+All models used the fecundity relationship from Dick [-@Dick2009].
  
 The following likelihood components are included: catch, indices, discards (south only), discarded catch (south only), length compositions, age compositions, parameter priors, and parameter soft bounds. See the SS technical documentation for details [@Methot2013].
  
@@ -1666,7 +1727,7 @@ Model data, control, starter, and forecast files can be found in Appendices A-D.
 
 
 ###Estimated and fixed parameters
-A full list of all estimated and fixed parameters is provided in Tables \ref{tab:N_model_params}, \ref{tab:C_model_params},  and \ref{tab:S_model_params}. Time-invariant, sex-aggregated growth is estimated for all modeled areas in this assessment. Recruitment deviations are not estimated due to a lack of visible cohorts in either the length or age data. Natural mortality is fixed at 0.053, the median of the Hamel prior [@Hamel2015], and the stock-recruitment steepness is fixed at the SSC approved steepness prior of 0.773.  Asymptotic selectivity is generally used in the base case models.
+A full list of all estimated and fixed parameters is provided in Tables \ref{tab:N_model_params}, \ref{tab:C_model_params}, and \ref{tab:S_model_params}. Time-invariant, sex-aggregated growth is estimated for all modeled areas in this assessment. Recruitment deviations are not estimated due to a lack of visible cohorts in either the length or age data. In the pre-STAR models natural mortality was fixed at 0.053, the median of the Hamel prior [@Hamel2015], and the stock-recruitment steepness is fixed at the SSC approved steepness prior of 0.773.  However, post-STAR models fix M at 0.07 for all models, the average of the estimated M’s from the northern and southern models (the central area model was unable to estimate M). Asymptotic selectivity is generally used in the base case models.
 
 
 ##Model Selection and Evaluation
@@ -1756,7 +1817,7 @@ The southern base model fixes parameters that determine stock productivity (stee
 \label{sec:uncertaintylast}
 
 ###Retrospective analysis
-Retrospective analyses were conducted for each model by conducting model runs that sequentially remove the last year of data over the last 5 base model years. The southern model showed very little change in estimated spawning biomass trajectory as a result of this data removal (Figure \ref{fig:S_retroS_compare1_spawnbio}). The central and northern models, however, showed that the each additional year of data added to the model has resulted in a higher initial spawning biomass (Figures \ref{fig:C_retroC_compare1_spawnbio} and \ref{fig:N_retroN_compare1_spawnbio}). These results are consistent with the dependence of the central and northern models on more recently collected data as compared to the southern model where the catch history began earlier.
+Retrospective analyses were conducted for each model by conducting model runs that sequentially remove the last year of data over the last 5 base model years. The southern model showed very little change in estimated spawning output trajectory as a result of this data removal (Figure \ref{fig:S_retroS_compare1_spawnbio}). The central and northern models, however, showed that the each additional year of data added to the model has resulted in a higher initial spawning output (Figures \ref{fig:C_retroC_compare1_spawnbio} and \ref{fig:N_retroN_compare1_spawnbio}). These results are consistent with the dependence of the central and northern models on more recently collected data as compared to the southern model where the catch history began earlier.
 
 
 ###Likelihood profiles
@@ -3513,13 +3574,15 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!-- ******************************************************************************************************************************************** --> 
 <!-- *************************************************STAR PANEL Recommendations FIGURES******************************************************** --> 
 <!-- ******************************************************************************************************************************************** --> 
-![Comparison of depletion among the 2013 data moderate assessment, an SS3 bridge model, and the 2015 base case for the combined nothern and central models.   \label{fig:STARrequest2_CN}](plots/STARrequest2_CN.png)
+![Comparison of depletion among the 2013 data moderate assessment, a SS3 bridge model, and the 2015 base case for the combined nothern and central models.   \label{fig:STARrequest2_CN}](plots/STARrequest2_CN.png)
 
-![Comparison of depletion among the 2013 data moderate assessment, an SS3 bridge model, and the 2015 base case for the southern model.   \label{fig:STARrequest2_S}](plots/STARrequest2_S.png)
+![Comparison of depletion among the 2013 data moderate assessment, a SS3 bridge model, and the 2015 base case for the southern model.   \label{fig:STARrequest2_S}](plots/STARrequest2_S.png)
 
 ![Normalized indices (left) and residuals for indices (right) for the southern model.   \label{fig:STARrequest18_S}](plots/STARrequest18_S.png)
 
 ![Normalized indices (left) and residuals for indices (right) for the central model.   \label{fig:STARrequest18_C}](plots/STARrequest18_C.png)
+
+![Comparison of depletion among the 2013 data moderate assessment, a SS3 bridge model, and the 2015 base case for the southern (left panel) and northern and central (right panel) models.   \label{fig:STARrequest21}](plots/STARrequest21.png)
 
 <!-- ******************************************************************************************************************************************** --> 
 <!-- ****************************************************Model description section FIGURES******************************************************* --> 

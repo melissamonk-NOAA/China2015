@@ -22,7 +22,7 @@ save.image("China_SS_output2015.RData")
 #output directories
 out.dir.N = "C:/China2015/r4ss/plots_N"
 out.dir.C = "C:/China2015/r4ss/plots_C"
-out.dir.S = "C:/China2015/r4ss/plots_A"
+out.dir.S = "C:/China2015/r4ss/plots_S"
 
 
 #North

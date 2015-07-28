@@ -1,8 +1,8 @@
 #V3.24U
 SS-V3.24U-safe;_08/29/2014;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11.2_Win64
 
-StartTime: Mon Jul 27 13:26:59 2015
-EndTime: Mon Jul 27 13:30:18 2015
+StartTime: Tue Jul 28 16:15:19 2015
+EndTime: Tue Jul 28 16:18:38 2015
 This run took: 0 hours, 3 minutes, 19 seconds.
 Data_File: china_WAonly_data.ss
 Control_File: china_WAonly_control.ss
