@@ -134,9 +134,9 @@ Data within the central and northern models were stratified as follows: Central 
 ![Map depicting the boundaries for the three base-case models, Southern model (south of $40^\circ 10^\prime$ N. latitude), Central model (south of $40^\circ 10^\prime$ N. latitude to the OR-WA border), and the Northern model (WA state MCAs 1-4).  \label{fig:assess_region_map}](plots/assess_region_map.png)
 
 ##Stock biomass{-}
-Estimated spawning output in the northern area (Washington state) declined between the 1960s and 1990s but has been largely stable during the past two decades (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_N}).  The estimated relative depletion level (spawning output relative to unfished spawning output) of the northern stock in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%) (Figure \ref{fig:reldeplete_all}).
+Estimated spawning output in the northern area (Washington state) declined between the 1960s and 1990s but has been largely stable during the past two decades (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_N}).  The estimated relative depletion level (spawning output relative to unfished spawning output) of the northern stock in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.6% - 83.2%) (Figure \ref{fig:reldeplete_all}).
 
-The central area model for China rockfish estimates that spawning output is just above the biomass target in 2015 (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_C}). The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and continued to decline from the early 2000s at a slower rate to an estimated minimum of 41.5% in 2014. The estimated relative depletion level of the central stock in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%) (Figure \ref{fig:reldeplete_all}).
+The central area model for China rockfish estimates that spawning output is just above the biomass target in 2015 (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_C}). The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and continued to decline from the early 2000s at a slower rate to an estimated minimum of 39.6% in 2014. The estimated relative depletion level of the central stock in 2015 is 61.5% (~95% asymptotic interval: $\pm$ 53.8% - 69.2%) (Figure \ref{fig:reldeplete_all}).
 
 The assessment for the southern management area suggests that China rockfish were lightly, but steadily exploited since the early 1900s, with more rapid declines in spawning output beginning with development of the recreational fishery in the 1950s (Figure \ref{fig:Spawnbio_all} and Table \ref{tab:SpawningDeplete_S}). The estimated relative depletion level of the southern stock in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%) (Figure \ref{fig:reldeplete_all}). Although spawning output in the southern area is more depleted than the central and northern areas, it is the only area with an increasing trend over the past 15 years.
 
@@ -174,8 +174,8 @@ The assessment for the southern management area suggests that China rockfish wer
       SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
                                  SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),]     
       SpawningByrs$YEAR = seq(FirstYR,LastYR)
-      SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=0)
-      SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=0)
+      SpawningByrs$lowerCI = round(SpawningByrs$Value +qnorm(0.025)*SpawningByrs$StdDev, digits=2)
+      SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=2)
       SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
       SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
       colnames(SpawningBtab) = c('Year','Spawning Output (MM eggs)','~ 95% confidence interval')
@@ -184,8 +184,9 @@ The assessment for the southern management area suggests that China rockfish wer
       Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
                                  Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]     
       Depletionyrs$YEAR = seq(FirstYR,LastYR)
-      Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=2)
-      Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=2)
+      Depletion$Value = round(Depletion$Value, digits=3)
+      Depletionyrs$lowerCI = round(Depletionyrs$Value +qnorm(0.025)*Depletionyrs$StdDev, digits=3)
+      Depletionyrs$upperCI = round(Depletionyrs$Value -qnorm(0.025)*Depletionyrs$StdDev, digits=3)
       Depletionyrs$CI = paste("(",Depletionyrs$lowerCI,"-",Depletionyrs$upperCI,")",sep="")
       Depletiontab=subset(Depletionyrs,select=c('Value','CI'))
       colnames(Depletiontab) = c('Estimated depletion','~ 95% confidence interval')
@@ -197,9 +198,10 @@ The assessment for the southern management area suggests that China rockfish wer
 <!--****************************BEGIN SPAWNING DEPLETE TABLE NORTHL****************************************** -->
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the Spawning biomass table
-    Spawn_Deplete_N.table = xtable(Spawn_Deplete_N, caption=c("Recent trend in beginning of the year biomass and depletion for the northern China rockfish model."),
-                                                              label='tab:SpawningDeplete_N')  #digits=0 rounds the numbers 
-    align(Spawn_Deplete_N.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+    Spawn_Deplete_N.table = xtable(Spawn_Deplete_N, caption=c("Recent trend in beginning of the year biomass and depletion for the northern 
+                                                               China rockfish model."),
+                                                              label='tab:SpawningDeplete_N',digits=3)  #digits=0 rounds the numbers 
+    align(Spawn_Deplete_N.table) = c('l','l','>{\\centering}p{1.3in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(Spawn_Deplete_N.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
@@ -209,8 +211,8 @@ The assessment for the southern management area suggests that China rockfish wer
   #create the Spawning biomass table
     Spawn_Deplete_C.table = xtable(Spawn_Deplete_C, caption=c("Recent trend in beginning of the year biomass and depletion for the central 
                                                               (north of $40^\\circ 10^\\prime$ N. latitude to the OR-WA border) China rockfish model."),
-                                                              label='tab:SpawningDeplete_C')  #digits=0 rounds the numbers   
-    align(Spawn_Deplete_C.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+                                                              label='tab:SpawningDeplete_C',digits=3)  #digits=0 rounds the numbers   
+    align(Spawn_Deplete_C.table) = c('l','l','>{\\centering}p{1.3in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(Spawn_Deplete_C.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
@@ -220,8 +222,8 @@ The assessment for the southern management area suggests that China rockfish wer
   #create the Spawning biomass table
     Spawn_Deplete_S.table = xtable(Spawn_Deplete_S, caption=c("Recent trend in beginning of the year spawning output and depletion for 
                                                             the southern (south of $40^\\circ 10^\\prime$ N. latitude) China rockfish model."),
-                                                            label='tab:SpawningDeplete_S')  #digits=0 rounds the numbers    
-    align(Spawn_Deplete_S.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
+                                                            label='tab:SpawningDeplete_S',digits=3)  #digits=0 rounds the numbers    
+    align(Spawn_Deplete_S.table) = c('l','l','>{\\centering}p{1.3in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(Spawn_Deplete_S.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
           width="\\textwidth")
 ```
@@ -422,11 +424,11 @@ Recently available habitat information was used to select the data used in the o
 ##Reference points{-}
 The management line for China rockfish is at $40^\circ 10^\prime$ N. latitude, with differing management guidelines north and south.  From 2005-2010, the Nearshore Rockfish Complexes north and south of $40^\circ 10^\prime$ N. latitude were managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ABC within the northern and southern Nearshore Rockfish Complexes, based on the work by Dick and MacCall [-@Dick2010].
 
-This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning output of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 51.5% (~95% asymptotic interval: $\pm$ 47.2% - 55.8%, corresponding to 33.4 mt (~95% asymptotic interval: 27.4 – 39.4 mt) of spawning output in the base model (Table \ref{tab:Ref_pts_N}).  Unfished spawning stock biomass was estimated to be 64.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 25.9 mt, which gives a catch of 3.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 3.1 mt.
+This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning output of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.7% - 83.2%, corresponding to 24.4 million eggs (~95% asymptotic interval: 15.2 – 33.7) of spawning output in the base model (Table \ref{tab:Ref_pts_N}).  Unfished spawning stock biomass was estimated to be 240.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 mt, which gives a catch of 6.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt.
 
-This stock assessment estimates that central area China rockfish are just above the biomass target. The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate. The estimated relative depletion level in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%), corresponding to 85.9 mt (~95% asymptotic interval: 73.1 – 98.7 mt) of spawning output in the base model (Table \ref{tab:Ref_pts_C}). Unfished spawning stock biomass was estimated to be 204.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 81.8 mt, which gives a catch of 9.4 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 8.8 mt. 
+This stock assessment estimates that central area China rockfish are just above the biomass target. The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate. The estimated relative depletion level in 2015 is 61.5% (~95% asymptotic interval: $\pm$ 53.8% - 69.2%), corresponding to 65.1 million eggs (~95% asymptotic interval: 51.8 – 78.4) of spawning output in the base model (Table \ref{tab:Ref_pts_C}). Unfished spawning stock biomass was estimated to be 591.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 26 mt, which gives a catch of 15.7 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 14.5 mt. 
 
-This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years. The estimated relative depletion level in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%), corresponding to 111.5 mt (~95% asymptotic interval:  89.9 – 133.1 mt) of spawning output in the base model (Table \ref{tab:Ref_pts_S}). Unfished spawning stock biomass was estimated to be 376.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 150.6 mt, which gives a catch of 20.8 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.3 mt. 
+This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years. The estimated relative depletion level in 2015 is 27.9% (~95% asymptotic interval: $\pm$ 21.2% - 34.7%), corresponding to 66.5 million eggs (~95% asymptotic interval:  49.6 - 83.4) of spawning output in the base model (Table \ref{tab:Ref_pts_S}). Unfished spawning stock biomass was estimated to be 768.6 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 26.6 mt, which gives a catch of 21.1 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.5 mt. 
 
 
 \FloatBarrier
@@ -731,25 +733,32 @@ TBD
       LastYR=2015  # maximum year for the Spawning biomass table 
 ###collect the data from all the tables
 # read in the management table
-#AgexB = seq(FirstYR,LastYR)
-mngmt = read.csv("./txt_files/mngmt_performance_base.csv")
-mngmt = mngmt[,-1]
+  mngmt = read.csv("./txt_files/mngmt_performance_base.csv")
+  mngmt = mngmt[,-1]
 
 #north
+   #SPR ratio
     SPRratio_Exploit_N = SPRratio_Exploit_N[,c(2,4)]
     SPRratio_Exploit_N[,c(1,2)] = round(SPRratio_Exploit_N[,c(1,2)],2)
     SPRratio_Exploit_N = SPRratio_Exploit_N[-dim(SPRratio_Exploit_N)[1],]
+   #SPR blanks for the last year
     blanks = c(NA,NA)
     SPRratio_Exploit_N = rbind(SPRratio_Exploit_N,blanks)
+  #Age 5+ biomass
     Age5biomassN = modN$timeseries[,c('Yr',"Bio_smry")]
     Age5biomassyrsN = subset(Age5biomassN, Yr>=(FirstYR) & Yr<=(LastYR))
     Age5biomassyrsN = Age5biomassyrsN[,2]
     Age5biomassyrsN = round(Age5biomassyrsN,2)
+   #Spawning and depltions
     Spawn_Deplete_N = Spawn_Deplete_N[,c(2:5)]
-    Spawn_Deplete_N[,1] = round(Spawn_Deplete_N[,1],0)
-    Spawn_Deplete_N[,3] = round(Spawn_Deplete_N[,3],2)
+    Spawn_Deplete_N[,1] = round(Spawn_Deplete_N[,1],1)
+    Spawn_Deplete_N[,3] = round(Spawn_Deplete_N[,3],1)
+   #Recruitment
     Recruittab_N = Recruittab_N[,c(2,3)]
-  North_summary = cbind(SPRratio_Exploit_N,Age5biomassyrsN,Spawn_Deplete_N,Recruittab_N)
+    Recruittab_N[,2] = Recruittab_N[,2]
+   #BIND THEM ALL TOGETHER
+    North_summary = cbind(SPRratio_Exploit_N,Age5biomassyrsN,Spawn_Deplete_N,Recruittab_N)
+
 #central
     SPRratio_Exploit_C = SPRratio_Exploit_C[,c(2,4)]
     SPRratio_Exploit_C[,c(1,2)] = round(SPRratio_Exploit_C[,c(1,2)],2)
@@ -815,11 +824,11 @@ mngmt = mngmt[,-1]
   base_summary.table = xtable(base_summary, caption=c("China rockfish base case results summary."), 
                               label='tab:base_summary',digits=0) 
    
-    align(base_summary.table) = c('l','r','r', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}'
-                                  , '>{\\centering}p{.8in}', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}', '>{\\centering}p{.8in}'
-                                  , '>{\\centering}p{.8in}', '>{\\centering}p{.8in}')  
+    align(base_summary.table) = c('l','r','r', '>{\\centering}p{1.1in}', '>{\\centering}p{1.1in}', '>{\\centering}p{1.1in}', 
+                                  '>{\\centering}p{1.1in}', '>{\\centering}p{1.1in}', '>{\\centering}p{1.1in}', '>{\\centering}p{1.1in}', 
+                                  '>{\\centering}p{1.1in}', '>{\\centering}p{1.1in}', '>{\\centering}p{1.1in}')  
     print(base_summary.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",sanitize.text.function = function(x){x},
-           scalebox=.75,align=TRUE, hline.after=c(-1,0,6,12,21,30,nrow(base_summary.table)) )
+           scalebox=.6,align=TRUE, hline.after=c(-1,0,6,12,21,30,nrow(base_summary.table)) )
 ```
 <!-- ********************************************************END: CREATE RESULTS SUMMARY TABLE *****************************************************************************-->
 
@@ -1146,8 +1155,8 @@ Trips/drifts from the ODFW, CDFW 1999-2014, and Cal Poly databases meeting the f
 8. Drifts missing both starting and ending depths       
 9. Drifts within the habitat data occurring farther than 83 m from a reef in Oregon and 34 m in California (see Appendix F (p. \pageref{sec:AppendixF}) for details)      
 10.	Drifts outside the habitat data in California occurring farther than 141 m from reef (see Appendix F (p. \pageref{sec:AppendixF}) for details)     
-11.	Drifts occurring on a reef with <3 positive encounters of black rockfish      
-12.	Drifts occurring on a reef in which black rockfish was observed in <25% of years the reef was visited.     
+11.	Drifts occurring on a reef with <3 positive encounters of China rockfish      
+12.	Drifts occurring on a reef in which China rockfish was observed in <25% of years the reef was visited         
 
 
 
@@ -1833,7 +1842,7 @@ Likelihood profiles were conducted over four values for the steepness of the sto
 
 **Northern Model**
 
-This stock assessment estimates that China rockfish in the north are well above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades (Table \ref{tab:Timeseries_N}; Figure \ref{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.6% - 83.2%), corresponding to 17.9 million eggs (~95% asymptotic interval: 8.8 – 27.1 mt) of spawning output in the base model (Table  \ref{tab:SpawningDeplete_N}; Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). Unfished spawning output was estimated to be 24.4 million eggs in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 million eggs, which gives a catch of 6.2 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt. Table \ref{tab:Ref_pts_N} shows the full suite of estimated reference points for the northern area model and Figure \ref{fig:N_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that China rockfish in the north are well above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades (Table \ref{tab:Timeseries_N}; Figure \ref{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.6% - 83.2%), corresponding to 17.9 million eggs (~95% asymptotic interval: 8.8 – 27.1 million eggs) of spawning output in the base model (Table  \ref{tab:SpawningDeplete_N}; Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). Unfished spawning output was estimated to be 24.4 million eggs in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 million eggs, which gives a catch of 6.2 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt. Table \ref{tab:Ref_pts_N} shows the full suite of estimated reference points for the northern area model and Figure \ref{fig:N_yield1_yield_curve} shows the equilibrium yield curve.
 
 
 
