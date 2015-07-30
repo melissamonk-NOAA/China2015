@@ -178,7 +178,7 @@ The assessment for the southern management area suggests that China rockfish wer
       SpawningByrs$upperCI = round(SpawningByrs$Value -qnorm(0.025)*SpawningByrs$StdDev, digits=2)
       SpawningByrs$CI = paste("(",SpawningByrs$lowerCI,"-",SpawningByrs$upperCI,")",sep="")
       SpawningBtab=subset(SpawningByrs,select=c('YEAR','Value','CI'))
-      colnames(SpawningBtab) = c('Year','Spawning Output (MM eggs)','~ 95% confidence interval')
+      colnames(SpawningBtab) = c('Year','Spawning Output (billion eggs)','~ 95% confidence interval')
       
   #estimated depletion
       Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
@@ -424,11 +424,11 @@ Recently available habitat information was used to select the data used in the o
 ##Reference points{-}
 The management line for China rockfish is at $40^\circ 10^\prime$ N. latitude, with differing management guidelines north and south.  From 2005-2010, the Nearshore Rockfish Complexes north and south of $40^\circ 10^\prime$ N. latitude were managed by a total catch Optimum Yield (OY).  As of the PFMC 2011-12 management cycle, China rockfish has a component OFL and ABC within the northern and southern Nearshore Rockfish Complexes, based on the work by Dick and MacCall [-@Dick2010].
 
-This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning output of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.7% - 83.2%, corresponding to 24.4 million eggs (~95% asymptotic interval: 15.2 – 33.7) of spawning output in the base model (Table \ref{tab:Ref_pts_N}).  Unfished spawning stock biomass was estimated to be 240.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 mt, which gives a catch of 6.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt.
+This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning output of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.7% - 83.2%, corresponding to 24.4 billion eggs (~95% asymptotic interval: 15.2 – 33.7) of spawning output in the base model (Table \ref{tab:Ref_pts_N}).  Unfished spawning stock biomass was estimated to be 240.8 mt in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 mt, which gives a catch of 6.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt.
 
-This stock assessment estimates that central area China rockfish are just above the biomass target. The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate. The estimated relative depletion level in 2015 is 61.5% (~95% asymptotic interval: $\pm$ 53.8% - 69.2%), corresponding to 65.1 million eggs (~95% asymptotic interval: 51.8 – 78.4) of spawning output in the base model (Table \ref{tab:Ref_pts_C}). Unfished spawning stock biomass was estimated to be 591.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 26 mt, which gives a catch of 15.7 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 14.5 mt. 
+This stock assessment estimates that central area China rockfish are just above the biomass target. The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate. The estimated relative depletion level in 2015 is 61.5% (~95% asymptotic interval: $\pm$ 53.8% - 69.2%), corresponding to 65.1 billion eggs (~95% asymptotic interval: 51.8 – 78.4) of spawning output in the base model (Table \ref{tab:Ref_pts_C}). Unfished spawning stock biomass was estimated to be 591.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 26 mt, which gives a catch of 15.7 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 14.5 mt. 
 
-This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years. The estimated relative depletion level in 2015 is 27.9% (~95% asymptotic interval: $\pm$ 21.2% - 34.7%), corresponding to 66.5 million eggs (~95% asymptotic interval:  49.6 - 83.4) of spawning output in the base model (Table \ref{tab:Ref_pts_S}). Unfished spawning stock biomass was estimated to be 768.6 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 26.6 mt, which gives a catch of 21.1 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.5 mt. 
+This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years. The estimated relative depletion level in 2015 is 27.9% (~95% asymptotic interval: $\pm$ 21.2% - 34.7%), corresponding to 66.5 billion eggs (~95% asymptotic interval:  49.6 - 83.4) of spawning output in the base model (Table \ref{tab:Ref_pts_S}). Unfished spawning stock biomass was estimated to be 768.6 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 26.6 mt, which gives a catch of 21.1 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.5 mt. 
 
 
 \FloatBarrier
@@ -480,7 +480,7 @@ Ref_pts$lowerCI1 = ifelse(Ref_pts$lowerCI>=1,as.character(round(Ref_pts$lowerCI,
 Ref_pts$upperCI1 = ifelse(Ref_pts$upperCI>=1,as.character(round(Ref_pts$upperCI,1)),as.character(round(Ref_pts$upperCI,4))) 
 Ref_pts$CI1 = paste("(",Ref_pts$lowerCI1,"-",Ref_pts$upperCI1,")",sep="")
 
-Quantity= c('Unfished spawning output (MM eggs)',
+Quantity= c('Unfished spawning output (billion eggs)',
             'Unfished age 0+ biomass (mt)',
             'Unfished recruitment (R0, thousands)',
             'Spawning output (2015)',
@@ -841,7 +841,49 @@ TBD
 \newpage
 
 ##Research and data needs{-}
-TBD
+We recommend the following research be conducted before the next assessment:
+\begin{enumerate}
+
+\item The number of hours fished in Washington should be recorded for each dockside sample (vessel) so that future CPUE can be measured as angler hours rather than just number of anglers per trip. This will allow for a more accurate calculation of effort.
+
+\item The number of hours fished in Oregon should be recorded for each dockside sample (vessel), instead of the number of the start and end times of the entire trip.  This will allow for a more accurate calculation of effort.
+
+\item Compare the habitat-based methods used to subset data for the onboard observer indices to Stephens-MacCall and other filtering methods.
+
+\item Explore the sensitivity of Stephens-MacCall when the target species is “rare” or not common encountered in the data samples.
+
+\item A standardized fishery independent survey sampling nearshore rockfish in all three states would provide a more reliable index of abundance than the indices developed from catch rates in recreational and commercial fisheries. However, information value of such surveys would depend on the consistency in methods over time and space and would require many years of sampling before an informative index could be obtained.
+
+\item A coastwide evaluation of genetic structure of China rockfish is a research priority. Genetic samples should be collected at sites spaced regularly along the coast throughout the range of the species to estimate genetic differences at multiple spatial scales (i.e., isolation by distance).
+ 
+\item Difficulties were encountered when attempting to reconstruct historical recreational catches at smaller spatial scales, and in distinguishing between landings from the private and charter vessels. Improved methods are needed to allocate reconstructed recreational catches to sub-state regions within each fishing mode.
+
+\item There was insufficient time during the STAR Panel review to fully review the abundance indices used in the China rockfish assessments. Consideration should be given to scheduling a data workshop prior to STAR Panel review for review of assessment input data and standardization procedures for indices, potentially for all species scheduled for assessment.  The nearshore data workshop, held earlier this year, was a step in this direction, but that meeting did not deal with the modeling part of index development.
+ 
+\item The Marine Recreational Fisheries Statistics Survey (MRFSS) index in Oregon was excluded from the assessment model because it was learned that multiple intercept interviews were done for a single trip. Evaluate whether database manipulations or some other approach can resolve this issue and allow these data to be used in the assessment. 
+ 
+\item Many of the indices used in the China rockfish assessment model used the Stephens-MacCall (2004) approach to subset the CPUE data. Research is need to evaluate the performance of the method when there are changes in management restrictions and in relative abundance of different species. Examination of the characteristics of trips retained/removed should be a routine part of index standardization, such as an evaluation of whether there are time trends in the proportion of discarded trips.
+ 
+\item Fishery-dependent CPUE indices are likely to be the only trend information for many nearshore species for the foreseeable future.  Indices from a multi-species hook and line fishery may be influenced by regulatory changes, such as bag limits, and by interactions with other species (e.g. black rockfish) due to hook competition.  It may be possible to address many of these concerns if a multi-species approach is used to develop the indices, allowing potential interactions and common forcing to be evaluated.
+ 
+\item Consider the development of a fishery-independent survey for nearshore stocks. As the current base model structure has no direct fishery-independent measure of stock trends, any work to commence collection of such a measure for nearshore rockfish, or use of existing data to derive such an index would greatly assist with this assessment.
+ 
+\item Basic life history research may help to resolve assessment uncertainties regarding appropriate values for natural mortality and steepness.
+ 
+\item Examine length composition data of discarded fish from recreational onboard observer programs in California and Oregon. Consider modeling discarded catch using selectivity and retention functions in Stock Synthesis rather than combining retained and discarded catch and assuming they have identical size compositions. Another option would be to model discarded recreational catch as a separate fleet, similar to the way commercial discards were treated in the southern model.
+ 
+\item Ageing data were influential in the China rockfish stock assessments. Collection and ageing of China rockfish otoliths should continue.  Samples from younger fish not typically selected by the fishery are needed to better define the growth curve.
+ 
+\item Consider evaluating depletion estimators of abundance using within season CPUE indices.  This approach would require information on total removals on a reef-by-reef basis.
+ 
+\item The extensive use of habitat information in index development is a strength of the China rockfish assessment. Consideration should be given to how to further incorporate habitat data into the assessment of nearshore species.  The most immediate need seems to be to increase the resolution of habitat maps for waters off Oregon and Washington, and standardization of habitat data format among states.
+ 
+\item Although all the current models for China rockfish estimated implausibly large recruitment deviations when allowed to do so, particularly early in the modeled time period, further exploration of available options in stock synthesis could produce acceptable results. In addition, this work may provide guidance on any additional options that could be added to stock synthesis to better handle this situation. For example, assuming different levels autocorrelation in the stock-recruit relationship for data-moderate stocks may help curb the tendency to estimate extreme recruitment with sparse datasets.
+ 
+\item Research is needed on data-weighting methods in stock assessments. In particular, a standard approach for conditional age-at-length data is needed.  The Center for the Advancement of Population Assessment Methodology (CAPAM) data weighting workshop, scheduled for later this year, should make important progress on this research need.
+
+\end{enumerate}
+
 
 
 \FloatBarrier
@@ -1211,7 +1253,7 @@ Length compositions were provided from the following sources, by region, with br
 
 _Southern model (south of $40^\circ 10^\prime$)_ 
 \begin{itemize}[noitemsep,nolistsep,topsep=0pt]
-  \item Jeff Abrams’ thesis (\emph{research},2010-2011) [@Abrams2014]
+  \item Jeff Abrams’ thesis (\emph{research},2010-2011)
   \item CALCOM (\emph{commercial dead fish},1992-2006, excluding 1999)    
   \item CALCOM (\emph{commercial live fish},1997-2012)    
   \item CDFW onboard observer (\emph{recreational charter}, 1987-1998)    
@@ -1379,6 +1421,32 @@ The stock north of $40^\circ 10^\prime$ N. latitude was found to be below target
 
 The stock south of $40^\circ 10^\prime$ N latitude was found to be above target biomass, as a percentage of unfished biomass (aka “depletion”).  The median of the posterior southern spawning biomass in 2013 was estimated at 66\% (264 mt), and the fishing mortality rate in 2012 was 27\% of $F_{MSY}$.
 
+###Spatial stock structure
+
+The waters and biological communities of the California Current System tend to exhibit the greatest change at the major promontories along the West Coast, including Point Conception, Cape Mendocino, Cape Blanco and the northern tip of Vancouver Island (@Checkley2009; @Hickey1979; @Gottscho2014).  In particular, the waters off Cape Mendocino are a known biogeographical boundary along the West Coast of the U.S. and has been shown as a geographical boundary across a number of terrestrial and marine taxa (see Gottscho [-@Gottscho2014] for a review).   The waters off Cape Mendocino, CA are characterized by turbulent waters and some of the strongest winds and upwelling found within the California Current [@Botsford2002; @PFMC2013].
+
+The California Current is the equatorward surface flow that extends from the Vancouver Island, Canada (approx. $50^\circ$ N. latitude) with equatorward flow to Baja California, Mexico (approx. $15^\circ - 25^\circ$ N. latitude) [@Hickey1979; @Checkley2009].  Winds associated with the North Pacific High, the Aleutian Low, and a thermal low-pressure system drive the oceanographic dynamics that stretch from central California to northern Mexico [@Checkley2009].  Seasonal winds drive the frequency and intensity of upwelling along the coast.  Off the coast of Washington south to Cape Blanco, OR the winds and therefore upwelling is generally weak.  Starting near Cape Blanco, OR the continental shelf narrows and winds and upwelling intensity increases [@Francis2009].  The winter environment south of Cape Mendocino is dominated by upwelling from southerly winds pushing water offshore through Ekman transport, whereas northward winds north of Cape Mendocino result in downwelling.  Summer upwelling is dominant along the entire West Coast of the US from the northerly winds pushing the surface waters offshore via Ekman transport.  South of Cape Mendocino upwelling conditions persist all year, with the northerly winds strongest from April-June.  North of Cape Mendocino a low pressure system in the Gulf of Alaska produces westerly and southwesterly winds that blow surface waters towards shore and result in downwelling.
+
+In addition to the oceanic conditions in the California Current, there is also a prominent submarine ridge off the coast of Cape Mendocino. The Mendocino Escarpment, a submarine ridge extending past the 200 nm EEZ boundary, is a dominant physical feature in the California Current [@Fisk1993].  Currents from the north and south converge around the Mendocino Escarpment creating an area of offshore transport, which may create a physical barrier to larval dispersal [@Magnell1990; @Cope2004; @Sivasundar2010].
+
+Gottscho [-@Gottscho2014] completed a comprehensive review of the zoogeography literature worldwide and identified both Cape Mendocino and Point Conception as phylogeographic breakpoints on the West Coast.  Specifically, coastal Oregon does not experience the intense upwelling and offshore transport as off the California coast south of Cape Mendocino, which allows increased larval retention in nearshore waters in Oregon [Gottscho2014].   Drake [-@Drake2013] used simulation modelling to evaluate dispersal of spring spawning nearshore invertebrates and found that larval dispersal ranged from 175 km to 200 km from the release site (Bodega Bay, CA) when larvae remained below the surface boundary layer, allowing larvae to avoid offshore drifts.  Larval retention in nearshore waters in California may be driven by the timing of relaxed upwelling and the ability of larvae to remain below the surface boundary layer [@Sivasundar2010; @Drake2013].  In simulations, larval dispersal ranged from 175 km to 200 km from the release site (Bodega Bay, CA) when larvae remained below the surface boundary layer, which allows larvae to avoid offshore advection [@Drake2013].  The majority of drifters released off the coast of Oregon (Newport and Coos Bay) from 1994-1999 remained north of Cape Mendocino within the first 40 days of deployment and none returned to coastal waters south of Point Arena, CA [@Sotka2004].  Trajectories of comparative drifters released in off the coast of Santa Barbara, CA never overlapped with the drifters released in Oregon.  
+
+Cape Blanco and Cape Mendocino have both been shown as transition zones to juvenile and adult fishes.  Field and Ralston [-@Field2005] utilized landings and age data to elucidate year-class strength among a number of rockfish species along the West Coast.  Spatial patterns in recruitment were heightened in vicinity Cape Mendocino and Cape Blanco versus comparison between regions further from these capes.  Characterization of species assemblages in two of the trawl surveys conducted by the NMFS have also shown shifts around Cape Mendocino.  Tolimieri [-@Tolimieri2006] found a shift in the species assemblage captured in the NMFS slope trawl survey near both Point Conception Cape Mendocino, CA and Cape Blanco, OR.  The AFSC triennial shelf trawl surveys indicate a change in distribution around the Mendocino Escarpment; with the Mendocino Escarpment acting as a physical barrier to some species, e.g., blackgill rockfish (S. melanostomus), Pacific ocean perch, chilipepper (S. goodei), shortbelly rockfish (S. jordani), bocaccio, and greenspotted rockfish [@Williams2002].
+
+In addition to analyzing fisheries catch and survey trawl data, results from recent genetic studies of rockfish along the West Coast vary from finding genetic divergence along the coast to finding little evidence of genetic divergence along the coast.  Genetic studies of blue rockfish, a nearshore midwater species with schooling tendency, show the species to have a genetic break around Cape Mendocino, CA [@Cope2004; Burford2008].  A study by Sivasundar and Palumbi [-@Sivasundar2010] confirmed a genetic differentiation of blue rockfish between Oregon and Monterey, CA, with yellowtail rockfish exhibiting the same strong genetic differentiation.  While Sivasundar and Palumbi [-@Sivasundar2010] did not specifically look at China rockfish, the \emph{Pteropodus} subgenus was represented by copper, gopher and brown rockfishes, all three of which exhibited only moderate genetic differentiation along the coast.  Additional genetic studies of copper, grass and brown rockfishes indicate limited larval dispersal and increasing genetic divergence with increasing geographic distance [@Buonaccorsi2002; @Buonaccorsi2004; Buonaccorsi unpubl. data].  Much additional work is needed to fully understand the genetic differentiation of rockfish species along the west coast.  However, these studies support the hypotheses that oceanographic and physical barriers are likely to limit larval dispersal along the coast.
+
+California has managed the area from Cape Mendocino to the Oregon/Washington border as its own management area since 2000 (see Appendices G and H for details).  The Pacific Fishery Management Council developed a Pacific Coast Fishery Ecosystem Plan in which the California Current Large Marine Ecosystem and recognizes the transitional zone between Cape Blanco, OR and Cape Mendocino, CA  [@Francis2009; @PFMC2013]. 
+
+The 2013 stock assessment of China rockfish consisted of two, independent models, north and south of 40 10’ N. latitude. Following the STAR panel, a request was made to stratify the assessment north and south of 42 degrees (the CA-OR border), based on concerns over spatial differences in exploitation history and insufficient trend data between 40 10’ and 42 N. latitude (cite GMT statement from June 2013). In November 2013, after examining results from both area stratifications, the SSC concluded that there was no evidence in support of either stratification, and recommended that the Council retain the model stratified around the existing management boundary (cite SSC statement from November 2013).
+
+The 2013 China rockfish assessment was a data-moderate assessment and therefore did not consider size and age composition data as part of the analysis. For this assessment, the STAT made efforts to examine all available data sources that might provide evidence of spatial stock structure. Data sets with sufficient sample sizes and spatial coverage included length frequency and length at age data.
+
+The largest source of length composition data came from the recreational fleets in each state. In California, the California Recreational Fisheries Survey (CRFS) has collected length data by CRFS district since 2004. Distributions of length for sampled (retained) catch varied by district, with mean length smallest in the southernmost district with adequate samples (CFRS District 3), and largest in the northernmost district, CRFS District 6, roughly the area between Cape Mendocino and the California-Oregon border (Figure \ref{fig:S_CDFW_length_comps_by_year+district_2004-2014}}). There is some indication of a gradient in average length of retained fish, but the largest increase in mean length between adjacent districts occurs between districts 5 & 6 (roughly across Cape Mendocino).
+
+Since length compositions of retained fish are affected by numerous processes (e.g. growth, recruitment, exploitation, selectivity), the STAT also compared growth curves fit to size at age data. 
+
+
+
 ###2013 Data Moderate Recommendations
 
 \begin{description}[style=unboxed]
@@ -1434,7 +1502,7 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
 
 \end{description}
 
-##Response to the 2015 STAR Panel Recommendations
+##Response to the 2015 STAR Panel Requests
 \begin{description}[style=unboxed]
 
 \item[Request No. 1: Explore the utility of using California Recreational Fisheries Survey (CRFS) data from 2004-2007 to partition California catches in the early years based on the proportion of catch in the private recreational and charter modes north and south of $40^\circ 10^\prime$ N latitude (concerns the southern and central models).] \hfill \\
@@ -1450,7 +1518,7 @@ The stock south of $40^\circ 10^\prime$ N latitude was found to be above target 
     XDB-SRA has more flexible productivity assumptions than SS3, so estimating h and M was regarded as a way to more closely mimic 
     XDB-SRA using stock synthesis.
 
-    \textbf{STAT Response:} The plots were provided (Figures \ref{fig:STARrequest_S} and \ref{fig:STARrequest_CN}).  Since XDB-SRA 
+    \textbf{STAT Response:} The plots were provided (Figures \ref{fig:STARrequest2_S} and \ref{fig:STARrequest2_CN}).  Since XDB-SRA 
     had knife-edge maturity at age 5, summary biomass for ages 5 and older was used in the plot to provide a common basis for comparison. 
     For the southern model, the SS3 model with estimated h and M and XDB-SRA show similar results in absolute summary biomass and depletion.  
     For the north plus central models, it was not possible to simultaneously estimate h and M, but again the results were similar. 
@@ -1717,9 +1785,10 @@ AAge compositions and conditional-age-at-length (CAAL) compositions were re-weig
 
 
 ###Priors
-The median of the priors for Beverton-Holt steepness parameter (Dorn, M. and Thorson, J., pers. comm.) and natural mortality [@Hamel2015] were used as fixed values across the three models. The priors were applied in sensitivity analyses where these parameters were estimated.
+In the pre-STAR panel base models, the mean of the priors for Beverton-Holt steepness parameter (Dorn, M. and Thorson, J., pers. comm.) and natural mortality [@Hamel2015] were used as fixed values across the three models. The priors were applied in sensitivity analyses where these parameters were estimated.
 
-Diffuse priors were applied to the estimates of length at age 30 and the von Bertalanffy k parameter. These were not applied in the southern model.
+The final base models also used the mean of the Beverton-Holt steepness prior, but fixed natural mortality at the mean of the estimated values from the northern and southern regions.
+
 
 ###General model specifications
 Stock synthesis has a broad suite of structural options available. Where possible, the ‘default’ or most commonly used approaches are applied to this stock assessment. The assessment is sex-aggregated, including the estimation of growth curves and selectivity.
@@ -1748,7 +1817,7 @@ All structural choices for stock assessment models are likely to be important un
 Sensitivity analyses included a comparison of key model assumptions were based on nested models and included asymptotic vs. domed selectivity, alternative values of M, and alternative fleet mirroring structure for estimating selectivity. For the area North of $40^\circ 10^\prime$ N latitude, an alternative model in which both Central and North areas were included in a single, spatially-explicit model. However, differences in growth found between Oregon and Washington supported independent models.
 
 ###Convergence
-Convergence testing through use of dispersed starting values often requires extreme values to actually explore new areas of the multivariate likelihood surface. Jitter is a SS option that generates random starting values from a normal distribution logistically tranformed into each parameter's range [@Methot2015]. Table \ref{tab:jitter} shows the results of running 100 jitters for each model. The northern model, which has the least amount of data and the fewest number of estimating parameters (8), returned to the same base case solution every time. The central model, with 14 parameters had 6% of the starting values cause errors in the likelihood but the remaining runs returned to the base model. The southern model, which had the most estimated parameters (16), had some jitters converge to a local minimum with worse likelihood, but the majority returned to the base model.
+Convergence testing through use of dispersed starting values often requires extreme values to actually explore new areas of the multivariate likelihood surface. Jitter is a SS option that generates random starting values from a normal distribution logistically transformed into each parameter's range [@Methot2015]. Table \ref{tab:jitter} shows the results of running 100 jitters for each pre-STAR base model. The northern model, which has the least amount of data and the fewest number of estimating parameters (8), returned to the same base case solution every time. The central model, with 14 parameters had 6% of the starting values cause errors in the likelihood but the remaining runs returned to the base model. The southern model, which had the most estimated parameters (16), had some jitters converge to a local minimum with worse likelihood, but the majority returned to the base model.
 
 
 ##Base-Model(s) Results
@@ -1791,7 +1860,8 @@ Discards are modeled explicitly in the southern area model for the commercial li
 
 ##Uncertainty and Sensitivity Analyses
 \label{sec:uncertainty}
-The base-case assessment model includes parameter uncertainty from a variety of sources, but underestimates the considerable uncertainty in recent trend and current stock status. For this reason, in addition to asymptotic confidence intervals (based upon the model’s analytical estimate of the variance near the converged solution), two alternate states of nature (TBD at the STAR panel) are presented in a decision table. Much additional exploration of uncertainty was performed prior the STAR panel. Some of that exploration of other sources of uncertainty is provided below. Specifically, for each area model, the following sensitivity runs were performed:
+The base-case assessment model includes parameter uncertainty from a variety of sources, but underestimates the considerable uncertainty in recent trend and current stock status. For this reason, in addition to asymptotic confidence intervals (based upon the model’s analytical estimate of the variance near the converged solution), two alternate states of nature (low and high values of M) are presented in a decision table. Much additional exploration of uncertainty was performed prior the STAR panel. Some of that exploration of other sources of uncertainty is provided below. Specifically, for each pre-STAR area model, the following sensitivity runs were performed:
+
 \begin{enumerate}
 \item “Drop-one” analyses: remove single data types from the model -- indices, discards, length compositions (down-weighted by scaling Francis weights by factor of 0.25), and age compositions.
 
@@ -1804,64 +1874,93 @@ The base-case assessment model includes parameter uncertainty from a variety of 
 
 **Northern Model**
 
-Tabular results for the northern area model sensitivity runs can be viewed here: Table \ref{tab:N_sensitivity}, and associated figures are here: Figures \ref{fig:N_compare1_spawnbio} and \ref{fig:N_compare3_Bratio}. The model for the northern management area was not sensitive to dropping the index of abundance or downweighting length comps (75% reduction in Francis weights, i.e. weights multiplied by 0.25). The models that attempted to estimate the size at age 0 and CV at Age minimum growth parameters resulted parameters going to bounds, producing unrealistic estimates for these parameter values. The model was highly sensitive to the exclusion of age the composition data, the methods for weighting the age composition data (as CAAL), and the treatment of M (either fixed at the mode of the prior,0.053, or estimated, 0.069). Removing or extreme downweighting of the age data when implementing Francis method A produced an approximate doubling in the estimates of the stock size and in the status of the population. Removal of the age composition data, modeled as conditional age-at-length, impacts the scale of the model, in part because the model is no longer able to estimate reasonable values of growth parameters. When estimated with their respective prior distributions, both steepness and natural mortality are larger than the fixed values in the base model (h = 0.95, and M = 0.069). While the higher h estimate is inconsistent with the current understanding of rockfish productivity, the higher estimate of M lead to better fits in the CAAL data and a larger estimated population size and stock status. 
+Tabular results for the northern area pre-STAR model sensitivity runs can be viewed here: \ref{tab:N_sensitivity},
+and associated ﬁgures are here: Figures \ref{fig:N_compare1_spawnbio} and \ref{fig:N_compare3_Bratio}. The model 
+for the northern manage-
+ment area was not sensitive to dropping the index of abundance, data weighting methods,
+downweighting length comps (75% reduction in Francis weights, i.e. weights multiplied by
+0.25). The pre-STAR models that attempted to estimate the size at age 0 and CV at Age minimum
+growth parameters resulted parameters going to bounds, producing unrealistic estimates for
+these parameter values. The pre-STAR model was highly sensitive to the exclusion of age the com-
+position data and ﬁxing growth the the externally estimated values. Lack of age data and
+ﬁxing growth to the external estimates produced an approximate doubling in the estimates
+of the stock size and in the status of the population. Removal of the age composition data,
+modeled as conditional age-at-length, impacts the scale of the pre-STAR model, in part because the
+pre-STAR model is no longer able to estimate reasonable values of growth parameters. Fixing growth
+to the externally estimated values is problematic because the data lack small/young ﬁsh,
+resulting in high sensitivity to the k estimate.
 
+When estimated with their respective prior distributions, both steepness and natural mor-
+tality are larger than the ﬁxed values in the pre-STAR base model (h = 0.95, and M = 0.07). However,
+the higher estimate of M contradicts the observed maximum age of 83 and the higher h
+estimate is inconsistent with the current understanding of rockﬁsh productivity.
+
+Additional sensitivities conducted during the STAR panel are described in the section “Response  to the 2015 STAR Panel Requests.”
 
 **Central Model** 
 
-Tabular results for the central area model sensitivity runs can be viewed here: Table \ref{tab:C_sensitivity}, and associated figures are here: Figures \ref{fig:C_compare1_spawnbio} and \ref{fig:C_compare3_Bratio}. The model for the central management area was not sensitive to dropping the index of abundance, data weighting methods, downweighting length comps (75% reduction in Francis weights, i.e. weights multiplied by 0.25). The models that attempted to estimate the size at age 0 and CV at Age minimum growth parameters resulted parameters going to bounds, producing unrealistic estimates for these parameter values. The model was highly sensitive to the exclusion of age the composition data and fixing growth the externally estimated values. Lack of age data resulted in an inability to estimate $R_0$, leading to unrealistic model results. Fixing growth to the external estimates produced an approximate doubling in the estimates of the stock size and in the status of the population. Fixing growth to the externally estimated values is problematic because the data lack small/young fish, resulting in high sensitivity to the k estimate. 
+Tabular results for the central area pre-STAR model sensitivity runs can be viewed here: Table \ref{tab:C_sensitivity}, and associated figures are here: Figures \ref{fig:C_compare1_spawnbio} and \ref{fig:C_compare3_Bratio}. The pre-STAR model for the central management area was not sensitive to dropping the index of abundance, data weighting methods, downweighting length comps (75% reduction in Francis weights, i.e. weights multiplied by 0.25). The pre-STAR models that attempted to estimate the size at age 0 and CV at Age minimum growth parameters resulted parameters going to bounds, producing unrealistic estimates for these parameter values. The pre-STAR model was highly sensitive to the exclusion of age the composition data and fixing growth the externally estimated values. Lack of age data resulted in an inability to estimate $R_0$, leading to unrealistic model results. Fixing growth to the external estimates produced an approximate doubling in the estimates of the stock size and in the status of the population. Fixing growth to the externally estimated values is problematic because the data lack small/young fish, resulting in high sensitivity to the k estimate. 
 
-The central base model is unable to estimate M but when h is estimated it goes to a value of 0.75, very close to the fixed value from the base model of 0.773, indicating that the data do not contain much information about stock productivity. 
+The central pre-STAR base model is unable to estimate M but when h is estimated it goes to a value of 0.75, very close to the fixed value from the pre-STAR base model of 0.773, indicating that the data do not contain much information about stock productivity. 
+
+Additional sensitivities conducted during the STAR panel are described in the section “Response  to the 2015 STAR Panel Requests.”
 
 **Southern Model**
 
-The model for the southern management area was not very sensitive to dropping indices or discard data, or to downweighting length comps (75% reduction in Francis weights, i.e. weights multiplied by 0.25). However, exclusion of age composition data significantly altered estimates of the scale and status of the population (Table \ref{tab:S_sensitivity}; Figures \ref{fig:S_drop1_compare1_spawnbio} and \ref{fig:S_drop1_compare3_Bratio}). Removal of marginal age composition data and conditional age-at-length data had a dramatic effect on model results, in part because the model is no longer able to estimate credible values of growth parameters (e.g. von Bertalanffy k = 0.027; Figure \ref{fig:S_drop1_growth_comparison}).
+The pre-STAR base model for the southern management area was not very sensitive to dropping indices or discard data, or to downweighting length comps (75% reduction in Francis weights, i.e. weights multiplied by 0.25). However, exclusion of age composition data significantly altered estimates of the scale and status of the population (Table \ref{tab:S_sensitivity}; Figures \ref{fig:S_drop1_compare1_spawnbio} and \ref{fig:S_drop1_compare3_Bratio}). Removal of marginal age composition data and conditional age-at-length data had a dramatic effect on model results, in part because the model is no longer able to estimate credible values of growth parameters (e.g. von Bertalanffy k = 0.027; Figure \ref{fig:S_drop1_growth_comparison}).
 
-Weighting of data types (e.g. composition data vs. indices) in the base models was based on the method of Francis [@Francis2011], as implemented in the r4ss package. An alternative method based on the harmonic mean effective sample size [@McAllister1997] was applied, and results were consistent with the Francis method (Figures \ref{fig:S_data_weights_compare1_spawnbio} and \ref{fig:S_data_weights_compare3_Bratio}).
+Weighting of data types (e.g. composition data vs. indices) in the pre-STAR base models was based on the method of Francis [@Francis2011], as implemented in the r4ss package. An alternative method based on the harmonic mean effective sample size [@McAllister1997] was applied, and results were consistent with the Francis method (Figures \ref{fig:S_data_weights_compare1_spawnbio} and \ref{fig:S_data_weights_compare3_Bratio}).
 
-The base model fixes length at age zero at 2 cm, with a CV of 0.1. Separate attempts to estimate these parameters in the model failed, with both going to unrealistic boundaries, i.e. size at age 0 years of 10 cm, and a CV of 0.01 (results not shown). If growth is estimated external to the model and fixed at those estimates, fits to the model degrade (increased negative log likelihoods) and the stock is more depleted, with biomass is 2015 at 23% of unfished biomass, below the minimum stock size threshold (Figures \ref{fig:S_ext_growth_comparison}, \ref{fig:S_growth_compare1_spawnbio}, and \ref{fig:S_growth_compare3_Bratio}).
+The pre-STAR base model fixes length at age zero at 2 cm, with a CV of 0.1. Separate attempts to estimate these parameters in the model failed, with both going to unrealistic boundaries, i.e. size at age 0 years of 10 cm, and a CV of 0.01 (results not shown). If growth is estimated external to the model and fixed at those estimates, fits to the model degrade (increased negative log likelihoods) and the stock is more depleted, with biomass is 2015 at 23% of unfished biomass, below the minimum stock size threshold (Figures \ref{fig:S_ext_growth_comparison}, \ref{fig:S_growth_compare1_spawnbio}, and \ref{fig:S_growth_compare3_Bratio}).
 
-The southern base model fixes parameters that determine stock productivity (steepness and natural mortality) at point estimates derived from prior distributions (see prior distributions section for details). When estimated with their respective prior distributions, both steepness and natural mortality are larger than the fixed values in the base model (h = 0.92, and M = 0.1). As noted in the profile likelihood analyses, the length and age composition data appear to support higher M values, but this contradicts the observed maximum age of 83. The data appear to have little information about steepness, and the estimated value is near the mode of the prior distribution (Figure \ref{fig:S_est_h_and_M_priors_and_MLEs}). Higher values of steepness and natural mortality result in a smaller, less-depleted stock (Figures \ref{fig:S_est_h_and_M_compare1_spawnbio} and \ref{fig:S_est_h_and_M_compare3_Bratio}). The estimated growth curve also changes, with a lower value of k and higher asymptotic size (Figure \ref{fig:S_est_h_and_M_growth_comparison}).
+The southern pre-STAR base model fixed parameters that determine stock productivity (steepness and natural mortality) at point estimates derived from prior distributions (see prior distributions section for details). When estimated with their respective prior distributions, both steepness and natural mortality are larger than the fixed values in the base model (h = 0.92, and M = 0.1). As noted in the profile likelihood analyses, the length and age composition data appear to support higher M values, but this contradicts the observed maximum age of 83. The data appear to have little information about steepness, and the estimated value is near the mode of the prior distribution (Figure \ref{fig:S_est_h_and_M_priors_and_MLEs}). Higher values of steepness and natural mortality result in a smaller, less-depleted stock (Figures \ref{fig:S_est_h_and_M_compare1_spawnbio} and \ref{fig:S_est_h_and_M_compare3_Bratio}). The estimated growth curve also changes, with a lower value of k and higher asymptotic size (Figure \ref{fig:S_est_h_and_M_growth_comparison}).
+
+Additional sensitivities conducted during the STAR panel are described in the section “Response  to the 2015 STAR Panel Requests.”
+
 
 \label{sec:uncertaintylast}
 
 ###Retrospective analysis
-Retrospective analyses were conducted for each model by conducting model runs that sequentially remove the last year of data over the last 5 base model years. The southern model showed very little change in estimated spawning output trajectory as a result of this data removal (Figure \ref{fig:S_retroS_compare1_spawnbio}). The central and northern models, however, showed that the each additional year of data added to the model has resulted in a higher initial spawning output (Figures \ref{fig:C_retroC_compare1_spawnbio} and \ref{fig:N_retroN_compare1_spawnbio}). These results are consistent with the dependence of the central and northern models on more recently collected data as compared to the southern model where the catch history began earlier.
+Retrospective analyses were conducted for each pre-STAR base model by conducting model runs that sequentially remove the last year of data over the last 5 base model years. The southern model showed very little change in estimated spawning biomass trajectory as a result of this data removal (Figure \ref{fig:S_retroS_compare1_spawnbio}). The central and northern models, however, showed that the each additional year of data added to the model has resulted in a higher initial spawning biomass (Figures \ref{fig:C_retroC_compare1_spawnbio} and \ref{fig:N_retroN_compare1_spawnbio}). These results are consistent with the dependence of the central and northern models on more recently collected data as compared to the southern model where the catch history began earlier.
+
 
 
 ###Likelihood profiles
+**Pre-STAR base model likelihood profiles**
+
 Likelihood profiles for equilibrium recruitment ($R_0$), natural mortality ($M$), and steepness ($h$), were completed to investigate the uncertainty in these parameters and their influence on the fit to different data sources. For all models, the age data had the largest influence on the scale of the population as indicated by the data type most influenced by $R_0$ (Figures \ref{fig:N_profile_logR0.N}, \ref{fig:C_profile_logR0.C}, and \ref{fig:S_profile_logR0.S}). In the southern model, the length and index data also had the best fit at a similar scale, showing consistency in these data sources about the population size. In the central model, lower $R_0$ values caused the model to fit the length data less well but higher values had little influence. The index data was most influential on the $R_0$ estimates in the northern model, where they were best fit with a higher equilibrium recruitment.
 
 Profiles over natural mortality showed length and age data best fit by high $M$ values (greater than 0.10) in the central and south models (Figures \ref{fig:C_profile_Mortality.C} and \ref{fig:S_profile_Mortality.S}), while the value among those in the profile with best likelihood in the northern model was $M=0.08$ (Figure \ref{fig:N_profile_Mortality.N}). As in the profile over $R_0$, the index data in the northern model showed a larger influence on $M$ than the index data in the central and southern models.
 
 Likelihood profiles were conducted over four values for the steepness of the stock-recruit curve ($h$ = 0.3, 0.6, 0.773, and 0.9), where 0.773 is the mean of the prior distribution and chosen as a fixed value in the three base models. These profiles indicated that for the southern and northern models, length and age data were best fit by high steepness values, with the index in the northern model also showing a better fit at higher steepness. The central model, however, showed the best combined fit to all data sources at an intermediate value of steepness, with an MLE estimate when the parameter was estimated of $h = 0.753$, which is close to the prior mean. This estimate represents a balance between the age data and steepness prior, which were best fit at higher steepness values, and the length data, which was best fit at lower steepness values. The index data in the central model showed less change in likelihood as a result of the steepness profile than the other data types, but it was the only type that was best fit at an intermediate value, $h = 0.6$.
 
-
+**Final base model likelihood profiles**
+ 
+Likelihood profiles over natural mortality were conducted for all of the final base models, and sensitivities to those models (Figures \ref{fig:N_profile_postSTAR}, \ref{fig:C_profile_postSTAR}, and \ref{fig:S_profile_postSTAR}).  The northern model had the best combined fit at the estimated value of natural mortality.  The southern model showed a good fit to the estimated value of natural mortality for the index data and the priors.  The length data in the souther model indicated a better fit at a lower value of natural mortality whereas the age data indicated the best fit towards the upper bound of the profile, M=0.12.  The central model was not able to estimate a reasonable value for natural mortality, with all data sources indicating the best fit to the data towards the upper bound of natural mortality in the profile.
 
 #Reference Points
 
 **Northern Model**
 
-This stock assessment estimates that China rockfish in the north are well above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades (Table \ref{tab:Timeseries_N}; Figure \ref{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.6% - 83.2%), corresponding to 17.9 million eggs (~95% asymptotic interval: 8.8 – 27.1 million eggs) of spawning output in the base model (Table  \ref{tab:SpawningDeplete_N}; Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). Unfished spawning output was estimated to be 24.4 million eggs in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 million eggs, which gives a catch of 6.2 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt. Table \ref{tab:Ref_pts_N} shows the full suite of estimated reference points for the northern area model and Figure \ref{fig:N_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that China rockfish in the north are well above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades (Table \ref{tab:Timeseries_N}; Figure \ref{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.6% - 83.2%), corresponding to 17.9 billion eggs (~95% asymptotic interval: 8.8 – 27.1 billion eggs) of spawning output in the base model (Table  \ref{tab:SpawningDeplete_N}; Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). Unfished spawning output was estimated to be 24.4 billion eggs in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 billion eggs, which gives a catch of 6.2 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt. Table \ref{tab:Ref_pts_N} shows the full suite of estimated reference points for the northern area model and Figure \ref{fig:N_yield1_yield_curve} shows the equilibrium yield curve.
 
 
 
 **Central Model** 
 
-This stock assessment estimates that central area China rockfish are just above the biomass target (Table \ref{tab:Timeseries_C};  Figure \ref{fig:C_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The rate of spawning biomass decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate (Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 42.0% (~95% asymptotic interval: $\pm$ 38.4% - 45.6%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 85.9 mt (~95% asymptotic interval: 73.1 – 98.7 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table  \ref{tab:SpawningDeplete_C}). Unfished spawning stock biomass was estimated to be 204.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 81.8 mt, which gives a catch of 9.4 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 8.8 mt. Table \ref{tab:Ref_pts_C} shows the full suite of estimated reference points for the central area model and Figure \ref{fig:C_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that central area China rockfish are just above the biomass target (Table \ref{tab:Timeseries_C};  Figure \ref{fig:C_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate (Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 61.5% (~95% asymptotic interval: $\pm$ 53.8% - 69.2%), corresponding to 65.1 billion eggs (~95% asymptotic interval: 51.8 – 78.4) of spawning output in the base model (Table  \ref{tab:SpawningDeplete_C}). Unfished spawning stock biomass was estimated to be 591.5 mt in the base case model. The target stock size  based on the biomass target ($SB_{40\%}$) is 26 mt, which gives a catch of 15.7 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 14.5 mt. Table \ref{tab:Ref_pts_C} shows the full suite of estimated reference points for the central area model and Figure \ref{fig:C_yield1_yield_curve} shows the equilibrium yield curve.
 
 **Southern Model**
 
-This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years (Table \ref{tab:Timeseries_S}; Figure \ref{fig:S_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 29.6% (~95% asymptotic interval: $\pm$ 25.0% - 34.3%, ~ 75% interval based on the range of states of nature: xx% - xx%), corresponding to 111.5 mt (~95% asymptotic interval:  89.9 – 133.1 mt, states of nature interval: xx – xx mt) of spawning biomass in the base model (Table \ref{tab:SpawningDeplete_S}). Unfished spawning stock biomass was estimated to be 376.5 mt in the base case model (Figure \ref{fig:S_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The target stock size  based on the biomass target ($SB_{40\%}$) is 150.6 mt, which gives a catch of 20.8 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.3 mt. Table \ref{tab:Ref_pts_S} shows the full suite of estimated reference points for the southern area model and Figure \ref{fig:S_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years (Table \ref{tab:Timeseries_S}; Figure \ref{fig:S_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 27.9% (~95% asymptotic interval: $\pm$ 21.2% - 34.7%), corresponding to 66.5 billion eggs (~95% asymptotic interval: 49.6 - 83.4 billion eggs) of spawning output in the base model (Table \ref{tab:SpawningDeplete_S}). Unfished spawning stock biomass was estimated to be  768.6 mt in the base case model (Figure \ref{fig:S_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). The target stock size  based on the biomass target ($SB_{40\%}$) is 26.6 mt, which gives a catch of 21.1 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.5 mt. Table \ref{tab:Ref_pts_S} shows the full suite of estimated reference points for the southern area model and Figure \ref{fig:S_yield1_yield_curve} shows the equilibrium yield curve.
 
 
 
 
 
 #Harvest Projections and Decision Tables
-See section “\textit{Uncertainty and Decision Tables in Groundfish Stock Assessment}” (this document, pp. \pageref{sec:uncertainty}\-\pageref{sec:uncertaintylast}) on how to define alternative states of nature.  
+The forecasts of stock abundance and yield were developed using the final base models. The total catches in 2015 and 2016 are set to the PFMC adopted China rockfish contribution ACLs in the northern and central models (Table \ref{tab:mnmgt_perform}). The southern model total catches in 2015 and 2016 are set to the average annual catch from 2012-2014. The exploitation rate for 2017 and beyond is based upon an SPR harvest rate of 50%. The average of 2010-2014 catch by fleet was used to distribute catches in forecasted years.
 
-The forecasts of stock abundance and yield was developed using the base models. The total catches in 2015 and 2016 are set to the PFMC adopted China rockfish contribution ACLs (Table \ref{tab:mnmgt_perform}). The exploitation rate for 2017 and beyond is based upon an SPR of 50%. The average 2010-2014 exploitation rate was used to distribute catches among the fisheries. 
 
 **Northern Model**
 Current medium-term projections of expected China spawning biomass from the northern base model suggests slight declines from the current levels as the stock moves towards the current target stock size under the default  harvest control rule (Table \ref{tab:Forecast_N}, Figures \ref{fig:forecast_compare2_spawnbio_uncertainty} and \ref{fig:forecast_compare4_Bratio_uncertainty}). The stock is expected to remain above the target stock size during the projection period, assuming stationarity in the stock-recruitment assumptions. 
@@ -1872,6 +1971,8 @@ Uncertainty in the forecasts is based upon the three states of nature agreed upo
 **Central Model** 
 
 Current medium-term projections of expected China spawning biomass from the central base model suggests stable catches near current levels as the stock is just above the current target stock size under the default harvest control rule (Table \ref{tab:Forecast_C}, Figures \ref{fig:forecast_compare2_spawnbio_uncertainty} and \ref{fig:forecast_compare4_Bratio_uncertainty}). The stock is expected to remain just above the target stock size, increasing slightly, during the projection period, assuming stationarity in the stock-recruitment assumptions. 
+
+Uncertainty in the forecasts is based upon the three states of nature agreed upon at the STAR panel and are based on a low value of M, 0.05, and a high value, 0.09. Current medium-term forecasts based on the alternative states of nature project that the stock, under the current control rule as applied to the base model, will decline towards the target stock size Table \ref{tab:decision_table_central}. The current control rule under the low state of nature results in a stock in the precautionary zone, while the high state of nature maintains the stock increasing from 40% to 50% depletion from 2017 - 2026.  Removing the catches resulting from the low M state of nature, assuming the base and high values of M both maintain the stock at well above the current target stock size.  Removing the high M catches under the base model M and low M states of nature results in the population going to extremely low levels during the projection period.  Removing average catches under the base M and high M states of nature result in the stock remaining above the current target stock size, and an ending depletion of 37% in 2026 for the low M state of nature.
 
 **Southern Model**
 
@@ -1888,13 +1989,39 @@ Current medium-term projections of expected China spawning biomass from the sout
 
 \item The number of hours fished in Oregon should be recorded for each dockside sample (vessel), instead of the number of the start and end times of the entire trip.  This will allow for a more accurate calculation of effort.
 
-\item Small/young China rockfish age data is needed to improve analyses of growth and age structure. 
-
 \item Compare the habitat-based methods used to subset data for the onboard observer indices to Stephens-MacCall and other filtering methods.
 
 \item Explore the sensitivity of Stephens-MacCall when the target species is “rare” or not common encountered in the data samples.
 
 \item A standardized fishery independent survey sampling nearshore rockfish in all three states would provide a more reliable index of abundance than the indices developed from catch rates in recreational and commercial fisheries. However, information value of such surveys would depend on the consistency in methods over time and space and would require many years of sampling before an informative index could be obtained.
+
+\item A coastwide evaluation of genetic structure of China rockfish is a research priority. Genetic samples should be collected at sites spaced regularly along the coast throughout the range of the species to estimate genetic differences at multiple spatial scales (i.e., isolation by distance).
+ 
+\item Difficulties were encountered when attempting to reconstruct historical recreational catches at smaller spatial scales, and in distinguishing between landings from the private and charter vessels. Improved methods are needed to allocate reconstructed recreational catches to sub-state regions within each fishing mode.
+
+\item There was insufficient time during the STAR Panel review to fully review the abundance indices used in the China rockfish assessments. Consideration should be given to scheduling a data workshop prior to STAR Panel review for review of assessment input data and standardization procedures for indices, potentially for all species scheduled for assessment.  The nearshore data workshop, held earlier this year, was a step in this direction, but that meeting did not deal with the modeling part of index development.
+ 
+\item The Marine Recreational Fisheries Statistics Survey (MRFSS) index in Oregon was excluded from the assessment model because it was learned that multiple intercept interviews were done for a single trip. Evaluate whether database manipulations or some other approach can resolve this issue and allow these data to be used in the assessment. 
+ 
+\item Many of the indices used in the China rockfish assessment model used the Stephens-MacCall (2004) approach to subset the CPUE data. Research is need to evaluate the performance of the method when there are changes in management restrictions and in relative abundance of different species. Examination of the characteristics of trips retained/removed should be a routine part of index standardization, such as an evaluation of whether there are time trends in the proportion of discarded trips.
+ 
+\item Fishery-dependent CPUE indices are likely to be the only trend information for many nearshore species for the foreseeable future.  Indices from a multi-species hook and line fishery may be influenced by regulatory changes, such as bag limits, and by interactions with other species (e.g. black rockfish) due to hook competition.  It may be possible to address many of these concerns if a multi-species approach is used to develop the indices, allowing potential interactions and common forcing to be evaluated.
+ 
+\item Consider the development of a fishery-independent survey for nearshore stocks. As the current base model structure has no direct fishery-independent measure of stock trends, any work to commence collection of such a measure for nearshore rockfish, or use of existing data to derive such an index would greatly assist with this assessment.
+ 
+\item Basic life history research may help to resolve assessment uncertainties regarding appropriate values for natural mortality and steepness.
+ 
+\item Examine length composition data of discarded fish from recreational onboard observer programs in California and Oregon. Consider modeling discarded catch using selectivity and retention functions in Stock Synthesis rather than combining retained and discarded catch and assuming they have identical size compositions. Another option would be to model discarded recreational catch as a separate fleet, similar to the way commercial discards were treated in the southern model.
+ 
+\item Ageing data were influential in the China rockfish stock assessments. Collection and ageing of China rockfish otoliths should continue.  Samples from younger fish not typically selected by the fishery are needed to better define the growth curve.
+ 
+\item Consider evaluating depletion estimators of abundance using within season CPUE indices.  This approach would require information on total removals on a reef-by-reef basis.
+ 
+\item The extensive use of habitat information in index development is a strength of the China rockfish assessment. Consideration should be given to how to further incorporate habitat data into the assessment of nearshore species.  The most immediate need seems to be to increase the resolution of habitat maps for waters off Oregon and Washington, and standardization of habitat data format among states.
+ 
+\item Although all the current models for China rockfish estimated implausibly large recruitment deviations when allowed to do so, particularly early in the modeled time period, further exploration of available options in stock synthesis could produce acceptable results. In addition, this work may provide guidance on any additional options that could be added to stock synthesis to better handle this situation. For example, assuming different levels autocorrelation in the stock-recruit relationship for data-moderate stocks may help curb the tendency to estimate extreme recruitment with sparse datasets.
+ 
+\item Research is needed on data-weighting methods in stock assessments. In particular, a standard approach for conditional age-at-length data is needed.  The Center for the Advancement of Population Assessment Methodology (CAPAM) data weighting workshop, scheduled for later this year, should make important progress on this research need.
 
 \end{enumerate}
 
@@ -3801,6 +3928,15 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 ![Likelihood profile over the steepness of the stock-recruit relationship, $h$, showing changes in negative log-likelihoods by data type for the southern model.  \label{fig:C_profile_Steepness.D}](r4ss/plots_profiles/profile_Steepness.S.png)
 
 ![Likelihood profile over the steepness of the stock-recruit relationship, $h$, showing changes in negative log-likelihoods by data type for the northern model.  \label{fig:C_profile_Steepness.N}](r4ss/plots_profiles/profile_Steepness.N.png)
+
+<!-- **************************************************post-STAR M Likelihood profile FIGURES******************************************************* -->
+![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the northern model.  \label{fig:N_profile_postSTAR](r4ss/plots_profiles/profile_Mortality_postSTAR_N.png)
+
+![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the central model.  \label{fig:C_profile_postSTAR](r4ss/plots_profiles/profile_Mortality_postSTAR_C.png)
+
+![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the southern model.  \label{fig:S_profile_postSTAR](r4ss/plots_profiles/profile_Mortality_postSTAR_S.png)
+
+
 
 <!-- ******************************************************************************************************************************************** --> 
 <!-- **********************************************************REFERENCE POINTS FIGURES********************************************************** --> 

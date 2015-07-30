@@ -1,0 +1,269 @@
+"file","caption","category","png_time"
+"C:/China2015/r4ss/plots_C///bio1_sizeatage.png","Length at age in the beginning of the year (or season) in the ending year of the model. Shaded area indicates 95% distribution of length at age around estimated growth curve.","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///bio2_sizeatage_plus_CV_and_SD.png","Length at age (top-left panel) with CV (thick line) and SD (thin line) of length at age shown in top-right and lower-left panels","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///bio3_sizeatage_plus_WT_and_MAT.png","Length at age (top-left panel) with weight (thick line) and maturity (thin line) shown in top-right and lower-left panels","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///bio4_weightatsize.png","Weight-length relationship","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///bio5_maturity.png","Maturity at length","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///bio6_fecundity.png","Fecundity","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///bio7_fecundity_wt.png","Fecundity as a function of weight","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///bio8_fecundity_len.png","Fecundity as a function of length","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///bio9_spawningoutput.png","Spawning output at length","Bio",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel01_multiple_fleets_length1.png","Selectivity at length for multiple fleets.","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel02_multiple_fleets_age1.png","Selectivity at age for multiple fleets.","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel02_multiple_fleets_age2.png","Selectivity at age derived from selectivity at length for multiple fleets.","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt1sex1.png","Female ending year selectivity for 1_CA_NorthOf4010_Comm_Dead","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt1sex2.png","Male ending year selectivity for 1_CA_NorthOf4010_Comm_Dead","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt2sex1.png","Female ending year selectivity for 2_CA_NorthOf4010_Comm_Live","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt2sex2.png","Male ending year selectivity for 2_CA_NorthOf4010_Comm_Live","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt3sex1.png","Female ending year selectivity for 3_CA_NorthOf4010_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt3sex2.png","Male ending year selectivity for 3_CA_NorthOf4010_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt4sex1.png","Female ending year selectivity for 4_CA_NorthOf4010_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt4sex2.png","Male ending year selectivity for 4_CA_NorthOf4010_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt5sex1.png","Female ending year selectivity for 5_OR_SouthernOR_Comm_Dead","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt5sex2.png","Male ending year selectivity for 5_OR_SouthernOR_Comm_Dead","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt6sex1.png","Female ending year selectivity for 6_OR_SouthernOR_Comm_Live","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt6sex2.png","Male ending year selectivity for 6_OR_SouthernOR_Comm_Live","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt7sex1.png","Female ending year selectivity for 7_OR_SouthernOR_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt7sex2.png","Male ending year selectivity for 7_OR_SouthernOR_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt8sex1.png","Female ending year selectivity for 8_OR_SouthernOR_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt8sex2.png","Male ending year selectivity for 8_OR_SouthernOR_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt9sex1.png","Female ending year selectivity for 9_OR_NorthernOR_Comm","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt9sex2.png","Male ending year selectivity for 9_OR_NorthernOR_Comm","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt10sex1.png","Female ending year selectivity for 10_OR_NorthernOR_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt10sex2.png","Male ending year selectivity for 10_OR_NorthernOR_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt11sex1.png","Female ending year selectivity for 11_OR_NorthernOR_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt11sex2.png","Male ending year selectivity for 11_OR_NorthernOR_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt12sex1.png","Female ending year selectivity for 12_OR_SouthernOR_Rec_PC_ORBS","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel09_len_flt12sex2.png","Male ending year selectivity for 12_OR_SouthernOR_Rec_PC_ORBS","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt1sex1.png","Female ending year selectivity and growth for 1_CA_NorthOf4010_Comm_Dead","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt1sex2.png","Male ending year selectivity and growth for 1_CA_NorthOf4010_Comm_Dead","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt2sex1.png","Female ending year selectivity and growth for 2_CA_NorthOf4010_Comm_Live","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt2sex2.png","Male ending year selectivity and growth for 2_CA_NorthOf4010_Comm_Live","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt3sex1.png","Female ending year selectivity and growth for 3_CA_NorthOf4010_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt3sex2.png","Male ending year selectivity and growth for 3_CA_NorthOf4010_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt4sex1.png","Female ending year selectivity and growth for 4_CA_NorthOf4010_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt4sex2.png","Male ending year selectivity and growth for 4_CA_NorthOf4010_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt5sex1.png","Female ending year selectivity and growth for 5_OR_SouthernOR_Comm_Dead","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt5sex2.png","Male ending year selectivity and growth for 5_OR_SouthernOR_Comm_Dead","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt6sex1.png","Female ending year selectivity and growth for 6_OR_SouthernOR_Comm_Live","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt6sex2.png","Male ending year selectivity and growth for 6_OR_SouthernOR_Comm_Live","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt7sex1.png","Female ending year selectivity and growth for 7_OR_SouthernOR_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt7sex2.png","Male ending year selectivity and growth for 7_OR_SouthernOR_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt8sex1.png","Female ending year selectivity and growth for 8_OR_SouthernOR_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt8sex2.png","Male ending year selectivity and growth for 8_OR_SouthernOR_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt9sex1.png","Female ending year selectivity and growth for 9_OR_NorthernOR_Comm","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt9sex2.png","Male ending year selectivity and growth for 9_OR_NorthernOR_Comm","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt10sex1.png","Female ending year selectivity and growth for 10_OR_NorthernOR_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt10sex2.png","Male ending year selectivity and growth for 10_OR_NorthernOR_Rec_PC","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt11sex1.png","Female ending year selectivity and growth for 11_OR_NorthernOR_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt11sex2.png","Male ending year selectivity and growth for 11_OR_NorthernOR_Rec_PR","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt12sex1.png","Female ending year selectivity and growth for 12_OR_SouthernOR_Rec_PC_ORBS","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//sel21_agelen_contour_flt12sex2.png","Male ending year selectivity and growth for 12_OR_SouthernOR_Rec_PC_ORBS","Sel",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//ts1_Total_biomass_(mt).png","Total biomass (mt)","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//ts4_Summary_biomass_(mt).png","Summary biomass (mt)","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//ts7_Spawning_output.png","Spawning output","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png","Spawning output with ~95% asymptotic intervals","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//ts9_Spawning_depletion.png","Spawning depletion","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png","Spawning depletion with ~95% asymptotic intervals","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//ts11_Age-0_recruits_(1000s).png","Age-0 recruits (1,000s)","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png","Age-0 recruits (1,000s) with ~95% asymptotic intervals","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///ts_summaryF.png","Summary F (definition of F depends on setting in starter.ss)","Timeseries",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///SR_curve.png","Spawner-recruit curve","S-R",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///SR_curve2.png","Spawner-recruit curve with labels on first, last, and years with (log) deviations > 0.5","S-R",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///catch1 landings.png","landings","Catch",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///catch2 landings stacked.png","landings stacked","Catch",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///catch9 harvest rate.png","harvest rate","Catch",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C////SPR1_series.png","Timeseries of SPR","SPR",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C////SPR2_minusSPRseries.png","Timeseries of 1-SPR","SPR",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C////SPR3_ratiointerval.png","Timeseries of SPR ratio","SPR",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C////SPR4_phase.png","Phase plot of biomass ratio vs. SPR ratio","SPR",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index1_cpuedata_6_OR_SouthernOR_Comm_Live.png","Index data for 6_OR_SouthernOR_Comm_Live","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index2_cpuefit_6_OR_SouthernOR_Comm_Live.png","Fit to index data for 6_OR_SouthernOR_Comm_Live","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index3_cpuecheck_6_OR_SouthernOR_Comm_Live.png","Observed vs. expected index values with smoother for 6_OR_SouthernOR_Comm_Live","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index4_logcpuedata_6_OR_SouthernOR_Comm_Live.png","Log index data for 6_OR_SouthernOR_Comm_Live","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index5_logcpuefit_6_OR_SouthernOR_Comm_Live.png","Fit to index data on log scale for 6_OR_SouthernOR_Comm_Live","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index6_logcpuecheck_6_OR_SouthernOR_Comm_Live.png","log(observed) vs. log(expected) index values with smoother for 6_OR_SouthernOR_Comm_Live","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index1_cpuedata_10_OR_NorthernOR_Rec_PC.png","Index data for 10_OR_NorthernOR_Rec_PC","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index2_cpuefit_10_OR_NorthernOR_Rec_PC.png","Fit to index data for 10_OR_NorthernOR_Rec_PC","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index3_cpuecheck_10_OR_NorthernOR_Rec_PC.png","Observed vs. expected index values with smoother for 10_OR_NorthernOR_Rec_PC","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index4_logcpuedata_10_OR_NorthernOR_Rec_PC.png","Log index data for 10_OR_NorthernOR_Rec_PC","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index5_logcpuefit_10_OR_NorthernOR_Rec_PC.png","Fit to index data on log scale for 10_OR_NorthernOR_Rec_PC","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index6_logcpuecheck_10_OR_NorthernOR_Rec_PC.png","log(observed) vs. log(expected) index values with smoother for 10_OR_NorthernOR_Rec_PC","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index1_cpuedata_12_OR_SouthernOR_Rec_PC_ORBS.png","Index data for 12_OR_SouthernOR_Rec_PC_ORBS","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS.png","Fit to index data for 12_OR_SouthernOR_Rec_PC_ORBS","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index3_cpuecheck_12_OR_SouthernOR_Rec_PC_ORBS.png","Observed vs. expected index values with smoother for 12_OR_SouthernOR_Rec_PC_ORBS","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index4_logcpuedata_12_OR_SouthernOR_Rec_PC_ORBS.png","Log index data for 12_OR_SouthernOR_Rec_PC_ORBS","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index5_logcpuefit_12_OR_SouthernOR_Rec_PC_ORBS.png","Fit to index data on log scale for 12_OR_SouthernOR_Rec_PC_ORBS","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index6_logcpuecheck_12_OR_SouthernOR_Rec_PC_ORBS.png","log(observed) vs. log(expected) index values with smoother for 12_OR_SouthernOR_Rec_PC_ORBS","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///index9_standcpueall.png","Standardized indices overlaid","Index",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers1_sex1_beg.png","Beginning of year expected numbers at age of females in (max ~ 35.6 thousand)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers1_sex2_beg.png","Beginning of year expected numbers at age of males in (max ~ 35.6 thousand)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers2_meanage_beg.png","Beginning of year mean age in the population","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers1_sex1_mid.png","Middle of year expected numbers at age of females in (max ~ 34.4 thousand)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers1_sex2_mid.png","Middle of year expected numbers at age of males in (max ~ 34.4 thousand)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers2_meanage_mid.png","Middle of year mean age in the population","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers6_len_sex1.png","Beginning of year expected numbers at length of females in (max ~ 71.2 thousand)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers6_len_sex2.png","Beginning of year expected numbers at length of males in (max ~ 71.2 thousand)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers7_meanlen.png","Beginning of year mean length (cm) in the population","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers6_len_sex1.png","Middle of year expected numbers at length of females in (max ~ 57.9 thousand)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers6_len_sex2.png","Middle of year expected numbers at length of males in (max ~ 57.9 thousand)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers7_meanlen.png","Middle of year mean length (cm) in the population","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers4_equilagecomp.png","Equilibrium age distribution","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers5_ageerrorSD.png","Ageing imprecision: SD of observed age (yr)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers5_ageerrorMeans.png","Ageing imprecision: Mean observed age (yr)","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers5_ageerror_matrix_1.png","Ageing imprecision: matrix for method 1","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///numbers5_ageerror_matrix_2.png","Ageing imprecision: matrix for method 2","Numbers",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt1mkt2.png","length comp data, retained, 1_CA_NorthOf4010_Comm_Dead","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt1mkt2.png","length comp data, retained, 1_CA_NorthOf4010_Comm_Dead (max=0.45)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_1_CA_NorthOf4010_Comm_Dead.png","Francis data weighting method TA1.8 1_CA_NorthOf4010_Comm_Dead <br> Suggested sample size adjustment (with 95% interval) for len data from 1_CA_NorthOf4010_Comm_Dead:<br>0.795 (0.4884-2.8317)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt2mkt2.png","length comp data, retained, 2_CA_NorthOf4010_Comm_Live","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt2mkt2.png","length comp data, retained, 2_CA_NorthOf4010_Comm_Live (max=0.36)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_2_CA_NorthOf4010_Comm_Live.png","Francis data weighting method TA1.8 2_CA_NorthOf4010_Comm_Live <br> Suggested sample size adjustment (with 95% interval) for len data from 2_CA_NorthOf4010_Comm_Live:<br>0.9439 (0.4168-13.78)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt3mkt2.png","length comp data, retained, 3_CA_NorthOf4010_Rec_PC","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt3mkt2.png","length comp data, retained, 3_CA_NorthOf4010_Rec_PC (max=0.99)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_3_CA_NorthOf4010_Rec_PC.png","Francis data weighting method TA1.8 3_CA_NorthOf4010_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for len data from 3_CA_NorthOf4010_Rec_PC:<br>1.0727 (0.7251-2.5202)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt4mkt2.png","length comp data, retained, 4_CA_NorthOf4010_Rec_PR","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt4mkt2.png","length comp data, retained, 4_CA_NorthOf4010_Rec_PR (max=0.99)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_4_CA_NorthOf4010_Rec_PR.png","Francis data weighting method TA1.8 4_CA_NorthOf4010_Rec_PR <br> Suggested sample size adjustment (with 95% interval) for len data from 4_CA_NorthOf4010_Rec_PR:<br>1.0654 (0.6547-2.3799)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt5mkt2.png","length comp data, retained, 5_OR_SouthernOR_Comm_Dead","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt5mkt2.png","length comp data, retained, 5_OR_SouthernOR_Comm_Dead (max=0.44)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_5_OR_SouthernOR_Comm_Dead.png","Francis data weighting method TA1.8 5_OR_SouthernOR_Comm_Dead <br> Suggested sample size adjustment (with 95% interval) for len data from 5_OR_SouthernOR_Comm_Dead:<br>0.7835 (0.5707-1.4778)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt6mkt2.png","length comp data, retained, 6_OR_SouthernOR_Comm_Live","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt6mkt2.png","length comp data, retained, 6_OR_SouthernOR_Comm_Live (max=0.35)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_6_OR_SouthernOR_Comm_Live.png","Francis data weighting method TA1.8 6_OR_SouthernOR_Comm_Live <br> Suggested sample size adjustment (with 95% interval) for len data from 6_OR_SouthernOR_Comm_Live:<br>0.9626 (0.6425-2.0016)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt7mkt2.png","length comp data, retained, 7_OR_SouthernOR_Rec_PC","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt7mkt2.png","length comp data, retained, 7_OR_SouthernOR_Rec_PC (max=0.49)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_7_OR_SouthernOR_Rec_PC.png","Francis data weighting method TA1.8 7_OR_SouthernOR_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for len data from 7_OR_SouthernOR_Rec_PC:<br>1.1504 (0.8463-2.0098)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt8mkt2.png","length comp data, retained, 8_OR_SouthernOR_Rec_PR","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt8mkt2.png","length comp data, retained, 8_OR_SouthernOR_Rec_PR (max=0.99)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_8_OR_SouthernOR_Rec_PR.png","Francis data weighting method TA1.8 8_OR_SouthernOR_Rec_PR <br> Suggested sample size adjustment (with 95% interval) for len data from 8_OR_SouthernOR_Rec_PR:<br>1.0359 (0.6603-1.9934)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt10mkt2.png","length comp data, retained, 10_OR_NorthernOR_Rec_PC","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt10mkt2.png","length comp data, retained, 10_OR_NorthernOR_Rec_PC (max=0.49)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_10_OR_NorthernOR_Rec_PC.png","Francis data weighting method TA1.8 10_OR_NorthernOR_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for len data from 10_OR_NorthernOR_Rec_PC:<br>0.9348 (0.6507-1.6772)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_flt11mkt2.png","length comp data, retained, 11_OR_NorthernOR_Rec_PR","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_bubflt11mkt2.png","length comp data, retained, 11_OR_NorthernOR_Rec_PR (max=0.99)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_data_weighting_TA1.8_11_OR_NorthernOR_Rec_PR.png","Francis data weighting method TA1.8 11_OR_NorthernOR_Rec_PR <br> Suggested sample size adjustment (with 95% interval) for len data from 11_OR_NorthernOR_Rec_PR:<br>1.0146 (0.67-1.9189)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_mkt2_aggregated_across_time.png","length comp data, retained, aggregated across time by fleet","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_sex1mkt2_page1_multi-fleet_comparison.png","Note: this plot doesn't seem to be working right for some models.<br><br> length comp data, sexes combined, retained, comparing across fleets (plot 1 of 2)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lendat_sex1mkt2_page2_multi-fleet_comparison.png","Note: this plot doesn't seem to be working right for some models.<br><br> length comp data, sexes combined, retained, comparing across fleets (plot 2 of 2)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agedat_flt10mkt2.png","age comp data, retained, 10_OR_NorthernOR_Rec_PC","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agedat_bubflt10mkt2.png","age comp data, retained, 10_OR_NorthernOR_Rec_PC (max=0.26)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agedat_data_weighting_TA1.8_10_OR_NorthernOR_Rec_PC.png","Francis data weighting method TA1.8 10_OR_NorthernOR_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for age data from 10_OR_NorthernOR_Rec_PC:<br>6.402 (3.9041-23.2267)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agedat_mkt2_aggregated_across_time.png","age comp data, retained, aggregated across time by fleet","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agedat_sex1mkt2_multi-fleet_comparison.png","Note: this plot doesn't seem to be working right for some models.<br><br> age comp data, sexes combined, retained, comparing across fleets","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_gstagedat_flt5mkt2.png","ghost age comp data, retained, 5_OR_SouthernOR_Comm_Dead","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_gstagedat_bubflt5mkt2.png","ghost age comp data, retained, 5_OR_SouthernOR_Comm_Dead (max=0.19)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_gstagedat_flt7mkt2.png","ghost age comp data, retained, 7_OR_SouthernOR_Rec_PC","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_gstagedat_bubflt7mkt2.png","ghost age comp data, retained, 7_OR_SouthernOR_Rec_PC (max=0.17)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_bubflt5mkt2.png","conditional age-at-length data, retained, 5_OR_SouthernOR_Comm_Dead (max=0.96)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_data_weighting_TA1.8_condAge5_OR_SouthernOR_Comm_Dead.png","Francis data weighting method TA1.8 for conditional age data 5_OR_SouthernOR_Comm_Dead <br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_Andre_plotsflt5mkt2_page1.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 1 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_Andre_plotsflt5mkt2_page2.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 2 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_Andre_plotsflt5mkt2_page3.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 3 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_Andre_plotsflt5mkt2_page4.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 4 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_Andre_plotsflt5mkt2_page5.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 5 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_bubflt7mkt2.png","conditional age-at-length data, retained, 7_OR_SouthernOR_Rec_PC (max=0.96)","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_data_weighting_TA1.8_condAge7_OR_SouthernOR_Rec_PC.png","Francis data weighting method TA1.8 for conditional age data 7_OR_SouthernOR_Rec_PC <br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_Andre_plotsflt7mkt2_page1.png","Conditional AAL plot, retained, 7_OR_SouthernOR_Rec_PC (plot 1 of 3)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_Andre_plotsflt7mkt2_page2.png","Conditional AAL plot, retained, 7_OR_SouthernOR_Rec_PC (plot 2 of 3)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALdat_Andre_plotsflt7mkt2_page3.png","Conditional AAL plot, retained, 7_OR_SouthernOR_Rec_PC (plot 3 of 3)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","CompDat",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt1mkt2.png","length comps, retained, 1_CA_NorthOf4010_Comm_Dead","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt1mkt2.png","Pearson residuals, retained, 1_CA_NorthOf4010_Comm_Dead (max=8.31) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt1mkt2.png","N-EffN comparison, length comps, retained, 1_CA_NorthOf4010_Comm_Dead","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_1_CA_NorthOf4010_Comm_Dead.png","Francis data weighting method TA1.8 1_CA_NorthOf4010_Comm_Dead <br> Suggested sample size adjustment (with 95% interval) for len data from 1_CA_NorthOf4010_Comm_Dead:<br>0.795 (0.4751-3.1238)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt2mkt2.png","length comps, retained, 2_CA_NorthOf4010_Comm_Live","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt2mkt2.png","Pearson residuals, retained, 2_CA_NorthOf4010_Comm_Live (max=2.43) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt2mkt2.png","N-EffN comparison, length comps, retained, 2_CA_NorthOf4010_Comm_Live","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_2_CA_NorthOf4010_Comm_Live.png","Francis data weighting method TA1.8 2_CA_NorthOf4010_Comm_Live <br> Suggested sample size adjustment (with 95% interval) for len data from 2_CA_NorthOf4010_Comm_Live:<br>0.9439 (0.4173-15.1275)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt3mkt2.png","length comps, retained, 3_CA_NorthOf4010_Rec_PC","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt3mkt2.png","Pearson residuals, retained, 3_CA_NorthOf4010_Rec_PC (max=6.14) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt3mkt2.png","N-EffN comparison, length comps, retained, 3_CA_NorthOf4010_Rec_PC","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_3_CA_NorthOf4010_Rec_PC.png","Francis data weighting method TA1.8 3_CA_NorthOf4010_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for len data from 3_CA_NorthOf4010_Rec_PC:<br>1.0727 (0.7141-2.3053)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt4mkt2.png","length comps, retained, 4_CA_NorthOf4010_Rec_PR","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt4mkt2.png","Pearson residuals, retained, 4_CA_NorthOf4010_Rec_PR (max=24.49) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt4mkt2.png","N-EffN comparison, length comps, retained, 4_CA_NorthOf4010_Rec_PR","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_4_CA_NorthOf4010_Rec_PR.png","Francis data weighting method TA1.8 4_CA_NorthOf4010_Rec_PR <br> Suggested sample size adjustment (with 95% interval) for len data from 4_CA_NorthOf4010_Rec_PR:<br>1.0654 (0.6446-2.4131)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt5mkt2.png","length comps, retained, 5_OR_SouthernOR_Comm_Dead","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt5mkt2.png","Pearson residuals, retained, 5_OR_SouthernOR_Comm_Dead (max=2.23) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt5mkt2.png","N-EffN comparison, length comps, retained, 5_OR_SouthernOR_Comm_Dead","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_5_OR_SouthernOR_Comm_Dead.png","Francis data weighting method TA1.8 5_OR_SouthernOR_Comm_Dead <br> Suggested sample size adjustment (with 95% interval) for len data from 5_OR_SouthernOR_Comm_Dead:<br>0.7835 (0.5654-1.4056)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt6mkt2.png","length comps, retained, 6_OR_SouthernOR_Comm_Live","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt6mkt2.png","Pearson residuals, retained, 6_OR_SouthernOR_Comm_Live (max=3.07) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt6mkt2.png","N-EffN comparison, length comps, retained, 6_OR_SouthernOR_Comm_Live","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_6_OR_SouthernOR_Comm_Live.png","Francis data weighting method TA1.8 6_OR_SouthernOR_Comm_Live <br> Suggested sample size adjustment (with 95% interval) for len data from 6_OR_SouthernOR_Comm_Live:<br>0.9626 (0.6602-1.8798)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt7mkt2.png","length comps, retained, 7_OR_SouthernOR_Rec_PC","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt7mkt2.png","Pearson residuals, retained, 7_OR_SouthernOR_Rec_PC (max=12.04) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt7mkt2.png","N-EffN comparison, length comps, retained, 7_OR_SouthernOR_Rec_PC","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_7_OR_SouthernOR_Rec_PC.png","Francis data weighting method TA1.8 7_OR_SouthernOR_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for len data from 7_OR_SouthernOR_Rec_PC:<br>1.1504 (0.8457-1.9601)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt8mkt2.png","length comps, retained, 8_OR_SouthernOR_Rec_PR","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt8mkt2.png","Pearson residuals, retained, 8_OR_SouthernOR_Rec_PR (max=14.79) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt8mkt2.png","N-EffN comparison, length comps, retained, 8_OR_SouthernOR_Rec_PR","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_8_OR_SouthernOR_Rec_PR.png","Francis data weighting method TA1.8 8_OR_SouthernOR_Rec_PR <br> Suggested sample size adjustment (with 95% interval) for len data from 8_OR_SouthernOR_Rec_PR:<br>1.0359 (0.6552-1.9182)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt10mkt2.png","length comps, retained, 10_OR_NorthernOR_Rec_PC","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt10mkt2.png","Pearson residuals, retained, 10_OR_NorthernOR_Rec_PC (max=4.03) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt10mkt2.png","N-EffN comparison, length comps, retained, 10_OR_NorthernOR_Rec_PC","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_10_OR_NorthernOR_Rec_PC.png","Francis data weighting method TA1.8 10_OR_NorthernOR_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for len data from 10_OR_NorthernOR_Rec_PC:<br>0.9348 (0.6298-1.6147)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_flt11mkt2.png","length comps, retained, 11_OR_NorthernOR_Rec_PR","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_residsflt11mkt2.png","Pearson residuals, retained, 11_OR_NorthernOR_Rec_PR (max=14.37) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sampsize_flt11mkt2.png","N-EffN comparison, length comps, retained, 11_OR_NorthernOR_Rec_PR","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_data_weighting_TA1.8_11_OR_NorthernOR_Rec_PR.png","Francis data weighting method TA1.8 11_OR_NorthernOR_Rec_PR <br> Suggested sample size adjustment (with 95% interval) for len data from 11_OR_NorthernOR_Rec_PR:<br>1.0146 (0.6615-1.9197)","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_mkt2_aggregated_across_time.png","length comps, retained, aggregated across time by fleet","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sex1mkt2_page1_multi-fleet_comparison.png","Note: this plot doesn't seem to be working right for some models.<br><br> Pearson residuals, sexes combined, retained, comparing across fleets (plot 1 of 2) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_lenfit_sex1mkt2_page2_multi-fleet_comparison.png","Note: this plot doesn't seem to be working right for some models.<br><br> Pearson residuals, sexes combined, retained, comparing across fleets (plot 2 of 2) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","LenComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agefit_flt10mkt2.png","age comps, retained, 10_OR_NorthernOR_Rec_PC","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agefit_residsflt10mkt2.png","Pearson residuals, retained, 10_OR_NorthernOR_Rec_PC (max=4.1) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agefit_sampsize_flt10mkt2.png","N-EffN comparison, age comps, retained, 10_OR_NorthernOR_Rec_PC","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agefit_data_weighting_TA1.8_10_OR_NorthernOR_Rec_PC.png","Francis data weighting method TA1.8 10_OR_NorthernOR_Rec_PC <br> Suggested sample size adjustment (with 95% interval) for age data from 10_OR_NorthernOR_Rec_PC:<br>6.402 (3.8673-21.2265)","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agefit_mkt2_aggregated_across_time.png","age comps, retained, aggregated across time by fleet","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_agefit_sex1mkt2_multi-fleet_comparison.png","Note: this plot doesn't seem to be working right for some models.<br><br> Pearson residuals, sexes combined, retained, comparing across fleets <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_gstagefit_flt5mkt2.png","ghost age comps, retained, 5_OR_SouthernOR_Comm_Dead","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_gstagefit_residsflt5mkt2.png","Pearson residuals, retained, 5_OR_SouthernOR_Comm_Dead (max=NA) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_gstagefit_flt7mkt2.png","ghost age comps, retained, 7_OR_SouthernOR_Rec_PC","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_gstagefit_residsflt7mkt2.png","Pearson residuals, retained, 7_OR_SouthernOR_Rec_PC (max=NA) <br> 
+Closed bubbles are positive residuals (observed > expected) and open bubbles are negative residuals (observed < expected).","AgeComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_residsflt5mkt2.png","Pearson residuals, retained, 5_OR_SouthernOR_Comm_Dead (max=5.94)","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_residsflt7mkt2.png","Pearson residuals, retained, 7_OR_SouthernOR_Rec_PC (max=15.02)","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_data_weighting_TA1.8_condAge5_OR_SouthernOR_Comm_Dead.png","Francis data weighting method TA1.8 for conditional age data 5_OR_SouthernOR_Comm_Dead <br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_Andre_plotsflt5mkt2_page1.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 1 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_Andre_plotsflt5mkt2_page2.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 2 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_Andre_plotsflt5mkt2_page3.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 3 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_Andre_plotsflt5mkt2_page4.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 4 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_Andre_plotsflt5mkt2_page5.png","Conditional AAL plot, retained, 5_OR_SouthernOR_Comm_Dead (plot 5 of 5)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_data_weighting_TA1.8_condAge7_OR_SouthernOR_Rec_PC.png","Francis data weighting method TA1.8 for conditional age data 7_OR_SouthernOR_Rec_PC <br>For more info, see<br> <blockquote>Francis, R.I.C.C. (2011). Data weighting in statistical fisheries stock assessment models. <i>Can. J. Fish. Aquat. Sci.</i> 68: 1124-1138.</blockquote>","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_Andre_plotsflt7mkt2_page1.png","Conditional AAL plot, retained, 7_OR_SouthernOR_Rec_PC (plot 1 of 3)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_Andre_plotsflt7mkt2_page2.png","Conditional AAL plot, retained, 7_OR_SouthernOR_Rec_PC (plot 2 of 3)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///comp_condAALfit_Andre_plotsflt7mkt2_page3.png","Conditional AAL plot, retained, 7_OR_SouthernOR_Rec_PC (plot 3 of 3)
+These plots show mean age and std. dev. in conditional A@L.<br>Left plots are mean A@L by size-class (obs. and pred.) with 90% CIs based on adding 1.64 SE of mean to the data.<br>Right plots in each pair are SE of mean A@L (obs. and pred.) with 90% CIs based on the chi-square distribution.","A@LComp",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//yield1_yield_curve.png","Yield curve","Yield",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C//yield2_Hilborn_surplus_production.png","Surplus production plot. For interpretation, see<br> <blockquote>Walters, Hilborn, and  Christensen, 2008, Surplus production dynamics in declining and recovering fish populations. <i>Can. J. Fish. Aquat. Sci.</i> 65: 2536-2551.</blockquote>","Yield",2015-07-30 15:37:08
+"C:/China2015/r4ss/plots_C///data_plot.png","Data presence by year for each fleet","Data",2015-07-30 15:37:08

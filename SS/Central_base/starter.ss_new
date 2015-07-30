@@ -2,7 +2,7 @@
 #C starter comment here
 china_central_data.ss
 china_central_control.ss
-0 # 0=use init values in control file; 1=use ss3.par
+1 # 0=use init values in control file; 1=use ss3.par
 1 # run display detail (0,1,2)
 1 # detailed age-structured reports in REPORT.SSO (0,1) 
 0 # write detailed info from first call to echoinput.sso (0,1) 
