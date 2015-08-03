@@ -1849,27 +1849,28 @@ Estimated selectivity curves for the Washington recreational southern and northe
 
 **Central**
 
-The central base-case model produces reasonable estimates of growth parameters, with China rockfish in the central area reaching a maximum length of 37.4 cm  (Table \ref{tab:C_model_params}, Figure \ref{fig:growth_all}). The central base-case model fits to the indices of abundance are generally flat to slightly declining, with many model fits showing runs of years in which the model consistently either over or under fits the data (Figures \ref{fig:C_index2_cpuefit_6_OR_SouthernOR_Comm_Live}, \ref{fig:C_index2_cpuefit_10_OR_NorthernOR_Rec_PC}, \ref{fig:C_index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS}, \ref{fig:C_comp_lenfit_sex1mkt2_page1_multi-fleet_comparison}, and \ref{fig:C_comp_lenfit_sex1mkt2_page2_multi-fleet_comparison}). Each of the central model indices of abundance except the Oregon southern commercial live fish fishery were fit estimating additional standard deviations of 0.15, 0.50, and 0.08 for the Oregon southern recreational party/charter fishery, the Oregon northern recreational party/charter fishery, and the Oregon southern recreational party/charter fishery, respectively (Table \ref{tab:C_model_params}). 
+The central base-case model produces reasonable estimates of growth parameters, with China rockfish in the central area reaching a length of 37.44 cm at age 30 (Table \ref{tab:C_model_params}, Figure \ref{fig:growth_all}). The central base-case model fits to the indices of abundance are generally flat to slightly declining, with many model fits showing runs of years in which the model consistently either over or under fits the data (Figures \ref{fig:C_index2_cpuefit_6_OR_SouthernOR_Comm_Live}, \ref{fig:C_index2_cpuefit_10_OR_NorthernOR_Rec_PC}, \ref{fig:C_index2_cpuefit_12_OR_SouthernOR_Rec_PC_ORBS}). Each of the central model indices of abundance except the Oregon southern commercial live fish fishery were fit estimating additional standard deviations of 0.15, 0.50, and 0.08 for the Oregon commercial logbook index, the Oregon onboard recreational index, and the Oregon ORBS index, respectively (Table \ref{tab:C_model_params}). 
 
-Fits to the time-aggregated central model length distributions are reasonable given the small samples sizes, particularly during the early years, and the mirroring of fleet selectivities between fleets (Figure \ref{fig:C_ comp_agefit_flt10mkt2}). The model fits the Oregon southern commercial fishery best, shifts the peak of the fitted distribution to the left for the Oregon southern recreational private/rental, Oregon southern recreational party/charter, and Oregon northern recreational private/rental fleets, and under fits the peak of the time aggregated length distributions for the Oregon southern commercial live fish and Oregon northern recreational party/charter fleets. The model fits the conditional age-at-length data from the southern Oregon commercial dead-fish fishery poorly with clusters in the residuals and fewer observations in the age-50+ bin than expected by the model (Figure \ref{fig:C_comp_condAALfit_residsflt5mkt2}). The residual patterns are less notable in the fit to conditional age-at-length data from the southern Oregon recreational party/charter (Figure \ref{fig:C_comp_condAALfit_residsflt7mkt2}). For both these datasets, the largest residuals are associated with young fish at large sizes, including commercial catch of fish aged 10 years and younger in the 35-40cm range in 2002 through 2004 and a recreational observation in 2011 in the 44 cm bin estimated at 10 years old.  In many cases the model expects more fish in the plus group (age 50) than are actually present in the data.
+Fits to the central model length distributions are reasonable given the small samples sizes, particularly during the early years, and the constraints applied to selectivity parameters (Figures \ref{fig:C_comp_lenfit_sex1mkt2_page1_multi-fleet_comparison}, and \ref{fig:C_comp_lenfit_sex1mkt2_page2_multi-fleet_comparison}). The model fits the Oregon southern commercial fishery best, shifts the peak of the fitted distribution to the left for the Oregon southern recreational private/rental, Oregon southern recreational party/charter, and Oregon northern recreational private/rental fleets, and under fits the peak of the time aggregated length distributions for the Oregon southern commercial live fish and Oregon northern recreational party/charter fleets. The model fits the conditional age-at-length data from the southern Oregon commercial dead-fish fishery poorly with clusters in the residuals and fewer observations in the age-50+ bin than expected by the model (Figure \ref{fig:C_comp_condAALfit_residsflt5mkt2}). The residual patterns are less notable in the fit to conditional age-at-length data from the southern Oregon recreational party/charter (Figure \ref{fig:C_comp_condAALfit_residsflt7mkt2}). For both these datasets, the largest residuals are associated with young fish at large sizes, including commercial catch of fish aged 10 years and younger in the 35-40cm range in 2002 through 2004 and a recreational observation in 2011 in the 44 cm length bin estimated at 10 years old.  In many years the model expects more fish in the plus group (age 50) than are actually present in the data, but years where 50+ age fish were observed, this observations is typically larger than the expectation. The fit to the marginal age compositions from the northern Oregon recreational fishery are reasonable given the low sample sizes of this fleet (which is the reason it was not represented as conditioned on length) although generally more fish in the 5-10 year old range were observed than expected by the model (Figure \ref{fig:C_ comp_agefit_flt10mkt2}).
 
 The central model does not explicitly model discards due to low discard rates and the limited availability of discard data. However, a discard fraction of 2.69% of the annual commercial landings has been added to the commercial landings to account for the total removals by the commercial fisheries. 
 
-Asymptotic selectivity curves are estimated for five groups of fleets: 1) Northern California, Oregon south, and Oregon north commercial fleets, 2) Northern California and Oregon south commercial live fish fleets, 3) Northern California and Oregon south recreational party/charter fleets, 4) Northern California and Oregon south recreational private/rental fleets, and 5) Oregon north recreational party/charter and private/rental fleets. Fleet groups 3, 4, and 5 fix the selectivity at the peak to the estimate from fleet 1, 34.9 cm, as these parameters were unable to be estimated but estimate different ascending width parameters (Table \ref{tab:C_model_params}). These ascending width parameters are similar for fleet groups 1, 3 and 4, with fleet group 5, Oregon north recreational fleets, selecting smaller fish (Figure \ref{fig:C_sel01_multiple_fleets_length1}). The Northern California and Oregon commercial live fish fleets estimate a smaller peak parameter, 32.3 cm, suggesting that the live fish fleets select smaller fish than the other fleets, with the exception of the northern recreational fleets (Table \ref{tab:C_model_params}, Figure \ref{fig:C_sel01_multiple_fleets_length1}).
+Asymptotic selectivity curves are estimated for all fleets with length compositions (Figure \ref{fig:C_sel01_multiple_fleets_length1}). The exceptions included the northern Oregon commercial fishery which shared the selectivity curve for the southern Oregon life-fish commercial fishery, and the northern Oregon private/rental fleet that was assumed to share the selectivity with the party/charter fleet in this same area. Many of the recreational has estimates of peak selectivity that hit the upper bound of 45 cm, well above the estimated asymptotic size. These parameters were all reduced to (fixed at) the highest peak selectivity parameter among the recreational fleets that was not hitting a bound: 39.9 cm. The ascending width parameters showed small differences among all fleets (Table \ref{tab:C_model_params}). The commercial selectivity parameters generally had peak values estimated at a lower point than the recreational selectivities.
 
 **Southern**
 
-The model for the area south of $40^\circ 10^\prime$ N. latitude produces reasonable values of estimated growth parameters in the base-case model, with China rockfish in the southern management area reaching an asymptotic length (converted from Schnute parameterization) of 31.8 cm, with von Bertalanffy growth coefficient, k = 0.163, and a coefficient of variation of 11% for length at age 30 (Figure \ref{fig:growth_all}). The southern base-case model was able to fit the southern area recreational dockside index of abundance with an estimated additional standard deviation of 0.23, and the two recreational onboard indices (1988-1999 and 2000-2014) with additional SDs of 0.16 and 0.23, respectively (Table \ref{tab:S_model_params}). However, in all three indices, there are runs of years in which the model consistently either over or under fits the data. The model is able to capture a decline in catch rates from the 1980s to the late 1990s / early 2000s in the dockside recreational CPUE index (Figure \ref{fig:S_index2_cpuefit_3_CA_SouthOf4010_Rec_PC}), but slightly underestimates a declining trend in the 1988-1999 onboard observer index (Figure \ref{fig:S_index2_cpuefit_6_CA_SouthOf4010_Rec_PC_DWV_index}). The model is consistent with an observed increasing trend from 2000-2012 in the more recent onboard observer index, but was not able to capture a recent drop in catch rates in recent years (Figure \ref{fig:S_index2_cpuefit_7_CA_SouthOf4010_Rec_PC_onboard_index}).
+The model for the area south of $40^\circ 10^\prime$ N. latitude produces reasonable values of estimated growth parameters in the base-case model, with China rockfish in the southern management area reaching an asymptotic length (converted from Schnute parameterization) of 31.5 cm, with von Bertalanffy growth coefficient, k = 0.144, and a coefficient of variation of 12% for length at age 30 (Figure \ref{fig:growth_all}). The southern base-case model best fit the southern area recreational dockside index of abundance with an estimated additional standard deviation of 0.12, and the two recreational onboard indices (1988-1999 and 2000-2014) with additional SDs of 0.15 and 0.18, respectively (Table \ref{tab:S_model_params}). However, in all three indices there are runs of positive or negative residuals. The model is able to capture a decline in catch rates from the 1980s to the late 1990s / early 2000s in the dockside recreational CPUE index (Figure \ref{fig:S_index2_cpuefit_3_CA_SouthOf4010_Rec_PC}), but slightly underestimates a declining trend in the 1988-1999 onboard observer index (Figure \ref{fig:S_index2_cpuefit_6_CA_SouthOf4010_Rec_PC_DWV_index}). The model is consistent with an observed increasing trend from 2000-2012 in the more recent onboard observer index, but was not able to capture a recent drop in catch rates in recent years (Figure \ref{fig:S_index2_cpuefit_7_CA_SouthOf4010_Rec_PC_onboard_index}).
 
-Fits to the time-aggregated southern recreational private boat length distributions, the fleet with most of the data and landings, are most consistent with the observed data (Figure \ref{fig:S_comp_lenfit_mkt2_aggregated_across_time}). Lengths for the recreational charter boat and commercial fishery (fish landed dead) are also fit reasonably well by the model, with predicted lengths slightly smaller and larger than observed sizes in the two fleets, respectively, across years (Figure \ref{fig:S_comp_lenfit_mkt2_aggregated_across_time}). Length data from the commercial live-fish fishery are fit least well by the model, predicting smaller-than-observed lengths across years for the retained catch (Figure \ref{fig:S_comp_lenfit_mkt2_aggregated_across_time}) and fewer small fish in the discarded catch than are observed on average (Figure \ref{fig:S_comp_lenfit_mkt1_aggregated_across_time}).
+Fits to the time-aggregated southern recreational private and charter boat length distributions, the fleets with most of the data and landings, are most consistent with the observed data (Figure \ref{fig:S_comp_lenfit_mkt2_aggregated_across_time}). Length data from the commercial fisheries (live-fish fishery and fish landed dead) are fit reasonably well by the model (Figure \ref{fig:S_comp_lenfit_mkt2_aggregated_across_time}).
 
-Fits to the length compositions from the central California onboard observer and CCFRP surveys (fleets observing whole, retained plus discarded, catch) are better than the commercial live-fish fishery, but not as good as the recreational private boat length data (Figure \ref{fig:S_comp_lenfit_mkt0_aggregated_across_time}). Observed lengths in the onboard observer data are slightly smaller than model predictions, and the CCFRP data represent a narrower range of lengths than the model predicts.
+Fits to the length compositions from the central California onboard observer and CCFRP surveys (fleets observing whole, retained plus discarded, catch) are good for the onboard observer data (which mirrors the selectivity of the recreational charter boat fishery), but the model a larger variance and smaller mode in time-aggregated lengths relative to the data from the CCFRP survey (Figure \ref{fig:S_comp_lenfit_mkt0_aggregated_across_time}).
 
 The model fits the conditional age-at-length data from Jeff Abrams' thesis [@Abrams2014] reasonably well (Figure \ref{fig:S_comp_condAALfit_Andre_plotsflt9mkt0}), particularly for years with larger sample sizes.
 
-Length-based selectivity parameters estimated in the southern base model include, for each fleet, the size at 100% vulnerability ('peak' parameter), and the 'width' of the ascending limb of the selectivity curve (a cumulative normal distribution). Peak values ranged from 31 cm (recreational party/charter boats) to 33.7 cm (recreational private boats). While the recreational catches represent both retained and discarded fish, the composition data in the base model represents only retained fish. Length composition data for discarded fish are available from the onboard charter boat observer programs, and could potentially be used to model retention and selectivity separately. The STAT was not able to attempt this analysis for the southern model at the time of writing, but intends to examine this further. One selectivity parameter, the peak parameter for the commercial live-fish fishery, was unable to be estimated (hit an unreasonable upper bound, >45 cm). This parameter was fixed in the base model at 32 cm for the commercial live-fish fishery, and the width parameter was estimated.
+Length-based selectivity parameters estimated in the southern base model include, for each fleet, the size at 100% vulnerability ('peak' parameter), and the 'width' of the ascending limb of the selectivity curve (a cumulative normal distribution). Peak values ranged from 27.6 cm (commercial discards) to 35.5 cm (commercial live-fish fishery).  The recreational catches represent both retained and discarded fish, the composition data in the base model represents only retained fish. Recreational length composition data for discarded fish are available from the onboard charter boat observer programs, and could potentially be used to model retention and selectivity separately. The STAT was not able to attempt this analysis for the southern model due to time constraints (see research recommendations).
 
-Discards are modeled explicitly in the southern area model for the commercial live-fish fishery. Fits to estimates of total discarded catch obtained from the West Coast Groundfish Observer Program (WCGOP) were generally poor, showing a decreasing trend while the observed values appear to increase in recent years (Figure \ref{fig:S_discard_dataCommercial_Live}). Predicted discard amounts decline from an initial peak value of roughly 10 mt in the first year to about 1 mt in 2014 (Figure \ref{fig:S_catch7 discards stacked plot (depends on multiple fleets)}). This pattern of discards may be truncated, and does not account for changes in minimum size regulations, the total removals are a small fraction of the cumulative removals in the model and are unlikely to have a significant effect on model results. Understanding the size-dependent effects of discards in fleets with larger removals (i.e., the recreational private boat mode) is a larger issue for the southern assessment model, but no discard composition data for private boats are available at this time.
+Discards in the pre-STAR base model were estimated in the southern area model for the commercial live-fish fishery. This model did not fit the length composition data for the commercial live-fish fishery well, and did not capture the increasing trend in the proportion of discarded catch south of Cape Mendocino. During the STAR panel, the STAT adopted a recommendation made by the panel to treat discarded commercial catch as a separate “fleet” in Stock Synthesis, which greatly improved the fits to the discard length composition data and greatly improved the fits to the length composition of retained catch in the commercial live-fish fishery.
+
 
 
 ##Uncertainty and Sensitivity Analyses
@@ -1942,11 +1943,11 @@ Retrospective analyses were conducted for each pre-STAR base model by conducting
 ###Likelihood profiles
 **Pre-STAR base model likelihood profiles**
 
-Likelihood profiles for equilibrium recruitment ($R_0$), natural mortality ($M$), and steepness ($h$), were completed to investigate the uncertainty in these parameters and their influence on the fit to different data sources. For all models, the age data had the largest influence on the scale of the population as indicated by the data type most influenced by $R_0$ (Figures \ref{fig:N_profile_postSTAR}, \ref{fig:C_profile_postSTAR}, and \ref{fig:S_profile_postSTAR}). In the southern model, the length and index data also had the best fit at a similar scale, showing consistency in these data sources about the population size. In the central model, lower $R_0$ values caused the model to fit the length data less well but higher values had little influence. The index data was most influential on the $R_0$ estimates in the northern model, where they were best fit with a higher equilibrium recruitment.
+Likelihood profiles for equilibrium recruitment ($R_0$), natural mortality ($M$), and steepness ($h$), were completed to investigate the uncertainty in these parameters and their influence on the fit to different data sources. For all models, the age data had the largest influence on the scale of the population as indicated by the data type most influenced by $R_0$ (Figures \ref{fig:N_profile_logR0.N}, \ref{fig:C_profile_logR0.C}, and \ref{fig:S_profile_logR0.S}). In the southern model, the length and index data also had the best fit at a similar scale, showing consistency in these data sources about the population size. In the central model, lower $R_0$ values caused the model to fit the length data less well but higher values had little influence. The index data was most influential on the $R_0$ estimates in the northern model, where they were best fit with a higher equilibrium recruitment.
 
 Profiles over natural mortality showed length and age data best fit by high $M$ values (greater than 0.10) in the central and south models (Figures \ref{fig:C_profile_Mortality.C} and \ref{fig:S_profile_Mortality.S}), while the value among those in the profile with best likelihood in the northern model was $M=0.08$ (Figure \ref{fig:N_profile_Mortality.N}). As in the profile over $R_0$, the index data in the northern model showed a larger influence on $M$ than the index data in the central and southern models.
 
-Likelihood profiles were conducted over four values for the steepness of the stock-recruit curve ($h$ = 0.3, 0.6, 0.773, and 0.9), where 0.773 is the mean of the prior distribution and chosen as a fixed value in the three base models. These profiles indicated that for the southern and northern models, length and age data were best fit by high steepness values, with the index in the northern model also showing a better fit at higher steepness. The central model, however, showed the best combined fit to all data sources at an intermediate value of steepness, with an MLE estimate when the parameter was estimated of $h = 0.753$, which is close to the prior mean. This estimate represents a balance between the age data and steepness prior, which were best fit at higher steepness values, and the length data, which was best fit at lower steepness values. The index data in the central model showed less change in likelihood as a result of the steepness profile than the other data types, but it was the only type that was best fit at an intermediate value, $h = 0.6$.
+Likelihood profiles were conducted over four values for the steepness of the stock-recruit curve ($h$ = 0.3, 0.6, 0.773, and 0.9), where 0.773 is the mean of the prior distribution and chosen as a fixed value in the three base models. These profiles indicated that for the southern and northern models (Figures \ref{fig:S_profile_Steepness} and \ref{fig:N_profile_Steepness}), length and age data were best fit by high steepness values, with the index in the northern model also showing a better fit at higher steepness. The central model, however, showed the best combined fit to all data sources at an intermediate value of steepness, with an MLE estimate when the parameter was estimated of $h = 0.753$, which is close to the prior mean (Figure \ref{fig:C_profile_Steepness}). This estimate represents a balance between the age data and steepness prior, which were best fit at higher steepness values, and the length data, which was best fit at lower steepness values. The index data in the central model showed less change in likelihood as a result of the steepness profile than the other data types, but it was the only type that was best fit at an intermediate value, $h = 0.6$.
 
 **Final base model likelihood profiles**
  
@@ -1956,7 +1957,7 @@ Likelihood profiles over natural mortality were conducted for all of the final b
 
 **Northern Model**
 
-This stock assessment estimates that China rockfish in the north are well above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades (Table \ref{tab:Timeseries_N}; Figure \ref{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.6% - 83.2%), corresponding to 17.9 billion eggs (~95% asymptotic interval: 8.8 – 27.1 billion eggs) of spawning output in the base model (Table  \ref{tab:SpawningDeplete_N}; Figure \ref{fig:C_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). Unfished spawning output was estimated to be 24.4 billion eggs in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 billion eggs, which gives a catch of 6.2 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt. Table \ref{tab:Ref_pts_N} shows the full suite of estimated reference points for the northern area model and Figure \ref{fig:N_yield1_yield_curve} shows the equilibrium yield curve.
+This stock assessment estimates that China rockfish in the north are well above the biomass target. The spawning biomass of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades (Table \ref{tab:Timeseries_N}; Figure \ref{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}). The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.6% - 83.2%), corresponding to 17.9 billion eggs (~95% asymptotic interval: 8.8 – 27.1 billion eggs) of spawning output in the base model (Table  \ref{tab:SpawningDeplete_N}; Figure \ref{fig:N_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}). Unfished spawning output was estimated to be 24.4 billion eggs in the base case model. The target stock size based on the biomass target ($SB_{40\%}$) is 9.8 billion eggs, which gives a catch of 6.2 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt. Table \ref{tab:Ref_pts_N} shows the full suite of estimated reference points for the northern area model and Figure \ref{fig:N_yield1_yield_curve} shows the equilibrium yield curve.
 
 
 
@@ -2788,178 +2789,71 @@ Include STAR panel members and affiliations as well as names and affiliations of
          print(jitter.table, include.rownames=FALSE, caption.placement="top")
 ```
 
-
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
-<!-- ******************************************************HARVEST PROJECTIONS TABLES************************************************************ --> 
+<!-- **************************************************Uncertainty and Sensitivity TABLES*********************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-<!-- *************************************************NORTHERN HARVEST PROJECTIONS TABLES******************************************************** --> 
+<!-- ********************************************NORTHERN Uncertainty and Sensitivity TABLES******************************************************--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-  #########################################################################
-  #CHANGE ME
-    FirstYR=2015  # minimum year for the Spawning biomass table
-    LastYR=2024  # maximum year for the Spawning biomass table
-  #########################################################################
-    
-  #OFL contribution
-    OFLcatch = modN$derived_quants[grep("OFLCatch",modN$derived_quants$LABEL),]
-    OFLcatchyrs = OFLcatch[OFLcatch$LABEL>=paste("OFLCatch_",FirstYR,sep='') &  
-                             OFLcatch$LABEL<=paste("OFLCatch_",LastYR,sep=''),]
-    
-  #Landings
-    ForecastC = modN$timeseries[ , grepl("Yr|retain[(]B[)]", names(modN$timeseries))]
-    ForecastC$total = rowSums(ForecastC[,-1])
-    ForecastCyrs = subset(ForecastC, Yr>(FirstYR-1) & Yr<(LastYR+1))
-    
-  #Age 5+ biomass
-    Age5biomass = modN$timeseries[,c('Yr',"Bio_smry")]
-    Age5biomassyrs = subset(Age5biomass, Yr>(FirstYR-1) & Yr<(LastYR+1))
-    
-    
-  #pull spawning biomass
-    SpawningB = modN$derived_quants[grep("SPB",modN$derived_quants$LABEL),]
-    SpawningB = SpawningB[c(-1,-2),]
-    SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
-                               SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),] 
-    
-  #pull depletion
-    Depletion = modN$derived_quants[grep("Bratio",modN$derived_quants$LABEL),]
-    Depletion = Depletion[c(-1,-2),]
-    Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
-                               Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]  
-    
-    
-    Forecast_N = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
-                     SpawningByrs$Value,Depletionyrs$Value))
-    
-    colnames(Forecast_N)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
-                         "Spawning Biomass (mt)","Depletion")
-    Forecast_N$Year= as.factor(Forecast_N$Year)
+  #READ IN FILE
+    N_sens = read.csv("./txt_files/N_sensitivities.csv")
+     colnames(N_sens) = c("Label","Base (Francis weights)","Harmonic mean weights","Drop index","Drop ages",
+                          "Down-weight lengths","Free size Age0","Free CV Amin","External growth")
 
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  Forecast_N.table = xtable(Forecast_N, caption=c("Projection of potential China rockfish OFL, spawning biomass, and depletion for the northern
-                                                          base case model."),label='tab:Forecast_N',digist=2)    
-  align(Forecast_N.table) = c('l','c','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}',
-                                   '>{\\centering}p{1in}','>{\\centering}p{1in}')  
-  print(Forecast_N.table, include.rownames=FALSE, caption.placement="top")
+  N_sens.table = xtable(N_sens, caption=c("Sensitivity of the northern model to dropping or down-weighting data sources and alternative assumptions about growth."),label='tab:N_sensitivity',digits=2)    
+  align(N_sens.table) = c('l','l','>{\\centering}p{.6in}','>{\\centering}p{.5in}','>{\\centering}p{.5in}','>{\\centering}p{.6in}',
+                                  '>{\\centering}p{.5in}','>{\\centering}p{.6in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}')  
+
+  print(N_sens.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",scalebox=.85)
+
 ```
 
 
-<!-- *************************************************CENTRAL HARVEST PROJECTIONS TABLES******************************************************** --> 
+<!-- ********************************************cENTRAL Uncertainty and Sensitivity TABLES******************************************************--> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-  #########################################################################
-  #CHANGE ME
-    FirstYR=2015  # minimum year for the Spawning biomass table
-    LastYR=2024  # maximum year for the Spawning biomass table
-  #########################################################################
-    
-  #OFL contribution
-    OFLcatch = modC$derived_quants[grep("OFLCatch",modC$derived_quants$LABEL),]
-    OFLcatchyrs = OFLcatch[OFLcatch$LABEL>=paste("OFLCatch_",FirstYR,sep='') &  
-                             OFLcatch$LABEL<=paste("OFLCatch_",LastYR,sep=''),]
-    
-  #Landings
-    ForecastC = modC$timeseries[ , grepl("Yr|retain[(]B[)]", names(modC$timeseries))]
-    ForecastC$total = rowSums(ForecastC[,-1])
-    ForecastCyrs = subset(ForecastC, Yr>(FirstYR-1) & Yr<(LastYR+1))
-    
-  #Age 5+ biomass
-    Age5biomass = modC$timeseries[,c('Yr',"Bio_smry")]
-    Age5biomassyrs = subset(Age5biomass, Yr>(FirstYR-1) & Yr<(LastYR+1))
-    
-    
-  #pull spawning biomass
-    SpawningB = modC$derived_quants[grep("SPB",modC$derived_quants$LABEL),]
-    SpawningB = SpawningB[c(-1,-2),]
-    SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
-                               SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),] 
-    
-  #pull depletion
-    Depletion = modC$derived_quants[grep("Bratio",modC$derived_quants$LABEL),]
-    Depletion = Depletion[c(-1,-2),]
-    Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
-                               Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]  
-    
-    
-    Forecast_C = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
-                     SpawningByrs$Value,Depletionyrs$Value))
-    
-    colnames(Forecast_C)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
-                         "Spawning Biomass (mt)","Depletion")
-    Forecast_C$Year= as.factor(Forecast_C$Year)
+  #READ IN FILE
+    C_sens = read.csv("./txt_files/C_sensitivities.csv")
+     colnames(C_sens) = c("Label","Base (Francis weights)","Harmonic mean weights","Drop index","Drop ages",
+                          "Down-weight lengths","Free size Age0","Free CV Amin","External growth")
 
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  Forecast_C.table = xtable(Forecast_C, caption=c("Projection of potential China rockfish OFL, spawning biomass, and depletion for the central
-                                                          base case model."),label='tab:Forecast_C',digist=2)    
-  align(Forecast_C.table) = c('l','c','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}',
-                                   '>{\\centering}p{1in}','>{\\centering}p{1in}')  
-  print(Forecast_C.table, include.rownames=FALSE, caption.placement="top")
+  C_sens.table = xtable(C_sens, caption=c("Sensitivity of the central model to dropping or down-weighting data sources and alternative assumptions about growth."),label='tab:C_sensitivity',digits=2)    
+  align(C_sens.table) = c('l','l','>{\\centering}p{.6in}','>{\\centering}p{.5in}','>{\\centering}p{.5in}','>{\\centering}p{.6in}',
+                                  '>{\\centering}p{.5in}','>{\\centering}p{.6in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}')  
+
+  print(C_sens.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",scalebox=.75)
+
 ```
 
 
+<!-- ********************************************SOUTHERN Uncertainty and Sensitivity TABLES******************************************************--> 
 
-<!-- *************************************************SOUTHERN HARVEST PROJECTIONS TABLES******************************************************** --> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-  #########################################################################
-  #CHANGE ME
-    FirstYR=2015  # minimum year for the Spawning biomass table
-    LastYR=2024  # maximum year for the Spawning biomass table
-  #########################################################################
-    
-  #OFL contribution
-    OFLcatch = modS$derived_quants[grep("OFLCatch",modS$derived_quants$LABEL),]
-    OFLcatchyrs = OFLcatch[OFLcatch$LABEL>=paste("OFLCatch_",FirstYR,sep='') &  
-                             OFLcatch$LABEL<=paste("OFLCatch_",LastYR,sep=''),]
-    
-  #Landings
-    ForecastC = modS$timeseries[ , grepl("Yr|retain[(]B[)]", names(modS$timeseries))]
-    ForecastC$total = rowSums(ForecastC[,-1])
-    ForecastCyrs = subset(ForecastC, Yr>(FirstYR-1) & Yr<(LastYR+1))
-    
-  #Age 5+ biomass
-    Age5biomass = modS$timeseries[,c('Yr',"Bio_smry")]
-    Age5biomassyrs = subset(Age5biomass, Yr>(FirstYR-1) & Yr<(LastYR+1))
-    
-    
-  #pull spawning biomass
-    SpawningB = modS$derived_quants[grep("SPB",modS$derived_quants$LABEL),]
-    SpawningB = SpawningB[c(-1,-2),]
-    SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
-                               SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),] 
-    
-  #pull depletion
-    Depletion = modS$derived_quants[grep("Bratio",modS$derived_quants$LABEL),]
-    Depletion = Depletion[c(-1,-2),]
-    Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
-                               Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]  
-    
-    
-    Forecast_S = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
-                     SpawningByrs$Value,Depletionyrs$Value))
-    
-    colnames(Forecast_S)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
-                         "Spawning Biomass (mt)","Depletion")
-    Forecast_S$Year= as.factor(Forecast_S$Year)
+  #READ IN FILE
+     S_sens = read.csv("./txt_files/S_sensitivities.csv")
+     S_sens = S_sens[,c(1:10)]
+     colnames(S_sens) = c("Label","Base (Francis weights)","Drop indices","Drop discard","Down-weight lengths","Drop ages",
+                          "No data weighting","Harmonic mean weights","External growth","Estimate h and M")
 
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  Forecast_S.table = xtable(Forecast_S, caption=c("Projection of potential China rockfish OFL, spawning biomass, and depletion for the southern
-                                                          base case model."),label='tab:Forecast_S',digits=2)    
-  align(Forecast_S.table) = c('l','c','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}',
-                                   '>{\\centering}p{1in}','>{\\centering}p{1in}')  
-  print(Forecast_S.table, include.rownames=FALSE, caption.placement="top")
+  S_sens.table = xtable(S_sens, caption=c("Sensitivity of the southern model to dropping or down-weighting data sources and alternative assumptions about growth."),label='tab:S_sensitivity',digits=2)    
+  align(S_sens.table) = c('l','l','>{\\centering}p{.6in}','>{\\centering}p{.5in}','>{\\centering}p{.5in}','>{\\centering}p{.6in}',
+                                  '>{\\centering}p{.5in}','>{\\centering}p{.6in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}')  
+
+  print(S_sens.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable")
+
 ```
-
-
-
 
 \FloatBarrier
+
 <!-- ******************************************************************************************************************************************** --> 
 <!-- *********************************************************REFERENCE POINTS TABLES************************************************************ --> 
 <!-- ******************************************************************************************************************************************** -->
@@ -3208,69 +3102,180 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
                     floating=FALSE, add.to.row = list(pos = list(0),command = "\\hline \\endhead "))
       
 ```
+\FloatBarrier
+
+<!-- ******************************************************************************************************************************************** --> 
+<!-- ******************************************************HARVEST PROJECTIONS TABLES************************************************************ --> 
+<!-- ******************************************************************************************************************************************** --> 
+
+<!-- *************************************************NORTHERN HARVEST PROJECTIONS TABLES******************************************************** --> 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+  #########################################################################
+  #CHANGE ME
+    FirstYR=2015  # minimum year for the Spawning biomass table
+    LastYR=2024  # maximum year for the Spawning biomass table
+  #########################################################################
+    
+  #OFL contribution
+    OFLcatch = modN$derived_quants[grep("OFLCatch",modN$derived_quants$LABEL),]
+    OFLcatchyrs = OFLcatch[OFLcatch$LABEL>=paste("OFLCatch_",FirstYR,sep='') &  
+                             OFLcatch$LABEL<=paste("OFLCatch_",LastYR,sep=''),]
+    
+  #Landings
+    ForecastC = modN$timeseries[ , grepl("Yr|retain[(]B[)]", names(modN$timeseries))]
+    ForecastC$total = rowSums(ForecastC[,-1])
+    ForecastCyrs = subset(ForecastC, Yr>(FirstYR-1) & Yr<(LastYR+1))
+    
+  #Age 5+ biomass
+    Age5biomass = modN$timeseries[,c('Yr',"Bio_smry")]
+    Age5biomassyrs = subset(Age5biomass, Yr>(FirstYR-1) & Yr<(LastYR+1))
+    
+    
+  #pull spawning biomass
+    SpawningB = modN$derived_quants[grep("SPB",modN$derived_quants$LABEL),]
+    SpawningB = SpawningB[c(-1,-2),]
+    SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
+                               SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),] 
+    
+  #pull depletion
+    Depletion = modN$derived_quants[grep("Bratio",modN$derived_quants$LABEL),]
+    Depletion = Depletion[c(-1,-2),]
+    Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
+                               Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]  
+    
+    
+    Forecast_N = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
+                     SpawningByrs$Value,Depletionyrs$Value))
+    
+    colnames(Forecast_N)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
+                         "Spawning Biomass (mt)","Depletion")
+    Forecast_N$Year= as.factor(Forecast_N$Year)
+
+```
+
+```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
+  Forecast_N.table = xtable(Forecast_N, caption=c("Projection of potential China rockfish OFL, spawning biomass, and depletion for the northern
+                                                          base case model."),label='tab:Forecast_N',digist=2)    
+  align(Forecast_N.table) = c('l','c','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}',
+                                   '>{\\centering}p{1in}','>{\\centering}p{1in}')  
+  print(Forecast_N.table, include.rownames=FALSE, caption.placement="top")
+```
 
 \FloatBarrier
-<!-- ******************************************************************************************************************************************** --> 
-<!-- **************************************************Uncertainty and Sensitivity TABLES*********************************************************--> 
-<!-- ******************************************************************************************************************************************** --> 
 
-<!-- ********************************************NORTHERN Uncertainty and Sensitivity TABLES******************************************************--> 
+<!-- *************************************************CENTRAL HARVEST PROJECTIONS TABLES******************************************************** --> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-  #READ IN FILE
-    N_sens = read.csv("./txt_files/N_sensitivities.csv")
-     colnames(N_sens) = c("Label","Base (Francis weights)","Harmonic mean weights","Drop index","Drop ages",
-                          "Down-weight lengths","Free size Age0","Free CV Amin","External growth")
+  #########################################################################
+  #CHANGE ME
+    FirstYR=2015  # minimum year for the Spawning biomass table
+    LastYR=2024  # maximum year for the Spawning biomass table
+  #########################################################################
+    
+  #OFL contribution
+    OFLcatch = modC$derived_quants[grep("OFLCatch",modC$derived_quants$LABEL),]
+    OFLcatchyrs = OFLcatch[OFLcatch$LABEL>=paste("OFLCatch_",FirstYR,sep='') &  
+                             OFLcatch$LABEL<=paste("OFLCatch_",LastYR,sep=''),]
+    
+  #Landings
+    ForecastC = modC$timeseries[ , grepl("Yr|retain[(]B[)]", names(modC$timeseries))]
+    ForecastC$total = rowSums(ForecastC[,-1])
+    ForecastCyrs = subset(ForecastC, Yr>(FirstYR-1) & Yr<(LastYR+1))
+    
+  #Age 5+ biomass
+    Age5biomass = modC$timeseries[,c('Yr',"Bio_smry")]
+    Age5biomassyrs = subset(Age5biomass, Yr>(FirstYR-1) & Yr<(LastYR+1))
+    
+    
+  #pull spawning biomass
+    SpawningB = modC$derived_quants[grep("SPB",modC$derived_quants$LABEL),]
+    SpawningB = SpawningB[c(-1,-2),]
+    SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
+                               SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),] 
+    
+  #pull depletion
+    Depletion = modC$derived_quants[grep("Bratio",modC$derived_quants$LABEL),]
+    Depletion = Depletion[c(-1,-2),]
+    Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
+                               Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]  
+    
+    
+    Forecast_C = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
+                     SpawningByrs$Value,Depletionyrs$Value))
+    
+    colnames(Forecast_C)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
+                         "Spawning Biomass (mt)","Depletion")
+    Forecast_C$Year= as.factor(Forecast_C$Year)
 
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  N_sens.table = xtable(N_sens, caption=c("Sensitivity of the northern model to dropping or down-weighting data sources and alternative assumptions about growth."),label='tab:N_sensitivity',digits=2)    
-  align(N_sens.table) = c('l','l','>{\\centering}p{.6in}','>{\\centering}p{.5in}','>{\\centering}p{.5in}','>{\\centering}p{.6in}',
-                                  '>{\\centering}p{.5in}','>{\\centering}p{.6in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}')  
-
-  print(N_sens.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",scalebox=.85)
-
+  Forecast_C.table = xtable(Forecast_C, caption=c("Projection of potential China rockfish OFL, spawning biomass, and depletion for the central
+                                                          base case model."),label='tab:Forecast_C',digist=2)    
+  align(Forecast_C.table) = c('l','c','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}',
+                                   '>{\\centering}p{1in}','>{\\centering}p{1in}')  
+  print(Forecast_C.table, include.rownames=FALSE, caption.placement="top")
 ```
 
 
-<!-- ********************************************cENTRAL Uncertainty and Sensitivity TABLES******************************************************--> 
+\FloatBarrier
+
+<!-- *************************************************SOUTHERN HARVEST PROJECTIONS TABLES******************************************************** --> 
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-  #READ IN FILE
-    C_sens = read.csv("./txt_files/C_sensitivities.csv")
-     colnames(C_sens) = c("Label","Base (Francis weights)","Harmonic mean weights","Drop index","Drop ages",
-                          "Down-weight lengths","Free size Age0","Free CV Amin","External growth")
+  #########################################################################
+  #CHANGE ME
+    FirstYR=2015  # minimum year for the Spawning biomass table
+    LastYR=2024  # maximum year for the Spawning biomass table
+  #########################################################################
+    
+  #OFL contribution
+    OFLcatch = modS$derived_quants[grep("OFLCatch",modS$derived_quants$LABEL),]
+    OFLcatchyrs = OFLcatch[OFLcatch$LABEL>=paste("OFLCatch_",FirstYR,sep='') &  
+                             OFLcatch$LABEL<=paste("OFLCatch_",LastYR,sep=''),]
+    
+  #Landings
+    ForecastC = modS$timeseries[ , grepl("Yr|retain[(]B[)]", names(modS$timeseries))]
+    ForecastC$total = rowSums(ForecastC[,-1])
+    ForecastCyrs = subset(ForecastC, Yr>(FirstYR-1) & Yr<(LastYR+1))
+    
+  #Age 5+ biomass
+    Age5biomass = modS$timeseries[,c('Yr',"Bio_smry")]
+    Age5biomassyrs = subset(Age5biomass, Yr>(FirstYR-1) & Yr<(LastYR+1))
+    
+    
+  #pull spawning biomass
+    SpawningB = modS$derived_quants[grep("SPB",modS$derived_quants$LABEL),]
+    SpawningB = SpawningB[c(-1,-2),]
+    SpawningByrs = SpawningB[SpawningB$LABEL>=paste("SPB_",FirstYR,sep='') &  
+                               SpawningB$LABEL<=paste("SPB_",LastYR,sep=''),] 
+    
+  #pull depletion
+    Depletion = modS$derived_quants[grep("Bratio",modS$derived_quants$LABEL),]
+    Depletion = Depletion[c(-1,-2),]
+    Depletionyrs = Depletion[Depletion$LABEL>=paste("Bratio_",FirstYR,sep='') &  
+                               Depletion$LABEL<=paste("Bratio_",LastYR,sep=''),]  
+    
+    
+    Forecast_S = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
+                     SpawningByrs$Value,Depletionyrs$Value))
+    
+    colnames(Forecast_S)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
+                         "Spawning Biomass (mt)","Depletion")
+    Forecast_S$Year= as.factor(Forecast_S$Year)
 
 ```
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  C_sens.table = xtable(C_sens, caption=c("Sensitivity of the central model to dropping or down-weighting data sources and alternative assumptions about growth."),label='tab:C_sensitivity',digits=2)    
-  align(C_sens.table) = c('l','l','>{\\centering}p{.6in}','>{\\centering}p{.5in}','>{\\centering}p{.5in}','>{\\centering}p{.6in}',
-                                  '>{\\centering}p{.5in}','>{\\centering}p{.6in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}')  
-
-  print(C_sens.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable",scalebox=.75)
-
+  Forecast_S.table = xtable(Forecast_S, caption=c("Projection of potential China rockfish OFL, spawning biomass, and depletion for the southern
+                                                          base case model."),label='tab:Forecast_S',digits=2)    
+  align(Forecast_S.table) = c('l','c','>{\\centering}p{1in}','>{\\centering}p{1in}','>{\\centering}p{1in}',
+                                   '>{\\centering}p{1in}','>{\\centering}p{1in}')  
+  print(Forecast_S.table, include.rownames=FALSE, caption.placement="top")
 ```
 
 
-<!-- ********************************************SOUTHERN Uncertainty and Sensitivity TABLES******************************************************--> 
+\FloatBarrier
 
-```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
-  #READ IN FILE
-     S_sens = read.csv("./txt_files/S_sensitivities.csv")
-     S_sens = S_sens[,c(1:10)]
-     colnames(S_sens) = c("Label","Base (Francis weights)","Drop indices","Drop discard","Down-weight lengths","Drop ages",
-                          "No data weighting","Harmonic mean weights","External growth","Estimate h and M")
 
-```
-
-```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-  S_sens.table = xtable(S_sens, caption=c("Sensitivity of the southern model to dropping or down-weighting data sources and alternative assumptions about growth."),label='tab:S_sensitivity',digits=2)    
-  align(S_sens.table) = c('l','l','>{\\centering}p{.6in}','>{\\centering}p{.5in}','>{\\centering}p{.5in}','>{\\centering}p{.6in}',
-                                  '>{\\centering}p{.5in}','>{\\centering}p{.6in}','>{\\centering}p{.8in}','>{\\centering}p{.6in}','>{\\centering}p{.6in}')  
-
-  print(S_sens.table, include.rownames=FALSE, caption.placement="top",floating.environment="sidewaystable")
-
-```
 
 
 <!-- ******************************************************************************************************************************************** --> 
@@ -3801,27 +3806,25 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 ![Residuals in fit to length compositions for northern model. Filled circles indicate observed values greater than expected values continued, figure 2 of 2.  \label{fig:C_comp_lenfit_sex1mkt2_page2_multi-fleet_comparison}](r4ss/plots_C/comp_lenfit_sex1mkt2_page2_multi-fleet_comparison.png)
 
 
-![Fits to the marginal age composition for the northern OR recreational party/charter in the central model  \label{fig:C_ comp_agefit_flt10mkt2}](r4ss/plots_C/comp_agefit_flt10mkt2.png)
-
-\FloatBarrier
-
-
-
 ![Residuals in fit to conditional age-at-length compositions for the commercial dead-fish fishery in southern OR in the central model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_condAALfit_residsflt5mkt2}](r4ss/plots_C/comp_condAALfit_residsflt5mkt2.png)
 
 ![Residuals in fit to conditional age-at-length compositions for the recreational party/charter fishery in southern OR in the central model. Filled circles indicate observed values greater than expected values.  \label{fig:C_comp_condAALfit_residsflt7mkt2}](r4ss/plots_C/comp_condAALfit_residsflt7mkt2.png)
 
-![Implied fit to the marginal age-frequencies for the commercial dead-fish fishery in southern OR in the central model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:C_comp_gstagefit_flt5mkt2.png}](r4ss/plots_C/comp_gstagefit_flt5mkt2.png)
+\FloatBarrier
 
-![Implied fit to the marginal age-frequencies for recreational party/charter fishery in southern OR in the central model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:C_comp_gstagefit_flt7mkt2}](r4ss/plots_C/comp_gstagefit_flt7mkt2.png)
+![Fits to the marginal age composition for the northern OR recreational party/charter in the central model  \label{fig:C_ comp_agefit_flt10mkt2}](r4ss/plots_C/comp_agefit_flt10mkt2.png)
 
-
+![Length-based selectivity by fleet for the central model.  \label{fig:C_sel01_multiple_fleets_length1}](r4ss/plots_C/sel01_multiple_fleets_length1.png)
 
 \FloatBarrier
 
-![Fits to the central model age composition.  \label{fig:C_comp_agefit_mkt2_aggregated_across_time}](r4ss/plots_C/comp_agefit_mkt2_aggregated_across_time.png)
+<!-- ![Implied fit to the marginal age-frequencies for the commercial dead-fish fishery in southern OR in the central model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:C_comp_gstagefit_flt5mkt2.png}](r4ss/plots_C/comp_gstagefit_flt5mkt2.png)  -->
 
-![Length-based selectivity by fleet for the central model.  \label{fig:C_sel01_multiple_fleets_length1}](r4ss/plots_C/sel01_multiple_fleets_length1.png)
+<!-- ![Implied fit to the marginal age-frequencies for recreational party/charter fishery in southern OR in the central model. Fits are provided for evaluation only, but not included in the model likelihood as these samples are included in the likelihood as conditional-age-at-length data.  \label{fig:C_comp_gstagefit_flt7mkt2}](r4ss/plots_C/comp_gstagefit_flt7mkt2.png) -->
+
+<!-- ![Fits to the central model age composition.  \label{fig:C_comp_agefit_mkt2_aggregated_across_time}](r4ss/plots_C/comp_agefit_mkt2_aggregated_across_time.png) -->
+
+
 
 \FloatBarrier
 
@@ -3933,32 +3936,36 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 \FloatBarrier
 
 <!-- **************************************************R0 Likelihood profile FIGURES******************************************************* --> 
-![Likelihood profile over the log of equilibrium recruitment, $log(R_0)$ showing changes in negative log-likelihoods by data type for the northern model.  \label{fig:N_profile_logR0.N}](r4ss/plots_profiles/profile_logR0.N.png)
+![Likelihood profile over the log of equilibrium recruitment, $log(R_0)$ showing changes in negative log-likelihoods by data type for the pre-STAR northern model.  \label{fig:N_profile_logR0.N}](r4ss/plots_profiles/profile_logR0.N.png)
 
-![Likelihood profile over the log of equilibrium recruitment, $log(R_0)$ showing changes in negative log-likelihoods by data type for the central model.  \label{fig:C_profile_logR0.C}](r4ss/plots_profiles/profile_logR0.C.png)
+![Likelihood profile over the log of equilibrium recruitment, $log(R_0)$ showing changes in negative log-likelihoods by data type for the pre-STAR central model.  \label{fig:C_profile_logR0.C}](r4ss/plots_profiles/profile_logR0.C.png)
 
-![Likelihood profile over the log of equilibrium recruitment, $log(R_0)$ showing changes in negative log-likelihoods by data type for the southern model.  \label{fig:S_profile_logR0.S}](r4ss/plots_profiles/profile_logR0.S.png)
+![Likelihood profile over the log of equilibrium recruitment, $log(R_0)$ showing changes in negative log-likelihoods by data type for the pre-STAR southern model.  \label{fig:S_profile_logR0.S}](r4ss/plots_profiles/profile_logR0.S.png)
 
 <!-- ***************************************************M Likelihood profile FIGURES******************************************************* -->
-![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the central model.  \label{fig:C_profile_Mortality.C}](r4ss/plots_profiles/profile_Mortality.C.png)
+![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR central model.  \label{fig:C_profile_Mortality.C}](r4ss/plots_profiles/profile_Mortality.C.png)
 
-![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the southern model. \label{fig:S_profile_Mortality.S}](r4ss/plots_profiles/profile_Mortality.S.png)
+![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR southern model. \label{fig:S_profile_Mortality.S}](r4ss/plots_profiles/profile_Mortality.S.png)
 
-![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the northern model.  \label{fig:N_profile_Mortality.N}](r4ss/plots_profiles/profile_Mortality.N.png)
+![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR northern model.  \label{fig:N_profile_Mortality.N}](r4ss/plots_profiles/profile_Mortality.N.png)
 
 <!-- **************************************************h Likelihood profile FIGURES******************************************************* -->
-![Likelihood profile over the steepness of the stock-recruit relationship, $h$, showing changes in negative log-likelihoods by data type for the central model.  \label{fig:C_profile_Steepness.C}](r4ss/plots_profiles/profile_Steepness.C.png)
 
-![Likelihood profile over the steepness of the stock-recruit relationship, $h$, showing changes in negative log-likelihoods by data type for the southern model.  \label{fig:C_profile_Steepness.D}](r4ss/plots_profiles/profile_Steepness.S.png)
+![Likelihood profile over the steepness of the stock-recruit relationship, $h$, showing changes in negative log-likelihoods by data type for the pre-STAR southern model.  \label{fig:S_profile_Steepness}](r4ss/plots_profiles/profile_Steepness.S.png)
 
-![Likelihood profile over the steepness of the stock-recruit relationship, $h$, showing changes in negative log-likelihoods by data type for the northern model.  \label{fig:C_profile_Steepness.N}](r4ss/plots_profiles/profile_Steepness.N.png)
+![Likelihood profile over the steepness of the stock-recruit relationship, $h$, showing changes in negative log-likelihoods by data type for the pre-STAR northern model.  \label{fig:N_profile_Steepness}](r4ss/plots_profiles/profile_Steepness.N.png)
+
+![Likelihood profile over the steepness of the stock-recruit relationship, $h$, showing changes in negative log-likelihoods by data type for the pre-STAR central model.  \label{fig:C_profile_Steepness}](r4ss/plots_profiles/profile_Steepness.C.png)
 
 <!-- **************************************************post-STAR M Likelihood profile FIGURES******************************************************* -->
-![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the northern model.  \label{fig:N_profile_postSTAR](r4ss/plots_profiles/profile_Mortality_postSTAR_N.png)
 
-![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the central model.  \label{fig:C_profile_postSTAR](r4ss/plots_profiles/profile_Mortality_postSTAR_C.png)
+\FloatBarrier
 
-![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the southern model.  \label{fig:S_profile_postSTAR](r4ss/plots_profiles/profile_Mortality_postSTAR_S.png)
+![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the northern model.  \label{fig:N_profile_postSTAR}](r4ss/plots_profiles/profile_Mortality_postSTAR_N.png)
+
+![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the central model.  \label{fig:C_profile_postSTAR}](r4ss/plots_profiles/profile_Mortality_postSTAR_C.png)
+
+![Likelihood profile over the natural mortality, $M$, for the final base model, showing changes in negative log-likelihoods by data type for the southern model.  \label{fig:S_profile_postSTAR}](r4ss/plots_profiles/profile_Mortality_postSTAR_S.png)
 
 
 
@@ -3968,14 +3975,14 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 
 \FloatBarrier
+
 <!-- *****************************************************NORTHERN REFERENCE POINTS FIGURES****************************************************** --> 
 
 ![Time series of the spawning stock biomass for the northern model, with 95% asymptotic intervals.  \label{fig:N_ts7_Spawning_output_with_95_asymptotic_intervals_intervals}](r4ss/plots_N/ts7_Spawning_output_with_95_asymptotic_intervals_intervals.png)
 
-![Spawning depletion relative to the management target and minimum stock size threshold for the northern model.  \label{fig:N_ts9_Spawning_depletion}](r4ss/plots_N/ts9_Spawning_depletion.png)
+ ![Spawning depletion relative to the management target and minimum stock size threshold for the northern model.  \label{fig:N_ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals}](r4ss/plots_N/ts9_Spawning_depletion_with_95_asymptotic_intervals_intervals.png)
 
-![Equilibrium yield curve for the northern model.  \label{fig:N_yield1_yield_curve}](r4ss/plots_N/yield1_yield_curve.png)
-
+ ![Equilibrium yield curve for the northern model.  \label{fig:N_yield1_yield_curve}](r4ss/plots_N/yield1_yield_curve.png)
 
 
 \FloatBarrier
