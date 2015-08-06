@@ -1,5 +1,6 @@
 .Rproj.user
 .Rhistory
-*.pdf
+template.pdf
+template.html
 *.tex
 *.docx
