@@ -232,7 +232,7 @@ The assessment for the southern management area suggests that China rockfish wer
 \FloatBarrier
 
 
-![Time series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the three models of China rockfish (North=Washington state, Central = $40^\circ 10^\prime$ N. lat. to the OR/WA border, and South = south of $40^\circ 10^\prime$ N. lat.).  \label{fig:Spawnbio_all}](r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png)
+![Time series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the three models of China rockfish (North=Washington state, Central = $40^\circ 10^\prime$ N. latitude to the OR/WA border, and South = south of $40^\circ 10^\prime$ N. latitude).  \label{fig:Spawnbio_all}](r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png)
 
 ![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the three base case assessment models. \label{fig:reldeplete_all}](r4ss/plots_compare/base_compare4_Bratio_uncertainty.png)
 
@@ -286,7 +286,7 @@ Length and age composition data for China rockfish contain insufficient informat
 <!--************************** BEGIN: CREATE RECRUITMENT TABLE Central********************************* -->
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
 #create the recruitment table
-  Recruit_C.table = xtable(Recruittab_C, caption=c("Recent recruitment for the central model ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border)."),
+  Recruit_C.table = xtable(Recruittab_C, caption=c("Recent recruitment for the central model ($40^\\circ 10^\\prime$ N. latitude to the OR/WA border)."),
                                                   label='tab:Recruit_C',digits=2)  #digits=0 rounds the numbers
     #xtable requires a placeholder for rownames, hence 4 values    
     align(Recruit_C.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
@@ -371,7 +371,10 @@ Harvest rates estimated by the northern area model for Washington have never exc
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the exploitation and SPRratio
    SPRratio_Exploit_N.table = xtable(SPRratio_Exploit_N, caption=c("Recent trend in spawning potential ratio and 
-                                                                  exploitation for the northern China rockfish model (Washington state MCAs 1-4)."),
+                                                                  exploitation for the northern China rockfish model 
+                                                                  (Washington state MCAs 1-4).  Fishing intensity is (1-SPR) divided by
+                                                                  50\\% (the SPR target) and exploitation is F divided by 
+                                                                  F\\textsubscript{SPR}."),
                                                                   label='tab:SPR_Exploit_N')  #digits=0 rounds the numbers
    
     align(SPRratio_Exploit_N.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
@@ -384,7 +387,10 @@ Harvest rates estimated by the northern area model for Washington have never exc
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
   #create the exploitation and SPRratio
     SPRratio_Exploit_C.table = xtable(SPRratio_Exploit_C, caption=c("Recent trend in spawning potential ratio and exploitation 
-                                                                  for the central China rockfish model ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border)."),
+                                                                  for the central China rockfish model ($40^\\circ 10^\\prime$ N. 
+                                                                  latitude to the OR/WA border).  Fishing intensity is (1-SPR) divided by
+                                                                  50\\% (the SPR target) and exploitation is F divided by 
+                                                                  F\\textsubscript{SPR}."),
                                                                   label='tab:SPR_Exploit_C')  #digits=0 rounds the numbers
     align(SPRratio_Exploit_C.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(SPRratio_Exploit_C.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
@@ -398,7 +404,10 @@ Harvest rates estimated by the northern area model for Washington have never exc
   #create the exploitation and SPRratio
    SPRratio_Exploit_S.table = xtable(SPRratio_Exploit_S, caption=c("Recent trend in spawning potential ratio and 
                                                                    exploitation for the southern China rockfish model 
-                                                                   (south of $40^\\circ 10^\\prime$ N. latitude)."),
+                                                                   (south of $40^\\circ 10^\\prime$ N. latitude).  Fishing 
+                                                                   intensity is (1-SPR) divided by
+                                                                  50\\% (the SPR target) and exploitation is F divided by 
+                                                                  F\\textsubscript{SPR}."),
                                                                    label='tab:SPR_Exploit_S')  #digits=0 rounds the numbers
     align(SPRratio_Exploit_S.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1.2in}','>{\\centering}p{1in}','>{\\centering}p{1.2in}')  
     print(SPRratio_Exploit_S.table, include.rownames=FALSE, caption.placement="top",tabular.environment="tabularx",
@@ -526,7 +535,7 @@ assign(paste('Ref_pts_',mod_area,sep=''),Ref_pts)
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
  #create the Reference points
     Ref_pts_C.table = xtable(Ref_pts_C, caption=c("Summary of reference points and management quantities for the central 
-                                              ($40^\\circ 10^\\prime$ N. lat. to the OR/WA border) base case model."), 
+                                              ($40^\\circ 10^\\prime$ N. latitude to the OR/WA border) base case model."), 
                                                 label='tab:Ref_pts_C')  #digits=0 rounds the numbers
     align(Ref_pts_C.table) = c('l','>{\\raggedright}p{4.1in}','>{\\centering}p{.65in}','>{\\centering}p{1.4in}')  
     print(Ref_pts_C.table, include.rownames=FALSE, caption.placement="top",sanitize.text.function = function(x){x})
@@ -1345,7 +1354,7 @@ Jeff Abrams [-@Abrams2014] conducted a research study aboard recreational charte
 ###Biological Data: Age structures
 Age structure data were available from the following sources:
 
-_Southern model (California south of $40^\circ 10^\prime$ N lat.)_ 
+_Southern model (California south of $40^\circ 10^\prime$ N latitude)_ 
 \begin{itemize}[noitemsep,nolistsep,topsep=0pt]
   \item Jeff Abrams’ thesis (\emph{research},2010-2011)
   \item CDFW (\emph{recreational and research}, 1972-1985)
@@ -1354,7 +1363,7 @@ _Southern model (California south of $40^\circ 10^\prime$ N lat.)_
   \item NMFS groundfish ecology (\emph{research}, 2003-2005)
 \end{itemize}
 
-_Central model (California north of $40^\circ 10^\prime$ N lat. to the OR/WA border)_  
+_Central model (California north of $40^\circ 10^\prime$ N latitude to the OR/WA border)_  
 \begin{itemize}[noitemsep,nolistsep,topsep=0pt]
   \item Oregon, majority south of Florence (\emph{commercial dead landings}, 2001-2013)
   \item Oregon, north of Florence (\emph{recreational, all modes combined}, 2005-2013)
