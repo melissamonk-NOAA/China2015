@@ -62,7 +62,11 @@ SS_plots(out.N, pheight=4, plot=24, SSplotDatMargin=18, printfolder='', dir= out
 SS_plots(out.C, pheight=6, plot=24, SSplotDatMargin=18, printfolder='', dir= out.dir.C)
 SS_plots(out.S, pheight=5, plot=24, SSplotDatMargin=19, printfolder='', dir= out.dir.S)
 
-
+#   need extra right-hand margin and differing heights for length selectivity plots
+#   North and Central models only
+#   this should overwrite just a single existing figure in each case
+SS_plots(out.C, pheight=6, pwidth=9,  plot=2, SSplotDatMargin=18, printfolder='', dir= out.dir.C)
+SS_plots(out.S, pheight=7, pwidth=11, plot=2, SSplotDatMargin=18, printfolder='', dir= out.dir.S)
 ############################################################################
 ##Central model length comp bubble plot edits
 
