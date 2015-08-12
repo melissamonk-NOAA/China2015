@@ -653,7 +653,7 @@ Assuming that catches in 2015 and 2016 equal recent average catch, and that catc
         decision_north.table = xtable(decision_north, caption=c("Summary of 10-year projections beginning in 2017 for alternate states of nature 
                                                            based on an axis of uncertainty for the northern model.  Columns range over low, 
                                                            mid, and high states of nature, and rows range over different assumptions of 
-                                                           catch levels. An entry of "--" indicates that the stock is driven to very low abundance under the
+                                                           catch levels. An entry of '--' indicates that the stock is driven to very low abundance under the
                                                            particular scenario."), 
                                                            label='tab:decision_table_north')
       
@@ -670,7 +670,7 @@ Assuming that catches in 2015 and 2016 equal recent average catch, and that catc
                                    &  \\multicolumn{2}{c}{Base M 0.07} 
                                    &   \\multicolumn{2}{c}{High M 0.09} \\\\\n')
      print(decision_north.table,add.to.row=addtorow, include.rownames=FALSE, caption.placement="top",
-         hline.after=c(-1,0,10,20,30,nrow(decision_north.table)),scalebox=.9)
+         hline.after=c(-1,0,10,20,30,nrow(decision_north.table)),scalebox=.85)
 
 #,tabular.environment="tabularx",width="\\textwidth", 
 ```
@@ -691,7 +691,7 @@ Assuming that catches in 2015 and 2016 equal recent average catch, and that catc
         decision_central.table = xtable(decision_central, caption=c("Summary of 10-year projections beginning in 2017 for alternate states of nature 
                                                            based on an axis of uncertainty for the central model.  Columns range over low, mid,
                                                            and high states of nature, and rows range over different assumptions of catch 
-                                                           levels.  An entry of "--" indicates that the stock is driven to very low abundance under the
+                                                           levels.  An entry of '--' indicates that the stock is driven to very low abundance under the
                                                            particular scenario."), 
                                                            label='tab:decision_table_central')
       
@@ -708,7 +708,7 @@ Assuming that catches in 2015 and 2016 equal recent average catch, and that catc
                                    &  \\multicolumn{2}{c}{Base M 0.07} 
                                    &   \\multicolumn{2}{c}{High M 0.09} \\\\\n')
      print(decision_central.table,add.to.row=addtorow, include.rownames=FALSE, caption.placement="top",
-         hline.after=c(-1,0,10,20,30,nrow(decision_central.table)),scalebox=.9)
+         hline.after=c(-1,0,10,20,30,nrow(decision_central.table)),scalebox=.85)
 
 #,tabular.environment="tabularx",width="\\textwidth", 
 ```
@@ -729,8 +729,7 @@ Assuming that catches in 2015 and 2016 equal recent average catch, and that catc
         decision_south.table = xtable(decision_south, caption=c("Summary of 10-year projections beginning in 2017 for alternate states of nature 
                                                            based on an axis of uncertainty for the southern model.  Columns range over low, mid,
                                                            and high states of nature, and rows range over different assumptions of catch 
-                                                           levels. An entry of "--" indicates that the stock is driven to very low abundance under the
-                                                           particular scenario."), 
+                                                           levels. "), 
                                                            label='tab:decision_table_south')
       
         align(decision_south.table) = c('l','l|','c','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c|','>{\\centering}p{.7in}','c') 
@@ -1458,6 +1457,9 @@ The largest source of length composition data came from the recreational fleets 
 
 Since length compositions of retained fish are affected by numerous processes (e.g., growth, recruitment, exploitation, selectivity), the STAT also compared growth curves fit to size at age data. External fits indicated differences in growth among regions, and these patterns were consistent with growth curves estimated within the assessment models (see base model results for details).
 
+The stock was split at $40^circ 10^prime$ base on the following evidence, 1)  it is a zoogeographic boundary, 2) growth is more similar north and south of this boundary, with a jump at the boundary, and 3) the northern California area is remote from California population centers, and likely has a history of fishery development more similar to southern Oregon than south of Cape Mendocino.
+
+The stock was split at the Oregon and Washington border, supported by 1) differential external and internal model fits to growth, 2) different exploitation histories between the two states, e.g., Washington does not have a commercial fishery, and,  3) latitudinal differences in the length compositions.
 
 
 ###2013 Data Moderate Recommendations
@@ -3694,7 +3696,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 ![Conditional age-at-length compositions by year from the Abrams thesis study, used in the southern model.\label{fig:S_comp_condAALdat_bubflt9mkt0}](r4ss/plots_S/comp_condAALdat_bubflt9mkt0.png)
 
 
-![Length-based selectivity by fleet for the central model.  \label{fig:S_sel01_multiple_fleets_length1}](r4ss/plots_S/sel01_multiple_fleets_length1.png)
+![Length-based selectivity by fleet for the southern model.  \label{fig:S_sel01_multiple_fleets_length1}](r4ss/plots_S/sel01_multiple_fleets_length1.png)
 
 
 <!-- ******************************************************************************************************************************************** --> 
