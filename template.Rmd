@@ -89,7 +89,7 @@ The historical reconstruction of landings from the recreational fishery for Chin
     colnames(Exec_ca_catch) = c('Year','Fleet','Removals')
 ```
 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landings for Washington. Washington has does not have a commercial nearshore fishery. \\label{fig:Exec_wa_catch}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landings for Washington. Washington does not have a commercial nearshore fishery. \\label{fig:Exec_wa_catch}"}
       ggplot(Exec_wa_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
 
 ```
