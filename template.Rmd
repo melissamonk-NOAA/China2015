@@ -36,7 +36,7 @@ bibliography: chinarockfish2015.bib
       FirstYR=2006  # minimum year for tables
       LastYR=2015  # maximum year for tables
 #########################################################################
-    
+
 ##############################################################################################################
 #### loads workspace image of the BASE MODEL(S) from SS_output in r4ss    
       load("./r4ss/China_SS_output2015.RData")
@@ -90,17 +90,17 @@ The historical reconstruction of landings from the recreational fishery for Chin
 ```
 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="China rockfish landings for Washington. Washington does not have a commercial nearshore fishery. \\label{fig:Exec_wa_catch}"}
-      ggplot(Exec_wa_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
+      ggplot(Exec_wa_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(position='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
 
 ```
 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Stacked line plot of China rockfish landings history for Oregon by fleet (recreational and commercial). \\label{fig:Exec_or_catch}"}
-ggplot(Exec_or_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
+ggplot(Exec_or_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(position='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
 
 ```
 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Stacked line plot of China rockfish landings history for California by fleet (recreational and commercial).  \\label{fig:Exec_ca_catch}"}
-ggplot(Exec_ca_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
+ggplot(Exec_ca_catch, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(position='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral'))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Landings (mt)")
 
 ```
 
@@ -3347,7 +3347,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 ```
 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Oregon commercial fleet, north and south of Florence, OR. \\label{fig:OR_comm_removal}"}
-      ggplot(OR_comm_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Removals (mt)")
+      ggplot(OR_comm_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(position='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1900,2014,20))+ ylab("Removals (mt)")
 
 ```
 
@@ -3393,7 +3393,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
     colnames(WA_rec_remov1) = c('Year','Fleet','Removals')
 ```
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Washington recreational party/charter and private sectors.    Northern WA represents MCAs 3 and 4 and soutern WA represents MCAs 1 and 2. \\label{fig:WA_rec_removal}"}
-      ggplot(WA_rec_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1967,2014,5))+ ylab("Removals (mt)")
+      ggplot(WA_rec_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(position='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1967,2014,5))+ ylab("Removals (mt)")
 
 ```
 
@@ -3405,7 +3405,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
     colnames(OR_rec_remov1) = c('Year','Fleet','Removals')
 ```
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Oregon recreational party/charter and private sectors, north and south of Florence, OR. \\label{fig:OR_rec_removal}"}
-      ggplot(OR_rec_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1973,2014,5))+ ylab("Removals (mt)")
+      ggplot(OR_rec_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(position='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1973,2014,5))+ ylab("Removals (mt)")
 
 ```
 
@@ -3419,7 +3419,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
     colnames(CA_rec_remov1) = c('Year','Fleet','Removals')
 ```
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the California recreational party/charter and private sectors, north and south of $40^\\circ 10^\\prime$. \\label{fig:CA_rec_removal}"}
-      ggplot(CA_rec_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(poistion='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1928,2014,10))+ ylab("Removals (mt)")
+      ggplot(CA_rec_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(position='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1928,2014,10))+ ylab("Removals (mt)")
 
 ```
 
@@ -4161,9 +4161,6 @@ south_forecast = writeLines(readLines('./SS/linebreak_files/forecast_south.ss'))
 The 1987-1998 CDFW onboard observer program did not record the number of anglers at a fishing stop from 4/22/87 until 7/9/92. 
 The goal of this analysis is to impute the number of observed anglers in the initial period of the sampling program from the number of observed anglers and onboard anglers from the later years of the program.
 
-<!>
-<!>
-
 The number of observed anglers at a fishing stop is a subset of the number of total 
 number of anglers onboard the vessel (paid plus free anglers); a quantity which is consistently 
 recorded throughout the entire dataset.  We explored the using the total number of observed anglers onboard
@@ -4181,17 +4178,12 @@ were considered for inclusion in
 the final model by pairwise comparison of fitted model AIC values as well as 
 analysis of parameter significance.
 
-<!>
-<!>
-
 Effects related to interviewer were found to be very significant, although due 
 to the high turn-over rate of the interviewers in these data, interviewer 
 specific effects are not useful for prediction here. However, the total number 
 of interviewers onboard the vessel (one or two interviewers) was found to be strongly 
 significant and was included in the final models as a categorical effect.
 
-<!>
-<!>
 
 For imputing the observed number of observed anglers for the early period of the 
 dataset it is important to motivate an assumption of stationarity in the number 
@@ -4206,9 +4198,6 @@ effects produced higher overall AIC values, thus supporting the assumption of
 stationarity in time.
 
 
-<!>
-<!>
-
 Log Model:
 \begin{equation}
 y_{ij} \sim \beta_{0j} + \beta_{1j} \log(x_{ij}) + \epsilon_{ij} ~~~ \epsilon_{ij} \sim N( 0, \sigma_j )
@@ -4216,8 +4205,6 @@ y_{ij} \sim \beta_{0j} + \beta_{1j} \log(x_{ij}) + \epsilon_{ij} ~~~ \epsilon_{i
 
 ![The number of observed anglers plotted as a function of the number of total anglers. The log-normal mean curves are plotted on the scale of the data, and colored to indicate if the data was collected in the presence of one or two interviewers. Additionally, a total anglers rug plot is included to show the total angler data for which the number of observed anglers needs to be imputed. \label{obsAngLogModel}](plots/obsAngLogModel.pdf)
 
-<!>
-<!>
 
 Binomial Log Model:
 \begin{equation}
@@ -4235,8 +4222,6 @@ y_{ij} \sim B\Big( ~N_{ij}, ~\text{logit}\big(\beta_{0j} + \beta_{1j} \log(x_{ij
 Normal  |  67387.29     |  65317.02              |  64636.72 		       |
 Binomial|  66099.40     |  63753.06              |  62498.83  		       |
 
-<!>
-<!>
 
 The log model considers a typical normal linear model for each interviewer 
 level, except it uses the log of the number of total anglers as a predictor 
@@ -4254,8 +4239,6 @@ log model, as well as simple AIC support of the transformation. All models and
 model selection criterion were computed using the standard \verb|glm| function 
 in the R software environment for statistical computing [@rBase].
 
-<!>
-<!>
 
 The binomial log model was chosen for its low AIC value and reasonable mean 
 predictions. Untransformed binomial models were considered, however they produce 
