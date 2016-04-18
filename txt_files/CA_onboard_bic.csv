@@ -1,5 +1,5 @@
 Model,AIC,BIC
-\textbf{Logormal submodel},,
+\textbf{Lognormal submodel},,
 ~Year + Wave + Depth + Region + Year:Region + Region:Wave + Depth:Wave,2348.95,2927.52
 ~Year + Wave + Depth + Region + Wave:Region + Wave:Depth,2316.05,2571.45
 ~Year + Wave + Depth + Region + Wave:Depth,2308.72,2493.08

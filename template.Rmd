@@ -234,7 +234,7 @@ The assessment for the southern management area suggests that China rockfish wer
 
 ![Time series of spawning output trajectory (circles and line: median; light broken lines: 95% credibility intervals) for the three models of China rockfish (North=Washington state, Central = $40^\circ 10^\prime$ N. latitude to the OR/WA border, and South = south of $40^\circ 10^\prime$ N. latitude).  \label{fig:Spawnbio_all}](r4ss/plots_compare/base_compare2_spawnbio_uncertainty.png)
 
-![Estimated relative depletion with approximate 95\% asymptotic confidnce intervals (dashed lines) for the three base case assessment models. \label{fig:reldeplete_all}](r4ss/plots_compare/base_compare4_Bratio_uncertainty.png)
+![Estimated relative depletion with approximate 95\% asymptotic confidence intervals (dashed lines) for the three base case assessment models. \label{fig:reldeplete_all}](r4ss/plots_compare/base_compare4_Bratio_uncertainty.png)
 
  \FloatBarrier
 
@@ -428,16 +428,16 @@ Harvest rates estimated by the northern area model for Washington have never exc
 ##Ecosystem considerations{-}
 In this assessment, ecosystem considerations were not explicitly included in the analysis.  This is primarily due to a lack of relevant data and results of analyses (conducted elsewhere) that could contribute ecosystem-related quantitative information for the assessment.
 
-Recently available habitat information was used to select the data used in the onboard observer indices (see Appendix F, p.\ref{sec:AppendixF}).
+Recently available habitat information was used to select the data used in the onboard observer indices (see Appendix F, p. \ref{sec:AppendixF}).
 
 ##Reference points{-}
 The management line for China rockfish is at $40^\circ 10^\prime$ N. latitude, with differing management guidelines north and south.  From 2005-2010, the Nearshore Rockfish Complexes north and south of $40^\circ 10^\prime$ N. latitude were managed by a total catch Optimum Yield (OY).  As of the Pacific Fishery Management Council (PFMC) 2011-12 management cycle, China rockfish has a component OFL and ABC within the northern and southern Nearshore Rockfish Complexes, based on the work by Dick and MacCall [-@Dick2010].
 
-This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning output of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.7% - 83.2%, corresponding to an unfished spawning output of 24.4 billion eggs (~95% asymptotic interval: 15.2 – 33.7 billion eggs) of spawning output in the base model (Table \ref{tab:Ref_pts_N}).  Unfished age 5+ biomass was estimated to be 240.8 mt in the base case model. The target spawning output based on the biomass target ($SB_{40\%}$) is 9.8 billion eggs, which gives a catch of 6.3 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 5.8 mt.
+This stock assessment estimates that China rockfish in the north are above the biomass target. The spawning output of the stock declined between the 1960s and 1990s but has largely been stable during the past few decades.  The estimated relative depletion level in 2015 is 73.4% (~95% asymptotic interval: $\pm$ 63.7% - 83.2%, corresponding to an unfished spawning output of 24.4 billion eggs (~95% asymptotic interval: 15.2 – 33.7 billion eggs) of spawning output in the base model (Table \ref{tab:Ref_pts_N}).  Unfished age 5+ biomass was estimated to be 240.8 mt in the base case model. The target spawning output based on the biomass target ($SB_{40\%}$) is 9.8 billion eggs, which gives a catch of 6.3 mt. Equilibrium yield at the proxy $F_{MSY harvest}$ rate corresponding to $SPR_{50\%}$ is 5.8 mt.
 
-This stock assessment estimates that central area China rockfish are just above the biomass target. The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate. The estimated relative depletion level in 2015 is 61.5% (~95% asymptotic interval: $\pm$ 53.8% - 69.2%), corresponding to an unfished spawning output of 65.1 billion eggs (~95% asymptotic interval: 51.8 – 78.4 billion eggs) of spawning output in the base model (Table \ref{tab:Ref_pts_C}). Unfished age 5+ biomass was estimated to be 591.5 mt in the base case model. The target spawning output  based on the biomass target ($SB_{40\%}$) is 26 billion eggs, which gives a catch of 15.7 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 14.5 mt. 
+This stock assessment estimates that central area China rockfish are just above the biomass target. The rate of spawning output decline is estimated to be steepest during the 1980s to 1990s and has continued to decline since the 1990s at a slower rate. The estimated relative depletion level in 2015 is 61.5% (~95% asymptotic interval: $\pm$ 53.8% - 69.2%), corresponding to an unfished spawning output of 65.1 billion eggs (~95% asymptotic interval: 51.8 – 78.4 billion eggs) of spawning output in the base model (Table \ref{tab:Ref_pts_C}). Unfished age 5+ biomass was estimated to be 591.5 mt in the base case model. The target spawning output  based on the biomass target ($SB_{40\%}$) is 26 billion eggs, which gives a catch of 15.7 mt. Equilibrium yield at the proxy $F_{MSY harvest}$ rate corresponding to $SPR_{50\%}$ is 14.5 mt. 
 
-This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years. The estimated relative depletion level in 2015 is 27.9% (~95% asymptotic interval: $\pm$ 21.2% - 34.7%), corresponding to an unfished spawning output of 66.5 billion eggs (~95% asymptotic interval:  49.6 - 83.4 billion eggs) of spawning output in the base model (Table \ref{tab:Ref_pts_S}). Unfished age 5+ biomass was estimated to be 768.6 mt in the base case model. The target spawning output based on the biomass target ($SB_{40\%}$) is 26.6 billion eggs, which gives a catch of 21.1 mt. Equilibrium yield at the proxy $F_{MSY}$ harvest rate corresponding to $SPR_{50\%}$ is 19.5 mt. 
+This stock assessment estimates that China rockfish south of $40^\circ 10^\prime$ N. latitude are below the biomass target, but above the minimum stock size threshold, and have been increasing over the last 15 years. The estimated relative depletion level in 2015 is 27.9% (~95% asymptotic interval: $\pm$ 21.2% - 34.7%), corresponding to an unfished spawning output of 66.5 billion eggs (~95% asymptotic interval:  49.6 - 83.4 billion eggs) of spawning output in the base model (Table \ref{tab:Ref_pts_S}). Unfished age 5+ biomass was estimated to be 768.6 mt in the base case model. The target spawning output based on the biomass target ($SB_{40\%}$) is 26.6 billion eggs, which gives a catch of 21.1 mt. Equilibrium yield at the proxy $F_{MSY harvest}$ rate corresponding to $SPR_{50\%}$ is 19.5 mt. 
 
 
 \FloatBarrier
@@ -940,7 +940,7 @@ Both juvenile and adult China rockfish tend to be solitary and exhibit high site
 Little is known about dispersal of juvenile China rockfish during the pelagic stage, and they are not captured in the Southwest Fisheries Science Center's (SWFSC) juvenile rockfish cruise.  The 2013 assessment model treated the species as two stocks, north and south of Cape Mendocino, CA ($40^\circ 10^\prime$ N. latitude), which is also the management boundary for China rockfish.  For this assessment we explore assessment models north and south of $40^\circ 10^\prime$ N. latitude, as well as separate northern California/Oregon and Washington models in the north.  
 
 ###Early Life History
-China rockfish, like other species in the genus \emph{Sebastes}, are iteroparous, have internal fertilization,and bear live young. Gestation periods range from 1-2 months among the \emph{Sebastes} spp. that have been studied, but no data specific to China rockfish were found in our literature search. Parturition (release of larvae into the water) by China rockfish was reported between January and June in Central California [@Echeverria1987], but the duration of the pelagic larval and juvenile stages is unknown. Closely-related, nearshore rockfish species (e.g. gopher, black-and-yellow, kelp, and copper) recruit at small sizes (1.5-2 cm), and are thought to have short pelagic juvenile stages relative to other \emph{Sebastes} [@Anderson1983; @Love2002].
+China rockfish, like other species in the genus \emph{Sebastes}, are iteroparous, have internal fertilization, and bear live young. Gestation periods range from 1-2 months among the \emph{Sebastes} spp. that have been studied, but no data specific to China rockfish were found in our literature search. Parturition (release of larvae into the water) by China rockfish was reported between January and June in Central California [@Echeverria1987], but the duration of the pelagic larval and juvenile stages is unknown. Closely-related, nearshore rockfish species (e.g. gopher, black-and-yellow, kelp, and copper) recruit at small sizes (1.5-2 cm), and are thought to have short pelagic juvenile stages relative to other \emph{Sebastes} [@Anderson1983; @Love2002].
 
 
 ##Map
@@ -963,7 +963,7 @@ Prior to 2000, the Pacific Fishery Management Council (PFMC; Council) managed th
 
 The Council established management guidelines for the northern and southern Nearshore Rockfish Complexes in the 2005-2006 management cycle (Total Catch OY;  122 mt north of $40^\circ 10^\prime$ N. latitude and 615 mt south of $40^\circ 10^\prime$ N. latitude).  The 2011-2012 management cycle adopted and Overfishing Limit (OFL) and Annual Catch Limit (ACL) for the northern and southern Nearshore Rockfish Complexes, and the China rockfish contribution to the complex, which differ north and south of $40^\circ 10^\prime$ N. latitude.  In 2003, the Council established Rockfish Conservation Areas to control catches of overfished rockfish species, and large portions of the shelf were closed to fishing. 
 
-In 1995, Washington closed commercial hook-and-line gear in state waters (0-3 miles).  Oregon’s commercial nearshore fishery developed in the mid 1990s as an open access fishery.  Oregon adopted formal management of the commercial nearshore fishery in 2004.  Oregon adopted a 12 inch size limit in the commercial fishery for China rockfish in 2000, and California did the same in 2001.  California required a nearshore fishery permit as of 1999 and has had area-specific closures since 2000 to minimize interactions with canary and yelloweye rockfishes.
+In 1995, Washington closed commercial hook-and-line gear in state waters (0-3 miles).  Oregon’s commercial nearshore fishery developed in the mid-1990s as an open access fishery.  Oregon adopted formal management of the commercial nearshore fishery in 2004.  Oregon adopted a 12 inch size limit in the commercial fishery for China rockfish in 2000, and California did the same in 2001.  California required a nearshore fishery permit as of 1999 and has had area-specific closures since 2000 to minimize interactions with canary and yelloweye rockfishes.
 
 Washington adopted depth closures for the recreational fishery in 2006 for MCAs 2 (closed seaward of 30 fm), 3 (closed seaward of 20 fm) and 4 (closed seaward of 20 fm).  
 
@@ -1018,7 +1018,7 @@ The previous assessment of China rockfish [@Cope2015] modeled two China rockfish
 
 California’s commercial live-fish fishery began targeting nearshore rockfish species in the mid-1980s in southern California, and condition codes (live or dead) were required on landing receipts starting in 1993 [@CalCOFI2002]. However, fish landed live are not always recorded as live landings on the landing receipts, so estimates of live landings should be viewed as a minimum estimate [@CalCOFI2002]. Live annual landings of China rockfish surpassed landings of dead fish by the late 1990s, due to the increased value of fish landed live (Table \ref{tab:CA_comm_removal}, Figure \ref{fig:EJD_CALCOM_4}).
 
-Commercial landings of China rockfish in California from 1916-1968 were obtained from the historical reconstruction of Ralston et al.[-@Ralston2010], and also available from the CALCOM website. Their analysis differentiates between trawl-caught landings and “other” gears. In the case of China rockfish, less than 2 mt of landings from 1916-1968 were attributed to trawl gears, and these were excluded from the assessment. The remaining “other” gear types (cumulative removals of 197 mt from 1916-1968) landed China rockfish mainly south of Cape Mendocino, with a short pulse of landings between Cape Mendocino and the California-Oregon border in the 1930s and early 1940s (Figure \ref{fig:CA_reconstruct_landings}). Due to the relatively large landing estimates south of Cape Mendocino in the early years, catches from 1900 to 1916 were interpolated with a linear ramp from 0 mt in 1900 to 6.1 mt in 1916 (the first year of commercial landings estimated by  Ralston et al. [-@Ralston2010].
+Commercial landings of China rockfish in California from 1916-1968 were obtained from the historical reconstruction of Ralston et al. [-@Ralston2010], and also available from the CALCOM website. Their analysis differentiates between trawl-caught landings and “other” gears. In the case of China rockfish, less than 2 mt of landings from 1916-1968 were attributed to trawl gears, and these were excluded from the assessment. The remaining “other” gear types (cumulative removals of 197 mt from 1916-1968) landed China rockfish mainly south of Cape Mendocino, with a short pulse of landings between Cape Mendocino and the California-Oregon border in the 1930s and early 1940s (Figure \ref{fig:CA_reconstruct_landings}). Due to the relatively large landing estimates south of Cape Mendocino in the early years, catches from 1900 to 1916 were interpolated with a linear ramp from 0 mt in 1900 to 6.1 mt in 1916 (the first year of commercial landings estimated by  Ralston et al. [-@Ralston2010].
 
 
 ###Fishery-Dependent Data: Commercial Discards
@@ -1051,7 +1051,7 @@ The coastal recreational fleet is composed of two sectors; privately owned vesse
 
 The primary focus of coastal rockfish anglers is black rockfish.  Black rockfish occur in greater abundance and closer to shore than other coastal rockfish species, and while generally regarded as a “bottom fish,” they tend not to occupy crack and crevice habitat, thus making them more susceptible to hook-and-line fishing.  As rockfish daily limits decreased, the likelihood of recreational anglers retaining smaller rockfish species, such as China, as part of their daily bag limit likely also decreased.
 
-China rockfish are more common in northern Washington coast (Marine Catch Areas (MCAs) 3 and 4) from south of Tatoosh Island to Pt. Grenville inside of 15 fm and are rarely encountered south of the Point Grenville.  Makah Bay and the Umatilla reef areas seem to have the largest populations in the area (Tom Burlingame, Excel Fishing Charters, pers comm).  China rockfish are rare off of the central Washington coast (MCA 2) from the mouth of the Queets River to Leadbetter Point.  Some chartered vessels from Westport have gone multiple seasons without encountering any China rockfish in MCA 2 (Mark Cedergreen, Westport Charterboat Association, pers comm).  Suitable habitat is limited in MCA 1, from the mouth of the Leadbetter Point to the mouth of Columbia River. 
+China rockfish are more common in northern Washington coast (Marine Catch Areas (MCAs) 3 and 4) from south of Tatoosh Island to Pt. Grenville inside of 15 fm and are rarely encountered south of the Point Grenville.  Makah Bay and the Umatilla reef areas seem to have the largest populations in the area (Tom Burlingame, Excel Fishing Charters, pers. comm.).  China rockfish are rare off of the central Washington coast (MCA 2) from the mouth of the Queets River to Leadbetter Point.  Some chartered vessels from Westport have gone multiple seasons without encountering any China rockfish in MCA 2 (Mark Cedergreen, Westport Charterboat Association, pers. comm.).  Suitable habitat is limited in MCA 1, from the mouth of the Leadbetter Point to the mouth of Columbia River. 
 
 Historical estimates of China rockfish catch during 1967 and 1975-1989 were based on historical sport catch report series published by Washington Department of Fisheries (Table \ref{tab:WA_rec_removal}, Figure \ref{fig:WA_rec_removal}).  Catches for 1968-1974 and 1987-1989 were based on a linear interpolations between adjacent years.  From 1990 to current, catch estimates were produced by the Washington Department of Fish and Wildlife (WDFW) Ocean Sampling Program based on a catch expansion procedure that includes a complete count of vessels leaving or entering a port and dockside angler interviews.  The dockside interview program collects information on number of anglers fished, catch area, and target species.  Shorebased fishing, other than major jetties, is not sampled and is considered negligible.  Sampling and effort counts occur mainly from April to October.  Winter fishing is also considered negligible. 
 
@@ -1115,7 +1115,7 @@ The WDFW provided recreational dockside fisheries data from 1981 to 2014. These 
 
 Since recreational fishing trips target a wide variety of species, standardization of the catch rates requires selecting trips that are likely to have fished in habitats containing China rockfish. The method of Stephens and MacCall [-@Stephens2004] was used to identify trips with a high probability of catching China rockfish, based on the species composition of the catch in a given trip. Prior to applying the Stephens-MacCall filter, we identified potentially informative “predictor” species, i.e., those with sufficient sample sizes and temporal coverage (at least 30 positive trips total, distributed across at least 10 years of the index) to inform the binomial model. Coefficients from the Stephens-MacCall analysis (a binomial GLM) are positive for species which co-occur with China rockfish, and negative for species that are not caught with China rockfish. 
 
-Covariates considered in the full model included \emph{year, month, boat type, daily bag limits, and depth restrictions} (Figure \ref{fig:WA_dock_summarySM}).  All covariates were specified as categorical variables. The stepwise selection of covariates included in the final model was evaluated using standard information criterion for relative goodness of fit (AIC). \emph{Depth} was not included in the analysis because it was not uniformly recorded through time; depth data collection began during 2003. The covariates for \emph{daily bag limits} and \emph{depth restrictions} represent management changes. Summer fishing restrictions based on depth limitations were implemented during 2006 in WDFW areas 2, 3, an 4.  The daily rockfish limit was 15 fish from 1961-1991, 12 fish from 1992-1994, and reduced to 10 fish in 1995 (see Appendix H for the history of recreational regulations, p.\pageref{sec:AppendixH}).
+Covariates considered in the full model included \emph{year, month, boat type, daily bag limits, and depth restrictions} (Figure \ref{fig:WA_dock_summarySM}).  All covariates were specified as categorical variables. The stepwise selection of covariates included in the final model was evaluated using standard information criterion for relative goodness of fit (AIC). \emph{Depth} was not included in the analysis because it was not uniformly recorded through time; depth data collection began during 2003. The covariates for \emph{daily bag limits} and \emph{depth restrictions} represent management changes. Summer fishing restrictions based on depth limitations were implemented during 2006 in WDFW areas 2, 3, and 4.  The daily rockfish limit was 15 fish from 1961-1991, 12 fish from 1992-1994, and reduced to 10 fish in 1995 (see Appendix H for the history of recreational regulations, p.\pageref{sec:AppendixH}).
 
 CPUE was modeled using a delta-GLM approach, where the catch occurrence (binomial) component was modeled using a logit link function and the positive catch component was modeled after log-transformation of the response variable, according to a normal distribution with an identity link function. Data are collected at the trip level, with the number of fish landed and the number of anglers on each vessel being recorded. The amount of time fished by each angler is not recorded. Therefore, the units for CPUE are fish landed/angler-trip. A gamma distribution for the positive catch component was also explored, but model selection favored the lognormal model, although both models provided similar results. 
 
@@ -1144,7 +1144,7 @@ The percentage of trips that caught China rockfish was 13.6% prior to filtering,
 
 CPUE (number of fish per angler hour) was modelled using a "delta-GLM"" model [@Lo1992; @Stefansson1996]. Model selection using AIC supported inclusion of \emph{year} and \emph{region} effects in both the binomial and lognormal components of the index (Table \ref{tab:MRFSS_S_aic}). The addition of two-month \emph{wave} effects (to allow for seasonal changes in CPUE) did not improve model fit. Data in the binomial component also supported inclusion of a distance from shore variable (\emph{AREA\_X}). Residual-based model diagnostics for the positive component of the index suggest the data generally met the assumptions of the GLM (Figure \ref{fig:MRFSS_S_diag}). The resulting index  is highly variable, but suggests a decline in catch rates after 1995 relative to preceding years (Table \ref{tab:MRFSS_S_index}; Figure \ref{fig:MRFSS_S_index}).
 
-**California North of \boldmath{$40^\circ 10^\prime$} and Oregon Dockside Charter Boat Indices (MRFSS and ORBS)**
+**California North of \boldmath{$40^\circ 10^\prime$} N. latitude and Oregon Dockside Charter Boat Indices (MRFSS and ORBS)**
 
 For the Oregon sport fisheries, three indices of abundance were used in the pre-STAR Panel base model: (1) catch rates from the onboard observer program, (2) catch rates from the dockside survey component of the ORBS, and (3) catch rates from the dockside MRFSS (see description of California MRFSS index, above).  For the onboard observer index, all data elements were verified by a biologist, and thus there was a high degree of certainty in the catch, effort, and locations fished; however, there was limited spatial-temporal coverage and only charter boats were included (not private boats).  In contrast, the ORBS dockside survey has more comprehensive coverage and much greater samples sizes (i.e., 50-70 times more trips than onboard observer program), but there was less confidence in the data elements, as only catch and the number of anglers were verified by biologists (all other trip details were angler-reported).  The two dockside programs (ORBS and MRFSS) differ in terms of the measure of fishing effort (details below). A single fishing trip can be sampled in both by the onboard observer program and also dockside within ORBS. Because the onboard observer program data is at a much finer scale than the trip-based dockside data; we removed trips from the ORBS database that were double-sampled and chose to retain all onboard observer trips.
 
@@ -1254,7 +1254,7 @@ This survey is referred to as the “combo,” conducted annually since 2003.  T
 The survey, often referred to as the “triennial” survey was conducted every third year between 1977 and (and conducted in 2004 by the NWFSC using the same protocols).  The triennial survey trawls in depths (generally 30 to 275 fm) that are deeper the range and habitats of China rockfish, and was therefore not used in this assessment.
 
 *Pikitch study*    
-The Pikitch study was conducted between 1985 and 1987 [@Pikitch1988].  The northern and southern boundaries of the study were $48^\circ 42^\prime$ N latitude and $42^\circ 60^\prime$ N. latitude respectively, which is primarily within the Columbia INPFC area [@Pikitch1988 ; @Rogers1992].  Participation in the study was voluntary and included vessels using bottom, midwater, and shrimp trawl gears.  Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow and recorded the weight of species retained and discarded in the sample.  China rockfish are not targeted using trawl gear, and therefore we did not use data from this survey in the assessment.
+The Pikitch study was conducted between 1985 and 1987 [@Pikitch1988].  The northern and southern boundaries of the study were $48^\circ 42^\prime$ N latitude and $42^\circ 60^\prime$ N. latitude respectively, which is primarily within the Columbia INPFC area [@Pikitch1988; @Rogers1992].  Participation in the study was voluntary and included vessels using bottom, midwater, and shrimp trawl gears.  Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow and recorded the weight of species retained and discarded in the sample.  China rockfish are not targeted using trawl gear, and therefore we did not use data from this survey in the assessment.
  
 *Enhanced Data Collection Project (EDCP)*       
 The EDCP was conducted by ODFW to collect information on bycatch and discard groundfish species off the coast of Oregon from late 1995 to early 1999.  EDCP had limited spatial coverage in Oregon waters only.  China rockfish are not targeted using trawl gear, and therefore we did not use data from this survey in the assessment.
@@ -1317,7 +1317,7 @@ _Northern model (Washington state MCAs 1-4)_
 
 *Recreational: Washington (WDFW)*
 
-Recreational length- and age- composition data were provided directly from WDFW during winter 2015. The WDFW routinely collected recreational biological samples for China rockfish between 1995 and 2014, with all but one year sampled during 1979 to 1983. These composition data lack information on the number of fish sampled out of those landed in a given trip, and therefore are used without expansion to the sample level. Unexpanded recreational composition data are frequently used in West Coast stock assessments for the above reason. Length and age data collected from dockside recreational samples WA are summarized by the number of fish sampled (Table \ref{tab:WA_FishD_bio}). The WA recreational length- and age- compositions are shown in Figures \ref{fig:N_comp_lendat_flt1mkt2}, \ref{fig:N_comp_lendat_flt3mkt2}, \ref{fig:N_comp_lendat_sex1mkt2_multi-fleet_comparison}, and \ref{fig:N_comp_condAALdat_bubflt3mkt2}.
+Recreational length- and age- composition data were provided directly from WDFW during winter 2015. The WDFW routinely collected recreational biological samples for China rockfish between 1995 and 2014, with all but one year sampled during 1979 to 1983. These composition data lack information on the number of fish sampled out of those landed in a given trip, and therefore are used without expansion to the sample level. Unexpanded recreational composition data are frequently used in West Coast stock assessments for the above reason. Length and age data collected from dockside recreational samples WA are summarized by the number of fish sampled (Table \ref{tab:WA_FishD_bio}). The WA recreational length- and age- compositions are shown in Figures \ref{fig:N_comp_lendat_flt1mkt2}, \ref{fig:N_comp_lendat_flt3mkt2}, and \ref{fig:N_comp_condAALdat_bubflt3mkt2}.
 
 *Recreational: California MRFSS and CRFS length composition data*
 
@@ -1340,7 +1340,7 @@ Annual commercial length- and age-frequency distributions were developed for eac
 
 *Research: NMFS groundfish ecology survey*      
 
-From 2001-2005, the SWFSC Fisheries Ecology Division conducted longline surveys aboard a chartered commercial longline vessel at various stations between Monterey and Davenport, CA ($36^\circ$ N. latitude to $37.5^\circ$ N. latitude)(pers. comm. Don Pearson, SWFSC). Longline gear was set in various depths from 10 meters to 700 meters, parallel to the depth contour.  Each longline set consisted of 3-5 skates, each with about 250 2/0 circle hooks baited with squid.  In nearshore habitats, we allowed the gear to soak for roughly 30 minutes.  A small number of China rockfish length samples were available from this cruise, but were not included in the assessments due to sample size and potential differences in selectivity.
+From 2001-2005, the SWFSC Fisheries Ecology Division conducted longline surveys aboard a chartered commercial longline vessel at various stations between Monterey and Davenport, CA ($36^\circ$ N. latitude to $37.5^\circ$ N. latitude) (pers. comm. Don Pearson, SWFSC). Longline gear was set in various depths from 10 meters to 700 meters, parallel to the depth contour.  Each longline set consisted of 3-5 skates, each with about 250 2/0 circle hooks baited with squid.  In nearshore habitats, we allowed the gear to soak for roughly 30 minutes.  A small number of China rockfish length samples were available from this cruise, but were not included in the assessments due to sample size and potential differences in selectivity.
 
 *Research: California Collaborative Fisheries Research Program (CCFRP)*
 
@@ -1381,7 +1381,7 @@ _Northern model (Washington state MCAs 1-4)_
 
 The commercial ages from Oregon were extracted from PacFIN, and these data are uploaded by the states. The Washington state ages were provided by Tien-Shui Tsou (pers. comm.) and aged by WDFW.  Otoliths from various CDFW sampling programs (1972-1985) were aged for this assessment. It is unclear whether the otoliths were obtained from recreational boat modes, research cruises, and diving modes. For this reason, these ages were not included in the assessment models, but were used for external estimation of size at age.  Commercial port samplers in California sampled catch from recreational charter boats in the late 1970s and early 1980s.
 
-A total of 3,963 fish were aged/re-aged for this assessment (Table \ref{tab:growth_sample_size}), very few  of which were small or young fish(Figure \ref{fig:age_length_raw_state}). Prior to this assessment, the only available growth curve for China rockfish was estimated from Lea et al. [-@Lea1999].  Lea et al. [-@Lea1999] aged China rockfish via the surface aging method.  Surface ages are biased towards younger ages; the break-and-burn method is preferred and more precise [@Beamish1979; @Kimura1979].  All ages for this assessment were aged using the break-and-burn method, either by WDFW or the NMFS NWFSC Aging Lab.
+A total of 3,963 fish were aged/re-aged for this assessment (Table \ref{tab:growth_sample_size}), very few  of which were small or young fish (Figure \ref{fig:age_length_raw_state}). Prior to this assessment, the only available growth curve for China rockfish was estimated from Lea et al. [-@Lea1999].  Lea et al. [-@Lea1999] aged China rockfish via the surface aging method.  Surface ages are biased towards younger ages; the break-and-burn method is preferred and more precise [@Beamish1979; @Kimura1979].  All ages for this assessment were aged using the break-and-burn method, either by WDFW or the NMFS NWFSC Aging Lab.
 
 Length-at-age was initially estimated external to the population dynamics models using the von Bertalanffy growth curve [@vonB1938], $L_i = L_{\infty}e^{(-k[t-t_0])}$, where $L_i$ is the length (cm) at age $i$, $t$ is age in years, $k$ is rate of increase in growth, $t_0$ is the intercept, and $L_{\infty}$ is the asymptotic length.  The unavailability of small fish results in unrealistic estimates of $t_0$, on the order of -9 to -20 depending on the subset of data modeled.  For exploratory purposes, $t_0$ was fixed at 0, and for final estimates of growth the length of age-0 fish was fixed at 2 cm.  The NMFS SWFSC conducts an annual rockfish recruitment and ecosystem assessment survey.  Pelagic juvenile rockfish are collected at an average age of approximately 100 days. The mean size of all rockfish species at 1 month of age was roughly 2 cm.  At this age, length-at-age is fairly consistent among species and therefore differences in growth among species are unlikely to introduce considerable bias. We approximated size-at-age zero in the assessment with a value of 2 cm.
 
@@ -1389,17 +1389,17 @@ Differences in growth between sexes, among fleets, and regions were explored. To
 
 Using data from southern Oregon (south of Florence, OR), differences in growth among the commercial (dead fish) and the private recreational fleets were explored.  There were significant differences in growth between the fleets (Commercial: $L_{\infty}=36.23, k=0.22$; Recreational: $L_{\infty}=37.93, k=0.22$), suggesting differing selectivity between the fleets.  The commercial fleet has been restricted to a 12 in minimum size limit since 2000, with a preference for plate-sized fish.  All of the age data from the southern Oregon commercial (dead fish) fleet are from 2001-2013.  The recreational fleet has no minimum size limit and all samples are from 2005-2013. 
 
-Regional differences in growth were significant.  In general, the asympotic size of fish were smallest in southern California (south of $40^\circ 10^\prime$ N. latitude), increased in northern California (north of $40^\circ 10^\prime$ N. latitude) to southern Washington (MCAs 1 & 2) and decreased again in northern Washington (Table \ref{tab:growth_params} and Figure \ref{fig:age_length_region}).  
+Regional differences in growth were significant.  In general, the asymptotic size of fish were smallest in southern California (south of $40^\circ 10^\prime$ N. latitude), increased in northern California (north of $40^\circ 10^\prime$ N. latitude) to southern Washington (MCAs 1 & 2) and decreased again in northern Washington (Table \ref{tab:growth_params} and Figure \ref{fig:age_length_region}).  
 
 Stock Synthesis models growth as the Schnute parameterization of the von Bertalanffy growth model.  The size of fish at age-0 was fixed at 2 cm with a CV of 0.1, and all other parameters estimated within the model.
 
 ###Biological Data: Aging precision and bias
-Ageing imprecision was estimated using a collection of 529 China rockfish otoliths with multiple age reads (Figures \ref{fig:age_error1} - \ref{fig:age_error3}) . We analyzed this data set using the ageing error software provided by Andre Punt and Jim Thorson, publicly available at https://github.com/nwfsc-assess/nwfscAgeingError. The software estimated a bias in the age readings from some early samples read by a former NWFSC age reader and these were excluded from the compositions used in the model. The variability in age readings of the remaining readers was estimated under an assumption of a linear increase in standard deviation with age. The resulting estimate indicated a standard deviation in age readings increasing from 0.1 years at age 1 by about 1 year of uncertainty per 10 years of age to a standard deviation of 7.7 years at age 80.
+Ageing imprecision was estimated using a collection of 529 China rockfish otoliths with multiple age reads (Figures \ref{fig:age_error1} - \ref{fig:age_error3}). We analyzed this data set using the ageing error software provided by Andre Punt and Jim Thorson, publicly available at https://github.com/nwfsc-assess/nwfscAgeingError. The software estimated a bias in the age readings from some early samples read by a former NWFSC age reader and these were excluded from the compositions used in the model. The variability in age readings of the remaining readers was estimated under an assumption of a linear increase in standard deviation with age. The resulting estimate indicated a standard deviation in age readings increasing from 0.1 years at age 1 by about 1 year of uncertainty per 10 years of age to a standard deviation of 7.7 years at age 80.
 
 ###Biological Data: Weight-Length
 The weight-length relationship is based on the standard power function: $W = \alpha(L^\beta)$ where $W$ is individual weight (kg), $L$ is length (cm), and $\alpha$ and $\beta$ are coefficients used as constants.
 
-This assessment uses weight-length parameters for females of $\alpha=1.17x10^{-5}$ and $\beta=3.177$, derived from Lea et al. [-@Lea1999].  A fit of the length-weight relationship to the Oregon ORBS data, $\alpha=2.06x10^{-5}$ and $\beta=3.02$,  yielded a curve that was very similar to that reported in Lea et al. [-@Lea1999](Figure \ref{fig:weight_length}).
+This assessment uses weight-length parameters for females of $\alpha=1.17x10^{-5}$ and $\beta=3.177$, derived from Lea et al. [-@Lea1999].  A fit of the length-weight relationship to the Oregon ORBS data, $\alpha=2.06x10^{-5}$ and $\beta=3.02$,  yielded a curve that was very similar to that reported in Lea et al. [-@Lea1999] (Figure \ref{fig:weight_length}).
 
 
 ###Biological Data: Maturity and Fecundity
@@ -1417,7 +1417,7 @@ Dick and MacCall [-@Dick2010] estimated natural mortality for 50 data poor stock
 Cope et al. [-@Cope2015] used the maximum age for China rockfish of 79 years in the 2013 data moderate assessment, which produces a natural mortality rate of 0.055. The maximum age of China rockfish on the West Coast is now 83 years (age data for this assessment), which gives a natural mortality of 0.056 when calculated from Hoenig's method.
 
 ###Biological Data: Sex ratios
-The sex ratio from all of the aged China rockfish for this assessment were approximately 50% each males and females (WA:47\%, OR:47\%, and CA: 49\% female).  These fishes came from a mixture of recreational, commercial, and research collections.  
+The sex ratio from all of the aged China rockfish for this assessment were approximately 50% each males and females (WA: 47\%, OR: 47\%, and CA: 49\% female).  These fishes came from a mixture of recreational, commercial, and research collections.  
 
 
 
@@ -1429,9 +1429,9 @@ Dick and MacCall [-@Dick2010] estimated the overfishing level (OFL) for China, w
 
 China rockfish was assessed as a data moderate species in 2013 [@Cope2015].  The accepted assessment modelled removal and index data using Extended Depletion-Based Stock Reduction Analysis (XDB-SRA)  [@Dick2011], which is a Bayesian surplus production model reparameterized in terms of MacCall’s [-@MacCall2009] Depletion-Corrected Average Catch method.  The STAR panel favored regional models for China rockfish, north and south of $40^\circ 10^\prime$ N. latitude.  
 
-The stock north of $40^\circ 10^\prime$ N. latitude was found to be below target biomass, as a percentage of unfished biomass (a.k.a. “depletion”), but above the minimum stock size threshold (MSST).  The median of the posterior northern spawning biomass in 2013 was estimated at 37\% (84 mt), and the fishing mortality rate in 2012 was 21.5\% of $F_{MSY}$.  
+The stock north of $40^\circ 10^\prime$ N. latitude was found to be below target biomass, as a percentage of unfished biomass (a.k.a. “depletion”), but above the minimum stock size threshold (MSST).  The median of the posterior northern spawning biomass in 2013 was estimated at 37\% (84 mt), and the fishing mortality rate in 2012 was 21.5\% of $F_{MSY.}$  
 
-The stock south of $40^\circ 10^\prime$ N. latitude was found to be above target biomass, as a percentage of unfished biomass (a.k.a. “depletion”).  The median of the posterior southern spawning biomass in 2013 was estimated at 66\% (264 mt), and the fishing mortality rate in 2012 was 27\% of $F_{MSY}$.
+The stock south of $40^\circ 10^\prime$ N. latitude was found to be above target biomass, as a percentage of unfished biomass (a.k.a. “depletion”).  The median of the posterior southern spawning biomass in 2013 was estimated at 66\% (264 mt), and the fishing mortality rate in 2012 was 27\% of $F_{MSY.}$
 
 ###Spatial stock structure
 
@@ -1569,7 +1569,7 @@ The stock was split at the Oregon and Washington border, supported by 1) differe
     \textbf{STAT Response:} The selectivity pattern improved but estimates a very high M (0.12) and produces an implausible estimate of biomass 
     (>1000 times the base model). The model is not supportable as a change to the base model.
 
-\item[Request No. 7: Exclude the Marine Recreational Fisheries Statistics Survey (MRFSS) index in Oregon to define a new base case for the central model.] \hfill \\
+\item[Request No. 7: Exclude the Marine Recreational Fisheries Statistical Survey (MRFSS) index in Oregon to define a new base case for the central model.] \hfill \\
 
     \textbf{Rationale:}  It was learned that multiple intercept interviews were done for a single trip, so the index was not constructed from 
     trip level data, as was intended. This only affects MRFSS index for Oregon.
@@ -1746,7 +1746,7 @@ The stock was split at the Oregon and Washington border, supported by 1) differe
 ###Transition from the 2013 to 2015 stock assessment
 The first formal assessment of China rockfish was conducted as a data moderate assessment in 2013 [@Cope2015].  The results of the 2013 assessment were based on catch histories and indices of abundance from onboard (OR and CA) and dockside (OR and CA) surveys of the recreational fishing fleet.  Below, we describe the most important changes made since the last full assessment and explain rationale for each change.  [Note: descriptions below apply to the pre-STAR base model, and were not modified to reflect the final base model in order to provide a record of events leading to selection of the final model]:
 
-1. Population dynamics model changed from a Bayesian surplus production model (XDB-SRA) with two areas (U.S. waters north and south of $40^\circ 10^\prime$ N. latitude) to a length-based, age-structured statistical catch at age model (Stock Synthesis) with three areas (U.S. waters south of $40^\circ 10^\prime$ N. latitude, $40^\circ 10^\prime$ N. latitude to the OR-WA border, and from the OR-WA border to the U.S.-Canadian border). \emph{Rationale}: The assessment is moving from a data moderate to a full assessment, incorporating new data sources, e.g. individual growth, age and length compositions of landed and discarded catch.
+1. Population dynamics model changed from a Bayesian surplus production model (XDB-SRA) with two areas (U.S. waters north and south of $40^\circ 10^\prime$ N. latitude) to a length-based, age-structured statistical catch at age model (Stock Synthesis) with three areas (U.S. waters south of $40^\circ 10^\prime$ N. latitude, $40^\circ 10^\prime$ N. latitude to the OR-WA border, and from the OR-WA border to the U.S.-Canadian border). \emph{Rationale}: The assessment is moving from a data moderate to a full assessment, incorporating new data sources, e.g., individual growth, age and length compositions of landed and discarded catch.
 
 2. New point estimate for annual natural mortality rate (0.053).  \emph{Rationale}: median of a prior distribution derived from a method endorsed by the SSC (O. Hamel, NWFSC; pers. comm.).
 
@@ -1770,7 +1770,7 @@ Prior to the STAR Panel review meeting, age-structured production models (i.e., 
 We generated data sources for each of the models.  Fleets include:
 
 **Northern Model**     
-\emph{Recreational}: All catch in the northern model is recreational. The recreational fleets include separate landings from the party/charter and private./rental modes in MCAs 3-4 and combined party/charter and private/rental modes for MCAs 1-2 (where catches and sample sizes were lower).
+\emph{Recreational}: All catch in the northern model is recreational. The recreational fleets include separate landings from the party/charter and private/rental modes in MCAs 3-4 and combined party/charter and private/rental modes for MCAs 1-2 (where catches and sample sizes were lower).
 
 **Central Model**       
 \emph{Commercial}:  The commercial fleets include five separate fleets, one each for the live and dead commercial fishers in the following areas, California north of $40^\circ 10^\prime$ N. latitude, southern Oregon. Live and dead commercial fisheries were combined for northern Oregon as commercial landings were low in this area.
@@ -1898,7 +1898,7 @@ downweighting length comps (75% reduction in Francis weights, i.e. weights multi
 0.25). The pre-STAR models that attempted to estimate the size at age 0 and CV at Age minimum
 growth parameters resulted parameters going to bounds, producing unrealistic estimates for
 these parameter values. The pre-STAR model was highly sensitive to the exclusion of age the com-
-position data and ﬁxing growth the the externally estimated values. Lack of age data and
+position data and ﬁxing growth the externally estimated values. Lack of age data and
 ﬁxing growth to the external estimates produced an approximate doubling in the estimates
 of the stock size and in the status of the population. Removal of the age composition data,
 modeled as conditional age-at-length, impacts the scale of the pre-STAR model, in part because the
@@ -1952,7 +1952,7 @@ Likelihood profiles were conducted over four values for the steepness of the sto
 
 **Final base model likelihood profiles**
  
-Likelihood profiles over natural mortality were conducted for all of the final base models, and sensitivities to those models (Figures \ref{fig:N_profile_postSTAR}, \ref{fig:C_profile_postSTAR}, and \ref{fig:S_profile_postSTAR}).  The northern model had the best combined fit at the estimated value of natural mortality.  The southern model showed a good fit to the estimated value of natural mortality for the index data and the priors.  The length data in the souther model indicated a better fit at a lower value of natural mortality whereas the age data indicated the best fit towards the upper bound of the profile, M=0.12.  The central model was not able to estimate a reasonable value for natural mortality, with all data sources indicating the best fit to the data towards the upper bound of natural mortality in the profile.
+Likelihood profiles over natural mortality were conducted for all of the final base models, and sensitivities to those models (Figures \ref{fig:N_profile_postSTAR}, \ref{fig:C_profile_postSTAR}, and \ref{fig:S_profile_postSTAR}).  The northern model had the best combined fit at the estimated value of natural mortality.  The southern model showed a good fit to the estimated value of natural mortality for the index data and the priors.  The length data in the southern model indicated a better fit at a lower value of natural mortality whereas the age data indicated the best fit towards the upper bound of the profile, M=0.12.  The central model was not able to estimate a reasonable value for natural mortality, with all data sources indicating the best fit to the data towards the upper bound of natural mortality in the profile.
 
 #Reference Points
 
@@ -2108,8 +2108,8 @@ We gratefully acknowledge input and review from the STAR panel including Martin 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
       WCGOP_trip_discard.table = xtable(WCGOP_trip_discard, caption = c("Estimated discarded and retained China rockfish in the Nearshore 
                                                                         Fixed-gear Fishery provided by the West Coast Groundfish Observer 
-                                                                        Program (WCGOP). For the area South of $40^\\circ 10^\\prime$, where 
-                                                                        discards are higher, bootstraping was used to estimated a coefficient 
+                                                                        Program (WCGOP). For the area south of $40^\\circ 10^\\prime$, where 
+                                                                        discards are higher, bootstrapping was used to estimate a coefficient 
                                                                         of variation (CV) of the total discard amount. The mortality of discarded
                                                                         China rockfish is estimated by WCGOP as a function of the fishing depth 
                                                                         which varies by year. The average mortality fraction south of 
@@ -2154,7 +2154,7 @@ We gratefully acknowledge input and review from the STAR panel including Martin 
 ```
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
    WA_rec_removal.table = xtable(WA_rec_removal, caption = c("Recreational removals (mt) from the Washington party/charter (PC) and 
-                                                               private (PR) vessels.  Northern WA represents MCAs 3 and 4 and soutern WA
+                                                               private (PR) vessels.  Northern WA represents MCAs 3 and 4 and southern WA
                                                                represents MCAs 1 and 2.  WDFW provided all data. Note: A discard
                                                                mortality rate was applied to removals  presented in this table."),
                                                                label="tab:WA_rec_removal")
@@ -2237,7 +2237,7 @@ We gratefully acknowledge input and review from the STAR panel including Martin 
 ```
 <!-- Oregon commercial logbook TABLES--> 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
-      #OR commerical logbook sample size table
+      #OR commercial logbook sample size table
          Orcommlogss.table = xtable(Or_commlog_ss,caption=c("Commerical logbook filtering criteria and resulting sample sizes used 
                                                                    for China rockfish.  Bold value indicates the final trip-level 
                                                                    sample size used for delta-GLM analysis."),label='tab:OR_commlog_sample',digits=0)
@@ -2513,7 +2513,7 @@ We gratefully acknowledge input and review from the STAR panel including Martin 
 \FloatBarrier
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
         #ORBS index
-         ORBS_index1.table = xtable(ORBS_index1,caption=c(". The Oregon Recreational Boat Survey (ORBS) charter boat index (area-weighted)."),
+         ORBS_index1.table = xtable(ORBS_index1,caption=c("The Oregon Recreational Boat Survey (ORBS) charter boat index (area-weighted)."),
                                             label='tab:ORBS_index')
         align(ORBS_index1.table) = c('l','l','>{\\centering}p{1in}','>{\\centering}p{1in}')          
         print(ORBS_index1.table, include.rownames=FALSE, caption.placement="top", sanitize.text.function = function(x){x})
@@ -2565,7 +2565,7 @@ We gratefully acknowledge input and review from the STAR panel including Martin 
 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
           #onboard filter table
-             Onboard_filter.table = xtable(Onboard_filter,caption=c("Onboard observer dataset filtering criteria and resutling sample sizes 
+             Onboard_filter.table = xtable(Onboard_filter,caption=c("Onboard observer dataset filtering criteria and resulting sample sizes 
                                                                     used for China rockfish."),label='tab:Onboard_filter',digits=0)
              align( Onboard_filter.table) = c('l','>{\\raggedright}p{.8in}','>{\\raggedright}p{1.4in}','>{\\raggedright}p{1.8in}',
                                              '>{\\centering}p{1in}','>{\\centering}p{.8in}')  
@@ -2667,7 +2667,7 @@ We gratefully acknowledge input and review from the STAR panel including Martin 
 ```{r, eval=TRUE, echo=FALSE, results='asis', message=FALSE}
      ### CA CALCOM bio sample size table
          CAcalcom.table = xtable(CAcalcom, caption=c("Number of length samples and fish sampled in California, 
-                                                     south of $40^\\circ 10^\\prime$. Source:CALCOM."),
+                                                     south of $40^\\circ 10^\\prime$. Source: CALCOM."),
                                                     label='tab:CA_calcom_bio')
          align(CAcalcom.table) = c('l','l','l','>{\\centering}p{.9in}','>{\\centering}p{1in}') 
          print(CAcalcom.table, include.rownames=FALSE, caption.placement="top",hline.after=c(-1,0,8,nrow(CAcalcom.table)))
@@ -3155,7 +3155,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
     Forecast_N = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
                      SpawningByrs$Value,Depletionyrs$Value))
     
-    colnames(Forecast_N)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
+    colnames(Forecast_N)=c("Year","OFL contribution (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
                          "Spawning Biomass (mt)","Depletion")
     Forecast_N$Year= as.factor(Forecast_N$Year)
 
@@ -3210,7 +3210,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
     Forecast_C = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
                      SpawningByrs$Value,Depletionyrs$Value))
     
-    colnames(Forecast_C)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
+    colnames(Forecast_C)=c("Year","OFL contribution (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
                          "Spawning Biomass (mt)","Depletion")
     Forecast_C$Year= as.factor(Forecast_C$Year)
 
@@ -3266,7 +3266,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
     Forecast_S = as.data.frame(cbind(seq(FirstYR,LastYR,1),OFLcatchyrs$Value,ForecastCyrs$total, Age5biomassyrs$Bio_smry,
                      SpawningByrs$Value,Depletionyrs$Value))
     
-    colnames(Forecast_S)=c("Year","OFL contriubtion (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
+    colnames(Forecast_S)=c("Year","OFL contribution (mt)","ACL landings (mt)","Age 5+ biomass (mt)",
                          "Spawning Biomass (mt)","Depletion")
     Forecast_S$Year= as.factor(Forecast_S$Year)
 
@@ -3355,7 +3355,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!--California comm landings FIGURES--> 
 ![Estimated commercial landings of China rockfish (mt) in California by year and gear group (Source: CALCOM). \label{fig:EJD_CALCOM_1}](plots/EJD_Unaltered_CALCOM_landings_by_year+gear.png)
 
-![California commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2014. hook-and-line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{fig:EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
+![California commercial landings (mt) based on port samples in the China rockfish market category (258) by species and gear group, 1969-2014. Hook-and-line (“HKL”) gears are landing nearshore species in this category, mainly China rockfish, whereas trawl (“TWL”) gears landed species with a deeper depth distribution, and no China rockfish. \label{fig:EJD_CALCOM_2}](plots/EJD_sp_comps_MC258_actuaL_samples_by_gear.png)
 
 ![Revised California commercial landing estimates (mt) of China rockfish, north and south of Cape Mendocino, 1969-2014 (black bars). Estimates of California’s annual landed commercial catch used in the 2013 stock assessment are plotted for comparison (red line). \label{fig:EJD_CALCOM_3}](plots/EJD_China_comm_lands_by_year-region-compare2014.png)
 
@@ -3392,7 +3392,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
     WA_rec_remov1 = melt(WA_rec_remov,id='Year')
     colnames(WA_rec_remov1) = c('Year','Fleet','Removals')
 ```
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Washington recreational party/charter and private sectors.    Northern WA represents MCAs 3 and 4 and soutern WA represents MCAs 1 and 2. \\label{fig:WA_rec_removal}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Removals (mt) from the Washington recreational party/charter and private sectors.    Northern WA represents MCAs 3 and 4 and southern WA represents MCAs 1 and 2. \\label{fig:WA_rec_removal}"}
       ggplot(WA_rec_remov1, aes(x=Year, y=Removals,fill=Fleet)) +geom_area(position='stack')+ scale_fill_manual(values = c( 'lightsteelblue3','coral',"aquamarine2","mediumpurple"))+scale_x_continuous(breaks=seq(1967,2014,5))+ ylab("Removals (mt)")
 
 ```
@@ -3476,9 +3476,9 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![Summary data plots for the data set with Stephens-MacCall filtering for the Washington dockside index. \label{fig:WA_dock_summarySM}](plots/WA_dock_summarySM.png)
 
-![Diagnostic plots for the China rockfish positive catch component longnormal delta-GLM model for the dataset applying the Stephens-MacCall data filter for the Washington dockside index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:WA_dock_diagSM}](plots/WA_dock_diagSM.png)
+![Diagnostic plots for the China rockfish positive catch component lognormal delta-GLM model for the dataset applying the Stephens-MacCall data filter for the Washington dockside index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:WA_dock_diagSM}](plots/WA_dock_diagSM.png)
 
-![Diagnostic plots for the China rockfish positive catch component longnormal delta-GLM model for the dataset applying the Stephens-MacCall data filter, but retaining all of the positive records for the Washington dockside index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:WA_dock_diagSM_retain0}](plots/WA_dock_diagSM_retain0.png)
+![Diagnostic plots for the China rockfish positive catch component lognormal delta-GLM model for the dataset applying the Stephens-MacCall data filter, but retaining all of the positive records for the Washington dockside index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:WA_dock_diagSM_retain0}](plots/WA_dock_diagSM_retain0.png)
 
 ![Diagnostic plots for the China rockfish positive catch component gamma delta-GLM model for the dataset without Stephens-MacCall filtering for the Washington dockside index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:WA_dock_gamma}](plots/WA_dock_gamma.png)
 
@@ -3489,7 +3489,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
       WA_dock_SM =read.csv("./txt_files/WA_dock_SM.csv")
       WA_dock_noSM =read.csv("./txt_files/WA_dock_noSM.csv")
 ```
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Three indices considered for the Washington dockside program, applying the Stephens-MacCall filters and retaining all positive encounters (black),applying the Stephens-MacCall filter and retaining only those trips above the threshold value (red), and the index with no Stephens-MacCall filter applied. \\label{fig:WA_dock_allindex}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Three indices considered for the Washington dockside program, applying the Stephens-MacCall filters and retaining all positive encounters (black), applying the Stephens-MacCall filter and retaining only those trips above the threshold value (red), and the index with no Stephens-MacCall filter applied. \\label{fig:WA_dock_allindex}"}
     #WASHINGTON
       WAdock_final = WA_dock_final[1:34,]
       WAdock_SM    = WA_dock_SM[1:34,]
@@ -3505,7 +3505,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 
 
-```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Washington dockside program, with 95% lognormal confidence intervals, applying the Stephens-MaCall data filter and retaining all positive observations. \\label{fig:WA_dock_final}"}
+```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE,fig.cap="Index for the Washington dockside program, with 95% lognormal confidence intervals, applying the Stephens-MacCall data filter and retaining all positive observations. \\label{fig:WA_dock_final}"}
     #WASHINGTON
       WAdock_final = WA_dock_final[1:34,]
       plot(WAdock_final$Year, WAdock_final$Index, xlab="Year",ylab="Index",ylim=c(0,1),xlim=c(1981,2014),type='b',xaxt='n',lwd=1.5,pch=19)
@@ -3549,13 +3549,13 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 <!-- *****************************************************Oregon dockside figures*************************************************************--> 
 
-![. Species coefficients from the binomial GLM for presence/absence of China rockfish in the Oregon Recreational Boat Survey (ORBS) data set. Horizontal bars are 95\% confidence intervals.  \label{fig:ORBS_SM}](plots/ORBS_SM.png)
+![Species coefficients from the binomial GLM for presence/absence of China rockfish in the Oregon Recreational Boat Survey (ORBS) data set. Horizontal bars are 95\% confidence intervals.  \label{fig:ORBS_SM}](plots/ORBS_SM.png)
 
 
-![. Comparison of delta-GLM index trends in Southern Oregon, Northern Oregon, and a habitat area-weighted index.  \label{fig:ORBS_index_compare}](plots/ORBS_index_compare.png)
+![Comparison of delta-GLM index trends in Southern Oregon, Northern Oregon, and a habitat area-weighted index.  \label{fig:ORBS_index_compare}](plots/ORBS_index_compare.png)
 
 
-![. Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the Southern Oregon Recreational Boat Survey (ORBS) data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:ORBS_diag_lognormal}](plots/ORBS_diag_lognormal.png)
+![Diagnostic plots for the China rockfish delta-GLM index (lognormal component) for the Southern Oregon Recreational Boat Survey (ORBS) data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:ORBS_diag_lognormal}](plots/ORBS_diag_lognormal.png)
 
 
 ![Diagnostic plots for the China rockfish delta-GLM index (gamma component) for the Northern Oregon Recreational Boat Survey (ORBS) data set.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right). \label{fig:ORBS_diag_gamma}](plots/ORBS_diag_gamma.png)
@@ -3572,14 +3572,14 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!-- ****************************************************Recreational onboard observer FIGURES****************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-![Frequencies of the discard lengths from the Oregon (ODFW 2001,2003-2014) and California (CDFW 1999-2014 and CalPoly 2001-2014) onboard observer programs. \label{fig:onboard_discard_lengths}](plots/onboard_discard_lengths.png)
+![Frequencies of the discard lengths from the Oregon (ODFW 2001, 2003-2014) and California (CDFW 1999-2014 and CalPoly 2001-2014) onboard observer programs. \label{fig:onboard_discard_lengths}](plots/onboard_discard_lengths.png)
 
 
 
 <!-- OR Recreational onboard Oregon FIGURES--> 
 ![Characterization of the final subset of Oregon onboard observer data used in delta-GLM analyses for China rockfish. \label{fig:OR_onboard_summary}](plots/OR_onboard_summary.png)
 
-![The distribution of drift-level CPUE data relative to potential covariates evaluated in the China rockfish Oregon onboard observer delta-GLM analysis(positive encounters only). \label{fig:OR_onboard_CPAH}](plots/OR_onboard_CPAH.png)
+![The distribution of drift-level CPUE data relative to potential covariates evaluated in the China rockfish Oregon onboard observer delta-GLM analysis (positive encounters only). \label{fig:OR_onboard_CPAH}](plots/OR_onboard_CPAH.png)
 
 
 ```{r,eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Index for the Oregon onboard observer program, with 95% lognormal confidence intervals. \\label{fig:OR_onboard}"}
@@ -3592,7 +3592,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 \newpage
 
-![Diagnostic plots for the China rockfish positive catch component lognromal delta-GLM model for the Oregon onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:OR_onboard_diag}](plots/OR_onboard_diag.png)
+![Diagnostic plots for the China rockfish positive catch component lognormal delta-GLM model for the Oregon onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:OR_onboard_diag}](plots/OR_onboard_diag.png)
 
 
 
@@ -3614,7 +3614,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 \newpage
 
-![Diagnostic plots for the China rockfish positive catch component lognromal delta-GLM model for the 1988-1999 California onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:prehist_onboard_diag}](plots/prehist_onboard_diag.png)
+![Diagnostic plots for the China rockfish positive catch component lognormal delta-GLM model for the 1988-1999 California onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:prehist_onboard_diag}](plots/prehist_onboard_diag.png)
 
 
 
@@ -3634,7 +3634,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 \newpage
 
-![Diagnostic plots for the China rockfish positive catch component lognromal delta-GLM model for the 2000-2014 California onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:CA_onboard_diag}](plots/CA_onboard_diag.png)
+![Diagnostic plots for the China rockfish positive catch component lognormal delta-GLM model for the 2000-2014 California onboard observer index.  These are used to evaluate model fit (top left), assumptions of normality (top right), assumptions of constant variance (bottom left), and the presence of outliers (bottom right).  \label{fig:CA_onboard_diag}](plots/CA_onboard_diag.png)
 
 
 \FloatBarrier
@@ -3652,7 +3652,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 ![WDFW length compositions for the northern Washington recreational CPFV fleet. \label{fig:N_comp_lendat_flt3mkt2}](r4ss/plots_N/comp_lendat_flt3mkt2.png)
 
-![Length compositions for northern model. \label{fig:N_comp_lendat_sex1mkt2_multi-fleet_comparison}](r4ss/plots_N/(r4ss/plots_N/comp_lendat_sex1mkt2_multi-fleet_comparison.png)
+<!--![Length compositions for northern model. \label{fig:N_comp_lendat_sex1mkt2_multi-fleet_comparison}](r4ss/plots_N/(r4ss/plots_N/comp_lendat_sex1mkt2_multi-fleet_comparison.png) -->
 
 ![Conditional age-at-length compositions for recreational private/rental catch in northern WA in the northern model.  \label{fig:N_comp_condAALdat_bubflt3mkt2}](r4ss/plots_N/comp_condAALdat_bubflt3mkt2.png)
 
@@ -3732,7 +3732,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!-- ****************************************************weight-length FIGURES*******************************************************************--> 
 <!-- ******************************************************************************************************************************************** --> 
 
-![Comparison of the China rockfish weight-length curves from Lea et al. (1999) for California and those derived from the Oregone ORBS (dockside sampling program) data provided for this assessment. \label{fig:weight_length}](plots/Weight_length.png)
+![Comparison of the China rockfish weight-length curves from Lea et al. (1999) for California and those derived from the Oregon ORBS (dockside sampling program) data provided for this assessment. \label{fig:weight_length}](plots/Weight_length.png)
 
 \FloatBarrier
 <!-- ******************************************************************************************************************************************** --> 
@@ -3743,7 +3743,7 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 <!-- ******************************************************************************************************************************************** --> 
 <!-- *************************************************STAR PANEL Recommendations FIGURES******************************************************** --> 
 <!-- ******************************************************************************************************************************************** --> 
-![Comparison of depletion among the 2013 data moderate assessment, a SS3 bridge model, and the 2015 base case for the combined nothern and central models.   \label{fig:STARrequest2_CN}](plots/STARrequest2_CN.png)
+![Comparison of depletion among the 2013 data moderate assessment, a SS3 bridge model, and the 2015 base case for the combined northern and central models.   \label{fig:STARrequest2_CN}](plots/STARrequest2_CN.png)
 
 ![Comparison of depletion among the 2013 data moderate assessment, a SS3 bridge model, and the 2015 base case for the southern model.   \label{fig:STARrequest2_S}](plots/STARrequest2_S.png)
 
@@ -3907,9 +3907,9 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 
 \FloatBarrier
 
-![Sensitivity of spawning biomass to fixed versus estiamted values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_compare1_spawnbio}](r4ss/plots_sensitivity/S_est_h_and_M_compare1_spawnbio.png)
+![Sensitivity of spawning biomass to fixed versus estimated values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_compare1_spawnbio}](r4ss/plots_sensitivity/S_est_h_and_M_compare1_spawnbio.png)
 
-![Sensitivity of relative spawning biomass to fixed versus estiamted values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_compare3_Bratio}](r4ss/plots_sensitivity/S_est_h_and_M_compare3_Bratio.png)
+![Sensitivity of relative spawning biomass to fixed versus estimated values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_compare3_Bratio}](r4ss/plots_sensitivity/S_est_h_and_M_compare3_Bratio.png)
 
 ![Sensitivity of growth to fixed versus estimated values of steepness and natural mortality to estimated values in the southern model.  \label{fig:S_est_h_and_M_growth_comparison}](r4ss/plots_sensitivity/S_est_h_and_M_growth_comparison.png)
 
@@ -3952,11 +3952,11 @@ print(Timeseries.table, include.rownames=FALSE, caption.placement="top",tabular.
 ![Likelihood profile over the log of equilibrium recruitment, $log(R_0)$ showing changes in negative log-likelihoods by data type for the pre-STAR southern model.  \label{fig:S_profile_logR0.S}](r4ss/plots_profiles/profile_logR0.S.png)
 
 <!-- ***************************************************M Likelihood profile FIGURES******************************************************* -->
-![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR central model.  \label{fig:C_profile_Mortality.C}](r4ss/plots_profiles/profile_Mortality.C.png)
+![Likelihood profile over natural mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR central model.  \label{fig:C_profile_Mortality.C}](r4ss/plots_profiles/profile_Mortality.C.png)
 
-![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR southern model. \label{fig:S_profile_Mortality.S}](r4ss/plots_profiles/profile_Mortality.S.png)
+![Likelihood profile over natural mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR southern model. \label{fig:S_profile_Mortality.S}](r4ss/plots_profiles/profile_Mortality.S.png)
 
-![Likelihood profile over natrual mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR northern model.  \label{fig:N_profile_Mortality.N}](r4ss/plots_profiles/profile_Mortality.N.png)
+![Likelihood profile over natural mortality, $M$, showing changes in negative log-likelihoods by data type for the pre-STAR northern model.  \label{fig:N_profile_Mortality.N}](r4ss/plots_profiles/profile_Mortality.N.png)
 
 <!-- **************************************************h Likelihood profile FIGURES******************************************************* -->
 
