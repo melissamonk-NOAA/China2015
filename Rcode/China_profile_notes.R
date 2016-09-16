@@ -336,3 +336,99 @@ axis(1,at=h.vec[h.vec!=0.773]) # axis for small numbers
 axis(1,at=h.vec[h.vec==0.773]) # axis with more decimals
 axis(2)
 dev.off() # close PNG file
+
+
+### new profiles at STAR panel
+
+# directory with everything
+M.prof.dir.C <- file.path(dir.mods, "China_Central_STAR_M_0.07_tune_profile")
+
+M.vec <- seq(0.04, 0.12, 0.01) # 10 values, but shouldn't take too long
+SS_profile(dir=M.prof.dir.C, string="NatM_p_1_Fem_GP_1", profilevec=M.vec,
+           extras="-nohess -nox")
+
+#### code for M profile figure (PNG should appear in the directory with the model output)
+
+# read in model results
+profilemodels <- SSgetoutput(dirvec=M.prof.dir.C, keyvec=1:length(M.vec), getcovar=FALSE)
+# summarize output
+profilesummary <- SSsummarize(profilemodels)
+# make plot
+SSplotProfile(profilesummary,  # summary object
+              plot=FALSE, print=TRUE,
+              minfraction = 0.001,
+              sort.by.max.change = FALSE,
+              profile.string = "NatM_p_1_Fem_GP_1", # substring of profile parameter
+              profile.label="Natural mortality (M)", # axis label
+              plotdir=M.prof.dir.C)
+
+
+
+### R0 profile central
+# vectors of log(R0) spanning estimates 
+logR0vec.C <- seq(5.0, 2.6, -.2)
+R0.prof.dir.C <- file.path(dir.mods, "China_Central_STAR_M_0.07_tune_profile.R0")
+SS_profile(dir=R0.prof.dir.C, string="NatM_p_1_Fem_GP_1", profilevec=logR0vec.C,
+           extras="-nohess -nox")
+
+profilemodels <- SSgetoutput(dirvec=R0.prof.dir.C, keyvec=3:length(logR0vec.C),
+                             getcovar=FALSE)
+profilemodels$MLE <- out.C
+profilesummary <- SSsummarize(profilemodels)
+# plot profile using summary created above
+SSplotProfile(profilesummary,           # summary object
+              minfraction = 0.0001,
+              sort.by.max.change = FALSE,
+              xlim=c(3.2,4.6),
+              ymax=200,
+              plotdir=R0.prof.dir.C,
+              print=TRUE,
+              profile.string = "R0", # substring of profile parameter
+              profile.label="Log of unfished equilibrium recruitment, log(R0)") # axis label
+file.copy(file.path(R0.prof.dir.C, 'profile_plot_likelihood.png'),
+          file.path(R0.prof.dir.C, '../profile_logR0.C.png'), overwrite=TRUE)
+# Piner Plot showing influence of age comps by fleet
+PinerPlot(profilesummary,           # summary object
+          component="Age_like",
+          main="Changes in length-composition likelihoods by fleet",
+          minfraction = 0.0001,
+          xlim=c(3.2,4.6),
+          ymax=200,
+          plotdir=R0.prof.dir.C,
+          print=FALSE,
+          profile.string = "R0", # substring of profile parameter
+          profile.label="Log of unfished equilibrium recruitment, log(R0)") # axis label
+file.copy(file.path(R0.prof.dir.C, 'profile_plot_likelihood.png'),
+          file.path(R0.prof.dir.C, '../profile_logR0.C.png'), overwrite=TRUE)
+
+
+
+#### code for M profile figure (PNG should appear in the directory with the model output)
+# directory with everything
+M.prof.dir.C <- file.path(dir.mods, "China_Central_STAR_July9_BASE_CANDIDATE_M_profile")
+
+M.vec <- seq(0.04, 0.12, 0.01) # 10 values, but shouldn't take too long
+SS_profile(dir=M.prof.dir.C, string="NatM_p_1_Fem_GP_1", profilevec=M.vec,
+           extras="-nohess -nox")
+
+# read in model results
+profilemodels <- SSgetoutput(dirvec=M.prof.dir.C, keyvec=1:length(M.vec), getcovar=FALSE)
+# summarize output
+profilesummary <- SSsummarize(profilemodels)
+# make plot
+SSplotProfile(profilesummary,  # summary object
+              plot=FALSE, print=TRUE,
+              minfraction = 0.001,
+              sort.by.max.change = FALSE,
+              profile.string = "NatM_p_1_Fem_GP_1", # substring of profile parameter
+              profile.label="Natural mortality (M)", # axis label
+              plotdir=M.prof.dir.C)
+
+
+
+png(file.path(dir.mods, "profiles/profile_spawn_bio_central.png"),
+    width=6.5, height=6.5, res=300, units='in', pointsize=10)
+models <- 1:7 # this should correspond to the range of M.vec values that you want to include
+plot(M.vec[models], profilesummary$SpawnBio[profilesummary$SpawnBio$Yr==2015,models],
+     type='o', lwd=3, xlab="Natural mortality (M)", ylab="Spawning output (millions of eggs)")
+dev.off()

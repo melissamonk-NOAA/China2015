@@ -11,7 +11,7 @@ if (system("hostname", intern=TRUE) %in% c("NWCDW01724920","NWCLW01724829") ){
 
 # read base model from each area
 dir.S.base <- file.path(dir.mods, 'China_South_2015-06-15_EJ_v01_PRE-STAR_BASE')
-dir.C.base <- file.path(dir.mods, 'China_Central_PRE-STAR_BASE_candidate2')
+dir.C.base <- file.path(dir.mods, 'China_Central__GOOD_BASE')
 dir.N.base <- file.path(dir.mods, 'China_North_PRE-STAR_BASE_candidate1')
 out.S <- SS_output(dir.S.base)
 out.C <- SS_output(dir.C.base)
@@ -50,13 +50,15 @@ C.fleetnames.short <- c("1_CA_North_Comm_Dead" ,  "2_CA_North_Comm_Live",
                         "9_OR_North_Comm"       ,  "10_OR_North_Rec_PC",
                         "11_OR_North_Rec_PR"    ,  "12_OR_South_Rec_PC_ORBS")
 # central model multi-fleet length data bubble plot in custom size
-SSplotComps(out.C, fleetnames=C.fleetnames.short, pheight=8,
+SSplotComps(out.C, fleetnames=C.fleetnames.short, pheight=7,
             bub=TRUE, datonly=TRUE, cexZ1=4, subplot=24, print=TRUE,
-            plotdir=file.path(dir.C.base, 'plots'))
+            maxrows=5,
+            plotdir=file.path(dir.C.base, 'plots2'))
 # central model multi-fleet length residual bubble plot in custom size
-SSplotComps(out.C, fleetnames=C.fleetnames.short, pheight=8,
+SSplotComps(out.C, fleetnames=C.fleetnames.short, pheight=7,
             bub=TRUE, datonly=FALSE, subplot=24, print=TRUE,
-            plotdir=file.path(dir.C.base, 'plots'))
+            maxrows=5,
+            plotdir=file.path(dir.C.base, 'plots2'))
 
 
 # southern model multi-fleet length data bubble plot in custom size
@@ -128,4 +130,45 @@ dev.off()
 #   this should overwrite just a single existing figure in each case
 SS_plots(out.N, pheight=4, plot=24, SSplotDatMargin=18)
 SS_plots(out.C, pheight=6, plot=24, SSplotDatMargin=18)
-SS_plots(out.S, pheight=5, plot=24, SSplotDatMargin=18)
+SS_plots(out.S, pheight=5, plot=24, SSplotDatMargin=19)
+
+############################################################################
+# map showing areas
+mod.names <- c("North","Central","South")
+mod.cols  <- c("blue", "purple", "red")
+require(maps)
+require(mapdata)
+
+png(file.path(dir.plots, 'map_showing_areas.png'),
+    width=6.5, height=8, res=350, units='in')
+# map with Canada and Mexico (not sure how to add states on this one)
+map('worldHires', regions=c("Canada","Mexico"),
+    xlim=c(-130, -114), ylim=c(31, 51),
+    col='grey', fill=TRUE, interior=TRUE, , lwd=1)
+abline(h=c(40+10/60, 46.25), lty=3)
+# map with US states
+map('state', regions=c("Wash","Oreg","Calif","Idaho",
+                 "Montana","Nevada","Arizona","Utah"),
+    add=TRUE,
+    col='grey', fill=TRUE, interior=TRUE, lwd=1)
+axis(2, at=seq(32,50,2), lab=paste0(seq(32,50,2), "°N"), las=1)
+axis(1, at=seq(-130,-114,4), lab=paste0(abs(seq(-130,-114,4)), "°W"))
+#map.axes()
+latrange <- c(46.25, 48.5) + c(.2, -.2)
+lines(rep(-126,2), latrange, lwd=10, col=mod.cols[1])
+text(-126-.8, mean(latrange), mod.names[1], srt=90)
+latrange <- c(40+10/60, 46.25) + c(.2, -.2)
+lines(rep(-126,2), latrange, lwd=10, col=mod.cols[2])
+text(-126-.8, mean(latrange), mod.names[2], srt=90)
+latrange <- c(32.5, 40+10/60) + c(.2, -.2)
+lines(rep(-126,2), latrange, lwd=10, col=mod.cols[3])
+text(-126-.8, mean(latrange), mod.names[3], srt=90)
+#
+text(-122, 50, "Canada")
+text(-120, 47.75, "Washington")
+text(-121, 44, "Oregon")
+text(-120, 37, "California")
+text(-115.5, 32.1, "Mexico")
+#
+box()
+dev.off()
